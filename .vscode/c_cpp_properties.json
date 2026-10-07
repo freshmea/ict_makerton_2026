@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}",
                 "${workspaceFolder}/**",
+                "${env:USERPROFILE}/Documents/Arduino/libraries/DFRobotDFPlayerMini",
                 "${env:USERPROFILE}/Documents/Arduino/libraries/DHT_sensor_library",
                 "${env:USERPROFILE}/Documents/Arduino/libraries/Adafruit_Unified_Sensor",
                 "${env:USERPROFILE}/Documents/Arduino/libraries/Adafruit_NeoPixel",
@@ -34,6 +35,7 @@
             "browse": {
                 "path": [
                     "${workspaceFolder}",
+                    "${env:USERPROFILE}/Documents/Arduino/libraries/DFRobotDFPlayerMini",
                     "${env:USERPROFILE}/Documents/Arduino/libraries/DHT_sensor_library",
                     "${env:USERPROFILE}/Documents/Arduino/libraries/Adafruit_Unified_Sensor",
                     "${env:USERPROFILE}/Documents/Arduino/libraries/Adafruit_NeoPixel",
