@@ -15,6 +15,9 @@
             "defines": [
                 "ARDUINO=10819",
                 "ARDUINO_AVR_UNO",
+                "ARDUINO_ARCH_AVR",
+                "__AVR__",
+                "__AVR_ATmega328P__",
                 "F_CPU=16000000L",
                 "USB_VID=0x2341",
                 "USB_PID=0x0043",
