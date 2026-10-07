@@ -54,14 +54,14 @@ void loop()
 			for (int i = 0; i < 4; i++) {
 				strip.setPixelColor(i, 200, 0, 0);
 			}
-			myDFPlayer.play(19);
+			myDFPlayer.play(1);
 			strip.show();
 		}
 		else {
 			for (int i = 0; i < 4; i++) {
 				strip.setPixelColor(i, 0, 0, 200);
 			}
-			myDFPlayer.play(20);
+			myDFPlayer.play(2);
 			strip.show();
 		}
 	}
