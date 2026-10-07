@@ -1,0 +1,47 @@
+#include <Arduino.h>
+#include <LiquidCrystal_I2C.h>
+
+int echo = 12;
+int trig = 13;
+int led = 5;
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup()
+{
+    pinMode(echo, INPUT);
+    pinMode(trig, OUTPUT);
+    pinMode(led, OUTPUT);
+    lcd.init();
+    lcd.backlight();
+}
+
+void loop()
+{
+    digitalWrite(trig, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trig, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trig, LOW);
+
+    long duration = pulseIn(echo, HIGH);
+    long distance = duration * 0.034 / 2;
+    if (distance > 40) {
+        distance = 40;
+    }
+    int map_distance = map(distance, 0, 50, 0, 10);
+    int ledValue = map(distance, 0, 40, 255, 0);
+
+    analogWrite(led, ledValue);
+
+    lcd.setCursor(0, 0);
+    lcd.print("sonic ruler : ");
+    lcd.setCursor(0, 1);
+    lcd.print(distance);
+    lcd.print(" cm");
+
+    lcd.setCursor(7, 1);
+    lcd.print(map_distance);
+
+    delay(500);
+    lcd.clear();
+}

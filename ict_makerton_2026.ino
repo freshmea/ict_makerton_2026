@@ -1,69 +1,68 @@
-// Explicit include for VS Code IntelliSense in .ino files.
+#include <Adafruit_NeoPixel.h>
 #include <Arduino.h>
-#include <Servo.h>
+#include <DHT.h>
+#include <LiquidCrystal_I2C.h>
 
-Servo servoMotor;
-
-int moistureSensorPin = A1;
-int switchPin = 2;
-int buzzerPin = 6;
-int servoPin = 8;
-
-int warningMuted = 0;
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+DHT dht(4, DHT11);
+Adafruit_NeoPixel strip(4, 7, NEO_GRB + NEO_KHZ800);
 
 void setup()
 {
-  pinMode(switchPin, INPUT_PULLUP);
-  pinMode(buzzerPin, OUTPUT);
-
-  servoMotor.attach(servoPin);
-  servoMotor.write(0);
-
-  Serial.begin(9600);
+  lcd.init();
+  lcd.backlight();
+  dht.begin();
+  strip.begin();
+  strip.setBrightness(127);
 }
 
 void loop()
 {
-  int moistureValue = analogRead(moistureSensorPin);
+  int hum = dht.readHumidity();
 
-  if (moistureValue >= 500)
+  lcd.print("hum : ");
+  lcd.print(hum);
+
+  if (hum < 0 || hum > 100)
   {
-    warningMuted = 0;
-    noTone(buzzerPin);
-    servoMotor.write(0);
-    delay(100);
-  }
-  else if (digitalRead(switchPin) == LOW)
-  {
-    warningMuted = 1;
-    noTone(buzzerPin);
-    servoMotor.write(90);
-    delay(100);
-  }
-  else if (warningMuted == 0)
-  {
-    servoMotor.write(0);
-    tone(buzzerPin, 2000);
-    delay(200);
-    noTone(buzzerPin);
-    delay(800);
-  }
-  else
-  {
-    noTone(buzzerPin);
-    servoMotor.write(90);
-    delay(100);
+    strip.setPixelColor(0, 0, 0, 0);
+    strip.setPixelColor(1, 0, 0, 0);
+    strip.setPixelColor(2, 0, 0, 0);
+    strip.setPixelColor(3, 0, 0, 0);
+    strip.show();
+    delay(10);
   }
 
-  Serial.print("moisture: ");
-  Serial.print(moistureValue);
-  Serial.print(", alertMuted: ");
-  if (warningMuted == 1)
+  if (hum >= 0 && hum <= 50)
   {
-    Serial.println("YES");
+    strip.setPixelColor(0, 127, 0, 0);
+    strip.setPixelColor(1, 127, 0, 0);
+    strip.setPixelColor(2, 127, 0, 0);
+    strip.setPixelColor(3, 127, 0, 0);
+    strip.show();
+    delay(10);
   }
-  else
+
+  if (hum > 50 && hum <= 75)
   {
-    Serial.println("NO");
+    strip.setPixelColor(0, 0, 127, 0);
+    strip.setPixelColor(1, 0, 127, 0);
+    strip.setPixelColor(2, 0, 127, 0);
+    strip.setPixelColor(3, 0, 127, 0);
+    strip.show();
+    delay(10);
   }
+
+  if (hum > 75 && hum <= 100)
+  {
+    strip.setPixelColor(0, 0, 0, 127);
+    strip.setPixelColor(1, 0, 0, 127);
+    strip.setPixelColor(2, 0, 0, 127);
+    strip.setPixelColor(3, 0, 0, 127);
+    strip.show();
+    delay(10);
+  }
+
+  delay(500);
+  lcd.clear();
 }

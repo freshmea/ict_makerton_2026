@@ -5,9 +5,13 @@
             "includePath": [
                 "${workspaceFolder}",
                 "${workspaceFolder}/**",
-                "${env:USERPROFILE}/Documents/Arduino/libraries/**",
+                "${env:USERPROFILE}/Documents/Arduino/libraries/DHT_sensor_library",
+                "${env:USERPROFILE}/Documents/Arduino/libraries/Adafruit_Unified_Sensor",
+                "${env:USERPROFILE}/Documents/Arduino/libraries/Adafruit_NeoPixel",
+                "${env:USERPROFILE}/Documents/Arduino/libraries/LiquidCrystal_I2C",
                 "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr/**/cores/arduino",
                 "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr/**/variants/standard",
+                "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr/**/libraries/**",
                 "${env:LOCALAPPDATA}/Arduino15/packages/arduino/tools/avr-gcc/**/avr/include",
                 "${env:LOCALAPPDATA}/Arduino15/packages/arduino/tools/avr-gcc/**/include",
                 "${env:LOCALAPPDATA}/Arduino15/packages/arduino/tools/avr-gcc/**/lib/gcc/avr/**/include"
@@ -30,8 +34,12 @@
             "browse": {
                 "path": [
                     "${workspaceFolder}",
-                    "${env:USERPROFILE}/Documents/Arduino/libraries",
-                    "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr"
+                    "${env:USERPROFILE}/Documents/Arduino/libraries/DHT_sensor_library",
+                    "${env:USERPROFILE}/Documents/Arduino/libraries/Adafruit_Unified_Sensor",
+                    "${env:USERPROFILE}/Documents/Arduino/libraries/Adafruit_NeoPixel",
+                    "${env:USERPROFILE}/Documents/Arduino/libraries/LiquidCrystal_I2C",
+                    "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr",
+                    "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr/**/libraries"
                 ],
                 "limitSymbolsToIncludedHeaders": true
             }

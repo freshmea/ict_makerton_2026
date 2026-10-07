@@ -1,4 +1,3 @@
-// Explicit include for VS Code IntelliSense in .ino files.
 #include <Arduino.h>
 
 int soil;
