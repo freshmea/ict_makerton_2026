@@ -1,0 +1,6 @@
+{
+    "port": "COM6",
+    "board": "arduino:avr:uno",
+    "programmer": "arduinoasisp",
+    "sketch": "ict_makerton_2026.ino"
+}

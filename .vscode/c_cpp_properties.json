@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "Arduino Uno",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/**",
+                "${env:USERPROFILE}/Documents/Arduino/libraries/**",
+                "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr/**/cores/arduino",
+                "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr/**/variants/standard",
+                "${env:LOCALAPPDATA}/Arduino15/packages/arduino/tools/avr-gcc/**/avr/include",
+                "${env:LOCALAPPDATA}/Arduino15/packages/arduino/tools/avr-gcc/**/include",
+                "${env:LOCALAPPDATA}/Arduino15/packages/arduino/tools/avr-gcc/**/lib/gcc/avr/**/include"
+            ],
+            "defines": [
+                "ARDUINO=10819",
+                "ARDUINO_AVR_UNO",
+                "F_CPU=16000000L",
+                "USB_VID=0x2341",
+                "USB_PID=0x0043",
+                "USB_MANUFACTURER=\"Unknown\"",
+                "USB_PRODUCT=\"Arduino Uno\""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${env:USERPROFILE}/Documents/Arduino/libraries",
+                    "${env:LOCALAPPDATA}/Arduino15/packages/arduino/hardware/avr"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
