@@ -1,0 +1,144 @@
+schema: moyeostudy.design/v1
+version: 1.0.0
+updated_at: '2026-10-09'
+language: ko
+format_note: 'Figma 속성을 참고한 자체 명세이며 .fig 파일이나 Figma에서 직접 가져오는 형식은 아닙니다.'
+source_of_truth: [design.yaml, styles.css, index.html]
+reference:
+  figma_file_key: ymNe79de5z2MiFCGwCkQzP
+  listing_node_id: '5:2'
+  base_guide: 'D:/repository/ict_makerton_2026/lecture/web_design/design_guide.md'
+  responsive_guide: 'D:/repository/ict_makerton_2026/lecture/web_design/responsive_design_guide.md'
+  figma_modified: false
+tokens:
+  colors:
+    background: '#F7F7FA'
+    surface: '#FFFFFF'
+    accent: '#6C4DFF'
+    text: '#17151D'
+    secondary: '#6B6875'
+    border: '#E4E2EA'
+    on_accent: '#FFFFFF'
+  typography:
+    family: 'Noto Sans KR'
+    screen_title: {size_px: 24, weight: 700}
+    card_title: {size_px: 18, weight: 700}
+    body: {size_px: 14, weight: 400}
+    metadata_label: {size_px: 13, weight: 400, color: secondary}
+    recruitment_value: {size_px: 13, weight: 600, color: accent}
+    button: {size_px: 14, weight: 600}
+  spacing_px:
+    screen_x: 20
+    screen_top: 24
+    section: 20
+    card_padding: 20
+    card_gap: 16
+    content_gap: 8
+    metadata_to_button: 16
+    button_x: 16
+    button_y: 12
+  radius_px: {card: 16, button: 10, filter: 20}
+  border_px: 1
+  shadow: none
+layout:
+  reference_frame: {width_px: 390, min_height_px: 844}
+  width_behavior: FILL
+  height_behavior: HUG
+  direction: VERTICAL
+  text_wrap: true
+  button_width: FILL
+  filter_wrap: true
+  font_scaling: rem
+  overflow: vertical_scroll
+  preserved_order: [title, schedule, location, recruitment, detail_button]
+components:
+  study_card:
+    type: FRAME
+    layoutMode: VERTICAL
+    layoutSizingHorizontal: FILL
+    layoutSizingVertical: HUG
+    padding_px: 20
+    itemSpacing_px: 8
+    cornerRadius_px: 16
+    children: [title, metadata, detail_button]
+  primary_button:
+    type: FRAME
+    layoutMode: HORIZONTAL
+    layoutSizingHorizontal: FILL
+    layoutSizingVertical: HUG
+    padding_px: {horizontal: 16, vertical: 12}
+    textAlign: CENTER
+screens:
+  - id: login
+    name: 로그인
+    children:
+      - {type: TEXT, role: brand, value: 모여스터디}
+      - {type: TEXT, role: heading, value: '함께 공부할 준비됐나요?'}
+      - {type: TEXT, role: description, value: 같은 과목을 공부하는 친구들을 만나보세요.}
+      - {type: INPUT, name: email, label: 이메일, placeholder: 'student@example.com'}
+      - {type: INPUT, name: password, label: 비밀번호, placeholder: 비밀번호를 입력하세요}
+      - {type: BUTTON, label: 로그인, destination: main, behavior: demo_navigation}
+      - {type: BUTTON, label: 둘러보기, destination: main}
+    implementation_note: '로그인 UI 시연이며 실제 인증 요청·계정 생성·비밀번호 저장을 하지 않습니다.'
+  - id: main
+    name: 메인
+    children:
+      - {type: TEXT, role: heading, value: 모여스터디}
+      - {type: TEXT, role: description, value: 함께 공부할 모임을 찾아보세요}
+      - {type: INPUT, role: search, placeholder: 과목 또는 모임 검색}
+      - {type: FILTERS, options: [전체, 영어, 수학, 코딩], selected: 전체}
+      - {type: FRAME, role: study_list, data: studies, direction: VERTICAL, gap_px: 16}
+    behavior: '예시 모임을 과목과 검색어로 필터링하고 선택한 모임 상세로 이동합니다.'
+  - id: detail
+    name: 상세
+    children:
+      - {type: BUTTON, label: '← 모임 목록', destination: main}
+      - {type: TEXT, role: heading, value: 모임 상세}
+      - {type: FRAME, role: summary, data: selected_study}
+      - {type: FRAME, role: description, title: 모임 소개}
+      - {type: FRAME, role: eligibility, title: 모집 조건}
+      - {type: BUTTON, label: 신청하기, behavior: demo_confirmation}
+    implementation_note: '신청은 시연 확인 메시지만 표시하며 서버에 저장하지 않습니다.'
+studies:
+  - id: english
+    subject: 영어
+    title: 영어 회화, 공강에 함께해요
+    schedule: '월 · 수  12:00–13:00'
+    location: 학생회관 2층 라운지
+    recruitment: 현재 3명 / 정원 6명
+    description: 일상 주제로 영어로 이야기하며 회화 연습을 함께해요.
+    eligibility: 모든 학과 · 초보 환영 · 주 2회 참여
+  - id: math
+    subject: 수학
+    title: 미적분 기초부터 차근차근
+    schedule: '화 · 목  18:00–19:30'
+    location: 중앙도서관 스터디룸
+    recruitment: 현재 2명 / 정원 5명
+    description: 개념을 복습하고 연습문제를 함께 풀어요.
+    eligibility: 미적분 수강생 · 주 2회 참여
+  - id: coding
+    subject: 코딩
+    title: 코딩 테스트 같이 준비해요
+    schedule: '금  16:00–18:00'
+    location: 공학관 1층 세미나실
+    recruitment: 현재 4명 / 정원 6명
+    description: 매주 문제 풀이와 코드를 공유하며 함께 준비해요.
+    eligibility: 모든 학과 · 프로그래밍 기초 가능
+history:
+  - date: '2026-10-09'
+    version: 1.0.0
+    changes:
+      - '기존 목록의 디자인 규칙을 로그인·메인·상세에 적용'
+      - '카드와 버튼 Fill, 모집 인원 제목 Regular와 회색 유지'
+      - 'YAML 명세·CSS 토큰·HTML 시연과 이미지 생성 프롬프트 저장'
+      - '기존 Figma 파일과 원본 가이드 수정 없음'
+
+bottom_navigation:
+  location: main_screen_bottom
+  layout: {direction: HORIZONTAL, columns: 4, width: FILL}
+  links:
+    - {label: 홈, href: "#home", screen: main}
+    - {label: 스터디목록, href: "#studies", screen: main}
+    - {label: 내모임, href: "#my-groups", screen: my-groups}
+    - {label: 마이 페이지, href: "#profile", screen: profile}
+  note: 내모임과 마이 페이지는 데이터 연결 전 안내 화면입니다.
