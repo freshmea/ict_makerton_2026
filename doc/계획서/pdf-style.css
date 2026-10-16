@@ -1,0 +1,96 @@
+@page {
+  size: A4;
+  margin: 16mm 14mm 16mm 14mm;
+}
+
+html,
+body {
+  font-family: "Malgun Gothic", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: #111;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: 22pt;
+  line-height: 1.25;
+  margin: 0 0 12pt;
+  page-break-after: avoid;
+}
+
+h2 {
+  font-size: 15pt;
+  margin: 18pt 0 8pt;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 12.5pt;
+  margin: 14pt 0 6pt;
+  page-break-after: avoid;
+}
+
+p,
+ul,
+ol,
+table,
+blockquote {
+  margin-top: 0;
+  margin-bottom: 8pt;
+}
+
+ul,
+ol {
+  padding-left: 1.2em;
+}
+
+li {
+  margin: 2pt 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 10pt;
+}
+
+th,
+td {
+  border: 1px solid #bfc7d1;
+  padding: 6px 8px;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+th {
+  background: #f3f6fa;
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10pt auto;
+  page-break-inside: avoid;
+}
+
+blockquote {
+  border-left: 3px solid #b9c3d0;
+  padding-left: 10px;
+  color: #2f3a46;
+}
+
+code {
+  font-family: Consolas, "D2Coding", monospace;
+  font-size: 9.5pt;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #d8dfe6;
+  margin: 14pt 0;
+}
