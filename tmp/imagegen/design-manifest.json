@@ -1,0 +1,122 @@
+[
+  {
+    "n": "01",
+    "slug": "halo-dock",
+    "title": "헤일로 독",
+    "form": "스마트폰 거치대형",
+    "features": "베이스의 네오픽셀 링, 독립 카메라, 스피커·서보 패들, 측면 발사 모듈과 수거함",
+    "use": "가정용 일체형",
+    "review": "거치 각도·무게중심·배선 공간",
+    "file": "design-01-halo-dock.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-2c0c10fe-4529-4855-9c14-93ca5abcf446.png",
+    "prompt": "Use case: product-mockup. Create ONE polished industrial design concept image, landscape 3:2, for a Korean makerthon physical AI study-coach product. Concept 01 HALO DOCK: a compact premium desk smartphone stand and study coach with a low rounded rectangular base, an adjustable phone cradle, a discrete camera lens with physical privacy shutter on a slim short mast next to the phone, a clearly segmented NeoPixel LED ring surrounding the base, a speaker grille, and a small servo-driven expressive paddle. Include a small integrated soft-foam-ball dispensing module aimed sideways into a separate shallow collection target cup, clearly a benign reward/feedback toy, not a weapon and never aimed at a person. A few soft foam balls visibly in the cup communicate operation. Show one actual phone in cradle with elegant icon-only study timer, and a small companion phone beside it showing icon-only parent notification and current student status. Composition: large hero product at three-quarter eye-level angle on a real tidy study desk with open paper workbook, gentle daylight, pale background, matte injection-molded finish with plausible screws and seams, subtle blue/green status illumination. Main device must dominate, all features coherent and manufacturable, beautiful high-end product visualization, no people. No text labels, logos, captions, watermark or diagram. This is a future concept rendering, not an actual manufactured product."
+  },
+  {
+    "n": "02",
+    "slug": "pebble-buddy",
+    "title": "페블 버디",
+    "form": "둥근 데스크 친구형",
+    "features": "표정 표시와 서보 날개, 패브릭 스피커, 하단 네오픽셀, 측면 연질볼 피드백",
+    "use": "아동용 친근한 학습 코치",
+    "review": "캐릭터 외장과 내부 구동부 간섭",
+    "file": "design-02-pebble-buddy.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-0cf1f836-1102-4ad0-ba51-bb5f2b7a309b.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. PEBBLE BUDDY: friendly non-humanoid rounded pebble desktop companion, cream and muted sage ABS body, small expressive dot-matrix face separate from its camera eye, soft fabric speaker belly, two small servo-actuated rounded fins, NeoPixel halo around the bottom seam. Smartphone leans into a side cradle. Foam-ball feedback module blends into one flank with a matching shallow catch bowl. Compact approachable form for a child's home study desk, paper workbook and pencil softly in foreground, warm domestic styling. Different from a tall robot; no wheels, no arms."
+  },
+  {
+    "n": "03",
+    "slug": "arch-lamp",
+    "title": "아치 램프",
+    "form": "책상 조명 결합형",
+    "features": "읽기 조명과 구분된 상태 LED, 아치 카메라, 베이스 스피커·서보·발사 모듈",
+    "use": "조명과 학습관리 통합",
+    "review": "크기·조도·카메라 화각",
+    "file": "design-03-arch-lamp.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-1a6f135b-ccec-4d30-9b8e-4afb2144b32b.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. ARCH LAMP: an elegant architectural task-light arch over an open paper workbook, with a built-in downward workspace lamp and a discreet separate forward-facing learner camera with shutter on one upright. NeoPixel status segments along OUTSIDE of the arch, not the functional reading light. A long slim base includes phone slot, speaker perforations, servo flip indicator, and a flush low-energy foam feedback dispenser directed sideways into a catch tray at base end. Parent phone beside product. Matte off-white and brushed light aluminum. The arch is the defining silhouette; no character face."
+  },
+  {
+    "n": "04",
+    "slug": "bookshelf-spine",
+    "title": "북엔드 코치",
+    "form": "책꽂이·북엔드형",
+    "features": "수직 네오픽셀 바, 상단 카메라·서보 깃발, 전면 스피커, 하단 거치·발사부",
+    "use": "작은 책상·기존 책 활용",
+    "review": "전도 방지·책에 가려지는 화각",
+    "file": "design-04-bookshelf-spine.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-27edb803-faf3-4945-a7f2-311e5989640a.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. BOOKSHELF SPINE: a vertical narrow bookend-shaped study coach that sits against paper textbooks, warm wood side panels and ivory perforated speaker spine. Camera with privacy shutter near upper edge, a vertical NeoPixel segmented status bar on the front, a tiny servo-driven pop-up bookmark flag at top. An angled phone cradle grows from the bottom front. A compact foam ball outlet at the lower side sends soft ball into a fixed small catch tray beside the bookend. Companion parent phone on desk. Clean Scandinavian study furniture language, no lamp and no robot face, emphasize the genuinely bookend-like volume."
+  },
+  {
+    "n": "05",
+    "slug": "folding-bookstand",
+    "title": "폴딩 스터디",
+    "form": "접이식 독서대형",
+    "features": "페이지 받침 LED, 상단 카메라, 받침 스피커·휴대폰 슬롯, 측면 피드백 모듈",
+    "use": "종이 문제집 중심 학습",
+    "review": "힌지 강도·책 무게·배선 굴곡",
+    "file": "design-05-folding-bookstand.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-c29b6c58-0321-4aaa-95a5-c6effc975082.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. FOLDING BOOKSTAND: a foldable adjustable angled reading stand holding an open paper workbook with two page clips, slim camera bar above the workbook with shutter aimed toward the learner, segmented NeoPixel status along the bottom reading ledge. Speaker and phone slot in the folding base, small servo pointer on one edge, detachable compact foam-ball feedback pod attached to the other side and pointing into an adjacent shallow tray. Parent mobile status phone in foreground. Warm gray recycled plastic, small yellow accents, visible hinges and fold lines; crisp manufacturable slim profile."
+  },
+  {
+    "n": "06",
+    "slug": "modular-cubes",
+    "title": "모듈 큐브",
+    "form": "기능별 블록 결합형",
+    "features": "카메라·스피커·서보·발사 블록을 분리하고 LED 상태를 연결",
+    "use": "기능 교체·유지보수·단계별 확장",
+    "review": "블록 커넥터·전원·통신 규격",
+    "file": "design-06-modular-cubes.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-357542a4-40f9-45b0-8eeb-aa3aa62bc381.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. MODULAR CUBES: a neat modular desktop system consisting of FOUR compact rounded cubic snap-together functional blocks on a shallow common rail: camera block on a short adjustable neck with shutter, speaker block with large perforated front, expressive servo flag block, and soft-foam-ball feedback block with small adjacent catch tray. Individually segmented NeoPixel bands visually join all blocks. Include a phone slot in the shared rail and a parent status phone next to it. White shells with restrained pastel module caps. Hero composition must show connected modules as one coherent product, connectors/seams plausible, no technical exploded diagram."
+  },
+  {
+    "n": "07",
+    "slug": "growth-garden",
+    "title": "그로스 가든",
+    "form": "성장 오브제형",
+    "features": "서보 잎의 자세와 네오픽셀로 진척 표현, 카메라·스피커와 씨앗 트레이형 피드백",
+    "use": "보상·습관 형성 중심",
+    "review": "잎 구동 구조·보상 방식의 수용성",
+    "file": "design-07-growth-garden.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-9cafec93-6558-4955-9fdf-fb5588b42209.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. GROWTH GARDEN: an abstract miniature learning-garden desktop coach, NOT a real plant. Shallow oval planter-like enclosure with three rounded leaf-shaped servo indicators that change posture to communicate learning progress, discrete camera with shutter built into a small central stem, NeoPixel light segments around the planter rim, speaker perforations in body, smartphone slot at rear. A softly rounded foam reward-ball module nestled at one end releases toward a separate cup shaped like a seed tray, not a launcher barrel. Show paper notebook and parent notification phone. Muted clay and sage natural color scheme, appealing consumer product, no unrelated decorations."
+  },
+  {
+    "n": "08",
+    "slug": "classroom-hub",
+    "title": "클래스 허브",
+    "form": "공부방 관리자형",
+    "features": "학생 상태 화면·LED 구역, 카메라·스피커·서보, 관리자 휴대폰 상태 카드",
+    "use": "공부방·지역아동센터",
+    "review": "다중 학생 식별 범위·조회 권한",
+    "file": "design-08-classroom-hub.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-11e0c7e9-2d84-45a3-80b5-061d358cbace.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. CLASSROOM HUB: a small-study-room administrator edition, a compact rounded trapezoid desk device with a small screen showing three anonymous student-status icons, privacy-shutter camera above, three short separated NeoPixel status segments below screen, side speaker grilles and a servo tilting feedback fin. One small benign foam-ball outlet aimed sideways into a matching table catch tray, no weapon shape. Wide phone/tablet cradle on base, companion manager smartphone with a miniature grid of student status cards and notification icons. Show organized study-room desk, no children, no faces; practical navy and warm white professional appearance. Not a surveillance wall, just a compact desk unit."
+  },
+  {
+    "n": "09",
+    "slug": "orbit-coach",
+    "title": "오빗 코치",
+    "form": "구형 데스크 오브제형",
+    "features": "적도 네오픽셀 링, 카메라 셔터, 패브릭 스피커, 서보 진행 표시·별도 피드백 포드",
+    "use": "인테리어와 학습 코칭 결합",
+    "review": "구형 외장 제작·안정성·조립성",
+    "file": "design-09-orbit-coach.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-069c2792-d17a-40d0-933d-1c833ba32824.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. ORBIT COACH: sculptural spherical desktop study buddy on a low stable plinth, a front privacy-shutter camera inset in the upper sphere, a ring of individually visible NeoPixel light segments around the equator, a textile speaker hemisphere, servo-powered rotating semicircular progress vane above the base. Phone stand integrated at rear side. A separate small rounded feedback pod on the same plinth dispenses a soft foam ball toward its own small catch ring tray. Parent status mobile at side. Calm pale blue and ivory, polished yet feasible 3D-printed prototype aesthetic, open paper exercise book nearby. No face or humanoid robot styling."
+  },
+  {
+    "n": "10",
+    "slug": "maker-kit",
+    "title": "메이커 키트",
+    "form": "조립형 메이커톤 시제품",
+    "features": "합판·아크릴 구조에 카메라·네오픽셀·스피커·서보·발사 모듈과 배선 표현",
+    "use": "빠른 시제품 제작·기능 검증",
+    "review": "실제 부품 크기·전원 용량·발사부 시험",
+    "file": "design-10-maker-kit.png",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a143fa-8de5-7df0-86d8-1fcaedb71f1a\\exec-be047585-c552-4bd5-b428-309a10b1bd80.png",
+    "prompt": "Use case: product-mockup. Generate ONE distinct high-end industrial design concept image in landscape 3:2 for a physical AI study coach used with existing paper workbooks. Photorealistic product visualization with plausible manufacturing seams, human-scale desk proportions, soft daylight, no people, no branding or text labels, no watermark, not a collage. The product must visibly integrate: a camera lens with privacy shutter, segmented addressable NeoPixel status lights, a speaker grille, a small servo-operated expressive moving part, and a benign low-energy soft-foam-ball feedback dispenser pointed toward its own separate nearby target/catch tray, never toward a person and never shaped like a weapon. Show a companion mobile phone with icon-only remote student-status and notification UI. Main product large and dominant; coherent usable forms, all hardware grounded in the physical object. Design concept only, no claims of actual manufacture. MAKER KIT: refined realistic makerthon prototype rather than a fantasy retail product. Low stepped laser-cut plywood base with a folded smartphone stand, translucent frosted acrylic electronics enclosure with believable small control board and tidy visible wiring, clearly visible NeoPixel ring on the front edge, USB camera module with physical sliding cover on a short bracket, small speaker, visible hobby micro-servo driving a rounded paddle, and a small enclosed foam-ball feedback mechanism aimed into a fixed adjacent tray containing soft foam balls. Parent status smartphone beside it. Clean professional build, neatly routed cables and sensible screw fasteners, hero product photo in a bright workshop study desk, no weapon styling and no text."
+  }
+]
