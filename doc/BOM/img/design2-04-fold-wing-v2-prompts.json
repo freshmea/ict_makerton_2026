@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-18",
+  "tool": "built-in imagegen",
+  "mode": "edit",
+  "reference": "design2-04-fold-wing.png",
+  "file": "design2-04-fold-wing-v2-wave.png",
+  "changes": [
+    "작은 녹색 손 제거",
+    "발사체·발사구·수거함 제거",
+    "조명 윙을 팔·손으로 통합",
+    "윙 흔들기와 LED로 주의 환기"
+  ],
+  "prompt": "Use case: precise-object-edit / product-mockup. Edit the referenced Fold Wing Buddy image into ONE revised design. Keep the friendly cream rounded central face, shutter camera, fabric speaker belly, microphone details, phone dock, desk and warm lighting, and the overall two large hinged curved lamp wings. CRITICAL CHANGES: (1) Completely REMOVE both small green leaf-shaped hands attached to the sides of the central face; smooth clean body surfaces there. (2) Completely REMOVE the foam ball, ball dispenser housing, protruding outlet, all projectiles and the catch bowl from the product and desk. The base must be a clean continuous unobstructed form with no outlet. (3) The TWO LARGE LAMP WINGS THEMSELVES now function as the character's only arms/hands. Make each wing one coherent gently curved articulated arm with a rounded slightly broader integrated paddle-like hand-tip, no separate tiny hand or fingers. Keep down-facing reading-light diffuser and outer NeoPixel segments built into each arm. Show one wing arm lifted and rotated outward in a recognizable friendly attention-getting waving gesture, the other held somewhat lower, so it clearly expresses waving rather than a static symmetrical arch. Add only a subtle small natural motion sweep or minimal ghosted tip to communicate waving, no duplicated body, no technical arrows or labels. Convey 'pay attention / come back to learning' through a gentle alert eye expression and a restrained amber light segment, not threat or aggression. Mechanical shoulder/hinge joints should look plausible and rounded. No extra little green hands anywhere, no projectile system of any kind. No logos, text, captions or watermark. Photorealistic industrial design visualization, landscape 3:2, maintain original quality and overall product identity."
+}

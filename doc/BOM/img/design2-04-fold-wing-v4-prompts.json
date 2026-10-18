@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-18",
+  "tool": "built-in imagegen",
+  "mode": "edit",
+  "reference": "design2-04-fold-wing-v3-joints-focus.png",
+  "file": "design2-04-fold-wing-v4-korean-flush.png",
+  "changes": [
+    "한글 초등 수학 교재",
+    "손바닥 매립형 렌즈와 내부 렌즈 액추에이터",
+    "팔당 2 DOF와 손가락 형태 유지"
+  ],
+  "prompt": "Use case: precise-object-edit and text-localization. Edit the referenced Fold Wing Buddy v3 product rendering with ONLY TWO changes. Preserve exactly the two articulated 2-DOF arms, J1 YAW vertical turntables, J2 PITCH joints, dark joint housings, fingers, cream/sage color, expressive robot face, camera, microphones, speaker fabric, phone, desk composition, and engineering labels. CHANGE 1: replace ALL Japanese/foreign workbook printing with a plausible Korean elementary mathematics workbook, clean readable HANGUL. Left page heading exactly '수학 익힘', subsection exactly '1. 세 자리 수의 덧셈', instruction exactly '빈칸에 알맞은 수를 써 보세요.' with simple arithmetic like '238 + 176 = □' and '417 + 259 = □'. Right page heading exactly '2. 도형의 넓이', instruction exactly '색칠한 부분의 넓이를 구해 보세요.' above the grid picture. Use genuine Korean lettering, no Japanese or Chinese characters on either page; nearby bottom fine print may be out of focus but no non-Korean glyphs. Keep paper print layout realistic, not billboard type. CHANGE 2: the two long protruding metal telescope/barrel lights under the palms look awkward. Replace them with SHALLOW FLUSH/RECESSED PALM OPTICS: a circular clear lens embedded within each palm's underside, with a slim rounded cream bezel almost level with the hand shell and only minimal protrusion. Hide the short-travel lens group and miniature linear actuator INSIDE the slightly thickened palm enclosure; no hanging cylinders, no exposed telescopic lens barrels, no camera-like long tubes. Retain ability to illustrate narrow spot on left workbook and broader softer illumination on right. Keep existing LENS ACTUATOR labels but make their leaders point to the internal-optics housing seam instead of an external cylinder; short subtle travel arrows only. Keep other labels J1 YAW/J2 PITCH/SPOT/WIDE. Show gentle realistic light on the page with reduced theatrical beam haze so Korean print remains legible. No new mechanisms, no extra hands or wrists, no projectiles, no loss of existing degrees of freedom. Same premium photorealistic design image, landscape 3:2."
+}
