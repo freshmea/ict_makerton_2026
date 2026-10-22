@@ -1,0 +1,28 @@
+[
+  {
+    "path": "SpotMicro_parts\\STEP_Files\\I_shoulder_cls_modi.stp",
+    "dimensions_mm": [
+      110.00000000043823,
+      52.50000000013027,
+      70.00000000006648
+    ],
+    "unit": "mm from STEP SI_UNIT .MILLI.,.METRE.",
+    "valid": true,
+    "solids": 1,
+    "faces": 4700,
+    "note": "CLS-modified body shoulder brackets; not direct equivalents of L_arm_joint legacy STL."
+  },
+  {
+    "path": "SpotMicro_parts\\STEP_Files\\O_shoulder_cls_grooved_modi.stp",
+    "dimensions_mm": [
+      110.0000000005054,
+      5.000000000207874,
+      66.00000000005073
+    ],
+    "unit": "mm from STEP SI_UNIT .MILLI.,.METRE.",
+    "valid": true,
+    "solids": 1,
+    "faces": 3488,
+    "note": "CLS-modified body shoulder brackets; not direct equivalents of L_arm_joint legacy STL."
+  }
+]

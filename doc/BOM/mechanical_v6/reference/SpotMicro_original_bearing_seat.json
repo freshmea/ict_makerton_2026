@@ -1,0 +1,59 @@
+{
+  "path": "SpotMicro_parts/STL/files/L_arm_cover.stl",
+  "method": "Circle least-squares fits to coplanar original STL vertices; nominal reconstruction, not physical measurement",
+  "rings": [
+    {
+      "plane_y": 40,
+      "points": 43,
+      "center_xz": [
+        1.1747284622831071,
+        124.92493683735142
+      ],
+      "fitted_diameter_mm": 18.199989786951456,
+      "max_radial_residual_mm": 1.896981763316319e-05
+    },
+    {
+      "plane_y": 41,
+      "points": 43,
+      "center_xz": [
+        1.1747284622831071,
+        124.92493683735142
+      ],
+      "fitted_diameter_mm": 18.199989786951456,
+      "max_radial_residual_mm": 1.896981763316319e-05
+    },
+    {
+      "plane_y": 41,
+      "points": 41,
+      "center_xz": [
+        1.1747318092931736,
+        124.92493217675299
+      ],
+      "fitted_diameter_mm": 16.300000917358137,
+      "max_radial_residual_mm": 1.8279426452494363e-05
+    },
+    {
+      "plane_y": 45,
+      "points": 41,
+      "center_xz": [
+        1.1747318092931736,
+        124.92493217675299
+      ],
+      "fitted_diameter_mm": 16.300000917358137,
+      "max_radial_residual_mm": 1.8279426452494363e-05
+    }
+  ],
+  "interpretation": {
+    "flange_counterbore_diameter": 18.2,
+    "flange_counterbore_y": [
+      40,
+      41
+    ],
+    "body_bore_diameter": 16.3,
+    "body_bore_y": [
+      41,
+      45
+    ],
+    "total_depth": 5
+  }
+}

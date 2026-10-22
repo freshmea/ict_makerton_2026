@@ -1,0 +1,12 @@
+{
+  "id": 19,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bytes\": 599647,\n  \"name\": \"L_arm_cover\",\n  \"path\": \"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v6\\\\reference\\\\solidcraft\\\\L_arm_cover.solidcraft\"\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

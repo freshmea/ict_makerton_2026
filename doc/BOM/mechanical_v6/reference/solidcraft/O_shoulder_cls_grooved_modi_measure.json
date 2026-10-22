@@ -1,0 +1,12 @@
+{
+  "id": 10,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bodies\": [\n    {\n      \"area_mm2\": 13221.483572077042,\n      \"bbox\": {\n        \"max\": [\n          110.00000000044663,\n          5.000000000213768,\n          68.0\n        ],\n        \"min\": [\n          -1.94272375964033e-12,\n          -8.549031662410165e-15,\n          1.9999999999995102\n        ]\n      },\n      \"center_of_mass\": [\n        55.07480088720167,\n        2.2721240913244545,\n        35.820115502619664\n      ],\n      \"density_g_cm3\": 1.29,\n      \"edges\": 2694,\n      \"face_types\": {\n        \"plane\": 1103\n      },\n      \"faces\": 1103,\n      \"kernel\": {\n        \"edges\": 5232,\n        \"faces\": 3488,\n        \"shells\": 1,\n        \"vertices\": 1732\n      },\n      \"mass_g\": 27.03279959557432,\n      \"material\": \"Default\",\n      \"name\": \"PartBody\",\n      \"vertices\": 1598,\n      \"volume_mm3\": 20955.658601220402\n    }\n  ],\n  \"body_count\": 1,\n  \"total\": {\n    \"area_mm2\": 13221.483572077042,\n    \"edges\": 2694,\n    \"faces\": 1103,\n    \"mass_g\": 27.03279959557432,\n    \"vertices\": 1598,\n    \"volume_mm3\": 20955.658601220402\n  }\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

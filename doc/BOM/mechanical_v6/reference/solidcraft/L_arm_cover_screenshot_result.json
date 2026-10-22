@@ -1,0 +1,17 @@
+{
+  "id": 18,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "data": "[image bytes omitted; saved to requested PNG]",
+        "mimeType": "image/png",
+        "type": "image"
+      },
+      {
+        "text": "{\"bytes\":49587,\"height\":760,\"path\":\"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v6\\\\reference\\\\solidcraft\\\\L_arm_cover_iso.png\",\"renderer\":\"gpu\",\"source\":\"model\",\"width\":1000}",
+        "type": "text"
+      }
+    ]
+  }
+}

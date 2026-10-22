@@ -1,0 +1,293 @@
+{
+  "verified_on_korea_date": "2026-10-23",
+  "units": "mm",
+  "physical_measurements_performed": false,
+  "classification_policy": {
+    "manufacturer_drawing": "Published engineering dimensions, still verify actual model and revision",
+    "vendor_nominal": "Provisional fit reference, no tolerances or guarantee",
+    "derived": "Arithmetic from explicit drawing dimensions, not measured",
+    "unknown": "Do not fabricate mating holes, spline, or assembly fit"
+  },
+  "sources": [
+    {
+      "id": "MD01",
+      "url": "https://datasheets.raspberrypi.com/camera/camera-module-2-mechanical-drawing.pdf",
+      "provenance": "manufacturer mechanical drawing",
+      "fetched_at_utc": "2026-10-22T17:43:09.934667+00:00",
+      "claims": [
+        "PCB outline 25 x 23.862 mm",
+        "4 x diameter 2.2 mm mounting holes",
+        "mounting grid 21 x 12.5 mm derived from explicit dimensions"
+      ],
+      "caveats": [
+        "No as-built camera measured",
+        "Hole coordinate origin depends on camera rotation; use PDF datum rather than copying arbitrary top-left coordinates",
+        "Module 3 lens and height differ from Module 2; Standard and Wide are not mechanically identical"
+      ],
+      "http_status": 200,
+      "final_url": "https://pip-assets.raspberrypi.com/categories/1205-design-files/documents/RP-008149-DS-1-camera-module-2-mechanical-drawing.pdf",
+      "content_type": "application/pdf",
+      "path": "camera-module-2-mechanical-drawing.pdf",
+      "bytes": 39831,
+      "sha256": "3684135b13632d095ef0937b017a0145d6f145a4d2cede4affe97235c43f5103",
+      "status": "saved",
+      "pages": 1
+    },
+    {
+      "id": "MD02",
+      "url": "https://datasheets.raspberrypi.com/camera/camera-module-3-standard-mechanical-drawing.pdf",
+      "provenance": "manufacturer mechanical drawing",
+      "fetched_at_utc": "2026-10-22T17:43:12.723549+00:00",
+      "claims": [
+        "PCB outline 25 x 23.862 mm",
+        "4 x diameter 2.2 mm mounting holes",
+        "mounting grid 21 x 12.5 mm derived from explicit dimensions"
+      ],
+      "caveats": [
+        "No as-built camera measured",
+        "Hole coordinate origin depends on camera rotation; use PDF datum rather than copying arbitrary top-left coordinates",
+        "Module 3 lens and height differ from Module 2; Standard and Wide are not mechanically identical"
+      ],
+      "http_status": 200,
+      "final_url": "https://pip-assets.raspberrypi.com/categories/1207-design-files/documents/RP-008153-DS-1-camera-module-3-standard-mechanical-drawing.pdf",
+      "content_type": "application/pdf",
+      "path": "camera-module-3-standard-mechanical-drawing.pdf",
+      "bytes": 949985,
+      "sha256": "bde27f5ab38dd46aa05713bbb17c6e8acc4cb1d48ff9109df511256f6fbc66ac",
+      "status": "saved",
+      "pages": 1
+    },
+    {
+      "id": "MD03",
+      "url": "https://datasheets.raspberrypi.com/camera/camera-module-3-wide-mechanical-drawing.pdf",
+      "provenance": "manufacturer mechanical drawing",
+      "fetched_at_utc": "2026-10-22T17:43:15.219726+00:00",
+      "claims": [
+        "PCB outline 25 x 23.862 mm",
+        "4 x diameter 2.2 mm mounting holes",
+        "mounting grid 21 x 12.5 mm derived from explicit dimensions"
+      ],
+      "caveats": [
+        "No as-built camera measured",
+        "Hole coordinate origin depends on camera rotation; use PDF datum rather than copying arbitrary top-left coordinates",
+        "Module 3 lens and height differ from Module 2; Standard and Wide are not mechanically identical"
+      ],
+      "http_status": 200,
+      "final_url": "https://pip-assets.raspberrypi.com/categories/1207-design-files/documents/RP-008155-DS-1-camera-module-3-wide-mechanical-drawing.pdf",
+      "content_type": "application/pdf",
+      "path": "camera-module-3-wide-mechanical-drawing.pdf",
+      "bytes": 946851,
+      "sha256": "c5f87a9b48d63857fb3d9c0a3deeec797325c56d198c80bcb77a2062e6925b92",
+      "status": "saved",
+      "pages": 1
+    },
+    {
+      "id": "MD04",
+      "url": "https://ueeshop.ly200-cdn.com/u_file/UPBE/UPBE325/2507/30/photo/CLS6336HV-EN.jpg",
+      "provenance": "seller-hosted branded mechanical figure; not signed manufacturer CAD",
+      "fetched_at_utc": "2026-10-22T17:43:18.217357+00:00",
+      "claims": [
+        "40.5 x 20.2 mm body footprint",
+        "40 mm vertical callout",
+        "29 mm from base to underside of mounting flange",
+        "49.5 x 10 mm mounting notch center grid"
+      ],
+      "caveats": [
+        "40 mm dimension terminates at apparent shaft-tip plane in side figure; do not assume 40 mm housing-only height",
+        "Output shaft X offset, spline diameter, notch diameter, flange thickness and full flange span not dimensioned",
+        "25T spline is textual seller specification; use supplied metal/plastic horn rather than printing spline",
+        "Other sellers report width 20.5 mm; actual servo must be measured"
+      ],
+      "http_status": 200,
+      "final_url": "https://ueeshop.ly200-cdn.com/u_file/UPBE/UPBE325/2507/30/photo/CLS6336HV-EN.jpg",
+      "content_type": "image/jpg",
+      "path": "CLS6336HV_vendor_dimensions.jpg",
+      "bytes": 1566602,
+      "sha256": "dd5a8592e1d10ccfe38972b28489d1ae3a3f821bb769835175441abdd0da3f36",
+      "status": "saved"
+    },
+    {
+      "id": "MD05",
+      "path": "CLS6336HV_BeGreatRC_source.html",
+      "url": "https://begreatrc.com/products/jx-servo-cls6336hv-35kg-aluminium-shell-metal-gear-high-voltage-coreless-digital-servo-968",
+      "provenance": "seller product page",
+      "status": "copied_from_previously_saved_source",
+      "source_path": "../../web/CLS6336HV_BeGreatRC.html",
+      "copied_at_utc": "2026-10-22T17:43:18.545635+00:00",
+      "bytes": 122919,
+      "sha256": "7a8c91b497edf77cba9b56a74530ab3572113ae95f7893612583e783201ae864",
+      "claims": [
+        "40.5 x 20.2 x 40 mm nominal",
+        "25 tooth spline",
+        "63 g nominal"
+      ],
+      "caveats": [
+        "Not manufacturer engineering drawing",
+        "No manufacturing tolerance"
+      ]
+    },
+    {
+      "id": "MD06",
+      "path": "Britz_BA-R9_manual.jpg",
+      "url": "https://www.britz.co.kr/common/download.php?fullpath=product/19_f&filename=BA-R9%20SoundBar_manual.jpg",
+      "provenance": "manufacturer manual",
+      "status": "copied_from_previously_saved_source",
+      "source_path": "../../manuals/Britz_BA-R9_manual.jpg",
+      "copied_at_utc": "2026-10-22T17:43:18.546636+00:00",
+      "bytes": 846172,
+      "sha256": "ee2dfbb268b7d85d7b9b07994ccabca8d5a12d55218c29663b653e764cfb8e76",
+      "claims": [
+        "400(W) x 73(D) x 68(H) mm",
+        "50 mm x 2 acoustic units"
+      ],
+      "caveats": [
+        "Enclosure keepout only",
+        "No teardown, internal driver screw pattern, PCB or knob dimensions supplied",
+        "Do not shrink this intact speaker into a small head enclosure"
+      ]
+    },
+    {
+      "id": "MD07",
+      "path": "Britz_BA-R9_source.html",
+      "url": "https://www.britz.co.kr/product/view.html?p_no=19",
+      "provenance": "manufacturer product page",
+      "status": "copied_from_previously_saved_source",
+      "source_path": "../../web/Britz_BA-R9_official.html",
+      "copied_at_utc": "2026-10-22T17:43:18.547633+00:00",
+      "bytes": 38783,
+      "sha256": "a4affc48cf6988b8a4c03c14b9791a937e121d1bb6f9bba6036e15393a19492a",
+      "claims": [
+        "Product identity BA-R9"
+      ],
+      "caveats": [
+        "Dimensions checked visually against MD06 manual"
+      ]
+    },
+    {
+      "id": "MD08",
+      "path": "SunFounder_TS0185_source.html",
+      "url": "https://www.sunfounder.com/products/pca9685-servo-driver",
+      "provenance": "manufacturer product page",
+      "status": "copied_from_previously_saved_source",
+      "source_path": "../../web/SunFounder_PCA9685_product.html",
+      "copied_at_utc": "2026-10-22T17:43:18.548634+00:00",
+      "bytes": 304417,
+      "sha256": "4d4f437b362aeee2059f831a02cd56ad4546f124733199b835808c89678e53b8",
+      "claims": [
+        "SKU TS0185 identity"
+      ],
+      "caveats": [
+        "No mechanical drawing or hole spacing located",
+        "74 x 32 mm belongs to a different SunFounder shield and is not applied to TS0185",
+        "Common Adafruit/clone 62.5 x 25.4 dimensions not proven for this board"
+      ]
+    },
+    {
+      "id": "MD09",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-jetson-nano-99-tiny-yet-mighty-nvidia-cuda-x-ai-computer-that-runs-all-ai-models",
+      "provenance": "manufacturer announcement",
+      "fetched_at_utc": "2026-10-22T17:43:18.548634+00:00",
+      "claims": [
+        "Developer Kit size 100 x 80 mm"
+      ],
+      "caveats": [
+        "2019 launch article, not exact B01 mounting drawing",
+        "Does not establish as-built heat-sink height or port offsets"
+      ],
+      "http_status": 200,
+      "final_url": "https://nvidianews.nvidia.com/news/nvidia-announces-jetson-nano-99-tiny-yet-mighty-nvidia-cuda-x-ai-computer-that-runs-all-ai-models",
+      "content_type": "text/html; charset=utf-8",
+      "path": "NVIDIA_Nano_launch_size.html",
+      "bytes": 82801,
+      "sha256": "e9ab064ec9fe750f0f2100964c0087bdfcb6e9fc4e4239bd9418f6b8aa3ae3e8",
+      "status": "saved"
+    },
+    {
+      "id": "MD10",
+      "url": "https://developer.nvidia.com/jetson-nano-developer-kit-carrier-board-p3449-b01-specification",
+      "provenance": "manufacturer engineering document download",
+      "fetched_at_utc": "2026-10-22T17:43:19.008638+00:00",
+      "claims": [],
+      "caveats": [
+        "Download requires NVIDIA login; not obtained",
+        "B01 board revision on actual item remains unconfirmed"
+      ],
+      "http_status": 200,
+      "final_url": "https://developer.nvidia.com/login",
+      "content_type": "text/html; charset=utf-8",
+      "status": "unavailable",
+      "error": "Response is not a PDF; no document saved"
+    },
+    {
+      "id": "MD11",
+      "url": "https://developer.nvidia.com/jetson-nano-developer-kit-b01-3d-cad-step-model",
+      "provenance": "manufacturer engineering CAD download",
+      "fetched_at_utc": "2026-10-22T17:43:20.007846+00:00",
+      "claims": [],
+      "caveats": [
+        "Download requires NVIDIA login; not obtained"
+      ],
+      "http_status": 200,
+      "final_url": "https://developer.nvidia.com/login",
+      "content_type": "text/html; charset=utf-8",
+      "status": "unavailable",
+      "error": "Official download requires login; not obtained"
+    },
+    {
+      "id": "MD12",
+      "url": "https://developer.nvidia.com/embedded/downloads.json",
+      "provenance": "manufacturer download catalog",
+      "fetched_at_utc": "2026-10-22T17:43:21.019190+00:00",
+      "claims": [
+        "Carrier spec P3449 B01 v1.1, date 2020/01/15",
+        "Developer Kit STEP P3450 Rev 100, date 2020/01/15"
+      ],
+      "caveats": [
+        "Catalog is index evidence only; unavailable document contents were not inferred"
+      ],
+      "http_status": 200,
+      "final_url": "https://developer.nvidia.com/embedded/downloads.json",
+      "content_type": "application/json; charset=utf-8",
+      "path": "NVIDIA_download_catalog.json",
+      "bytes": 329949,
+      "sha256": "3d08840fc255ac11890e1db3207f68b7808bb7661589408d92df596c4664a3e9",
+      "status": "saved"
+    },
+    {
+      "id": "MD13",
+      "url": "https://www.raspberrypi.com/products/camera-module-3/",
+      "provenance": "manufacturer product page",
+      "fetched_at_utc": "2026-10-22T17:43:21.424643+00:00",
+      "claims": [
+        "25 x 24 x 11.5 mm Standard nominal",
+        "12.4 mm Wide nominal height"
+      ],
+      "caveats": [
+        "Product dimensions are rounded and may use different datum from side drawing 11.3 / 12 mm"
+      ],
+      "http_status": 403,
+      "final_url": "https://www.raspberrypi.com/products/camera-module-3/",
+      "content_type": "text/html; charset=UTF-8",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.raspberrypi.com/products/camera-module-3/"
+    },
+    {
+      "id": "MD14",
+      "path": "Camera_Module_3_product_brief.pdf",
+      "url": "https://datasheets.raspberrypi.com/camera/camera-module-3-product-brief.pdf",
+      "provenance": "manufacturer product brief",
+      "status": "copied_from_previously_saved_source",
+      "source_path": "../../datasheets/Camera_Module_3_product_brief.pdf",
+      "copied_at_utc": "2026-10-22T17:45:40.229317+00:00",
+      "bytes": 1244344,
+      "sha256": "578efcad6337696a29b9c068815a01d63ddcf7beacf584051d61cf1cddeeaf0a",
+      "claims": [
+        "25 x 24 x 11.5 mm Standard nominal",
+        "12.4 mm Wide nominal height"
+      ],
+      "caveats": [
+        "Nominal envelope differs slightly from side drawing callouts"
+      ]
+    }
+  ]
+}

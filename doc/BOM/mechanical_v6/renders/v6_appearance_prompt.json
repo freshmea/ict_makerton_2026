@@ -1,0 +1,12 @@
+{
+  "date_kst": "2026-10-23",
+  "tool": "built-in imagegen",
+  "output": "v6_appearance_concept.png",
+  "references": [
+    "v6_CAD_isometric.png",
+    "../drawings/FWB_ASM_001_orthographic_A3.png",
+    "../../img/design2-04-fold-wing-v5-bom-dual-matrix.png"
+  ],
+  "prompt": "Create a photorealistic industrial design preview based tightly on reference1 CAD model and reference2 CAD orthographic drawing. Reference3 previous v5 is ONLY material/style reference, NOT proportion or geometry. Keep CAD geometry: wide640mm x200mm x100mm base, three printable sections with fine seams at one-third widths; a real400x73x68mm BA-R9 soundbar centered in base front and visibly only about62.5percent of full basewidth, NOT stretched to90percent. Two standard-size servo-driven arms at x±275mm, baseyaw axes130mmhigh, handpitch315mmhigh, overallstaticheight337mm. Straight narrow links lean slightly inward, fixedroundedhands with three fingers. Central head176wide100deep138high, rounded rectangle with two small square8x8 LEDmatrix eyes placed51mmcenter-to-center; coarse smiling amber pixels, noOLED. Head is centered slightlyrightofbase center like CAD, camera aboveeyes, smallmicrophonehole toleft. Leftofhead simplephone cradle, phone OPTIONAL outsideimage so showcradle. Exactlysix small touch targets threeleft/threeright on topfrontbase. Keep proportions and wide marginsaround400mmspeaker; geometric blockinessofphysicalprintedparts remains, no reshapingintoearliertoyhead. Show believable metal servo bodies, screwflanges and Ufork support indicativeofSpotMicro horn +opposingbearing design, while do not imply exactfinalengineeredmatingparts. LED dots sixon eacharm and smallcircularhanddiffuser asstatuslight, nofocusedreadingbeams orzoomoptics. Warm mattecreamPLA maincovers, darkmutedolivebase/turrets, blacksoundbarwithgrilleandrightknob. Soft neutral studio background and realistic subtleprintedlayertexture. Threequarterfrontisometricview entireproduct, noannotateddimensions, notextlabels, nocalipers. This is an appearance proposal for P0 not a dimensioned fabrication drawing. Do not add fictional actuators, extra joints, or change silhouette/scale from CAD.",
+  "status": "Appearance only; production dimensions come from CAD. AI may deviate in small details, pixels, mounts and seams."
+}

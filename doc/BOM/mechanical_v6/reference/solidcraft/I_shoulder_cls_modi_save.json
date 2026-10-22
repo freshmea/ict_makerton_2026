@@ -1,0 +1,12 @@
+{
+  "id": 7,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bytes\": 5098641,\n  \"name\": \"I_shoulder_cls_modi\",\n  \"path\": \"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v6\\\\reference\\\\solidcraft\\\\I_shoulder_cls_modi.solidcraft\"\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

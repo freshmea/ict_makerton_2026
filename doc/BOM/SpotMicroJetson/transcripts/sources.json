@@ -1,0 +1,38 @@
+[
+  {
+    "file": "transcripts/12_power.txt",
+    "video_id": "AUtIKKJltyg",
+    "url": "https://www.youtube.com/watch?v=AUtIKKJltyg",
+    "language": "ko",
+    "auto_generated": true,
+    "sha256": "7a5c89a1fbf03a58ddeeea763dd579b6416e7cf31a076d983382c3f64266d482",
+    "bytes": 23059
+  },
+  {
+    "file": "transcripts/15_servo_specs.txt",
+    "video_id": "StFKgFmMEK0",
+    "url": "https://www.youtube.com/watch?v=StFKgFmMEK0",
+    "language": "ko",
+    "auto_generated": true,
+    "sha256": "9ae8a8bd70704579cd042f6ed8a2b6812e019434d474ddf45e071d52b617ef0a",
+    "bytes": 20014
+  },
+  {
+    "file": "transcripts/16_servo_control.txt",
+    "video_id": "Az8Ae3zJoPo",
+    "url": "https://www.youtube.com/watch?v=Az8Ae3zJoPo",
+    "language": "ko",
+    "auto_generated": true,
+    "sha256": "cc93e55b8c896635ca16fc2ff87c4d5e8e20d23df6364feae06bf57aef106adf",
+    "bytes": 24197
+  },
+  {
+    "file": "transcripts/18_calibration.txt",
+    "video_id": "pvS29mRDxEc",
+    "url": "https://www.youtube.com/watch?v=pvS29mRDxEc",
+    "language": "ko",
+    "auto_generated": true,
+    "sha256": "58685321a2a18c9d36b4e0e7a35a4071870f2529d18c5fa917aa5a2b3b528c8d",
+    "bytes": 19877
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "verified_date_kst": "2026-10-23",
+  "sources": [
+    {
+      "id": "S23",
+      "file": "web/Britz_BA-R9_official.html",
+      "sha256_matches": true,
+      "bytes": 38783
+    },
+    {
+      "id": "S24",
+      "file": "manuals/Britz_BA-R9_manual.jpg",
+      "sha256_matches": true,
+      "bytes": 846172
+    },
+    {
+      "id": "S25",
+      "file": "datasheets/WS2812B_V5_reference.pdf",
+      "sha256_matches": true,
+      "bytes": 635019,
+      "pages": 8,
+      "all_pages_parse": true
+    },
+    {
+      "id": "S26",
+      "file": "manuals/Adafruit_NeoPixel_Uberguide.pdf",
+      "sha256_matches": true,
+      "bytes": 5623588,
+      "pages": 110,
+      "all_pages_parse": true
+    },
+    {
+      "id": "S27",
+      "file": "web/Adafruit_NeoPixel_best_practices.html",
+      "sha256_matches": true,
+      "bytes": 104296
+    },
+    {
+      "id": "S28",
+      "file": "web/UGREEN_30143_candidate_reference.html",
+      "sha256_matches": true,
+      "bytes": 206769
+    }
+  ],
+  "photos": [
+    {
+      "file": "img/Lavalier_Microphone_UGREEN_USB_Audio_20261023.png",
+      "sha256": "433540e0c1082e510f50e06ce80e59ab10de5a170c3565ab2752770415601104",
+      "source_copy_matches": true
+    },
+    {
+      "file": "img/Britz_BA-R9_SoundBar_20261023.png",
+      "sha256": "ee360fd8b96b73ba672b791e3e9bfba77db653d04a6380c2171a4c35e8ba4f7d",
+      "source_copy_matches": true
+    },
+    {
+      "file": "img/NeoPixel_5V_LED_Strips_20261023.png",
+      "sha256": "6800696b836147252a4d21a21ceeb7247eae435d35be96f7ac292353dc31e29a",
+      "source_copy_matches": true
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+[
+  {
+    "lecture": 1,
+    "playlist_position": 1,
+    "title": "SpotMicro 프로젝트 소개와 목차 소개",
+    "video_id": "RocfxXIWZd4",
+    "url": "https://www.youtube.com/watch?v=RocfxXIWZd4",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 2,
+    "playlist_position": 25,
+    "title": "구매 링크를 포함한 준비물 설명",
+    "video_id": "WV4XagCFLmA",
+    "url": "https://www.youtube.com/watch?v=WV4XagCFLmA",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 3,
+    "playlist_position": 2,
+    "title": "3D 프린팅 파츠 소개",
+    "video_id": "RFxHaI4Lt6A",
+    "url": "https://www.youtube.com/watch?v=RFxHaI4Lt6A",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 4,
+    "playlist_position": 3,
+    "title": "시뮬레이션 소개 및 환경 구성 (Jetson Nano에서는 구동 불가, 데스크탑에서 구성)",
+    "video_id": "A0KBixvFAxA",
+    "url": "https://www.youtube.com/watch?v=A0KBixvFAxA",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 5,
+    "playlist_position": 4,
+    "title": "시뮬레이션 구동 실습 및 설명 - 1",
+    "video_id": "gOpPMToIf8o",
+    "url": "https://www.youtube.com/watch?v=gOpPMToIf8o",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 6,
+    "playlist_position": 5,
+    "title": "시뮬레이션 구동 실습 및 설명 - 2",
+    "video_id": "iqLxMBpgGS0",
+    "url": "https://www.youtube.com/watch?v=iqLxMBpgGS0",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 7,
+    "playlist_position": 6,
+    "title": "4족 보행 Kinematics 설명 - 1",
+    "video_id": "9BUBcX6Y8RE",
+    "url": "https://www.youtube.com/watch?v=9BUBcX6Y8RE",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 8,
+    "playlist_position": 7,
+    "title": "4족 보행 Kinematics 설명 - 2",
+    "video_id": "TvkJ5PffmuE",
+    "url": "https://www.youtube.com/watch?v=TvkJ5PffmuE",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 9,
+    "playlist_position": 8,
+    "title": "Matplotlib를 사용한 Inverse Kinematics 실습",
+    "video_id": "gO34PRgbh2E",
+    "url": "https://www.youtube.com/watch?v=gO34PRgbh2E",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 10,
+    "playlist_position": 9,
+    "title": "외관 조립 설명 - 다리 조립",
+    "video_id": "v6WOk3I8juo",
+    "url": "https://www.youtube.com/watch?v=v6WOk3I8juo",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 11,
+    "playlist_position": 10,
+    "title": "외관 조립 설명 (몸체 조립 후 다리와의 결합)",
+    "video_id": "XcKpf5IAYIc",
+    "url": "https://www.youtube.com/watch?v=XcKpf5IAYIc",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 12,
+    "playlist_position": 11,
+    "title": "전자, 전원부 조립 설명",
+    "video_id": "AUtIKKJltyg",
+    "url": "https://www.youtube.com/watch?v=AUtIKKJltyg",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 13,
+    "playlist_position": 12,
+    "title": "Jetson Nano 세팅",
+    "video_id": "orxFLitnro0",
+    "url": "https://www.youtube.com/watch?v=orxFLitnro0",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 14,
+    "playlist_position": 13,
+    "title": "Jetson Nano 개발환경과 Python 가상환경 구성",
+    "video_id": "SIXsb4cWBSM",
+    "url": "https://www.youtube.com/watch?v=SIXsb4cWBSM",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 15,
+    "playlist_position": 14,
+    "title": "서보모터란? 프로젝트에 사용된 모터의 스펙 설명",
+    "video_id": "StFKgFmMEK0",
+    "url": "https://www.youtube.com/watch?v=StFKgFmMEK0",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 16,
+    "playlist_position": 15,
+    "title": "Jetson Nano를 이용한 모터 제어 실습",
+    "video_id": "Az8Ae3zJoPo",
+    "url": "https://www.youtube.com/watch?v=Az8Ae3zJoPo",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 17,
+    "playlist_position": 16,
+    "title": "가조립된 로봇을 이용한 Pose 제어",
+    "video_id": "9gwIaQl9vzI",
+    "url": "https://www.youtube.com/watch?v=9gwIaQl9vzI",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 18,
+    "playlist_position": 17,
+    "title": "모터 Calibration과 코드 설명",
+    "video_id": "pvS29mRDxEc",
+    "url": "https://www.youtube.com/watch?v=pvS29mRDxEc",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 19,
+    "playlist_position": 18,
+    "title": "제자리 걷기 실습",
+    "video_id": "dX37iuWznEE",
+    "url": "https://www.youtube.com/watch?v=dX37iuWznEE",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 20,
+    "playlist_position": 19,
+    "title": "보행 메커니즘 설명 1",
+    "video_id": "2cYUtxOxUP0",
+    "url": "https://www.youtube.com/watch?v=2cYUtxOxUP0",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 21,
+    "playlist_position": 20,
+    "title": "보행 메커니즘 설명 2",
+    "video_id": "OzEfRp2S6Co",
+    "url": "https://www.youtube.com/watch?v=OzEfRp2S6Co",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 22,
+    "playlist_position": 21,
+    "title": "제작 시 주의해야 할 디버깅 포인트들",
+    "video_id": "waEfR0EjBx4",
+    "url": "https://www.youtube.com/watch?v=waEfR0EjBx4",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 23,
+    "playlist_position": 22,
+    "title": "시뮬레이션에서 실습한 작업들을 실제 로봇에 적용해보기 (Pybullet to JetsonNano)",
+    "video_id": "aMmzNu1zNtM",
+    "url": "https://www.youtube.com/watch?v=aMmzNu1zNtM",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 24,
+    "playlist_position": 23,
+    "title": "키보드를 통한 원격 전후양옆 제어 실습",
+    "video_id": "XefhWWCUX94",
+    "url": "https://www.youtube.com/watch?v=XefhWWCUX94",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  },
+  {
+    "lecture": 25,
+    "playlist_position": 24,
+    "title": "최종 시연, SpotMicro 커뮤니티 소개",
+    "video_id": "MT8CpmtM-QM",
+    "url": "https://www.youtube.com/watch?v=MT8CpmtM-QM",
+    "verified_via": "rendered YouTube playlist browser DOM",
+    "verified_date_kst": "2026-10-22"
+  }
+]

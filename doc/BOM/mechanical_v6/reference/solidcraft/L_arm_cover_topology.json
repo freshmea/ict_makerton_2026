@@ -1,0 +1,12 @@
+{
+  "id": 17,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"body\": \"L_arm_cover\",\n  \"edges\": [],\n  \"faces\": [\n    {\n      \"area\": 14946.75397876713,\n      \"centroid\": [\n        16.123513758196644,\n        25.756608760892632,\n        63.065499211200816\n      ],\n      \"exact\": false,\n      \"index\": 0,\n      \"name\": \"F3:face:0\",\n      \"plane_normal\": null,\n      \"point\": [\n        28.68439218364956,\n        13.61251380166999,\n        80.63239571365428\n      ]\n    }\n  ]\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

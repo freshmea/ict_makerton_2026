@@ -1,0 +1,297 @@
+{
+  "revision": "P0",
+  "units": "mm",
+  "parts": [
+    {
+      "part": "BASE_TRAY_1",
+      "bbox_mm": [
+        213.3333333,
+        200.0,
+        96.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 321287.5969998776,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "BASE_LID_1",
+      "bbox_mm": [
+        213.3333333,
+        200.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 166650.81170208286,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "BASE_TRAY_2",
+      "bbox_mm": [
+        213.33333340000001,
+        200.0,
+        96.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 239039.4986296445,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "BASE_LID_2",
+      "bbox_mm": [
+        213.33333340000001,
+        200.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 166094.03309784902,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "BASE_TRAY_3",
+      "bbox_mm": [
+        213.3333333,
+        200.0,
+        96.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 321287.5969998769,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "BASE_LID_3",
+      "bbox_mm": [
+        213.3333333,
+        200.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 166650.81170208286,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "SEAM_PLATE_1",
+      "bbox_mm": [
+        44.000000000000014,
+        42.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 7246.732755698012,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "SEAM_PLATE_2",
+      "bbox_mm": [
+        44.000000000000014,
+        42.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 7246.732755698012,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "HEAD_CASE",
+      "bbox_mm": [
+        176.0,
+        100.0,
+        138.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 234961.9344829919,
+      "notes": "P0 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "HEAD_FACE_TRIAL",
+      "bbox_mm": [
+        170.0,
+        3.000000000000014,
+        132.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 59644.99812070113,
+      "notes": "Eye/camera openings are design trials; module measurement required"
+    },
+    {
+      "part": "L_YAW_PEDESTAL_TRIAL",
+      "bbox_mm": [
+        58.0,
+        54.0,
+        24.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 52992.0,
+      "notes": "Servo output offset/flange and bearing support pending measurement"
+    },
+    {
+      "part": "L_ARM_FORK_TRIAL",
+      "bbox_mm": [
+        98.41950898790674,
+        38.0,
+        203.98958375316147
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 112987.19313608535,
+      "notes": "Axis distance193.0026; F625 seats16.3/18.2 trial; horn adapter NOT released"
+    },
+    {
+      "part": "L_PALM_SHELL_TRIAL",
+      "bbox_mm": [
+        82.0,
+        44.0,
+        44.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 34351.74343456848,
+      "notes": "LED installation and horn adapter require measured dimensions"
+    },
+    {
+      "part": "R_YAW_PEDESTAL_TRIAL",
+      "bbox_mm": [
+        58.0,
+        54.0,
+        24.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 52992.0,
+      "notes": "Servo output offset/flange and bearing support pending measurement"
+    },
+    {
+      "part": "R_ARM_FORK_TRIAL",
+      "bbox_mm": [
+        98.41950898790674,
+        38.0,
+        203.98958375316147
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 112987.19313608539,
+      "notes": "Axis distance193.0026; F625 seats16.3/18.2 trial; horn adapter NOT released"
+    },
+    {
+      "part": "R_PALM_SHELL_TRIAL",
+      "bbox_mm": [
+        82.0,
+        44.0,
+        44.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 34351.74343456848,
+      "notes": "LED installation and horn adapter require measured dimensions"
+    },
+    {
+      "part": "PHONE_CRADLE_TRIAL",
+      "bbox_mm": [
+        78.0,
+        46.5,
+        38.5
+      ],
+      "valid": true,
+      "watertight": true,
+      "volume_mm3": 31180.5,
+      "notes": "P0 dimensional trial; measure hardware first"
+    }
+  ],
+  "all_solids_valid": true,
+  "all_print_parts_within_256_cube": true,
+  "STL_scale": "mm assumed; STL has no unit metadata; STEP declares mm",
+  "assembly_components": 67,
+  "parts_count": 17,
+  "motion_check": "not performed",
+  "hardware_fit": "not measured",
+  "release": "PENDING",
+  "base_nominal": [
+    640,
+    200,
+    100
+  ],
+  "arm_axis_distance": 193.0025906561878,
+  "static_checks": [
+    {
+      "a": "L_YAW_SERVO_ENVELOPE",
+      "b": "L_YAW_PEDESTAL_TRIAL",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_YAW_SERVO_ENVELOPE",
+      "b": "BASE_LID_1",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_PITCH_SERVO_ENVELOPE",
+      "b": "L_ARM_FORK_TRIAL",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_PALM_SHELL_TRIAL",
+      "b": "L_ARM_FORK_TRIAL",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_YAW_SERVO_ENVELOPE",
+      "b": "R_YAW_PEDESTAL_TRIAL",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_YAW_SERVO_ENVELOPE",
+      "b": "BASE_LID_3",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_PITCH_SERVO_ENVELOPE",
+      "b": "R_ARM_FORK_TRIAL",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_PALM_SHELL_TRIAL",
+      "b": "R_ARM_FORK_TRIAL",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "BASE_TRAY_1",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "BASE_LID_1",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "BASE_TRAY_2",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "BASE_LID_2",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "BASE_TRAY_3",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "BASE_LID_3",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    }
+  ],
+  "all_print_parts_single_solid": true
+}

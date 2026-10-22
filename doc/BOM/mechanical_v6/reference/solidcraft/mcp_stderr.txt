@@ -1,0 +1,1 @@
+solidcraft mcp: files limited to \\?\C:\Users\Administrator\AppData\Local\SolidCraft\recovery, \\?\C:\Users\Administrator\AppData\Local\Temp\solidcraft-mcp-36044-276a80c0, \\?\D:\repository\ict_makerton_2026\doc\BOM\mechanical_v6\reference and the open design's folder (--allow-path DIR adds one, --allow-any-path lifts the limit)

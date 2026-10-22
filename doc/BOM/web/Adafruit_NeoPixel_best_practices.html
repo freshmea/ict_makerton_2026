@@ -1,0 +1,2370 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <link rel="mask-icon" href="/assets/adafruit_favicon-fa25640e.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-5362a6c7.ico" />
+
+    <title>Best Practices | Adafruit NeoPixel Überguide | Adafruit Learning System</title>
+
+    
+
+<link rel="canonical" href="https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices" />
+
+<meta name="guide-title" content="Adafruit NeoPixel Überguide">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@adafruit">
+<meta name="twitter:title" content="Adafruit NeoPixel Überguide">
+<meta name="twitter:description" content="Everything you always wanted to know about Adafruit NeoPixels but were afraid to ask">
+<meta name="twitter:image:src" content="https://cdn-learn.adafruit.com/guides/images/000/000/350/medium800/glamour.jpg">
+<meta name="twitter:domain" content="https://learn.adafruit.com">
+
+<meta property="og:site_name" content="Adafruit Learning System" />
+<meta property="og:title" content="Adafruit NeoPixel Überguide" />
+<meta property="og:description" content="NeoPixels are “intelligent” full-color RGB LEDs that can be controlled and chained from a single microcontroller pin. This guide presents an overview of NeoPixel products, along with tips for build..." />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://cdn-learn.adafruit.com/guides/images/000/000/350/medium800/glamour.jpg" />
+<meta property="og:url" content="https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices" />
+
+<script type="application/ld+json" nonce="Ao1lE4wy4n3btfDquUOo5A==">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Adafruit NeoPixel Überguide",
+    "description": "NeoPixels are “intelligent” full-color RGB LEDs that can be controlled and chained from a single microcontroller pin. This guide presents an overview of NeoPixel products, along with tips for build...",
+    "image": "https://cdn-learn.adafruit.com/guides/images/000/000/350/medium800/glamour.jpg",
+    "url": "https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices",
+    "publisher": "Adafruit",
+    "datePublished": "2013-08-30T17:06:47-04:00",
+    "author": {
+      "@type": "Person",
+      "name": "Phillip Burgess"
+    }
+  }
+</script>
+
+
+  
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="GljyX4-eOZut_4oKRFJe0ekJWKLySoLwxHaoC46sT7SLJzALVnNi0mB9lOfo8f1FXRW9tbtdCXttBQ-eRMtpqw" />
+  <meta name="shop-uri" content="https://www.adafruit.com">
+  <link rel="alternate" type="application/atom+xml" title="ATOM" href="/feed" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.rss" />
+  <link rel="stylesheet" href="/assets/application-8813e530.css" data-turbo-track="reload" media="screen" />
+  <link rel="preload" href="https://cdn-shop.adafruit.com/fonts/proximanova/proximanova-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdn-shop.adafruit.com/fonts/proximanova/proximanova-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdn-shop.adafruit.com/fonts/proximanova/proximanova-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <script nonce="Ao1lE4wy4n3btfDquUOo5A==">
+  var dataLayer = [];
+  function gtag(){dataLayer.push(arguments);}
+</script>
+
+  <!-- Google Tag Manager -->
+  <script nonce="Ao1lE4wy4n3btfDquUOo5A==">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PRPXBQ6');</script>
+  <!-- End Google Tag Manager -->
+
+  <script nonce="Ao1lE4wy4n3btfDquUOo5A==">
+    gtag('js', new Date());
+  </script>
+
+    <script nonce="Ao1lE4wy4n3btfDquUOo5A==">
+    gtag("event", "view_item_list", {
+      item_list_id: "350:3088",
+      item_list_name: "adafruit-neopixel-uberguide/best-practices",
+      items: [
+  {
+    "item_id": "1426",
+    "item_name": "NeoPixel Stick - 8 x 5050 RGB LED with Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "1460",
+    "item_name": "Adafruit NeoPixel Digital RGB LED Strip - Black 30 LED 5m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "1463",
+    "item_name": "NeoPixel Ring - 16 x 5050 RGB LED with Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "1506",
+    "item_name": "Adafruit NeoPixel Digital RGB LED Strip 144 LED - 1m Black",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "1507",
+    "item_name": "Adafruit NeoPixel Digital RGB LED Strip 144 LED - 1m White",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "1586",
+    "item_name": "NeoPixel Ring - 24 x 5050 RGB LED with Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "1643",
+    "item_name": "NeoPixel Ring - 12 x 5050 RGB LED with Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "1768",
+    "item_name": "NeoPixel 1/4 60 Ring - 5050 RGB LED w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2226",
+    "item_name": "NeoPixel Jewel - 7 x 5050 RGB LED with Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2539",
+    "item_name": "Adafruit NeoPixel Digital RGB LED Strip - White 60 LED 3m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2541",
+    "item_name": "Adafruit NeoPixel Digital RGB LED Strip - White 60 LED 1m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2550",
+    "item_name": "Adafruit NeoPixel Digital RGB LED Strip - Black 30 LED 3m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2551",
+    "item_name": "Adafruit NeoPixel Digital RGB LED Strip - Black 30 LED 2m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2842",
+    "item_name": "Adafruit NeoPixel Digital RGBW LED Strip - White PCB 60 LED/m 4m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2851",
+    "item_name": "NeoPixel Ring - 12 x 5050 RGBW LEDs w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2852",
+    "item_name": "NeoPixel Ring - 12 x 5050 RGBW LEDs w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2853",
+    "item_name": "NeoPixel Ring - 12 x 5050 RGBW LEDs w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2854",
+    "item_name": "NeoPixel Ring - 16 x 5050 RGBW LEDs w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2855",
+    "item_name": "NeoPixel Ring - 16 x 5050 RGBW LEDs w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2856",
+    "item_name": "NeoPixel Ring - 16 x 5050 RGBW LEDs w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2858",
+    "item_name": "NeoPixel Jewel - 7 x 5050 RGBW LED w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2859",
+    "item_name": "NeoPixel Jewel - 7 x 5050 RGBW LED w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2860",
+    "item_name": "NeoPixel Jewel - 7 x 5050 RGBW LED w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2862",
+    "item_name": "NeoPixel Ring - 24 x 5050 RGBW LEDs w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2863",
+    "item_name": "NeoPixel Ring - 24 x 5050 RGBW LEDs w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2867",
+    "item_name": "NeoPixel Stick - 8 x 5050 RGBW LEDs - Warm White - ~3000K",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2868",
+    "item_name": "NeoPixel Stick - 8 x 5050 RGBW LEDs - Natural White - ~4500K",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2869",
+    "item_name": "NeoPixel Stick - 8 x 5050 RGBW LEDs - Cool White - ~6000K",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2873",
+    "item_name": "NeoPixel 1/4 60 Ring - 5050 RGBW LED w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2874",
+    "item_name": "NeoPixel 1/4 60 Ring - 5050 RGBW LED w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2875",
+    "item_name": "NeoPixel 1/4 60 Ring - 5050 RGBW LED w/ Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2963",
+    "item_name": "Adafruit Mini Skinny NeoPixel Digital RGB LED Strip 1m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2968",
+    "item_name": "Adafruit Mini Skinny NeoPixel Digital RGB LED Strip 1m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "2969",
+    "item_name": "Adafruit Mini Skinny NeoPixel Digital RGB LED Strip - 144 LED/m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3039",
+    "item_name": "NeoPixel Sticks",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3042",
+    "item_name": "NeoPixel Rings",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3047",
+    "item_name": "NeoPixel Jewels",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3052",
+    "item_name": "Adafruit NeoPixel 8x8 NeoMatrices",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3053",
+    "item_name": "Adafruit NeoPixel Shields",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3634",
+    "item_name": "Adafruit NeoPixel LED Side Light Strip - Black 120 LED",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3636",
+    "item_name": "Adafruit NeoPixel LED Side Light Strip - Black 60 LED",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3729",
+    "item_name": "Side Light NeoPixel LED PCB Bar - 60 LEDs",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "3869",
+    "item_name": "NeoPixel RGB Neon-like LED Flex Strip with Silicone Tube",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "4310",
+    "item_name": "Flexible Silicone Neon-like Skinny NeoPixel LED Strip",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "4368",
+    "item_name": "Ultra Skinny NeoPixel 1515 LED Strip 4mm wide",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "4865",
+    "item_name": "Adafruit NeoPixel 332 LED-per-Meter Silicone Bead LED Strip",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "4913",
+    "item_name": "Adafruit Mini Skinny NeoPixel LED Strip - Warm White 3000K",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "4914",
+    "item_name": "Adafruit Mini Skinny NeoPixel RGBW LED Strip - Cool White 6500K",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "5722",
+    "item_name": "Adafruit High Density NeoPixel UV LED Strip with 60 LED/m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "5985",
+    "item_name": "Adafruit Double-Sided Emitter NeoPixel LED Strip - 120 LEDs/m",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "6016",
+    "item_name": "Adafruit NeoPixel Silicone Bead LED Strip - 180 LEDs per Meter",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "6509",
+    "item_name": "NeoPixel Stick - 8 x 5050 WWA White LEDs with Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "6526",
+    "item_name": "NeoPixel Ring - 12 x 5050 WWA with Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "6527",
+    "item_name": "NeoPixel Ring - 16 x 5050 WWA LED with Integrated Drivers",
+    "affiliation": "Featured Product"
+  },
+  {
+    "item_id": "6023",
+    "item_name": "Adafruit NeoPixel Pebble / Seed LED Strand - 300 LEDs - 2\" Pitch",
+    "affiliation": "Featured Product"
+  }
+]
+    });
+
+  </script>
+
+
+  <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"> -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <script type="application/ld+json" nonce="Ao1lE4wy4n3btfDquUOo5A==">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://learn.adafruit.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://learn.adafruit.com/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    }
+  </script>
+    <script src="/assets/application-801e063c.js" data-turbo-track="reload" type="module" nonce="Ao1lE4wy4n3btfDquUOo5A=="></script>
+</head>
+
+<body class="application pages show production" data-rails-env="production">
+    <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRPXBQ6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="outer-wrapper">
+    <div id="inner-wrapper">
+      
+      <nav class="skip-links" aria-label="Skip links">
+  <ul>
+    <li><a data-turbo="false" href="#main-content-container">Skip to main content</a></li>
+      <li><a data-turbo="false" href="#article-body">Skip to article content</a></li>
+
+  </ul>
+</nav>
+
+
+        <div id="messaging-wrapper" class="messages-container" data-load="https://www.adafruit.com/api/multi_message.php"></div>
+
+
+      <header id="adafruit-header" aria-label="Adafruit header">
+  <div id="small-header">
+  <div class="first-row">
+      <nav aria-label="Adafruit applications menu">
+    <ul class="application-links">
+      <li><a aria-label="Adafruit Shop" href="https://www.adafruit.com">Shop</a></li>
+      <li class="selected"><a aria-label="Adafruit Learning System" href="https://learn.adafruit.com">Learn</a></li>
+      <li><a aria-label="Adafruit Blog" href="https://blog.adafruit.com">Blog</a></li>
+      <li><a aria-label="Adafruit Forums and Support" href="https://forums.adafruit.com">Forums</a></li>
+      <li><a aria-label="Adafruit IO, the internet of things" href="https://io.adafruit.com">IO</a></li>
+      <li><a aria-label="Adafruit Youtube Videos" href="https://www.youtube.com/adafruit/live">LIVE!</a></li>
+
+        <li><a aria-label="Adafruit product box subscription" href="https://www.adabox.com">AdaBox</a></li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <div class="second-row">
+    <div class="row-content">
+      <div id="mobile-header-logo">
+        <a href="https://learn.adafruit.com">
+        <img id="small-logo" height="50" width="50" alt="Adafruit Logo" src="/logos/adafruit_logo_small.png?3343756081246158728" />
+</a>      </div>
+
+      <button id="mobile-menu-button" class="c-hamburger c-hamburger--htx">
+        <span>toggle menu</span>
+      </button>
+
+      <div id="mobile-search-wrapper">
+        <form action="https://learn.adafruit.com/search" method="get">
+          <label for="mobile-search" style="display:none;">Search</label>
+
+          <input id="mobile-search" type="text" name="q" autocomplete="off"
+            data-app-id="W9DMM4OTH0"
+            data-app-key="28a76a2b87be38db12283ebda329425a"
+            data-app-index="learn_guides_production"
+            data-app-uri="https://learn.adafruit.com" />
+
+          <button type="submit" aria-label="Submit search"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+
+      <a id="mobile-header-cart" href="https://www.adafruit.com/shopping_cart">
+        <span class="small-cart-count" aria-live="polite">0</span>
+        <i class="fa fa-shopping-cart"></i>
+</a>    </div>
+  </div>
+
+  <nav id="small-header-nav">
+    <div id="small-menu">
+      <ul>
+          <li class="account-info">
+            <a href="/users/sign_in">Sign In</a> | <a href="https://accounts.adafruit.com/">Create Account</a>
+          </li>
+        <li><a href="https://adafruit-playground.com">Playground</a></li>
+          <li><a href="/guides/latest">New Guides</a></li>
+          <li><a href="/groups">Series</a></li>
+          <li><a href="https://www.adafruit.com/wishlists">Wishlists</a></li>
+          <li>
+            <a class="random-guide-link" aria-label="View a Random Guide" href="https://learn.adafruit.com/guides/random">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+  <g>
+    <path fill="currentColor" d="M478.578,244.475H278.047c-3.81,0-7.42,0.78-10.829,1.961l56.305-56.305c6.306-6.306,9.759-14.706,9.759-23.64
+      c0-8.935-3.454-17.335-9.759-23.64L190.282,9.609c-12.589-12.611-34.692-12.611-47.281,0L9.759,142.85
+      C3.454,149.156,0,157.556,0,166.491s3.454,17.335,9.759,23.64l133.242,133.242c6.306,6.306,14.683,9.759,23.64,9.759
+      c8.957,0,17.335-3.454,23.64-9.759l56.305-56.305c-1.181,3.409-1.961,7.019-1.961,10.829v200.531
+      c0,18.427,14.995,33.422,33.422,33.422h200.531c18.427,0,33.422-14.995,33.422-33.422V277.897
+      C512,259.47,497.005,244.475,478.578,244.475z M182.394,271.368c-4.345,4.345-10.049,6.506-15.753,6.506
+      s-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,248.552,191.106,262.679,182.394,271.368z M182.394,182.244c-4.345,4.345-10.049,6.506-15.753,6.506
+      c-5.704,0-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,159.428,191.106,173.554,182.394,182.244z M182.394,93.119c-4.345,4.345-10.049,6.506-15.753,6.506
+      c-5.704,0-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,70.303,191.106,84.429,182.394,93.119z M311.469,467.287c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281c12.277,0,22.281,9.982,22.281,22.281C333.75,457.305,323.746,467.287,311.469,467.287z
+       M311.469,333.6c-12.277,0-22.281-9.982-22.281-22.281c0-12.299,10.004-22.281,22.281-22.281c12.277,0,22.281,9.982,22.281,22.281
+      C333.75,323.618,323.746,333.6,311.469,333.6z M378.313,400.444c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281C400.594,390.462,390.59,400.444,378.313,400.444z
+       M445.156,467.287c-12.277,0-22.281-9.982-22.281-22.281c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281
+      C467.438,457.305,457.433,467.287,445.156,467.287z M445.156,333.6c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281C467.438,323.618,457.433,333.6,445.156,333.6z"/>
+  </g>
+</g>
+</svg>
+</a>
+          </li>
+      </ul>
+    </div>
+
+    <div id="mobile-search-results"></div>
+  </nav>
+</div>
+
+
+  <div id="large-header">
+    <nav class="first-row" aria-label="Adafruit main site">
+      <div class="row-content">
+          <nav aria-label="Adafruit applications menu">
+    <ul class="application-links">
+      <li><a aria-label="Adafruit Shop" href="https://www.adafruit.com">Shop</a></li>
+      <li class="selected"><a aria-label="Adafruit Learning System" href="https://learn.adafruit.com">Learn</a></li>
+      <li><a aria-label="Adafruit Blog" href="https://blog.adafruit.com">Blog</a></li>
+      <li><a aria-label="Adafruit Forums and Support" href="https://forums.adafruit.com">Forums</a></li>
+      <li><a aria-label="Adafruit IO, the internet of things" href="https://io.adafruit.com">IO</a></li>
+      <li><a aria-label="Adafruit Youtube Videos" href="https://www.youtube.com/adafruit/live">LIVE!</a></li>
+
+        <li><a aria-label="Adafruit product box subscription" href="https://www.adabox.com">AdaBox</a></li>
+    </ul>
+  </nav>
+
+
+        <div id="account">
+            <span class="sign-out"><a href="/users/sign_in">Sign In</a></span>
+          <div class="cart">
+            <a aria-label="Shopping Cart, 0 items" aria-live="polite" href="https://www.adafruit.com/shopping_cart">
+              <i class="fa fa-shopping-cart"></i> 0
+</a>          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="second-row" aria-label="Adafruit Learn application">
+      <div class="row-content">
+        <div class="left-content">
+          <div id="logo">
+            <a title="Adafruit Learning System" href="https://learn.adafruit.com">
+              <img alt="Adafruit Logo" src="/logos/logo_2x.png?3343756081246158728" />
+</a>          </div>
+          <ul class="main-nav-links">
+            <li class="dropdown with-overlay">
+              <button class="dropdown-label nav-link" aria-haspopup="true">Explore & Learn</button>
+              <div class="dropdown-container">
+                <div class="dropdown-content" tabindex="-1">
+                    <div class="flyout">
+      <div class="three-panels">
+        <div class="first-column">
+          <div class="content-header">
+            <span class="title">Learn Categories</span>
+          </div>
+          <div class="categories">
+            <ul>
+                <li>
+                  <a href="https://learn.adafruit.com/category/3d-printing">3D Printing</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/adabox">AdaBox</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/adafruit-products">Adafruit Products</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/arduino">Arduino Compatibles</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/breakout-boards">Breakout Boards</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/circuit-playground">Circuit Playground</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/circuitpython">CircuitPython</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/clue">CLUE</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/community-support">Community Support</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/components">Components</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/crickit">Crickit</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/customer-projects">Customer &amp; Partner Projects</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/development-boards">Development Boards</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/educators">Educators</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/el">EL Wire/Tape/Panel</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/feather">Feather</a>
+                </li>
+                <li>
+                  <a href="https://learn.adafruit.com/category/gaming-1">Gaming</a>
+                </li>
+            </ul>
+            <ul>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/hacks">Hacks</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/internet-of-things-iot">Internet of Things - IOT</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/lcds-and-displays">LCDs &amp; Displays</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/leds">LEDs</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/machine-learning">Machine Learning</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/makecode">MakeCode</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/maker-business">Maker Business</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/micro-bit">micro:bit</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/microcontrollers">Microcontrollers</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/programming">Programming</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/raspberry-pi">Raspberry Pi</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/robotics">Robotics &amp; CNC</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/sensors">Sensors</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/stemma">STEMMA</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/tools">Tools</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/trellis">Trellis</a>
+                  </li>
+                  <li>
+                    <a href="https://learn.adafruit.com/category/wearables">Wearables</a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="middle-column">
+        </div>
+
+        <div class="last-column hide-md">
+          <section class="image-content-card">
+  <img loading="lazy" aria-hidden="true" alt="Explore, Groups to get your gears turning" src="https://learn.adafruit.com/assets/headlines/stemma-690676c3.jpg" />
+
+  <div class="text">
+    <div class="main">
+      <span>Explore</span>
+    </div>
+
+    <div class="tagline">
+      <span>Groups to get your gears turning</span>
+    </div>
+  </div>
+
+  <div class="button">
+    <a title="Groups to get your gears turning, Explore" href="https://learn.adafruit.com/explore">Explore Groups</a>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-link">
+              <a class="new-guides-link" href="https://learn.adafruit.com/guides/latest">New Guides</a>
+            </li>
+            <li class="nav-link">
+              <a href="https://adafruit-playground.com">Playground</a>
+            </li>
+            <li class="nav-link">
+              <a class="random-guide-link" aria-label="View a Random Guide" href="https://learn.adafruit.com/guides/random">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+  <g>
+    <path fill="currentColor" d="M478.578,244.475H278.047c-3.81,0-7.42,0.78-10.829,1.961l56.305-56.305c6.306-6.306,9.759-14.706,9.759-23.64
+      c0-8.935-3.454-17.335-9.759-23.64L190.282,9.609c-12.589-12.611-34.692-12.611-47.281,0L9.759,142.85
+      C3.454,149.156,0,157.556,0,166.491s3.454,17.335,9.759,23.64l133.242,133.242c6.306,6.306,14.683,9.759,23.64,9.759
+      c8.957,0,17.335-3.454,23.64-9.759l56.305-56.305c-1.181,3.409-1.961,7.019-1.961,10.829v200.531
+      c0,18.427,14.995,33.422,33.422,33.422h200.531c18.427,0,33.422-14.995,33.422-33.422V277.897
+      C512,259.47,497.005,244.475,478.578,244.475z M182.394,271.368c-4.345,4.345-10.049,6.506-15.753,6.506
+      s-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,248.552,191.106,262.679,182.394,271.368z M182.394,182.244c-4.345,4.345-10.049,6.506-15.753,6.506
+      c-5.704,0-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,159.428,191.106,173.554,182.394,182.244z M182.394,93.119c-4.345,4.345-10.049,6.506-15.753,6.506
+      c-5.704,0-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,70.303,191.106,84.429,182.394,93.119z M311.469,467.287c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281c12.277,0,22.281,9.982,22.281,22.281C333.75,457.305,323.746,467.287,311.469,467.287z
+       M311.469,333.6c-12.277,0-22.281-9.982-22.281-22.281c0-12.299,10.004-22.281,22.281-22.281c12.277,0,22.281,9.982,22.281,22.281
+      C333.75,323.618,323.746,333.6,311.469,333.6z M378.313,400.444c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281C400.594,390.462,390.59,400.444,378.313,400.444z
+       M445.156,467.287c-12.277,0-22.281-9.982-22.281-22.281c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281
+      C467.438,457.305,457.433,467.287,445.156,467.287z M445.156,333.6c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281C467.438,323.618,457.433,333.6,445.156,333.6z"/>
+  </g>
+</g>
+</svg>
+</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="right-content">
+            <div class="search-wrapper">
+              <div id="search-info" data-page=""
+                data-app-id="W9DMM4OTH0"
+                data-app-key="28a76a2b87be38db12283ebda329425a"
+                data-app-index="learn_guides_production"
+                data-app-uri="https://learn.adafruit.com"></div>
+              <div id="search"></div>
+              <i class="fa fa-search"></i>
+            </div>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+      <turbo-frame id="flash"></turbo-frame>
+      <main id="main-content">
+        <div id="main-content-container" tabindex="-1">
+
+            <div class="toolbar-primary ">
+    <div class="content">
+      <div class="left-content">
+        <div class="breadcrumbs" aria-label="Breadcrumbs">
+          <a href="https://learn.adafruit.com/"><i class='fa fa-home' role='img' title="Learn home"></i></a>
+
+            <i class="fa fa-chevron-right separator"></i>
+            <a href="/adafruit-neopixel-uberguide">Adafruit NeoPixel Überguide</a> <i class="fa fa-chevron-right separator"></i> Best Practices
+        </div>
+      </div>
+
+      <div class="right-content">
+        
+      </div>
+    </div>
+  </div>
+
+
+          
+
+
+
+<article id="content-wrapper" lang="en" class="" data-page-id="3088" data-guide-id="350">
+
+  
+
+  <header aria-label="Guide information" class="title-header">
+  <h1 class="title">Adafruit NeoPixel Überguide</h1>
+  <p>Everything you always wanted to know about Adafruit NeoPixels but were afraid to ask</p>
+  <div class="details">
+      <img alt="Image for user pburgess" class="user-image" src="https://secure.gravatar.com/avatar/7d19195b95e1d03ac4c6437aeaed9d15?s=100" />
+
+      <div class="metadata">
+          <div class="byline">
+    by
+    <a aria-label="Guide author" data-turbo="false" href="/u/pburgess">Phillip Burgess</a>
+
+  </div>
+
+        <div class="updated">
+            published August 30, 2013, last edited October 06, 2026<br>
+    last major update July 21, 2026
+
+        </div>
+        <div class="small">
+          posted in <a href="/category/leds">LEDs</a>
+
+        </div>
+      </div>
+  </div>
+
+  <div class="buttons">
+
+    <span id="guide-favorite" class="button">
+  <span data-controller="modals">
+    <a data-action="click-&gt;modals#show" class="bg-btn-secondary" aria-label="Select to Save this guide." href="/guides/350/favorites">
+      <i class="fa fa-bookmark-o"></i> Save
+</a>    <div class="dialog-container modal"
+     id="favorites-modal"
+     data-modals-target="modal"
+     aria-labelledby="dialog-title"
+     aria-hidden="true">
+  <div class="dialog-overlay" data-a11y-dialog-hide></div>
+  <div class="dialog-content dialog-small">
+    <div class="dialog-header">
+      <div>
+      <h5 class="dialog-title">New Favorite</h5>
+      </div>
+      <a href="#" class="dialog-close" data-a11y-dialog-hide="favorites-modal" aria-label="Close this dialog window">&times;</a>
+    </div>
+    <div class="dialog-body">
+        <p>Please <a href="/users/sign_in">sign in</a> to include this guide in your list of favorites.</p>
+        <p>You will be redirected back to this guide once you <a href="/users/sign_in">sign in</a>, and can then save this guide as one of your favorites.</p>
+    </div>
+    <div class="dialog-footer">
+      <a href="#" class="dialog-close" data-a11y-dialog-hide="favorites-modal" aria-label="Close this dialog window">Close</a>
+    </div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+
+  </span>
+</span>
+
+
+    <span class="button">
+  <a class="bg-btn-secondary remote-modal" data-remote="true" data-method="get" href="/guides/350/user_page_associations/new">
+    <i class="fa fa-link"></i> Link Note
+</a></span>
+
+
+
+      <a class="bg-btn-secondary button" href="https://cdn-learn.adafruit.com/downloads/pdf/adafruit-neopixel-uberguide.pdf">
+          <i class="fa fa-download"></i> Download
+</a>
+  </div>
+</header>
+
+
+  <div class="left-sidebar-layout" role="region" aria-label="Page content">
+    <div class="sidebar">
+  <nav aria-label="Guide navigation">
+      <div class="data-group">
+        <ul class="nested-page-list" aria-label="Guide pages">
+           <li class='parent' data-controller="collapse">
+
+        <a class="published " href="/adafruit-neopixel-uberguide/the-magic-of-neopixels">The Magic of NeoPixels</a>
+
+
+</li>
+ <li class='parent' data-controller="collapse">
+    <button name="button" type="button" data-action="click-&gt;collapse#toggle" aria-label="Toggle child pages" aria-controls="page-7047-children" aria-expanded="false" class="collapsed-icon collapsed"></button>
+
+        <a class="published " href="/adafruit-neopixel-uberguide/form-factors">Form Factors</a>
+
+
+        <ul id="page-7047-children" class="collapse  page-child nav" data-collapse-target="content">
+          	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/neopixel-strips">NeoPixel Strips and Strands</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/neopixel-rings">NeoPixel Rings</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/neopixel-matrices">NeoPixel Matrices</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/neopixel-shields">NeoPixel Shields</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/other-neopixel-shapes">Other NeoPixel Shapes</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/seed-pixels">Seed Pixels</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/individual-neopixels">Individual NeoPixels</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/wwa-white-pixels">WWA White Pixels</a>
+
+</li>
+
+</ul></li>
+ <li class='parent' data-controller="collapse">
+
+        <a class="published " href="/adafruit-neopixel-uberguide/basic-connections">Basic Connections</a>
+
+
+</li>
+ <li class='parent' data-controller="collapse">
+
+        <a class="published active" aria-current="page" href="/adafruit-neopixel-uberguide/best-practices">Best Practices</a>
+
+
+</li>
+ <li class='parent' data-controller="collapse">
+
+        <a class="published " href="/adafruit-neopixel-uberguide/powering-neopixels">Powering NeoPixels</a>
+
+
+</li>
+ <li class='parent' data-controller="collapse">
+
+        <a class="published " href="/adafruit-neopixel-uberguide/logic-level">Logic Level Shifting</a>
+
+
+</li>
+ <li class='parent' data-controller="collapse">
+    <button name="button" type="button" data-action="click-&gt;collapse#toggle" aria-label="Toggle child pages" aria-controls="page-10684-children" aria-expanded="false" class="collapsed-icon collapsed"></button>
+
+        <a class="published " href="/adafruit-neopixel-uberguide/software">Software</a>
+
+
+        <ul id="page-10684-children" class="collapse  page-child nav" data-collapse-target="content">
+          	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/arduino-library-installation">Arduino Library Installation</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/arduino-library-use">Arduino Library Use</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/neomatrix-library">NeoMatrix Library</a>
+
+</li>
+	<li class='published'>
+
+	        <a class="published " href="/adafruit-neopixel-uberguide/advanced-coding">Advanced Coding</a>
+
+</li>
+
+</ul></li>
+ <li class='parent' data-controller="collapse">
+    <button name="button" type="button" data-action="click-&gt;collapse#toggle" aria-label="Toggle child pages" aria-controls="page-10683-children" aria-expanded="false" class="collapsed-icon collapsed"></button>
+
+        <a class="published " href="/adafruit-neopixel-uberguide/python-circuitpython">Python &amp; CircuitPython</a>
+
+
+        <ul id="page-10683-children" class="collapse  page-child nav" data-collapse-target="content">
+          	<li class='published'>
+
+		  <a href="https://circuitpython.readthedocs.io/projects/neopixel/en/latest/" target="blank" class="published">Python Docs <i class="fa fa-external-link"></i></a>
+
+</li>
+
+</ul></li>
+ <li class='parent' data-controller="collapse">
+
+        <a class="published " href="/adafruit-neopixel-uberguide/makecode">MakeCode</a>
+
+
+</li>
+ <li class='parent' data-controller="collapse">
+
+        <a class="published " href="/adafruit-neopixel-uberguide/downloads">Downloads</a>
+
+
+</li>
+
+        </ul>
+
+        <div class="single-page-spacer"></div>
+        <ul class="nested-page-list" aria-label="Guide resources">
+            <li>
+              <a href="/adafruit-neopixel-uberguide/linked_notes">
+                Community Notes
+                <span class="count">2</span>
+</a>            </li>
+          <li>
+              <a href="/adafruit-neopixel-uberguide?view=all">Single page</a>
+          </li>
+          <li>
+                <div id="feedback_page_3088">
+      <a data-turbo-stream="true" class="feedback-link" title="Feedback? Corrections?" rel="nofollow" href="/feedback/new?page_id=3088">
+            Feedback?  Corrections?
+</a>    </div>
+
+          </li>
+          <li>
+            <a href="/adafruit-neopixel-uberguide.md?view=all">Text View</a>
+          </li>
+        </ul>
+      </div>
+
+    
+
+      <section class="list-with-header">
+        <div class="list-header">
+          Guide Products
+          <span class="view-all">
+            <a class="featured-products-link" href="/adafruit-neopixel-uberguide/featured_products">view all</a>
+          </span>
+        </div>
+
+        <ul class="small-product-list">
+            
+
+  <li class="small-product-content-card">
+    <input type="hidden" name="product_analytics_1426" id="product_analytics_1426" value="{
+  &quot;item_list_id&quot;: 350,
+  &quot;item_list_name&quot;: &quot;adafruit-neopixel-uberguide&quot;,
+  &quot;items&quot;: {
+    &quot;item_id&quot;: 1426,
+    &quot;item_name&quot;: &quot;NeoPixel Stick - 8 x 5050 RGB LED with Integrated Drivers&quot;,
+    &quot;affiliation&quot;: &quot;Featured Product&quot;
+  }
+}" class="product-json" />
+
+    <div class="product-image">
+        <img class='image-preview product-asset' src='https://cdn-shop.adafruit.com/640x480/1426-05.jpg' loading='lazy' alt='NeoPixel Stick with 8 x 5050 RGB LED ' />
+
+    </div>
+
+    <div class="product-details">
+        <span class="primary-badge">Primary</span>
+
+      <div>
+        <a class="product-title" href="https://www.adafruit.com/product/1426">NeoPixel Stick - 8 x 5050 RGB LED with Integrated Drivers</a>
+      </div>
+
+        <div class="product-price">$5.95</div>
+
+      <a id="1426-product" class="product-buy btn-primary " data-pid="1426" data-qty="1" data-name="NeoPixel Stick - 8 x 5050 RGB LED with Integrated Drivers" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/1426">Add  to Cart</a>
+    </div>
+  </li>
+
+            
+
+  <li class="small-product-content-card">
+    <input type="hidden" name="product_analytics_1460" id="product_analytics_1460" value="{
+  &quot;item_list_id&quot;: 350,
+  &quot;item_list_name&quot;: &quot;adafruit-neopixel-uberguide&quot;,
+  &quot;items&quot;: {
+    &quot;item_id&quot;: 1460,
+    &quot;item_name&quot;: &quot;Adafruit NeoPixel Digital RGB LED Strip - Black 30 LED 5m&quot;,
+    &quot;affiliation&quot;: &quot;Featured Product&quot;
+  }
+}" class="product-json" />
+
+    <div class="product-image">
+        <img class='image-preview product-asset' src='https://cdn-shop.adafruit.com/640x480/1460-00.jpg' loading='lazy' alt='Adafruit NeoPixel Digital RGB LED Strip reel wired to a microcontroller, with all the LEDs in a rainbow' />
+
+    </div>
+
+    <div class="product-details">
+        <span class="primary-badge">Primary</span>
+
+      <div>
+        <a class="product-title" href="https://www.adafruit.com/product/1460">Adafruit NeoPixel Digital RGB LED Strip - Black 30 LED 5m</a>
+      </div>
+
+        <div class="product-price">$84.75</div>
+
+      <a id="1460-product" class="product-buy btn-primary " data-pid="1460" data-qty="1" data-name="Adafruit NeoPixel Digital RGB LED Strip - Black 30 LED 5m" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/1460">Add  to Cart</a>
+    </div>
+  </li>
+
+            
+
+  <li class="small-product-content-card">
+    <input type="hidden" name="product_analytics_1463" id="product_analytics_1463" value="{
+  &quot;item_list_id&quot;: 350,
+  &quot;item_list_name&quot;: &quot;adafruit-neopixel-uberguide&quot;,
+  &quot;items&quot;: {
+    &quot;item_id&quot;: 1463,
+    &quot;item_name&quot;: &quot;NeoPixel Ring - 16 x 5050 RGB LED with Integrated Drivers&quot;,
+    &quot;affiliation&quot;: &quot;Featured Product&quot;
+  }
+}" class="product-json" />
+
+    <div class="product-image">
+        <img class='image-preview product-asset' src='https://cdn-shop.adafruit.com/640x480/1463-00.jpg' loading='lazy' alt='Hand holding NeoPixel Ring with 16 x 5050 RGB LED, lit up rainbow' />
+
+    </div>
+
+    <div class="product-details">
+        <span class="primary-badge">Primary</span>
+
+      <div>
+        <a class="product-title" href="https://www.adafruit.com/product/1463">NeoPixel Ring - 16 x 5050 RGB LED with Integrated Drivers</a>
+      </div>
+
+        <div class="product-price">$9.95</div>
+
+      <a id="1463-product" class="product-buy btn-primary " data-pid="1463" data-qty="1" data-name="NeoPixel Ring - 16 x 5050 RGB LED with Integrated Drivers" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/1463">Add  to Cart</a>
+    </div>
+  </li>
+
+            
+
+  <li class="small-product-content-card">
+    <input type="hidden" name="product_analytics_1506" id="product_analytics_1506" value="{
+  &quot;item_list_id&quot;: 350,
+  &quot;item_list_name&quot;: &quot;adafruit-neopixel-uberguide&quot;,
+  &quot;items&quot;: {
+    &quot;item_id&quot;: 1506,
+    &quot;item_name&quot;: &quot;Adafruit NeoPixel Digital RGB LED Strip 144 LED - 1m Black&quot;,
+    &quot;affiliation&quot;: &quot;Featured Product&quot;
+  }
+}" class="product-json" />
+
+    <div class="product-image">
+        <img class='image-preview product-asset' src='https://cdn-shop.adafruit.com/640x480/1506-00.jpg' loading='lazy' alt='Adafruit NeoPixel Digital RGB LED Strip wired to a microcontroller, with all the LEDs in a rainbow' />
+
+    </div>
+
+    <div class="product-details">
+        <span class="primary-badge">Primary</span>
+
+      <div>
+        <a class="product-title" href="https://www.adafruit.com/product/1506">Adafruit NeoPixel Digital RGB LED Strip 144 LED - 1m Black</a>
+      </div>
+
+        <div class="product-price">$59.95</div>
+
+      <a id="1506-product" class="product-buy btn-primary " data-pid="1506" data-qty="1" data-name="Adafruit NeoPixel Digital RGB LED Strip 144 LED - 1m Black" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/1506">Add  to Cart</a>
+    </div>
+  </li>
+
+            
+
+  <li class="small-product-content-card">
+    <input type="hidden" name="product_analytics_1507" id="product_analytics_1507" value="{
+  &quot;item_list_id&quot;: 350,
+  &quot;item_list_name&quot;: &quot;adafruit-neopixel-uberguide&quot;,
+  &quot;items&quot;: {
+    &quot;item_id&quot;: 1507,
+    &quot;item_name&quot;: &quot;Adafruit NeoPixel Digital RGB LED Strip 144 LED - 1m White&quot;,
+    &quot;affiliation&quot;: &quot;Featured Product&quot;
+  }
+}" class="product-json" />
+
+    <div class="product-image">
+        <img class='image-preview product-asset' src='https://cdn-shop.adafruit.com/640x480/1507-00.jpg' loading='lazy' alt='Adafruit NeoPixel Digital RGB LED Strip wired to a microcontroller, with all the LEDs in a rainbow' />
+
+    </div>
+
+    <div class="product-details">
+        <span class="primary-badge">Primary</span>
+
+      <div>
+        <a class="product-title" href="https://www.adafruit.com/product/1507">Adafruit NeoPixel Digital RGB LED Strip 144 LED - 1m White</a>
+      </div>
+
+        <div class="product-price">$59.95</div>
+
+      <a id="1507-product" class="product-buy btn-primary " data-pid="1507" data-qty="1" data-name="Adafruit NeoPixel Digital RGB LED Strip 144 LED - 1m White" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/1507">Add  to Cart</a>
+    </div>
+  </li>
+
+            
+
+  <li class="small-product-content-card">
+    <input type="hidden" name="product_analytics_1586" id="product_analytics_1586" value="{
+  &quot;item_list_id&quot;: 350,
+  &quot;item_list_name&quot;: &quot;adafruit-neopixel-uberguide&quot;,
+  &quot;items&quot;: {
+    &quot;item_id&quot;: 1586,
+    &quot;item_name&quot;: &quot;NeoPixel Ring - 24 x 5050 RGB LED with Integrated Drivers&quot;,
+    &quot;affiliation&quot;: &quot;Featured Product&quot;
+  }
+}" class="product-json" />
+
+    <div class="product-image">
+        <img class='image-preview product-asset' src='https://cdn-shop.adafruit.com/640x480/1586-00.jpg' loading='lazy' alt='Hand holding NeoPixel Ring with 24 x 5050 RGB LED, lit up rainbow' />
+
+    </div>
+
+    <div class="product-details">
+        <span class="primary-badge">Primary</span>
+
+      <div>
+        <a class="product-title" href="https://www.adafruit.com/product/1586">NeoPixel Ring - 24 x 5050 RGB LED with Integrated Drivers</a>
+      </div>
+
+        <div class="product-price">$16.95</div>
+
+      <a id="1586-product" class="product-buy btn-primary " data-pid="1586" data-qty="1" data-name="NeoPixel Ring - 24 x 5050 RGB LED with Integrated Drivers" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/1586">Add  to Cart</a>
+    </div>
+  </li>
+
+            
+
+  <li class="small-product-content-card">
+    <input type="hidden" name="product_analytics_1643" id="product_analytics_1643" value="{
+  &quot;item_list_id&quot;: 350,
+  &quot;item_list_name&quot;: &quot;adafruit-neopixel-uberguide&quot;,
+  &quot;items&quot;: {
+    &quot;item_id&quot;: 1643,
+    &quot;item_name&quot;: &quot;NeoPixel Ring - 12 x 5050 RGB LED with Integrated Drivers&quot;,
+    &quot;affiliation&quot;: &quot;Featured Product&quot;
+  }
+}" class="product-json" />
+
+    <div class="product-image">
+        <img class='image-preview product-asset' src='https://cdn-shop.adafruit.com/640x480/1643-00.jpg' loading='lazy' alt='Hand holding NeoPixel Ring with 12  x 5050 RGB LED, lit up rainbow' />
+
+    </div>
+
+    <div class="product-details">
+        <span class="primary-badge">Primary</span>
+
+      <div>
+        <a class="product-title" href="https://www.adafruit.com/product/1643">NeoPixel Ring - 12 x 5050 RGB LED with Integrated Drivers</a>
+      </div>
+
+        <div class="product-price">$8.95</div>
+
+      <a id="1643-product" class="product-buy btn-primary " data-pid="1643" data-qty="1" data-name="NeoPixel Ring - 12 x 5050 RGB LED with Integrated Drivers" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/1643">Add  to Cart</a>
+    </div>
+  </li>
+
+            
+
+  <li class="small-product-content-card">
+    <input type="hidden" name="product_analytics_1768" id="product_analytics_1768" value="{
+  &quot;item_list_id&quot;: 350,
+  &quot;item_list_name&quot;: &quot;adafruit-neopixel-uberguide&quot;,
+  &quot;items&quot;: {
+    &quot;item_id&quot;: 1768,
+    &quot;item_name&quot;: &quot;NeoPixel 1/4 60 Ring - 5050 RGB LED w/ Integrated Drivers&quot;,
+    &quot;affiliation&quot;: &quot;Featured Product&quot;
+  }
+}" class="product-json" />
+
+    <div class="product-image">
+        <img class='image-preview product-asset' src='https://cdn-shop.adafruit.com/640x480/1768-00.jpg' loading='lazy' alt='Hand holding NeoPixel Ring with 60   x 5050 RGB LED, lit up rainbow' />
+
+    </div>
+
+    <div class="product-details">
+        <span class="primary-badge">Primary</span>
+
+      <div>
+        <a class="product-title" href="https://www.adafruit.com/product/1768">NeoPixel 1/4 60 Ring - 5050 RGB LED w/ Integrated Drivers</a>
+      </div>
+
+        <div class="product-price">$9.95</div>
+
+      <a id="1768-product" class="product-buy btn-primary " data-pid="1768" data-qty="1" data-name="NeoPixel 1/4 60 Ring - 5050 RGB LED w/ Integrated Drivers" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/1768">Add  to Cart</a>
+    </div>
+  </li>
+
+
+          <li>
+            <a class="full-size" href="/adafruit-neopixel-uberguide/featured_products">
+              View product details
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+</a>          </li>
+        </ul>
+      </section>
+
+  </nav>
+</div>
+
+
+    <div class="right-content" id="article-body" tabindex="-1">
+
+      <div class="badges headline-badges">
+      <div class="badge favorites-count " title="Saves" aria-label="This many users have saved this guide">
+        1138
+      </div>
+
+
+    <div class="badge skill-level" title="Skill Level" aria-label="Guide skill level">
+      Beginner
+    </div>
+
+    <div class="badge skill-level" title="Guide Type" aria-label="Guide type">
+      Product guide
+    </div>
+
+  <turbo-frame id="display_reactions">
+    <span class="reactions">
+      <form action="/guides/350/reactions/toggle_reaction" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="xMu50fgAosmhKSqjG85K85NDh42Y5umWVMWmiOECIM6gpGfrvo7L-EYmQaR7pAJ0uPq4rxAAhGQmvyDm_evSdA" />
+            <span class="reaction">
+              <span class="emoji">😍</span>
+              <span class="count">17</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🔥</span>
+              <span class="count">14</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">💕</span>
+              <span class="count">7</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">💖</span>
+              <span class="count">8</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">💡</span>
+              <span class="count">7</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🤯</span>
+              <span class="count">3</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🤗</span>
+              <span class="count">5</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">👌</span>
+              <span class="count">6</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🙌</span>
+              <span class="count">4</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">👍</span>
+              <span class="count">7</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">😀</span>
+              <span class="count">5</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">😎</span>
+              <span class="count">8</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">😲</span>
+              <span class="count">7</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">😻</span>
+              <span class="count">6</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">✨</span>
+              <span class="count">5</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🥇</span>
+              <span class="count">4</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🌞</span>
+              <span class="count">9</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🌠</span>
+              <span class="count">7</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">⚡️</span>
+              <span class="count">5</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🤖</span>
+              <span class="count">5</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">👻</span>
+              <span class="count">7</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🍀</span>
+              <span class="count">5</span>
+            </span>
+            <span class="reaction">
+              <span class="emoji">🍁</span>
+              <span class="count">11</span>
+            </span>
+</form>    </span>
+</turbo-frame>
+</div>
+
+
+        <h2>
+          <span id="best-practices">Best Practices</span>
+        </h2>
+
+        <div class="page-content">
+            <div class="" role="region" aria-label="Page content">
+      <div class="text-element">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        <h2><div class="anchor-anchor"><a href="#improper-use-can-damage-your-neopixels-before-diving-in-be-aware-of-the-following-2894472" class="anchor-link"><span class="fa fa-link"></span></a><span id="improper-use-can-damage-your-neopixels-before-diving-in-be-aware-of-the-following-2894472" class="anchor-link-target"></span></div><b>Improper use can damage your NeoPixels. Before diving in, be aware of the following:</b></h2>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+        <figure class="element image-element">
+    <a href="/assets/13738">
+        <img class="13738-asset"
+             srcset="https://cdn-learn.adafruit.com/assets/assets/000/013/738/small360/leds_cap.jpg?1390377584 360w,
+               https://cdn-learn.adafruit.com/assets/assets/000/013/738/medium640/leds_cap.jpg?1390377584 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/013/738/medium800/leds_cap.jpg?1390377584 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/013/738/large1024/leds_cap.jpg?1390377584 1024w"
+              sizes="(max-width: 360px) 360px, (max-width: 640px) 640px, (max-width: 800px) 800px, 1024px"
+             src="https://cdn-learn.adafruit.com/assets/assets/000/013/738/medium800/leds_cap.jpg?1390377584"
+             loading="lazy"
+             alt="" />
+</a>  </figure>
+
+      <div class="text-element">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        <ul>
+<li>Before connecting NeoPixels to any large power source (DC “wall wart” or even a large battery), add a&nbsp;<strong>capacitor</strong> (500–1000 µF at 6.3V or higher) across the + and – terminals as shown above. The capacitor buffers&nbsp;sudden changes in the current drawn by the strip.</li>
+<li>Place a <a href="https://www.adafruit.com/product/2781"><strong>300 to 500 Ohm resistor</strong></a> between the Arduino data output pin and the input to the first NeoPixel. The resistor should be at the end of the wire closest to the NeoPixel(s), not the microcontroller. <em>Some products already incorporate this resistor…if you’re not sure, add one…there’s no harm in doubling up! Also, newer NeoPixels are less picky about this.</em> Nothing’s needed at the “out” end of a strip…you can leave the data out “floating.”</li>
+<li>Try to <strong>minimize the distance</strong> between the Arduino and first pixel, so the signal is clear. A meter or two is usually no problem. Much longer and things can become unreliable. <em>Individual NeoPixels can act as repeaters for long runs.</em>
+</li>
+<li>
+<strong>Avoid connecting NeoPixels to a live circuit.</strong> If you simply <em>must,</em> always <strong>connect ground first</strong>, then +5V, then data. Disconnect in the reverse order.</li>
+<li>If powering the pixels with a separate supply, apply power to the pixels before applying power to the microcontroller. Otherwise they’ll try to power “parasitically” through the data line, which could spell trouble for the microcontroller.</li>
+<li>Observe the same precautions as you would for any <strong>static-sensitive</strong> part; ground yourself before handling, etc.</li>
+<li>NeoPixels powered by 5v ideally need a 5V data signal. <strong>If using a 3.3V microcontroller you must use a logic level shifter</strong> such as a <a href="https://www.adafruit.com/product/1787">74AHCT125</a>&nbsp;or <a href="https://www.adafruit.com/products/1779">74HCT245</a>. <strong>See the “Logic Level Shifting” page for more details.</strong> If you are powering your NeoPixels with 3.7v directly from a LiPoly cell, a 3.3v data signal is OK.</li>
+<li>Make sure that your connections are secure. Alligator clips do not make reliable connections to the tiny solder pads on NeoPixel rings. Better to solder a small pigtail wire to the ring and attach the alligator clips to that.</li>
+<li>If your microcontroller and NeoPixels are powered from two different sources (e.g. separate batteries for each), <strong>there <em>must</em> be a ground connection between the two.</strong>
+</li>
+</ul>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div class="text-element">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      <p>Some of our projects don’t make the above precautions…these are typically small battery-powered devices and power spikes aren’t a big concern. <strong>Any project with a lot pixels or a large power source&nbsp;should definitely include the power capacitor and data line resistor.</strong></p>
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div class="text-element">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        <h2><div class="anchor-anchor"><a href="#neopixels-are-not-intended-for-long-term-permanent-use-such-as-room-lighting-dot-dot-dot-but-here-are-some-tips-to-make-the-most-of-it-3144813" class="anchor-link"><span class="fa fa-link"></span></a><span id="neopixels-are-not-intended-for-long-term-permanent-use-such-as-room-lighting-dot-dot-dot-but-here-are-some-tips-to-make-the-most-of-it-3144813" class="anchor-link-target"></span></div><strong>NeoPixels are <span style="text-decoration: underline;">not</span> intended for long-term permanent use such as room lighting…but here are some tips to make the most of it:</strong></h2>
+<p>It’s not clear what the <em>mean time between failures</em> (MTBF) is for NeoPixels, but we’ve seen figures of ≥50,000 hours <span>quoted for similar addressable LEDs. On the surface this sounds phenomenal…that’s over <em>5 years</em> of 24/7 use…but it’s important to understand the term “mean” here. You may have seen MTBF used in hard drive specifications, but it’s also common in lighting and many other electronic components. Everything <em>eventually</em> has to give, and unfortunately there’s just no One True Number for this. </span><span>The mean time is a statistical average, a point on the bell curve where <em>most</em> parts will expend their usable lifetime. But any bell curve has <em><strong>outliers</strong></em> — in this case, a small number of seemingly immortal components in one direction, and those meeting an early demise in the other.</span></p>
+      
+
+
+
+
+
+
+
+
+
+</div>
+
+        <figure class="element image-element">
+    <a href="/assets/120921">
+        <img class="120921-asset"
+             srcset="https://cdn-learn.adafruit.com/assets/assets/000/120/921/small360/leds_MTBF-Curve.png?1683737447 360w,
+               https://cdn-learn.adafruit.com/assets/assets/000/120/921/medium640/leds_MTBF-Curve.png?1683737447 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/120/921/medium800/leds_MTBF-Curve.png?1683737447 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/120/921/large1024/leds_MTBF-Curve.png?1683737447 1024w"
+              sizes="(max-width: 360px) 360px, (max-width: 640px) 640px, (max-width: 800px) 800px, 1024px"
+             src="https://cdn-learn.adafruit.com/assets/assets/000/120/921/medium800/leds_MTBF-Curve.png?1683737447"
+             loading="lazy"
+             alt="" />
+</a>  </figure>
+
+      <div class="text-element">
+  
+        <p>The “gotcha” with any sort of addressable LEDs is their “downstream” nature. If <em>any</em> pixel in a strand should fail, <em>every</em> pixel further down the line is also affected. Those subsequent pixels are not damaged by this…but until the failed pixel is replaced, they’re all but useless.</p>
+<p>In a typical hobby project with a meter of LEDs or a couple of NeoPixel rings, and run for an hour or two here and there, you’ll probably never encounter this issue…most of us never do. <strong>But when projects increase in scope…hundreds or <em>thousands</em> of pixels running <em>continuously…</em>the probability of a short-lifespan outlier appearing becomes more likely, almost inevitable.</strong></p>
+<p>Nothing can <em>eliminate</em> this, but some best practices include:</p>
+<ul>
+<li>For large “wall power” installations, use high-quality power supplies with adjustment pots, configured for no higher than <strong>5V DC</strong> output.</li>
+<li>Do what you can to ensure <strong>airflow</strong>. All LEDs emit a small amount of heat, and LED strips in open air seem to fare better than enclosed strips stewing in their own warmth.</li>
+<li>
+<strong>Dry</strong> environments are preferable to humidity, even with the weatherproof covering of most LED strips.</li>
+<li>Design for quick <strong>replaceability</strong> in sections…for example, identical 1-meter sections with JST connectors at both ends. If any section has a failure (knocking out everything downstream), swap in a known-good spare, then troubleshoot the failed section on its own, perhaps reflowing a single bad pixel and then setting this strip aside as a future spare.</li>
+<li>Rather than one long LED run, design for <strong>shorter parallel runs</strong>, as is done with the <a href="https://www.adafruit.com/product/5650">Feather RP2040 SCORPIO</a>, NeoPXL8 or Pixelblaze Output Expander. This will not reduce the number of failures <em>at all,</em> but <em>limits the scope</em> to a small distraction rather than the whole installation.</li>
+</ul>
+      
+</div>
+
+      <div class="text-element">
+  
+  
+        <p>The first failed pixel might be a statistical outlier, but take a look at that graph and notice something: this is the <em>start</em> of a <em>ramp-up.</em> More <span style="text-decoration: underline;">will</span> follow, and at shorter intervals. For large-scale architectural installations, big “art cars” and so forth, it’s not uncommon to hear after about one year that maintenance becomes near constant.</p>
+<p>You may have seen elaborate retail window displays or theme park decorating that successfully uses large numbers of addressable LEDs. How is this done? Partly through the techniques listed above. Parallel runs <em>localize</em> any visual disturbance, modular <em>replaceability</em> allows quick overnight repairs, or a showpiece might simply be switched off until repaired. Mostly though: such setups are intended for <em>limited runs:</em> window displays might only be used for 2–3 months, and theme parks will redecorate annually for different seasons and events. We wish these things ran <em>forever</em> but <em>large numbers</em> just statistically work against us.</p>
+      
+
+</div>
+
+  </div>
+
+
+          <div class="page-last-updated">
+  <p>Page last edited March 08, 2024</p>
+</div>
+
+        </div>
+
+        <div class="page-navigation">
+            <a class="previous-page btn-primary large" aria-label="Previous page" href="/adafruit-neopixel-uberguide/basic-connections">
+              <i class="fa fa-chevron-left"></i>&nbsp;Basic Connections
+</a>            <a class="next-page btn-primary large" aria-label="Next page" href="/adafruit-neopixel-uberguide/powering-neopixels">
+              Powering NeoPixels&nbsp;<i class="fa fa-chevron-right"></i>
+</a>        </div>
+    </div>
+  </div>
+</article>
+
+    <div class="related-guides-wrapper">
+  <section class="content-card-group-preview">
+  <div class="group-preview-headline">
+    <div class="title">
+      Related Guides
+    </div>
+
+    
+  </div>
+
+  <a class="scroll-back"><i class="fa fa-angle-left"></i></a>
+  <div class="content-card-group-container">
+    <div class="content-card-group">
+      <!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/qt-py-lego">
+      <div class="image-container">
+        <img loading="lazy" alt="A small building made of LEGO bricks with pink LED lighting inside, featuring a QT Py microcontroller on the front. A blue Adabot robot figure stands on the right." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/134/medium640/hero-build.jpg?1601954289" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/qt-py-lego">QT Py Lego</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/pixil3d">
+        <span class="name">Ruiz Brothers</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 17 times" aria-label="This guide has been saved 17 times">
+    <span>17</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/adafruit-io-house-lights-and-temperature">
+      <div class="image-container">
+        <img loading="lazy" alt="Cardboard model houses with LED strips on the roofs, some lit blue. Interior electronics are visible through the windows, lit red." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/138/medium640/IMG_0510.JPG?1535402158" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/adafruit-io-house-lights-and-temperature">Adafruit IO Home: Lights and Temperature </a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/brubell">
+        <span class="name">Brent Rubell</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 35 times" aria-label="This guide has been saved 35 times">
+    <span>35</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/magic-mirror-with-glowing-secret-messages">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/004/367/medium640thumb/mirror_gif.gif?1758746762" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/004/367/medium640mp4/mirror_gif.mp4?1758746762"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/004/367/medium640webm/mirror_gif.webm?1758746762" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide Magic Mirror with Glowing Secret Messages.
+  </video>
+<img loading="lazy" alt="A woman with blonde hair is reflected in an ornate mirror that shows glowing text that says &quot;Hello Gorgeous&quot;. The mirror has an ornate, curving gold frame." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/004/367/medium640thumb/mirror_gif.gif?1758746762" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/magic-mirror-with-glowing-secret-messages">Magic Mirror with Glowing Secret Messages</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/firepixie">
+        <span class="name">Erin St Blaine</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      intermediate
+    </div>
+
+  <div class="badge favorites " title="Saved 14 times" aria-label="This guide has been saved 14 times">
+    <span>14</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/glowing-fascinator-hat-gemma-m0-makecode">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/413/medium640thumb/fascinator.gif?1550595224" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/413/medium640mp4/fascinator.mp4?1550595224"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/413/medium640webm/fascinator.webm?1550595224" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide Glowing Fascinator Hat with Gemma M0 and MakeCode.
+  </video>
+<img loading="lazy" alt="A person wearing a fascinator hat with glowing LED flowers and feathers, set against a background of bookshelves. The flowers emit yellow and pink light." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/413/medium640thumb/fascinator.gif?1550595224" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/glowing-fascinator-hat-gemma-m0-makecode">Glowing Fascinator Hat with Gemma M0 and MakeCode</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/firepixie">
+        <span class="name">Erin St Blaine</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 26 times" aria-label="This guide has been saved 26 times">
+    <span>26</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/vertical-wordclock">
+      <div class="image-container">
+        <img loading="lazy" alt="A long vertical piece of plexiglass with words listed horizontally along its length. An electrical device to the left lights several words forming a word clock.." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/616/medium640/word_clock_demo_ORIG_2019_07.jpg?1562963013" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/vertical-wordclock">Simple Vertical Wordclock</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/danowall">
+        <span class="name">Dano Wall</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 35 times" aria-label="This guide has been saved 35 times">
+    <span>35</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/face-tracking-robot-with-memento">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/957/medium640thumb/hero-shoulder-follow-gavin-medium.gif?1709585426" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/957/medium640mp4/hero-shoulder-follow-gavin-medium.mp4?1709585426"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/957/medium640webm/hero-shoulder-follow-gavin-medium.webm?1709585426" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide Face Tracking Robot with MEMENTO.
+  </video>
+<img loading="lazy" alt="A person with a small robot on their shoulder stands next to a child outdoors. The robot has a white body and a glowing blue eye." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/957/medium640thumb/hero-shoulder-follow-gavin-medium.gif?1709585426" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/face-tracking-robot-with-memento">Face Tracking Robot with MEMENTO</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/brubell">
+        <span class="name">Brent Rubell</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      intermediate
+    </div>
+
+  <div class="badge favorites " title="Saved 29 times" aria-label="This guide has been saved 29 times">
+    <span>29</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/adafruit-io-home-security">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/156/medium640thumb/disarm_system.gif?1536091415" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/156/medium640mp4/disarm_system.mp4?1536091415"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/156/medium640webm/disarm_system.webm?1536091415" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide Adafruit IO Home: Security .
+  </video>
+<img loading="lazy" alt="A cardboard model house with a motion sensor is connected to a tablet displaying an Adafruit IO security system interface with status indicators." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/156/medium640thumb/disarm_system.gif?1536091415" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/adafruit-io-home-security">Adafruit IO Home: Security </a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/brubell">
+        <span class="name">Brent Rubell</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 82 times" aria-label="This guide has been saved 82 times">
+    <span>82</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/burning-fire-wizard-staff">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/944/medium640thumb/lava_staff.gif?1584134352" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/944/medium640mp4/lava_staff.mp4?1584134352"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/944/medium640webm/lava_staff.webm?1584134352" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide Burning Fire Wizard Staff.
+  </video>
+<img loading="lazy" alt="A glowing staff with two illuminated sections, emitting green and white light. The surface appears textured and organic." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/944/medium640thumb/lava_staff.gif?1584134352" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/burning-fire-wizard-staff">Burning Fire Wizard Staff</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/firepixie">
+        <span class="name">Erin St Blaine</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      intermediate
+    </div>
+
+  <div class="badge favorites " title="Saved 114 times" aria-label="This guide has been saved 114 times">
+    <span>114</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/led-neon-signs-with-neopixels">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/589/medium640thumb/guide-loop.gif?1652186134" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/589/medium640mp4/guide-loop.mp4?1652186134"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/589/medium640webm/guide-loop.webm?1652186134" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide LED Neon Signs with NeoPixels.
+  </video>
+<img loading="lazy" alt="Flexible LED neon strips form shapes of a dinosaur, rainbow, and lightning bolt, each glowing in different colors. Wires connect to the strips, indicating power and control connections." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/589/medium640thumb/guide-loop.gif?1652186134" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/led-neon-signs-with-neopixels">LED Neon Signs with NeoPixels</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/pixil3d">
+        <span class="name">Ruiz Brothers</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 76 times" aria-label="This guide has been saved 76 times">
+    <span>76</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/adafruit-metro-esp32-s3">
+      <div class="image-container">
+        <img loading="lazy" alt="Adafruit Metro ESP32-S3 microcontroller board with multiple GPIO pins, USB-C port, and labeled components on a gray surface." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/865/medium640/MS3F_top_angle.jpg?1692827719" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/adafruit-metro-esp32-s3">Adafruit Metro ESP32-S3</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/kattni">
+        <span class="name">Kattni Rembor</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge product-guide" aria-label="Product guide">
+      Product Guide
+    </div>
+
+  <div class="badge favorites " title="Saved 24 times" aria-label="This guide has been saved 24 times">
+    <span>24</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/infinity-mirror-collar">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/223/medium640thumb/InfinityNecklace.gif?1612223970" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/223/medium640mp4/InfinityNecklace.mp4?1612223970"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/223/medium640webm/InfinityNecklace.webm?1612223970" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide Infinity Mirror Collar.
+  </video>
+<img loading="lazy" alt="A person with long dark hair wears an LED infinity light collar with a gold tone." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/223/medium640thumb/InfinityNecklace.gif?1612223970" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/infinity-mirror-collar">Infinity Mirror Collar</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/GeekMomProjects">
+        <span class="name">Debra Ansell</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      intermediate
+    </div>
+
+  <div class="badge favorites " title="Saved 83 times" aria-label="This guide has been saved 83 times">
+    <span>83</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/circuitpython-ble-crickit-rover">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/411/medium640thumb/turnaround_ble_rover.gif?1550251969" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/411/medium640mp4/turnaround_ble_rover.mp4?1550251969"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/411/medium640webm/turnaround_ble_rover.webm?1550251969" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide CircuitPython BLE Crickit Rover.
+  </video>
+<img loading="lazy" alt="A small purple robot with two wheels, featuring a Feather microcontroller on a Crickit motor controller and various connected wires, emits a purple light from its base." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/411/medium640thumb/turnaround_ble_rover.gif?1550251969" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/circuitpython-ble-crickit-rover">CircuitPython BLE Crickit Rover</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/johnpark">
+        <span class="name">John Park</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 31 times" aria-label="This guide has been saved 31 times">
+    <span>31</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/make-it-glow-your-first-neopixel-project">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/964/medium640thumb/lights_gif.gif?1585936253" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/964/medium640mp4/lights_gif.mp4?1585936253"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/964/medium640webm/lights_gif.webm?1585936253" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide Make It Glow - Your First NeoPixel Project.
+  </video>
+<img loading="lazy" alt="A Circuit Playground board connected to a glowing LED strip displaying a rainbow pattern. Alligator clips attach to the board&#39;s pads." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/964/medium640thumb/lights_gif.gif?1585936253" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/make-it-glow-your-first-neopixel-project">Make It Glow - Your First NeoPixel Project</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/firepixie">
+        <span class="name">Erin St Blaine</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 108 times" aria-label="This guide has been saved 108 times">
+    <span>108</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/neopixel-led-harness-bra">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/241/medium640thumb/ezgif.com-gif-maker_%281%29.gif?1542697513" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/241/medium640mp4/ezgif.com-gif-maker_%281%29.mp4?1542697513"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/241/medium640webm/ezgif.com-gif-maker_%281%29.webm?1542697513" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide LED Harness Bra.
+  </video>
+<img loading="lazy" alt="LEDs are arranged on a upper body bra harness, displaying a colorful, animated light pattern. The setup is mounted on a mannequin torso." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/002/241/medium640thumb/ezgif.com-gif-maker_%281%29.gif?1542697513" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/neopixel-led-harness-bra">LED Harness Bra</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/AmeliaT">
+        <span class="name">Amelia T</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      intermediate
+    </div>
+
+  <div class="badge favorites " title="Saved 158 times" aria-label="This guide has been saved 158 times">
+    <span>158</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+<!-- Update templates/guides/guide.mustache in tandom -->
+<div class="guide-preview content-card">
+    <a aria-hidden="true" tabindex="-1" href="/qtpy-lemon-mechanical-keypad-macropad">
+      <div class="image-container">
+          <video class="video-preview lazy" preload="auto" muted="muted" loop="loop" playsinline tabindex="-1" poster="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/311/medium640thumb/hero-keypress.gif?1619447793" aria-hidden="true">
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/311/medium640mp4/hero-keypress.mp4?1619447793"></source>
+      <source data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/311/medium640webm/hero-keypress.webm?1619447793" type="video/webm; codecs=vp8,vorbis"></source>
+      Your browser does not support the video tag. This links to the guide Lemon Mechanical Keypad.
+  </video>
+<img loading="lazy" alt="A hand presses a yellow, slice shaped button on a citrus-shaped button pad connected via a USB cable. The pad features six triangular buttons." class="image-preview" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/311/medium640thumb/hero-keypress.gif?1619447793" />
+
+      </div>
+</a>
+  <div class="bottom-section">
+    <div class="content">
+      <a class="title" aria-label="Guide title" href="/qtpy-lemon-mechanical-keypad-macropad">Lemon Mechanical Keypad</a>
+          <div class="author">
+      By
+      <a aria-label="Guide author" data-turbo="false" href="/u/pixil3d">
+        <span class="name">Ruiz Brothers</span>
+</a>    </div>
+
+    </div>
+
+    <div class="badges">
+    <div class="badge" aria-label="Guide skill level">
+      beginner
+    </div>
+
+  <div class="badge favorites " title="Saved 66 times" aria-label="This guide has been saved 66 times">
+    <span>66</span>
+  </div>
+
+</div>
+
+  </div>
+</div>
+
+    </div>
+  </div>
+  <a class="scroll-forward"><i class="fa fa-angle-right"></i></a>
+</section>
+
+</div>
+
+
+
+
+<div class="dialog-container modal"
+     id="create-wishlist-modal"
+     data-modals-target="modal"
+     aria-labelledby="dialog-title"
+     aria-hidden="true">
+  <div class="dialog-overlay" data-a11y-dialog-hide></div>
+  <div class="dialog-content">
+    <div class="dialog-header">
+      <h5 class="dialog-title">Create Wishlist</h5>
+      <a href="#" class="dialog-close" data-a11y-dialog-hide="create-wishlist-modal" aria-label="Close this dialog window">&times;</a>
+    </div>
+    <form>
+      <div class="dialog-body">
+        <div class="form-group">
+          <label for="wishlist_title">Title</label>
+          <input type="text" name="wishlist_title" id="wishlist_title" />
+        </div>
+
+        <div class="form-group">
+          <label for="wishlist_description">Description</label>
+          <textarea name="wishlist_description" id="wishlist_description">
+</textarea>
+        </div>
+      </div>
+      <div class="dialog-footer">
+        <input type="submit" name="commit" value="Create Wishlist" class="btn-primary" id="create-wishlist" data-disable-with="Create Wishlist" />
+        <a href="#" class="dialog-close" data-a11y-dialog-hide="create-wishlist-modal" aria-label="Close this dialog window">Close</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+        </div>
+
+        <div id="search-container">
+  <div class="toolbar-primary">
+    <div class="content">
+      <div class="left-content">
+        <div class="breadcrumbs">
+          <a href="https://learn.adafruit.com" aria-label="Home page"><i class='fa fa-home'></i></a>
+          <i class="fa fa-chevron-right separator"></i> Search <i class="fa fa-chevron-right separator"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header">
+    <div class="header-intro">
+      <h1 class="title">Search</h1>
+    </div>
+
+    <div class="header-main-content-wrapper">
+      <div class="header-main-content">
+        <div id="search-refinements" class="breakdown">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-content left-sidebar-layout">
+    <div>
+      <div class="facets-wrapper">
+        <h5 class="search-refinement-header">Categories</h5>
+        <div id="search-categories"></div>
+      </div>
+    </div>
+
+    <div>
+      <div id="search-results" class="search-content-card-group"></div>
+
+      <div id="search-pagination" class="pagination"></div>
+    </div>
+  </div>
+</div>
+
+
+        <div id='main-content-overlay'></div>
+      </main>
+        <footer id="adafruit-footer">
+    <div class="footer-container">
+      <div>
+        <ul>
+          <li>
+            <a href="https://www.adafruit.com/contact_us">Contact Us</a>
+          </li>
+          <li>
+            <a href="https://forums.adafruit.com/">Tech Support Forums</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/faq">FAQs</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/shippinginfo">Shipping &amp; Returns</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/free">Freebies</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/terms_of_service">Terms of Service</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/privacy">Privacy &amp; Legal</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/accessibility">Website Accessibility</a>
+          </li>
+          <li>
+            <a href="/llms.txt">LLMs.txt</a>
+          </li>
+        </ul>
+        <button type="button" class="theme-toggle "
+  data-controller="theme" data-action="theme#cycle"
+  aria-label="Change color theme (current: system)">
+  <i class="fa fa-circle-half-stroke" aria-hidden="true" data-theme-target="icon"></i>
+    <span data-theme-target="label">Theme: System</span>
+</button>
+
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a href="https://www.adafruit.com/about">About Us</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/press">Press</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/educators">Educators</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/distributors">Distributors</a>
+          </li>
+          <li>
+            <a href="https://jobs.adafruit.com">Jobs</a>
+          </li>
+          <li>
+            <a href="https://www.adafruit.com/category/14">Gift Cards</a>
+          </li>
+        </ul>
+      </div>
+      <aside>
+        <div class="quote">"This good fun, explore, explore, explore, that's what science is, exploration, finding out new things, so have a good time with it"</div>
+        <div class="quote-attribution"><a href="http://en.wikipedia.org/wiki/Charles_H._Townes">Charles Townes</a></div>
+      </aside>
+    </div>
+    <div class="footer-container bottom">
+      <a title="About Adafruit" id="footer-logo" href="https://learn.adafruit.com">
+        <img alt="Adafruit Logo" src="/logos/adafruit_logo_small.png?-2399977704570461940" />
+</a>
+      <div class="social-links">
+        <a href="https://www.instagram.com/adafruit/" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+        <a href="https://twitter.com/adafruit/" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+        <a class="mastodon-logo" href="https://fosstodon.org/@adafruit" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Mastodon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216.4144 232.00976"><path class="logo" d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915" fill="currentColor"/><path d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675" fill="#000"/></svg></a>
+
+        <a href="https://www.facebook.com/adafruitindustries" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+
+        <a href="https://www.youtube.com/adafruit" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+
+        <a href="https://github.com/adafruit" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Github"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+        <a class="tiktok-logo" aria-label="Adafruit on TikTok" href="https://www.tiktok.com/@adafruit"  target="_blank" rel="noopener noreferrer"><svg viewBox="3 2 20 22" xmlns="http://www.w3.org/2000/svg"><path class="logo" d="M19.8059 7.50695C18.7771 7.50695 17.8278 7.16612 17.0655 6.59113C16.1912 5.93198 15.5631 4.9651 15.3412 3.85069C15.2863 3.57534 15.2567 3.29119 15.2539 3H12.3149V11.0308L12.3114 15.4297C12.3114 16.6057 11.5455 17.6029 10.4839 17.9536C10.1758 18.0553 9.8431 18.1036 9.49663 18.0846C9.05438 18.0603 8.63995 17.9268 8.27975 17.7113C7.51322 17.2529 6.99351 16.4212 6.97942 15.4698C6.95724 13.9829 8.15933 12.7706 9.64522 12.7706C9.93852 12.7706 10.2202 12.8185 10.4839 12.9054V10.7104V9.92134C10.2058 9.88015 9.92268 9.85867 9.63641 9.85867C8.01004 9.85867 6.48894 10.5347 5.40164 11.7526C4.57982 12.6731 4.08687 13.8473 4.01082 15.0786C3.91117 16.6962 4.50306 18.2339 5.65093 19.3683C5.81959 19.5349 5.9967 19.6895 6.1819 19.8321C7.16604 20.5894 8.36919 21 9.63641 21C9.92268 21 10.2058 20.9789 10.4839 20.9377C11.6677 20.7623 12.7599 20.2204 13.6219 19.3683C14.681 18.3215 15.2662 16.9318 15.2726 15.4526L15.2574 8.88369C15.7627 9.27347 16.3152 9.596 16.9081 9.84635C17.8303 10.2354 18.8081 10.4326 19.8144 10.4322V8.29814V7.50625C19.8151 7.50695 19.8066 7.50695 19.8059 7.50695Z" fill="currentColor"/></svg></a>
+
+        <a class="tumblr-logo" aria-label="Adafruit on Tumblr" href="https://adafruit.tumblr.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+
+        <a class="threads-logo" href="https://www.threads.net/@adafruit" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Threads"><span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z"/></svg></span></a>
+
+        <a class="discord-logo" aria-label="Adafruit on Discord" href="https://adafru.it/discord" target="_blank" rel="noopener noreferrer"><svg style="height: 1em; margin-bottom: -0.15em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"><path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg></a>
+
+        <a class="bluesky-logo" aria-label="Adafruit on Bluesky" href="https://bsky.app/profile/adafruit.com" target="_blank" rel="noopener noreferrer"><svg style="height: 1em; margin-bottom: -0.15em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/></svg>
+</a>
+      </div>
+      <div class="footer-messaging">
+        <a href="https://www.adafruit.com/about">A Minority and Woman-owned Business Enterprise (M/WBE)</a>
+      </div>
+    </div>
+  </footer>
+
+    </div>
+  </div>
+
+  <div id="remote-modal-wrapper"></div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+[
+  {
+    "name": "servo_fit_trial",
+    "purpose": "fit coupon only; physical fit, fasteners, printer compensation and servo mounting pattern must be measured before final design",
+    "parameters_mm": {
+      "plate": [
+        60,
+        35,
+        4
+      ],
+      "opening": [
+        41.3,
+        21.0
+      ],
+      "servo_nominal_body": [
+        40.5,
+        20.2
+      ],
+      "total_opening_clearance": 0.8,
+      "holes_diameter": 3.4,
+      "mounting_hole_centers": [
+        [
+          -24.75,
+          -5
+        ],
+        [
+          -24.75,
+          5
+        ],
+        [
+          24.75,
+          -5
+        ],
+        [
+          24.75,
+          5
+        ]
+      ],
+      "supplier_mounting_pitch": [
+        49.5,
+        10
+      ],
+      "minimum_nominal_ligament_hole_to_opening": 2.4
+    },
+    "valid": true,
+    "solids": 1,
+    "bbox_mm": [
+      60.0000002,
+      35.0000002,
+      4.0000001
+    ],
+    "volume_mm3": 4780.661363354186,
+    "files": [
+      {
+        "name": "servo_fit_trial.step",
+        "bytes": 1393982,
+        "sha256": "9c72d3c1b511c91caae32d89e1135a22f27f63fda76a1e8d7b99c9c00c841a24"
+      },
+      {
+        "name": "servo_fit_trial.stl",
+        "bytes": 785784,
+        "sha256": "c57443fb4cbcd578a22c18fc80c9bb408fe9cd5ac73a0793aed73e54cc3b5613"
+      }
+    ],
+    "geometric_checks": {
+      "slot_center_is_open": true,
+      "slot_end_is_open": true,
+      "slot_adjacent_material_exists": true,
+      "all_4_holes_are_open": true,
+      "plate_edge_material_exists": true
+    }
+  },
+  {
+    "name": "F625ZZ_bearing_fit_trial",
+    "purpose": "fit coupon only; physical fit, fasteners, printer compensation and servo mounting pattern must be measured before final design",
+    "parameters_mm": {
+      "plate": [
+        94,
+        30,
+        6
+      ],
+      "bore_diameters": [
+        15.9,
+        16.0,
+        16.1,
+        16.3
+      ],
+      "bore_x_centers": [
+        -33,
+        -11,
+        11,
+        33
+      ],
+      "flange_seat_diameter": 18.2,
+      "flange_seat_depth": 1.2,
+      "nominal_bearing": [
+        5,
+        16,
+        5
+      ],
+      "nominal_flange": [
+        18,
+        1
+      ],
+      "original_cover_bore_diameter": 16.3,
+      "original_cover_flange_seat_diameter": 18.2,
+      "original_cover_flange_seat_depth": 1,
+      "through_bores_not_axial_stops": true
+    },
+    "valid": true,
+    "solids": 1,
+    "bbox_mm": [
+      94.0000002,
+      30.0000002,
+      6.0000001
+    ],
+    "volume_mm3": 11770.772080199029,
+    "files": [
+      {
+        "name": "F625ZZ_bearing_fit_trial.step",
+        "bytes": 1156232,
+        "sha256": "0bb2f9f98c4ee67f5ab287079f9244a7f64e4892386f19b32424cd290a02f81e"
+      },
+      {
+        "name": "F625ZZ_bearing_fit_trial.stl",
+        "bytes": 1054984,
+        "sha256": "219a4888ddaacf59c7a73ed575a6be280b27a6745bb0a439e80f45d0bfd31e56"
+      }
+    ],
+    "geometric_checks": {
+      "all_4_bore_centers_are_open": true,
+      "bores_have_specified_edge": true,
+      "all_4_flange_counterbores_are_open": true,
+      "material_beyond_counterbores_exists": true,
+      "counterbore_bottom_material_exists": true
+    }
+  }
+]

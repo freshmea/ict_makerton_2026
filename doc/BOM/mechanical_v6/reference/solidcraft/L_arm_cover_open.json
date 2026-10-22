@@ -1,0 +1,12 @@
+{
+  "id": 14,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bodies\": [\n    \"L_arm_cover\"\n  ],\n  \"component\": 1,\n  \"component_name\": \"L_arm_cover\",\n  \"errors\": 0,\n  \"features\": 1,\n  \"occurrence\": 2,\n  \"path\": \"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v6\\\\reference\\\\SpotMicro_parts\\\\STL\\\\files\\\\L_arm_cover.stl\",\n  \"warnings\": []\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": 16,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bodies\": [\n    {\n      \"area_mm2\": 14946.75397876713,\n      \"bbox\": {\n        \"max\": [\n          29.842567443847656,\n          45.0,\n          137.42063903808594\n        ],\n        \"min\": [\n          -11.316874504089355,\n          -5.551115123125783e-16,\n          -6.127028465270996\n        ]\n      },\n      \"center_of_mass\": [\n        15.959772891625624,\n        27.533546115704702,\n        63.67049660522918\n      ],\n      \"density_g_cm3\": 1.29,\n      \"edges\": 10692,\n      \"face_types\": {\n        \"mesh\": 7128\n      },\n      \"faces\": 7128,\n      \"kernel\": {\n        \"edges\": 10692,\n        \"faces\": 7128,\n        \"shells\": 1,\n        \"vertices\": 3558\n      },\n      \"mass_g\": 34.86421664484203,\n      \"material\": \"Default\",\n      \"name\": \"L_arm_cover\",\n      \"vertices\": 3558,\n      \"volume_mm3\": 27026.524530885294\n    }\n  ],\n  \"body_count\": 1,\n  \"total\": {\n    \"area_mm2\": 14946.75397876713,\n    \"edges\": 10692,\n    \"faces\": 7128,\n    \"mass_g\": 34.86421664484203,\n    \"vertices\": 3558,\n    \"volume_mm3\": 27026.524530885294\n  }\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

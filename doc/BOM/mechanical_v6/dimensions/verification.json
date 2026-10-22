@@ -1,0 +1,66 @@
+{
+  "physical_measurements_performed": false,
+  "source_file_hashes": [
+    {
+      "id": "MD01",
+      "hash_matches": true
+    },
+    {
+      "id": "MD02",
+      "hash_matches": true
+    },
+    {
+      "id": "MD03",
+      "hash_matches": true
+    },
+    {
+      "id": "MD04",
+      "hash_matches": true
+    },
+    {
+      "id": "MD05",
+      "hash_matches": true
+    },
+    {
+      "id": "MD06",
+      "hash_matches": true
+    },
+    {
+      "id": "MD07",
+      "hash_matches": true
+    },
+    {
+      "id": "MD08",
+      "hash_matches": true
+    },
+    {
+      "id": "MD09",
+      "hash_matches": true
+    },
+    {
+      "id": "MD12",
+      "hash_matches": true
+    },
+    {
+      "id": "MD14",
+      "hash_matches": true
+    }
+  ],
+  "camera_pdf_count": 3,
+  "source_pdf_count": 4,
+  "derivative_crop": {
+    "path": "CLS6336HV_dimension_crop.png",
+    "source": "CLS6336HV_vendor_dimensions.jpg",
+    "crop_pixels": [
+      0,
+      3450,
+      1024,
+      4025
+    ]
+  },
+  "unavailable_sources": [
+    "MD10",
+    "MD11",
+    "MD13"
+  ]
+}

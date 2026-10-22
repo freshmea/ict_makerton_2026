@@ -1,0 +1,162 @@
+[
+  {
+    "path": "STL/files/L_arm.stl",
+    "triangles": 6568,
+    "min": [
+      -16.296537399291992,
+      -10.0,
+      -8.0
+    ],
+    "max": [
+      21.944534301757812,
+      29.799999237060547,
+      129.40240478515625
+    ],
+    "dimensions_mm": [
+      38.24107360839844,
+      39.79999923706055,
+      137.40240478515625
+    ],
+    "unit_basis": "STL is unitless; mm inferred from matching URDF scale 0.001 converting STL geometry to meters. Values are model AABB, not physical part measurements."
+  },
+  {
+    "path": "STL/files/L_arm_cover.stl",
+    "triangles": 7128,
+    "min": [
+      -11.316874504089355,
+      -5.551115123125783e-16,
+      -6.127028465270996
+    ],
+    "max": [
+      29.842567443847656,
+      45.0,
+      137.42063903808594
+    ],
+    "dimensions_mm": [
+      41.15944290161133,
+      45.0,
+      143.54766845703125
+    ],
+    "unit_basis": "STL is unitless; mm inferred from matching URDF scale 0.001 converting STL geometry to meters. Values are model AABB, not physical part measurements."
+  },
+  {
+    "path": "STL/files/L_arm_joint.stl",
+    "triangles": 9784,
+    "min": [
+      0.0,
+      -15.5,
+      -8.0
+    ],
+    "max": [
+      37.5,
+      30.5,
+      48.5
+    ],
+    "dimensions_mm": [
+      37.5,
+      46.0,
+      56.5
+    ],
+    "unit_basis": "STL is unitless; mm inferred from matching URDF scale 0.001 converting STL geometry to meters. Values are model AABB, not physical part measurements."
+  },
+  {
+    "path": "STL/files/L_wrist.stl",
+    "triangles": 3594,
+    "min": [
+      -9.0,
+      -66.9000015258789,
+      -5.0
+    ],
+    "max": [
+      140.9903106689453,
+      -30.0,
+      25.0
+    ],
+    "dimensions_mm": [
+      149.9903106689453,
+      36.900001525878906,
+      30.0
+    ],
+    "unit_basis": "STL is unitless; mm inferred from matching URDF scale 0.001 converting STL geometry to meters. Values are model AABB, not physical part measurements."
+  },
+  {
+    "path": "STL/files/R_arm.stl",
+    "triangles": 6568,
+    "min": [
+      -16.296537399291992,
+      -79.80000305175781,
+      -8.0
+    ],
+    "max": [
+      21.944534301757812,
+      -40.0,
+      129.40240478515625
+    ],
+    "dimensions_mm": [
+      38.24107360839844,
+      39.80000305175781,
+      137.40240478515625
+    ],
+    "unit_basis": "STL is unitless; mm inferred from matching URDF scale 0.001 converting STL geometry to meters. Values are model AABB, not physical part measurements."
+  },
+  {
+    "path": "STL/files/R_arm_cover.stl",
+    "triangles": 7128,
+    "min": [
+      -11.316874504089355,
+      -70.0,
+      -6.127028465270996
+    ],
+    "max": [
+      29.842567443847656,
+      -25.0,
+      137.42063903808594
+    ],
+    "dimensions_mm": [
+      41.15944290161133,
+      45.0,
+      143.54766845703125
+    ],
+    "unit_basis": "STL is unitless; mm inferred from matching URDF scale 0.001 converting STL geometry to meters. Values are model AABB, not physical part measurements."
+  },
+  {
+    "path": "STL/files/R_arm_joint.stl",
+    "triangles": 9784,
+    "min": [
+      -67.5,
+      -15.5,
+      -8.0
+    ],
+    "max": [
+      -30.0,
+      30.5,
+      48.5
+    ],
+    "dimensions_mm": [
+      37.5,
+      46.0,
+      56.5
+    ],
+    "unit_basis": "STL is unitless; mm inferred from matching URDF scale 0.001 converting STL geometry to meters. Values are model AABB, not physical part measurements."
+  },
+  {
+    "path": "STL/files/R_wrist.stl",
+    "triangles": 3594,
+    "min": [
+      -9.0,
+      0.0,
+      -5.0
+    ],
+    "max": [
+      140.9903106689453,
+      36.900001525878906,
+      25.0
+    ],
+    "dimensions_mm": [
+      149.9903106689453,
+      36.900001525878906,
+      30.0
+    ],
+    "unit_basis": "STL is unitless; mm inferred from matching URDF scale 0.001 converting STL geometry to meters. Values are model AABB, not physical part measurements."
+  }
+]

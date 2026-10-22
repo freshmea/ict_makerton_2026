@@ -1,0 +1,48 @@
+,Unnamed: 0,상품유형,상품명,링크,제조사,단가 (단위:원),BOM 수량,소계 (단위:원)
+0,,SBC,[NVIDIA] NVIDIA Jetson Nano Development Kit-B01,https://www.devicemart.co.kr/goods/view?no=12513656,NVIDIA,123000,1,123000
+1,,센서,초음파 거리센서 모듈 HC-SR04 [SZH-EK004],https://www.devicemart.co.kr/goods/view?no=1076851,OEM,"1,300",2,"2,600"
+2,,센서,MPU-6050 6축 자이로 가속도 센서 모듈 GY-521 [SZH-EK007],https://www.devicemart.co.kr/goods/view?no=1247052,OEM,"1,600",1,"1,600"
+3,,전원부,로커스위치(RL2-321/N-C-2-RE/BK),https://www.devicemart.co.kr/goods/view?no=10989,RLEIL,950,1,950
+4,,통신부,[TP-LINK] Archer T2U Plus (무선랜카드/USB/633Mbps),https://www.devicemart.co.kr/goods/view?no=12382952,TP-LINK,18900,1,18900
+5,,전원부,LM2596 강하형 DC-DC 가변 컨버터 [SZH-PWSD-045],https://www.devicemart.co.kr/goods/view?no=1321982,SMG-A,"3,000",3,"6,000"
+6,,볼트/너트류,SCM 유두머리 렌치볼트 M5x15,https://www.devicemart.co.kr/goods/view?no=34499,OEM,50,10,500
+7,,볼트/너트류,스텐 유두머리 렌치볼트 M4x20,https://www.devicemart.co.kr/goods/view?no=10912481,OEM,60,40,"2,400"
+8,,볼트/너트류,유두머리 렌치볼트 (SUS) 머신스크류 M4*15 ,https://www.devicemart.co.kr/goods/view?no=34537,OEM,64,10,640
+9,,볼트/너트류,너트 (니켈) M4,https://www.devicemart.co.kr/goods/view?no=34325,OEM,10,50,500
+10,,볼트/너트류,유두머리 렌치볼트 (SUS) 머신스크류 M3*20 ,https://www.devicemart.co.kr/goods/view?no=34536,OEM,50,10,500
+11,,볼트/너트류,SCM 유두머리 렌치볼트 M3*10,https://www.devicemart.co.kr/goods/view?no=34487,OEM,40,30,"1,200"
+12,,볼트/너트류,너트 (니켈) M3,https://www.devicemart.co.kr/goods/view?no=34324,OEM,8,20,160
+13,,볼트/너트류,미니어처베어링-F625ZZ(플랜지타입),https://www.devicemart.co.kr/goods/view?no=1241389,NSK외,"2,830",10,"28,300"
+14,,모터 드라이버,PCA9685 16채널 12비트 PWM 서보 드라이버 [TS0185],https://www.devicemart.co.kr/goods/view?no=1382245,SunFounder,"12,800",2,25600
+15,,베터리,[Sky-Holic] 7.4V 2200mAh extreme,https://www.devicemart.co.kr/goods/view?no=11866,Sky-Holic,37200,1,37200
+16,,본드,[록타이트] 헨켈 록타이트 초강력 순간접착제 401(20g/블리스터카드),https://www.devicemart.co.kr/goods/view?no=10923410,록타이트,2730,1,2730
+17,,서보 모터,JX CLS6336HV,https://www.coupang.com/vp/products/1074955802?itemId=2024719079&vendorItemId=70024327691&q=cls6336hv," Weiketerui Trading Co., Ltd.",37700,12,452400
+18,,전원부,[파츠키츠] DC잭&플러그변환케이블 전원코드 파워단자 22AWG - A type,https://www.coupang.com/vp/products/249539823?vendorItemId=5001157295&isAddedCart=, 애니써킷트레이딩,140,1,140
+19,,전원부,[파츠키츠] XT60케이블 14AWG 드론 쿼드콥터 RC 배터리 - A type,https://www.coupang.com/vp/products/249533303?vendorItemId=5001124630&isAddedCart=#sdpReview, 애니써킷트레이딩,1250,3,3750
+20,,전원부,니토무역 XT60 M2F 병렬 AWG12 케이블 분배 커넥터 RC카 드론,https://www.coupang.com/vp/products/1465256481?vendorItemId=70512827124&isAddedCart=,주식회사 니토,4900,2,9800
+21,,전원부,"니토무역 XT60 F - T플러그 M 커넥터 배터리 킥보드 RC카 드론
+",https://www.coupang.com/vp/products/1489857991?vendorItemId=70550275799&isAddedCart=,주식회사 니토,1900,1,1900
+22,,,,,,,합계,678670
+23,,Lecture Ver.,,,,,,
+24,,상품유형,상품명,링크,제조사,단가 (단위:원),BOM 수량,소계 (단위:원)
+25,,SBC,[NVIDIA] NVIDIA Jetson Nano Development Kit-B01,https://www.devicemart.co.kr/goods/view?no=12513656,NVIDIA,123000,1,123000
+26,,통신부,[TP-LINK] Archer T2U Plus (무선랜카드/USB/633Mbps),https://www.devicemart.co.kr/goods/view?no=12382952,TP-LINK,18900,1,18900
+27,,전원부,LM2596 강하형 DC-DC 가변 컨버터 [SZH-PWSD-045],https://www.devicemart.co.kr/goods/view?no=1321982,SMG-A,"3,000",3,"6,000"
+28,,볼트/너트류,SCM 유두머리 렌치볼트 M5x15,https://www.devicemart.co.kr/goods/view?no=34499,OEM,50,10,500
+29,,볼트/너트류,스텐 유두머리 렌치볼트 M4x20,https://www.devicemart.co.kr/goods/view?no=10912481,OEM,60,40,"2,400"
+30,,볼트/너트류,유두머리 렌치볼트 (SUS) 머신스크류 M4*15 ,https://www.devicemart.co.kr/goods/view?no=34537,OEM,64,10,640
+31,,볼트/너트류,너트 (니켈) M4,https://www.devicemart.co.kr/goods/view?no=34325,OEM,10,50,500
+32,,볼트/너트류,유두머리 렌치볼트 (SUS) 머신스크류 M3*20 ,https://www.devicemart.co.kr/goods/view?no=34536,OEM,50,10,500
+33,,볼트/너트류,SCM 유두머리 렌치볼트 M3*10,https://www.devicemart.co.kr/goods/view?no=34487,OEM,40,30,"1,200"
+34,,볼트/너트류,너트 (니켈) M3,https://www.devicemart.co.kr/goods/view?no=34324,OEM,8,20,160
+35,,볼트/너트류,미니어처베어링-F625ZZ(플랜지타입),https://www.devicemart.co.kr/goods/view?no=1241389,NSK외,"2,830",10,"28,300"
+36,,모터 드라이버,PCA9685 16채널 12비트 PWM 서보 드라이버 [TS0185],https://www.coupang.com/vp/products/66506421?itemId=223496232&vendorItemId=3542683814&q=pca+9685&itemsCount=36&searchId=d8afcca6e0934496aa76571cd8ffa84e&rank=1&isAddedCart=,SunFounder,3800,2,7600
+37,,베터리,[Sky-Holic] 7.4V 2200mAh extreme,https://www.devicemart.co.kr/goods/view?no=11866,Sky-Holic,37200,1,37200
+38,,본드,[록타이트] 헨켈 록타이트 초강력 순간접착제 401(20g/블리스터카드),https://www.devicemart.co.kr/goods/view?no=10923410,록타이트,2730,1,2730
+39,,서보 모터,JX CLS6336HV,https://www.coupang.com/vp/products/1074955802?itemId=2024719079&vendorItemId=70024327691&q=cls6336hv," Weiketerui Trading Co., Ltd.",37700,12,452400
+40,,전원부,[파츠키츠] DC잭&플러그변환케이블 전원코드 파워단자 22AWG - A type,https://www.coupang.com/vp/products/249539823?vendorItemId=5001157295&isAddedCart=, 애니써킷트레이딩,140,1,140
+41,,전원부,[파츠키츠] XT60케이블 14AWG 드론 쿼드콥터 RC 배터리 - A type,https://www.coupang.com/vp/products/249533303?vendorItemId=5001124630&isAddedCart=#sdpReview, 애니써킷트레이딩,1250,3,3750
+42,,전원부,니토무역 XT60 M2F 병렬 AWG12 케이블 분배 커넥터 RC카 드론,https://www.coupang.com/vp/products/1465256481?vendorItemId=70512827124&isAddedCart=,주식회사 니토,4900,2,9800
+43,,전원부,"니토무역 XT60 F - T플러그 M 커넥터 배터리 킥보드 RC카 드론
+",https://www.coupang.com/vp/products/1489857991?vendorItemId=70550275799&isAddedCart=,주식회사 니토,1900,1,1900
+44,,,,,,,합계,659720

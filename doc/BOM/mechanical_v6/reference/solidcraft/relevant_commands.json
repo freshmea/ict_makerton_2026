@@ -1,0 +1,134 @@
+[
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "new",
+    "id": "file.new",
+    "label": "New Design",
+    "panel": "",
+    "params": "name?",
+    "shortcut": "Ctrl+N",
+    "tab": ""
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "import",
+    "id": "file.insert_step",
+    "label": "Insert STEP",
+    "panel": "INSERT",
+    "params": "path: STEP, IGES, FreeCAD .FCStd or Rhino .3dm file (its bodies join the design as an Import base feature in a new component named after the file, placed in the active component; an assembly's products become nested components, a repeated part one component with an occurrence per placement, all held as one rigid group until component.unlock → component, component_name, occurrence, subcomponents?, rigid_joints?); name? (the feature's and the component's); up?: z|y (default z: the file's axes are kept; y: the file has Y up, so the import's component is turned a quarter turn about X, Y becoming Z → stand_up: its occurrence); names?: solid|product|instance (what the bodies are named after: the solid's own name, else the product's (default); the name of the product (part) that holds the body; the name of the assembly occurrence (instance), else the product's)",
+    "shortcut": null,
+    "tab": "SOLID"
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "import",
+    "id": "file.insert_mesh",
+    "label": "Insert Mesh",
+    "panel": "INSERT",
+    "params": "path: .3mf, .stl, .obj, .glb or .gltf file (its meshes join the design as mesh bodies in a new component named after the file → component, component_name, occurrence; a glTF file's node tree becomes nested components held as one rigid group until component.unlock, a mesh placed again another occurrence, its materials the bodies' appearances, and its metres millimetres); name?; up?: z|y for a glTF file (default y: glTF has Y up, so the import's component is turned a quarter turn about X, Y becoming Z → stand_up: its occurrence; z: the file's axes are kept)",
+    "shortcut": null,
+    "tab": "SOLID"
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "save",
+    "id": "file.save",
+    "label": "Save",
+    "panel": "",
+    "params": "path? (default: current file); format?: container|json (default: json for .json, otherwise container); compression?: fast|compact (default: fast); cache?: bool (warm native geometry, default: false); preview?: bool (saved display meshes, default: false)",
+    "shortcut": "Ctrl+S",
+    "tab": ""
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "save",
+    "id": "file.save_as",
+    "label": "Save As",
+    "panel": "",
+    "params": "path; format?: container|json (default: json for .json, otherwise container); compression?: fast|compact (default: fast); cache?: bool (warm native geometry, default: false); preview?: bool (saved display meshes, default: false)",
+    "shortcut": null,
+    "tab": ""
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "export",
+    "id": "file.export",
+    "label": "Export",
+    "panel": "",
+    "params": "path; format?: stl|stla|obj|step|3mf|3mf-tagged|urdf|json (default from extension; 3mf-tagged: 3MF whose triangles carry their B-rep face, at full precision, for meshing and analysis tools; docs/formats/3mf-face-tags.md; urdf: the whole assembly as a robot, with STL meshes written next to it; docs/urdf.md); bodies?: [names] (JSON and URDF export the complete design); urdf only: mesh_prefix? (before each mesh file name, e.g. package://robot/meshes/), effort? (default 1000), velocity? (default 10)",
+    "shortcut": null,
+    "tab": ""
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "mesh_export",
+    "id": "file.save_mesh",
+    "label": "Save As Mesh",
+    "panel": "MODIFY",
+    "params": "path; format?: stl|3mf|3mf-tagged (default from the extension, else stl; 3mf-tagged: docs/formats/3mf-face-tags.md); bodies?: [names] (default: all); ascii?: bool (STL); slicer?: id, name or program path from file.slicers (open the saved file there)",
+    "shortcut": null,
+    "tab": "MESH"
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "export",
+    "id": "file.slicers",
+    "label": "Installed Slicers",
+    "panel": "",
+    "params": "→ the slicers found on this machine: [{id, name, icon?}]; pass an id or name as file.save_mesh's `slicer`",
+    "shortcut": null,
+    "tab": ""
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "measure",
+    "id": "inspect.measure",
+    "label": "Measure",
+    "panel": "INSPECT",
+    "params": "bodies?: [names] (default all); or items: [1-2 selections] → length/area/volume; diameter, radius, circumference or arc_length/angle_deg of circles, arcs and cylinders; slot sizes; min (distance_mm, from, to), max, center_distance (centre to centre, or from an axis) and angle",
+    "shortcut": "I",
+    "tab": "SOLID"
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "inspect",
+    "id": "document.inspect",
+    "label": "Inspect Design",
+    "panel": "",
+    "params": "measure?: bool (include body measurements)",
+    "shortcut": null,
+    "tab": ""
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "inspect",
+    "id": "model.faces",
+    "label": "List Faces",
+    "panel": "",
+    "params": "body: name → per face: index, name (what face.delete, sheet.convert `face`, solid.shell … take in place of a point), exact, area, centroid (not always on the face), plane_normal, point (a point on the face that picks it), cylinder? ({origin, axis, radius} of a cylindrical face)",
+    "shortcut": null,
+    "tab": ""
+  },
+  {
+    "disabled_reason": null,
+    "enabled": true,
+    "icon": "export",
+    "id": "file.export_view_dxf",
+    "label": "Export Current View as DXF",
+    "panel": "",
+    "params": "camera: Camera (current view); hidden?: omit|dashed (default omit); tolerance?: 0.0001..1 mm (curve chord tolerance, default 0.01); path?: .dxf file (else returns dxf text). Visible placed bodies only; 2D LINE/LWPOLYLINE entities on VISIBLE/HIDDEN layers, mm; perspective projected onto the camera target plane; no viewport crop or overlays.",
+    "shortcut": null,
+    "tab": ""
+  }
+]

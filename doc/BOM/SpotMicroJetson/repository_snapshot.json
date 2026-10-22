@@ -1,0 +1,914 @@
+{
+  "collected_at_utc": "2026-10-22T14:52:18.416949+00:00",
+  "repository": "https://github.com/Road-Balance/SpotMicroJetson",
+  "commit": "2235c77a93e86d04dec2e03c6306ba2c06d454ce",
+  "original_download": {
+    "url": "https://codeload.github.com/Road-Balance/SpotMicroJetson/zip/2235c77a93e86d04dec2e03c6306ba2c06d454ce",
+    "commit": "2235c77a93e86d04dec2e03c6306ba2c06d454ce",
+    "bytes": 126013010,
+    "sha256": "1671d8107f69af5cbd8c054f99783b8141f5792592f4a33718973a99d4962d7a"
+  },
+  "snapshot": {
+    "file": "Road-Balance_SpotMicroJetson_2235c77_reference.zip",
+    "bytes": 32827503,
+    "sha256": "d9a41503ca176c84aa9b282028af37897cb0416d3146ad813a76b9c3162af69c",
+    "zip_crc_verified": true
+  },
+  "omitted_extensions": [
+    ".gif",
+    ".ttf",
+    ".pyc"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 66,
+      "sha256": "941d63e5afa153a7796a865869b42d7105e4c2e0b65cf10717aaeeed78e489f0"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 6797,
+      "sha256": "cf7ae2d185ac8169ad3bcd61322613bcb1863e4452132476838fd0ab0c25396e"
+    },
+    {
+      "path": "CUSTOM_README.md",
+      "bytes": 64,
+      "sha256": "d4d4800f2a74f61bebe2ae2d0e9526c5cd28ee450610b1f98033ffe5390780cb"
+    },
+    {
+      "path": "Common/multiprocess_kb.py",
+      "bytes": 3999,
+      "sha256": "aabe0043bd734c45b6776682e6ad6531af970af8a45f19b6ab25543a2c668928"
+    },
+    {
+      "path": "Images/Readme_Parts2.jpg",
+      "bytes": 110071,
+      "sha256": "688dfa46cafda1abc593636d87ccbb405d17f296aadc4061cd919428ad089699"
+    },
+    {
+      "path": "Images/Readme_assemble.jpg",
+      "bytes": 87700,
+      "sha256": "2db992faa1a7066bddf62da77ea395588995173357f0f134dd3e3e330444c319"
+    },
+    {
+      "path": "Images/STL_Parts.jpg",
+      "bytes": 101351,
+      "sha256": "5deb12306d2582a759a978421f5ebc6488017ecae8f129de48848b71e3e375ee"
+    },
+    {
+      "path": "Images/SpotMicroAI_1.jpg",
+      "bytes": 147473,
+      "sha256": "73eb43f36cc3af0c7768dd412ff166cdb2794b414c1a6d055b088bdcf5a3f6f9"
+    },
+    {
+      "path": "Images/SpotMicroAI_FreeCad.png",
+      "bytes": 81809,
+      "sha256": "8e360d786c4d7bbb70130cd82dcd49d01647b10009b23207e86938ac018353bb"
+    },
+    {
+      "path": "Images/SpotMicroAI_Pybullet_RB.png",
+      "bytes": 1111071,
+      "sha256": "e20cfaf628d83f7a9e65e3e6ca7f1b84993882de6de63ef2bc774e42b194fd07"
+    },
+    {
+      "path": "Images/SpotMicroAI_complete_1.jpg",
+      "bytes": 107373,
+      "sha256": "eb0291e7514b706cc068cc897ecfa70d04a52fe194941a29df45b863575e8f27"
+    },
+    {
+      "path": "Images/SpotMicroAI_electronics.png",
+      "bytes": 918276,
+      "sha256": "b9139b923fb42dbf34c016ff9416a373279a029f495a7fedbedf53d553cfcef6"
+    },
+    {
+      "path": "Images/SpotMicroAI_jetson.jpg",
+      "bytes": 136003,
+      "sha256": "a1c04e354be908be274a436e21714a561d7e12d9c854fdfdad341d9350bfeca7"
+    },
+    {
+      "path": "Images/SpotMicroAI_pybullet.png",
+      "bytes": 58076,
+      "sha256": "2030e50353b6710aeb1b5d26a50d26a264b8df0b98b28e47f96f2611d6bcddde"
+    },
+    {
+      "path": "Images/SpotMicroAI_pybullet_2.png",
+      "bytes": 54190,
+      "sha256": "d9c75c6ed346167dc19dcab9e421ac22f34014f22cf56fb74932e9492531417d"
+    },
+    {
+      "path": "Images/SpotMicroAI_pybullet_lidar.png",
+      "bytes": 225138,
+      "sha256": "e641ca8d8f9ea3dafdade37981ca9d69ae060c80a7e96f90874cf3085ff4929f"
+    },
+    {
+      "path": "Images/SpotMicroAI_pybullet_lidar2.png",
+      "bytes": 223294,
+      "sha256": "c00661d7dd66240b36962121b557e48252b08c566233338bd9a7e23045f82d7c"
+    },
+    {
+      "path": "Images/SpotMicroAI_pybullet_lidar3.png",
+      "bytes": 232615,
+      "sha256": "16934322590e6a72acc505f68508aff459e5910e41ce3330f21cd308f705034b"
+    },
+    {
+      "path": "Images/SpotMicroAI_rviz_2.png",
+      "bytes": 279436,
+      "sha256": "17ea956fcae42ba4b71143346ed0aba28541e74047ee30877aba980d821e0e1f"
+    },
+    {
+      "path": "Images/SpotMicroAI_rviz_color.png",
+      "bytes": 264649,
+      "sha256": "15dc750cee0148968d1a148c3be5797026868daf9d686c3dc2050a83ad49739e"
+    },
+    {
+      "path": "Images/SpotMicroAI_rviz_urdf.png",
+      "bytes": 182187,
+      "sha256": "870bcf1eb28ce8f246cee4dc90cfcef780c37d051fda03d50cfcf6b693a26b62"
+    },
+    {
+      "path": "Images/SpotMicroAI_stairs.png",
+      "bytes": 301943,
+      "sha256": "8a34706bd771045f8751a24f497b27c9cd9fb20d029e4e6a06d6357246deb279"
+    },
+    {
+      "path": "Images/SpotMicroAI_urdf.png",
+      "bytes": 221498,
+      "sha256": "fab03c6e8ad1874b2a4ebf1c05401543bcb03b1635c77fca0aa2e07724e8d830"
+    },
+    {
+      "path": "Images/SpotMicroAI_urdf2.png",
+      "bytes": 239503,
+      "sha256": "7e7b589bb8243e886563807695e4363e589f1418ac9949f5190009139dd30663"
+    },
+    {
+      "path": "Images/jetsonNano.jpg",
+      "bytes": 75154,
+      "sha256": "ddc8a4f019359583b8c4a9943e51784c337484d12957efabe182af0752d76ada"
+    },
+    {
+      "path": "Images/jetsonNanoCase.jpg",
+      "bytes": 80468,
+      "sha256": "61a5709984635207017c331ffb49d66f1736392f36f5800062d8424f183ee4f7"
+    },
+    {
+      "path": "Images/jetsonNano_connected_1.jpg",
+      "bytes": 119104,
+      "sha256": "1af10bc283a80e07c7ea3ea7bf701180ba8d5525f036d17fe5258b65f733d1f3"
+    },
+    {
+      "path": "Images/leg_front.jpg",
+      "bytes": 43831,
+      "sha256": "a9e05cfd7c088a91775832e14a2c8ae5e6a9253b1b336b1082b2cd34d8e91387"
+    },
+    {
+      "path": "Images/leg_front_k.jpg",
+      "bytes": 77466,
+      "sha256": "3f0ed19574df0e711ac879dba9b2c2e9d1061f30d51c0021759581e6eb06904b"
+    },
+    {
+      "path": "Images/leg_front_notsolved.jpg",
+      "bytes": 81925,
+      "sha256": "1c85f59e4cfc22ae161261ea24836fe2d297d59e6e376af4b1eb4aa11dc8d5ec"
+    },
+    {
+      "path": "Images/leg_front_solved.jpg",
+      "bytes": 69872,
+      "sha256": "5996df32f94e0d31ec81047ff1abd730ab8b48bee66aa02388b331b8f2b1e272"
+    },
+    {
+      "path": "Images/leg_in_space.jpg",
+      "bytes": 74993,
+      "sha256": "7792ba8b107df641ce030b6950c7f93295290a5ee6f72f21d9a3d842fc00c604"
+    },
+    {
+      "path": "Images/leg_side.jpg",
+      "bytes": 56231,
+      "sha256": "11dc8f28e253a3f6be907c12a9561cc458363ade9f4afbd745626230d86d37c2"
+    },
+    {
+      "path": "Images/leg_side_2.jpg",
+      "bytes": 60612,
+      "sha256": "d6b668956809f837292b5404a96fac01a3f28f8cbc0282d6826358055399b279"
+    },
+    {
+      "path": "Images/leg_side_g.jpg",
+      "bytes": 58850,
+      "sha256": "6fb9a089bd35776d2487d52dce36eadf41dd1e0d927340647da838aa30a6ffab"
+    },
+    {
+      "path": "JetsonNano/README.md",
+      "bytes": 684,
+      "sha256": "6a7c69fed24d34932277abca352b50de0950b406907d5e780e288324dbaa6779"
+    },
+    {
+      "path": "JetsonNano/examples/test_PCA9685.py",
+      "bytes": 1141,
+      "sha256": "5e28a93aef330a2b6e149f00832f50150758591c309949a683c0fd3e52486d4e"
+    },
+    {
+      "path": "JetsonNano/examples/test_mpu6050.py",
+      "bytes": 8813,
+      "sha256": "1a9d01cce0262a1ba0415754f32a05b0ee3b3c0fc28e963b1a3eb7e98de946e1"
+    },
+    {
+      "path": "JetsonNano/examples/test_servos.py",
+      "bytes": 2519,
+      "sha256": "bd5ef8caf173f48991468ae1c1b36c1fc68bb2ded6b64a056d918f167d685cde"
+    },
+    {
+      "path": "JetsonNano/examples/test_servos_cali.py",
+      "bytes": 1790,
+      "sha256": "d8be76d8ef5a01e22a7aa1f3a4ba70c1e1c8b6c3f83df7a51725bca441ccb48c"
+    },
+    {
+      "path": "JetsonNano/examples/test_servos_offset.py",
+      "bytes": 1763,
+      "sha256": "a8a839c5d920b3381b5472682d4758fdfc853dc4d6f1d63c35043aebae2d1c6a"
+    },
+    {
+      "path": "JetsonNano/fonts/README [INET].txt",
+      "bytes": 2847,
+      "sha256": "93b94b8bc9072b64702e087c701e88bffdeed54d3dce816848a5b7f2bb878a14"
+    },
+    {
+      "path": "JetsonNano/fonts/creep.bdf",
+      "bytes": 85484,
+      "sha256": "747692a16464fa644f763f1891d43ab1712c598104cc4721c4338cb6ca6e7aa8"
+    },
+    {
+      "path": "JetsonNano/legacy/boot.py",
+      "bytes": 1350,
+      "sha256": "e688fb2b44ae7b8b2960c6b0ca8259e95a7bcf219f0be3579718b79b4e9fc329"
+    },
+    {
+      "path": "JetsonNano/legacy/demo_opts.py",
+      "bytes": 1749,
+      "sha256": "bbdda6142fb64fdb1378fdeb41ea1744c66ec53e44ca60a86d7eef7f7249cfa3"
+    },
+    {
+      "path": "JetsonNano/legacy/gyro.py",
+      "bytes": 2413,
+      "sha256": "5835807052007483a9ada30e9aa0376b5a821aa5a9c047a30260d3b30b86e749"
+    },
+    {
+      "path": "JetsonNano/legacy/mode_standby.py",
+      "bytes": 476,
+      "sha256": "1d439e32475fa3b5392e9c69d713291f423951b77bbd0f69d69e9f15980411b3"
+    },
+    {
+      "path": "JetsonNano/legacy/modes.py",
+      "bytes": 177,
+      "sha256": "dbe7bb71b7edb7e2cc12581b1dd7f7ff79714529e03be3b71b4b4852e8515c13"
+    },
+    {
+      "path": "JetsonNano/legacy/network.py",
+      "bytes": 1043,
+      "sha256": "8f5d1189665d7a0179865ed4951563ce7093c2d39338e53ee3069adbee4462f4"
+    },
+    {
+      "path": "JetsonNano/legacy/servos.py",
+      "bytes": 1096,
+      "sha256": "bcb01722d1fb2509924b255b266ebb73a4ced14bed8e0aef556cfdef8984dd43"
+    },
+    {
+      "path": "JetsonNano/legacy/setup.py",
+      "bytes": 2413,
+      "sha256": "db36d4c4f2a05371423580234b38b0363caa22f07eb1c5fcc2cbb75f0c969776"
+    },
+    {
+      "path": "JetsonNano/legacy/start_robot.py",
+      "bytes": 584,
+      "sha256": "278710db5d7fc5389d31d995ec4582184fd4c4e011a5da2b2f340a0102f77799"
+    },
+    {
+      "path": "JetsonNano/motor_test.py",
+      "bytes": 629,
+      "sha256": "9644a936473c6515c8cd647c17c0c35d404077a085bc84518886854be5464749"
+    },
+    {
+      "path": "JetsonNano/multiprocess_kb.py",
+      "bytes": 3736,
+      "sha256": "2b78d5ba50e8c633a633ca3f18cb2826255f00473965089ee0abb88a5dfd0e01"
+    },
+    {
+      "path": "JetsonNano/rc.local",
+      "bytes": 78,
+      "sha256": "c23e3693b7598b3c4741dcae6b65a4bcc48ffe770377232dd3938232cc89aca7"
+    },
+    {
+      "path": "JetsonNano/requirements.txt",
+      "bytes": 198,
+      "sha256": "dda16d3a2dba23cb06ed776ad918afcd29599c19881c48c51e3f45fe893659d1"
+    },
+    {
+      "path": "JetsonNano/servo_controller.py",
+      "bytes": 3936,
+      "sha256": "5e51bfbac55baa80f05e578640323970da5bb40dff85c4ed140b7a91adea655a"
+    },
+    {
+      "path": "JetsonNano/servo_controller_fix.py",
+      "bytes": 4219,
+      "sha256": "b16bed88daf9089ee9954d1c64b56a506d0d87eccbd9e1d48d5316bcdb8e725c"
+    },
+    {
+      "path": "JetsonNano/spotmicroai.py",
+      "bytes": 4430,
+      "sha256": "54837cb9b409a0d481520b3e702d35c3b01816d4f694f6c9e136d38b6e176801"
+    },
+    {
+      "path": "JetsonNano/start_automatic_gait.py",
+      "bytes": 3429,
+      "sha256": "3d2d290c962cdac27e619ff1cdab752568e6cdf4127a15e87a14ea02f4f2fea5"
+    },
+    {
+      "path": "Kinematics/Kinematic.ipynb",
+      "bytes": 804993,
+      "sha256": "534a3443b0dcbee54d758086461c9d83432321187488dbb5c84c18abc9a7c95d"
+    },
+    {
+      "path": "Kinematics/KinematicMovements.ipynb",
+      "bytes": 8722,
+      "sha256": "07515f5c570f5b3b09d7425dfb24e0c44dfaafa09118b11212904d754636a79a"
+    },
+    {
+      "path": "Kinematics/README.md",
+      "bytes": 5189,
+      "sha256": "a07fef5994eb945d789b1ed3f9e72e02bf18eb78291a946c98d22f1cb7c643a7"
+    },
+    {
+      "path": "Kinematics/kinematicMotion.py",
+      "bytes": 4509,
+      "sha256": "fd9df27253ec17bfb8e3aa489637b0bce2dc29f5340a5cddcf2999ff22bd335b"
+    },
+    {
+      "path": "Kinematics/kinematics.py",
+      "bytes": 8011,
+      "sha256": "820e1d22116e7525283be77021ff09012b3f27a9b3d75ffb9c5a44649aeedef9"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "Parts/SpotMicroAI_AdditionalParts.FCStd",
+      "bytes": 1940421,
+      "sha256": "9986edddb88bb37396c5b331720408b36024a088c2d94be2d43dd9432212d739"
+    },
+    {
+      "path": "Parts/SpotMicroAI_Bottom.FCStd",
+      "bytes": 164867,
+      "sha256": "d91f1515e6e1d979aad407bfcffb34fecbaf256d1f2dbe9d0f258e0567e1ce68"
+    },
+    {
+      "path": "Parts/SpotMicroAI_Bottom.FCStd1",
+      "bytes": 164815,
+      "sha256": "221e693ef1f6f053c64835f800914fd0e58df5cd45fee3fbd00e829b4eca109b"
+    },
+    {
+      "path": "Parts/SpotMicroAI_JetsonParts.FCStd",
+      "bytes": 639799,
+      "sha256": "ecbe28d4f739ad34ab83a1c9f77f81d853edf1a945e04eda16e64c163c3eba7b"
+    },
+    {
+      "path": "Parts/SpotMicroAI_JetsonParts.FCStd1",
+      "bytes": 639785,
+      "sha256": "9e0a19b4bbb0152a757c57896f40cb8a69e64e76661ebe001721ddd10f9c3fa0"
+    },
+    {
+      "path": "Parts/SpotMicroAI_Rear.FCStd",
+      "bytes": 414579,
+      "sha256": "0044e359f01d963be0759179f150f27d0cb64d548984b3767149f03b3ff0748d"
+    },
+    {
+      "path": "Parts/SpotMicroAI_Top.FCStd",
+      "bytes": 154911,
+      "sha256": "41da71f33f121a6f2c45356ccd5df7efe58b73b6525ec2a7eef271eddc94f741"
+    },
+    {
+      "path": "Parts/SpotMicroAI_Top.FCStd1",
+      "bytes": 1060,
+      "sha256": "e7d9ec26edecf3dcda11a880dac7d7ef474bc307c211680990756b9eb8238ba6"
+    },
+    {
+      "path": "Parts/back.dae",
+      "bytes": 896612,
+      "sha256": "fac67e003b0948ade278f963aec38f1a25f7a0aca518d57d267d75a18ec970c0"
+    },
+    {
+      "path": "Parts/backpart.stl",
+      "bytes": 435884,
+      "sha256": "ccbd7fe400d3bd9effa4de6d11526326ebd6015b26496b203a5eab163fe09fcc"
+    },
+    {
+      "path": "Parts/front.dae",
+      "bytes": 1820174,
+      "sha256": "546526640df942a0cca22eeac576507ea6ff545fefba8d4eecf54902bd23c554"
+    },
+    {
+      "path": "Parts/frontpart.stl",
+      "bytes": 1056384,
+      "sha256": "8f3cad038d6e83d3cd86feb2de89b1e8a046dbac59a11d465fceb819387a976f"
+    },
+    {
+      "path": "Parts/jetsonPlate.stl",
+      "bytes": 393984,
+      "sha256": "2a409fa4dd68fbdcebee75fcebf98fb22a634bc44b9acbcd69eb38361c899ac1"
+    },
+    {
+      "path": "Parts/jetson_sidepart.stl",
+      "bytes": 73884,
+      "sha256": "d84e25a90cc062bc314b16151e6d66b6a5e978af8b460d54ed5fd4ec1a82a098"
+    },
+    {
+      "path": "Parts/larm.stl",
+      "bytes": 579184,
+      "sha256": "dff682561b3c4d3e07e760cbbdd20d001fbf1c6aedde543c396b50a6bccea139"
+    },
+    {
+      "path": "Parts/larm_cover.stl",
+      "bytes": 356484,
+      "sha256": "1641c12e334994c4fd79348da2112437abc47b8839558d00c1f7454b3525eef0"
+    },
+    {
+      "path": "Parts/lfoot.stl",
+      "bytes": 325984,
+      "sha256": "654070b9b0889941c747454fdacf16eb2c1c1ddba07038b86bd21befe2e61c7a"
+    },
+    {
+      "path": "Parts/lshoulder.stl",
+      "bytes": 635484,
+      "sha256": "0b656a0ebd8555b53d43e0699a87763cc1aa43b47532d05d6ff67635dcbbef57"
+    },
+    {
+      "path": "Parts/mainbody.dae",
+      "bytes": 471792,
+      "sha256": "c720ba810b588897669352c8f4a9feeaffc7960c69ebdefafa576d8e0735cf65"
+    },
+    {
+      "path": "Parts/mainbody.stl",
+      "bytes": 1148484,
+      "sha256": "eaf156abae7062ab670b48873c464a336f0671889f6cef32d19412d46149b812"
+    },
+    {
+      "path": "Parts/rarm.stl",
+      "bytes": 579184,
+      "sha256": "20474ae800e4fba970a9dc128f70f5bb65c07c2eee28c6a25bcd7ee9c7c0af63"
+    },
+    {
+      "path": "Parts/rarm_cover.stl",
+      "bytes": 356484,
+      "sha256": "366ca626f8219cd8cd11137da9395cdf01f9ffe46aeb15d3285dc0af7f6adcc3"
+    },
+    {
+      "path": "Parts/rearmain.stl",
+      "bytes": 364684,
+      "sha256": "b5c77b064e500598efd343cf2cff1ccedb25a5582a14e584d9d448f6954083b0"
+    },
+    {
+      "path": "Parts/rfoot.stl",
+      "bytes": 325984,
+      "sha256": "2e36d7fb6871aabb1d8ffa3ffa04459ecc3e6bbcf61ec6f108d9a5fe8957e3d2"
+    },
+    {
+      "path": "Parts/rshoulder.stl",
+      "bytes": 635484,
+      "sha256": "52811de8fee7099adf80901ad90cbcb144413d21bc552b3214856addb659d73b"
+    },
+    {
+      "path": "Parts/spotmicroai.blend",
+      "bytes": 19277152,
+      "sha256": "fd2baa9bd1f3abc65d7a8000f9a219e82ea25f452e9b452d42660da7f5b5ecad"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6153,
+      "sha256": "f40b9b47fd7eee28da3e42ee6d155e461fdd9be2f92fdfd3d72797bd5007723e"
+    },
+    {
+      "path": "STEP_Files/Bottom_modi(long).stp",
+      "bytes": 139843,
+      "sha256": "8803c7a865e0623a3b4014ec467e58b99323fed4acf810125c8b7b11385e4c3e"
+    },
+    {
+      "path": "STEP_Files/I_shoulder_cls_modi.stp",
+      "bytes": 5097753,
+      "sha256": "a51fb3eab8c6fa26f080d4515243b4c524d0fd154eb825dce6fe3fdd6eacfea5"
+    },
+    {
+      "path": "STEP_Files/L_Side_Plate_modi(Long).stp",
+      "bytes": 61636,
+      "sha256": "a97fe017f212768256e0c5861ec32ccbb253d9c60041d9bf74d7c904d6a0a5a3"
+    },
+    {
+      "path": "STEP_Files/O_shoulder_cls_grooved_modi.stp",
+      "bytes": 3797100,
+      "sha256": "84e88b3d4ca153883b89daa2bbd3986fab4699031ae9e69c0a112e956412ecb0"
+    },
+    {
+      "path": "STEP_Files/R_Side_Plate_modi(long).stp",
+      "bytes": 68001,
+      "sha256": "a64a7698da248121b5a506dd78f38e3a0f606f643f2f83976e9e0c1727c4c8da"
+    },
+    {
+      "path": "STEP_Files/Step_files.zip",
+      "bytes": 1586129,
+      "sha256": "835d50140702f7d7589d137d85d3fde50cc8b12056e088789e637b07e9f380bd"
+    },
+    {
+      "path": "STEP_Files/Top_modi(long).stp",
+      "bytes": 96817,
+      "sha256": "c48c690778fc30bc5113eb79083f1909e469c05c1c7516fd34859ec224555a20"
+    },
+    {
+      "path": "STL/LICENSE.txt",
+      "bytes": 183,
+      "sha256": "2a6c54c2ee67193ff9d766e44299b7f9d47ef460aa3709360a6e136818cba75e"
+    },
+    {
+      "path": "STL/attribution_card.html",
+      "bytes": 2074,
+      "sha256": "930ea4d7a5565630d637aa333731cd3fa255351b8ac11bb378e8cf599d00781b"
+    },
+    {
+      "path": "STL/batteryholder.stl",
+      "bytes": 84284,
+      "sha256": "f4d4a685b751bdca36830106e557ab6b39dae0df262afd4a34b4ce38e86bc278"
+    },
+    {
+      "path": "STL/batteryholder2.stl",
+      "bytes": 105584,
+      "sha256": "2c473c04d312e2e54c9e6eea331f6f3bfb026b1333ceb699b09572f25e876dc8"
+    },
+    {
+      "path": "STL/bottom.stl",
+      "bytes": 82684,
+      "sha256": "8f3e0fd5933460c9e4d55416b4073be905028ee521305002133745f4899a615e"
+    },
+    {
+      "path": "STL/files/B_cover.stl",
+      "bytes": 69884,
+      "sha256": "803a98eb86dfa47b39a2d65b61ad1a6462996021506f56316a80cf72773da207"
+    },
+    {
+      "path": "STL/files/F_cover.stl",
+      "bytes": 986984,
+      "sha256": "b17fda684be33cab4130cd73f85a829572553e928bc38ad30d8cd6e35aed841b"
+    },
+    {
+      "path": "STL/files/F_cover_orig.stl",
+      "bytes": 986984,
+      "sha256": "4947a6b19a31ce675142f7049a669102427df0a8a9c03a59ebdc408a403c5de8"
+    },
+    {
+      "path": "STL/files/F_shoulder.stl",
+      "bytes": 140484,
+      "sha256": "e40c21ec9034c209de9b2965965666674069b51ced054ebe8433c65a7224930e"
+    },
+    {
+      "path": "STL/files/L_arm.stl",
+      "bytes": 328484,
+      "sha256": "fce78eeb587ac39870c22abee57cbc03f27a4fde56d94b6b69ec0e0cc92e9e85"
+    },
+    {
+      "path": "STL/files/L_arm_cover.stl",
+      "bytes": 356484,
+      "sha256": "2dc028844b274c186f5b179d413f29bacc387ea43023b0b6f432d47088405c05"
+    },
+    {
+      "path": "STL/files/L_arm_joint.stl",
+      "bytes": 489284,
+      "sha256": "e77c804a0f553a36a3df8c15326bf05c366815cdfe0624a26eeeefbf3ebb31df"
+    },
+    {
+      "path": "STL/files/L_side_plate.stl",
+      "bytes": 103284,
+      "sha256": "4cb46445d05f79778d999467b2481c2a469efea98c7bdd537c3d0bffa46ec801"
+    },
+    {
+      "path": "STL/files/L_ultra_sonic.stl",
+      "bytes": 310484,
+      "sha256": "8792aae98a920d82e73e9516d8cfee8b5aa88a80ea19c22a772de155c772cd1a"
+    },
+    {
+      "path": "STL/files/L_wrist.stl",
+      "bytes": 179784,
+      "sha256": "69b43e41f8b00aff7d7d382fdff2609b88801403bdb97b8056f6d02178a4efbd"
+    },
+    {
+      "path": "STL/files/R_arm.stl",
+      "bytes": 328484,
+      "sha256": "e379ca8da9be6752fe112e42fdca452ae81fd395e1c18e6f31d5cb57cf0dab42"
+    },
+    {
+      "path": "STL/files/R_arm_cover.stl",
+      "bytes": 356484,
+      "sha256": "718ae235bed37f38b741ef542098bf6d3c34fd98e902ee99d9a7969a9582891a"
+    },
+    {
+      "path": "STL/files/R_arm_joint.stl",
+      "bytes": 489284,
+      "sha256": "02b3e82277faee0240addd2ef2eac4f89c108f82346216db2ce4e4dcfbe14d90"
+    },
+    {
+      "path": "STL/files/R_cover.stl",
+      "bytes": 366084,
+      "sha256": "9b329e04461214268ee9b43ea325318711e5009b165f964bc3d39673c1ab56c7"
+    },
+    {
+      "path": "STL/files/R_shoulder.stl",
+      "bytes": 224284,
+      "sha256": "b615af57539effa7c4e08b59cf88e7e3eba1490d64a21f654412efd991f607ad"
+    },
+    {
+      "path": "STL/files/R_side_plate.stl",
+      "bytes": 102284,
+      "sha256": "7db233d67628edb655c5c89623b36ce35fec8a3a82a87f1bff8a97d259fca94a"
+    },
+    {
+      "path": "STL/files/R_ultra_sonic.stl",
+      "bytes": 310084,
+      "sha256": "859c86bb0ab5f60983dbb7d026abc996aa60847453006771a6b3d90d198732d9"
+    },
+    {
+      "path": "STL/files/R_wrist.stl",
+      "bytes": 179784,
+      "sha256": "8e10bb539a56fdd99cc7688dab3eac33e5b37655b4f396c71a1cf8824b2f631f"
+    },
+    {
+      "path": "STL/files/T_cover.stl",
+      "bytes": 69484,
+      "sha256": "3f9dbcdcbd3990bda1f1d81b60edd6c7050b9a731a6beb3a58e2717ff4092081"
+    },
+    {
+      "path": "STL/files/foot.stl",
+      "bytes": 1074884,
+      "sha256": "5fea5fb8e98c6e15a7c0331036f9fb4f4cc605eeb58cef108315ee2f5df9ab9c"
+    },
+    {
+      "path": "STL/files/non-mega_B_cover.stl",
+      "bytes": 69884,
+      "sha256": "858e1d108dc63404df2b95a2cd6bbf9197eefcad49b674abe2c185c438d1c18e"
+    },
+    {
+      "path": "STL/files/non-mega_L_side_plate.stl",
+      "bytes": 102284,
+      "sha256": "cb42f3498abe429b9f608632764ba05393513d5104570c78c62374cbc2c7d7bd"
+    },
+    {
+      "path": "STL/files/non-mega_T_cover.stl",
+      "bytes": 69484,
+      "sha256": "9e4400d01580b575b4f1ee12fb416c78964f008ec570c6fb8999a66b20c786d3"
+    },
+    {
+      "path": "STL/files/plate.stl",
+      "bytes": 213884,
+      "sha256": "6116a5271d96bb429789a6950ec5802997be96bfa99114b9c578ac7a3792c4f2"
+    },
+    {
+      "path": "STL/label.stl",
+      "bytes": 14884,
+      "sha256": "1504ca02735bde643cf64fe9347fa3c77a781e9afda09a4e3f9099c4f2fdd931"
+    },
+    {
+      "path": "STL/ledholder.stl",
+      "bytes": 7684,
+      "sha256": "d6d580a9762b95f534da4d357cdc732925b22d8dc5bd403c9190b2dd81c3ea07"
+    },
+    {
+      "path": "STL/lidar/rplidar_main.STL",
+      "bytes": 1167984,
+      "sha256": "91f7981c72af624339ec132df42bafc4d340f797149fee2fb40316623e877898"
+    },
+    {
+      "path": "STL/rear.stl",
+      "bytes": 513384,
+      "sha256": "f6bbe863f3fb3d1b9d1294a9bd18751e0f1eb03c7f6d210b795a1d329a772a7b"
+    },
+    {
+      "path": "STL/rear2.stl",
+      "bytes": 217284,
+      "sha256": "0be792c5225d325af97a8ed3ba68a66ecf31785a2362803d13c4dd6d4f1641e7"
+    },
+    {
+      "path": "STL/screwguard.stl",
+      "bytes": 16684,
+      "sha256": "6eadc824efc4527798a69e9bf942a7ad9e5ea14ee89bfe02cfcf66961f7bba64"
+    },
+    {
+      "path": "STL/testmount.stl",
+      "bytes": 17884,
+      "sha256": "a6bf150f966cd8958d4037f4ace567d1d423583a232413e19e7797a76a54b464"
+    },
+    {
+      "path": "STL/top.stl",
+      "bytes": 81684,
+      "sha256": "2ca9de09a2507a742c7a6d53d81104a13cab0b0a4341a9a53e3a170d83fc66a0"
+    },
+    {
+      "path": "Simulation/README.md",
+      "bytes": 1108,
+      "sha256": "9c2065249a55bca79fab9257492a2416264865885d968f6ec92d4db59336f4ec"
+    },
+    {
+      "path": "Simulation/__init__.py",
+      "bytes": 33,
+      "sha256": "31c8dc27817e6cbbe1f93674513dcfe1016805da16ad88f438544b62ba0f5820"
+    },
+    {
+      "path": "Simulation/asphalt.png",
+      "bytes": 614856,
+      "sha256": "15b27fe15737f58745616079512dea1c9fd6b2c7ceddaeec8f7eff1270dbcadf"
+    },
+    {
+      "path": "Simulation/concrete.png",
+      "bytes": 194268,
+      "sha256": "3d97c6f8895fc391772b642a0ff7297866bfae309a4aa77267ca13e6040cf1ec"
+    },
+    {
+      "path": "Simulation/concrete2.png",
+      "bytes": 247167,
+      "sha256": "f580b19f6dcac8d24542af4593a1fce90dfa05d5e204c5c105c98e82f3926484"
+    },
+    {
+      "path": "Simulation/environment.py",
+      "bytes": 84,
+      "sha256": "fcd0b3c78e2ce089222f87fa07663a839253ad1d94d9fc653502a2977e8f2612"
+    },
+    {
+      "path": "Simulation/gym_spotmicroai.egg-info/PKG-INFO",
+      "bytes": 187,
+      "sha256": "c95e8dab5cdd2564448692a82a02199bd121652b0586acce4f0d168dee0b440c"
+    },
+    {
+      "path": "Simulation/gym_spotmicroai.egg-info/SOURCES.txt",
+      "bytes": 212,
+      "sha256": "2021a94c5eb023eccebd604678376853e0cedd12eac3a737405e0797bc787df8"
+    },
+    {
+      "path": "Simulation/gym_spotmicroai.egg-info/dependency_links.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "Simulation/gym_spotmicroai.egg-info/requires.txt",
+      "bytes": 19,
+      "sha256": "7c6dac356ce4667790afa39679ad193855428ac6403db6f33c4f91c2a509e3a1"
+    },
+    {
+      "path": "Simulation/gym_spotmicroai.egg-info/top_level.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "Simulation/gym_spotmicroai/__init__.py",
+      "bytes": 136,
+      "sha256": "e572f55ab2684aa6ac7aa16db06907d2e7b0191de3cacc3d60184938f32f2df9"
+    },
+    {
+      "path": "Simulation/gym_spotmicroai/envs/__init__.py",
+      "bytes": 64,
+      "sha256": "3f18ee1108c9c10e9060bc764183bca25f54d55f8831b5c9a59cb5bb2390a1c7"
+    },
+    {
+      "path": "Simulation/gym_spotmicroai/envs/spotmicroai_env.py",
+      "bytes": 653,
+      "sha256": "cee99cac5bd92011a82f2142a1a5eeeb406994820f2e53a2fed082683cc99e6a"
+    },
+    {
+      "path": "Simulation/gym_test.py",
+      "bytes": 127,
+      "sha256": "572a8def0d8745cd383cb40267200e4cfba610ff7dae2890a54282ad0954f5f5"
+    },
+    {
+      "path": "Simulation/image/wasd_keyboard_buttons.jpg",
+      "bytes": 83450,
+      "sha256": "7221ccc69ea760db5489fe4088b3b608cdb55781c2238cf7bf33a2d0ea23f8d1"
+    },
+    {
+      "path": "Simulation/kinematicMotion.py",
+      "bytes": 5829,
+      "sha256": "4f80091eb67d692357b6f23fcbc7bfe61ae713f9d7bf9c585b98d96064f884b9"
+    },
+    {
+      "path": "Simulation/kinematics.py",
+      "bytes": 8000,
+      "sha256": "a2a6d341329161ba326f0b15b5395a16910a0fbda1df20b53ec1e4924ac90464"
+    },
+    {
+      "path": "Simulation/pybullet_automatic_gait.py",
+      "bytes": 2927,
+      "sha256": "bbb9ca7cd22c7cbe2562858f004632f99068c2980d52cc68dbc94b6121f1d6f3"
+    },
+    {
+      "path": "Simulation/pybullet_tutorial/medium.py",
+      "bytes": 575,
+      "sha256": "415027c7b61f1ba6972aa72ba037646f4661ef9c09d10523b1290231bc8a5532"
+    },
+    {
+      "path": "Simulation/pybullet_tutorial/pybullet_basic.py",
+      "bytes": 1530,
+      "sha256": "743c36fca68bc20b0f96e3e6a09abd3b65992472bc9803f20643b31b024ebc7b"
+    },
+    {
+      "path": "Simulation/pybullet_tutorial/pybullet_simplecar.py",
+      "bytes": 1839,
+      "sha256": "dfcb18956a36426ed6b3aa2aaff99d9e776c0ce76513d3892b6a59df042904a9"
+    },
+    {
+      "path": "Simulation/pybullet_tutorial/simplecar.urdf",
+      "bytes": 5812,
+      "sha256": "cb500201aa844ff085a7356c9c64c54faff221cf47bbd17f589f7601e11c9346"
+    },
+    {
+      "path": "Simulation/requirements.txt",
+      "bytes": 76,
+      "sha256": "1b37889d74f8160cd51f41a60ea49182292d2861cd3d52c96a8c24318d622c47"
+    },
+    {
+      "path": "Simulation/setup.py",
+      "bytes": 136,
+      "sha256": "39f385379faee02135fc883ee2f8391148b5f00032a5271c97ec83f741db192e"
+    },
+    {
+      "path": "Simulation/spotmicroai.py",
+      "bytes": 14089,
+      "sha256": "d1be5db0096cbe01488f1d733acdf11ef7af25ef21b0b9fafe70ab5440e11072"
+    },
+    {
+      "path": "gen_urdf.sh",
+      "bytes": 160,
+      "sha256": "cb40f996e5fddf1da7996909607da4f004cce326254b5d1c6c4d6fd33d19b642"
+    },
+    {
+      "path": "package.xml",
+      "bytes": 2430,
+      "sha256": "8bd80f4df0f5ce995162ec7f2386787e630188974b8717641ad3e132dcf0b599"
+    },
+    {
+      "path": "urdf/FreeCAD/SpotMicroAI_AdditionalParts.FCStd",
+      "bytes": 1940421,
+      "sha256": "9986edddb88bb37396c5b331720408b36024a088c2d94be2d43dd9432212d739"
+    },
+    {
+      "path": "urdf/FreeCAD/SpotMicroAI_Bottom.FCStd",
+      "bytes": 164867,
+      "sha256": "d91f1515e6e1d979aad407bfcffb34fecbaf256d1f2dbe9d0f258e0567e1ce68"
+    },
+    {
+      "path": "urdf/FreeCAD/SpotMicroAI_Bottom.FCStd1",
+      "bytes": 164815,
+      "sha256": "221e693ef1f6f053c64835f800914fd0e58df5cd45fee3fbd00e829b4eca109b"
+    },
+    {
+      "path": "urdf/FreeCAD/SpotMicroAI_JetsonParts.FCStd",
+      "bytes": 639799,
+      "sha256": "ecbe28d4f739ad34ab83a1c9f77f81d853edf1a945e04eda16e64c163c3eba7b"
+    },
+    {
+      "path": "urdf/FreeCAD/SpotMicroAI_JetsonParts.FCStd1",
+      "bytes": 639785,
+      "sha256": "9e0a19b4bbb0152a757c57896f40cb8a69e64e76661ebe001721ddd10f9c3fa0"
+    },
+    {
+      "path": "urdf/FreeCAD/SpotMicroAI_Rear.FCStd",
+      "bytes": 414579,
+      "sha256": "0044e359f01d963be0759179f150f27d0cb64d548984b3767149f03b3ff0748d"
+    },
+    {
+      "path": "urdf/FreeCAD/SpotMicroAI_Top.FCStd",
+      "bytes": 154911,
+      "sha256": "41da71f33f121a6f2c45356ccd5df7efe58b73b6525ec2a7eef271eddc94f741"
+    },
+    {
+      "path": "urdf/FreeCAD/SpotMicroAI_Top.FCStd1",
+      "bytes": 1060,
+      "sha256": "e7d9ec26edecf3dcda11a880dac7d7ef474bc307c211680990756b9eb8238ba6"
+    },
+    {
+      "path": "urdf/create_ros_urdf.sh",
+      "bytes": 363,
+      "sha256": "ba5e29cf38cdb2b00bafb572cffbed908b24cc827971b9864ac8ece7fbe24bb7"
+    },
+    {
+      "path": "urdf/spotmicroai_gen.urdf.xml",
+      "bytes": 19531,
+      "sha256": "dbb9030ca7f393467443375edbaeab1f7820d542854624b2a475d278d77a6a19"
+    },
+    {
+      "path": "urdf/spotmicroai_gen_ros.urdf",
+      "bytes": 20030,
+      "sha256": "b66455c53b9b8fd03ecc95622fecd2cefefad455553c37ffa4520527b63c711c"
+    },
+    {
+      "path": "urdf/stairs.urdf.xacro",
+      "bytes": 1756,
+      "sha256": "059d38d29a565d9d7a394af3fe7104d1089c1d6888c83c7167b5991b5917a902"
+    },
+    {
+      "path": "urdf/stairs_gen.urdf.xml",
+      "bytes": 9771,
+      "sha256": "24f21dbc264d3a1b098a5fbb2e60d8aae18de88844dbbafa3c7fac2bc4dbd99f"
+    }
+  ]
+}

@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Power supply considerations for Jetson Nano Developer Kit - Jetson Nano - NVIDIA Developer Forums</title>
+    <meta name="description" content="Out of the box, the Jetson Nano Developer Kit is configured to accept power via the Micro-USB connector. You’ll need to power the developer kit with a good quality power supply that can deliver 5V⎓2A at the developer kit…">
+    <meta name="generator" content="Discourse 2026.10.0-latest - https://github.com/discourse/discourse version 3d9c0f69102ca88a524620e0fe0e56ff0514345e">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/nvidia/optimized/2X/0/0372ccc95874f71d7fbff64bbbff6f8c69dd850b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/nvidia/optimized/2X/8/819b2855e1f1f3249e77dc713405cf77d1eda57c_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#000000">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+
+<meta name="color-scheme" content="light dark">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637" />
+
+<meta name="discourse-track-view-session-id" content="FpSg98M28RC0hQeEJRYpyRtbHHhkzId8">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://forums.developer.nvidia.com/opensearch.xml" title="NVIDIA Developer Forums Search">
+
+    
+    <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/color_definitions_nvidia_4_13_21a792ae5bc86ff61e33ca65f9df24acb434c2e2.css?__ws=forums.developer.nvidia.com" media="(prefers-color-scheme: light)" rel="stylesheet" class="light-scheme" data-scheme-id="4"/><link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/color_definitions_nvidia-dark_17_13_e6698eccf75a5ea683ea90de7ac86938545028c7.css?__ws=forums.developer.nvidia.com" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme" data-scheme-id="17"/>
+
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common"  />
+
+
+
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/automation_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="automation"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/checklist_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-ai_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-akismet_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-antivirus_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-antivirus"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-assign_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-assign"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-cakeday_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-chat-integration_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-chat-integration"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-data-explorer_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-data-explorer"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-details_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-docs_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-docs"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-events_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-events"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-github_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-github"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-jira_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-jira"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-lazy-videos_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-local-dates_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-policy_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-policy"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-presence_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-reactions_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-solved_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-templates_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-topic-voting_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-translator_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-translator"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-user-notes_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-user-notes"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-yearly-review_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-yearly-review"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/footnote_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/hosted-site_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/poll_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/spoiler-alert_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-ai_mobile_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-ai_mobile"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-assign_mobile_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-assign_mobile"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-events_mobile_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-events_mobile"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-reactions_mobile_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-reactions_mobile"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-ai_desktop_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-events_desktop_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-events_desktop"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-reactions_desktop_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/poll_desktop_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_11_49709859cb4878d97426587d9153ba3b2a38bcfc.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="11" data-theme-name="custom header links"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_18_f353c60c21848049918e3144ec246120040b1786.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="18" data-theme-name="topic thumbnails"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_19_6dacae0e1568e9a93221a17f83956a62c3c64446.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="19" data-theme-name="versatile banner"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_13_4449c4d2ea202a99492778f75d5600ca8e7addff.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="13" data-theme-name="discourse-nvidia-theme"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_23_285863248c38757fc09c66e5c11a4471a7637dd6.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="23" data-theme-name="custom header links adjustments"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_17_e3f5fb990d80df802dd2e8c489f966741c523143.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="17" data-theme-name="fix bulk actions button focus"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_20_4b425b561c41b5f9d4edff8a68c79b031f7ce064.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="20" data-theme-name="versatile banner adjustments"/>
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/mobile_theme_18_94743a0c57b8b2874df64b070cbf6341860f4723.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="mobile_theme" data-theme-id="18" data-theme-name="topic thumbnails"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/mobile_theme_13_c12baa8521b5e8e5af52b00d980fe23733ae0e0c.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="mobile_theme" data-theme-id="13" data-theme-name="discourse-nvidia-theme"/>
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/desktop_theme_13_5a50bcc8e3b604a6249455ebba608a48ceb93282.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="desktop_theme" data-theme-id="13" data-theme-name="discourse-nvidia-theme"/>
+
+    <script src="//assets.adobedtm.com/5d4962a43b79/76a76b0bb8ea/launch-7d434965ec64.min.js" async="" nonce="66wejjbyFLJVEG5fBDCqxWSRJ"></script>
+
+<script defer="" src="https://sea2.discourse-cdn.com/nvidia/theme-javascripts/0dc64510eba9a75de7e038ed07503b666f7d00cf.js?__ws=forums.developer.nvidia.com" data-theme-id="13" nonce="66wejjbyFLJVEG5fBDCqxWSRJ"></script>
+
+<meta name="google-site-verification" content="If3jxgzZoS1XODkXDOo83AD2VzBqttpfA2TfyU7YQlk">
+
+<!-- OneTrust Cookies Consent Notice start for nvidia.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="3e2b62ff-7ae7-4ac5-87c8-d5949ecafff5" nonce="66wejjbyFLJVEG5fBDCqxWSRJ"></script>
+<script defer="" src="https://sea2.discourse-cdn.com/nvidia/theme-javascripts/32a78cf2cb9a8bd069ff183687855c011f0db0d6.js?__ws=forums.developer.nvidia.com" data-theme-id="22" nonce="66wejjbyFLJVEG5fBDCqxWSRJ"></script>
+<!-- OneTrust Cookies Consent Notice end for nvidia.com -->
+ <script type="text/javascript" src="https://images.nvidia.com/aem-dam/Solutions/ot-js/ot-custom.js" nonce="66wejjbyFLJVEG5fBDCqxWSRJ"></script>
+
+<!-- Stopgap: remove once CSP mode is disabled for this OneTrust domain script -->
+<script defer="" src="https://sea2.discourse-cdn.com/nvidia/theme-javascripts/a0f3ce1ae9806df0187a34b70b4c3491b1c6b442.js?__ws=forums.developer.nvidia.com" data-theme-id="22" nonce="66wejjbyFLJVEG5fBDCqxWSRJ"></script>  
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Power supply considerations for Jetson Nano Developer Kit&#39;" href="https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637.rss" />
+    <meta property="og:site_name" content="NVIDIA Developer Forums" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/nvidia/optimized/3X/7/8/787490861ef6850d88bc66323867e4b180f6930a_2_1024x505.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/nvidia/optimized/3X/7/8/787490861ef6850d88bc66323867e4b180f6930a_2_1024x505.png" />
+<meta property="og:image:width" content="1197" />
+<meta property="og:image:height" content="591" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:url" content="https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637" />
+<meta name="twitter:url" content="https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637" />
+<meta property="og:title" content="Power supply considerations for Jetson Nano Developer Kit" />
+<meta name="twitter:title" content="Power supply considerations for Jetson Nano Developer Kit" />
+<meta property="og:description" content="Out of the box, the Jetson Nano Developer Kit is configured to accept power via the Micro-USB connector. You’ll need to power the developer kit with a good quality power supply that can deliver 5V⎓2A at the developer kit’s Micro-USB port. Not every power supply rated at “5V⎓2A” will actually do this.  The power supply will need to consistently deliver ≥4.75V to avoid brownout condition.  Note that some USB cables can lead to additional voltage droop.  See the Jetson Nano Supported Components Lis..." />
+<meta name="twitter:description" content="Out of the box, the Jetson Nano Developer Kit is configured to accept power via the Micro-USB connector. You’ll need to power the developer kit with a good quality power supply that can deliver 5V⎓2A at the developer kit’s Micro-USB port. Not every power supply rated at “5V⎓2A” will actually do this.  The power supply will need to consistently deliver ≥4.75V to avoid brownout condition.  Note that some USB cables can lead to additional voltage droop.  See the Jetson Nano Supported Components Lis..." />
+<meta property="og:article:section" content="Robotics &amp; Edge Computing" />
+<meta property="og:article:section:color" content="76B900" />
+<meta property="og:article:section" content="Jetson Systems" />
+<meta property="og:article:section:color" content="76B900" />
+<meta property="og:article:section" content="Jetson Nano" />
+<meta property="og:article:section:color" content="76B900" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="78 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="24 ❤" />
+<meta property="article:published_time" content="2019-03-18T20:22:42+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/power-supply-considerations-for-jetson-nano-developer-kit/71637?page=2">
+
+    <link rel="alternate" type="text/markdown" href="https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637.md">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Power supply considerations for Jetson Nano Developer Kit","datePublished":"2019-03-18T20:22:42.000Z","mainEntity":{"@type":"Question","answerCount":19,"author":{"@type":"Person","name":"dusty_nv","url":"https://forums.developer.nvidia.com/u/dusty_nv"},"dateModified":"2020-10-19T15:14:52.880Z","datePublished":"2019-03-18T20:22:42.000Z","name":"Power supply considerations for Jetson Nano Developer Kit","text":"Out of the box, the Jetson Nano Developer Kit is configured to accept power via the Micro-USB connector. You’ll need to power the developer kit with a good quality power supply that can deliver 5V⎓2A at the developer kit’s Micro-USB port. Not every power supply rated at “5V⎓2A” will actually do this&hellip;","upvoteCount":10,"suggestedAnswer":[{"@type":"Answer","author":{"@type":"Person","name":"benbojangles","url":"https://forums.developer.nvidia.com/u/benbojangles"},"dateModified":"2020-02-01T07:40:00.526Z","datePublished":"2019-03-19T21:40:27.000Z","text":"Can the Jetson Nano be powered by USB-C?\n\nI have a 45W USB-C power supply from an Acer Chromebook sitting around perhaps useful with the Jetson Nano?","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/2"},{"@type":"Answer","author":{"@type":"Person","name":"dusty_nv","url":"https://forums.developer.nvidia.com/u/dusty_nv"},"dateModified":"2020-02-01T07:40:14.883Z","datePublished":"2019-03-20T17:01:25.000Z","text":"Hi benbojangles, the Jetson Nano Developer Kit does not include a USB-C port, it can be powered either via the Micro-USB port or the DC barrel jack.","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/3"},{"@type":"Answer","author":{"@type":"Person","name":"benbojangles","url":"https://forums.developer.nvidia.com/u/benbojangles"},"dateModified":"2020-02-01T07:40:16.249Z","datePublished":"2019-03-20T19:11:12.000Z","text":"Thanks Nvidia :)","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/4"},{"@type":"Answer","author":{"@type":"Person","name":"byen00","url":"https://forums.developer.nvidia.com/u/byen00"},"dateModified":"2020-02-01T07:41:32.871Z","datePublished":"2019-03-24T21:24:19.000Z","text":"Sony PSP (original one) came with a 120v power adapter – 5V 2.0A rated.  I have one, &amp; am doing some trials – using the barrel power connector.  I have to cut off the old connector (smaller diameter than the Jetson Nano uses), splice a new one (which fits)\n\n^^^ They’re only $4.99 (free shipping) off&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/5"},{"@type":"Answer","author":{"@type":"Person","name":"pimpim","url":"https://forums.developer.nvidia.com/u/pimpim"},"dateModified":"2020-02-01T07:41:46.959Z","datePublished":"2019-03-25T14:55:41.000Z","text":"What are fitting power options for use on a drone? These usually come with higher voltage power options.","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/6"},{"@type":"Answer","author":{"@type":"Person","name":"dusty_nv","url":"https://forums.developer.nvidia.com/u/dusty_nv"},"dateModified":"2020-02-01T07:41:48.389Z","datePublished":"2019-03-25T17:00:19.000Z","text":"The stock Jetson Nano Developer Kit carrier board accepts 5V DC input, so you would need to use a step-down converter or voltage regulator if you are using higher-voltage power (which if powering directly from a battery pack like a LiPO, should be using a regulator used for the electronics).  In ad&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/7"},{"@type":"Answer","author":{"@type":"Person","name":"dbhatt0277","url":"https://forums.developer.nvidia.com/u/dbhatt0277"},"dateModified":"2020-02-01T07:41:50.596Z","datePublished":"2019-03-25T18:25:43.000Z","text":"I’m using a 5V 2A USB charging supply, when I plug in only a mouse it boots fine.  After powering down and plugging in apple USB keyboard I see the LED on nano board on and initial boot up occurs and then LED turn off and screen goes blank. Is there a compatibility issue with Apple keyboard?","upvoteCount":1,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/8"},{"@type":"Answer","author":{"@type":"Person","name":"dusty_nv","url":"https://forums.developer.nvidia.com/u/dusty_nv"},"dateModified":"2020-02-01T07:41:50.953Z","datePublished":"2019-03-25T18:40:33.000Z","text":"Hmm I have not heard of issues with that before, but am not sure if that particular device has been verified previously.\n\nAre you able to try a different USB keyboard to see if the behavior is related to the Apple keyboard?","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/9"},{"@type":"Answer","author":{"@type":"Person","name":"digitaldave","url":"https://forums.developer.nvidia.com/u/digitaldave"},"dateModified":"2020-02-01T07:41:55.487Z","datePublished":"2019-03-25T21:48:34.000Z","text":"When running (for example) DetectNet with passive cooling, the Nano does indeed get quite hot. I bought the 10mm (thick, 40mm wide) version of the recommended Noctua fan, but am curious if there is any “right” way to mount it. The provided case screws are too large for the holes in the Nano’s heatsi&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/10"},{"@type":"Answer","author":{"@type":"Person","name":"dusty_nv","url":"https://forums.developer.nvidia.com/u/dusty_nv"},"dateModified":"2020-02-01T07:42:20.359Z","datePublished":"2019-03-26T17:57:25.000Z","text":"Hi David, use M3 self-tapping screws, which should be at least 12.5mm or ½” long.","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/11"},{"@type":"Answer","author":{"@type":"Person","name":"digitaldave","url":"https://forums.developer.nvidia.com/u/digitaldave"},"dateModified":"2020-02-01T07:42:20.697Z","datePublished":"2019-03-26T18:08:48.000Z","text":"Perfect. Thanks!","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/12"},{"@type":"Answer","author":{"@type":"Person","name":"bshay","url":"https://forums.developer.nvidia.com/u/bshay"},"dateModified":"2020-02-01T07:42:46.580Z","datePublished":"2019-03-27T19:11:32.000Z","text":"We have tested the following 5V⎓3A DC barrel jack power supply, CUI’s <a href=\"https://www.arrow.com/en/products/smi18-5-v-p5/cui-inc\" data-bbcode=\"true\" rel=\"noopener nofollow ugc\">SMI18-5-V-P5<\/a>. It seems to work just fine with the Jetson Nano Developer Kit powering a USB camera, mouse, and keyboard.\n\nThis supply has the proper 5.5mm OD / 2.1mm ID / 9.5mm length center pin positive plug. The dc output cable i&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/13"},{"@type":"Answer","author":{"@type":"Person","name":"kosmon","url":"https://forums.developer.nvidia.com/u/kosmon"},"dateModified":"2020-02-01T07:43:36.938Z","datePublished":"2019-03-30T21:15:23.000Z","text":"I have a really hard time finding a proper power supply in Sweden. Any ideas?\n\nAlso, does it matter if I power it from USB vs barrel jack in terms of performance?","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/14"},{"@type":"Answer","author":{"@type":"Person","name":"linuxdev","url":"https://forums.developer.nvidia.com/u/linuxdev"},"dateModified":"2020-02-01T07:43:44.796Z","datePublished":"2019-03-31T19:55:14.000Z","text":"Both would work, but don’t forget the jumper you need for the barrel jack to be used. My own personal preference is barrel jack since there are certain overcurrent fuses in USB which can be avoided (those fuses typically reset after cooling down, but completely avoiding those implies to me a greater&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/15"},{"@type":"Answer","author":{"@type":"Person","name":"kai-oezer","url":"https://forums.developer.nvidia.com/u/kai-oezer"},"dateModified":"2020-02-01T07:44:11.631Z","datePublished":"2019-04-01T20:30:38.000Z","text":"I have experienced the same issue. My Apple USB keyboard caused the system to crash during initial bootup; the display went blank and the green LED turned off. The system also crashed when I connected the keyboard after booting was complete but before running the system setup. The solution was to o&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/16"},{"@type":"Answer","author":{"@type":"Person","name":"nicolay","url":"https://forums.developer.nvidia.com/u/nicolay"},"dateModified":"2020-02-01T07:44:17.009Z","datePublished":"2019-04-02T07:01:17.000Z","text":"I can power the board with micorusb, but it doesn’t want to power on with 5V jack connected. I’m using 2.6A adapter, which is working well with other dev boards. The same issue even with bench power supply (set to limit of 5V/4A) - to signs of life, despite multimeter showing 5V on board’s pins.\n\nSh&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/17"},{"@type":"Answer","author":{"@type":"Person","name":"dusty_nv","url":"https://forums.developer.nvidia.com/u/dusty_nv"},"dateModified":"2020-02-01T07:44:26.978Z","datePublished":"2019-04-02T13:53:15.000Z","text":"I have experienced the same issue. My Apple USB keyboard caused the system to crash during initial bootup; the display went blank and the green LED turned off. The system also crashed when I connected the keyboard after booting was complete but before running the system setup. The solution was to o&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/18"},{"@type":"Answer","author":{"@type":"Person","name":"kai-oezer","url":"https://forums.developer.nvidia.com/u/kai-oezer"},"dateModified":"2020-02-01T07:44:27.042Z","datePublished":"2019-04-02T13:58:45.000Z","text":"Thank you for investigating the issue.","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/19"},{"@type":"Answer","author":{"@type":"Person","name":"krishean","url":"https://forums.developer.nvidia.com/u/krishean"},"dateModified":"2020-02-01T07:44:32.163Z","datePublished":"2019-04-02T22:47:48.000Z","text":"The Noctua fan that is linked in the original post requires 12V operating voltage, does header J15 supply 12V, or should the 5V variant (nf-a4x20-5v-pwm) of the fan be used instead? At a glance the user guide does not seem to specify the voltage of the fan header.","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/20"}]}}</script>
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">NVIDIA Developer Forums</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/power-supply-considerations-for-jetson-nano-developer-kit/71637">Power supply considerations for Jetson Nano Developer Kit</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/robotics-edge-computing/55" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #76B900'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Robotics &amp; Edge Computing</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/robotics-edge-computing/jetson-systems/70" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #76B900'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Jetson Systems</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/robotics-edge-computing/jetson-systems/jetson-nano/76" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #76B900'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Jetson Nano</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="3" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="itemscope" itemtype="https://schema.org/QAPage">
+      <meta itemprop='name' content='Power supply considerations for Jetson Nano Developer Kit'>
+      <link itemprop='url' href='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637'>
+      <meta itemprop='datePublished' content='2019-03-18T20:22:42Z'>
+      <meta itemprop='keywords' content=''>
+
+      
+
+        <div itemprop="mainEntity" itemscope="itemscope" itemtype="https://schema.org/Question">
+          <meta itemprop='answerCount' content='19'><meta itemprop='datePublished' content='2019-03-18T20:22:42Z'><meta itemprop='name' content='Power supply considerations for Jetson Nano Developer Kit'><meta itemprop='upvoteCount' content='10'>
+
+
+          <div id='post_1' data-qa-question="true" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/dusty_nv'><span itemprop="name">dusty_nv</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/dusty_nv'>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/nvidia/original/3X/7/8/787490861ef6850d88bc66323867e4b180f6930a.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-03-18T20:22:42Z' class='post-time'>
+                    March 18, 2019,  8:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-19T15:14:52Z'>
+              <span itemprop="position">1</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Out of the box, the Jetson Nano Developer Kit is configured to accept power via the Micro-USB connector. You’ll need to power the developer kit with a good quality power supply that can deliver 5V⎓2A at the developer kit’s Micro-USB port. Not every power supply rated at “5V⎓2A” will actually do this.  The power supply will need to consistently deliver ≥4.75V to avoid brownout condition.  Note that some USB cables can lead to additional voltage droop.</p>
+<p>See the <b><a target="_blank" href="https://developer.nvidia.com/embedded/dlc/jetson-nano-supported-components-list" rel="noopener">Jetson Nano Supported Components List</a></b> for power supplies that NVIDIA’s validated with the Jetson Nano Developer Kit and that were specifically designed to overcome common problems with USB power supplies:</p>
+<p><strong>Recommended Micro-USB Power Supplies</strong></p>
+<ul>
+<li><a target="_blank" href="https://www.adafruit.com/product/1995" rel="noopener">Adafruit 5V⎓2.5A Switching Power Supply with 20AWG MicroUSB Cable (GEO151UB-6025)</a></li>
+<li><a target="_blank" href="https://www.amazon.com/dp/B07CYZ9GZZ" rel="noopener">GeekPi 5V⎓2.5A GeeekPi Power Supply with ON/OFF Switch (ABT025050)</a></li>
+<li><a target="_blank" href="https://www.amazon.com/dp/B00L88M8TE" rel="noopener">Pwr+ 5V⎓3.5A Pwr+ AC Adapter TBAM3-UL (PWR-TA05035N)</a></li>
+<li><a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/" rel="noopener">Raspberry Pi 5.1V⎓2.5A Raspberry Pi Universal Power Supply (DSA-13PFC-05 FCA 051250)</a></li>
+</ul>
+<p>If you want to run stressful workloads in the (default) 10W power mode,you should instead use a DC barrel jack power supply (with 5.5mm OD / 2.1mm ID / 9.5mm length, center pin positive) that can supply up to 5V⎓4A:</p>
+<p><strong>Recommended DC Barrel Jack Power Supplies</strong></p>
+<ul>
+<li>Adafruit <a target="_blank" href="https://www.adafruit.com/product/1466" rel="noopener">5V⎓4A switching power supply (GEO241DA-0540)</a></li>
+<li>Sparkfun <a href="https://www.sparkfun.com/products/14932">5V⎓6A 30W power supply (GST60A05)</a></li>
+</ul>
+<p>To enable use of the DC barrel jack power supply, you will need to fit a jumper to J48 on the Jetson Nano Developer Kit baseboard.  Please refer to the Power Guide section of the <a href="https://developer.nvidia.com/embedded/dlc/Jetson_Nano_Developer_Kit_User_Guide">Jetson Nano Developer Kit User Guide</a> for more details.</p>
+<p>The devkit may also be powered from pins 2+4 (pin 6+9 GND) of the J48 Expansion Header - up to up to 5V⎓3A per pin (5V⎓6A total).</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://global.discourse-cdn.com/nvidia/original/3X/7/8/787490861ef6850d88bc66323867e4b180f6930a.png" data-download-href="/uploads/short-url/hbB29W4kZMPwQdEChLyKVsOwt74.png?dl=1" title=""><img src="https://global.discourse-cdn.com/nvidia/optimized/3X/7/8/787490861ef6850d88bc66323867e4b180f6930a_2_690x340.png" alt="" data-base62-sha1="hbB29W4kZMPwQdEChLyKVsOwt74" role="presentation" width="690" height="340" srcset="https://global.discourse-cdn.com/nvidia/optimized/3X/7/8/787490861ef6850d88bc66323867e4b180f6930a_2_690x340.png, https://global.discourse-cdn.com/nvidia/optimized/3X/7/8/787490861ef6850d88bc66323867e4b180f6930a_2_1035x510.png 1.5x, https://global.discourse-cdn.com/nvidia/original/3X/7/8/787490861ef6850d88bc66323867e4b180f6930a.png 2x" data-dominant-color="ECEDEB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1197×591 415 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>The Jetson Nano Developer Kit includes a passive heatsink, to which a user-supplied fan can be mounted (for example <a target="_blank" href="https://noctua.at/en/nf-a4x20-5v-pwm" rel="noopener">Noctua NF-A4x20 5V PWM</a>).  When operating with passive cooling, depending upon the workload the heatsink may get hot to the touch and direct contact should be avoided.</p>
+<aside class="quote no-group">
+<blockquote>
+<p><b>note:</b>  the Jetson Nano Developer Kit does not ship with a power supply.  Users will need to provide one, ideally following the considerations above.</p>
+</blockquote>
+</aside>
+            </div>
+
+
+                <div class='crawler-linkback-list'>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-barrel-jack/121548/2">Jetson Nano - Barrel Jack</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-low-voltage-warning/124969/3">Jetson Nano Low Voltage Warning</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-turning-off-when-use-deepstream-app-with-sample/122186/5">Jetson Nano turning off when use deepstream-app with sample</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/deepstream-processing-dat-from-logitech-930e-with-only-5fps/120616/17">Deepstream processing dat from Logitech 930e with only 5FPS</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-realsense-sr300-reboot/121506/2">Jetson Nano &amp; Realsense SR300 reboot</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/microusb-power/143676/4">MicroUSB Power</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-alternative-external-power-supply/157950/2">Jetson Nano - Alternative External Power Supply</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/can-power-jetson-nano-through-power-adapter-has-output-12v-2a/176018/2">Can power Jetson nano through power adapter has output 12V-2A?</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-2gb-overheating/159397/22">Jetson Nano 2gb - Overheating</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-dc-power-supply/278103/3">Jetson nano dc power supply</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-intermittent-barrel-jack-power-problems/175832/4">Jetson intermittent barrel jack power problems</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/power-supply-voltage-tolerance-is-5-5volt-5ampere-ok-for-jetson-nano/161281/6">Power supply voltage tolerance .... is 5.5Volt/5Ampere ok for jetson nano?</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-stuck-and-poweroff/193862/3">Jetson Nano Stuck and Poweroff</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/ups-with-seedstudio-board/227058/2">UPS with seedstudio board</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-dev-kit-4g-freeze-during-inference-training-or-idle-time/195009/2">Jetson nano dev kit 4G freeze during inference, training or idle time</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/there-i-go-again-fan-paperweight/220993/3">There I go again - fan == paperweight</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-shutting-down-while-running-detectnet-py/227766/3">Jetson nano shutting down while running detectnet.py</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-suddenly-shut-down/277464/4">Jetson Nano Suddenly Shut DOWN</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-faq/82953">Jetson Nano FAQ</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/impossible-to-train-test-inference-in-gpu-jetson-nano/181395/2">Impossible to train/test/inference in GPU Jetson Nano</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-dont-read-the-sd-and-turn-off-the-green-light/210907/5">Jetson dont read the sd and turn off the green light</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/portable-power-supply-for-jetson-nano-8gb-developer-kitn/307397/5">Portable Power supply for jetson nano 8GB developer kitn</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/using-a-micro-usb-to-type-c-adapter-for-power-supply/290605/8">Using a micro-usb to type C adapter for power supply</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/problem-with-powering-jetson-nano-with-5v-3a-pins-from-the-j41-expansion-headers/288474/5">Problem with powering Jetson Nano with 5V, 3A pins from the J41 expansion headers</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-b01-dev-kit-power-and-relative-ubuntu-ros-versions/304289/5">Jetson Nano B01 Dev Kit - Power and Relative Ubuntu/Ros Versions</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/unable-to-power-on-nvidia-jetson-nano-developer-kit-b01-with-barrel-power/246910/2">Unable to power on NVIDIA Jetson Nano Developer Kit-B01 with barrel power</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-through-barrel-jack/191443/2">Power supply considerations for Jetson Nano through barrel jack</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-turn-off-on-random-time/223857/7">Jetson nano turn off on random time</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-developer-kit-dc-jack-powering/301756/2">Jetson Nano Developer Kit DC Jack Powering</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/unable-to-find-jetpack-os-for-jetson-nano-2gb/299986/8">Unable to find Jetpack OS for Jetson Nano 2GB</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/system-throttled-due-to-overcurrent/168820/3">System throttled due to overcurrent</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-shut-off-when-i-try-to-sudo-docker-pull-ultralytics-yolov5-latest/184957/3">Jetson nano shut-off when i try to sudo docker pull ultralytics/yolov5:latest</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/crash-regularly-occuring-when-using-gpu-for-object-detection/165555/7">Crash regularly occuring when using GPU for object detection</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/coral-usb-accelerator-with-jetson-nano/163823/6">Coral USB accelerator with Jetson Nano</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/tensorrt-inference-running/161551/5">tensorRT inference Running</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/powering-xavier-nx-via-gpio-not-powering-on/186857">Powering Xavier NX via GPIO, not powering on</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/tensorflow-python-framework-errors-impl-resourceexhaustederror/155746/9">tensorflow.python.framework.errors_impl.ResourceExhaustedError</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/device-use-jetson-inference-demo-will-reboot/219487/5">Device use jetson-inference demo will reboot</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/microstutters-using-gstreamer-with-nvv4l2decoder-and-nvdrmsink/156133/7">Microstutters using gstreamer with nvv4l2decoder and nvdrmsink</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-reboots-soon-when-using-webcam-and-mtcnn-detect/172747/8">Jetson Reboots soon when using webcam and mtcnn.detect</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/jetson-nano-shutting-down-when-running-code-with-csi-camera/141682/2">Jetson nano shutting down when running code with csi camera</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/failed-to-allocate-required-memory-for-usb-cam-in-jetson-nano/304999/6">Failed to allocate required memory for USB cam in jetson nano</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/gpio-unstable-issues/124202/9">GPIO unstable Issues</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/power-bank-jetson-nano-problem/276186">Power bank Jetson Nano Problem</a>
+                    </div>
+                    <div>
+                      <a href="https://forums.developer.nvidia.com/t/maximum-and-typical-power-draw-of-jetson-nano/251606/3">Maximum and Typical Power Draw of Jetson Nano?</a>
+                    </div>
+                </div>
+
+            
+
+
+          </div>
+          <div id='post_2' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/benbojangles'><span itemprop="name">benbojangles</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/benbojangles'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-19T21:40:27Z' class='post-time'>
+                    March 19, 2019,  9:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-19T21:40:27Z'>
+              <span itemprop="position">2</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Can the Jetson Nano be powered by USB-C?<br>
+I have a 45W USB-C power supply from an Acer Chromebook sitting around perhaps useful with the Jetson Nano?</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/2'>
+          </div>
+          <div id='post_3' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/dusty_nv'><span itemprop="name">dusty_nv</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/dusty_nv'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-20T17:01:25Z' class='post-time'>
+                    March 20, 2019,  5:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-20T17:01:25Z'>
+              <span itemprop="position">3</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <aside class="quote no-group">
+<blockquote>
+<p>Can the Jetson Nano be powered by USB-C?<br>
+I have a 45W USB-C power supply from an Acer Chromebook sitting around perhaps useful with the Jetson Nano?</p>
+</blockquote>
+</aside>
+<p>Hi benbojangles, the Jetson Nano Developer Kit does not include a USB-C port, it can be powered either via the Micro-USB port or the DC barrel jack.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/3'>
+          </div>
+          <div id='post_4' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/benbojangles'><span itemprop="name">benbojangles</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/benbojangles'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-20T19:11:12Z' class='post-time'>
+                    March 20, 2019,  7:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-20T19:11:12Z'>
+              <span itemprop="position">4</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Thanks Nvidia :)</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/4'>
+          </div>
+          <div id='post_5' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/byen00'><span itemprop="name">byen00</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/byen00'>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://global.discourse-cdn.com/nvidia/original/3X/c/8/c8d0f363bc4b25e62789886f56af7c9c68ac3854.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-24T21:24:19Z' class='post-time'>
+                    March 24, 2019,  9:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-24T21:24:19Z'>
+              <span itemprop="position">5</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Sony PSP (original one) came with a 120v power adapter – 5V 2.0A rated.  I have one, &amp; am doing some trials – using the barrel power connector.  I have to cut off the old connector (smaller diameter than the Jetson Nano uses), splice a new one (which fits)</p>
+<p>^^^ They’re only $4.99 (free shipping) off Ebay.  A supplier has thousands available.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.ebay.com/itm/AC-Adapter-Home-Wall-Power-Supply-Charger-Plug-for-Sony-PSP-1000-2000-3000-A-C/132906459991?hash=item1ef1d7a357:g:croAAOSw6DNcgYYw">
+  <header class="source">
+
+      <a href="https://www.ebay.com/itm/AC-Adapter-Home-Wall-Power-Supply-Charger-Plug-for-Sony-PSP-1000-2000-3000-A-C/132906459991?hash=item1ef1d7a357:g:croAAOSw6DNcgYYw" target="_blank" rel="noopener nofollow ugc">eBay</a>
+  </header>
+
+  <article class="onebox-body">
+    <img class="thumbnail" src="https://global.discourse-cdn.com/nvidia/original/3X/c/8/c8d0f363bc4b25e62789886f56af7c9c68ac3854.jpeg" width="400" height="400">
+
+<h3><a href="https://www.ebay.com/itm/AC-Adapter-Home-Wall-Power-Supply-Charger-Plug-for-Sony-PSP-1000-2000-3000-A-C/132906459991?hash=item1ef1d7a357:g:croAAOSw6DNcgYYw" target="_blank" rel="noopener nofollow ugc">AC Adapter Home Wall Power Supply Charger Plug for Sony PSP 1000 2000 3000 A/C...</a></h3>
+
+  <p>Find many great new &amp; used options and get the best deals for AC Adapter Home Wall Power Supply Charger Plug for Sony PSP 1000 2000 3000 A/C at the best online prices at eBay! Free shipping for many products!</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>If it works, then it’s a tremendous boon. I read the above text by OP, he is saying 4.0A might be preferred for strenuous use. I have some surplus power-supplies lying around, so I think I’m covered</p>
+<p>I guess Ebay is a source of 5v 4A power supplies, along with that female barrel connector</p>
+<p><a href="https://www.ebay.com/itm/5V-AC-4000mA-4A-Power-Supply-AC-Adapter-Charger-5-5mm-x-2-5mm-4A/370941760364?hash=item565dda136c:g:mEwAAOSwZcZZrQXt" class="onebox" target="_blank" rel="noopener nofollow ugc">https://www.ebay.com/itm/5V-AC-4000mA-4A-Power-Supply-AC-Adapter-Charger-5-5mm-x-2-5mm-4A/370941760364?hash=item565dda136c:g:mEwAAOSwZcZZrQXt</a></p>
+<p>$9.89 w/free shipping</p>
+<p>I currently am using a 5V 1.5A “wall wart” power adapter from a cellphone. I’m actually posting from the Jetson Nano using this…!</p>
+<p>Just got back from 2019 Nvidia GTC, where I got one for $99. THey sold out the 1st day (Tuesday), ordered 1500 for the next day</p>
+<p>Here’s my video-blog, with 2 episodes so far (more will be uploaded):</p>
+<p><a href="http://2019gtc.blogspot.com" class="onebox" target="_blank" rel="noopener nofollow ugc">http://2019gtc.blogspot.com</a></p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/5'>
+          </div>
+          <div id='post_6' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/pimpim'><span itemprop="name">pimpim</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/pimpim'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-25T14:55:41Z' class='post-time'>
+                    March 25, 2019,  2:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-25T14:55:41Z'>
+              <span itemprop="position">6</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>What are fitting power options for use on a drone? These usually come with higher voltage power options.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/6'>
+          </div>
+          <div id='post_7' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/dusty_nv'><span itemprop="name">dusty_nv</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/dusty_nv'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-25T17:00:19Z' class='post-time'>
+                    March 25, 2019,  5:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-25T17:00:19Z'>
+              <span itemprop="position">7</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <aside class="quote no-group">
+<blockquote>
+<p>What are fitting power options for use on a drone? These usually come with higher voltage power options.</p>
+</blockquote>
+</aside>
+<p>The stock Jetson Nano Developer Kit carrier board accepts 5V DC input, so you would need to use a step-down converter or voltage regulator if you are using higher-voltage power (which if powering directly from a battery pack like a LiPO, should be using a regulator used for the electronics).  In addition to the DC barrel jack and Micro-USB port, you can also power the devkit from 5V input pins available on the 40-pin header if that is more convenient.</p>
+<p>If you want an integrated solution for higher-voltage power sources, <a target="_blank" href="https://auvidea.eu/download/datasheet/JN30.pdf" rel="noopener">Auvidea’s JN30</a> carrier board for Nano supports 12-48V DC input.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/7'>
+          </div>
+          <div id='post_8' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/dbhatt0277'><span itemprop="name">dbhatt0277</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/dbhatt0277'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-25T18:25:43Z' class='post-time'>
+                    March 25, 2019,  6:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-25T18:25:43Z'>
+              <span itemprop="position">8</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>I’m using a 5V 2A USB charging supply, when I plug in only a mouse it boots fine.  After powering down and plugging in apple USB keyboard I see the LED on nano board on and initial boot up occurs and then LED turn off and screen goes blank. Is there a compatibility issue with Apple keyboard?</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='1'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/8'>
+          </div>
+          <div id='post_9' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/dusty_nv'><span itemprop="name">dusty_nv</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/dusty_nv'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-25T18:40:33Z' class='post-time'>
+                    March 25, 2019,  6:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-25T18:40:33Z'>
+              <span itemprop="position">9</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <aside class="quote no-group">
+<blockquote>
+<p>I’m using a 5V 2A USB charging supply, when I plug in only a mouse it boots fine.  After powering down and plugging in apple USB keyboard I see the LED on nano board on and initial boot up occurs and then LED turn off and screen goes blank. Is there a compatibility issue with Apple keyboard?</p>
+</blockquote>
+</aside>
+<p>Hmm I have not heard of issues with that before, but am not sure if that particular device has been verified previously.</p>
+<p>Are you able to try a different USB keyboard to see if the behavior is related to the Apple keyboard?</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/9'>
+          </div>
+          <div id='post_10' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/digitaldave'><span itemprop="name">digitaldave</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/digitaldave'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-25T21:48:34Z' class='post-time'>
+                    March 25, 2019,  9:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-25T21:48:34Z'>
+              <span itemprop="position">10</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>When running (for example) DetectNet with passive cooling, the Nano does indeed get quite hot. I bought the 10mm (thick, 40mm wide) version of the recommended Noctua fan, but am curious if there is any “right” way to mount it. The provided case screws are too large for the holes in the Nano’s heatsink, as are the rubber vibration-damping screws.</p>
+<p>I can certainly try to figure something out, but if there is a known-and-preferred solution, I’d rather start with that. Thanks! – David</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/10'>
+          </div>
+          <div id='post_11' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/dusty_nv'><span itemprop="name">dusty_nv</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/dusty_nv'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-26T17:57:25Z' class='post-time'>
+                    March 26, 2019,  5:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-26T17:57:25Z'>
+              <span itemprop="position">11</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <aside class="quote no-group">
+<blockquote>
+<p>I bought the 10mm (thick, 40mm wide) version of the recommended Noctua fan, but am curious if there is any “right” way to mount it. The provided case screws are too large for the holes in the Nano’s heatsink, as are the rubber vibration-damping screws.</p>
+</blockquote>
+</aside>
+<p>Hi David, use M3 self-tapping screws, which should be at least 12.5mm or ½” long.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/11'>
+          </div>
+          <div id='post_12' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/digitaldave'><span itemprop="name">digitaldave</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/digitaldave'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-26T18:08:48Z' class='post-time'>
+                    March 26, 2019,  6:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-26T18:08:48Z'>
+              <span itemprop="position">12</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Perfect. Thanks!</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/12'>
+          </div>
+          <div id='post_13' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/bshay'><span itemprop="name">bshay</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/bshay'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-27T19:11:32Z' class='post-time'>
+                    March 27, 2019,  7:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-27T19:11:32Z'>
+              <span itemprop="position">13</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>We have tested the following 5V⎓3A DC barrel jack power supply, CUI’s <a href="https://www.arrow.com/en/products/smi18-5-v-p5/cui-inc" data-bbcode="true" rel="noopener nofollow ugc">SMI18-5-V-P5</a>. It seems to work just fine with the Jetson Nano Developer Kit powering a USB camera, mouse, and keyboard.</p>
+<p>This supply has the proper 5.5mm OD / 2.1mm ID / 9.5mm length center pin positive plug. The dc output cable is a sturdy 16 AWG with a generous 1,500 mm length cable. Perhaps the most useful feature is that this CUI power supply ships with 5 international AC plug adapters: North America, Europe, UK, Australia, and China(signified by the “V” in the part number.)</p>
+<p>Also available from CUI are a 5V⎓4A, <a href="https://www.arrow.com/en/products/smi24-5-v-p5/cui-inc" data-bbcode="true" rel="noopener nofollow ugc">SMI24-5-V-P5</a>, and a 5V⎓5A, <a href="https://www.arrow.com/en/products/smi36-5-v-p5/cui-inc" data-bbcode="true" rel="noopener nofollow ugc">SMI36-5-V-P5</a>. We have not tested these, but I have no reason to believe they will not work. These options also include a full set of AC plug adapters.</p>
+<p>As Dusty mentioned you will need to fit a jumper to J48 to power the Jetson Nano Developer Kit from the DC barrel jack(J25) instead of the micro-USB connector. J48 has standard 2.54mm jumper pins. These shunts from TE Connectivity, <a href="https://www.arrow.com/en/products/390088-1/te-connectivity" data-bbcode="true" rel="noopener nofollow ugc">390088-1</a>, should work and they are readily available from many sources.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/13'>
+          </div>
+          <div id='post_14' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/kosmon'><span itemprop="name">kosmon</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/kosmon'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-30T21:15:23Z' class='post-time'>
+                    March 30, 2019,  9:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-30T21:15:23Z'>
+              <span itemprop="position">14</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>I have a really hard time finding a proper power supply in Sweden. Any ideas?</p>
+<p>Also, does it matter if I power it from USB vs barrel jack in terms of performance?</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/14'>
+          </div>
+          <div id='post_15' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/linuxdev'><span itemprop="name">linuxdev</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/linuxdev'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-03-31T19:55:14Z' class='post-time'>
+                    March 31, 2019,  7:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-31T19:55:14Z'>
+              <span itemprop="position">15</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Both would work, but don’t forget the jumper you need for the barrel jack to be used. My own personal preference is barrel jack since there are certain overcurrent fuses in USB which can be avoided (those fuses typically reset after cooling down, but completely avoiding those implies to me a greater reliability).</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/15'>
+          </div>
+          <div id='post_16' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/kai-oezer'><span itemprop="name">kai-oezer</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/kai-oezer'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-04-01T20:30:38Z' class='post-time'>
+                    April 1, 2019,  8:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-01T20:30:38Z'>
+              <span itemprop="position">16</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <aside class="quote no-group">
+<blockquote>
+<p>I’m using a 5V 2A USB charging supply, when I plug in only a mouse it boots fine.  After powering down and plugging in apple USB keyboard I see the LED on nano board on and initial boot up occurs and then LED turn off and screen goes blank. Is there a compatibility issue with Apple keyboard?</p>
+</blockquote>
+</aside>
+<p>I have experienced the same issue. My Apple USB keyboard caused the system to crash during initial bootup; the display went blank and the green LED turned off. The system also crashed when I connected the keyboard after booting was complete but before running the system setup. The solution was to only connect a USB mouse, click your way through the system setup (where you select the keyboard layout) until you need to actually use the keyboard to enter the user name. At that point I connected the Apple USB keyboard and it worked.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/16'>
+          </div>
+          <div id='post_17' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/nicolay'><span itemprop="name">nicolay</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/nicolay'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-04-02T07:01:17Z' class='post-time'>
+                    April 2, 2019,  7:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-02T07:01:17Z'>
+              <span itemprop="position">17</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p><span class="bbcode-s">I can power the board with micorusb, but it doesn’t want to power on with 5V jack connected. I’m using 2.6A adapter, which is working well with other dev boards. The same issue even with bench power supply (set to limit of 5V/4A) - to signs of life, despite multimeter showing 5V on board’s pins.</span><br>
+Should’ve read more carefully about jumper. Spoiled by simplicity of powering other boards.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/17'>
+          </div>
+          <div id='post_18' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/dusty_nv'><span itemprop="name">dusty_nv</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/dusty_nv'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-04-02T13:53:15Z' class='post-time'>
+                    April 2, 2019,  1:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-02T13:53:15Z'>
+              <span itemprop="position">18</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <aside class="quote no-group">
+<blockquote>
+<aside class="quote no-group">
+<blockquote>
+<p>I’m using a 5V 2A USB charging supply, when I plug in only a mouse it boots fine.  After powering down and plugging in apple USB keyboard I see the LED on nano board on and initial boot up occurs and then LED turn off and screen goes blank. Is there a compatibility issue with Apple keyboard?</p>
+</blockquote>
+</aside>
+<p>I have experienced the same issue. My Apple USB keyboard caused the system to crash during initial bootup; the display went blank and the green LED turned off. The system also crashed when I connected the keyboard after booting was complete but before running the system setup. The solution was to only connect a USB mouse, click your way through the system setup (where you select the keyboard layout) until you need to actually use the keyboard to enter the user name. At that point I connected the Apple USB keyboard and it worked.</p>
+</blockquote>
+</aside>
+<p>FYI, after testing this device internally, it was determined that it is pulling more power than a 2.1A power supply will deliver.</p>
+<p>Instead please use a 5V⎓4A power supply or connect the peripheral to a powered USB hub.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/18'>
+          </div>
+          <div id='post_19' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/kai-oezer'><span itemprop="name">kai-oezer</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/kai-oezer'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-04-02T13:58:45Z' class='post-time'>
+                    April 2, 2019,  1:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-02T13:58:45Z'>
+              <span itemprop="position">19</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <aside class="quote group-Employee" data-username="dusty_nv">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://sea2.discourse-cdn.com/nvidia/user_avatar/forums.developer.nvidia.com/dusty_nv/48/14043_2.png" class="avatar"> dusty_nv:</div>
+<blockquote>
+<p>FYI, after testing this device internally, it was determined that it is pulling more power than a 2.1A power supply will deliver.</p>
+<p>Instead please use a 5V⎓4A power supply or connect the peripheral to a powered USB hub.</p>
+</blockquote>
+</aside>
+<p>Thank you for investigating the issue.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/19'>
+          </div>
+          <div id='post_20' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/krishean'><span itemprop="name">krishean</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/krishean'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2019-04-02T22:47:48Z' class='post-time'>
+                    April 2, 2019, 10:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-02T22:47:48Z'>
+              <span itemprop="position">20</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>The Noctua fan that is linked in the original post requires 12V operating voltage, does header J15 supply 12V, or should the 5V variant (nf-a4x20-5v-pwm) of the fan be used instead? At a glance the user guide does not seem to specify the voltage of the fan header.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/power-supply-considerations-for-jetson-nano-developer-kit/71637/20'>
+          </div>
+
+        </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/power-supply-considerations-for-jetson-nano-developer-kit/71637?page=2">next page →</a></b></span>
+      </div>
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-73942">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-barrel-jack-power-not-working/73942' class='title raw-link raw-topic-link'>Jetson Nano Barrel Jack power not working</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>47</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>18157</span>
+            </td>
+            <td>
+              August 27, 2020
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-72717">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-not-booting/72717' class='title raw-link raw-topic-link'>jetson nano not booting</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>144</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>62888</span>
+            </td>
+            <td>
+              January 23, 2021
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-175832">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-intermittent-barrel-jack-power-problems/175832' class='title raw-link raw-topic-link'>Jetson intermittent barrel jack power problems</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/power/44' class='discourse-tag'>power</a>
+                      ,&nbsp;
+                      <a href='https://forums.developer.nvidia.com/tag/nano2gb/196' class='discourse-tag'>nano2gb</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>3</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>1275</span>
+            </td>
+            <td>
+              April 21, 2021
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-163698">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-2gb-not-boot-when-power-supply-on-gpio/163698' class='title raw-link raw-topic-link'>Jetson nano 2gb not boot when power supply on GPIO</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/gpio/34' class='discourse-tag'>gpio</a>
+                      ,&nbsp;
+                      <a href='https://forums.developer.nvidia.com/tag/nano2gb/196' class='discourse-tag'>nano2gb</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>5</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>1112</span>
+            </td>
+            <td>
+              December 31, 2020
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-78163">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/what-5v-regulator-is-able-to-power-the-nano/78163' class='title raw-link raw-topic-link'>What 5v regulator is able to power the nano ?</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>10</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>2453</span>
+            </td>
+            <td>
+              July 19, 2019
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-74150">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='6'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-not-turning-on/74150' class='title raw-link raw-topic-link'>Jetson Nano not Turning On</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/boot/24' class='discourse-tag'>boot</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>29</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>17160</span>
+            </td>
+            <td>
+              February 25, 2021
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-78934">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='7'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-spontaneous-power-off-zero-sized-image-capture-and-connection-failure-issues/78934' class='title raw-link raw-topic-link'>Jetson Nano spontaneous power off, zero sized image capture and connection failure issues</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>21</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>3847</span>
+            </td>
+            <td>
+              October 3, 2019
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-72779">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='8'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-shows-nvidia-logo-2-times-for-few-seconds-and-then-shuts-down-display/72779' class='title raw-link raw-topic-link'>Jetson nano shows nvidia logo 2 times for few seconds and then shuts down display</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>28</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>6077</span>
+            </td>
+            <td>
+              July 11, 2019
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-72910">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='9'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/boot-only-shows-splash-screen-then-powers-off/72910' class='title raw-link raw-topic-link'>Boot only shows splash screen, then powers off.</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>5</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>3279</span>
+            </td>
+            <td>
+              May 7, 2019
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-295757">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='10'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-dev-kit-usb-fail/295757' class='title raw-link raw-topic-link'>Jetson Nano Dev Kit USB Fail</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/usb/40' class='discourse-tag'>usb</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>7</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>1199</span>
+            </td>
+            <td>
+              June 13, 2024
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://www.nvidia.com/en-us/about-nvidia/legal-info/' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://www.nvidia.com/en-us/about-nvidia/privacy-policy/' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <script defer="" src="https://sea2.discourse-cdn.com/nvidia/theme-javascripts/c53a23b609ec9c4bc8655115ee4823889165e754.js?__ws=forums.developer.nvidia.com" data-theme-id="13" nonce="66wejjbyFLJVEG5fBDCqxWSRJ"></script>
+
+<footer>
+  <div class="footer-links">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="padding-md-footer">
+              <div class="logo-footer"></div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 padding-section-footer"></div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-boilerplate">
+    <div class="container">
+      <div class="boilerplate">
+        <div class="col-xs-12 col-sm-12 col-lg-9 padding-sm-bottom">
+          Copyright ©
+          <span class="footer-copyright-year">2026</span>
+          NVIDIA Corporation
+          <ul class="legal_links">
+            <li class="first leaf">
+              <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" title="">Privacy Policy</a>
+            </li>
+            <li class="leaf">
+              <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" title="">Your Privacy Choices</a>
+            </li>
+            <li class="leaf">
+              <a href="https://developer.nvidia.com/legal/terms" title="">Terms of Use</a>
+            </li>
+            <li class="leaf">
+              <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" title="">Accessibility</a>
+            </li>
+            <li class="leaf">
+              <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" title="">Corporate Policies</a>
+            </li>
+            <li class="last leaf">
+              <a href="https://developer.nvidia.com/contact" title="">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+  
+</html>

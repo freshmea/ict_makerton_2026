@@ -1,0 +1,93 @@
+{
+  "repository": "https://github.com/Road-Balance/SpotMicroJetson",
+  "commit": "2235c77a93e86d04dec2e03c6306ba2c06d454ce",
+  "archive": "doc\\BOM\\SpotMicroJetson\\Road-Balance_SpotMicroJetson_2235c77_reference.zip",
+  "archive_sha256": "d9a41503ca176c84aa9b282028af37897cb0416d3146ad813a76b9c3162af69c",
+  "extracted_at": "2026-10-23",
+  "files": [
+    {
+      "original_path": "STL/files/L_arm.stl",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\files\\L_arm.stl",
+      "size": 328484,
+      "sha256": "fce78eeb587ac39870c22abee57cbc03f27a4fde56d94b6b69ec0e0cc92e9e85",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/files/L_arm.stl"
+    },
+    {
+      "original_path": "STL/files/L_arm_cover.stl",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\files\\L_arm_cover.stl",
+      "size": 356484,
+      "sha256": "2dc028844b274c186f5b179d413f29bacc387ea43023b0b6f432d47088405c05",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/files/L_arm_cover.stl"
+    },
+    {
+      "original_path": "STL/files/L_arm_joint.stl",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\files\\L_arm_joint.stl",
+      "size": 489284,
+      "sha256": "e77c804a0f553a36a3df8c15326bf05c366815cdfe0624a26eeeefbf3ebb31df",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/files/L_arm_joint.stl"
+    },
+    {
+      "original_path": "STL/files/L_wrist.stl",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\files\\L_wrist.stl",
+      "size": 179784,
+      "sha256": "69b43e41f8b00aff7d7d382fdff2609b88801403bdb97b8056f6d02178a4efbd",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/files/L_wrist.stl"
+    },
+    {
+      "original_path": "STL/files/R_arm.stl",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\files\\R_arm.stl",
+      "size": 328484,
+      "sha256": "e379ca8da9be6752fe112e42fdca452ae81fd395e1c18e6f31d5cb57cf0dab42",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/files/R_arm.stl"
+    },
+    {
+      "original_path": "STL/files/R_arm_cover.stl",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\files\\R_arm_cover.stl",
+      "size": 356484,
+      "sha256": "718ae235bed37f38b741ef542098bf6d3c34fd98e902ee99d9a7969a9582891a",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/files/R_arm_cover.stl"
+    },
+    {
+      "original_path": "STL/files/R_arm_joint.stl",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\files\\R_arm_joint.stl",
+      "size": 489284,
+      "sha256": "02b3e82277faee0240addd2ef2eac4f89c108f82346216db2ce4e4dcfbe14d90",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/files/R_arm_joint.stl"
+    },
+    {
+      "original_path": "STL/files/R_wrist.stl",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\files\\R_wrist.stl",
+      "size": 179784,
+      "sha256": "8e10bb539a56fdd99cc7688dab3eac33e5b37655b4f396c71a1cf8824b2f631f",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/files/R_wrist.stl"
+    },
+    {
+      "original_path": "STEP_Files/I_shoulder_cls_modi.stp",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STEP_Files\\I_shoulder_cls_modi.stp",
+      "size": 5097753,
+      "sha256": "a51fb3eab8c6fa26f080d4515243b4c524d0fd154eb825dce6fe3fdd6eacfea5",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STEP_Files/I_shoulder_cls_modi.stp"
+    },
+    {
+      "original_path": "STEP_Files/O_shoulder_cls_grooved_modi.stp",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STEP_Files\\O_shoulder_cls_grooved_modi.stp",
+      "size": 3797100,
+      "sha256": "84e88b3d4ca153883b89daa2bbd3986fab4699031ae9e69c0a112e956412ecb0",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STEP_Files/O_shoulder_cls_grooved_modi.stp"
+    },
+    {
+      "original_path": "LICENSE",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\LICENSE",
+      "size": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/LICENSE"
+    },
+    {
+      "original_path": "STL/LICENSE.txt",
+      "local_path": "doc\\BOM\\mechanical_v6\\reference\\SpotMicro_parts\\STL\\LICENSE.txt",
+      "size": 183,
+      "sha256": "2a6c54c2ee67193ff9d766e44299b7f9d47ef460aa3709360a6e136818cba75e",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/STL/LICENSE.txt"
+    }
+  ]
+}

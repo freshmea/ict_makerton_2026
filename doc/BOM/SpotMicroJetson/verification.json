@@ -1,0 +1,457 @@
+{
+  "date_kst": "2026-10-22",
+  "commit": "2235c77a93e86d04dec2e03c6306ba2c06d454ce",
+  "archive_crc_ok": true,
+  "archive_git_blob_matches": 178,
+  "xlsx_crc_ok": true,
+  "xlsx_sheets": [
+    "Data"
+  ],
+  "playlist_videos": 25,
+  "auto_transcripts": 4,
+  "local_markdown_links_ok": 62,
+  "hardware_tested": false,
+  "software_executed": false,
+  "files": [
+    {
+      "file": "collect_project.py",
+      "bytes": 4105,
+      "sha256": "217b561b5cc3cb1206ef0bf8d7dc89dcebd5d992f40f156d4735f488e1ce8a27"
+    },
+    {
+      "file": "github_tree.json",
+      "bytes": 55948,
+      "sha256": "e90c34225014f8d02ca0b6df49ddd905906c16e648e59e6485c1b9a56b628381"
+    },
+    {
+      "file": "prepare_archive.py",
+      "bytes": 4232,
+      "sha256": "8310092d1415f67f5033e3d4f864064c531be7e32dcb22af1a2bc1adf00f1ca7"
+    },
+    {
+      "file": "README.md",
+      "bytes": 6678,
+      "sha256": "12210d4ad0638956a13366fabd71502fb8a9d26ee31e7f3ef7b1122f73a29860"
+    },
+    {
+      "file": "repo/CMakeLists.txt",
+      "bytes": 6797,
+      "sha256": "cf7ae2d185ac8169ad3bcd61322613bcb1863e4452132476838fd0ab0c25396e"
+    },
+    {
+      "file": "repo/Common/multiprocess_kb.py",
+      "bytes": 3999,
+      "sha256": "aabe0043bd734c45b6776682e6ad6531af970af8a45f19b6ab25543a2c668928"
+    },
+    {
+      "file": "repo/CUSTOM_README.md",
+      "bytes": 64,
+      "sha256": "d4d4800f2a74f61bebe2ae2d0e9526c5cd28ee450610b1f98033ffe5390780cb"
+    },
+    {
+      "file": "repo/gen_urdf.sh",
+      "bytes": 160,
+      "sha256": "cb40f996e5fddf1da7996909607da4f004cce326254b5d1c6c4d6fd33d19b642"
+    },
+    {
+      "file": "repo/Images/jetsonNano_connected_1.jpg",
+      "bytes": 119104,
+      "sha256": "1af10bc283a80e07c7ea3ea7bf701180ba8d5525f036d17fe5258b65f733d1f3"
+    },
+    {
+      "file": "repo/Images/Readme_assemble.jpg",
+      "bytes": 87700,
+      "sha256": "2db992faa1a7066bddf62da77ea395588995173357f0f134dd3e3e330444c319"
+    },
+    {
+      "file": "repo/Images/Readme_Parts2.jpg",
+      "bytes": 110071,
+      "sha256": "688dfa46cafda1abc593636d87ccbb405d17f296aadc4061cd919428ad089699"
+    },
+    {
+      "file": "repo/Images/SpotMicroAI_electronics.png",
+      "bytes": 918276,
+      "sha256": "b9139b923fb42dbf34c016ff9416a373279a029f495a7fedbedf53d553cfcef6"
+    },
+    {
+      "file": "repo/Images/SpotMicroAI_jetson.jpg",
+      "bytes": 136003,
+      "sha256": "a1c04e354be908be274a436e21714a561d7e12d9c854fdfdad341d9350bfeca7"
+    },
+    {
+      "file": "repo/JetsonNano/examples/test_mpu6050.py",
+      "bytes": 8813,
+      "sha256": "1a9d01cce0262a1ba0415754f32a05b0ee3b3c0fc28e963b1a3eb7e98de946e1"
+    },
+    {
+      "file": "repo/JetsonNano/examples/test_PCA9685.py",
+      "bytes": 1141,
+      "sha256": "5e28a93aef330a2b6e149f00832f50150758591c309949a683c0fd3e52486d4e"
+    },
+    {
+      "file": "repo/JetsonNano/examples/test_servos.py",
+      "bytes": 2519,
+      "sha256": "bd5ef8caf173f48991468ae1c1b36c1fc68bb2ded6b64a056d918f167d685cde"
+    },
+    {
+      "file": "repo/JetsonNano/examples/test_servos_cali.py",
+      "bytes": 1790,
+      "sha256": "d8be76d8ef5a01e22a7aa1f3a4ba70c1e1c8b6c3f83df7a51725bca441ccb48c"
+    },
+    {
+      "file": "repo/JetsonNano/examples/test_servos_offset.py",
+      "bytes": 1763,
+      "sha256": "a8a839c5d920b3381b5472682d4758fdfc853dc4d6f1d63c35043aebae2d1c6a"
+    },
+    {
+      "file": "repo/JetsonNano/fonts/README [INET].txt",
+      "bytes": 2847,
+      "sha256": "93b94b8bc9072b64702e087c701e88bffdeed54d3dce816848a5b7f2bb878a14"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/boot.py",
+      "bytes": 1350,
+      "sha256": "e688fb2b44ae7b8b2960c6b0ca8259e95a7bcf219f0be3579718b79b4e9fc329"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/demo_opts.py",
+      "bytes": 1749,
+      "sha256": "bbdda6142fb64fdb1378fdeb41ea1744c66ec53e44ca60a86d7eef7f7249cfa3"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/gyro.py",
+      "bytes": 2413,
+      "sha256": "5835807052007483a9ada30e9aa0376b5a821aa5a9c047a30260d3b30b86e749"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/mode_standby.py",
+      "bytes": 476,
+      "sha256": "1d439e32475fa3b5392e9c69d713291f423951b77bbd0f69d69e9f15980411b3"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/modes.py",
+      "bytes": 177,
+      "sha256": "dbe7bb71b7edb7e2cc12581b1dd7f7ff79714529e03be3b71b4b4852e8515c13"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/network.py",
+      "bytes": 1043,
+      "sha256": "8f5d1189665d7a0179865ed4951563ce7093c2d39338e53ee3069adbee4462f4"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/servos.py",
+      "bytes": 1096,
+      "sha256": "bcb01722d1fb2509924b255b266ebb73a4ced14bed8e0aef556cfdef8984dd43"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/setup.py",
+      "bytes": 2413,
+      "sha256": "db36d4c4f2a05371423580234b38b0363caa22f07eb1c5fcc2cbb75f0c969776"
+    },
+    {
+      "file": "repo/JetsonNano/legacy/start_robot.py",
+      "bytes": 584,
+      "sha256": "278710db5d7fc5389d31d995ec4582184fd4c4e011a5da2b2f340a0102f77799"
+    },
+    {
+      "file": "repo/JetsonNano/motor_test.py",
+      "bytes": 629,
+      "sha256": "9644a936473c6515c8cd647c17c0c35d404077a085bc84518886854be5464749"
+    },
+    {
+      "file": "repo/JetsonNano/multiprocess_kb.py",
+      "bytes": 3736,
+      "sha256": "2b78d5ba50e8c633a633ca3f18cb2826255f00473965089ee0abb88a5dfd0e01"
+    },
+    {
+      "file": "repo/JetsonNano/README.md",
+      "bytes": 684,
+      "sha256": "6a7c69fed24d34932277abca352b50de0950b406907d5e780e288324dbaa6779"
+    },
+    {
+      "file": "repo/JetsonNano/requirements.txt",
+      "bytes": 198,
+      "sha256": "dda16d3a2dba23cb06ed776ad918afcd29599c19881c48c51e3f45fe893659d1"
+    },
+    {
+      "file": "repo/JetsonNano/servo_controller.py",
+      "bytes": 3936,
+      "sha256": "5e51bfbac55baa80f05e578640323970da5bb40dff85c4ed140b7a91adea655a"
+    },
+    {
+      "file": "repo/JetsonNano/servo_controller_fix.py",
+      "bytes": 4219,
+      "sha256": "b16bed88daf9089ee9954d1c64b56a506d0d87eccbd9e1d48d5316bcdb8e725c"
+    },
+    {
+      "file": "repo/JetsonNano/spotmicroai.py",
+      "bytes": 4430,
+      "sha256": "54837cb9b409a0d481520b3e702d35c3b01816d4f694f6c9e136d38b6e176801"
+    },
+    {
+      "file": "repo/JetsonNano/start_automatic_gait.py",
+      "bytes": 3429,
+      "sha256": "3d2d290c962cdac27e619ff1cdab752568e6cdf4127a15e87a14ea02f4f2fea5"
+    },
+    {
+      "file": "repo/Kinematics/Kinematic.ipynb",
+      "bytes": 804993,
+      "sha256": "534a3443b0dcbee54d758086461c9d83432321187488dbb5c84c18abc9a7c95d"
+    },
+    {
+      "file": "repo/Kinematics/kinematicMotion.py",
+      "bytes": 4509,
+      "sha256": "fd9df27253ec17bfb8e3aa489637b0bce2dc29f5340a5cddcf2999ff22bd335b"
+    },
+    {
+      "file": "repo/Kinematics/KinematicMovements.ipynb",
+      "bytes": 8722,
+      "sha256": "07515f5c570f5b3b09d7425dfb24e0c44dfaafa09118b11212904d754636a79a"
+    },
+    {
+      "file": "repo/Kinematics/kinematics.py",
+      "bytes": 8011,
+      "sha256": "820e1d22116e7525283be77021ff09012b3f27a9b3d75ffb9c5a44649aeedef9"
+    },
+    {
+      "file": "repo/Kinematics/README.md",
+      "bytes": 5189,
+      "sha256": "a07fef5994eb945d789b1ed3f9e72e02bf18eb78291a946c98d22f1cb7c643a7"
+    },
+    {
+      "file": "repo/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "file": "repo/package.xml",
+      "bytes": 2430,
+      "sha256": "8bd80f4df0f5ce995162ec7f2386787e630188974b8717641ad3e132dcf0b599"
+    },
+    {
+      "file": "repo/README.md",
+      "bytes": 6153,
+      "sha256": "f40b9b47fd7eee28da3e42ee6d155e461fdd9be2f92fdfd3d72797bd5007723e"
+    },
+    {
+      "file": "repo/Simulation/__init__.py",
+      "bytes": 33,
+      "sha256": "31c8dc27817e6cbbe1f93674513dcfe1016805da16ad88f438544b62ba0f5820"
+    },
+    {
+      "file": "repo/Simulation/environment.py",
+      "bytes": 84,
+      "sha256": "fcd0b3c78e2ce089222f87fa07663a839253ad1d94d9fc653502a2977e8f2612"
+    },
+    {
+      "file": "repo/Simulation/gym_spotmicroai/__init__.py",
+      "bytes": 136,
+      "sha256": "e572f55ab2684aa6ac7aa16db06907d2e7b0191de3cacc3d60184938f32f2df9"
+    },
+    {
+      "file": "repo/Simulation/gym_spotmicroai/envs/__init__.py",
+      "bytes": 64,
+      "sha256": "3f18ee1108c9c10e9060bc764183bca25f54d55f8831b5c9a59cb5bb2390a1c7"
+    },
+    {
+      "file": "repo/Simulation/gym_spotmicroai/envs/spotmicroai_env.py",
+      "bytes": 653,
+      "sha256": "cee99cac5bd92011a82f2142a1a5eeeb406994820f2e53a2fed082683cc99e6a"
+    },
+    {
+      "file": "repo/Simulation/gym_spotmicroai.egg-info/dependency_links.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "repo/Simulation/gym_spotmicroai.egg-info/requires.txt",
+      "bytes": 19,
+      "sha256": "7c6dac356ce4667790afa39679ad193855428ac6403db6f33c4f91c2a509e3a1"
+    },
+    {
+      "file": "repo/Simulation/gym_spotmicroai.egg-info/SOURCES.txt",
+      "bytes": 212,
+      "sha256": "2021a94c5eb023eccebd604678376853e0cedd12eac3a737405e0797bc787df8"
+    },
+    {
+      "file": "repo/Simulation/gym_spotmicroai.egg-info/top_level.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "repo/Simulation/gym_test.py",
+      "bytes": 127,
+      "sha256": "572a8def0d8745cd383cb40267200e4cfba610ff7dae2890a54282ad0954f5f5"
+    },
+    {
+      "file": "repo/Simulation/kinematicMotion.py",
+      "bytes": 5829,
+      "sha256": "4f80091eb67d692357b6f23fcbc7bfe61ae713f9d7bf9c585b98d96064f884b9"
+    },
+    {
+      "file": "repo/Simulation/kinematics.py",
+      "bytes": 8000,
+      "sha256": "a2a6d341329161ba326f0b15b5395a16910a0fbda1df20b53ec1e4924ac90464"
+    },
+    {
+      "file": "repo/Simulation/pybullet_automatic_gait.py",
+      "bytes": 2927,
+      "sha256": "bbb9ca7cd22c7cbe2562858f004632f99068c2980d52cc68dbc94b6121f1d6f3"
+    },
+    {
+      "file": "repo/Simulation/pybullet_tutorial/medium.py",
+      "bytes": 575,
+      "sha256": "415027c7b61f1ba6972aa72ba037646f4661ef9c09d10523b1290231bc8a5532"
+    },
+    {
+      "file": "repo/Simulation/pybullet_tutorial/pybullet_basic.py",
+      "bytes": 1530,
+      "sha256": "743c36fca68bc20b0f96e3e6a09abd3b65992472bc9803f20643b31b024ebc7b"
+    },
+    {
+      "file": "repo/Simulation/pybullet_tutorial/pybullet_simplecar.py",
+      "bytes": 1839,
+      "sha256": "dfcb18956a36426ed6b3aa2aaff99d9e776c0ce76513d3892b6a59df042904a9"
+    },
+    {
+      "file": "repo/Simulation/README.md",
+      "bytes": 1108,
+      "sha256": "9c2065249a55bca79fab9257492a2416264865885d968f6ec92d4db59336f4ec"
+    },
+    {
+      "file": "repo/Simulation/requirements.txt",
+      "bytes": 76,
+      "sha256": "1b37889d74f8160cd51f41a60ea49182292d2861cd3d52c96a8c24318d622c47"
+    },
+    {
+      "file": "repo/Simulation/setup.py",
+      "bytes": 136,
+      "sha256": "39f385379faee02135fc883ee2f8391148b5f00032a5271c97ec83f741db192e"
+    },
+    {
+      "file": "repo/Simulation/spotmicroai.py",
+      "bytes": 14089,
+      "sha256": "d1be5db0096cbe01488f1d733acdf11ef7af25ef21b0b9fafe70ab5440e11072"
+    },
+    {
+      "file": "repo/STL/LICENSE.txt",
+      "bytes": 183,
+      "sha256": "2a6c54c2ee67193ff9d766e44299b7f9d47ef460aa3709360a6e136818cba75e"
+    },
+    {
+      "file": "repo/urdf/create_ros_urdf.sh",
+      "bytes": 363,
+      "sha256": "ba5e29cf38cdb2b00bafb572cffbed908b24cc827971b9864ac8ece7fbe24bb7"
+    },
+    {
+      "file": "repo/urdf/spotmicroai_gen.urdf.xml",
+      "bytes": 19531,
+      "sha256": "dbb9030ca7f393467443375edbaeab1f7820d542854624b2a475d278d77a6a19"
+    },
+    {
+      "file": "repo/urdf/stairs_gen.urdf.xml",
+      "bytes": 9771,
+      "sha256": "24f21dbc264d3a1b098a5fbb2e60d8aae18de88844dbbafa3c7fac2bc4dbd99f"
+    },
+    {
+      "file": "repository_snapshot.json",
+      "bytes": 30723,
+      "sha256": "b3eba49f188fcb257c884355863d6b2e34fc7d74fbec61437ef4e098956bfd1a"
+    },
+    {
+      "file": "Road-Balance_SpotMicroJetson_2235c77_reference.zip",
+      "bytes": 32827503,
+      "sha256": "d9a41503ca176c84aa9b282028af37897cb0416d3146ad813a76b9c3162af69c"
+    },
+    {
+      "file": "Spot_Micro_BOM.xlsx",
+      "bytes": 161929,
+      "sha256": "ef029d7b02b8f7045cde7d90e9187751c4b49c615e706c13bad7d318b645ff77"
+    },
+    {
+      "file": "Spot_Micro_BOM_Drive_readable.csv",
+      "bytes": 6617,
+      "sha256": "9e19ef5007de1cb78b22c440b82b463ff7fdc1af7d31bd4b73d084b05d4470cf"
+    },
+    {
+      "file": "transcripts/12_power.txt",
+      "bytes": 23059,
+      "sha256": "7a5c89a1fbf03a58ddeeea763dd579b6416e7cf31a076d983382c3f64266d482"
+    },
+    {
+      "file": "transcripts/15_servo_specs.txt",
+      "bytes": 20014,
+      "sha256": "9ae8a8bd70704579cd042f6ed8a2b6812e019434d474ddf45e071d52b617ef0a"
+    },
+    {
+      "file": "transcripts/16_servo_control.txt",
+      "bytes": 24197,
+      "sha256": "cc93e55b8c896635ca16fc2ff87c4d5e8e20d23df6364feae06bf57aef106adf"
+    },
+    {
+      "file": "transcripts/18_calibration.txt",
+      "bytes": 19877,
+      "sha256": "58685321a2a18c9d36b4e0e7a35a4071870f2529d18c5fa917aa5a2b3b528c8d"
+    },
+    {
+      "file": "transcripts/sources.json",
+      "bytes": 1217,
+      "sha256": "b0aa6307eab1580d55c4691c7fea7af3a14e81477e9493511613c23aa278d06d"
+    },
+    {
+      "file": "web/Ductility_20210112_build.html",
+      "bytes": 19041,
+      "sha256": "f116f344dbd791bf85842cc22a610150900277164e5685d1ed9a92bd2fb2a34c"
+    },
+    {
+      "file": "web/NVIDIA_meetup.html",
+      "bytes": 85099,
+      "sha256": "658c3f33bf10b0f4393b0400da594c789357fd898b00f38fde53ba41f03ed6ca"
+    },
+    {
+      "file": "web/RoadBalance_GitHub.html",
+      "bytes": 306044,
+      "sha256": "a3619e8c6f6891fd3d797671201fb1374fd45119500038a697c30da8364dbf93"
+    },
+    {
+      "file": "web/SpotMicroAI_assembly.html",
+      "bytes": 11818,
+      "sha256": "a7386e74d3369770b41aaacb90826766dce55bbc5ca699b4bde0100b17f2cb98"
+    },
+    {
+      "file": "web/SpotMicroAI_credits.html",
+      "bytes": 7656,
+      "sha256": "90068ca382e13edffb93a6acaad3827dfaf26b83970f44b06fecffd11b320b7f"
+    },
+    {
+      "file": "web/SpotMicroAI_home.html",
+      "bytes": 9823,
+      "sha256": "f7d9198e8b69a39f13ed001e3fe975ecaead779804f21ae1ff2198baf41b6a2f"
+    },
+    {
+      "file": "web/YouTube_playlist.html",
+      "bytes": 1243523,
+      "sha256": "8fa653344ba1067d021e262dbea9be622e31ad9abc04915f3470303e5e3b5fc9"
+    },
+    {
+      "file": "web_sources.json",
+      "bytes": 4521,
+      "sha256": "8de9761ad4136bca23a76e4ee4b58fa102a8cba99d1a54525fd8e0e97bd4521f"
+    },
+    {
+      "file": "youtube_videos.json",
+      "bytes": 7901,
+      "sha256": "4a1405c685699b11070356f477694bd3fd7e091ac36ca001bb1e5eba7d18d1b4"
+    },
+    {
+      "file": "YouTube_강의목록.md",
+      "bytes": 4788,
+      "sha256": "aef3f737d6d514a2f8dfecf7c85f7873aed4dab179e587ef32fcc1bf9da792c3"
+    },
+    {
+      "file": "세팅_확인.md",
+      "bytes": 6422,
+      "sha256": "8a321116f3ca8419f4c752bfcabfdb74bd87c0900e6a5b48042511eb9b0364b9"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "control_file_names": [
+    "45541.token"
+  ],
+  "connect_attempt": "CLI mcp --connect 127.0.0.1:45541: no SolidCraft app at address; connection timed out",
+  "app_processes": [
+    {
+      "Id": 30524,
+      "ProcessName": "SolidCraft-0.16.2-windows-x64",
+      "Path": "C:\\Users\\Administrator\\Downloads\\SolidCraft-0.16.2-windows-x64.exe"
+    }
+  ],
+  "actual_analysis_backend": "headless in-process SolidCraft MCP stdio session; original files read-only; running GUI was not changed",
+  "app_tcp_listeners": [],
+  "checked_date": "2026-10-23"
+}

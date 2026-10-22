@@ -1,0 +1,12 @@
+{
+  "id": 3,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"active_sketch\": null,\n  \"bodies\": [\n    {\n      \"area_mm2\": 23596.599252826534,\n      \"bbox\": {\n        \"max\": [\n          110.78327770633437,\n          52.5000000000003,\n          70.0\n        ],\n        \"min\": [\n          -0.5503546585152269,\n          -3.481547321973302e-12,\n          -1.785960268563258e-12\n        ]\n      },\n      \"center_of_mass\": [\n        55.000076352539715,\n        16.3821135890398,\n        27.493435993658125\n      ],\n      \"edges\": 3442,\n      \"face_types\": {\n        \"cylinder\": 16,\n        \"plane\": 1510\n      },\n      \"faces\": 1526,\n      \"kernel\": {\n        \"edges\": 7274,\n        \"faces\": 4700,\n        \"shells\": 1,\n        \"vertices\": 2542\n      },\n      \"name\": \"PartBody\",\n      \"vertices\": 2122,\n      \"visible\": true,\n      \"volume_mm3\": 55791.933875408715\n    }\n  ],\n  \"dirty\": true,\n  \"hidden_origin\": [],\n  \"marker\": 1,\n  \"metadata\": {},\n  \"name\": \"I_shoulder_cls_modi\",\n  \"params\": [],\n  \"path\": null,\n  \"redo\": 0,\n  \"revision\": 3,\n  \"selection\": [],\n  \"sketches\": [],\n  \"timeline\": [\n    {\n      \"boolean_diagnostics\": {\n        \"events\": [],\n        \"truncated\": false\n      },\n      \"error\": null,\n      \"id\": 3,\n      \"ms\": 8.676400000000001,\n      \"name\": \"Part1.3\",\n      \"rolled_back\": false,\n      \"suppressed\": false,\n      \"type\": \"BaseFeature\",\n      \"warning\": null\n    }\n  ],\n  \"undo\": 0,\n  \"units\": \"mm\"\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

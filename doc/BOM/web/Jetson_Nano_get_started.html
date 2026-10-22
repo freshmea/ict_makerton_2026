@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang='en' class='h-100'>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="KGzctT6UtpfcjZm8pMitGqYtexgPrvONb3455RGM81P9_UWx4QXQ3zwatdMKAnxvALs5PLDvro6gL3sHFjRVgQ" />
+  <meta name="csp-nonce" />
+  <title>Get Started With Jetson Nano Developer Kit | NVIDIA Developer</title>
+<meta name="description" content="A small AI computer for makers, learners, and developers to build practical AI applications, AI robots, and more.">
+<link rel="canonical" href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit">
+<link rel="alternate" href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit" hreflang="x-default">
+<link rel="alternate" href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit" hreflang="en-us">
+<link rel="alternate" href="https://developer.nvidia.cn/embedded/learn/get-started-jetson-nano-devkit" hreflang="zh-cn">
+<meta property="og:site_name" content="NVIDIA Developer">
+<meta property="og:title" content="Get Started With Jetson Nano Developer Kit">
+<meta property="og:description" content="Build practical AI applications, AI robots, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetson-developer-kit-850x480.jpg">
+<meta property="og:url" content="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit">
+<meta name="twitter:title" content="Get Started With Jetson Nano Developer Kit">
+<meta name="twitter:description" content="A small AI computer for makers, learners, and developers to build practical AI applications, cool AI robots, and more.">
+<meta name="twitter:image" content="https://developer.download.nvidia.com/images/og-default.jpg">
+<meta name="twitter:site" content="@NVIDIA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@NVIDIAEmbedded">
+<meta name="nv-cre-date" content="2023-09-18T17:02:42.118Z">
+<meta name="nv-pub-date" content="2024-02-14T18:05:19.712Z">
+<meta property="interest" content="Robotics">
+
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/application-b1311f8e3775d0111068ffb570bc2dbc9f97b4e9b142bf9583af462cd93ca62f.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/shared/modal-b27162ea9a12461a0b0076440408cdd94ddf4273a6a89539e4b81f4641416436.css" media="all" />
+  
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/one-trust-bea625cf16a072ce5fdb0707a19f2645daf63c05eb1a016db72773eba008fc07.css" />
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="3e2b62ff-7ae7-4ac5-87c8-d5949ecafff5"></script>
+
+<script src="https://images.nvidia.com/aem-dam/Solutions/ot-js/ot-custom.js"></script>
+
+<script>
+  function OptanonWrapper() {
+    let event = new Event('bannerLoaded');
+    window.dispatchEvent(event);
+
+      if (window.OnetrustActiveGroups && window.OnetrustActiveGroups.includes("C0002")) {
+        window.DD_RUM && window.DD_RUM.init({
+          clientToken: 'pub0430c74fae5d2b467bcb8d48b13e5b32',
+          applicationId: '9fc963c7-14e6-403d-bdec-ee671550bb7f',
+          site: 'datadoghq.com',
+          service: 'devzone',
+          env: 'prod',
+          version: 'v2.60.0',
+          sessionSampleRate: 10,
+          sessionReplaySampleRate: 5,
+          trackUserInteractions: true,
+          trackResources: true,
+          trackLongTasks: true,
+          defaultPrivacyLevel: 'mask-user-input',
+        });
+      }
+  }
+</script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NVIDIA Developer",
+    "url": "https://developer.nvidia.com",
+    "logo": "https://www.nvidia.com/en-us/about-nvidia/legal-info/logo-brand-usage/_jcr_content/root/responsivegrid/nv_container_392921705/nv_container_412055486/nv_image.coreimg.100.630.png/1703060329095/nvidia-logo-horz.png",
+    "sameAs": [
+      "https://github.com/nvidia",
+      "https://www.linkedin.com/company/nvidia/",
+      "https://x.com/nvidiadeveloper"
+    ]
+  }
+</script>
+
+  
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/vars-cd3a0769a3c2f2d9ea6b83ac53ce86bceef4c719e4dbd22ed41d48d01f200901.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/old/fonts-910bdb814ac830981904d69eea803431bc3a5b00aac30ffc85d12983c6511741.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/old/ballistiq-twitterfeed-61a757e5494e5598582c3610822f4cc0d00c0f1c3d70d478b0004dcebebf2368.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/old/application-a780279f5932e2d3fe01da14ba98d5c320956ec365747dfca2719798ce778ae6.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/old/embedded/embedded-bde5659f6ab1dd4f9edcf851e8c12fb3c44ed2de1542a3bd9131d207afdb0d7d.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/old/overrides-cbc02aeca05448d7c77b2b63dc1faa3f5e58c17afd5afe4a5122591949c5d734.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/old/new-styles-858f40f346fa03922adaed5fa12e81a783dff52699f02bed72f561c6642b1987.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/feed-aggregator/feed-aggregator-9ace7521871242143cb35fa86d5be702c4dacb409600041fa6a5b14fa2a71dde.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/devzone3/old/bootstrap-glyphicons-fe132ea5867b21620f37b392a53d872fb240e34ad8b477db370b6f867ccd102f.css" media="all" />
+
+  <script src="https://developer.nvidia.com/assets/horizontal-chart/d3.v4.min-41cfecdf7c41476e805de7afacf4aacdd1a4be6947fbecf95217e947ebc2faf5.js"></script>
+  <script src="https://developer.nvidia.com/assets/horizontal-chart/visualize-d-16cf14d4b63d6031e6c18983e91ac6d2b1b1f8140d15e351a9c847f8610b7e5b.js"></script>
+  <script src="https://developer.nvidia.com/assets/devzone3/old/js.cookie.min-bd09df6e81cb21935c4e92d9631a162285611f17c6eaee720cafcc6ddef3f7dc.js"></script>
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/sf-validation/sf-validation-805362e079494cd052f713be5f91a44eb602f545c342f794abbd4a8050c0acb3.css" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/tablefilter/tablefilter-ad35ad42b6d4f1068765cf691a0dcb4214ba7925ea4e28b9a1ce48a0ddb3d489.css" media="all" />
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/tablefilter/filtered-table-891467932064f1f3e379852c0697e014d6c0f99a6d423b4468e55ae59d159adf.css" media="all" />
+
+  <script src="https://assets.adobedtm.com/5d4962a43b79/c1061d2c5e7b/launch-191c2462b890.min.js" data-ot-ignore="true"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://api-prod.nvidia.com/search/nvidia-gallery-widget.js"></script>
+
+<script src="https://developer.nvidia.com/assets/devzone3/modules/nvidia_editor/nod_widgets-8c38a7d04ed3c3acd9117aa126bf76d7902d3c57c72b76dbf3c281c96ed09975.js"></script>
+
+
+  <link rel="icon" type="image/x-icon" href="https://developer.nvidia.com/assets/favicon-81bff16cada05fcff11e5711f7e6212bdc2e0a32ee57cd640a8cf66c87a6cbe6.ico" />
+</head>
+
+<body class='d-flex flex-column h-100' data-theme='devzone3_old'>
+
+<div id='header'></div>
+
+
+
+
+
+
+
+
+  
+
+<div id="wrapper" class="page-embedded-learn-get-started-jetson-nano-devkit" data-id="1272">
+  <div id="content-background" class="">
+    <div class="separator"></div>
+    <div id="content" class="container">
+      <div class="row">
+        <section class="dz3-main-section dz-old-theme node field-name-body">
+          <a id="main-content"></a>
+          <script type="text/javascript" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/content_scripts/stickybits.min.js.txt"></script>
+<style>.lesson-menu>li a,.panel-heading{font-weight:700}.panel-heading{text-transform:uppercase}.list-group-item{font-size:.9em}a.list-group-item-current{background:#80bd01!important;color:#fff!important;font-weight:700}.list-group-item-current:hover{background:#595959!important;color:#fff!important}.list-group-item-current+.toggle-custom{color:#fff}.list-group-item-current+.toggle-custom:hover{background:0 0}@media only screen and (max-width :992px){#lesson_menu{display:block;position:static;margin-bottom:2em}}.lesson-menu li{list-style:none}.lesson-menu .list-subgroup-1>li a{font-size:.8em}.lesson-menu .list-subgroup-1>li a.list-group-item:before{content:"-";margin-right:1em}.lesson-menu .list-subgroup-2 a{font-size:.75em;font-style:italic}.lesson-menu .list-subgroup-2 a.list-group-item:before{content:"--" !important;margin-left:.5em;margin-right:1em}.list-group-item a{display:inline}.toggle-custom{position:absolute!important;top:0;right:0}.toggle-custom[aria-expanded=true] .glyphicon-plus:before{content:"\2212"}#lesson_menu li{border-top:1px solid #ddd}.lesson{display:none}.lesson-current{display:block}.lesson .lesson-inside{opacity:0;transition:opacity .25s ease;-webkit-transition:opacity .25s ease}.lesson-current .lesson-inside{opacity:1}.img-container-full{margin:1em auto;width:100%;display:block;padding:0}.img-container-full img{display:block;max-width:100%;max-height:28em;background:#fff}.img-container-full-center{margin:1em auto;width:100%;display:block;pqadding:.5em;border:1px solid #fafafa}.img-container-full-center a{text-align:center;min-height:1em;min-width:1em;display:block}.img-container-full-center img{display:block;margin:auto;max-width:100%;background:#fff}.vid-container-full-center{margin:1em auto;width:100%;display:block;padding:.5em;border:solid #fafafa 1px}.vid-container-full-center video{text-align:center;min-height:1em;min-width:1em;display:block;margin:auto;max-width:100%;background:#fff}.tech-specs{overflow:auto;padding:1em 2.5em;background-color:#f1f1f1}.tech-specs h3{margin-bottom:1em}.tech-specs div>ul,.tech-specs>ul{padding-left:1em;padding-right:1em;margin-bottom:1.5em}.tech-specs li{padding-bottom:.45em;line-height:1.25em}ol.green-circle-list{counter-reset:item}ol.green-circle-list li{counter-increment:item;list-style:none inside;line-height:1.5em;margin-bottom:.5em}ol.green-circle-list li:before{content:""counter(item) "";padding:3px 7px;margin-right:.5em;background:#76b900;color:#fff;font-weight:700;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}.row-of-buttons{margin:2em 0 1em}.row-of-buttons a,.row-of-buttons button{margin:.35em .5em .35em 0}.row-of-buttons a:nth-child(1){margin-left:0}.list-xtra-padding>li{padding-bottom:.5em}.spacer{height:4em;clear:both}.temporary-image,.temporary-text{border:1px dashed #ff0}</style>
+
+<!--<div id="join-nvd-banner" class="text-white" style="background: rgba(0, 0, 0, 0) linear-gradient(rgb(153, 153, 153) 0%, rgb(102, 102, 102) 100%) repeat scroll 0% 0%; padding: 1em 0px; color: white;">-->
+<!--    <div class="container">-->
+<!--        <div class="col-12 text-center" style="text-align: center;">-->
+<!--            Prepare to be inspired! Join our GTC Keynote to discover what comes next. <a href="https://www.nvidia.com/en-us/gtc/keynote/?nvid=nv-int-bnr-228755/?iokio" style="text-decoration:none; color:white;" class="btn btn-success btn-sm m-0 ml-2-->
+<!--                " style="text-decoration:none; color:white;" class="btn btn-success btn-sm m-0 ml-2-->
+<!--            "> Watch Now </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div id="join-nvd-banner" class="text-white" style="background-image: url(https://images.nvidia.com/nvimages/gtc/2022/gold-background/gtc22-spring-web-hp-gold-background-d@1x.jpg); padding: 0.8em; color: #000000;">-->
+<!--	<div class="container">-->
+<!--		<div class="col-12 text-center">-->
+<!--			<strong>Get online training, developer insights, and access to experts at GTC 2022.</strong>  &nbsp; &nbsp; <a target="_blank" href="https://www.nvidia.com/gtc/?nvid=nv-int-unbr-625681" style="text-decoration:none; color: #000000; background-color: transparent; border: 2px solid #000000; padding: 0.5em 1em 0.5em 1em; margin: 0px" class="btn btn-success btn-sm m-0 ml-2"> <b>Register free &gt;</b></a>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+
+
+<br>
+
+<div class="page-header ">
+    <h1 class="title">Get Started With Jetson Nano Developer Kit</h1>
+    <p class="breadcrumb"><i><a href="/embedded/learn/get-started-jetson-nano-2gb-devkit">Click here</a> for the guide based on Jetson Nano 2GB Developer Kit.</i></p>
+</div>
+<div class="row">
+    <div id="sticky_sidebar" class=" col-md-3">
+        <nav id="lesson_menu" class="panel panel-default">
+            <div class="lesson-menu list-group">
+                <ul class="nav">
+                    <li>
+                        <a href="#intro" onclick="takeMeThere('intro')" class="list-group-item list-group-item-current">
+                            Introduction
+                        </a>
+                        <a class="toggle-custom" id="btn-intro" data-toggle="collapse" data-target="#submenu-intro" aria-expanded="false">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <ul class="nav collapse list-subgroup-1" id="submenu-intro" role="menu" aria-labelledby="btn-intro">
+                            <li>
+                                <a href="#intro-included" onclick="takeMeThere('intro-included')" class="list-group-item">
+                                    Included in the Box
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#intro-not-included" onclick="takeMeThere('intro-not-included')" class="list-group-item">
+                                    Items not Included
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#prepare" onclick="takeMeThere('prepare')" class="list-group-item">
+                            Prepare for Setup
+                        </a>
+                        <a class="toggle-custom" id="btn-prepare" data-toggle="collapse" data-target="#submenu-prepare" aria-expanded="false">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <ul class="nav collapse list-subgroup-1" id="submenu-prepare" role="menu" aria-labelledby="btn-prepare">
+                            <li>
+                                <a href="#prepare-items" onclick="takeMeThere('prepare-items')" class="list-group-item">
+                                    Items for Getting Started
+                                </a>
+                                <a class="toggle-custom" id="btn-prepare-items" data-toggle="collapse" data-target="#submenu-prepare-items" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                </a>
+                                <ul class="nav collapse list-subgroup-2" id="submenu-prepare-items" role="menu" aria-labelledby="btn-prepare-items">
+                                    <li>
+                                        <a href="#prepare-microsd" onclick="takeMeThere('prepare-microsd')" class="list-group-item">
+                                            microSD Card
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#prepare-micro-usb" onclick="takeMeThere('prepare-micro-usb')" class="list-group-item">
+                                            Micro-USB Power Supply
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#write" onclick="takeMeThere('write')" class="list-group-item">
+                            Write Image to the <br class="visible-md visible-lg"> microSD Card
+                        </a>
+                        <a class="toggle-custom" id="btn-write" data-toggle="collapse" data-target="#submenu-write" aria-expanded="false">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <ul class="nav collapse list-subgroup-1" id="submenu-write" role="menu" aria-labelledby="btn-write">
+                            <li>
+                                <a href="#write-windows" onclick="takeMeThere('write-windows')" class="list-group-item">
+                                    Instructions for Windows</a>
+                            </li>
+                            <li>
+                                <a href="#write-mac" onclick="takeMeThere('write-mac')" class="list-group-item">
+                                    Instructions for Mac OS</a>
+                            </li>
+                            <li>
+                                <a href="#write-linux" onclick="takeMeThere('write-linux')" class="list-group-item">
+                                    Instructions for Linux</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#setup" onclick="takeMeThere('setup')" class="list-group-item">
+                            Setup and First Boot</a>
+                        <a class="toggle-custom" id="btn-setup" data-toggle="collapse" data-target="#submenu-setup" aria-expanded="false">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <ul class="nav collapse list-subgroup-1" id="submenu-setup" role="menu" aria-labelledby="btn-setup">
+                            <li>
+                                <a href="#setup-display" onclick="takeMeThere('setup-display')" class="list-group-item">
+                                    Initial Setup with Display Attached</a>
+                            </li>
+                            <li>
+                                <a href="#setup-headless" onclick="takeMeThere('setup-headless')" class="list-group-item">Initial Setup in Headless Mode</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#next" onclick="takeMeThere('next')" class="list-group-item">Next Steps</a>
+                        <a class="toggle-custom" id="btn-next" data-toggle="collapse" data-target="#submenu-next" aria-expanded="false">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <ul class="nav collapse list-subgroup-1" id="submenu-next" role="menu" aria-labelledby="btn-next">
+                            <li>
+                                <a href="#next-resources" onclick="takeMeThere('next-resources')" class="list-group-item">Find Your Way Around</a>
+                            </li>
+                            <li>
+                                <a href="#next-projects" onclick="takeMeThere('next-projects')" class="list-group-item">Projects and Learning</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#troubleshooting" onclick="takeMeThere('troubleshooting')" class="list-group-item">Troubleshooting</a>
+                        <a class="toggle-custom" id="btn-troubleshooting" data-toggle="collapse" data-target="#submenu-troubleshooting" aria-expanded="false">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </a>
+                        <ul class="nav collapse list-subgroup-1" id="submenu-troubleshooting" role="menu" aria-labelledby="btn-troubleshooting">
+                            <li>
+                                <a href="#troubleshooting-power" onclick="takeMeThere('troubleshooting-power')" class="list-group-item">Power</a>
+                            </li>
+                            <li>
+                                <a href="#troubleshooting-display" onclick="takeMeThere('troubleshooting-display')" class="list-group-item">Display</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="col-md-9">
+        <section id="intro" class="lesson lesson-current">
+            <div class="row-of-buttons" style="margin-top: 0">
+                <div class="row">
+                    <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('prepare', 'intro')" href="#prepare">Next Step &gt;</a>
+                </div>
+            </div>
+            <hr>
+            <div class="lesson-inside">
+                <h2>Introduction</h2>
+                <p class="lead">The <a href="https://developer.nvidia.com/embedded/buy/jetson-nano-devkit">NVIDIA® Jetson Nano™ Developer Kit</a> is a small AI computer for makers, learners, and developers. After following along with this brief guide, you’ll be ready to start building practical AI applications, cool AI robots, and more.</p>
+                <div class="lesson-part">
+                    <div style="padding-bottom: 0; margin-bottom: 0" class="img-container-full-center">
+                        <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/jetson-nano-dev-kit-top-r6-HR-B01.png">
+                            <img alt="NVIDIA Jetson Nano Developer Kit" title="NVIDIA Jetson Nano Developer Kit" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/jetson-nano-dev-kit-top-r6-HR-B01.png">
+                        </a>
+                    </div>
+                    <div class="tech-specs">
+                        <div class="list-xtra-padding">
+                            <br>
+                            <ol class="green-circle-list" style="padding-left: 0.5em;">
+                                <div class="col-md-7">
+                                    <li>microSD card slot for main storage</li>
+                                    <li>40-pin expansion header</li>
+                                    <li>Micro-USB port for 5V power input, or for Device Mode</li>
+                                    <li>Gigabit Ethernet port</li>
+                                </div>
+                                <div class="col-md-5">
+                                    <li>USB 3.0 ports (x4)</li>
+                                    <li>HDMI output port</li>
+                                    <li>DisplayPort connector</li>
+                                    <li>DC Barrel jack for 5V power input</li>
+                                    <li>MIPI CSI-2 camera connectors</li>
+                                </div>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="seperator"></div>
+                </div>
+                <div class="lesson-part">
+                    <h3 id="intro-included">Included in the Box</h3>
+                    <p>Your Jetson Nano Developer Kit box includes:</p>
+                    <ul class="list-xtra-padding">
+                        <li>NVIDIA Jetson module and reference carrier board</li>
+                        <li>Small paper card with quick start and support information</li>
+                        <li>Folded paper stand</li>
+                    </ul>
+                </div>
+                <div class="lesson-part">
+                    <h3 id="intro-not-included">Items not Included</h3>
+                    <p>You’ll also need:</p>
+                    <ul class="list-xtra-padding">
+                        <li>
+                            microSD card (32GB UHS-1 minimum recommended)
+                        </li>
+                        <li>
+                            USB keyboard and mouse
+                        </li>
+                        <li>
+                            Computer display (HDMI or DP)
+                        </li>
+                        <li>
+                            Micro-USB power supply
+                        </li>
+                    </ul>
+                    <div class="alert alert-success">
+                        <p>Initially, a computer with Internet connection and the ability to flash your microSD card is also required.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row-of-buttons" style="margin-top: 0">
+                <div class="row">
+                    <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('prepare', 'intro')" href="#prepare">Next Step &gt;</a>
+                </div>
+            </div>
+        </section>
+        <section id="prepare" class="lesson">
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('intro', 'prepare')" href="#intro">&lt; Previous Step</a>
+                <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('write', 'prepare')" href="#write">Next Step &gt;</a>
+            </div>
+            <hr>
+            <div class="lesson-inside">
+                <h2>Prepare for Setup</h2>
+                <div class="lesson-part">
+                    <h3 id="prepare-items">Items for Getting Started</h3>
+                    <h4 id="prepare-microsd">microSD Card</h4>
+                    <p>The Jetson Nano Developer Kit uses a microSD card as a boot device and for main storage. It’s important to have a card that’s fast and large enough for your projects; the minimum recommended is a 32 GB UHS-1 card.</p>
+                    <p>See the instructions below to flash your microSD card with operating system and software.</p>
+                    <h4 id="prepare-micro-usb">Micro-USB Power Supply</h4>
+                    <p>You’ll need to power the developer kit with a good quality power supply that can deliver 5V⎓2A at the developer kit’s Micro-USB port. Not every power supply promising “5V⎓2A” will actually do this.</p>
+                    <p>As an example of a good power supply, NVIDIA has validated <a href="https://www.adafruit.com/product/1995" target="_blank">Adafruit’s 5V 2.5A Switching Power Supply with 20AWG MicroUSB Cable (GEO151UB-6025)</a>. It was specifically designed to overcome common problems with USB power supplies; see the linked product page for details.</p>
+                    <!-- <div style="overflow: auto"> -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="h--smaller">Note</p>
+                                <p>The stated power output capability of a USB power supply can be seen on its label.</p>
+                                <p>Actual power delivery capabilities of USB power supplies do vary. Please see the <a href="/embedded/downloads#?search=Jetson%20Nano%20Developer%20Kit%20User%20Guide" target="_blank">Jetson Nano Developer Kit User Guide</a> for additional information.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="img-container-full-center">
+                                    <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/jetson-nano-dev-kit-power-block-r4-HR.png">
+                                        <img alt="Switching AC/DC Power Adapter" title="Switching AC/DC Power Adapter" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/jetson-nano-dev-kit-power-block-r4-HR.png">
+                                    </a>
+                                    <p style="margin-top: 0.75em;" class="text-center"><small>Click or tap image for closeup.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <hr>
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('intro', 'prepare')" href="#intro">&lt; Previous Step</a>
+                <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('write', 'prepare')" href="#write">Next Step &gt;</a>
+            </div>
+        </section>
+        <section id="write" class="lesson">
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('prepare', 'write')" href="#prepare">&lt; Previous Step</a>
+                <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('setup', 'write')" href="#setup">Next Step &gt;</a>
+            </div>
+            <hr>
+            <div class="lesson-inside">
+                <h2>Write Image to the microSD Card</h2>
+                <p class="lead">To prepare your microSD card, you’ll need a computer with Internet connection and the ability to read and write SD cards, either via a built-in SD card slot or adapter.</p>
+                <div class="lesson-part">
+                    <ol style="padding-left: 1em" class="list-xtra-padding">
+                        <li>Download the <a href="/jetson-nano-sd-card-image">Jetson Nano Developer Kit SD Card Image</a>, and note where it was saved on the computer.</li>
+                        <li>Write the image to your microSD card by following the instructions below according to your computer’s operating system: Windows, macOS, or Linux.</li>
+                    </ol>
+                    <div class="panel-group" id="accordion">
+                        <h3 id="write-chromeos" style="display: none">Instructions for Chrome OS</h3>
+                        <div class="panel panel-default" style="display: none">
+                            <div class="panel-heading">
+                                <a data-parent="#accordion" data-toggle="collapse" href="#collapse-write_chromeos">Instructions for Chrome OS</a>
+                            </div>
+                            <div class="panel-collapse collapse" id="collapse-write_chromeos">
+                                <div class="panel-body">
+                                    <p>[FILL_THIS_PART]</p>
+                                    <p>After your microSD card is ready, proceed to <a href="#setup" onclick="takeMeThere('setup', 'write')">set up your developer kit</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="write-windows" style="display: none">Instructions for Windows</h3>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-parent="#accordion" data-toggle="collapse" href="#collapse-write_windows">Instructions for Windows</a>
+                            </div>
+                            <div class="panel-collapse collapse" id="collapse-write_windows">
+                                <div class="panel-body">
+                                    <p>Format your microSD card using SD Memory Card Formatter from the SD Association.</p>
+                                    <div class="img-container-full-center">
+                                        <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-SD_Card_Formatter.png">
+                                            <img alt="Windows SD card formatter" title="Windows SD card formatter" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-SD_Card_Formatter.png">
+                                        </a>
+                                    </div>
+                                    <ol class="list-xtra-padding">
+                                        <li>Download, install, and launch <a href="https://www.sdcard.org/downloads/formatter_4/eula_windows/" target="_blank">SD Memory Card Formatter for Windows</a>.</li>
+                                        <li>Select card drive</li>
+                                        <li>Select “Quick format”</li>
+                                        <li>Leave “Volume label” blank</li>
+                                        <li>Click “Format” to start formatting, and “Yes” on the warning dialog</li>
+                                    </ol>
+                                    <p>Use Etcher to write the Jetson Nano Developer Kit SD Card Image to your microSD card</p>
+                                    <ol class="list-xtra-padding">
+                                        <li>Download, install, and launch <a href="https://www.balena.io/etcher" target="_blank">Etcher</a>.
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-Etcher.png">
+                                                    <img alt="Windows Etcher software" title="Windows Etcher software" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-Etcher.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Click “Select image” and choose the zipped image file downloaded earlier.</li>
+                                        <li>Insert your microSD card if not already inserted.<br><small>Click <i>Cancel</i> (per <a href="https://github.com/balena-io/etcher/issues/2024" target="_blank">this explanation</a>) if Windows prompts you with a dialog like this:</small>
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-Etcher_Cancel.png">
+                                                    <img alt="Windows format disk cancel" title="Windows format disk cancel" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-Etcher_Cancel.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Click “Select drive” and choose the correct device.
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-Etcher_Select_Drive.png">
+                                                    <img alt="Windows Etcher select drive" title="Windows Etcher select drive" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-Etcher_Select_Drive.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Click “Flash!” It will take Etcher about 10 minutes to write and validate the image if your microSD card is connected via USB3.</li>
+                                        <li>After Etcher finishes, Windows may let you know it doesn’t know how to read the SD Card. Just click Cancel and remove the microSD card.
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-SD_Card_Prompt.png">
+                                                    <img alt="Windows SD card prompt" title="Windows SD card prompt" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Windows-SD_Card_Prompt.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <p>After your microSD card is ready, proceed to <a href="#setup" onclick="takeMeThere('setup', 'write')">set up your developer kit</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="write-mac" style="display: none">Instructions for Mac</h3>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-parent="#accordion" data-toggle="collapse" href="#collapse-write_macos">Instructions for MacOS</a>
+                            </div>
+                            <div class="panel-collapse collapse" id="collapse-write_macos">
+                                <div class="panel-body">
+                                    <p>You can either write the SD card image using a graphical program like Etcher, or via command line.</p>
+                                    <p class="h--smaller">Etcher Instructions</p>
+                                    <ol class="list-xtra-padding">
+                                        <li>Do not insert your microSD card yet.</li>
+                                        <li>Download, install, and launch <a href="https://www.balena.io/etcher" target="_blank">Etcher</a>.
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Etcher.png">
+                                                    <img alt="Mac Etcher software" title="Mac Etcher software" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Etcher.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Click “Select image” and choose the zipped image file downloaded earlier.</li>
+                                        <li>Insert your microSD card. Click Ignore if your Mac shows this window:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Disk_readable.png">
+                                                    <img alt="Mac Etcher disk readable" title="Mac Etcher disk readable" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Disk_readable.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>If you have no other external drives attached, Etcher will automatically select the microSD card as target device. Otherwise, click “Select drive” and choose the correct device.</li>
+                                        <li>Click “Flash!” Your Mac may prompt for your username and password before it allows Etcher to proceed
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Etcher_permission.png">
+                                                    <img alt="Mac Etcher permission" title="Mac Etcher permission" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Etcher_permission.png">
+                                                </a>
+                                            </div>
+                                            It will take Etcher about 10 minutes to write and validate the image if your microSD card is connected via USB3.
+                                        </li>
+                                        <li>After Etcher finishes, your Mac may let you know it doesn’t know how to read the SD Card. Just click Eject and remove the microSD card.
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Disk_readable.png">
+                                                    <img alt="Mac Etcher disk readable again" title="Mac Etcher disk readable again" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Disk_readable.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <p class="h--smaller">Command Line Instructions</p>
+                                    <ol class="list-xtra-padding">
+                                        <li>Do not insert your microSD card yet. Waiting will help you discover correct disk device name in steps below.</li>
+                                        <li>Open the Terminal app:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_app.png">
+                                                    <img alt="Mac Terminal app" title="Mac Terminal app" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_app.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            Use this command to list any external disk devices already attached to your Mac:
+                                            <br>
+                                            <code>diskutil list external | fgrep '/dev/disk'</code>
+                                            <br>
+                                            For example, if you already have a USB drive attached to your Mac, the result will look similar to this:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_disk_already_attached.png">
+                                                    <img alt="Mac Terminal disk already attached" title="Mac Terminal disk already attached" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_disk_already_attached.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Insert your microSD card. Click Ignore if your Mac shows this window:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Disk_readable.png">
+                                                    <img alt="Mac Terminal disk readable" title="Mac Terminal disk readable" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Disk_readable.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Use the same command as before to list external disk devices. The newly listed disk device is the microSD card (/dev/disk2 in this example):
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_list_disks.png">
+                                                    <img alt="Mac Terminal list disks" title="Mac Terminal list disks" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_list_disks.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Use this command to remove any existing partitions from the microSD card, ensuring MacOS will let you write to it. <strong>BE VERY CAREFUL to specify the correct disk device.</strong>
+                                            <br>
+                                            <code>sudo diskutil partitionDisk /dev/disk<span style="background: yellow">&lt;n&gt;</span> 1 GPT "Free Space" "%noformat%" 100%</code>
+                                            <br>
+                                            For example:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_partitions.png">
+                                                    <img alt="Mac Terminal partitions" title="Mac Terminal partitions" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_partitions.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Use this command to write the zipped SD card image to the microSD card. Note the use of /dev/rdisk instead of /dev/disk:
+                                            <br>
+                                            <code>/usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip | sudo /bin/dd of=/dev/rdisk<span style="background: yellow">&lt;n&gt;</span> bs=1m</code>
+                                            <br>
+                                            For example:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_write_zipped_SD_card.png">
+                                                    <img alt="Mac Terminal write zipped SD card" title="Mac Terminal write zipped SD card" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Terminal_write_zipped_SD_card.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>There will be no indication of progress (unless you signal with CTRL-t). When the dd command finishes, your Mac will let you know it cannot read the microSD card. Just click Eject:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Disk_readable.png">
+                                                    <img alt="Mac Terminal disk readable again" title="Mac Terminal disk readable again" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Mac-Disk_readable.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <p>After your microSD card is ready, proceed to <a href="#setup" onclick="takeMeThere('setup', 'write')">set up your developer kit</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="write-linux" style="display: none">Instructions for Linux</h3>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-parent="#accordion" data-toggle="collapse" href="#collapse-write_linux">Instructions for Linux</a>
+                            </div>
+                            <div class="panel-collapse collapse" id="collapse-write_linux">
+                                <div class="panel-body">
+                                    <p>You can either write the SD card image using a graphical program like Etcher, or via command line.</p>
+                                    <p class="h--smaller">Etcher Instructions</p>
+                                    <ol class="list-xtra-padding">
+                                        <li>Download, install, and launch <a href="https://www.balena.io/etcher" target="_blank">Etcher</a>.
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Etcher.png">
+                                                    <img alt=" Linux Etcher software" title=" Linux Etcher software" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Etcher.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Click “Select image” and choose the zipped image file downloaded earlier.</li>
+                                        <li>Insert your microSD card. If you have no other external drives attached, Etcher will automatically select the microSD card as target device. Otherwise, click “Change” and choose the correct device.
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Etcher_Select_Drive.png">
+                                                    <img alt="Linux Etcher select drive" title="Linux Etcher select drive" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Etcher_Select_Drive.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Click “Flash!” Your OS may prompt for your username and password before it allows Etcher to proceed.
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Etcher_Password.png">
+                                                    <img alt="Linux Etcher password" title="Linux Etcher password" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Etcher_Password.png">
+                                                </a>
+                                            </div>
+                                            It will take Etcher 10-15 minutes to write and validate the image if your microSD card is connected via USB3.
+                                        </li>
+                                        <li>After Etcher finishes, eject the SD Card using Files application:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Files_App.png">
+                                                    <img alt="Linux Etcher files app" title="Linux Etcher files app" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Files_App.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Physically remove microSD card from the computer.</li>
+                                    </ol>
+                                    <p class="h--smaller">Command Line Instructions</p>
+                                    <ol class="list-xtra-padding">
+                                        <li>Open the Terminal application by pressing <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>t</kbd>.
+                                        </li>
+                                        <li>Insert your microSD card, then use a command like this to show which disk device was assigned to it:<br>
+                                            <div style="padding: 1em 0;">
+                                                <code>dmesg | tail | awk '$3 == "sd" {print}'</code>
+                                            </div>
+                                            In this example, we can see the 16GB microSD card was assigned /dev/sda:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Terminal_Disk_Assign.png">
+                                                    <img alt="Linux Terminal disk assign" title="Linux Terminal disk assign" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Terminal_Disk_Assign.png">
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>Use this command to write the zipped SD card image to the microSD card:<br>
+                                            <div style="padding: 1em 0;">
+                                                <code>/usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip |
+                                                    sudo /bin/dd of=/dev/sd<span style="background: yellow">&lt;x&gt;</span> bs=1M status=progress</code>
+                                            </div>
+                                            For example:
+                                            <div class="img-container-full-center">
+                                                <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Terminal_Disk_Write.png">
+                                                    <img alt="Linux Terminal disk write" title="Linux Terminal disk write" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Linux-Terminal_Disk_Write.png">
+                                                </a>
+                                            </div>
+                                            When the dd command finishes, eject the disk device from the command line:<br>
+                                            <div style="padding: 1em 0;">
+                                                <code>sudo eject /dev/sd<span style="background: yellow">&lt;x&gt;</span></code>
+                                            </div>
+                                        </li>
+                                        <li>Physically remove microSD card from the computer.</li>
+                                    </ol>
+                                    <p>After your microSD card is ready, proceed to <a onclick="takeMeThere('setup', 'write')" href="#setup">Setup your developer kit</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>After your microSD card is ready, proceed to set up your developer kit.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('prepare', 'write')" href="#prepare">&lt; Previous Step</a>
+                <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('setup', 'write')" href="#setup">Next Step &gt;</a>
+            </div>
+        </section>
+        <section id="setup" class="lesson">
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('write', 'setup')" href="#prepare">&lt; Previous Step</a>
+                <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('next', 'setup')" href="#next">Next Step &gt;</a>
+            </div>
+            <hr>
+            <div class="lesson-inside">
+                <div class="lesson-part">
+                    <h2>Setup and First Boot</h2>
+                    <p>There are two ways to interact with the developer kit: 1) with display, keyboard and mouse attached, or 2) in “headless mode” via connection from another computer.</p>
+                    <p>You can conduct the initial setup either way.</p>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Initial setup
+                                    with display attached</th>
+                                <th>Initial setup
+                                    in headless mode</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Monitor, keyboard and mouse</th>
+                                <td>Required</td>
+                                <td>Not required</td>
+                            </tr>
+                            <tr>
+                                <th>Extra computer</th>
+                                <td>Not required</td>
+                                <td>Required</td>
+                            </tr>
+                            <tr>
+                                <th>Power options</th>
+                                <td>Either Micro-USB or DC power supply can be used</td>
+                                <td>DC power supply is needed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="lesson-part">
+                    <h3 id="setup-display">Initial Setup with Display Attached</h3>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="img-container-full-center">
+                            <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetbot_animation_500x282_2.gif">
+                                <img alt="Initial setup with display attached" title="Initial setup with display attached" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetbot_animation_500x282_2.gif">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                        </div>
+                    </div>
+                    <h4 id="setup-steps-display">Setup Steps</h4>
+                    <ol class="list-xtra-padding">
+                        <li>Unfold the paper stand and place inside the developer kit box.
+                        </li>
+                        <li>Insert the microSD card (with system image already written to it) into the slot on the underside of the Jetson Nano module.
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="img-container-full-center" style="margin: 0">
+                                    <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Setup-Insert_microSD-B01.png">
+                                        <img alt="Setup insert microSD card" title="Setup insert microSD card" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Setup-Insert_microSD-B01.png">
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                </div>
+                            </div>
+                        </li>
+                        <li>Set the developer kit on top of the paper stand.</li>
+                        <li>Power on your computer display and connect it.</li>
+                        <li>Connect the USB keyboard and mouse.</li>
+                        <li>Connect your Micro-USB power supply (or see the <a href="#" target="_blank">Jetson Nano Developer Kit User Guide</a> for details about using DC a power supply with a barrel jack connector). The developer kit will power on and boot automatically.</li>
+                    </ol>
+                </div>
+                <div class="lesson-part">
+                    <h4 id="setup-first-boot-display">First Boot</h4>
+                    <p>A green LED next to the Micro-USB connector will light as soon as the developer kit powers on. When you boot the first time, the developer kit will take you through some initial setup, including:</p>
+                    <ul>
+                        <li>Review and accept NVIDIA Jetson software EULA</li>
+                        <li>Select system language, keyboard layout, and time zone</li>
+                        <li>Create username, password, and computer name</li>
+                        <li>Select APP partition size—it is recommended to use the max size suggested</li>
+                    </ul>
+                </div>
+                <div class="lesson-part">
+                    <h4 id="setup-after-logging-in-display">After Logging In</h4>
+                    <p>You will see this screen. Congratulations!</p>
+                    <div class="img-container-full-center">
+                        <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-desktop.png">
+                            <img alt="Login dashboard" title="Login dashboard" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-desktop.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="lesson-part">
+                    <h3 id="setup-headless">Initial Setup Headless Mode</h3>
+                    <div style="display: none" class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div align="center" class="embed-responsive embed-responsive-16by9">
+                                <video autoplay loop controls class="embed-responsive-item" style="border: 1px solid #ddd;">
+                                    <source src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/jetson-nano-dev-kit-top-animation-3_2.mp4">
+                                </source></video>
+                            </div>
+                        </div>
+                    </div>
+                    <br style="display: none">
+                    <p>To complete setup when no display is attached to the developer kit, you’ll need to connect the developer kit to another computer and then communicate with it via a terminal application (e.g., PuTTY) to handle the USB serial communication on that other computer.</p>
+                    <div>
+                        <p><strong>Note</strong>: Headless initial configuration requires the developer kit to be powered by a DC power supply with barrel jack connector, since the Micro-USB port is required to access the initial configuration prompts.</p>
+                    </div>
+                    <br>
+                    <h4 id="setup-steps-headless">Setup Steps</h4>
+                    <ol class="list-xtra-padding">
+                        <li>Unfold the paper stand and place inside the developer kit box.
+                        </li>
+                        <li>Insert the microSD card (with system image already written to it) into the slot on the underside of the Jetson Nano module.
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="img-container-full-center" style="margin: 0">
+                                    <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Setup-Insert_microSD-B01.png">
+                                        <img alt="Initial Setup Headless Mode - insert microSD card" title="Initial Setup Headless Mode - insert microSD card" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano/gettingStarted/Jetson_Nano-Getting_Started-Setup-Insert_microSD-B01.png">
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                </div>
+                            </div>
+                        </li>
+                        <li>Set the developer kit on top of the paper stand.</li>
+                        <li>Check the <a href="/embedded/downloads#?search=Jetson%20Nano%20Developer%20Kit%20User%20Guide" target="_blank">Jetson Nano Developer Kit User Guide</a> for location of J48 Power Select Header and J25 Power Jack.</li>
+                        <li>Jumper the J48 Power Select Header pins.</li>
+                        <li>Connect your other computer to the developer kit’s Micro-USB port.</li>
+                        <li>Connect a DC power supply to the J25 Power Jack. The developer kit will power on automatically.</li>
+                        <li>Allow 1 minute for the developer kit to boot.</li>
+                        <li>On your other computer, use the serial terminal application to connect via host serial port to the developer kit.<br><br>
+                            <div class="row">
+                                <div class="col-md-10 col-lg-9">
+                                    <div class="panel-group" id="accordion_3" style="padding-bottom: 0; margin-bottom: 0">
+                                        <h5 id="setup-chrome-os" style="display: none">Instructions for ChromeOS</h5>
+                                        <div class="panel panel-default" style="display: none">
+                                            <div class="panel-heading">
+                                                <a data-parent="#accordion_3" data-toggle="collapse" href="#collapse_setup_chromeOS">Instructions for ChromeOS</a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="collapse_setup_chromeOS">
+                                                <div class="panel-body">
+                                                    <!-- REPLACE BELOW-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5 id="setup-windows" style="display: none">Instructions for Windows</h5>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-parent="#accordion_3" data-toggle="collapse" href="#collapse_setup_windows">Instructions for Windows</a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="collapse_setup_windows">
+                                                <div class="panel-body">
+                                                    <p class="h--smaller">Locate the correct COM port</p>
+                                                    <p>Assuming you have already connected your Windows PC to the developer kit’s Micro-USB port, right click the Windows Start icon and select “Device Manager.”</p>
+                                                    <div class="img-container-full-center">
+                                                        <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-COM_port.png">
+                                                          <img alt="Select Device Manager" title="Select Device Manager" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-COM_port.png">
+                                                        </a>
+                                                    </div>
+                                                    <p>Open the “Ports (COM &amp; LPT)” to find the COM port number for “USB Serial Device” (in this case “COM 16”)</p>
+                                                    <div class="img-container-full-center">
+                                                        <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-COM_port-2.png">
+                                                            <img alt="Select COM16" title="Select COM16" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-COM_port-2.png">
+                                                        </a>
+                                                    </div>
+                                                    <p>Double click each USB Serial Device entry so you can check its properties. Go to the “Details” tab, and select “Hardware Ids”. If you see VID 0955 and PID 7020, that USB Serial Device for your Jetson developer kit. Note the COM port name (COM16 in this example) for later use.</p>
+                                                    <div class="img-container-full-center">
+                                                        <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-COM_port-3.png">
+                                                            <img alt="Select COM16 Properties" title="Select COM16 Properties" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-COM_port-3.png">
+                                                        </a>
+                                                    </div>
+                                                    <p class="h--smaller">Open the COM port on PuTTY</p>
+                                                    <p>PuTTY is one of the most widely used terminal applications for accessing serial consoles.
+                                                        You can use other terminal applications, but if you don’t have any on your Windows PC, you can download PuTTY from <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">here</a>.</p>
+                                                    <p>Open the PuTTY application. When “Session” is selected in the left “Category” pane, input the COM port name for “Serial line” and “115200” for “Speed”.</p>
+                                                    <div class="img-container-full-center">
+                                                        <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-PuTTY.png">
+                                                            <img alt="Open PuTTY configuration" title="Open PuTTY configuration" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-PuTTY.png">
+                                                        </a>
+                                                    </div>
+                                                    <p>Click “Open” to connect to the console.</p>
+                                                    <div class="img-container-full-center">
+                                                        <a data-colorbox="true" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-PuTTY-2.png">
+                                                            <img alt="Start system configuration" title="Start system configuration" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/jetsonNano-2GB/getting_started/Getting_Started-Jetson_Nano_Developer_Kit-PuTTY-2.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5 id="setup-mac-os" style="display: none">Instructions for macOS</h5>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-parent="#accordion_3" data-toggle="collapse" href="#collapse_setup_mac">Instructions for macOS</a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="collapse_setup_mac">
+                                                <div class="panel-body">
+                                                    <p class="h--smaller">Locate the tty device</p>
+                                                    <p>Before connecting to your Jetson developer kit for initial setup, check to see what Serial devices are already shown on your macOS computer.</p>
+                                                    <pre>$ ls /dev/cu.usbmodem*
+~$</pre>
+                                                    <p>Connect your macOS computer to the developer kit’s Micro-USB port and run the same command to find what’s newly added.</p>
+                                                    <pre>~$ ls /dev/cu.usbmodem*
+/dev/cu.usbmodem14133200001053
+~$</pre>
+                                                    <p>The new serial device is for your Jetson developer kit.</p>
+                                                    <pre>~$ ls -l /dev/cu.usbmodem*
+crw-rw-rw-  1 root  wheel   18,  19 Oct  2 03:54 /dev/cu.usbmodem14133200001053
+~$</pre>
+                                                    <p class="h--smaller">Screen command</p>
+                                                    <p>Screen is already installed by default as part of macOS.</p>
+                                                    <p>Use the device name discovered previously as a command line option for the `screen` command.</p>
+                                                    <pre>$ sudo screen /dev/cu.usbmodem14133200001053 115200</pre>
+                                                    <p class="h--smaller">Terminate screen</p>
+                                                    <p>To terminate your screen session, press <kbd>C-a + k</kbd> (<kbd>Ctrl</kbd> + <kbd>a</kbd>, then <kbd>k</kbd>), then press <kbd>y</kbd> on confirmation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="h--smaller" id="setup-linux" style="display: none">Check</p>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-parent="#accordion_3" data-toggle="collapse" href="#collapse_setup_linux">Instructions for Linux</a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="collapse_setup_linux">
+                                                <div class="panel-body">
+                                                    <p class="h--smaller">Locate the tty device</p>
+                                                    <p>Before connecting to your Jetson developer kit for initial setup, check to see what Serial devices are already shown on your Linux computer.</p>
+                                                    <pre>$ dmesg | grep --color 'tty'</pre>
+                                                    <p>Connect your Linux computer to the developer kit’s Micro-USB port and run the same command to find what’s newly added.</p>
+                                                    <pre>$ dmesg | grep --color 'tty'
+…
+…
+[xxxxxx.xxxxxx] cdc_acm 1-5:1.2: ttyACM0: USB ACM device</pre>
+                                                    <p>The new serial device is for your Jetson developer kit.</p>
+                                                    <pre>$ ls -l /dev/ttyACM0
+crw-rw---- 1 root dialout 166, 0 Oct  2 02:45 /dev/ttyACM0</pre>
+                                                    <p class="h--smaller">Screen command</p>
+                                                    <p>Install the Screen program on your Linux computer if it is now already available. For example, use this command to install Screen if you are running Ubuntu.</p>
+                                                    <pre>$ sudo apt-get install -y screen</pre>
+                                                    <p>Use the device name discovered previously as a command line option for the `screen` command.</p>
+                                                    <pre>$ sudo screen /dev/ttyACM0 115200</pre>
+                                                    <p class="h--smaller">Terminate screen</p>
+                                                    <p>To terminate your screen session, press <kbd>C-a + k</kbd> (<kbd>Ctrl</kbd> + <kbd>a</kbd>, then <kbd>k</kbd>), then press <kbd>y</kbd> on confirmation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                    <p>Once connected to the developer kit, hit <kbd>SPACE</kbd> if the initial setup screen does not appear automatically.</p>
+                </div>
+                <div class="lesson-part">
+                    <h4 id="setup-first-boot-headless">First Boot</h4>
+                    <p>A green LED next to the Micro-USB connector will light as soon as the developer kit powers on. When you boot the first time, the developer kit will take you through some initial setup, including:</p>
+                    <ul>
+                        <li>Review and accept NVIDIA Jetson software EULA</li>
+                        <li>Select system language, keyboard layout, and time zone</li>
+                        <li>Create username, password, and computer name</li>
+                        <li>Select APP partition size—it is recommended to use the max size suggested</li>
+                    </ul>
+                </div>
+                <div class="lesson-part">
+                    <h4 id="setup-after-logging-in-headless">After Logging In</h4>
+                    <p>You will see a standard Linux command line prompt in your serial terminal application. Congratulations!</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('write', 'setup')" href="#prepare">&lt; Previous Step</a>
+                <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('next', 'setup')" href="#next">Next Step &gt;</a>
+            </div>
+        </section>
+        <section id="next" class="lesson">
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('setup', 'next')" href="#setup">&lt; Previous Step</a>
+                <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('troubleshooting', 'next')" href="#troubleshooting">Next Step &gt;</a>
+            </div>
+            <hr>
+            <div class="lesson-inside">
+                <h2>Next Steps</h2>
+                <div class="lesson-part">
+                    <h3 id="next-resources">Find Your Way Around</h3>
+                    <ul style="padding-left: 1em" class="list-xtra-padding">
+                        <li>Read the <strong><a href="/embedded/downloads#?search=Jetson%20Nano%20Developer%20Kit%20User%20Guide" target="_blank">Jetson Nano Developer Kit User Guide</a></strong>, which includes:
+                            <ul>
+                                <li>Many more details about the developer kit hardware.</li>
+                                <li>Explanations of all the components of NVIDIA JetPack, including developer tools with support for cross-compilation.</li>
+                                <li>Lists of all included samples and sample documentation.</li>
+                            </ul>
+                        </li>
+                        <li>Head to the <strong><a href="https://developer.nvidia.com/jetson" target="_blank">NVIDIA Jetson Developer Zone</a></strong> for access to all Jetson platform information.</li>
+                        <li>Ask questions or share a project on the <strong><a href="https://devtalk.nvidia.com/default/board/372/jetson-projects/" target="_blank">NVIDIA Jetson Forums</a></strong>.
+                        </li>
+                    </ul>
+                </div>
+                <div class="lesson-part">
+                    <h3 id="next-projects">Projects and Learning</h3>
+                    <p class="lead" style="margin-bottom: 0.5em">The Jetson Nano Developer Kit is an AI computer for learning and for making.</p>
+                    <div class="row">
+                        <div class="seperator visible-xs visible-sm"></div>
+                        <div class="col-md-3 col-sm-4">
+                            <a href="/embedded/learn/jetson-ai-certification-programs#course_outline" target="_blank">
+                                <img alt="Jetson for AI Education" title="Jetson for AI Education" class="img-responsive" src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/embedded/images/highlights/Embedded_Computing_Homepage-Highlights-AI_Fundamentals.jpg">
+                                <div class="seperator visible-sm visible-md visible-lg"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-8 col-sm-7">
+                            <div class="seperator visible-xs"></div>
+                            <h4 style="padding-top: 0.1252em; margin-top: 0;">Jetson AI Courses and Certification</h4>
+                            <p style="margin-bottom: 1em;">NVIDIA’s Deep Learning Institute delivers practical hands-on training and certification in AI at the edge for developers, educators, students and lifelong learners. Get the critical AI skills you need to thrive and advance in your career. Earn certificates when you complete these free, open-source courses. <strong><a href="/embedded/learn/jetson-ai-certification-programs#course_outline" title="Jetson for AI Education">Enroll Now &gt;</a></strong></p>
+                        </div>
+                    </div>
+                    <h4>Check out the <a href="/embedded/community/jetson-projects">Jetson Projects</a> Page</h4>
+                    <ul class="list-xtra-padding">
+                        <li>
+<strong><a href="/embedded/twodaystoademo#hello_ai_world" target="_blank">Hello AI World</a></strong><br>
+                            <ul>
+                                <li>Get started with deep learning inference for computer vision using pretrained models for image classification and object detection.</li>
+                                <li>Realtime acceleration with TensorRT and live camera streaming.</li>
+                                <li>Code your own recognition program in C++.</li>
+                            </ul>
+                        </li>
+                        <li>
+<strong><a title="Github - NVIDIA-AI-IOT/jetbot: An educational AI robot based on NVIDIA Jetson Nano" href="https://github.com/NVIDIA-AI-IOT/jetbot" target="_blank">JetBot</a></strong> is an open-source AI project for makers, students and enthusiasts who are interested in learning AI and building fun applications.
+                            <ul>
+                                <li>It’s easy to set up and use and is compatible with many popular accessories.</li>
+                                <li>Several interactive tutorials show you how to harness the power of AI to teach JetBot to follow objects, avoid collisions and more.</li>
+                                <li>JetBot is a great launchpad for creating entirely new AI projects.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Create your own projects</h4>
+                    <ul class="list-xtra-padding">
+                        <li>Jetson Nano Developer Kit offers useful tools like the <a href="https://github.com/NVIDIA/jetson-gpio" target="_blank">Jetson GPIO Python library</a>, and is compatible with common sensors and peripherals, including many from Adafruit and Raspberry Pi.</li>
+                        <li>Many popular AI frameworks like TensorFlow, PyTorch, Caffe, and MXNet <a href="https://elinux.org/Jetson_Zoo" target="_blank">are supported</a>, and Jetson Nano is capable of running multiple neural networks in parallel to process data and drive action.</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('setup', 'next')" href="#setup">&lt; Previous Step</a>
+                <a class="btn btn-sm btn-success pull-right" onclick="takeMeThere('troubleshooting', 'next')" href="#troubleshooting">Next Step &gt;</a>
+            </div>
+        </section>
+        <section id="troubleshooting" class="lesson">
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('next', 'troubleshooting')" href="#next">&lt; Previous Step</a>
+            </div>
+            <hr>
+            <div class="lesson-inside">
+                <h2>Troubleshooting</h2>
+                <div class="lesson-part">
+                    <h3 id="troubleshooting-power">Power</h3>
+                    <p>If you cannot boot your Jetson Nano Developer Kit, the problem may be with your USB power supply.Please use a good quality power supply like <a href="https://www.adafruit.com/product/1995" target="_blank">this one</a>.</p>
+                    <p>It’s also important to have a good quality cord connecting your power supply to the developer kit:</p>
+                    <ul>
+                        <li>It’s good to use a power supply with permanently attached cord.</li>
+                        <li>Shorter cables will drop less voltage.</li>
+                    </ul>
+                </div>
+                <div class="lesson-part">
+                    <h3 id="troubleshooting-display">Display</h3>
+                    <p>HDMI to DVI adaptors are not supported. Please use a display that accepts HDMI or DP input.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row-of-buttons" style="margin-top: 0">
+                <a class="btn btn-sm btn-success" onclick="takeMeThere('next', 'troubleshooting')" href="#next">&lt; Previous Step</a>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- Lesson Navigator -->
+<script>String.prototype.includes||Object.defineProperty(String.prototype,"includes",{value:function(e,t){return"number"!=typeof t&&(t=0),!(t+e.length>this.length)&&-1!==this.indexOf(e,t)}}),String.prototype.endsWith||(String.prototype.endsWith=function(e,t){return(void 0===t||t>this.length)&&(t=this.length),this.substring(t-e.length,t)===e});const DEVMODE=!1,TITLE="Getting Started With Jetson Nano Developer Kit",PAGENAME="/embedded/learn/get-started-jetson-nano-devkit",ANCHOR_URI=PAGENAME+"#",LESSON_SELECT="section .lesson",CURRENT_MENU_SELECT="div.lesson-menu a.list-group-item-current",ALL_A_SELECT="div.lesson-menu a.list-group-item";let currentLesson,listOfLessons=[];function getSubsections(e){return Array.prototype.slice.call(document.querySelectorAll("#"+e+" h3, #"+e+" h4")).map(function(e){return e.id})}function takeMeThere(e,t){if(e){let s="",n=0,o=!1;t||(t=currentLesson);for(let t=0;t<listOfLessons.length;t++)if(e==listOfLessons[t])n=t,t=listOfLessons.length+1,currentLesson=e;else if(e.includes(listOfLessons[t])){n=t;let o=getSubsections(listOfLessons[t]);if(o){-1!=o.indexOf(e)&&(s=e,e=listOfLessons[t],currentLesson=e),t=listOfLessons.length+1}}let r=document.querySelector(CURRENT_MENU_SELECT);if(r&&r.classList.remove("list-group-item-current"),s)document.querySelector("div.lesson-menu a[href='#"+s+"']")?document.querySelector("div.lesson-menu a[href='#"+s+"']").classList.add("list-group-item-current"):(document.querySelector("div.lesson-menu a[href='#"+listOfLessons[0]+"']").classList.add("list-group-item-current"),e=listOfLessons[0],n=0,s=null,o=!0);else{document.querySelector("div.lesson-menu a[href='#"+e+"']").classList.add("list-group-item-current")}s&&t?history.pushState({},TITLE,ANCHOR_URI+s):o||history.pushState({},TITLE,ANCHOR_URI+e);let l=currentLesson,i=currentLesson;document.getElementById(t)&&(i=document.getElementById(t).id),document.getElementById(e)&&(l=document.getElementById(e).id),i!=l&&(document.getElementById(i).style.display="none",document.getElementById(l).style.display="block",setTimeout(function(){document.querySelector("#"+l+".lesson").classList.add("lesson-current"),document.querySelector("#"+i+".lesson").classList.remove("lesson-current")},30)),o&&history.pushState({},TITLE,ANCHOR_URI+t)}}const LESSONS=document.querySelectorAll(LESSON_SELECT);if(currentLesson=LESSONS[0].id,LESSONS.length){for(let e=0;e<LESSONS.length;e++)LESSONS[e].id&&listOfLessons.push(LESSONS[e].id);var URLAnchor=window.location.hash.substr(1);URLAnchor&&URLAnchor!=currentLesson&&takeMeThere(URLAnchor,currentLesson)}</script>
+<!-- Sticky Menu -->
+<script>if(-1!==navigator.userAgent.indexOf("MSIE")||navigator.appVersion.indexOf("Trident/")>-1);else{let e=!1,t=null;function resize(){1==!window.matchMedia("(max-width : 992px)").matches?e||(t=stickybits("#sticky_sidebar",{stickyBitStickyOffset:20},{useStickyClasses:!0}),e=!0):e&&(e=!1,document.getElementById("sticky_sidebar").style.removeProperty("top"),document.getElementById("sticky_sidebar").style.removeProperty("position"))}window.onresize=resize,window.onload=function(){1==!window.matchMedia("(max-width : 992px)").matches&&(t=stickybits("#sticky_sidebar",{stickyBitStickyOffset:20},{useStickyClasses:!0}),e=!0)}}</script>
+        </section>
+        <aside id="right" class="" role="complementary">
+        </aside>  <!-- /#sidebar-second -->
+      </div>
+    </div>
+    <div class="separator"></div>
+  </div>
+
+  <div class="white-background">
+    <div class="separator"></div>
+    <div class="container">
+      <div class="row">
+        <div id="pre_footer_left" class="col-xs-12 col-sm-12 col-lg-6">
+        </div>
+        <div id="pre_footer_right" class="col-xs-12 col-sm-12 col-lg-6">
+        </div>
+      </div>
+      <div class="separator"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id='footer' class='mt-auto'></div>
+
+  <script src="https://developer.nvidia.com/assets/feed-aggregator/feed-aggregator-7f147443abc2d1300a239c29e4ba3ca0d0d2eb0dc66b608765e2b3be50e18e10.js"></script>
+
+    <script src="https://developer.nvidia.com/assets/devzone3/old/dist/dz3-old-bundle-ed61b6a81d7c675ba7c54a1fe5dcfb2a960f17c5509388a7300f48a98f8dc751.js"></script>
+
+  <script>
+  const template = document.createElement('template');
+  template.innerHTML = `
+<style>
+@import "https://developer.nvidia.com/assets/feed-aggregator/feed-aggregator-9ace7521871242143cb35fa86d5be702c4dacb409600041fa6a5b14fa2a71dde.css";
+.feed-aggregator-component .card {
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3) !important;
+}
+.feed-aggregator-component .card:hover {
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.13), 0 14px 32px 5px rgba(0,0,0,0.13) !important;
+}
+</style>
+<div class="feed-aggregator-component"></div>
+`;
+  const hosts = {
+    'en': 'https://developer.nvidia.com/blog',
+    'cn': 'https://developer.nvidia.com/zh-cn/blog',
+  }
+
+  class FeedAggregatorElement extends HTMLElement {
+    constructor() {
+      super();
+      this._shadowRoot = this.attachShadow({ 'mode': 'open' });
+      this._shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+
+    connectedCallback() {
+      const categories = this.getAttribute('categories');
+      const tags = this.getAttribute('tags');
+      const perPage = this.getAttribute('per-page');
+      const excludedTags = this.getAttribute('excluded-tags');
+
+      let locale = this.getAttribute('locale');
+      if (!locale) {
+        locale = 'en';
+      }
+      let targetElement = this._shadowRoot.querySelector(".feed-aggregator-component");
+      let feed = {
+        id: 'blog',
+        host: hosts[locale],
+        type: 'json',
+        minCount: 2,
+      };
+      if (categories && categories !== 'all') {
+        feed['category_ids'] = categories.split(',');
+      }
+      if (tags && tags !== 'all') {
+        feed['tag_ids'] = tags.split(',');
+      }
+      if(excludedTags && excludedTags !== 'null'){
+        feed['excluded_tag_ids'] = excludedTags.split(',');
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        new FeedAggregator({
+          target: targetElement,
+          props: {
+            count: perPage,
+            openInNewTab: true,
+            showExcerpts: true,
+            feeds: [feed]
+          }
+        });
+      })
+    }
+  }
+
+  window.customElements.define('feed-aggregator', FeedAggregatorElement);
+</script>
+
+
+<template id='application-button-template'>
+  <style>
+      @import "https://developer.nvidia.com/assets/application-button/application-button-68ca7e1e3aa49ec79169d49226e34ee0c341d27a15a38b28ce975cb2467e123e.css";
+  </style>
+  <a href='' class='nvidia-application-button'>Join now</a>
+</template>
+
+<script>
+  async function fetchMembershipState () {
+    const userInfo = await fetch('/api/user');
+    const {status} = userInfo;
+    if (status === 401) {
+      let error = new Error('Unauthorized');
+      error.statusCode = status;
+      throw error;
+    }
+
+    // TODO: Figure out how to get DZ4 program
+
+    // Fetch page info.
+    const {pathname} = location;
+    const pageInfo = await fetch(`${pathname}.json`);
+    const pageData = await pageInfo.json();
+
+    // Fetch membership info
+    return pageData;
+  }
+
+  const initApplicationButton = (element) => {
+    const linkElement = element.querySelector('a');
+    fetchMembershipState()
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        switch (error.statusCode) {
+          default:
+            linkElement.innerHTML = 'Login';
+            linkElement.href = '/login';
+        }
+      });
+  };
+
+  class NvidiaApplicationButton extends HTMLElement {
+    constructor() {
+      const template = document.getElementById('application-button-template');
+      super();
+      this._shadowRoot = this.attachShadow({ 'mode': 'open' });
+      this._shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+    connectedCallback() {
+      const element = this._shadowRoot;
+      document.addEventListener('DOMContentLoaded', () => {
+        initApplicationButton(element);
+      });
+    }
+  }
+  window.customElements.define('nv-application-button', NvidiaApplicationButton);
+</script>
+
+<template id='application-text-template'>
+  <p></p>
+</template>
+
+<script>
+  class NvidiaApplicationText extends HTMLElement {
+    constructor() {
+      const template = document.getElementById('application-text-template');
+      super();
+      this._shadowRoot = this.attachShadow({ 'mode': 'open' });
+      this._shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+    connectedCallback() {
+
+    }
+  }
+  window.customElements.define('nv-application-text', NvidiaApplicationText);
+</script>
+
+
+
+
+<template id='nv-sf-form-validator-template'>
+  <script src="https://developer.nvidia.com/assets/sf-validation/moment-620a5949fff0ad37198f07464b91d7b7c110ecdb6f94ca90ca7d2e1b471f1da8.js"></script>
+  <script src="https://developer.nvidia.com/assets/sf-validation/validate.min-2160a65c1b5d4a5966544ad25af8fe99f11c636a99c516fee6c7afd3b1f21409.js"></script>
+  <p></p>
+</template>
+
+<script>
+  class NvidiaSalesforceValidator extends HTMLElement {
+    constructor() {
+      const template = document.getElementById('nv-sf-form-validator-template');
+      super();
+      this._shadowRoot = this.attachShadow({'mode': 'open'});
+      this._shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+
+    initComponent() {
+      if (!window.sfv) {
+        return;
+      }
+      validate.extend(validate.validators.datetime, {
+        parse: function (value, options) {
+          if (moment(value, options.format, true).isValid()) {
+            return +moment.utc(value);
+          }
+        },
+        format: function (value, options) {
+          var format = options.dateOnly ? "MM/DD/YYYY" : "MM/DD/YYYY hh:mm";
+          return moment.utc(value).format(format);
+        }
+      });
+
+      function showErrors(errors) {
+        $.each(errors, function (index, element) {
+          $('input[name="' + errors[index]['attribute'] + '"]').each(function (i, e) {
+            var errorMessage = errors[index]['options']['message'];
+            $('<div class="js-validation-errors">' + errorMessage + '</div>').insertAfter(e);
+          }).focus();
+        });
+      }
+
+      function isValidForm(form, constraints) {
+        var errors = validate(form, constraints, {format: "detailed"});
+        if (errors) {
+          showErrors(errors);
+          return false;
+        }
+        return true;
+      }
+
+      $.each(window.sfv, function (index, element) {
+        $(element.target).on('click', function (event) {
+          $('.js-validation-errors').remove();
+          if (!isValidForm(element.form, element.constraints)) {
+            event.preventDefault();
+          }
+        });
+      });
+    }
+
+    connectedCallback() {
+      document.addEventListener('DOMContentLoaded', () => {
+        this.initComponent();
+      });
+    }
+  }
+
+  window.customElements.define('nv-sf-form-validator', NvidiaSalesforceValidator);
+</script>
+
+
+<script src="https://developer.nvidia.com/assets/horizontal-chart/d3.v4.min-41cfecdf7c41476e805de7afacf4aacdd1a4be6947fbecf95217e947ebc2faf5.js"></script>
+<script src="https://developer.nvidia.com/assets/horizontal-chart/visualize-d-16cf14d4b63d6031e6c18983e91ac6d2b1b1f8140d15e351a9c847f8610b7e5b.js"></script>
+
+<template id="chart-template">
+  <style>
+      @import "https://developer.nvidia.com/assets/devzone3/modules/nvidia_tokens/nvidia-charts-6cd359a7ee3970fbfc15904a87ff96d214c208297870d8db7f6a5fa2c449bea7.css";
+  </style>
+  <div class="horizontal-chart-component">
+    <div class="chart-container">
+      <h4 class="chart-title"></h4>
+      <p class="chart-subtitle"></p>
+      <div class="legend"></div>
+      <svg data-nvidia-chart="true" data-chart-legend=""></svg>
+      <p class="chart-footnote"></p>
+    </div>
+  </div>
+</template>
+
+<script>
+  function chartInit(element) {
+    const chart = element.querySelector('svg[data-nvidia-chart]');
+    const isRendered = chart.getAttribute("data-rendered");
+    if (isRendered) {
+      return;
+    }
+
+    const svgChart = d3.select(chart);
+    const bars = JSON.parse(chart.dataset['chartBars']);
+    const ticks = JSON.parse(chart.dataset['chartTicks']);
+    const xAxisLabel = chart.dataset['xAxisLabel'];
+    const yAxisLabel = chart.dataset['yAxisLabel'];
+    const barPadding = chart.dataset['barPadding'];
+    const milestone = null;
+
+    const isGrouped = chart.dataset['isGrouped'] === 'true';
+    if (isGrouped) {
+      const legend = JSON.parse(chart.dataset['chartLegend']);
+      createGroupedHorizontalBarChart(svgChart, bars, barPadding, legend, ticks, milestone, xAxisLabel, yAxisLabel, false);
+    } else {
+      createHorizontalBarChart(svgChart, bars, barPadding, ticks, xAxisLabel, yAxisLabel, "", false);
+    }
+
+    chart.dataset['rendered'] = 'true';
+  }
+
+  $('a[data-toggle="tab"]').on("click", function (event) {
+    setTimeout(() => {
+      // Triggering 'resize' event to redraw charts.
+      window.dispatchEvent(new Event('resize'));
+
+      const target = jQuery(event.target).parents('.nav.nav-tabs').siblings('.tab-content').find('.tab-pane.active');
+      if (target.length > 0) {
+        const svg = jQuery(target).find('horizontal-chart');
+        if (svg.length) {
+          svg.each((idx, el) => {
+            setTimeout(function () {
+              const chartContainer = el._shadowRoot.querySelector('.chart-container');
+              chartInit(chartContainer);
+            }, 300);
+          });
+        }
+      }
+    }, 50);
+  });
+
+  async function loadFileSource(url) {
+    try{
+      const response = await fetch(url);
+      return response.json();
+    }catch (e) {
+      console.warn(`Failed to load chart data. URL: ${url}`);
+    }
+    return {};
+  }
+
+  class HorizontalChartElement extends HTMLElement {
+    constructor() {
+      const horizontalCharTemplate = document.getElementById('chart-template');
+      super();
+      this._shadowRoot = this.attachShadow({ 'mode': 'open' });
+      this._shadowRoot.appendChild(horizontalCharTemplate.content.cloneNode(true));
+    }
+    connectedCallback() {
+      const url = this.getAttribute('source');
+      const element = this._shadowRoot;
+      document.addEventListener("DOMContentLoaded", function () {
+        loadFileSource(url).then(data => {
+          const {
+            chartTitle: title,
+            chartSubtitle: subTitle,
+            chartFootnote: footNote,
+            chartId: id,
+            isGrouped: isGrouped,
+            legendData,
+            barPadding,
+            xAxisLabel,
+            yAxisLabel,
+            bars,
+            ticks
+          } = data;
+          element.querySelector('.chart-title').innerHTML = title;
+
+          // Subtitle
+          if (subTitle) {
+            element.querySelector('.chart-subtitle').innerHTML = subTitle;
+          } else {
+            element.querySelector('.chart-subtitle').remove();
+          }
+
+          // Chart
+          const svgElement = element.querySelector('.chart-container svg');
+          svgElement.id = id;
+
+          const dataAttributes = [
+            ['isGrouped', isGrouped ? 'true' : 'false', ''],
+            ['chartLegend', JSON.stringify(legendData), ''],
+            ['xAxisLabel', xAxisLabel, ''],
+            ['yAxisLabel', yAxisLabel, ''],
+            ['barPadding', barPadding, 5],
+            ['chartBars', bars, ''],
+            ['chartTicks', ticks, ''],
+          ];
+          dataAttributes.forEach(dataAttribute => {
+            if (dataAttribute[0] === 'chartBars' && dataAttribute[1]) {
+              dataAttribute[1] = JSON.stringify(dataAttribute[1]);
+            }
+            if (dataAttribute[0] === 'chartTicks' && dataAttribute[1]) {
+              dataAttribute[1] = JSON.stringify(dataAttribute[1]);
+            }
+
+            svgElement.dataset[dataAttribute[0]] = dataAttribute[1] ? dataAttribute[1] : dataAttribute[2];
+          });
+
+          // Caption
+          if (footNote) {
+            element.querySelector('.chart-footnote').innerHTML = footNote;
+          } else {
+            element.querySelector('.chart-footnote').remove();
+          }
+
+          // Init chart
+          const chartContainer = element.querySelector('.chart-container');
+          setTimeout(function () {
+            if (jQuery(chartContainer).is(':visible')) {
+              chartInit(chartContainer);
+            }
+          }, 300);
+        });
+      })
+    }
+  }
+
+  window.customElements.define('horizontal-chart', HorizontalChartElement);
+</script>
+
+
+
+  <script src="https://developer.nvidia.com/assets/tablefilter/tablefilter-e8295498b8f34d53fbb98264abcc88fb72c57915ee6a13b15361d5df0127ebbb.js"></script>
+
+
+<template id="nv-filtered-table-template">
+  <div class="nvidia-filtered-table-wrapper"></div>
+</template>
+
+<script>
+  const buildTableIdentity = (function (str) {
+    let counter = 0;
+    return function (str) {counter += 1; return `${str}-${counter}`}
+  })();
+
+  function slugify(str) {
+    return String(str)
+      .normalize('NFKD') // split accented characters into their base characters and diacritical marks
+      .replace(/[\u0300-\u036f]/g, '') // remove all the accents, which happen to be all in the \u03xx UNICODE block.
+      .trim() // trim leading or trailing whitespace
+      .toLowerCase() // convert to lowercase
+      .replace(/[^a-z0-9 -]/g, '') // remove non-alphanumeric characters
+      .replace(/\s+/g, '-') // replace spaces with hyphens
+      .replace(/-+/g, '-'); // remove consecutive hyphens
+  }
+
+  /**
+   * Returns URL params.
+   *
+   * @returns {any|{[p: string]: string}}
+   */
+  function getUrlParams() {
+    try {
+      return Object.fromEntries(new URLSearchParams(location.search));
+    } catch (e) {
+      // Fallback for IE11.
+      let search = location.search.substring(1)
+        .replace(/&/g, '","')
+        .replace(/=/g, '":"');
+      return JSON.parse('{"' + search + '"}', function (key, value) {
+        return key === "" ? value : decodeURIComponent(value);
+      });
+    }
+  }
+
+  /**
+   * Query string extension for TableFilter.
+   *
+   * @see http://www.tablefilter.com/extension-run-time.html
+   *
+   * @param {Object} tf
+   *   TableFilter instance.
+   * @constructor
+   */
+  function QueryStringExtension(tf) {
+    this.tf = tf;
+  }
+  QueryStringExtension.prototype.init = function () {
+    let tf = this.tf;
+    tf.emitter.on(['after-filtering'], this.afterFiltering.bind(this));
+  };
+  QueryStringExtension.prototype.afterFiltering = function (tf, terms) {
+    const config = tf.cfg;
+    // Get query string.
+    let existingParams = getUrlParams();
+    // Remove values related to current table.
+    $.each(terms, function (index, element) {
+      let key = config.qs_filters[index];
+      delete existingParams[config.table_identity + "_" + key];
+    });
+    $.each(terms, function (index, element) {
+      if (element.length) {
+        existingParams[config.table_identity + "_" + config.qs_filters[index]] = element;
+      }
+    });
+    const paramsKeys = Object.keys(existingParams).sort();
+    let sortedParams = {};
+    $.each(paramsKeys, function (i, e) {
+      sortedParams[e] = existingParams[e];
+    });
+    const params = $.param(sortedParams);
+    const url = window.location.pathname + '?' + decodeURI(params);
+    window.history.replaceState({}, '', url);
+  };
+
+  function addQueryStringExtension(tf) {
+    let queryStringExtension = new QueryStringExtension(tf);
+    try {
+      tf.registerExtension(queryStringExtension, 'queryStringExtension');
+      queryStringExtension.init();
+    } catch (e) {
+      console.log('Failed to init URL params handler.');
+    }
+  }
+
+  /**
+   * Filtered table web component.
+   */
+  class NvFilteredTableWebComponent extends HTMLElement {
+    constructor() {
+      super();
+      const elementTemplate = document.getElementById('nv-filtered-table-template');
+      this._shadowRoot = this.attachShadow({'mode': 'open'});
+      this._shadowRoot.appendChild(elementTemplate.content.cloneNode(true));
+    }
+
+    async loadSourceFile(url) {
+      try {
+        const response = await fetch(url);
+        return response.json();
+      } catch (e) {
+        console.warn(`Failed to load table data. URL: ${url}`);
+      }
+      return {};
+    }
+
+    fetchComponentData = (url, el, hash) => this.loadSourceFile(url).then((data) => this.instantiateComponent(data, el, hash));
+
+    getColumnTypes(config) {
+      return Array.from(config).map((col) => {
+        const {columnType} = col;
+        return columnType ? columnType : 'string';
+      });
+    }
+
+    addFilterWidgets(config, headerData) {
+      headerData.forEach((col, idx) => {
+        const {filterWidget} = col;
+        if (filterWidget) {
+          config[`col_${idx}`] = filterWidget;
+        }
+      });
+      return config;
+    }
+
+    instantiateComponent(data, element, hash) {
+      const {tableIndex: headerData, tableItems: rowsData, tableIdentity} = data;
+
+      let filterConfig = {
+        base_path: '/',
+        sticky_headers: true,
+        alternate_rows: true,
+        mark_active_columns: {
+          highlight_column: true,
+        },
+        loader: true,
+        highlight_keywords: true,
+        no_results_message: true,
+        toolbar: false,
+        help_instructions: false,
+        paging: {
+          results_per_page: ['Records: ', [25, 50, 100]]
+        },
+        auto_filter: true,
+        responsive: true,
+        grid_layout: {
+          width: '100%',
+          tbl_cont_css_class: 'nvidia-filtered-table'
+        },
+        clear_filter_text: 'All',
+        col_types: this.getColumnTypes(headerData),
+        extensions: [
+          {name: ''}
+        ],
+        flt_css_class: 'filter-control',
+        on_filters_loaded: (e) => {
+          const {cfg} = e;
+          if (!cfg) {
+            return;
+          }
+          const {defaultValues} = cfg;
+          if(!Array.isArray(defaultValues)) {
+            return;
+          }
+          if (defaultValues.length === 0) {
+            return;
+          }
+
+          defaultValues.forEach((defaultValue) => {
+            const {index, value} = defaultValue;
+            let headerCell = document.querySelector('.header-row th[data-idx="' + index + '"]');
+            if (!headerCell) {
+              return;
+            }
+            const filterIndex = headerCell.dataset['fidx'];
+            e.setFilterValue(filterIndex, value);
+          });
+          e.filter();
+        },
+        qs_filters: headerData.map((item) => {
+          return slugify(item?.columnName);
+        }),
+      };
+
+      filterConfig = this.addFilterWidgets(filterConfig, headerData);
+
+      const id = tableIdentity ? tableIdentity : buildTableIdentity('t');
+      filterConfig.table_identity = id;
+
+      const defaultValues = headerData
+        .filter(item => item?.defaultValue !== undefined)
+        .map(item => {
+          return {index: item['column'], value: item['defaultValue']};
+        });
+
+      const filtersMap = headerData.map(item => {
+        const {columnName, column} = item;
+        return { index: column, key: `${id}_${slugify(columnName)}`}
+      });
+
+      const sp = new URLSearchParams(location.search);
+      filtersMap.forEach(filter => {
+        if (!sp.has(filter.key)) {
+          return;
+        }
+        defaultValues.push({index: filter.index, value: sp.get(filter.key)});
+      });
+
+      const detail = {
+        hash,
+        headerData,
+        rowsData,
+        defaultValues,
+        filterConfig: {
+          table_identity: id,
+          config: filterConfig,
+          predefined_selects: JSON.stringify([]),
+          labels_width: [],
+        },
+      };
+      const event = new CustomEvent('nv.filterTable.build', {detail});
+      document.dispatchEvent(event);
+    }
+
+    connectedCallback() {
+      const url = this.getAttribute('source');
+      const hash = this.getAttribute('data-hash');
+      const element = this._shadowRoot;
+      document.addEventListener('DOMContentLoaded', () => this.fetchComponentData(url, element, hash));
+    }
+  }
+
+  // Register web component.
+  window.customElements.define('nv-filtered-table', NvFilteredTableWebComponent);
+
+  /**
+   * Builds table header.
+   *
+   * @param {Array} data
+   * @param {HTMLElement} parentElement
+   */
+  const buildHeader = (data, parentElement) => {
+    data.forEach((item, idx) => {
+      const {column, columnName} = item;
+      const cell = document.createElement('th')
+      cell.dataset['idx'] = column;
+      cell.dataset['fidx'] = idx;
+      cell.innerHTML = columnName;
+
+      const {labelWidth, columnWidth} = item;
+      if (labelWidth) {
+        cell.dataset['label_width'] = labelWidth;
+      }
+
+      if (columnWidth && Number.isInteger(columnWidth) && columnWidth > 0) {
+        cell.width = columnWidth + '%';
+      } else if (columnWidth && (columnWidth.endsWith('em') || columnWidth.endsWith('px') || columnWidth.endsWith('%'))) {
+        cell.width = columnWidth;
+      }
+
+      parentElement.appendChild(cell);
+    });
+  }
+
+  /**
+   * Builds table rows.
+   *
+   * @param {Object} headerData
+   * @param {Array} data
+   * @param {HTMLElement} parentElement
+   */
+  const buildRows = (headerData, data, parentElement) => {
+    data.forEach(partner => {
+      const {name, logo, URL: partnerUrl, cameras} = partner;
+
+      const logoCellContent = `
+<a href="${partnerUrl}">
+  <img src="${logo}" alt="${name}" title="${name}" loading="lazy">
+</a>
+<span class="element-invisible">${name}</span>
+`;
+      cameras.forEach(camera => {
+        const row = document.createElement('tr');
+
+        const logoCell = document.createElement('td');
+        logoCell.innerHTML = logoCellContent;
+        row.appendChild(logoCell);
+
+        for (const [key, value] of Object.entries(headerData)) {
+          if (!camera[value.column]) {
+            continue;
+          }
+          const cell = document.createElement('td');
+          let cameraValue = camera[value.column];
+          let cellHTML = '';
+          if (typeof cameraValue === 'object') {
+            const {type, product_url, product_img, td_text} = cameraValue
+            let img = '';
+            if(product_img !== "—") {
+              img = `<img src="${product_img}" alt="${td_text}" title="${td_text}">`;
+            }
+            let html = `
+<div class="product-link">
+  <a href="${product_url}" target="_blank">
+${img}
+  <div class="product-title">${td_text}</div>
+  </a>
+</div>`
+            cellHTML = html.trim();
+          } else if (typeof cameraValue === 'string') {
+            cellHTML = cameraValue
+          }
+          cell.innerHTML = cellHTML;
+          row.appendChild(cell);
+        }
+
+        parentElement.appendChild(row);
+      })
+    });
+  }
+
+  const initTable = (table, filtersConfig, defaultValues) => {
+    filtersConfig.config.defaultValues = defaultValues;
+    const nvidiaFilteredTable = new TableFilter(table, filtersConfig.config);
+
+    nvidiaFilteredTable.emitter.on(['before-loading-extensions'], addQueryStringExtension);
+
+    nvidiaFilteredTable.init();
+  };
+
+  document.addEventListener('nv.filterTable.build', (event) => {
+    const {detail} = event;
+    const {headerData, rowsData, filterConfig, hash, defaultValues} = detail;
+
+    const component = document.querySelector('nv-filtered-table[data-hash="' + hash + '"]');
+    const element = document.createElement('div');
+    element.classList.add('nvidia-filtered-table-wrapper');
+    element.innerHTML = `<div class="table-responsive"><table class="table table-hover table-striped sticky-enabled"><thead></thead><tbody></tbody></table></div>`;
+    component.after(element);
+
+    const table = element.querySelector('table');
+    const tableHeader = element.querySelector('table thead');
+    const tableHeaderRow = document.createElement('tr');
+    tableHeaderRow.classList.add('header-row');
+    tableHeader.appendChild(tableHeaderRow);
+    buildHeader(headerData, tableHeaderRow);
+
+    const tableBody = element.querySelector('table tbody');
+    buildRows(headerData, rowsData, tableBody);
+
+    initTable(table, filterConfig, defaultValues);
+  });
+</script>
+
+
+
+  
+
+  
+
+<script src="https://developer.nvidia.com/assets/nv-developer-menu-8ae864e49d5d53c328146a66e7ad6d73242af7511f642a7d1aa1ffedd496f826.js"></script>
+  <div id='footer' class='mt-auto'></div>
+  <script src="https://www.nvidia.com/content/dam/en-zz/Solutions/librarian/bundle-search-prod-pub-v3.1.js"></script>
+  <div id="librarian-overlay"></div>
+  <script defer>
+    setTimeout(() => {
+      LIBRARIAN.Home.mount({
+        elementId: 'librarian-overlay',
+        searchPage: false,
+        placeholder: '',
+        site: 'https://developer.nvidia.com',
+        retainFilters: true,
+        overlay: true,
+        pillsOpen: true,
+        suggestedSearchPills: ["CUDA Toolkit","cuDNN Installation Guide","Computer Vision for Self-Driving Cars","DGX SuperPOD","NVIDIA Container Toolkit","Documentation for Triton Inference Server","NeMo Framework Fundamentals","TensorRT","Download SDK Manager","NVIDIA API Guides","Omniverse Renderer Microservice","CUDA Programming Guide","vGPU","Networking Solutions","Building a RAG Powered AI Chatbot"]
+      })
+    }, 1000)
+  </script>
+<script>
+  // The menu CDN publishes en-US and zh-CN only. Any other available locale
+  // (ja-JP reaches here via the login page and the /ja-jp/ path prefix) would
+  // 404 the header and footer fetches and report a menu error, so fall back
+  // rather than lose the nav.
+  const MENU_LOCALES = ['en-US', 'zh-CN'];
+
+  let menuLocale = 'en';
+
+  if (menuLocale == 'en') {
+    menuLocale = 'en-US';
+  }
+
+  if (!MENU_LOCALES.includes(menuLocale)) {
+    menuLocale = 'en-US';
+  }
+
+  function mountHeader(data = false) {
+    const headerTarget = document.getElementById('header');
+    if (!headerTarget) {
+      return;
+    }
+    let options = {
+      baseURL: window.location.origin,
+      signedIn: false,
+      locale: menuLocale
+    };
+
+    if (data) {
+      options.secondaryMenu = data;
+    }
+
+
+    options.showMembershipCardLink = true;
+
+    new NVDeveloperHeader({
+      target: headerTarget,
+      props: options
+    });
+  }
+
+  function mountFooter(data = false) {
+    const footerTarget = document.getElementById('footer');
+    if (!footerTarget) {
+      return;
+    }
+    let options = {
+      menu: data,
+      locale: menuLocale
+    };
+
+    new NVDeveloperFooter({
+      target: document.getElementById('footer'),
+      props: options
+    });
+  }
+
+  let url = 'd29g4g2dyqv443.cloudfront.net';
+  let headerMenuURL = "https://d29g4g2dyqv443.cloudfront.net/menu/en-US/autonomous-machines.json";
+
+  if (headerMenuURL) {
+    fetch(headerMenuURL)
+      .then(response => response.json())
+      .then(data => {
+        mountHeader(data);
+      })
+      .catch((error) => {
+        mountHeader();
+        window.nv.tracing.addError('menu', error);
+      });
+  } else {
+    mountHeader();
+  }
+
+  fetch(`https://${url}/menu/${menuLocale}/footer.json`)
+    .then(response => response.json())
+    .then(data => {
+      mountFooter(data);
+    })
+    .catch((error) => {
+      mountFooter();
+      window.nv.tracing.addError('menu', error);
+    });
+</script>
+
+  <script src="https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js"></script>
+
+
+
+<script>
+  let silentAuthHost = 'www.nvidia.com';
+  let crossOriginPageUrl = `https://${silentAuthHost}/auth/hints/`;
+
+  function readHint() {
+    return new Promise((resolve) => {
+      const { origin: targetOrigin } = new URL(crossOriginPageUrl);
+
+      const iframe = document.createElement('iframe');
+      iframe.hidden = true;
+      iframe.src = crossOriginPageUrl;
+
+      function responseHandler(event) {
+        if (event.origin === targetOrigin) {
+          iframe.parentNode.removeChild(iframe);
+          return resolve(event.data);
+        }
+      }
+
+      window.addEventListener('message', responseHandler, { once: true });
+
+      iframe.onload = () => {
+        iframe.contentWindow.postMessage({ type: 'read' }, targetOrigin);
+      }
+
+      document.body.appendChild(iframe);
+    });
+  }
+
+  function writeHint(login_hint, idp_id, timestamp, sub) {
+    const { origin: targetOrigin } = new URL(crossOriginPageUrl);
+
+    const iframe = document.createElement('iframe');
+    iframe.hidden = true;
+    iframe.src = crossOriginPageUrl;
+
+    iframe.onload = () => {
+      const message = { type: 'write', login_hint, idp_id, timestamp, sub };
+      iframe.contentWindow.postMessage(message, targetOrigin);
+    }
+
+    document.body.appendChild(iframe);
+  }
+
+  function deleteHint() {
+    const { origin: targetOrigin } = new URL(crossOriginPageUrl);
+
+    const iframe = document.createElement('iframe');
+    iframe.hidden = true;
+    iframe.src = crossOriginPageUrl;
+
+    iframe.onload = () => {
+      iframe.contentWindow.postMessage({ type: 'delete' }, targetOrigin);
+    }
+
+    document.body.appendChild(iframe);
+  }
+
+
+</script>
+
+<script>_satellite.pageBottom();</script>
+<script src="https://developer.nvidia.com/assets/nv-alert/nv-alert-2fcf4faf418bd05dbbfc6d06c67713fd512ff67b25b6059be61edd35a7bcc0ed.js"></script>
+<script src="https://developer.nvidia.com/packs/js/runtime-f904b50470fcb0ec9bf4.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/4692-e2ed051c68e93113bb58.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/2681-6ac336ff34441936c0fb.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/2778-e8f3c5f27fbb1956fdb2.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/9878-baa65d618824b708a55b.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/8465-f321c9c28242e4383fa8.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/4622-1cd0dbd2a0f0b5243900.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/3566-4da32dac193512480c1b.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/486-1ddc749b634c231b0122.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/8311-71b2da0387dad11f356f.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/1252-6d8bb3f37b33aca41843.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/8823-bac8f579788282b3f2cd.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/775-f1e30132fa79d9ff8c3f.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/6900-b1b00a8ef19d3868862c.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/application-0583f79dc71e088940e6.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/ls_track-d4505a41101e752062c8.js" defer="defer"></script>
+</body>
+</html>

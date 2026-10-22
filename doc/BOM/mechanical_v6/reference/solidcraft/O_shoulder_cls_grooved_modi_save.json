@@ -1,0 +1,12 @@
+{
+  "id": 13,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bytes\": 3797997,\n  \"name\": \"O_shoulder_cls_grooved_modi\",\n  \"path\": \"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v6\\\\reference\\\\solidcraft\\\\O_shoulder_cls_grooved_modi.solidcraft\"\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

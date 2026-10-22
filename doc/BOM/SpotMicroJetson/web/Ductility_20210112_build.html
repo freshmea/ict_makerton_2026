@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Spot Micro - 정대게킬러
+    
+  </title>
+
+  <meta name="description" content="Spot Micro">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.5.0/styles/androidstudio.min.css">
+  <script src="//cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://ductility.github.io/2021/01/12/Spot_Micro.html">
+  <link rel="alternate" type="application/rss+xml" title="정대게킬러" href="/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">정대게킬러</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/posts/210112/01대표사진.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Spot Micro</h1>
+            
+            <h2 class="subheading">저예산 사족보행로봇 Spot Micro 만들기</h2>
+            
+            <span class="meta">Posted by
+              <a href="#">ductility</a>
+              on January 12, 2021 &middot; <span class="reading-time" title="Estimated read time">
+  
+   7 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h1 id="spot-micro">Spot Micro</h1>
+
+<p><a href="https://www.youtube.com/watch?v=KfkMx_psZdc=0s" target="_blank"><img src="/img/posts/210112/썸네일(수정).jpg" alt="_config.yml" width="100%" /></a>
+<em>이미지를 누르면 해당 동영상 링크가 새 창에서 열립니다.</em>
+<!-- ![_config.yml](/img/posts/210112/01대표사진.jpg){: width="100%"} --></p>
+
+<p>작년 2020년 3월부터 12월까지, 1년 가까이 성균관대 <a href="https://mecha.skku.ac.kr/roboticsinnovatory/index.do">Robotics Innovatory</a> 에서 스핀오프한 기업 <a href="https://www.aidinrobotics.com/">Aidin Robotics</a>의 사족보행로봇 팀에서 학부연구생 겸 인턴으로 일했다. 사족보행로봇 팀에 참여하다보니 자연스레 전반적인 사족보행로봇의 로봇 시스템에 대해 궁금해져 선배님들께 이것저것 물어보았고 선배님들은 최근 기술 동향이나 제작 노하우 등을 알려주셨다.</p>
+
+<p>그러면서 전체 로봇 시스템을 내 손으로 만들어 보고 싶다는 생각을 하던 차에 Boston Dynamics의 Spot Mini를 축소하여 저예산으로 만든 오픈소스 프로젝트 “Spot Micro”를 알게 되었다. 저예산 프로젝트임에도 5~60만원에 달하는 12개의 서보모터 비용이 부담되어 제작을 고민하고 있던 중에 그 모습을 지켜보던 Aidin Robotics 대표님께서 재료비를 지원해 주셔 프로젝트를 진행할 수 있었다.
+<br />
+<br /></p>
+
+<h2 id="개요">개요</h2>
+<p><img src="/img/posts/210112/02개요.jpg" alt="_config.yml" width="100%" /></p>
+
+<p>로봇에 장착된 Jetson Nano의 전원을 켜고, 동일한 네트워크에 연결된 PC에서 SSH를 이용하여 Jetson Nano에 접속한다. ROS를 이용하여 로봇을 제어하는데 필요한 프로세스들을 실행하면 Jetson Nano와 PCA9685 서보모터 제어 보드가 I2C 통신을 시작한다. PWM 제어 보드는 7.4V 18650 리튬이온전지에게 전원을 공급받고 있는 12개의 서보모터에게 제어 명령을 내리고 로봇의 모션 제어가 이루어진다.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="기반-프로젝트-선택">기반 프로젝트 선택</h2>
+
+<p>Spot Micro 오픈소스 프로젝트는 싱기버스의 KDY0523(Deok-yeon Kim) 님의 3D 모델링(https://www.thingiverse.com/thing:3445283)에서 시작되어 많은 파생 버전을 만들었다. 파생 버전에 따라 사용하는 하드웨어나 소프트웨어 스택이 정말 다양했는데 나는 나에게 익숙하고 구매가 쉬운 부품과 기반 소스코드를 선택했다.</p>
+
+<h3 id="하드웨어-선택">하드웨어 선택</h3>
+
+<!-- ![_config.yml](/img/posts/210112/03모터.jpg){: width="60%"} -->
+
+<p>조이스틱/키보드 등을 이용해 단순 보행만을 구현할 계획이었기에 LCD 모니터, 초음파센서, 자이로센서 등은 구매하지 않았다.</p>
+
+<ul>
+  <li>
+    <p>Jetson Nano(주 제어기) <br />
+저예산 SBC 중 Jetson Nano와 호환되는 부품들을 가지고 있었기 때문에 Raspberry Pi 대신에 Jetson Nano를 주 제어기로 선정했다.</p>
+  </li>
+  <li>
+    <p>DGS-1199(서보 모터) <br />
+<a href="https://www.youtube.com/watch?v=LqLittumdvQ">MG996R</a>, <a href="https://www.youtube.com/watch?v=bnEtJSkUFDk&amp;t=11s">cls6636hv</a> 등 선택지가 있었는데 전자는 모터 스펙이 부족해서 원활한 구동이 안되어 보였고 후자는 국내에서는 판매하지 않아 비슷한 스펙의 대체품인 DGS-1199를 선택했다.</p>
+  </li>
+  <li>
+    <p>PCA9685(모터 제어기) <br />
+<a href="https://github.com/OpenQuadruped/spot_mini_mini">Spot Mini Mini</a> 처럼 Teensy 4.0을 이용한 제어도 고려했으나 PCB 제작이 부담되어 i2c로 pwm 서보를 제어하는 PCA965를 선택했다.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="기반-소스코드-선택">기반 소스코드 선택</h3>
+
+<p>많은 오픈소스 프로젝트 소스코드 중 ROS에 익숙했기 때문에 <a href="https://github.com/mike4192/spotMicro">mike4192님의 프로젝트</a>를 기반 소스코드로 삼았다. 내가 선택한 하드웨어와 몇 가지 다른점이 있어서 소스코드를 일부 수정해야 했다.</p>
+
+<p>mike4192님의 프로젝트는 Raspberry Pi 3B에 Ubuntu 16.04, ROS Kinetic을 사용했는데 나는 Jetson Nano에 Ubuntu 18.04, ROS Melodic을 사용했다. 이때문에 apt 저장소에 올라오는 라이브러리의 버전이 일부 달랐고 이를 해결해 주었다.</p>
+
+<p><strong>spotMicro/ros-i2cpwmboard/src/i2cpwm_controller.cpp</strong></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="p">...</span>
+<span class="cp">#include &lt;linux/i2c-dev.h&gt;
+</span>
+<span class="c1">// 추가한 헤더파일</span>
+<span class="cp">#include &lt;i2c/smbus.h&gt;
+</span></code></pre></div></div>
+
+<p><strong>spotMicro/ros-i2cpwmboard/CMakeLists.txt</strong></p>
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">add_executable</span><span class="p">(</span>i2cpwm_board src/i2cpwm_controller.cpp<span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span>i2cpwm_board <span class="si">${</span><span class="nv">catkin_LIBRARIES</span><span class="si">}</span> i2c<span class="p">)</span> <span class="c1">#i2c 라이브러리 추가</span>
+<span class="nb">add_dependencies</span><span class="p">(</span>i2cpwm_board i2cpwm_board_generate_messages_cpp<span class="p">)</span>
+</code></pre></div></div>
+
+<p>위와 같이 <code class="language-plaintext highlighter-rouge">&lt;i2c/smbus.h&gt;</code>를 추가하고 <code class="language-plaintext highlighter-rouge">i2c</code>라이브러리를 링크하여 해결했다.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="제작">제작</h2>
+
+<h3 id="3d-프린팅">3D 프린팅</h3>
+
+<p>선택한 서보모터 DGS-1199가 CLS6336hv와 사이즈가 비슷해서 <a href="https://www.thingiverse.com/thing:3445283">KDY0523 님의 3D 모델링</a> 중 CLS6336HV 버전을 사용했다. 여기서 초음파센서와 LCD모니터를 사용하지 않기 때문에 이것들이 장착되는 전면과 후면 커버의 모델링을 일부 수정했다. Autodesk Inventor을 이용하여 전면커버에는 Jetson Nano 전원 버튼 위한 구멍을 내고, 후면 커버에는 모터 전원 공급 스위치를 달기 위한 구멍을 냈다.</p>
+
+<p><img src="/img/posts/210112/04모델수정.jpg" alt="_config.yml" width="100%" /></p>
+
+<p>Aidin Robotics의 지원을 받아 Markforged Onyx-One 3D 프린터를 사용하여 부품들을 3D 프린팅했다. 이 프린터는 PLA나 ABS 등 일반적으로 쓰이는 필라멘트와 달리 Onyx라는 독특한 재료를 사용했는데, 나일론과 유사한 연성재료여서 FDM 방식의 프린터임에도 출력물이 잘 깨져서 부러지지 않는다. 따라서 사족보행 로봇의 다리나 몸체의 제작에 효과적이다.</p>
+
+<p><img src="/img/posts/210112/05프린터.jpg" alt="_config.yml" width="100%" /></p>
+
+<p><img src="/img/posts/210112/06프린팅.jpg" alt="_config.yml" width="100%" /></p>
+
+<p><br /></p>
+
+<h3 id="배선">배선</h3>
+
+<p>18650 리튬이온전지, PCA9685, Jetson Nano, 12 x PWM 서보모터 등을 배선한다.</p>
+
+<p>안정적인 전력 공급을 위해 Jetson Nano에는 휴대폰 보조배터리를 이용해 전력을 공급했다.</p>
+
+<p>PCA9685보드 1개에 12개의 서보모터가 모두 연결되어있는 구조이기 때문에, 보드로 전력을 공급하면 최대 전압, 전류 제한 때문에 구동에 필요한 전력이 부족해진다.</p>
+
+<p>이에 따로 전원을 공급할 수 있게 하는 간이 모터 쉴드를 만능기판에 납땜하고 저항과 커패시터를 달아 안정적인 전력 공급을 유도했다.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="모터-정렬">모터 정렬</h2>
+
+<p>구매한 모터는 구동 범위가 제한된 PWM서보이기 때문에 모터 정렬을 해야 한다. mike4194님의 Servo Calibration Guide에 따라 특정 자세일 때 모터의 PWM 값을
+config.yaml 파일에 기록하여 정렬하는 것이다. 하지만 예상과는 달리 정렬을 마친 뒤에도 로봇의 다리가 움직이기는 하지만 제대로 걷지 못하는 현상을 겪었다.</p>
+
+<p>세밀한 모터 정렬이 문제인가 싶어 여러 번 재시도 하던 중, 시계방향으로 돌아야 할 PWM 신호에서 반대방향으로 모터가 동작하는 것을 발견했다. 구매한 모터의 회전방향이 가이드에 올라온 것과 반대였던 것이다.</p>
+
+<p>이를 발견하고 config의 방향 설정을 반대로 바꿔 주었고, 보행 테스트를 할 수 있었다.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="8-phase-보행">8-Phase 보행</h2>
+
+<p>mike4192님 코드의 master branch에는 기본적으로 8-Phase로 왼발 앞다리 - 오른발 뒷다리 - 오른발 앞다리 - 왼발 뒷다리 순으로 한다리씩 움직여 걷는 알고리즘이 적용되어있다. SSH로 Jetson Nano에 접속한 뒤 다음 코드들을 실행하여 구동할 수 있다.</p>
+
+<p><strong>bash</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>roscore
+
+<span class="nv">$ </span>rosrun i2cpwm_board i2cpwm_board
+
+<span class="nv">$ </span>roslaunch spot_micro_motion_cmd spot_micro_motion_cmd.launch
+
+<span class="nv">$ </span>rosrun spot_micro_keyboard_command spotMicroKeyboardMove.py
+</code></pre></div></div>
+
+<p>ROS 노드간의 통신을 위한 roscore, i2c 보드와의 통신을 위한 i2cpwm_board, 8-phase 모션 제어를 위한 spot_micro_motion_cmd, 키보드 입력으로 명렁어 전달을 위한 spotMicroKeyboardMove.py를 실행시킨다. 이 코드들은 ROS Topic을 이용한 프로세스 간 통신 - i2c 통신을 거쳐 서보모터에게 제어명령을 전달하고 최종적으로 로봇이 동작하게 된다.</p>
+
+<p><img src="/img/posts/210112/07한발씩gait.gif" alt="_config.yml" width="100%" /></p>
+
+<!-- 동작하는 움짤 및 유튜브 영상 -->
+
+<p><br />
+<br /></p>
+
+<h2 id="trot-gait-보행-4-phase">Trot Gait 보행 (4-Phase)</h2>
+
+<p>mike4192님 코드의 alternate_gate branch에는 대각선에 있는 두 다리를 동시에 움직이는 4-Phase Trot Gait 보행이 적용된 코드가 있다. Trot Gait은 두 다리를 동시에 움직이는 만큼, 모터 정렬이 어긋나있거나 무게 중심이 올바르지 않다면 로봇이 넘어질 가능성이 더 커진다. 작동법은 8-Phase 보행과 비슷하게 위 코드를 실행하면 된다.</p>
+
+<p><img src="/img/posts/210112/08두발씩.gif" alt="_config.yml" width="100%" /></p>
+
+<!-- 동작하는 움짤 -->
+
+<p><br />
+<br /></p>
+
+<h2 id="조이스틱으로-동작">조이스틱으로 동작</h2>
+
+<p>기존 소스코드는 키보드로 로봇을 동작시키는 노드 밖에 없었다. 로봇을 움직이려는데 컴퓨터 앞에 앉아 키보드를 두드리다보면 로봇의 돌발 행동에 대비하기도 힘들고, 폼도 나지 않는다. 따라서 Logitech F710 조이스틱을 이용해 로봇을 조종하는 코드를 작성했다.</p>
+
+<p>기존 코드는 python으로 작성되었지만, 나는 python 보다 C++에 익숙해서 C++로 <strong>spotMicro/spot_micro_joy/src/joy.cpp</strong>를 작성했다. 다음 명령어로 코드를 실행한다.</p>
+
+<p><strong>bash</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo chmod </span>a+rw /dev/input/js0
+
+<span class="nv">$ </span>roscore
+
+<span class="nv">$ </span>rosrun i2cpwm_board i2cpwm_board
+
+<span class="nv">$ </span>roslaunch spot_micro_motion_cmd spot_micro_motion_cmd.launch
+
+<span class="nv">$ </span>rosparam <span class="nb">set </span>joy_node/dev <span class="s2">"/dev/input/js0"</span>
+<span class="nv">$ </span>rosrun joy joy_node
+
+<span class="nv">$ </span>rosrun spot_micro_joy spot_micro_joy
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">spot_micro_joy</code>라는 ROS 패키지를 만들었다. 조이스틱 신호를 받는 ROS 노드를 켜고 새로 만든 노드를 실행시키면 조이스틱 입력을 받아 로봇이 작동한다.</p>
+
+<p><img src="/img/posts/210112/joystick_1.gif" alt="_config.yml" width="100%" /></p>
+
+<p><img src="/img/posts/210112/joystick_2.gif" alt="_config.yml" width="100%" /></p>
+
+<p><br />
+<br /></p>
+
+<h2 id="도움-링크">도움 링크</h2>
+
+<p>Aidin Robotics: https://www.aidinrobotics.com/</p>
+
+<p>Deok-yeon Kim 님의 모델링: https://www.thingiverse.com/kdy0523/designs</p>
+
+<p>Mike4192 님의 GitHub: https://github.com/mike4192/spotMicro</p>
+
+<p>Spot Mini Mini: https://github.com/OpenQuadruped/spot_mini_mini</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2020/09/02/iCampusCheck.html" data-toggle="tooltip" data-placement="top" title="iCampusCheck (아캠체크)">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+          <br>
+          
+<div id="disqus_thread"></div>
+<script>
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+ */
+
+var disqus_config = function () {
+	this.page.url = "https://ductility.github.io/2021/01/12/Spot_Micro.html";  // Replace PAGE_URL with your page's canonical URL variable
+	this.page.identifier = "/2021/01/12/Spot_Micro"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+var disqus_shortname = 'ductility';
+
+(function() {  // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+	s.src = '//' + 'disqus_shortname' + '.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:ductility9704@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/ductility">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; ductility 2021</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>

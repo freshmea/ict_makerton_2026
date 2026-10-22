@@ -1,0 +1,39 @@
+{
+  "verified_date_kst": "2026-10-23",
+  "sources": [
+    {
+      "id": "S29",
+      "file": "datasheets/MAX7219_MAX7221_Analog_Devices.pdf",
+      "sha256_matches": true,
+      "bytes": 1379413,
+      "pages": 15,
+      "all_pages_parse": true
+    },
+    {
+      "id": "S31",
+      "file": "datasheets/TTP223_BA6_V2_1_Tontek_reference.pdf",
+      "sha256_matches": true,
+      "bytes": 251549,
+      "pages": 8,
+      "all_pages_parse": true
+    },
+    {
+      "id": "S32",
+      "file": "web/Tontek_TTP223_BA6_candidate.html",
+      "sha256_matches": true,
+      "bytes": 90543
+    }
+  ],
+  "photos": [
+    {
+      "file": "img/MAX7219_8x8_LED_Matrix_20261023.png",
+      "sha256": "8ea18d47097fa8d19e79f2a3f3b33c84da38e710b8e030dacb3e7799f6dc510c",
+      "source_copy_matches": true
+    },
+    {
+      "file": "img/Capacitive_Touch_Modules_6pcs_20261023.png",
+      "sha256": "89dda8896aa73479af3eb9e0d9c42e8c9e7b3c40993a728dd3c00cee9fee65e8",
+      "source_copy_matches": true
+    }
+  ]
+}

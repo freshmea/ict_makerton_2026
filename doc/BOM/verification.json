@@ -1,0 +1,182 @@
+{
+  "verified_date_kst": "2026-10-23",
+  "saved": 25,
+  "failed": 7,
+  "files": [
+    {
+      "id": "S01",
+      "file": "datasheets/PCA9685_NXP.pdf",
+      "sha256_matches": true,
+      "bytes": 408783,
+      "pages": 52,
+      "all_pages_parse": true,
+      "text_characters": 102991
+    },
+    {
+      "id": "S02",
+      "file": "datasheets/LM2596_TI.pdf",
+      "sha256_matches": true,
+      "bytes": 5095029,
+      "pages": 47,
+      "all_pages_parse": true,
+      "text_characters": 99397
+    },
+    {
+      "id": "S03",
+      "file": "datasheets/Camera_Module_3_product_brief.pdf",
+      "sha256_matches": true,
+      "bytes": 1244344,
+      "pages": 7,
+      "all_pages_parse": true,
+      "text_characters": 5470
+    },
+    {
+      "id": "S04",
+      "file": "manuals/Jetson_Nano_Developer_Kit_User_Guide.pdf",
+      "sha256_matches": true,
+      "bytes": 1214167,
+      "pages": 26,
+      "all_pages_parse": true,
+      "text_characters": 33260
+    },
+    {
+      "id": "S05",
+      "file": "web/SunFounder_PCA9685_product.html",
+      "sha256_matches": true,
+      "bytes": 304417
+    },
+    {
+      "id": "S10",
+      "file": "web/Jetson_Nano_get_started.html",
+      "sha256_matches": true,
+      "bytes": 129236
+    },
+    {
+      "id": "S11",
+      "file": "web/Jetson_Nano_power_NVIDIA.html",
+      "sha256_matches": true,
+      "bytes": 103832
+    },
+    {
+      "id": "S12",
+      "file": "web/Jetson_GPIO_README.txt",
+      "sha256_matches": true,
+      "bytes": 17147
+    },
+    {
+      "id": "S14",
+      "file": "web/CLS6336HV_BeGreatRC.html",
+      "sha256_matches": true,
+      "bytes": 122919
+    },
+    {
+      "id": "S15",
+      "file": "manuals/LiPo_general_safety_Spektrum.pdf",
+      "sha256_matches": true,
+      "bytes": 404564,
+      "pages": 2,
+      "all_pages_parse": true,
+      "text_characters": 68300
+    },
+    {
+      "id": "S16",
+      "file": "web/Adapter_KC_SafetyKorea.html",
+      "sha256_matches": true,
+      "bytes": 12796
+    },
+    {
+      "id": "S17",
+      "file": "web/Adapter_RRA_registration.html",
+      "sha256_matches": true,
+      "bytes": 5243
+    },
+    {
+      "id": "S19",
+      "file": "web/NVIDIA_first_picture_camera.html",
+      "sha256_matches": true,
+      "bytes": 62666
+    },
+    {
+      "id": "S20",
+      "file": "web/NVIDIA_Nano_IMX708_support.html",
+      "sha256_matches": true,
+      "bytes": 48289
+    },
+    {
+      "id": "S21",
+      "file": "web/Balancer_Guard_V_Devicemart.html",
+      "sha256_matches": true,
+      "bytes": 529702
+    },
+    {
+      "id": "S22",
+      "file": "web/Balancer_Guard_V_firsthand_review.html",
+      "sha256_matches": true,
+      "bytes": 99582
+    },
+    {
+      "id": "S23",
+      "file": "web/Britz_BA-R9_official.html",
+      "sha256_matches": true,
+      "bytes": 38783
+    },
+    {
+      "id": "S24",
+      "file": "manuals/Britz_BA-R9_manual.jpg",
+      "sha256_matches": true,
+      "bytes": 846172
+    },
+    {
+      "id": "S25",
+      "file": "datasheets/WS2812B_V5_reference.pdf",
+      "sha256_matches": true,
+      "bytes": 635019,
+      "pages": 8,
+      "all_pages_parse": true
+    },
+    {
+      "id": "S26",
+      "file": "manuals/Adafruit_NeoPixel_Uberguide.pdf",
+      "sha256_matches": true,
+      "bytes": 5623588,
+      "pages": 110,
+      "all_pages_parse": true
+    },
+    {
+      "id": "S27",
+      "file": "web/Adafruit_NeoPixel_best_practices.html",
+      "sha256_matches": true,
+      "bytes": 104296
+    },
+    {
+      "id": "S28",
+      "file": "web/UGREEN_30143_candidate_reference.html",
+      "sha256_matches": true,
+      "bytes": 206769
+    },
+    {
+      "id": "S29",
+      "file": "datasheets/MAX7219_MAX7221_Analog_Devices.pdf",
+      "sha256_matches": true,
+      "bytes": 1379413,
+      "pages": 15,
+      "all_pages_parse": true
+    },
+    {
+      "id": "S31",
+      "file": "datasheets/TTP223_BA6_V2_1_Tontek_reference.pdf",
+      "sha256_matches": true,
+      "bytes": 251549,
+      "pages": 8,
+      "all_pages_parse": true
+    },
+    {
+      "id": "S32",
+      "file": "web/Tontek_TTP223_BA6_candidate.html",
+      "sha256_matches": true,
+      "bytes": 90543
+    }
+  ],
+  "audio_led_photo_verification": "verification_20261023_audio_led.json",
+  "matrix_touch_photo_verification": "verification_20261023_matrix_touch.json"
+}

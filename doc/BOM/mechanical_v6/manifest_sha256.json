@@ -1,0 +1,710 @@
+{
+  "date_kst": "2026-10-23",
+  "files": [
+    {
+      "file": "cad/BASE_LID_1.step",
+      "bytes": 44458,
+      "sha256": "92c7942763b11f022461fd93a38b977404e6520918e6c045b631c76924cf51cb"
+    },
+    {
+      "file": "cad/BASE_LID_2.step",
+      "bytes": 36786,
+      "sha256": "f8c1784586a0d637ceea9af54977786b5ace9d728e5255611d1e98608abb627d"
+    },
+    {
+      "file": "cad/BASE_LID_3.step",
+      "bytes": 44958,
+      "sha256": "3169a7e8f53aecc8c6696e4b059d298c99c0f2d7bc2a79e4803653e3037eb910"
+    },
+    {
+      "file": "cad/BASE_TRAY_1.step",
+      "bytes": 135578,
+      "sha256": "1d699562197c9f82200fd4838676fee6e8d4968760719ddd7a362eb9d7f70e87"
+    },
+    {
+      "file": "cad/BASE_TRAY_2.step",
+      "bytes": 114059,
+      "sha256": "c17fc5d898ffbcd6cb8e872af49e3762c2f9133aac6690387dc6c19f8696aa7f"
+    },
+    {
+      "file": "cad/BASE_TRAY_3.step",
+      "bytes": 137090,
+      "sha256": "fae6fba67c9e3394a67a4934cbee35d97f988200f662cc13c926ff8096dbbbb9"
+    },
+    {
+      "file": "cad/build_v6.py",
+      "bytes": 23200,
+      "sha256": "482dc07913f3b2b4d2cd5ba8a96ba69e9678713f308f9f6a0796f0a1a212a936"
+    },
+    {
+      "file": "cad/fold_wing_v6_P0_assembly.step",
+      "bytes": 2071019,
+      "sha256": "f49666aa57d255fdfe69c90198a0e7bc7d71378dc15d74050ab776555f226499"
+    },
+    {
+      "file": "cad/HEAD_CASE.step",
+      "bytes": 161011,
+      "sha256": "a435a5d3cda58d546f0161f5125e8bd82987c919c75802bcd97dda24edf3c36e"
+    },
+    {
+      "file": "cad/HEAD_FACE_TRIAL.step",
+      "bytes": 70906,
+      "sha256": "29b08461322474c3f6569d085b5496a8f6c592ff247ab70d76d139cad5c9854f"
+    },
+    {
+      "file": "cad/L_ARM_FORK_TRIAL.step",
+      "bytes": 156330,
+      "sha256": "0cdf1168447189ecfb48d52c96d55899ae500819d1b20fc44f8f8fd8b84817f6"
+    },
+    {
+      "file": "cad/L_PALM_SHELL_TRIAL.step",
+      "bytes": 195184,
+      "sha256": "7b652ccbaee38d6dec4dc6dca061a41b637eb1baf5b2d4bcf0a3fa5908decd86"
+    },
+    {
+      "file": "cad/L_YAW_PEDESTAL_TRIAL.step",
+      "bytes": 28846,
+      "sha256": "cd04730fb5c929e32856836c767737e86f97e3de6b42ec0f572aaf768424767d"
+    },
+    {
+      "file": "cad/parameters_used.json",
+      "bytes": 1135,
+      "sha256": "690d4d89cf4d2b954256d1c99af03185d4d33df1a9ff429c055fe6d294cb32d8"
+    },
+    {
+      "file": "cad/PHONE_CRADLE_TRIAL.step",
+      "bytes": 37940,
+      "sha256": "f09910ad09cfd94c8eed9019c3028884e89626f433e4fbc25c356a39b7361ff8"
+    },
+    {
+      "file": "cad/R_ARM_FORK_TRIAL.step",
+      "bytes": 154860,
+      "sha256": "3e01bb7a3951c339bc59c4b39cec68c29a11ba04283e6aa6bb4341de37f4f939"
+    },
+    {
+      "file": "cad/R_PALM_SHELL_TRIAL.step",
+      "bytes": 195128,
+      "sha256": "6a66e88f70e27c63594cfacf2b4afdcd8bf49b673b2185df709b4c209fb89cee"
+    },
+    {
+      "file": "cad/R_YAW_PEDESTAL_TRIAL.step",
+      "bytes": 28846,
+      "sha256": "a718f79b07ba1fd35caa584f38f488a0e2a4230b78beac0097af1ed0bbb90d8f"
+    },
+    {
+      "file": "cad/SEAM_PLATE_1.step",
+      "bytes": 29852,
+      "sha256": "f9d278f31366eac2d2418392590ef5720222350e6e02dc56b15f9e596073687c"
+    },
+    {
+      "file": "cad/SEAM_PLATE_2.step",
+      "bytes": 29852,
+      "sha256": "a42cd7b8c631c5305fcb586ef59ae7863ec132d63f38f2218657e5c2816fe9a0"
+    },
+    {
+      "file": "cad/update_indexes.py",
+      "bytes": 3596,
+      "sha256": "0018b4a5dcc092d93096a209ac13b1bef8668b1729c3d1f5b45004b03f6f51e9"
+    },
+    {
+      "file": "cad/validation.json",
+      "bytes": 6999,
+      "sha256": "9997fa53726a0da25c04a1307d9aaaecd32b85e9f2e159dbab1eba3d509e4ed3"
+    },
+    {
+      "file": "dimensions/Britz_BA-R9_manual.jpg",
+      "bytes": 846172,
+      "sha256": "ee2dfbb268b7d85d7b9b07994ccabca8d5a12d55218c29663b653e764cfb8e76"
+    },
+    {
+      "file": "dimensions/Britz_BA-R9_source.html",
+      "bytes": 38783,
+      "sha256": "a4affc48cf6988b8a4c03c14b9791a937e121d1bb6f9bba6036e15393a19492a"
+    },
+    {
+      "file": "dimensions/build_detail_sheets.py",
+      "bytes": 12931,
+      "sha256": "995132e71ef3a68ba8efb53abb141d448bcc6987d6df40933f70504578c9d058"
+    },
+    {
+      "file": "dimensions/camera-module-2-mechanical-drawing.pdf",
+      "bytes": 39831,
+      "sha256": "3684135b13632d095ef0937b017a0145d6f145a4d2cede4affe97235c43f5103"
+    },
+    {
+      "file": "dimensions/camera-module-2-mechanical-drawing.png",
+      "bytes": 74599,
+      "sha256": "4c015da9fb0e59f7e0b57b8f6c3f72ee170834ad5c4a493d3c8f4d9c325414c2"
+    },
+    {
+      "file": "dimensions/camera-module-3-standard-mechanical-drawing.pdf",
+      "bytes": 949985,
+      "sha256": "bde27f5ab38dd46aa05713bbb17c6e8acc4cb1d48ff9109df511256f6fbc66ac"
+    },
+    {
+      "file": "dimensions/camera-module-3-standard-mechanical-drawing.png",
+      "bytes": 27282,
+      "sha256": "db93807bed462fe4d414031ef828db93d8c63aad0d5fc62d5e7ddb24f7a113fb"
+    },
+    {
+      "file": "dimensions/camera-module-3-wide-mechanical-drawing.pdf",
+      "bytes": 946851,
+      "sha256": "c5f87a9b48d63857fb3d9c0a3deeec797325c56d198c80bcb77a2062e6925b92"
+    },
+    {
+      "file": "dimensions/camera-module-3-wide-mechanical-drawing.png",
+      "bytes": 28050,
+      "sha256": "b750fdec4d4e815a140059c027e539eb16cdd80143ce50f8c3b2ac1f21953769"
+    },
+    {
+      "file": "dimensions/Camera_Module_3_product_brief.pdf",
+      "bytes": 1244344,
+      "sha256": "578efcad6337696a29b9c068815a01d63ddcf7beacf584051d61cf1cddeeaf0a"
+    },
+    {
+      "file": "dimensions/CLS6336HV_BeGreatRC_source.html",
+      "bytes": 122919,
+      "sha256": "7a8c91b497edf77cba9b56a74530ab3572113ae95f7893612583e783201ae864"
+    },
+    {
+      "file": "dimensions/CLS6336HV_dimension_crop.png",
+      "bytes": 181369,
+      "sha256": "79787906d12b77ce784aa3ecd0bb49fc7973bfa3cf68c4258700f41b25423551"
+    },
+    {
+      "file": "dimensions/CLS6336HV_vendor_dimensions.jpg",
+      "bytes": 1566602,
+      "sha256": "dd5a8592e1d10ccfe38972b28489d1ae3a3f821bb769835175441abdd0da3f36"
+    },
+    {
+      "file": "dimensions/collect_dimensions.py",
+      "bytes": 7312,
+      "sha256": "2f5b80bf4f5946dae1cad41b45afa888e8c04c33c256481e5fe125c3f1e499a8"
+    },
+    {
+      "file": "dimensions/dimensions_sources.json",
+      "bytes": 13039,
+      "sha256": "ace593fe5caf57d665b8f5a7c928e26ca35e3dc2b76dc633d08b88530f5b196b"
+    },
+    {
+      "file": "dimensions/NVIDIA_download_catalog.json",
+      "bytes": 329949,
+      "sha256": "3d08840fc255ac11890e1db3207f68b7808bb7661589408d92df596c4664a3e9"
+    },
+    {
+      "file": "dimensions/NVIDIA_Nano_launch_size.html",
+      "bytes": 82801,
+      "sha256": "e9ab064ec9fe750f0f2100964c0087bdfcb6e9fc4e4239bd9418f6b8aa3ae3e8"
+    },
+    {
+      "file": "dimensions/SunFounder_TS0185_source.html",
+      "bytes": 304417,
+      "sha256": "4d4f437b362aeee2059f831a02cd56ad4546f124733199b835808c89678e53b8"
+    },
+    {
+      "file": "dimensions/verification.json",
+      "bytes": 1110,
+      "sha256": "86180c07399695fac0cb441f97e24ba5a3dd58f84a1ab133c91da65c17214817"
+    },
+    {
+      "file": "dimensions/치수_근거와_실측항목.md",
+      "bytes": 8062,
+      "sha256": "5f122adb78e076159b6f097f074e521d2a5096258c10803343dfcc7267cf9e0b"
+    },
+    {
+      "file": "drawings/CAD_HLR_front.png",
+      "bytes": 37561,
+      "sha256": "e944476d898f87b36a6226ae7335f78ff1d9852a99eb5ad972ace46854332b7e"
+    },
+    {
+      "file": "drawings/CAD_HLR_front.svg",
+      "bytes": 164727,
+      "sha256": "4fb4460a644f0a8879f174c695db8db78c32db6e4e9cf1c29421d47ec05ce921"
+    },
+    {
+      "file": "drawings/CAD_HLR_side.png",
+      "bytes": 32916,
+      "sha256": "a54823cae6a3b7136f918dcef39db9abc77f3b6c4b841ed054306a8889c52e9c"
+    },
+    {
+      "file": "drawings/CAD_HLR_side.svg",
+      "bytes": 17146,
+      "sha256": "c461d1a33d6f8bb8787a4313bcab291daf832d5329a341ece645c7ea54ada5fc"
+    },
+    {
+      "file": "drawings/CAD_HLR_top.png",
+      "bytes": 25792,
+      "sha256": "baf15a4c162602193b39c7efd2de548038efcfd784c6575e8b5cf8616d31a128"
+    },
+    {
+      "file": "drawings/CAD_HLR_top.svg",
+      "bytes": 159646,
+      "sha256": "9e7f4cc6efe3087eebe79863778ec6da29a5fc9b0a687993e949792be3347d5f"
+    },
+    {
+      "file": "drawings/FWB_ASM_001_orthographic_A3.pdf",
+      "bytes": 83189,
+      "sha256": "d9ec3091fd497f46038ef5113456b9cce6f92b1745ded2f505a7150bac37090b"
+    },
+    {
+      "file": "drawings/FWB_ASM_001_orthographic_A3.png",
+      "bytes": 258801,
+      "sha256": "cabdeafaa2f666dba5a96c59454c75089c1e30b4699e056627078f76c57e2eee"
+    },
+    {
+      "file": "drawings/FWB_ASM_001_orthographic_A3.svg",
+      "bytes": 176813,
+      "sha256": "07de875a3acbb2d1da039984d152188453839c5990ec3124d905da5a1db6de67"
+    },
+    {
+      "file": "drawings/FWB_BASE_internal_layout.pdf",
+      "bytes": 16436,
+      "sha256": "2d38483f4e81fcdeacc73706967dc3d151cd38b566a19b3fdc7ef550df5ecd32"
+    },
+    {
+      "file": "drawings/FWB_BASE_internal_layout.png",
+      "bytes": 54099,
+      "sha256": "cfb5a9651df9daa439c3aee85242ad39e1e4165036b3710834ba796d04d83880"
+    },
+    {
+      "file": "drawings/FWB_DETAIL_reference_A3.pdf",
+      "bytes": 120724,
+      "sha256": "28e4219263d9b9095010c395444dcf3e128d48554fc020f2f3da07fc0ff9a9be"
+    },
+    {
+      "file": "drawings/FWB_DETAIL_reference_A3.png",
+      "bytes": 176656,
+      "sha256": "04412e3878c61d6bc3a56e775ec5fa4575a53830e02a2bf062f577d96959579c"
+    },
+    {
+      "file": "drawings/FWB_DETAIL_reference_A3_page2.png",
+      "bytes": 180124,
+      "sha256": "6c63d555ef62ea65bdcfbffdf765432e408be35f681b7ec01a7641d7cdcbaa8e"
+    },
+    {
+      "file": "PARTS.md",
+      "bytes": 2462,
+      "sha256": "aeb3bea54d5e3da6f62ca950280d8851268e9b3d95c3b2e321eff5d3ac91c1f6"
+    },
+    {
+      "file": "README.md",
+      "bytes": 8301,
+      "sha256": "f9785e49004c3d5a3fa17164aa60850bd6d94273ab4650e38dc7eb58c15df8f3"
+    },
+    {
+      "file": "reference/joint_reference.md",
+      "bytes": 8771,
+      "sha256": "d298dce0eb7c6dc3595c5d2537cec5c962e988d363f4f887253c779a4f00c566"
+    },
+    {
+      "file": "reference/joint_test_parts/F625ZZ_bearing_fit_trial.step",
+      "bytes": 1156232,
+      "sha256": "0bb2f9f98c4ee67f5ab287079f9244a7f64e4892386f19b32424cd290a02f81e"
+    },
+    {
+      "file": "reference/joint_test_parts/F625ZZ_bearing_fit_trial.stl",
+      "bytes": 1054984,
+      "sha256": "219a4888ddaacf59c7a73ed575a6be280b27a6745bb0a439e80f45d0bfd31e56"
+    },
+    {
+      "file": "reference/joint_test_parts/F625ZZ_bearing_fit_trial.svg",
+      "bytes": 131191,
+      "sha256": "2350476d6bf59b4e4d92f74b952f56750fc78923f12c3e70c4d0914eb4676247"
+    },
+    {
+      "file": "reference/joint_test_parts/servo_fit_trial.step",
+      "bytes": 1393982,
+      "sha256": "9c72d3c1b511c91caae32d89e1135a22f27f63fda76a1e8d7b99c9c00c841a24"
+    },
+    {
+      "file": "reference/joint_test_parts/servo_fit_trial.stl",
+      "bytes": 785784,
+      "sha256": "c57443fb4cbcd578a22c18fc80c9bb408fe9cd5ac73a0793aed73e54cc3b5613"
+    },
+    {
+      "file": "reference/joint_test_parts/servo_fit_trial.svg",
+      "bytes": 77930,
+      "sha256": "ee2759fb3a19ff1a4bc32394f7df664dda622bbed9eaaf54e7107694b89499a1"
+    },
+    {
+      "file": "reference/joint_test_parts/verification.json",
+      "bytes": 3321,
+      "sha256": "1a662c5b7d8eaa499efd337423ec5648493d7b49ab0a9c78d0cf6aca0a2017e1"
+    },
+    {
+      "file": "reference/joint_test_parts.py",
+      "bytes": 4062,
+      "sha256": "c25ed7891ccc244445606545baa339b2de531e1dc32b6c437cfe841883d903ca"
+    },
+    {
+      "file": "reference/JTEKT_F625ZZ.html",
+      "bytes": 55507,
+      "sha256": "c05eddc9064dab88312ea737738291e277bbb8143d4272d82f26410d4f2bea1c"
+    },
+    {
+      "file": "reference/solidcraft/analysis_summary.json",
+      "bytes": 10078,
+      "sha256": "e23ba31c86322aa3382ddfd5bb481d665c5c3475c41690d6dd4cc7fee6218ace"
+    },
+    {
+      "file": "reference/solidcraft/I_shoulder_cls_modi.solidcraft",
+      "bytes": 5098641,
+      "sha256": "1c81e1ce4ea46c96f00b103424e158979b38aa5e814eba3192f814d85374bbee"
+    },
+    {
+      "file": "reference/solidcraft/I_shoulder_cls_modi_inspect.json",
+      "bytes": 1684,
+      "sha256": "1d85c8d6ae8ecef6d145450a44b92493d0c120e99386ecab720bf38ab398636d"
+    },
+    {
+      "file": "reference/solidcraft/I_shoulder_cls_modi_iso.png",
+      "bytes": 224328,
+      "sha256": "2a4e52a1418f4a8315a2b942ba8b924f58250359e3e21148599e61c04fa2615d"
+    },
+    {
+      "file": "reference/solidcraft/I_shoulder_cls_modi_measure.json",
+      "bytes": 1320,
+      "sha256": "ee72fbb74f6ebaeb32bf67f09f1b6e87d8262f687283e6697288080358c73488"
+    },
+    {
+      "file": "reference/solidcraft/I_shoulder_cls_modi_open.json",
+      "bytes": 499,
+      "sha256": "8a4c1f72397d1c585610ab2596b467523e2cc720a3aa6d846922eb6663a09b4d"
+    },
+    {
+      "file": "reference/solidcraft/I_shoulder_cls_modi_save.json",
+      "bytes": 357,
+      "sha256": "82280215a550566957eada68796f103fdb93bcf1db29666093abfb79249a856d"
+    },
+    {
+      "file": "reference/solidcraft/I_shoulder_cls_modi_screenshot_result.json",
+      "bytes": 519,
+      "sha256": "b63855076e46ab689be8c93202fe2dded5105a675af36b99656d39d1bc109e51"
+    },
+    {
+      "file": "reference/solidcraft/I_shoulder_cls_modi_topology.json",
+      "bytes": 4974973,
+      "sha256": "1fddb9917b30c3642f5a0abae17bd26d814ac152955c1592eb11b644e17d8759"
+    },
+    {
+      "file": "reference/solidcraft/initial_design_inspection.json",
+      "bytes": 1673,
+      "sha256": "23eb1fd36f710b054bfdf9f0565a4bf6661feeb998c3cf655af5430b59b715ae"
+    },
+    {
+      "file": "reference/solidcraft/L_arm_cover.solidcraft",
+      "bytes": 599647,
+      "sha256": "ee90b31fc017f32b8e3d5b33c53260edd4f10113f547821f38d079a4c558164a"
+    },
+    {
+      "file": "reference/solidcraft/L_arm_cover_inspect.json",
+      "bytes": 1657,
+      "sha256": "c60f14abe766f4097d9530d02f86b5714f77568791d923379e2d91f79e8810ef"
+    },
+    {
+      "file": "reference/solidcraft/L_arm_cover_iso.png",
+      "bytes": 49587,
+      "sha256": "533dbe382b17b375026050a74d9c6d4a6397b1198c66c710fe47390914ffb6bb"
+    },
+    {
+      "file": "reference/solidcraft/L_arm_cover_measure.json",
+      "bytes": 1296,
+      "sha256": "b06cb53987530abc51c6afc6a5d21bedbd022cd96869cdc11773e702b74c8548"
+    },
+    {
+      "file": "reference/solidcraft/L_arm_cover_open.json",
+      "bytes": 489,
+      "sha256": "d71d032c94c2543d1f0be940abecb574a9ebfc8874c192352043d95090a0d558"
+    },
+    {
+      "file": "reference/solidcraft/L_arm_cover_save.json",
+      "bytes": 341,
+      "sha256": "fcbbc90ac8af3bf2408c5105c8bd780f5c33908127882c29dcf265d17f33ef9d"
+    },
+    {
+      "file": "reference/solidcraft/L_arm_cover_screenshot_result.json",
+      "bytes": 511,
+      "sha256": "33502a451ba1fe7b513d79f6b143346c0d1ff96e5ff1793ef22f1e5b7d1c6c82"
+    },
+    {
+      "file": "reference/solidcraft/L_arm_cover_topology.json",
+      "bytes": 609,
+      "sha256": "d9ad14e665582b2d4f94e9b95656c9849b750cb442aad793c3f86f00e0015445"
+    },
+    {
+      "file": "reference/solidcraft/live_connection_status.json",
+      "bytes": 571,
+      "sha256": "45e3b94059cdaddf994bf1dd39cb43ab2c0cd41ee6afcd053721e07d9c7f0872"
+    },
+    {
+      "file": "reference/solidcraft/mcp_initialize.json",
+      "bytes": 1291,
+      "sha256": "bb92c07368208795852bdabd68cdbe58392a25c8f36392f8e3d42b9c09c172b9"
+    },
+    {
+      "file": "reference/solidcraft/mcp_stderr.txt",
+      "bytes": 330,
+      "sha256": "36455182f98c96d9f180383f8c106ebf565ceceeab71fe3859e8ef2782b1103c"
+    },
+    {
+      "file": "reference/solidcraft/mcp_tools.json",
+      "bytes": 22109,
+      "sha256": "44752db6e478b3f7ee1bc9a2142f93fae776bcaa6ca47d9df5848b5bce7ae938"
+    },
+    {
+      "file": "reference/solidcraft/O_shoulder_cls_grooved_modi.solidcraft",
+      "bytes": 3797997,
+      "sha256": "48a19dea508683961ad3741eba14105fe9bde8d028e9ec819954fb6a990af3b3"
+    },
+    {
+      "file": "reference/solidcraft/O_shoulder_cls_grooved_modi_inspect.json",
+      "bytes": 1654,
+      "sha256": "2cc3ece3ba711e08dd598400ffa62af866c734074baecd277039bdab55f55e1b"
+    },
+    {
+      "file": "reference/solidcraft/O_shoulder_cls_grooved_modi_iso.png",
+      "bytes": 188788,
+      "sha256": "466a80f0f5ef05cbf0de7cb343699b957a14843735281d097c31a8f8236190e4"
+    },
+    {
+      "file": "reference/solidcraft/O_shoulder_cls_grooved_modi_measure.json",
+      "bytes": 1294,
+      "sha256": "426f61ef6228311b35da157bec5f7a1c4fcd6f398bef8336b14ba2d1dd9b2ed5"
+    },
+    {
+      "file": "reference/solidcraft/O_shoulder_cls_grooved_modi_open.json",
+      "bytes": 515,
+      "sha256": "bfc0fc23e12fb61bfa6455d6a27b9ef1956b65ad081d45690fa8599b0cc7a891"
+    },
+    {
+      "file": "reference/solidcraft/O_shoulder_cls_grooved_modi_save.json",
+      "bytes": 374,
+      "sha256": "bdae6f52c367f59ff302833c0ce074fb457cbef288679383911b07731ce610c1"
+    },
+    {
+      "file": "reference/solidcraft/O_shoulder_cls_grooved_modi_screenshot_result.json",
+      "bytes": 528,
+      "sha256": "79d9225b5ae743cdc234d593df395ecb195ff459ef82761f1acfa76f63143f11"
+    },
+    {
+      "file": "reference/solidcraft/O_shoulder_cls_grooved_modi_topology.json",
+      "bytes": 3680856,
+      "sha256": "10416d37a12778bd82760c6ab24c9ab4c60f2b30caf7391728958c770f9496b2"
+    },
+    {
+      "file": "reference/solidcraft/README.md",
+      "bytes": 3526,
+      "sha256": "ebc8d77bde5520e8b32d654e6a15ec52516c3d43625bd1ec9dd6682ed08cb31c"
+    },
+    {
+      "file": "reference/solidcraft/relevant_commands.json",
+      "bytes": 6400,
+      "sha256": "be8d6d90cda5ba0d232cd2b22b509cba2a59d63ac1d66c66fc53d9dd0695a176"
+    },
+    {
+      "file": "reference/solidcraft_analysis.py",
+      "bytes": 3535,
+      "sha256": "ff4431b2e0b99bc56ef36a514b2489b776192c3ed7dc546e9221a94d12b049af"
+    },
+    {
+      "file": "reference/solidcraft_probe.py",
+      "bytes": 2005,
+      "sha256": "42719384101289b119fa0f19f93e432a0ff2656006396f916c4911ead03fdd57"
+    },
+    {
+      "file": "reference/SpotMicro_mesh_projections.png",
+      "bytes": 111857,
+      "sha256": "c9a26ee0b7dc556ef5d58ed9a03003202f5370abe70187c81b8223b38ccac959"
+    },
+    {
+      "file": "reference/SpotMicro_original_bearing_seat.json",
+      "bytes": 1447,
+      "sha256": "11f8d84bb8ac80b468a1b7af58a053011b77681338f2d1dd3c87474b2a9cb381"
+    },
+    {
+      "file": "reference/SpotMicro_parts/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STEP_Files/I_shoulder_cls_modi.stp",
+      "bytes": 5097753,
+      "sha256": "a51fb3eab8c6fa26f080d4515243b4c524d0fd154eb825dce6fe3fdd6eacfea5"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STEP_Files/O_shoulder_cls_grooved_modi.stp",
+      "bytes": 3797100,
+      "sha256": "84e88b3d4ca153883b89daa2bbd3986fab4699031ae9e69c0a112e956412ecb0"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/files/L_arm.stl",
+      "bytes": 328484,
+      "sha256": "fce78eeb587ac39870c22abee57cbc03f27a4fde56d94b6b69ec0e0cc92e9e85"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/files/L_arm_cover.stl",
+      "bytes": 356484,
+      "sha256": "2dc028844b274c186f5b179d413f29bacc387ea43023b0b6f432d47088405c05"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/files/L_arm_joint.stl",
+      "bytes": 489284,
+      "sha256": "e77c804a0f553a36a3df8c15326bf05c366815cdfe0624a26eeeefbf3ebb31df"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/files/L_wrist.stl",
+      "bytes": 179784,
+      "sha256": "69b43e41f8b00aff7d7d382fdff2609b88801403bdb97b8056f6d02178a4efbd"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/files/R_arm.stl",
+      "bytes": 328484,
+      "sha256": "e379ca8da9be6752fe112e42fdca452ae81fd395e1c18e6f31d5cb57cf0dab42"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/files/R_arm_cover.stl",
+      "bytes": 356484,
+      "sha256": "718ae235bed37f38b741ef542098bf6d3c34fd98e902ee99d9a7969a9582891a"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/files/R_arm_joint.stl",
+      "bytes": 489284,
+      "sha256": "02b3e82277faee0240addd2ef2eac4f89c108f82346216db2ce4e4dcfbe14d90"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/files/R_wrist.stl",
+      "bytes": 179784,
+      "sha256": "8e10bb539a56fdd99cc7688dab3eac33e5b37655b4f396c71a1cf8824b2f631f"
+    },
+    {
+      "file": "reference/SpotMicro_parts/STL/LICENSE.txt",
+      "bytes": 183,
+      "sha256": "2a6c54c2ee67193ff9d766e44299b7f9d47ef460aa3709360a6e136818cba75e"
+    },
+    {
+      "file": "reference/SpotMicro_provenance.json",
+      "bytes": 5379,
+      "sha256": "97f9b092442147f91abdfc702cbc8d44d17b0c48e537ea3fb23158f109f5737f"
+    },
+    {
+      "file": "reference/SpotMicro_STEP_bbox.json",
+      "bytes": 816,
+      "sha256": "6508db1786337dace6152671086922ffe6b4cad667c217b345b6f70335e2f50c"
+    },
+    {
+      "file": "reference/SpotMicro_STL_bbox.json",
+      "bytes": 3981,
+      "sha256": "f3ee370b8856271073fdcebc75837a165a36bc9ccd389bc612747a1caee727aa"
+    },
+    {
+      "file": "reference/SpotMicroAI_assembly.html",
+      "bytes": 11818,
+      "sha256": "a7386e74d3369770b41aaacb90826766dce55bbc5ca699b4bde0100b17f2cb98"
+    },
+    {
+      "file": "renders/v6_appearance_concept.png",
+      "bytes": 1961957,
+      "sha256": "9cefe42445526d84a12484511e183794c38c263fd2ec4bc03fd5562dc73f2db5"
+    },
+    {
+      "file": "renders/v6_appearance_prompt.json",
+      "bytes": 2305,
+      "sha256": "16d9941ab3a3a8a23527fe24e7a3fa639c10ce44ee50d49905c7f7d7192a1e43"
+    },
+    {
+      "file": "renders/v6_CAD_isometric.png",
+      "bytes": 33143,
+      "sha256": "840a6c925ebb4a0957e8ad84eb7a18ec2a2dc77b9127be06ae7dfce0acb6372b"
+    },
+    {
+      "file": "stl/BASE_LID_1.stl",
+      "bytes": 44084,
+      "sha256": "a574ca3871ce4beada8647690619ae917b6917f363ca362dcf2910ea51779da9"
+    },
+    {
+      "file": "stl/BASE_LID_2.stl",
+      "bytes": 35684,
+      "sha256": "d02bd505de7822104a7401ea0518ea0dbe7d18370402270deddd5d2bd51ae32c"
+    },
+    {
+      "file": "stl/BASE_LID_3.stl",
+      "bytes": 44084,
+      "sha256": "f86e3afad193674d10aecb6a5d0c93474e7151c49739f8a61ea55c415f0c5b0d"
+    },
+    {
+      "file": "stl/BASE_TRAY_1.stl",
+      "bytes": 91884,
+      "sha256": "5565c2cf682047b0bfad2d10b109fe07a56248d5840c224d71759d635c150b7b"
+    },
+    {
+      "file": "stl/BASE_TRAY_2.stl",
+      "bytes": 106884,
+      "sha256": "c8afb26951730b27fff5f1a2e77cf3cdf3e3c32d744fa0ebe278ecf75bcca132"
+    },
+    {
+      "file": "stl/BASE_TRAY_3.stl",
+      "bytes": 91884,
+      "sha256": "b13d92479c7c972baf9fff6e3c9743a9022061bb025ea7c5d274aa3c90b6011a"
+    },
+    {
+      "file": "stl/HEAD_CASE.stl",
+      "bytes": 42084,
+      "sha256": "92cb29b9c7e28598aa2e50c2b77470af1e2bf07e5abc28b58c9ed66d107ce3d6"
+    },
+    {
+      "file": "stl/HEAD_FACE_TRIAL.stl",
+      "bytes": 53484,
+      "sha256": "db20c4a6bb891757856b62b1bbf1296d215ff7842fafd0c22daa627d8db53f9b"
+    },
+    {
+      "file": "stl/L_ARM_FORK_TRIAL.stl",
+      "bytes": 90584,
+      "sha256": "ad2c8890b83762939d1e58c3cd6029fa9e041b02bf4c2c56908742e9f380b180"
+    },
+    {
+      "file": "stl/L_PALM_SHELL_TRIAL.stl",
+      "bytes": 109684,
+      "sha256": "183865fcba3ac0b4d51e29efd8ebd42e3bef152cfee47f01bce15b2f2e3c9cae"
+    },
+    {
+      "file": "stl/L_YAW_PEDESTAL_TRIAL.stl",
+      "bytes": 1684,
+      "sha256": "b66ac4f9e9adc3c69ea2cfaf6efe685e56d82c761aa63fc27a6c138417c091f9"
+    },
+    {
+      "file": "stl/PHONE_CRADLE_TRIAL.stl",
+      "bytes": 1884,
+      "sha256": "eb0bc4f47b0d1912c0ded4ee76234a90215c6d751ecdc0707896395dd8244aff"
+    },
+    {
+      "file": "stl/R_ARM_FORK_TRIAL.stl",
+      "bytes": 90584,
+      "sha256": "c7be75af46e473857ffe70419a8f79da23b6537d3b7a221f3508c9469d80ddc5"
+    },
+    {
+      "file": "stl/R_PALM_SHELL_TRIAL.stl",
+      "bytes": 109684,
+      "sha256": "19640e6e682762fed945ebc7a45c9fd054acafb55675d6eec896bbefec5b097d"
+    },
+    {
+      "file": "stl/R_YAW_PEDESTAL_TRIAL.stl",
+      "bytes": 1684,
+      "sha256": "b66ac4f9e9adc3c69ea2cfaf6efe685e56d82c761aa63fc27a6c138417c091f9"
+    },
+    {
+      "file": "stl/SEAM_PLATE_1.stl",
+      "bytes": 68684,
+      "sha256": "62afbd9e5274548115d3241ab636d82a5640808744d71437c571344a8b9896af"
+    },
+    {
+      "file": "stl/SEAM_PLATE_2.stl",
+      "bytes": 68684,
+      "sha256": "3fb7cc3cb703656cd7d5f164ad5f0d1a48f14576ccac7ee8e817f6b50603fb5b"
+    },
+    {
+      "file": "실측_입력표.md",
+      "bytes": 1967,
+      "sha256": "9be19122947c4e3529146331fdb76377c7fb8b588c5c03a5a80b60784fe395cb"
+    }
+  ]
+}

@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jetson Nano no available cameras - Jetson Nano - NVIDIA Developer Forums</title>
+    <meta name="description" content="Hi There 
+I can successfully connect a Raspberry Pi Camera Module 2 (IMX219) to my jetson. However, I’m not able to connect one of the following cameras: 
+
+Raspberry Pi Camera Module 3 (IMX708)
+Raspberry Pi High Quality …">
+    <meta name="generator" content="Discourse 2026.10.0-latest - https://github.com/discourse/discourse version 3d9c0f69102ca88a524620e0fe0e56ff0514345e">
+<link rel="icon" type="image/png" href="https://global.discourse-cdn.com/nvidia/optimized/2X/0/0372ccc95874f71d7fbff64bbbff6f8c69dd850b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://global.discourse-cdn.com/nvidia/optimized/2X/8/819b2855e1f1f3249e77dc713405cf77d1eda57c_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#000000">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+
+<meta name="color-scheme" content="light dark">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747" />
+
+<meta name="discourse-track-view-session-id" content="XC9Oi0sNmX7QXEnoZ54Fdo823a3sXYxY">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://forums.developer.nvidia.com/opensearch.xml" title="NVIDIA Developer Forums Search">
+
+    
+    <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/color_definitions_nvidia_4_13_21a792ae5bc86ff61e33ca65f9df24acb434c2e2.css?__ws=forums.developer.nvidia.com" media="(prefers-color-scheme: light)" rel="stylesheet" class="light-scheme" data-scheme-id="4"/><link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/color_definitions_nvidia-dark_17_13_e6698eccf75a5ea683ea90de7ac86938545028c7.css?__ws=forums.developer.nvidia.com" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme" data-scheme-id="17"/>
+
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common"  />
+
+
+
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/automation_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="automation"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/checklist_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-ai_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-akismet_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-antivirus_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-antivirus"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-assign_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-assign"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-cakeday_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-chat-integration_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-chat-integration"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-data-explorer_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-data-explorer"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-details_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-docs_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-docs"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-events_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-events"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-github_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-github"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-jira_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-jira"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-lazy-videos_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-local-dates_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-policy_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-policy"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-presence_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-reactions_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-solved_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-templates_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-topic-voting_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-translator_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-translator"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-user-notes_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-user-notes"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-yearly-review_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="discourse-yearly-review"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/footnote_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/hosted-site_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/poll_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/spoiler-alert_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-ai_mobile_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-ai_mobile"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-assign_mobile_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-assign_mobile"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-events_mobile_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-events_mobile"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-reactions_mobile_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="discourse-reactions_mobile"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-ai_desktop_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-events_desktop_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-events_desktop"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/discourse-reactions_desktop_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/poll_desktop_9fa44086db0af5fdbf657e6695977071b98b50c3.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_11_49709859cb4878d97426587d9153ba3b2a38bcfc.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="11" data-theme-name="custom header links"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_18_f353c60c21848049918e3144ec246120040b1786.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="18" data-theme-name="topic thumbnails"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_19_6dacae0e1568e9a93221a17f83956a62c3c64446.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="19" data-theme-name="versatile banner"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_13_4449c4d2ea202a99492778f75d5600ca8e7addff.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="13" data-theme-name="discourse-nvidia-theme"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_23_285863248c38757fc09c66e5c11a4471a7637dd6.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="23" data-theme-name="custom header links adjustments"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_17_e3f5fb990d80df802dd2e8c489f966741c523143.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="17" data-theme-name="fix bulk actions button focus"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/common_theme_20_4b425b561c41b5f9d4edff8a68c79b031f7ce064.css?__ws=forums.developer.nvidia.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="20" data-theme-name="versatile banner adjustments"/>
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/mobile_theme_18_94743a0c57b8b2874df64b070cbf6341860f4723.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="mobile_theme" data-theme-id="18" data-theme-name="topic thumbnails"/>
+<link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/mobile_theme_13_c12baa8521b5e8e5af52b00d980fe23733ae0e0c.css?__ws=forums.developer.nvidia.com" media="(width < 40rem)" rel="stylesheet" data-target="mobile_theme" data-theme-id="13" data-theme-name="discourse-nvidia-theme"/>
+  <link href="https://sea2.discourse-cdn.com/nvidia/stylesheets/desktop_theme_13_5a50bcc8e3b604a6249455ebba608a48ceb93282.css?__ws=forums.developer.nvidia.com" media="(width >= 40rem)" rel="stylesheet" data-target="desktop_theme" data-theme-id="13" data-theme-name="discourse-nvidia-theme"/>
+
+    <script src="//assets.adobedtm.com/5d4962a43b79/76a76b0bb8ea/launch-7d434965ec64.min.js" async="" nonce="EkpjOAMypnI5V2WLAnafYEB5m"></script>
+
+<script defer="" src="https://sea2.discourse-cdn.com/nvidia/theme-javascripts/0dc64510eba9a75de7e038ed07503b666f7d00cf.js?__ws=forums.developer.nvidia.com" data-theme-id="13" nonce="EkpjOAMypnI5V2WLAnafYEB5m"></script>
+
+<meta name="google-site-verification" content="If3jxgzZoS1XODkXDOo83AD2VzBqttpfA2TfyU7YQlk">
+
+<!-- OneTrust Cookies Consent Notice start for nvidia.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="3e2b62ff-7ae7-4ac5-87c8-d5949ecafff5" nonce="EkpjOAMypnI5V2WLAnafYEB5m"></script>
+<script defer="" src="https://sea2.discourse-cdn.com/nvidia/theme-javascripts/32a78cf2cb9a8bd069ff183687855c011f0db0d6.js?__ws=forums.developer.nvidia.com" data-theme-id="22" nonce="EkpjOAMypnI5V2WLAnafYEB5m"></script>
+<!-- OneTrust Cookies Consent Notice end for nvidia.com -->
+ <script type="text/javascript" src="https://images.nvidia.com/aem-dam/Solutions/ot-js/ot-custom.js" nonce="EkpjOAMypnI5V2WLAnafYEB5m"></script>
+
+<!-- Stopgap: remove once CSP mode is disabled for this OneTrust domain script -->
+<script defer="" src="https://sea2.discourse-cdn.com/nvidia/theme-javascripts/a0f3ce1ae9806df0187a34b70b4c3491b1c6b442.js?__ws=forums.developer.nvidia.com" data-theme-id="22" nonce="EkpjOAMypnI5V2WLAnafYEB5m"></script>  
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Jetson Nano no available cameras&#39;" href="https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747.rss" />
+    <meta property="og:site_name" content="NVIDIA Developer Forums" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://global.discourse-cdn.com/nvidia/original/3X/e/4/e41d27491ee72562cf68c340597ca95f587879bd.png" />
+<meta property="og:image" content="https://global.discourse-cdn.com/nvidia/original/3X/e/4/e41d27491ee72562cf68c340597ca95f587879bd.png" />
+<meta property="og:url" content="https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747" />
+<meta name="twitter:url" content="https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747" />
+<meta property="og:title" content="Jetson Nano no available cameras" />
+<meta name="twitter:title" content="Jetson Nano no available cameras" />
+<meta property="og:description" content="Hi There  I can successfully connect a Raspberry Pi Camera Module 2 (IMX219) to my jetson. However, I’m not able to connect one of the following cameras:   Raspberry Pi Camera Module 3 (IMX708) Raspberry Pi High Quality Camera (IMX477)  If I enter ll /dev/video* no camera is shown and also the command nvgstcapture-1.0 shows “no camera available”.  What I did so far:   Installed nvidia jetpack switched cameras updated the system and rebooted a few times ;-) Raspberry Pi Camera Module 2 (IMX219) i..." />
+<meta name="twitter:description" content="Hi There  I can successfully connect a Raspberry Pi Camera Module 2 (IMX219) to my jetson. However, I’m not able to connect one of the following cameras:   Raspberry Pi Camera Module 3 (IMX708) Raspberry Pi High Quality Camera (IMX477)  If I enter ll /dev/video* no camera is shown and also the command nvgstcapture-1.0 shows “no camera available”.  What I did so far:   Installed nvidia jetpack switched cameras updated the system and rebooted a few times ;-) Raspberry Pi Camera Module 2 (IMX219) i..." />
+<meta property="og:article:section" content="Robotics &amp; Edge Computing" />
+<meta property="og:article:section:color" content="76B900" />
+<meta property="og:article:section" content="Jetson Systems" />
+<meta property="og:article:section:color" content="76B900" />
+<meta property="og:article:section" content="Jetson Nano" />
+<meta property="og:article:section:color" content="76B900" />
+<meta property="og:article:tag" content="camera" />
+<meta property="article:published_time" content="2023-03-20T16:32:02+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <link rel="alternate" type="text/markdown" href="https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747.md">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Jetson Nano no available cameras","datePublished":"2023-03-20T16:32:02.727Z","mainEntity":{"@type":"Question","answerCount":2,"author":{"@type":"Person","name":"leon.luethi","url":"https://forums.developer.nvidia.com/u/leon.luethi"},"dateModified":"2023-03-20T16:32:02.812Z","datePublished":"2023-03-20T16:32:02.727Z","name":"Jetson Nano no available cameras","text":"Hi There\n\nI can successfully connect a Raspberry Pi Camera Module 2 (IMX219) to my jetson. However, I’m not able to connect one of the following cameras:\n\nRaspberry Pi Camera Module 3 (IMX708)\n\nRaspberry Pi High Quality Camera (IMX477)\n\nIf I enter ll /dev/video* no camera is shown and also the comma&hellip;","upvoteCount":0,"acceptedAnswer":[{"@type":"Answer","author":{"@type":"Person","name":"JerryChang","url":"https://forums.developer.nvidia.com/u/JerryChang"},"dateModified":"2023-03-21T03:27:49.056Z","datePublished":"2023-03-21T03:27:49.020Z","text":"hello leon.luethi,\n\nif you look into kernel init logs, you may seeing there’s camera device registration failure and it’s looking for IMX219 camera devices.\n\nthat’s due to Nano series by default to detect IMX219, you should using Jetson-IO utility to configure CSI connections, there’s options for IM&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747/4"}],"suggestedAnswer":[{"@type":"Answer","author":{"@type":"Person","name":"andres.artavia","url":"https://forums.developer.nvidia.com/u/andres.artavia"},"dateModified":"2023-03-20T20:51:26.637Z","datePublished":"2023-03-20T20:51:26.625Z","text":"Hello <a class=\"mention\" href=\"/u/leon.luethi\">@leon.luethi<\/a>\n\nAt least for the imx477 <a href=\"https://developer.ridgerun.com/wiki/index.php/Raspberry_Pi_HQ_camera_IMX477_Linux_driver_for_Jetson#Introduction_to_Sony_IMX477_Linux_driver\" rel=\"noopener nofollow ugc\">here<\/a> are the drivers and instructrions on how to install them, since for the imx477 as far as I know the drivers don’t come out of the box on JP. Just make sure to checkout the banch that goes according to your JP version and use the folder for the Nano.\n\nR&hellip;","upvoteCount":0,"url":"https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747/2"}]}}</script>
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">NVIDIA Developer Forums</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/jetson-nano-no-available-cameras/246747">Jetson Nano no available cameras</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/robotics-edge-computing/55" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #76B900'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Robotics &amp; Edge Computing</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/robotics-edge-computing/jetson-systems/70" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #76B900'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Jetson Systems</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/robotics-edge-computing/jetson-systems/jetson-nano/76" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #76B900'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Jetson Nano</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="3" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://forums.developer.nvidia.com/tag/camera' class='discourse-tag' rel="tag">camera</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope="itemscope" itemtype="https://schema.org/QAPage">
+      <meta itemprop='name' content='Jetson Nano no available cameras'>
+      <link itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747'>
+      <meta itemprop='datePublished' content='2023-03-20T16:32:02Z'>
+      <meta itemprop='keywords' content='camera'>
+
+      
+
+        <div itemprop="mainEntity" itemscope="itemscope" itemtype="https://schema.org/Question">
+          <meta itemprop='answerCount' content='2'><meta itemprop='datePublished' content='2023-03-20T16:32:02Z'><meta itemprop='name' content='Jetson Nano no available cameras'><meta itemprop='upvoteCount' content='0'>
+
+
+          <div id='post_1' data-qa-question="true" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/leon.luethi'><span itemprop="name">leon.luethi</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/leon.luethi'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-03-20T16:32:02Z' class='post-time'>
+                    March 20, 2023,  4:32pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-20T16:32:02Z'>
+              <span itemprop="position">1</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Hi There</p>
+<p>I can successfully connect a Raspberry Pi Camera Module 2 (IMX219) to my jetson. However, I’m not able to connect one of the following cameras:</p>
+<ul>
+<li>Raspberry Pi Camera Module 3 (IMX708)</li>
+<li>Raspberry Pi High Quality Camera (IMX477)</li>
+</ul>
+<p>If I enter <code>ll /dev/video*</code> no camera is shown and also the command <code>nvgstcapture-1.0</code> shows “no camera available”.</p>
+<p>What I did so far:</p>
+<ul>
+<li>Installed nvidia jetpack</li>
+<li>switched cameras</li>
+<li>updated the system and rebooted a few times ;-)</li>
+<li>Raspberry Pi Camera Module 2 (IMX219) <strong>is working fine</strong>
+</li>
+</ul>
+<p>Do I need any additional drivers?</p>
+<p>Thank you in advance</p>
+            </div>
+
+
+
+            
+
+
+          </div>
+          <div id='post_2' itemprop="suggestedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/andres.artavia'><span itemprop="name">andres.artavia</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/andres.artavia'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2023-03-20T20:51:26Z' class='post-time'>
+                    March 20, 2023,  8:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-20T20:51:26Z'>
+              <span itemprop="position">2</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>Hello <a class="mention" href="/u/leon.luethi">@leon.luethi</a><br>
+At least for the imx477 <a href="https://developer.ridgerun.com/wiki/index.php/Raspberry_Pi_HQ_camera_IMX477_Linux_driver_for_Jetson#Introduction_to_Sony_IMX477_Linux_driver" rel="noopener nofollow ugc">here</a> are the drivers and instructrions on how to install them, since for the imx477 as far as I know the drivers don’t come out of the box on JP. Just make sure to checkout the banch that goes according to your JP version and use the folder for the Nano.</p>
+<p>Regards,<br>
+Andres<br>
+Embedded SW Engineer at RidgeRun<br>
+<strong>Contact us:</strong> <a href="mailto:support@ridgerun.com">support@ridgerun.com</a><br>
+<strong>Developers wiki:</strong> <a href="https://developer.ridgerun.com/" rel="noopener nofollow ugc">https://developer.ridgerun.c </a><a href="https://developer.ridgerun.com/" rel="noopener nofollow ugc">om/ </a><br>
+<strong>Website:</strong> <a href="http://www.ridgerun.com/" rel="noopener nofollow ugc">www.ridgerun.com </a></p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747/2'>
+          </div>
+          <div id='post_4' itemprop="acceptedAnswer" itemscope="itemscope" itemtype="https://schema.org/Answer" class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a rel='nofollow' href='https://forums.developer.nvidia.com/u/JerryChang'><span itemprop="name">JerryChang</span></a>
+                  <meta itemprop='url' content='https://forums.developer.nvidia.com/u/JerryChang'>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop="datePublished" datetime='2023-03-21T03:27:49Z' class='post-time'>
+                    March 21, 2023,  3:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-21T03:27:49Z'>
+              <span itemprop="position">4</span>
+              </span>
+            </div>
+            <div class='post' itemprop="text">
+              <p>hello leon.luethi,</p>
+<p>if you look into kernel init logs, you may seeing there’s camera device registration failure and it’s looking for IMX219 camera devices.<br>
+that’s due to Nano series by default to detect IMX219, you should using Jetson-IO utility to configure CSI connections, there’s options for IMX477.<br>
+however, IMX708 it’s not supported by default Jetpack release image, you may develop the driver and device tree by your own.</p>
+            </div>
+
+
+
+            
+
+<meta itemprop='upvoteCount' content='0'><meta itemprop='url' content='https://forums.developer.nvidia.com/t/jetson-nano-no-available-cameras/246747/4'>
+          </div>
+
+        </div>
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-229346">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/raspberry-pi-hq-camera-imx477/229346' class='title raw-link raw-topic-link'>Raspberry Pi HQ camera IMX477</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>30</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>4941</span>
+            </td>
+            <td>
+              November 25, 2025
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-168082">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/jetson-nano-developer-b01-jetpack-4-4-4-5-imx477-arducam-12-3/168082' class='title raw-link raw-topic-link'>Jetson Nano Developer B01 - jetpack 4.4 /4.5 + imx477 (arducam 12,3)</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>4</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>1175</span>
+            </td>
+            <td>
+              February 26, 2021
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-251432">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/connecting-raspberry-pi-hq-imx477-with-jetson-nano/251432' class='title raw-link raw-topic-link'>Connecting Raspberry Pi HQ IMX477 with Jetson Nano</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>11</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>2899</span>
+            </td>
+            <td>
+              May 2, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-186999">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/unable-to-use-raspberry-pi-camera-hq-imx477/186999' class='title raw-link raw-topic-link'>Unable to use raspberry pi camera HQ IMX477</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>8</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>1957</span>
+            </td>
+            <td>
+              August 25, 2021
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-259018">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/connect-raspberry-pi-hq-camera-jetson-nano-developer-kit/259018' class='title raw-link raw-topic-link'>Connect Raspberry Pi HQ Camera Jetson Nano Developer Kit</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>4</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>2094</span>
+            </td>
+            <td>
+              July 11, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-273943">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='6'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/raspberry-pi-camera-v3-module-and-v1-not-supported/273943' class='title raw-link raw-topic-link'>Raspberry Pi Camera V3 Module and V1 not supported?</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>16</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>1429</span>
+            </td>
+            <td>
+              December 25, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-154633">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='7'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/nano-kit-raspberry-pi-imx477-ridgerun-imx477-driver-error-generated/154633' class='title raw-link raw-topic-link'>Nano kit + Raspberry PI IMX477 + Ridgerun IMX477 driver &gt; Error generated</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>4</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>1076</span>
+            </td>
+            <td>
+              September 18, 2020
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-290668">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='8'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/connecting-rapberrry-pi-hq-camera-module-with-jetson-nano/290668' class='title raw-link raw-topic-link'>Connecting Rapberrry pi HQ camera module with Jetson Nano</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>3</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>408</span>
+            </td>
+            <td>
+              April 29, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-265638">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='9'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/csi-camera-not-found-on-jetson-nano/265638' class='title raw-link raw-topic-link'>CSI camera not found on jetson nano</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>5</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>633</span>
+            </td>
+            <td>
+              September 7, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-167266">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='10'>
+              <span class="link-top-line">
+                <a itemprop='url' href='https://forums.developer.nvidia.com/t/rsp-v2-1-camera-no-cameras-available/167266' class='title raw-link raw-topic-link'>RSP V2.1 camera &quot;No cameras available&quot;</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='/c/robotics-edge-computing/jetson-systems/jetson-nano/76' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #76B900'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Jetson Nano</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='https://forums.developer.nvidia.com/tag/camera/14' class='discourse-tag'>camera</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>5</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>1148</span>
+            </td>
+            <td>
+              February 3, 2021
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://www.nvidia.com/en-us/about-nvidia/legal-info/' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://www.nvidia.com/en-us/about-nvidia/privacy-policy/' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <script defer="" src="https://sea2.discourse-cdn.com/nvidia/theme-javascripts/c53a23b609ec9c4bc8655115ee4823889165e754.js?__ws=forums.developer.nvidia.com" data-theme-id="13" nonce="EkpjOAMypnI5V2WLAnafYEB5m"></script>
+
+<footer>
+  <div class="footer-links">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="padding-md-footer">
+              <div class="logo-footer"></div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 padding-section-footer"></div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-boilerplate">
+    <div class="container">
+      <div class="boilerplate">
+        <div class="col-xs-12 col-sm-12 col-lg-9 padding-sm-bottom">
+          Copyright ©
+          <span class="footer-copyright-year">2026</span>
+          NVIDIA Corporation
+          <ul class="legal_links">
+            <li class="first leaf">
+              <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" title="">Privacy Policy</a>
+            </li>
+            <li class="leaf">
+              <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" title="">Your Privacy Choices</a>
+            </li>
+            <li class="leaf">
+              <a href="https://developer.nvidia.com/legal/terms" title="">Terms of Use</a>
+            </li>
+            <li class="leaf">
+              <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" title="">Accessibility</a>
+            </li>
+            <li class="leaf">
+              <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" title="">Corporate Policies</a>
+            </li>
+            <li class="last leaf">
+              <a href="https://developer.nvidia.com/contact" title="">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+  
+</html>

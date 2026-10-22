@@ -1,0 +1,12 @@
+{
+  "id": 2,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bodies\": [\n    \"PartBody\"\n  ],\n  \"component\": 1,\n  \"component_name\": \"I_shoulder_cls_modi\",\n  \"errors\": 0,\n  \"features\": 1,\n  \"occurrence\": 2,\n  \"path\": \"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v6\\\\reference\\\\SpotMicro_parts\\\\STEP_Files\\\\I_shoulder_cls_modi.stp\",\n  \"warnings\": []\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

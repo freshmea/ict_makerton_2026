@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js no-touch">
+<head>
+	<style>
+#ot-pc-content #ot-pc-title, #ot-pc-hdr #ot-lst-title h3 {
+    font-size: 16px !important;
+}
+#onetrust-pc-sdk .ot-cat-grp .ot-always-active {
+    font-size: 14px !important;
+}
+#onetrust-pc-sdk .ot-host-expand {
+    font-size: 12px !important;
+}
+</style>
+<!-- OneTrust Cookies Consent Notice start for nvidia.com -->
+<script
+    src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+    type="text/javascript"
+    charset="UTF-8"
+            data-document-language="true"
+            data-domain-script="7ae78446-ea16-4015-b7c5-d7a128628ca5"
+></script>
+<script type="text/javascript">
+    function OptanonWrapper() {
+        var event = new Event('bannerLoaded');
+        window.dispatchEvent(event);
+    }
+</script>
+<!-- OneTrust Cookies Consent Notice end for nvidia.com -->
+<script type="text/javascript" src="https://images.nvidia.com/aem-dam/Solutions/ot-js/ot-custom.js"></script>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta id="viewport" name="viewport"
+				content="user-scalable=no, width=device-width, height=device-height, initial-scale=1">
+	
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://blogs.nvidia.co.kr/xmlrpc.php">
+
+	<script>
+		// Check for js support (replace no-js class on html)
+		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '') + ' js';
+		// Check if touch-capable device.
+		if ('ontouchstart' in window || navigator.maxTouchPoints) {
+			document.documentElement.className = document.documentElement.className.replace(/\bno-touch\b/, '') + ' touch';
+		}
+	</script>
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.7 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>NVIDIA Jetson 개발자 밋업에서 발표될 새로운 AI 소식들은? | NVIDIA Blog</title>
+	<meta name="description" content="‘NVIDIA AI 개발자 밋업’이 7월 22일 오후 2시부터 5시까지 온라인으로 진행됩니다." />
+	<link rel="canonical" href="https://blogs.nvidia.co.kr/blog/nvidia-jetson-developer-meetup/" />
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="NVIDIA Jetson 개발자 밋업에서 발표될 새로운 AI 소식들은? | NVIDIA Blog" />
+	<meta property="og:description" content="‘NVIDIA AI 개발자 밋업’이 7월 22일 오후 2시부터 5시까지 온라인으로 진행됩니다." />
+	<meta property="og:url" content="https://blogs.nvidia.co.kr/blog/nvidia-jetson-developer-meetup/" />
+	<meta property="og:site_name" content="NVIDIA Blog Korea" />
+	<meta property="article:published_time" content="2021-07-16T00:41:18+00:00" />
+	<meta property="article:modified_time" content="2021-07-29T04:08:59+00:00" />
+	<meta property="og:image" content="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2021/07/이미지-엔비디아-7월-22일-정기-‘AI-개발자-밋업-진행_01.jpg" />
+	<meta property="og:image:width" content="1280" />
+	<meta property="og:image:height" content="675" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="NVIDIA Korea" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="NVIDIA Jetson 개발자 밋업에서 발표될 새로운 AI 소식들은? | NVIDIA Blog" />
+	<meta name="twitter:label1" content="글쓴이" />
+	<meta name="twitter:data1" content="NVIDIA Korea" />
+	<meta name="twitter:label2" content="예상 되는 판독 시간" />
+	<meta name="twitter:data2" content="3분" />
+	<meta name="twitter:label3" content="Written by" />
+	<meta name="twitter:data3" content="NVIDIA Korea" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/#article","isPartOf":{"@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/"},"author":[{"@id":"https:\/\/blogs.nvidia.co.kr\/#\/schema\/person\/6d7d0b1d949718ab54fadd53a6b8379f"}],"headline":"NVIDIA Jetson 개발자 밋업에서 발표될 새로운 AI 소식들은?","datePublished":"2021-07-16T00:41:18+00:00","dateModified":"2021-07-29T04:08:59+00:00","mainEntityOfPage":{"@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/"},"wordCount":107,"image":{"@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/#primaryimage"},"thumbnailUrl":"https:\/\/blogs.nvidia.co.kr\/wp-content\/uploads\/sites\/16\/2021\/07\/이미지-엔비디아-7월-22일-정기-‘AI-개발자-밋업-진행_01.jpg","keywords":["events","Higher Education\/Academia","Jetson"],"articleSection":["Corporate","Deep Learning","Embedded Computing"],"inLanguage":"ko-KR"},{"@type":"WebPage","@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/","url":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/","name":"NVIDIA Jetson 개발자 밋업에서 발표될 새로운 AI 소식들은? | NVIDIA Blog","isPartOf":{"@id":"https:\/\/blogs.nvidia.co.kr\/#website"},"primaryImageOfPage":{"@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/#primaryimage"},"image":{"@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/#primaryimage"},"thumbnailUrl":"https:\/\/blogs.nvidia.co.kr\/wp-content\/uploads\/sites\/16\/2021\/07\/이미지-엔비디아-7월-22일-정기-‘AI-개발자-밋업-진행_01.jpg","datePublished":"2021-07-16T00:41:18+00:00","dateModified":"2021-07-29T04:08:59+00:00","author":{"@id":"https:\/\/blogs.nvidia.co.kr\/#\/schema\/person\/6d7d0b1d949718ab54fadd53a6b8379f"},"description":"‘NVIDIA AI 개발자 밋업’이 7월 22일 오후 2시부터 5시까지 온라인으로 진행됩니다.","breadcrumb":{"@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/#breadcrumb"},"inLanguage":"ko-KR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/"]}]},{"@type":"ImageObject","inLanguage":"ko-KR","@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/#primaryimage","url":"https:\/\/blogs.nvidia.co.kr\/wp-content\/uploads\/sites\/16\/2021\/07\/이미지-엔비디아-7월-22일-정기-‘AI-개발자-밋업-진행_01.jpg","contentUrl":"https:\/\/blogs.nvidia.co.kr\/wp-content\/uploads\/sites\/16\/2021\/07\/이미지-엔비디아-7월-22일-정기-‘AI-개발자-밋업-진행_01.jpg","width":1280,"height":675},{"@type":"BreadcrumbList","@id":"https:\/\/blogs.nvidia.co.kr\/blog\/nvidia-jetson-developer-meetup\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/blogs.nvidia.co.kr\/"},{"@type":"ListItem","position":2,"name":"NVIDIA Jetson 개발자 밋업에서 발표될 새로운 AI 소식들은?"}]},{"@type":"WebSite","@id":"https:\/\/blogs.nvidia.co.kr\/#website","url":"https:\/\/blogs.nvidia.co.kr\/","name":"NVIDIA Blog Korea","description":"Official blog for NVIDIA Korea","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/blogs.nvidia.co.kr\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"ko-KR"},{"@type":"Person","@id":"https:\/\/blogs.nvidia.co.kr\/#\/schema\/person\/6d7d0b1d949718ab54fadd53a6b8379f","name":"NVIDIA Korea","image":{"@type":"ImageObject","inLanguage":"ko-KR","@id":"https:\/\/blogs.nvidia.com\/kr\/wp-content\/uploads\/sites\/16\/2024\/08\/danielpark_avatar_1484203433-200x200-1-200x200-1-96x96.png1aa870ff1178ed2e51bdffc190ea8bac","url":"https:\/\/blogs.nvidia.com\/kr\/wp-content\/uploads\/sites\/16\/2024\/08\/danielpark_avatar_1484203433-200x200-1-200x200-1-96x96.png","contentUrl":"https:\/\/blogs.nvidia.com\/kr\/wp-content\/uploads\/sites\/16\/2024\/08\/danielpark_avatar_1484203433-200x200-1-200x200-1-96x96.png","caption":"NVIDIA Korea"},"url":"https:\/\/blogs.nvidia.co.kr\/blog\/author\/nvidiakorea\/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//nvidiablog.disqus.com' />
+<link rel='dns-prefetch' href='//info.nvidia.com' />
+<link rel="alternate" type="application/rss+xml" title="NVIDIA Blog Korea &raquo; 피드" href="https://blogs.nvidia.co.kr/feed/" />
+<link rel="alternate" type="application/rss+xml" title="NVIDIA Blog Korea &raquo; 댓글 피드" href="https://blogs.nvidia.co.kr/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://blogs.nvidia.co.kr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblogs.nvidia.co.kr%2Fblog%2Fnvidia-jetson-developer-meetup%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://blogs.nvidia.co.kr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblogs.nvidia.co.kr%2Fblog%2Fnvidia-jetson-developer-meetup%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='fvp-frontend-css' href='https://blogs.nvidia.co.kr/wp-content/plugins/featured-video-plus/styles/frontend.css?ver=2.3.3' media='all' />
+<link rel='stylesheet' id='wpml-legacy-dropdown-0-css' href='https://blogs.nvidia.co.kr/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/style.min.css?ver=510000' media='all' />
+<style id="wpml-legacy-dropdown-0-inline-css">
+.wpml-ls-statics-shortcode_actions{background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu, .wpml-ls-statics-shortcode_actions a {border-color:#cdcdcd;}.wpml-ls-statics-shortcode_actions a, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link, .wpml-ls-statics-shortcode_actions li:not(.wpml-ls-current-language) .wpml-ls-link, .wpml-ls-statics-shortcode_actions li:not(.wpml-ls-current-language) .wpml-ls-link:link {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:hover,.wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:focus, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link:hover, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language > a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language:hover>a, .wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+/*# sourceURL=wpml-legacy-dropdown-0-inline-css */
+</style>
+<link rel='stylesheet' id='yith-infs-style-css' href='https://blogs.nvidia.co.kr/wp-content/plugins/yith-infinite-scrolling/assets/css/frontend.css?ver=2.12.0' media='all' />
+<link rel='stylesheet' id='print-style-css' href='https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/assets/css/print.css' media='print' />
+<link rel='stylesheet' id='nvb-single-css' href='https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/build/single.css?ver=1761840891' media='all' />
+<link rel='stylesheet' id='bsfrt_frontend-css' href='https://blogs.nvidia.co.kr/wp-content/plugins/read-meter/assets/css/bsfrt-frontend-css.min.css?ver=1.0.11' media='all' />
+<script id="jquery-core-js" src="https://blogs.nvidia.co.kr/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://blogs.nvidia.co.kr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="jquery.fitvids-js" src="https://blogs.nvidia.co.kr/wp-content/plugins/featured-video-plus/js/jquery.fitvids.min.js?ver=master-2015-08"></script>
+<script id="fvp-frontend-js-extra">
+var fvpdata = {"ajaxurl":"https://blogs.nvidia.co.kr/wp-admin/admin-ajax.php","nonce":"6116f3329b","fitvids":"1","dynamic":"","overlay":"","opacity":"0.75","color":"b","width":"640"};
+//# sourceURL=fvp-frontend-js-extra
+</script>
+<script id="fvp-frontend-js" src="https://blogs.nvidia.co.kr/wp-content/plugins/featured-video-plus/js/frontend.min.js?ver=2.3.3"></script>
+<script id="wpml-legacy-dropdown-0-js" src="https://blogs.nvidia.co.kr/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/script.min.js?ver=510000"></script>
+<script id="nv-gtm-js" src="https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/assets//js/nv-gtm.js?ver=20190419.0001"></script>
+<script id="nvb4-mkto-forms2-js" src="https://info.nvidia.com/js/forms2/js/forms2.min.js?ver=1.1.0.1"></script>
+<script id="nvb4-mkto-validation-js" src="https://info.nvidia.com/rs/156-OFN-742/images/businessemailvalidation.js?ver=1.1.0.1"></script>
+<script id="nvb4-mkto-forms-inline-1-js-after">
+MktoForms2.whenReady(function(e){e.onSuccess(function(i,n){return e.getFormElem().hide(),document.getElementById("confirmform").style.visibility="visible",document.getElementById("confirmform").style.margin="35px 0 25px 0",!1})});
+//# sourceURL=nvb4-mkto-forms-inline-1-js-after
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blogs.nvidia.co.kr/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.3" />
+<link rel='shortlink' href='https://blogs.nvidia.co.kr/?p=6722' />
+<!-- Stream WordPress user activity plugin v4.4.0 -->
+<meta name="generator" content="WPML ver:5.1.0 stt:1,29;" />
+	<meta name="google-site-verification" content="fRN6Tokx0As6AGYPd4zjMBgITWR2dvXjN6Zb3gojo-Y"/>
+	<link rel="preload" as="image" href="https://www.nvidia.com/content/dam/1x1-00000000.png">
+
+<style type="text/css">
+.entry-content .bsf-rt-reading-time,
+.post-content .bsf-rt-reading-time {
+background: #eeeeee;
+
+color: #333333;
+
+font-size: 15px;
+
+margin-top: 
+		0em;
+
+margin-right: 
+		0em;
+
+margin-bottom: 
+		1em;
+
+margin-left: 
+		0em;
+
+padding-top: 
+		0.5em;
+
+padding-right: 
+		0.7em;
+
+padding-bottom: 
+		0.5em;
+
+padding-left: 
+		0.7em;
+
+width: max-content;
+
+display: block;
+
+min-width: 100px;
+
+}
+
+</style>
+				<style type="text/css">
+		.admin-bar .progress-container-top {
+		background: #3f3f3f;
+		height: 10px;
+
+		}
+		.progress-container-top {
+		background: #3f3f3f;
+		height: 10px;
+
+		}
+		.progress-container-bottom {
+		background: #3f3f3f;
+		height: 10px;
+
+		} 
+		.progress-bar {
+		background: #76b900;
+		height: 10px;
+		width: 0%;
+
+		}           
+		</style>
+				<script src="//assets.adobedtm.com/5d4962a43b79/814eb6e9b4e1/launch-4bc07f1e0b0b.min.js"></script><style id="wp-custom-css">
+#disqus_thread {
+	display: none;
+}
+.single-author-page .author-content .author-share ul.entry-meta-social-links-list li span.icon-google-plus {
+	background: #D94B37;
+}
+</style>
+</head>
+<body class="wp-singular post-template-default single single-post postid-6722 single-format-standard wp-theme-nvidia-blog-v5 group-blog non-aggregation-view site-lang-ko">
+<img src="https://www.nvidia.com/content/dam/1x1-00000000.png" width="1" height="1" style="display:none;" alt="country_code">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="inner for-masthead">
+			<div class="site-branding">
+				<a href="https://www.nvidia.com/ko-kr/" rel="home">
+					<div class="site-title">
+						<svg id="logo" enable-background="new 0 0 974.7 179.7" version="1.1"
+									viewBox="0 0 974.7 179.7" xml:space="preserve"
+									xmlns="http://www.w3.org/2000/svg" width="110" height="44"><title>
+								Artificial Intelligence Computing Leadership from NVIDIA							</title>
+							<path
+								d="m962.1 144.1v-2.7h1.7c0.9 0 2.2 0.1 2.2 1.2s-0.7 1.5-1.8 1.5h-2.1m0 1.9h1.2l2.7 4.7h2.9l-3-4.9c1.5 0.1 2.7-1 2.8-2.5v-0.4c0-2.6-1.8-3.4-4.8-3.4h-4.3v11.2h2.5v-4.7m12.6-0.9c0-6.6-5.1-10.4-10.8-10.4s-10.8 3.8-10.8 10.4 5.1 10.4 10.8 10.4 10.8-3.8 10.8-10.4m-3.2 0c0.2 4.2-3.1 7.8-7.3 8h-0.3c-4.4 0.2-8.1-3.3-8.3-7.7s3.3-8.1 7.7-8.3 8.1 3.3 8.3 7.7c-0.1 0.1-0.1 0.2-0.1 0.3z"></path>
+							<path
+								d="m578.2 34v118h33.3v-118h-33.3zm-262-0.2v118.1h33.6v-91.7l26.2 0.1c8.6 0 14.6 2.1 18.7 6.5 5.3 5.6 7.4 14.7 7.4 31.2v53.9h32.6v-65.2c0-46.6-29.7-52.9-58.7-52.9h-59.8zm315.7 0.2v118h54c28.8 0 38.2-4.8 48.3-15.5 7.2-7.5 11.8-24.1 11.8-42.2 0-16.6-3.9-31.4-10.8-40.6-12.2-16.5-30-19.7-56.6-19.7h-46.7zm33 25.6h14.3c20.8 0 34.2 9.3 34.2 33.5s-13.4 33.6-34.2 33.6h-14.3v-67.1zm-134.7-25.6l-27.8 93.5-26.6-93.5h-36l38 118h48l38.4-118h-34zm231.4 118h33.3v-118h-33.3v118zm93.4-118l-46.5 117.9h32.8l7.4-20.9h55l7 20.8h35.7l-46.9-117.8h-44.5zm21.6 21.5l20.2 55.2h-41l20.8-55.2z"></path>
+							<path fill="#76B900"
+										d="m101.3 53.6v-16.2c1.6-0.1 3.2-0.2 4.8-0.2 44.4-1.4 73.5 38.2 73.5 38.2s-31.4 43.6-65.1 43.6c-4.5 0-8.9-0.7-13.1-2.1v-49.2c17.3 2.1 20.8 9.7 31.1 27l23.1-19.4s-16.9-22.1-45.3-22.1c-3-0.1-6 0.1-9 0.4m0-53.6v24.2l4.8-0.3c61.7-2.1 102 50.6 102 50.6s-46.2 56.2-94.3 56.2c-4.2 0-8.3-0.4-12.4-1.1v15c3.4 0.4 6.9 0.7 10.3 0.7 44.8 0 77.2-22.9 108.6-49.9 5.2 4.2 26.5 14.3 30.9 18.7-29.8 25-99.3 45.1-138.7 45.1-3.8 0-7.4-0.2-11-0.6v21.1h170.2v-179.7h-170.4zm0 116.9v12.8c-41.4-7.4-52.9-50.5-52.9-50.5s19.9-22 52.9-25.6v14h-0.1c-17.3-2.1-30.9 14.1-30.9 14.1s7.7 27.3 31 35.2m-73.5-39.5s24.5-36.2 73.6-40v-13.2c-54.4 4.4-101.4 50.4-101.4 50.4s26.6 77 101.3 84v-14c-54.8-6.8-73.5-67.2-73.5-67.2z"></path></svg>
+					</div>
+				</a>
+			</div><!-- .site-branding -->
+
+			<ul class="secondary-menu-socials top_search">
+				<li class="search-item">
+					<form role="search" method="get" class="search-form" action="https://blogs.nvidia.co.kr/">
+	<div class="form-item for-search">
+		<label>
+			<span class="screen-reader-text">검색:</span>
+			<input type="search" class="search-field" placeholder="Search The Blog" value="" name="s" title="검색:" />
+		</label>
+	</div>
+	<div class="form-item for-submit">
+		<input type="submit" class="search-submit" value="검색" />
+		<button type="submit" class="search-submit-button">	<span class="icon icon-search"></span>
+	</button>
+	</div>
+</form>
+					<a href="/?s=" class="search-icon-link js-search-item-link">
+						<span class="hidden">Toggle Search</span>
+					</a>
+				</li><!-- .search-item -->
+			</ul><!-- .secondary-menu-socials -->
+			<nav id="site-navigation" class="primary-menu-slot main-navigation" role="navigation">
+				<div class="main-navigation-inner">
+					<div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="https://www.nvidia.co.kr/drivers">드라이버</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14"><a href="https://www.nvidia.co.kr/page/products.html">제품</a>
+<ul class="sub-menu">
+	<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15"><a>프로세서</a>
+	<ul class="sub-menu">
+		<li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="https://www.nvidia.co.kr/object/geforce_family_kr.html">GeForce</a></li>
+		<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="https://www.nvidia.co.kr/object/quadro-kr.html">Quadro</a></li>
+		<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="https://www.nvidia.co.kr/object/tegra-kr.html">Tegra</a></li>
+		<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="https://www.nvidia.co.kr/object/tesla-servers-kr.html">Tesla</a></li>
+		<li id="menu-item-84" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a href="https://www.nvidia.co.kr/object/nvidia-grid-kr.html">NVIDIA GRID</a></li>
+		<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="https://www.nvidia.co.kr/object/nvs-graphics-cards-kr.html">NVS</a></li>
+		<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a href="https://www.nvidia.co.kr/page/legacy.html">레거시</a></li>
+	</ul>
+</li>
+	<li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22"><a href="https://www.nvidia.co.kr/page/technologies.html">기술</a>
+	<ul class="sub-menu">
+		<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a href="https://www.nvidia.co.kr/object/advanced-rendering-kr.html">Advanced Rendering</a></li>
+		<li id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24"><a href="https://www.nvidia.co.kr/object/cuda-parallel-computing-platform-kr.html">CUDA</a></li>
+		<li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98"><a href="https://www.nvidia.co.kr/object/deep-learning-kr.html">AI와 딥 러닝</a></li>
+		<li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a href="https://www.nvidia.co.kr/object/g-sync-monitor-technology-kr.html">G-SYNC</a></li>
+		<li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a href="https://www.nvidia.co.kr/object/machine-learning-kr.html">머신 러닝</a></li>
+		<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="https://www.nvidia.co.kr/object/multi-gpu-technology-kr.html">다중 GPU</a></li>
+		<li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a href="https://www.nvidia.co.kr/object/nvlink-kr.html">NVLink</a></li>
+		<li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="https://www.nvidia.co.kr/object/optimus_technology_kr.html">Optimus</a></li>
+		<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="https://www.nvidia.co.kr/object/optix_kr.html">Optix</a></li>
+		<li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a href="https://www.nvidia.co.kr/page/technologies.html">모든 기술들</a></li>
+	</ul>
+</li>
+	<li id="menu-item-117" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117"><a href="https://www.nvidia.co.kr/object/deep-learning-system-kr.html">NVIDIA DGX-1</a></li>
+	<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="https://www.nvidia.co.kr/object/nvidia-grid-kr.html">NVIDIA GRID</a>
+	<ul class="sub-menu">
+		<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a href="https://www.nvidia.co.kr/object/nvidia-grid-kr.html">가상화 데스크톱 &#038; 앱</a></li>
+	</ul>
+</li>
+	<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="https://www.nvidia.co.kr/object/cloud-gaming-kr.html">클라우드 게이밍</a></li>
+	<li id="menu-item-83" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83"><a href="https://www.nvidia.co.kr/object/visual-computing-appliance-kr.html">Quadro VCA</a></li>
+	<li id="menu-item-87" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a href="https://www.nvidia.co.kr/object/drive-automotive-technology-kr.html">NVIDIA DRIVE</a></li>
+	<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="https://shield.nvidia.co.kr/">SHIELD</a></li>
+</ul>
+</li>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-45"><a>커뮤니티</a>
+<ul class="sub-menu">
+	<li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46"><a href="https://www.geforce.com/">GeForce.com</a></li>
+	<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="https://www.tegrazone.com/">TegraZone.com</a></li>
+	<li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a href="https://www.gputechconf.co.kr/">GPU Technology Conference</a></li>
+	<li id="menu-item-89" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89"><a href="https://www.nvidia.com/object/nvidia-partner-network.html">NVIDIA 파트너 네트워크</a></li>
+	<li id="menu-item-49" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49"><a href="https://www.nvidia.com/page/channel.html">PartnerForce</a></li>
+	<li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="https://forums.geforce.co.kr/">NVIDIA 포럼</a></li>
+	<li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90"><a href="https://gridforums.nvidia.com/">GRID 포럼</a></li>
+	<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51"><a href="https://developer.nvidia.com/">개발자 존</a>
+	<ul class="sub-menu">
+		<li id="menu-item-108" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-108"><a href="https://developer.nvidia.com/cuda-zone">CUDA 존</a></li>
+		<li id="menu-item-109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-109"><a href="https://developer.nvidia.com/designworks">DesignWorks</a></li>
+		<li id="menu-item-110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-110"><a href="https://developer.nvidia.com/embedded-computing">임베디드 컴퓨팅</a></li>
+		<li id="menu-item-111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a href="https://developer.nvidia.com/gameworks">GameWorks</a></li>
+	</ul>
+</li>
+	<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52"><a href="https://research.nvidia.com/">NVIDIA 리서치</a></li>
+	<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53"><a href="https://www.3dvisionlive.com/">3D Vision Live</a></li>
+	<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a href="https://www.nvidia.com/object/gpuventures.html">GPU 벤처 존</a></li>
+	<li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-91"><a>소셜미디어</a>
+	<ul class="sub-menu">
+		<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a href="https://www.facebook.com/NVIDIA">Facebook</a></li>
+		<li id="menu-item-93" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a href="https://instagram.com/nvidia/">Instagram</a></li>
+		<li id="menu-item-94" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-94"><a href="https://www.linkedin.com/company/nvidia">LinkedIn</a></li>
+		<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a href="https://twitter.com/nvidia/">Twitter</a></li>
+		<li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a href="https://www.youtube.com/user/nvidia/">YouTube</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="https://www.nvidia.co.kr/page/support.html">지원</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="https://www.nvidia.co.kr/object/about-nvidia-kr.html">NVIDIA 소개</a>
+<ul class="sub-menu">
+	<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="https://www.nvidia.co.kr/object/about-nvidia-kr.html">회사 정보</a></li>
+	<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="https://www.nvidia.co.kr/object/newsroom_kr.html">뉴스룸</a></li>
+	<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-64"><a href="https://blogs.nvidia.co.kr/">NVIDIA 블로그</a></li>
+	<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a href="https://investor.nvidia.com/">투자 정보</a></li>
+	<li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="https://www.nvidia.com/object/fy15-corporate-responsibility-home.html">지속가능성</a></li>
+	<li id="menu-item-67" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-67"><a href="https://www.nvidia.co.kr/object/visual-computing-kr.html">비주얼 컴퓨팅</a></li>
+	<li id="menu-item-86" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a href="https://www.nvidia.com/object/careers.html">채용 정보</a></li>
+</ul>
+</li>
+</ul></div>				</div>
+			</nav>
+		</div>
+	</header><!-- #masthead -->
+		<div class="secondary-menu-slot-wrapper">
+	<nav class="secondary-menu-slot" role="navigation">
+		<div class="secondary-menu-slot-inner inner for-masthead">
+			<div class="menu-secondary-container"><ul id="secondary-menu" class="menu"><li id="menu-item-8" class="nav-home menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="/">Home</a></li>
+<li id="menu-item-11296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11296"><a href="https://blogs.nvidia.co.kr/blog/category/enterprise/">데이터센터</a></li>
+<li id="menu-item-11297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11297"><a href="https://blogs.nvidia.co.kr/blog/category/auto/">자율주행 자동차</a></li>
+<li id="menu-item-11298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11298"><a href="https://blogs.nvidia.co.kr/blog/category/gaming/">게이밍</a></li>
+<li id="menu-item-11299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11299"><a href="https://blogs.nvidia.co.kr/blog/category/pro-graphics/">전문가용 그래픽</a></li>
+<li id="menu-item-11300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11300"><a href="https://blogs.nvidia.co.kr/blog/category/autonomous-machines/">오토노머스 머신</a></li>
+<li id="menu-item-11301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11301"><a href="https://blogs.nvidia.co.kr/blog/tag/healthcare-life-sciences/">헬스케어</a></li>
+<li id="menu-item-11302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11302"><a href="https://blogs.nvidia.co.kr/blog/tag/inception/">스타트업</a></li>
+</ul></div>		</div><!-- /.secondary-menu-slot-inner -->
+	</nav>
+	</div>
+			<div id="content" class="site-content">
+			<div class="inner for-content">
+	<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+			<div class="cf-posts-with-overrides">
+		<article
+	id="post-6722"
+	class="post-with-sidebar post-6722 post type-post status-publish format-standard has-post-thumbnail hentry category-corporate category-deep-learning category-embeded tag-events tag-higher-education-academia tag-jetson loop-item-1 for-pagenum-1"	data-url="https://blogs.nvidia.co.kr/blog/nvidia-jetson-developer-meetup/"
+	data-identifier="6722 https://blogs.nvidia.co.kr/?p=6722"
+	data-title="NVIDIA Jetson 개발자 밋업에서 발표될 새로운 AI 소식들은?"
+>
+
+	<header class="entry-header">
+		<div class="inner3">
+			<!-- TITLE -->
+			<h1>NVIDIA Jetson 개발자 밋업에서 발표될 새로운 AI 소식들은?</h1>
+						<div class="author_meta">
+				<span class="entry-date">7월 16, 2021</span> <span class="meta-sep">by</span> <span class="author vcard"><a href="https://blogs.nvidia.co.kr/blog/author/nvidiakorea/" title="Posts by NVIDIA Korea" class="author url fn" rel="author">NVIDIA Korea</a></span>			</div>
+		</div><!-- /inner3 -->
+
+		<!-- FEATURED IMG/VIDEO -->
+					<div class="entry-title img-bg orientation-landscape">
+				<div class="tile-image-wrapper"><img width="1280" height="675" src="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2021/07/이미지-엔비디아-7월-22일-정기-‘AI-개발자-밋업-진행_01.jpg" class="attachment-medium_large size-medium_large" alt="" decoding="async" fetchpriority="high" srcset="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2021/07/이미지-엔비디아-7월-22일-정기-‘AI-개발자-밋업-진행_01.jpg 1280w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2021/07/이미지-엔비디아-7월-22일-정기-‘AI-개발자-밋업-진행_01-960x506.jpg 960w" sizes="(max-width: 1280px) 100vw, 1280px" /></div>
+			</div>
+			</header>
+
+	<!-- META -->
+	<div class="entry-meta-social">
+		<div class="share-count-section">
+			<span class="share-text">
+					<span class="icon icon-share"></span>
+					Share			</span>
+		</div>
+		<ul class="entry-meta-social-links-list">
+			<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblogs.nvidia.co.kr%2Fblog%2Fnvidia-jetson-developer-meetup%2F" class="nvb4-social-share-link for-facebook" target="_blank">	<span class="icon icon-facebook"></span>
+	</a></li><li><a href="https://plus.google.com/share?url=https%3A%2F%2Fblogs.nvidia.co.kr%2Fblog%2Fnvidia-jetson-developer-meetup%2F" class="nvb4-social-share-link for-google-plus" target="_blank">	<span class="icon icon-google-plus"></span>
+	</a></li><li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fblogs.nvidia.co.kr%2Fblog%2Fnvidia-jetson-developer-meetup%2F&title=NVIDIA+Jetson+%EA%B0%9C%EB%B0%9C%EC%9E%90+%EB%B0%8B%EC%97%85%EC%97%90%EC%84%9C+%EB%B0%9C%ED%91%9C%EB%90%A0+%EC%83%88%EB%A1%9C%EC%9A%B4+AI+%EC%86%8C%EC%8B%9D%EB%93%A4%EC%9D%80%3F+%7C+NVIDIA+Blog" class="nvb4-social-share-link for-linkedin" target="_blank">	<span class="icon icon-linkedin"></span>
+	</a></li><li><a href="#ea-share-count-email"class="ea-share-count-button style- ea-share-no-count email" data-postid="6722" data-nonce="0d2633e088""><span class="ea-share-count-icon-label"><i class="ea-share-count-icon easc-envelope"></i><span class="ea-share-count-label">Email</span></span></a></li>		</ul>
+	</div>
+
+	<div class="entry-content">
+		<span class="bsf-rt-reading-time"><span class="bsf-rt-display-label" prefix="읽는 시간:"></span> <span class="bsf-rt-display-time" reading_time="2"></span> <span class="bsf-rt-display-postfix" postfix="분"></span></span><div id="bsf_rt_marker"></div><p>‘NVIDIA AI 개발자 밋업’이 7월 22일 오후 2시부터 5시까지 온라인으로 진행됩니다.</p>
+<p>이번 밋업은 인더스트리얼 세션과 개발자 세션을 포함한 두 가지 세션으로 구성되어 있습니다. 인더스트리얼 세션에서는 Jetson AGX Xavier Industrial Module과 Metropolis 분야의 소프트웨어 개발 키트(SDK) 업데이트 소식, NVIDIA 플랫폼의 다양한 산업별 적용 사례를 살펴볼 예정입니다.</p>
+<p>개발자 세션에서는 지능형 비디오 분석(IVA) SDK 활용 라이브 코딩 세션과 Jetson을 통한 나노소어(NanoSaur) 원작자와의 협업 프로젝트 등을 소개합니다. 또한, 세연테크, 인텔리빅스, 노타, 비트센싱 등 NVIDIA 플랫폼을 도입한 국내 IT 기업이 참여해 자사의 제품을 소개하는 데모 부스를 운영합니다.</p>
+<h2><strong>인더스트리얼 세션 1. Jetson AGX Xavier Industrial 버전</strong></h2>
+<p>Jetson AGX Xavier Industrial Module은 AGX Xavier 시스템 온 모듈(System-on-Module)의 기능을 확장했으며, 개발자가 고급 AI 러기다이즈드(ruggedized) 시스템을 구축하도록 지원합니다. 이는 까다로운 환경에서 지능형 비디오 분석, 광학 검사, 로보틱스, 컴퓨터 비전, 자율화, AI 작업을 지원할 수 있습니다. 또한, 산업, 항공우주, 방위, 건설, 농업, 물류, 재고관리, 납품, 검사, 의료분야에서 활용될 예정입니다. 이외에도, 새롭게 공개된 JetPack 4.6 버전에 대해서도 간략히 살펴보는 시간을 가집니다. 발표는 NVIDIA 임베디드 IBD 매니저 함흥용 전무입니다.</p>
+<h2><strong>인더스트리얼 세션 2. IVA를 위한 JetPack &amp; DeepStream 업데이트</strong></h2>
+<p>DeepStream은 딥 러닝을 활용한 비디오 분석 응용 프로그램의 고성능 개발을 손쉽게 할 수 있도록 만든 NVIDIA의 라이브러리입니다. 이는 IVA의 보다 손쉬운 개발을 지원하여 개발자들은 DeepStream을 사용해 실시간으로 동영상 프레임을 처리하고, 이해하며 분류 작업을 진행할 수 있습니다. 또한 매우 높은 수준으로 요구되는 처리량(Throughput)과 반응시간(Latency)에 대한 요건을 충족시킬 수 있습니다. 본 세션에서는 Jetpack 4.6 버전과 DeepStream 업데이트 내용에 대해 알아봅니다. 발표는 NVIDIA 솔루션 아키텍트 이진호 대리입니다.</p>
+<h2><strong>인더스트리얼 세션 3. 엣지 AI와 애플리케이션을 활용한 ITS 기술</strong></h2>
+<p>Nota는 다양한 하드웨어에서 비전 기반 AI 모델을 실행할 수 있도록 AI 모델 경량화를 자동화하는 넷츠프레소(NetPresso)를 개발했습니다. 또한, Nota는 NVIDIA Inception과 Metropolis 회원으로, 3종 Jetson 보드와 DeepSteam을 통한 솔루션 개발로 국내 최초 온디바이스 실시간 교통관제 솔루션 상용화에 성공했습니다. 본 세션에서는 Nota와의 성공적인 IVA 산업 협업 사례를 살펴봅니다. 발표는 유태하 Nota ITS팀 PM입니다.</p>
+<h2><strong>인더스트리얼 세션 4. </strong><strong>자율주행 실현을 위한 레이더 기술</strong></h2>
+<p>이미징 레이더 기술 기업인 비트센싱(bitsensing, Inc.)은 NVIDIA Jetson NX을 이용하여 자율주행 차량용 4D 이미징 레이더(Radar)와 자율주행 인프라를 위한 교통 모니터링 레이더(Traffic monitoring Radar)를 개발하고 있습니다. 자율주행 차량용 4D 이미징 레이더는 이미징 레이더와 카메라를 결합하여 카메라 인식 결과로 레이더 이미지를 학습하는 솔루션입니다. 자율주행 인프라를 위한 교통 모니터링 레이더 또한 레이더와 카메라를 결합하여 도로상의 차량 감지와 차종을 구분하는 다이내믹 맵(dynamic map) 생성 솔루션입니다. 비트센싱은 2021년 하반기부터 NV 플랫폼이 적용된 2세대 제품을 출시할 예정입니다. 발표는 이재은 비트센싱 대표가 맡습니다.</p>
+<h2><strong>개발자 세션 1. DeepStream SDK 코딩 세션과 라이브 Q&amp;A</strong></h2>
+<p>DeepStream SDK는 AI 기반 다중 센서 처리, 비디오와 이미지 이해를 위한 완전한 스트리밍 분석 툴킷을 제공합니다. 또한 픽셀, 센서 데이터를 실행 가능한 인사이트로 변환하는 엔드-투-엔드 서비스와 솔루션을 구축하기 위한 플랫폼인 NVIDIA Metropolis의 핵심이다. 본 세션에는 IVA 애플리케이션 구축 시 필요한 TensorRT, TLT, DeepStream SDK를 핸즈온 레벨에서 학습할 수 있도록 샘플 프로젝트를 활용합니다. 또한, 라이브 코딩과 전문가의 Q&amp;A세션도 진행될 예정입니다. 발표는 NVIDIA 솔루션 아키텍트 이진호 대리가 맡습니다.</p>
+<h2><strong>개발자 세션 2. 개발자 세션</strong></h2>
+<p>SpotMicro 프로젝트는 로봇 제작에 관심 있는 많은 메이커들에게 큰 관심을 받았습니다. 로드밸런스 김수영 대표는 본 교육 영상을 통해 공유의 가치를 이해하고 본인의 지식과 제작사례를 공유해왔습니다. 본 세션에서는 김수영 대표가 발표를 맡아 Jetson 기반의 SpotMicro를 ROS2와 CUDA를 통해 발전시키는 과정과 나노소어 원작자와의 협업 프로젝트를 소개합니다.</p>
+<p>이외에도, 참가자들을 대상으로 다양한 경품 이벤트가 진행될 예정입니다. 등록 마감은 21일 오후 6시까지며, <a target="_blank" href="https://festa.io/events/1672">여기</a>에서 선착순으로 접수할 수 있습니다.</p>
+
+		<footer id="post-footer" class="entry-footer  ">
+			<div class="entry-footer-categories"><span class="cat-links">카테고리: <a href="https://blogs.nvidia.co.kr/blog/category/corporate/" rel="category tag">Corporate</a> | <a href="https://blogs.nvidia.co.kr/blog/category/deep-learning/" rel="category tag">Deep Learning</a> | <a href="https://blogs.nvidia.co.kr/blog/category/embeded/" rel="category tag">Embedded Computing</a></span></div><div class="entry-footer-tags"><span class="tags-links">태그: <a href="https://blogs.nvidia.co.kr/blog/tag/events/" rel="tag">events</a> | <a href="https://blogs.nvidia.co.kr/blog/tag/higher-education-academia/" rel="tag">Higher Education/Academia</a> | <a href="https://blogs.nvidia.co.kr/blog/tag/jetson/" rel="tag">Jetson</a></span></div><div id="disqus_thread"></div>		</footer>
+	</div>
+	
+<div id="secondary" class="single-latest-news-widget-area" role="complementary">
+	<aside id="media_image-11" class="widget widget_media_image"><a href="https://www.nvidia.com/ko-kr/ai-days/"><img width="406" height="350" src="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/09/ent-26-ai-day-phase1-general-blog-406x350-koKR-5664550.png" class="image wp-image-20502  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" decoding="async" /></a></aside><aside id="nvb5categorynewswidget-3" class="widget NVB5CategoryNewsWidget"><h3 class="widget-title">All NVIDIA News</h3>		<div class="category-latest-news">
+		
+<article
+	class="excerpt  post-20924 post type-post status-publish format-standard has-post-thumbnail hentry category-supercomputing-2 tag-quantum-computing loop-item-1 for-pagenum-1"	id="post-20924"
+	data-post-id="20924"
+>
+	<div class="inner for-hentry img-bg orientation-landscape">
+		<div class="tile-image-wrapper"><img width="960" height="540" src="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer-960x540.jpg" class="attachment-medium size-medium" alt="" decoding="async" srcset="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer-960x540.jpg 960w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer-1280x720.jpg 1280w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer-1536x864.jpg 1536w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer-1290x725.jpg 1290w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer-630x354.jpg 630w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer-300x169.jpg 300w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer-400x225.jpg 400w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/quantum-computing-jupiter-supercomputer.jpg 1600w" sizes="(max-width: 960px) 100vw, 960px" /></div>
+		<div class="inner2 for-hentry no-gradient">
+			<a href="https://blogs.nvidia.co.kr/blog/nvidia-runs-record-simulation-of-fault-tolerant-quantum-computing-at-julich-supercomputing-centre/" class="aggregation-card-link" title="NVIDIA, 율리히 슈퍼컴퓨팅 센터에서 내결함성 양자 컴퓨팅 사상 최대 규모 시뮬레이션 구현"></a>
+		</div>
+	</div>
+
+	<div class="title-excerpt">
+		<p class="entry-title">
+			<a href="https://blogs.nvidia.co.kr/blog/nvidia-runs-record-simulation-of-fault-tolerant-quantum-computing-at-julich-supercomputing-centre/" class="entry-title-text">
+				NVIDIA, 율리히 슈퍼컴퓨팅 센터에서 내결함성 양자 컴퓨팅 사상 최대 규모 시뮬레이션 구현			</a>
+		</p>
+	</div>
+</article>
+
+<article
+	class="excerpt  post-20920 post type-post status-publish format-standard has-post-thumbnail hentry category-ai-infrastructure tag-gtc-2026 tag-nvidia-dsx loop-item-1 for-pagenum-1"	id="post-20920"
+	data-post-id="20920"
+>
+	<div class="inner for-hentry img-bg orientation-landscape">
+		<div class="tile-image-wrapper"><img width="700" height="393" src="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-dsx-platform_mid.jpg" class="attachment-medium size-medium" alt="" decoding="async" loading="lazy" srcset="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-dsx-platform_mid.jpg 700w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-dsx-platform_mid-630x354.jpg 630w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-dsx-platform_mid-300x169.jpg 300w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-dsx-platform_mid-400x225.jpg 400w" sizes="auto, (max-width: 700px) 100vw, 700px" /></div>
+		<div class="inner2 for-hentry no-gradient">
+			<a href="https://blogs.nvidia.co.kr/blog/european-ecosystem-builds-worlds-most-efficient-ai-factories-with-nvidia-dsx/" class="aggregation-card-link" title="NVIDIA DSX, 유럽 AI 팩토리 전력·냉각 효율 향상 지원"></a>
+		</div>
+	</div>
+
+	<div class="title-excerpt">
+		<p class="entry-title">
+			<a href="https://blogs.nvidia.co.kr/blog/european-ecosystem-builds-worlds-most-efficient-ai-factories-with-nvidia-dsx/" class="entry-title-text">
+				NVIDIA DSX, 유럽 AI 팩토리 전력·냉각 효율 향상 지원			</a>
+		</p>
+	</div>
+</article>
+
+<article
+	class="excerpt  post-20898 post type-post status-publish format-standard has-post-thumbnail hentry category-ai tag-agentic-ai tag-artificial-intelligence tag-local-ai tag-nvidia-rtx tag-rtx-spark loop-item-1 for-pagenum-1"	id="post-20898"
+	data-post-id="20898"
+>
+	<div class="inner for-hentry img-bg orientation-landscape">
+		<div class="tile-image-wrapper"><img width="960" height="540" src="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-rtx-spark-berlin-oct26-event-tech-blog-1280x680-1-1-960x540.jpg" class="attachment-medium size-medium" alt="" decoding="async" loading="lazy" srcset="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-rtx-spark-berlin-oct26-event-tech-blog-1280x680-1-1-960x540.jpg 960w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-rtx-spark-berlin-oct26-event-tech-blog-1280x680-1-1-630x354.jpg 630w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-rtx-spark-berlin-oct26-event-tech-blog-1280x680-1-1-300x169.jpg 300w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-rtx-spark-berlin-oct26-event-tech-blog-1280x680-1-1-400x225.jpg 400w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/nvidia-rtx-spark-berlin-oct26-event-tech-blog-1280x680-1-1.jpg 1280w" sizes="auto, (max-width: 960px) 100vw, 960px" /></div>
+		<div class="inner2 for-hentry no-gradient">
+			<a href="https://blogs.nvidia.co.kr/blog/local-ai-rtx-spark-windows-laptops-celebration/" class="aggregation-card-link" title="RTX Spark: 새로운 윈도우 PC 출시와 함께 전 세계에서 열린 축하 행사"></a>
+		</div>
+	</div>
+
+	<div class="title-excerpt">
+		<p class="entry-title">
+			<a href="https://blogs.nvidia.co.kr/blog/local-ai-rtx-spark-windows-laptops-celebration/" class="entry-title-text">
+				RTX Spark: 새로운 윈도우 PC 출시와 함께 전 세계에서 열린 축하 행사			</a>
+		</p>
+	</div>
+</article>
+
+<article
+	class="excerpt  post-20884 post type-post status-publish format-standard has-post-thumbnail hentry category-ai category-deep-learning tag-agentic-ai tag-artificial-intelligence tag-nemotron tag-open-source loop-item-1 for-pagenum-1"	id="post-20884"
+	data-post-id="20884"
+>
+	<div class="inner for-hentry img-bg orientation-landscape">
+		<div class="tile-image-wrapper"><img width="960" height="540" src="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-960x540.jpeg" class="attachment-medium size-medium" alt="" decoding="async" loading="lazy" srcset="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-960x540.jpeg 960w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-1680x945.jpeg 1680w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-1280x720.jpeg 1280w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-1536x864.jpeg 1536w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-1290x725.jpeg 1290w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-630x354.jpeg 630w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-300x169.jpeg 300w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765-400x225.jpeg 400w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765.jpeg 1920w" sizes="auto, (max-width: 960px) 100vw, 960px" /></div>
+		<div class="inner2 for-hentry no-gradient">
+			<a href="https://blogs.nvidia.co.kr/blog/nemotron-3-5-super-vl/" class="aggregation-card-link" title="데이터센터부터 데스크톱까지 개방되다: 최고 효율의 Super VL 및 Bolt 모델로 Nemotron 제품군을 넓히는 NVIDIA"></a>
+		</div>
+	</div>
+
+	<div class="title-excerpt">
+		<p class="entry-title">
+			<a href="https://blogs.nvidia.co.kr/blog/nemotron-3-5-super-vl/" class="entry-title-text">
+				데이터센터부터 데스크톱까지 개방되다: 최고 효율의 Super VL 및 Bolt 모델로 Nemotron 제품군을 넓히는 NVIDIA			</a>
+		</p>
+	</div>
+</article>
+
+<article
+	class="excerpt  post-20841 post type-post status-publish format-standard has-post-thumbnail hentry category-ai tag-nvidia-in-europe tag-agentic-ai tag-artificial-intelligence tag-events tag-gtc-2026 tag-open-source loop-item-1 for-pagenum-1"	id="post-20841"
+	data-post-id="20841"
+>
+	<div class="inner for-hentry img-bg orientation-landscape">
+		<div class="tile-image-wrapper"><img width="960" height="540" src="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-960x540.jpg" class="attachment-medium size-medium" alt="" decoding="async" loading="lazy" srcset="https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-960x540.jpg 960w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-1680x945.jpg 1680w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-1280x720.jpg 1280w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-1536x864.jpg 1536w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-1290x725.jpg 1290w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-630x354.jpg 630w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-300x169.jpg 300w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338-400x225.jpg 400w, https://blogs.nvidia.co.kr/wp-content/uploads/sites/16/2026/10/france-germany-european-commission-collaboration-social-1920x1080-5822338.jpg 1920w" sizes="auto, (max-width: 960px) 100vw, 960px" /></div>
+		<div class="inner2 for-hentry no-gradient">
+			<a href="https://blogs.nvidia.co.kr/blog/gtc-berlin-2026-news/" class="aggregation-card-link" title="NVIDIA, GTC 베를린을 향해 유럽에 상륙하다"></a>
+		</div>
+	</div>
+
+	<div class="title-excerpt">
+		<p class="entry-title">
+			<a href="https://blogs.nvidia.co.kr/blog/gtc-berlin-2026-news/" class="entry-title-text">
+				NVIDIA, GTC 베를린을 향해 유럽에 상륙하다			</a>
+		</p>
+	</div>
+</article>
+		</div>
+		</aside><aside id="nvb5_subscribe_widget-4" class="widget NVB5_Subscribe_Widget">		<div class="subscribe-wrapper">
+						<a href="" class="subscribe-inner">
+															</a>
+		</div>
+		</aside></div><!-- #secondary -->
+	<div class="clearfix"></div>
+</article>
+		</div>
+			</main><!-- #main -->
+</div><!-- #primary -->
+
+		</div><!-- /.inner.for-content -->
+	</div><!-- #content -->
+
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="inner for-colophon">
+
+		<!-- == FOOTER AREA 1 == -->
+		<div class="footer-area-1">
+						<nav class="footer-menu-1-slot" role="navigation">
+										<h3 class="menu-title">솔루션</h3>
+					<div class="menu-%ec%86%94%eb%a3%a8%ec%85%98-container"><ul id="footer-menu-1" class="menu"><li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68"><a target="_blank" href="https://www.nvidia.co.kr/object/geforce_family_kr.html">그래픽카드</a></li>
+<li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a target="_blank" href="https://www.nvidia.co.kr/object/nvidia-grid-kr.html">GRID</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70"><a target="_blank" href="https://www.nvidia.co.kr/object/tesla-supercomputing-solutions-kr.html">고성능 컴퓨팅</a></li>
+<li id="menu-item-71" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a target="_blank" href="https://www.nvidia.co.kr/object/workstation-solutions-kr.html">비주얼라이제이션</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a target="_blank" href="https://www.nvidia.co.kr/object/cuda-parallel-computing-platform-kr.html">CUDA</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a target="_blank" href="https://www.nvidia.co.kr/coolstuff">배경화면</a></li>
+</ul></div>			</nav>
+						<nav class="footer-menu-2-slot" role="navigation">
+										<h3 class="menu-title">Corporate</h3>
+					<div class="menu-corporate-container"><ul id="footer-menu-2" class="menu"><li id="menu-item-74" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a target="_blank" href="https://www.nvidia.co.kr/object/event-calendar-kr.html">이벤트</a></li>
+<li id="menu-item-75" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a target="_blank" href="https://www.nvidia.com/object/affiliate_program.html">협력 프로그램</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a target="_blank" href="https://developer.nvidia.com">개발자</a></li>
+<li id="menu-item-77" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a target="_blank" href="https://www.nvidia.com/object/nvidia-partner-network.html">NVIDIA  파트너 네트워크</a></li>
+<li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a target="_blank" href="https://careers.nvidia.com/">채용 정보</a></li>
+<li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79"><a target="_blank" href="https://www.nvidia.com/object/rss_home.html">RSS  피드</a></li>
+<li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a target="_blank" href="https://www.nvidia.co.kr/object/newsletters-kr.html">뉴스레터 구독</a></li>
+<li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81"><a target="_blank" href="https://www.nvidia.co.kr/object/contact-information-asia-kr.html">문의하기</a></li>
+<li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82"><a target="_blank" href="https://www.nvidia.co.kr/object/product-security-kr.html">보안</a></li>
+</ul></div>			</nav>
+						<nav class="footer-menu-3-slot" role="navigation">
+										<h3 class="menu-title">Footer Links</h3>
+					<div class="menu-footer-links-container"><ul id="footer-menu-3" class="menu"><li id="menu-item-96" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-96"><a href="https://www.nvidia.co.kr/object/legal_info_kr.html">법적 정보</a></li>
+<li id="menu-item-97" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97"><a href="https://blogs.nvidia.com/privacy-commenting-policy/">개인정보 보호정책</a></li>
+</ul></div>			</nav>
+					</div><!-- /.footer-area-1 -->
+
+		<!-- == FOOTER AREA 2 == -->
+		<div class="footer-area-2">
+			<div class="explore-cta">
+				<a href="https://blogs.nvidia.com/explore">
+					<div class="explore-cta-icon-wrapper">
+							<span class="icon icon-plus"></span>
+	</div>
+					<div class="explore-cta-text">
+						<div class="explore-cta-text-inner">
+							지역별 블로그와 다른 소셜 네트워크를 탐색해 보세요.</div>
+					</div>
+				</a>
+			</div>
+		</div><!-- /.footer-area-2 -->
+
+		<!-- == FOOTER AREA 3 == -->
+		<div class="footer-area-3">
+
+		</div><!-- /.footer-area-3 -->
+
+	</div><!-- /.inner.for-colophon -->
+
+	<div id="white-footer">
+		<div class="inner for-colophon">
+			<div class="area footer-area-4">
+				<svg class="global-footer__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 407.8 1000 184.4" enable-background="new 0 407.8 1000 184.4" xml:space="preserve">
+					<g id="nvidia-logo">
+						<path d="M987.1 555.7v-2.8h1.7c0.9 0 2.3 0.1 2.3 1.2 0 1.2-0.7 1.5-1.8 1.5H987.1M987.1 557.6h1.2l2.8 4.8h3l-3.1-5c1.5-0.1 2.9-0.8 2.9-3 0-2.7-1.8-3.5-4.9-3.5h-4.4v11.5h2.6L987.1 557.6M1000 556.7c0-6.8-5.2-10.7-11.1-10.7 -5.8 0-11.1 3.9-11.1 10.7 0 6.8 5.2 10.7 11.1 10.7S1000 563.5 1000 556.7M996.8 556.7c0 4.9-3.6 8.2-7.9 8.2l0 0c-4.4 0-7.9-3.3-7.9-8.2 0-4.9 3.6-8.2 7.9-8.2C993.2 548.6 996.8 551.9 996.8 556.7z"></path>
+						<path d="M593.2 442.7v121.1h34.2V442.7H593.2zM324.4 442.5v121.2h34.5v-94.1l26.9 0.1c8.8 0 15 2.2 19.2 6.7 5.4 5.7 7.6 15.1 7.6 32v55.3H446v-66.9c0-47.8-30.5-54.3-60.2-54.3C385.8 442.5 324.4 442.5 324.4 442.5zM648.3 442.7v121.1h55.4c29.5 0 39.2-4.9 49.6-15.9 7.4-7.7 12.1-24.7 12.1-43.3 0-17-4-32.2-11.1-41.7 -12.5-16.9-30.8-20.2-58.1-20.2H648.3zM682.2 469h14.7c21.3 0 35.1 9.5 35.1 34.4 0 24.8-13.7 34.4-35.1 34.4h-14.7V469zM544 442.7l-28.5 95.9 -27.3-95.9h-36.9l39 121.1h49.2l39.3-121.1H544zM781.4 563.7h34.2v-121h-34.2V563.7zM877.2 442.7l-47.7 121h33.7l7.6-21.3h56.5l7.2 21.3h36.6l-48.2-121H877.2zM899.4 464.8l20.7 56.6H878L899.4 464.8z"></path>
+						<path d="M103.9 462.8v-16.6c1.6-0.1 3.3-0.2 4.9-0.2 45.6-1.4 75.4 39.1 75.4 39.1s-32.2 44.8-66.8 44.8c-5 0-9.4-0.8-13.4-2.2v-50.5c17.7 2.2 21.3 10 32 27.7l23.7-20c0 0-17.3-22.7-46.5-22.7C110 462.3 106.9 462.5 103.9 462.8M103.9 407.8v24.8c1.6-0.1 3.3-0.2 4.9-0.3 63.3-2.2 104.6 51.9 104.6 51.9s-47.4 57.7-96.7 57.7c-4.5 0-8.7-0.4-12.7-1.1v15.4c3.4 0.4 7 0.7 10.6 0.7 46 0 79.2-23.5 111.4-51.2 5.3 4.3 27.2 14.7 31.7 19.2 -30.6 25.6-101.9 46.3-142.3 46.3 -3.9 0-7.6-0.2-11.3-0.6v21.6h174.7V407.8H103.9zM103.9 527.8v13.1c-42.5-7.6-54.3-51.8-54.3-51.8s20.4-22.6 54.3-26.3v14.4c0 0 0 0-0.1 0 -17.7-2.2-31.7 14.5-31.7 14.5S80 519.6 103.9 527.8M28.4 487.2c0 0 25.2-37.1 75.5-41v-13.5C48.2 437.2 0 484.4 0 484.4s27.3 79 103.9 86.3v-14.4C47.7 549.2 28.4 487.2 28.4 487.2z"></path>
+					</g>
+					<image src="images/nvidia-logo.png" alt="NVIDIA" title="NVIDIA" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image>
+				</svg>
+					<div class="site-info">
+		<ul class="site-info-list"><li id="menu-item-13441"><a href="https://www.nvidia.com/ko-kr/about-nvidia/privacy-policy/">개인정보보호정책</a></li>
+<li id="menu-item-13442"><a href="https://www.nvidia.com/ko-kr/privacy-center/">내 개인정보 관리</a></li><li><a href="javascript:void(0);" id="manage-nvcookies-link" target="_self">내 쿠키 관리하기</a></li>
+<li id="menu-item-13443"><a href="https://www.nvidia.com/ko-kr/preferences/email-preferences/">내 데이터 판매 또는 공유 금지</a></li>
+<li id="menu-item-13444"><a href="https://www.nvidia.com/ko-kr/about-nvidia/terms-of-service/">서비스 약관</a></li>
+<li id="menu-item-13445"><a href="https://www.nvidia.com/ko-kr/about-nvidia/accessibility/">접근성</a></li>
+<li id="menu-item-13446"><a href="https://www.nvidia.com/ko-kr/about-nvidia/company-policies/">기업 정책</a></li>
+<li id="menu-item-13447"><a href="https://www.nvidia.com/ko-kr/product-security/">제품 보안</a></li>
+<li id="menu-item-13448"><a href="https://www.nvidia.com/ko-kr/contact/">연락처</a></li>
+</ul>		<div class="copyright">
+			Copyright &copy; 2026 NVIDIA Corporation		</div>
+	</div>
+				</div>
+			<div class="area footer-area-5">
+				<a href="https://www.nvidia.com/en-us/location-selector/">
+				Korea				</a>
+			</div>
+		</div>
+	</div>
+</footer><!-- #colophon -->
+
+</div><!-- #page -->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/sites/16/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/nvidia-blog-v5/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div id="bsf_rt_progress_bar_container" class="progress-container-top">
+				<div class="progress-bar" id="bsf_rt_progress_bar"></div>
+				</div><script id="yith-infinitescroll-js" src="https://blogs.nvidia.co.kr/wp-content/plugins/yith-infinite-scrolling/assets/js/yith.infinitescroll.min.js?ver=2.12.0"></script>
+<script id="yith-infs-js-extra">
+var yith_infs = {"navSelector":".nvb4-single-post-pagination","nextSelector":".for-next a","itemSelector":".cf-posts-with-override","contentSelector":"#main","loader":"https://blogs.nvidia.co.kr/wp-content/plugins/yith-infinite-scrolling/assets/images/loader.gif","shop":""};
+//# sourceURL=yith-infs-js-extra
+</script>
+<script id="yith-infs-js" src="https://blogs.nvidia.co.kr/wp-content/plugins/yith-infinite-scrolling/assets/js/yith-infs.min.js?ver=2.12.0"></script>
+<script id="throttle-debounce-js" src="https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/assets//js/lib/jquery.ba-throttle-debounce.min.js?ver=20190419.0001"></script>
+<script id="waypoints-js" src="https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/assets//js/lib/waypoints/jquery.waypoints.min.js?ver=4.0.0"></script>
+<script id="waypoints-sticky-js" src="https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/assets//js/lib/waypoints/shortcuts/sticky.min.js?ver=4.0.0"></script>
+<script data-wp-strategy="defer" defer id="fitvids-js" src="https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/assets//js/lib/jquery.fitvids.min.js?ver=1.2.0"></script>
+<script id="count-js-js" src="//nvidiablog.disqus.com/count.js?ver=7.1.3"></script>
+<script id="nvb-disqus-js" src="https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/assets/js/load-disqus.js?ver=20200311.1140"></script>
+<script id="magnific-popup-js" src="https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/assets/js/lib/magnific-popup/jquery.magnific-popup.min.js?ver=1.0.0"></script>
+<script id="nvb-single-js-extra">
+var nvbThemeVars = {"ajaxUrl":"https://blogs.nvidia.co.kr/wp-admin/admin-ajax.php","disqus_url":"https://blogs.nvidia.co.kr/blog/nvidia-jetson-developer-meetup/","language":"ICL_LANGUAGE_CODE","site_url":"https://blogs.nvidia.co.kr"};
+//# sourceURL=nvb-single-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="nvb-single-js" src="https://blogs.nvidia.co.kr/wp-content/themes/nvidia-blog-v5/build/single.min.js?ver=1755094939"></script>
+<script id="nvb4-mkto-forms-inline-2-js-after">
+window.addEventListener("load", function() {MktoForms2.loadForm("//info.nvidia.com", "156-OFN-742", 18313)});
+//# sourceURL=nvb4-mkto-forms-inline-2-js-after
+</script>
+<script id="page-links-to-js" src="https://blogs.nvidia.co.kr/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.4.1"></script>
+<script id="ea-share-count-js-extra">
+var easc = {"url":"https://blogs.nvidia.co.kr/wp-admin/admin-ajax.php"};
+//# sourceURL=ea-share-count-js-extra
+</script>
+<script id="ea-share-count-js" src="https://blogs.nvidia.co.kr/wp-content/plugins/cf-ea-share-count/assets/js/share-count.js?ver=1.5.9"></script>
+<script id="bsfrt_frontend-js-extra">
+var myObj = {"option":""};
+//# sourceURL=bsfrt_frontend-js-extra
+</script>
+<script id="bsfrt_frontend-js" src="https://blogs.nvidia.co.kr/wp-content/plugins/read-meter/assets/js/bsf-rt-frontend.min.js?ver=1.0.11"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://blogs.nvidia.co.kr/wp-includes/js/wp-emoji-release.min.js?ver=7.1.3"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://blogs.nvidia.co.kr/wp-includes/js/wp-emoji-loader.min.js
+</script>
+		<div id="easc-modal-wrap" style="display:none;">
+			<div class="easc-modal">
+				<span class="easc-modal-title">Share this Article</span>
+				<p>
+					<label for="easc-modal-recipient">Friend's Email Address</label>
+					<input type="text" id="easc-modal-recipient">
+				</p>
+				<p>
+					<label for="easc-modal-name">Your Name</label>
+					<input type="text" id="easc-modal-name">
+				</p>
+				<p>
+					<label for="easc-modal-email">Your Email Address</label>
+					<input type="text" id="easc-modal-email">
+				</p>
+				<p class="easc-modal-validation">
+					<label for="easc-modal-validation">Comments</label>
+					<input type="text" id="easc-modal-validation" autocomplete="off">
+				</p>
+				<p class="easc-modal-submit">
+					<button id="easc-modal-submit"><i class="ea-share-count-icon easc-envelope send-email-btn-icon"></i> Send Email</button>
+				</p>
+				<a href="#" id="easc-modal-close"><i class="easc-close close-icon"></i></a>
+				<div id="easc-modal-sent">Email sent!</div>
+			</div>
+		</div>
+			<script type="text/javascript"> _satellite.pageBottom(); </script>
+	</body>
+</html>

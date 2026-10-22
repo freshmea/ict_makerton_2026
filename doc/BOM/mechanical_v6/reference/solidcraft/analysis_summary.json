@@ -1,0 +1,412 @@
+[
+  {
+    "file": "STEP_Files/I_shoulder_cls_modi.stp",
+    "backend": "headless in-process SolidCraft MCP",
+    "inspect": {
+      "active_sketch": null,
+      "bodies": [
+        {
+          "area_mm2": 23596.599252826534,
+          "bbox": {
+            "max": [
+              110.78327770633437,
+              52.5000000000003,
+              70.0
+            ],
+            "min": [
+              -0.5503546585152269,
+              -3.481547321973302e-12,
+              -1.785960268563258e-12
+            ]
+          },
+          "center_of_mass": [
+            55.000076352539715,
+            16.3821135890398,
+            27.493435993658125
+          ],
+          "edges": 3442,
+          "face_types": {
+            "cylinder": 16,
+            "plane": 1510
+          },
+          "faces": 1526,
+          "kernel": {
+            "edges": 7274,
+            "faces": 4700,
+            "shells": 1,
+            "vertices": 2542
+          },
+          "name": "PartBody",
+          "vertices": 2122,
+          "visible": true,
+          "volume_mm3": 55791.933875408715
+        }
+      ],
+      "dirty": true,
+      "hidden_origin": [],
+      "marker": 1,
+      "metadata": {},
+      "name": "I_shoulder_cls_modi",
+      "params": [],
+      "path": null,
+      "redo": 0,
+      "revision": 3,
+      "selection": [],
+      "sketches": [],
+      "timeline": [
+        {
+          "boolean_diagnostics": {
+            "events": [],
+            "truncated": false
+          },
+          "error": null,
+          "id": 3,
+          "ms": 8.676400000000001,
+          "name": "Part1.3",
+          "rolled_back": false,
+          "suppressed": false,
+          "type": "BaseFeature",
+          "warning": null
+        }
+      ],
+      "undo": 0,
+      "units": "mm"
+    },
+    "measure": {
+      "bodies": [
+        {
+          "area_mm2": 23596.599252826534,
+          "bbox": {
+            "max": [
+              110.78327770633437,
+              52.5000000000003,
+              70.0
+            ],
+            "min": [
+              -0.5503546585152269,
+              -3.481547321973302e-12,
+              -1.785960268563258e-12
+            ]
+          },
+          "center_of_mass": [
+            55.000076352539715,
+            16.3821135890398,
+            27.493435993658125
+          ],
+          "density_g_cm3": 1.29,
+          "edges": 3442,
+          "face_types": {
+            "cylinder": 16,
+            "plane": 1510
+          },
+          "faces": 1526,
+          "kernel": {
+            "edges": 7274,
+            "faces": 4700,
+            "shells": 1,
+            "vertices": 2542
+          },
+          "mass_g": 71.97159469927723,
+          "material": "Default",
+          "name": "PartBody",
+          "vertices": 2122,
+          "volume_mm3": 55791.933875408715
+        }
+      ],
+      "body_count": 1,
+      "total": {
+        "area_mm2": 23596.599252826534,
+        "edges": 3442,
+        "faces": 1526,
+        "mass_g": 71.97159469927723,
+        "vertices": 2122,
+        "volume_mm3": 55791.933875408715
+      }
+    },
+    "topology_keys": [
+      "body",
+      "edges",
+      "faces"
+    ],
+    "edge_sample_bounds": {
+      "min": [
+        1.5543122344752192e-15,
+        -1.7763568394002505e-15,
+        -3.552713678800501e-15
+      ],
+      "max": [
+        110.0,
+        52.5,
+        70.0
+      ]
+    }
+  },
+  {
+    "file": "STEP_Files/O_shoulder_cls_grooved_modi.stp",
+    "backend": "headless in-process SolidCraft MCP",
+    "inspect": {
+      "active_sketch": null,
+      "bodies": [
+        {
+          "area_mm2": 13221.483572077042,
+          "bbox": {
+            "max": [
+              110.00000000044663,
+              5.000000000213768,
+              68.0
+            ],
+            "min": [
+              -1.94272375964033e-12,
+              -8.549031662410165e-15,
+              1.9999999999995102
+            ]
+          },
+          "center_of_mass": [
+            55.07480088720167,
+            2.2721240913244545,
+            35.820115502619664
+          ],
+          "edges": 2694,
+          "face_types": {
+            "plane": 1103
+          },
+          "faces": 1103,
+          "kernel": {
+            "edges": 5232,
+            "faces": 3488,
+            "shells": 1,
+            "vertices": 1732
+          },
+          "name": "PartBody",
+          "vertices": 1598,
+          "visible": true,
+          "volume_mm3": 20955.658601220402
+        }
+      ],
+      "dirty": true,
+      "hidden_origin": [],
+      "marker": 1,
+      "metadata": {},
+      "name": "O_shoulder_cls_grooved_modi",
+      "params": [],
+      "path": null,
+      "redo": 0,
+      "revision": 3,
+      "selection": [],
+      "sketches": [],
+      "timeline": [
+        {
+          "boolean_diagnostics": {
+            "events": [],
+            "truncated": false
+          },
+          "error": null,
+          "id": 3,
+          "ms": 5.9868,
+          "name": "Part1.4",
+          "rolled_back": false,
+          "suppressed": false,
+          "type": "BaseFeature",
+          "warning": null
+        }
+      ],
+      "undo": 0,
+      "units": "mm"
+    },
+    "measure": {
+      "bodies": [
+        {
+          "area_mm2": 13221.483572077042,
+          "bbox": {
+            "max": [
+              110.00000000044663,
+              5.000000000213768,
+              68.0
+            ],
+            "min": [
+              -1.94272375964033e-12,
+              -8.549031662410165e-15,
+              1.9999999999995102
+            ]
+          },
+          "center_of_mass": [
+            55.07480088720167,
+            2.2721240913244545,
+            35.820115502619664
+          ],
+          "density_g_cm3": 1.29,
+          "edges": 2694,
+          "face_types": {
+            "plane": 1103
+          },
+          "faces": 1103,
+          "kernel": {
+            "edges": 5232,
+            "faces": 3488,
+            "shells": 1,
+            "vertices": 1732
+          },
+          "mass_g": 27.03279959557432,
+          "material": "Default",
+          "name": "PartBody",
+          "vertices": 1598,
+          "volume_mm3": 20955.658601220402
+        }
+      ],
+      "body_count": 1,
+      "total": {
+        "area_mm2": 13221.483572077042,
+        "edges": 2694,
+        "faces": 1103,
+        "mass_g": 27.03279959557432,
+        "vertices": 1598,
+        "volume_mm3": 20955.658601220402
+      }
+    },
+    "topology_keys": [
+      "body",
+      "edges",
+      "faces"
+    ],
+    "edge_sample_bounds": {
+      "min": [
+        -6.93889390391e-18,
+        -1.77635705116e-15,
+        2.0
+      ],
+      "max": [
+        110.0,
+        5.0,
+        68.0
+      ]
+    }
+  },
+  {
+    "file": "STL/files/L_arm_cover.stl",
+    "backend": "headless in-process SolidCraft MCP",
+    "inspect": {
+      "active_sketch": null,
+      "bodies": [
+        {
+          "area_mm2": 14946.75397876713,
+          "bbox": {
+            "max": [
+              29.842567443847656,
+              45.0,
+              137.42063903808594
+            ],
+            "min": [
+              -11.316874504089355,
+              -5.551115123125783e-16,
+              -6.127028465270996
+            ]
+          },
+          "center_of_mass": [
+            15.959772891625624,
+            27.533546115704702,
+            63.67049660522918
+          ],
+          "edges": 10692,
+          "face_types": {
+            "mesh": 7128
+          },
+          "faces": 7128,
+          "kernel": {
+            "edges": 10692,
+            "faces": 7128,
+            "shells": 1,
+            "vertices": 3558
+          },
+          "name": "L_arm_cover",
+          "vertices": 3558,
+          "visible": true,
+          "volume_mm3": 27026.524530885294
+        }
+      ],
+      "dirty": true,
+      "hidden_origin": [],
+      "marker": 1,
+      "metadata": {},
+      "name": "L_arm_cover",
+      "params": [],
+      "path": null,
+      "redo": 0,
+      "revision": 3,
+      "selection": [],
+      "sketches": [],
+      "timeline": [
+        {
+          "boolean_diagnostics": {
+            "events": [],
+            "truncated": false
+          },
+          "error": null,
+          "id": 3,
+          "ms": 2.9250000000000003,
+          "name": "L_arm_cover",
+          "rolled_back": false,
+          "suppressed": false,
+          "type": "MeshFeature",
+          "warning": null
+        }
+      ],
+      "undo": 0,
+      "units": "mm"
+    },
+    "measure": {
+      "bodies": [
+        {
+          "area_mm2": 14946.75397876713,
+          "bbox": {
+            "max": [
+              29.842567443847656,
+              45.0,
+              137.42063903808594
+            ],
+            "min": [
+              -11.316874504089355,
+              -5.551115123125783e-16,
+              -6.127028465270996
+            ]
+          },
+          "center_of_mass": [
+            15.959772891625624,
+            27.533546115704702,
+            63.67049660522918
+          ],
+          "density_g_cm3": 1.29,
+          "edges": 10692,
+          "face_types": {
+            "mesh": 7128
+          },
+          "faces": 7128,
+          "kernel": {
+            "edges": 10692,
+            "faces": 7128,
+            "shells": 1,
+            "vertices": 3558
+          },
+          "mass_g": 34.86421664484203,
+          "material": "Default",
+          "name": "L_arm_cover",
+          "vertices": 3558,
+          "volume_mm3": 27026.524530885294
+        }
+      ],
+      "body_count": 1,
+      "total": {
+        "area_mm2": 14946.75397876713,
+        "edges": 10692,
+        "faces": 7128,
+        "mass_g": 34.86421664484203,
+        "vertices": 3558,
+        "volume_mm3": 27026.524530885294
+      }
+    },
+    "topology_keys": [
+      "body",
+      "edges",
+      "faces"
+    ]
+  }
+]

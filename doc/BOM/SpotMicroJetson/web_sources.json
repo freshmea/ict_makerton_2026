@@ -1,0 +1,112 @@
+[
+  {
+    "id": "road_readme",
+    "url": "https://github.com/Road-Balance/SpotMicroJetson",
+    "file": "web/RoadBalance_GitHub.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.193503+00:00",
+    "http_status": 200,
+    "final_url": "https://github.com/Road-Balance/SpotMicroJetson",
+    "status": "saved",
+    "bytes": 306044,
+    "sha256": "a3619e8c6f6891fd3d797671201fb1374fd45119500038a697c30da8364dbf93"
+  },
+  {
+    "id": "upstream_docs",
+    "url": "https://spotmicroai.readthedocs.io/en/latest/",
+    "file": "web/SpotMicroAI_home.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.194504+00:00",
+    "http_status": 200,
+    "final_url": "https://spotmicroai.readthedocs.io/en/latest/",
+    "status": "saved",
+    "bytes": 9823,
+    "sha256": "f7d9198e8b69a39f13ed001e3fe975ecaead779804f21ae1ff2198baf41b6a2f"
+  },
+  {
+    "id": "credits",
+    "url": "https://spotmicroai.readthedocs.io/en/latest/credits/",
+    "file": "web/SpotMicroAI_credits.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.194504+00:00",
+    "http_status": 200,
+    "final_url": "https://spotmicroai.readthedocs.io/en/latest/credits/",
+    "status": "saved",
+    "bytes": 7656,
+    "sha256": "90068ca382e13edffb93a6acaad3827dfaf26b83970f44b06fecffd11b320b7f"
+  },
+  {
+    "id": "assembly",
+    "url": "https://spotmicroai.readthedocs.io/en/latest/assembly/",
+    "file": "web/SpotMicroAI_assembly.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.194504+00:00",
+    "http_status": 200,
+    "final_url": "https://spotmicroai.readthedocs.io/en/latest/assembly/",
+    "status": "saved",
+    "bytes": 11818,
+    "sha256": "a7386e74d3369770b41aaacb90826766dce55bbc5ca699b4bde0100b17f2cb98"
+  },
+  {
+    "id": "korean_build",
+    "url": "https://ductility.github.io/2021/01/12/Spot_Micro.html",
+    "file": "web/Ductility_20210112_build.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.194504+00:00",
+    "http_status": 200,
+    "final_url": "https://ductility.github.io/2021/01/12/Spot_Micro.html",
+    "status": "saved",
+    "bytes": 19041,
+    "sha256": "f116f344dbd791bf85842cc22a610150900277164e5685d1ed9a92bd2fb2a34c"
+  },
+  {
+    "id": "nvidia_context",
+    "url": "https://blogs.nvidia.co.kr/blog/nvidia-jetson-developer-meetup/",
+    "file": "web/NVIDIA_meetup.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.554129+00:00",
+    "http_status": 200,
+    "final_url": "https://blogs.nvidia.co.kr/blog/nvidia-jetson-developer-meetup/",
+    "status": "saved",
+    "bytes": 85099,
+    "sha256": "658c3f33bf10b0f4393b0400da594c789357fd898b00f38fde53ba41f03ed6ca"
+  },
+  {
+    "id": "original_parts",
+    "url": "https://www.thingiverse.com/thing:3445283",
+    "file": "web/Thingiverse_3445283.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.577102+00:00",
+    "http_status": 403,
+    "final_url": "https://www.thingiverse.com/thing:3445283",
+    "status": "failed",
+    "error": "403 Client Error: Forbidden for url: https://www.thingiverse.com/thing:3445283"
+  },
+  {
+    "id": "updated_parts",
+    "url": "https://www.thingiverse.com/thing:3761340",
+    "file": "web/Thingiverse_3761340.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.610034+00:00",
+    "http_status": 403,
+    "final_url": "https://www.thingiverse.com/thing:3761340",
+    "status": "failed",
+    "error": "403 Client Error: Forbidden for url: https://www.thingiverse.com/thing:3761340"
+  },
+  {
+    "id": "notion_notes",
+    "url": "https://www.notion.so/SpotMicro-for-G-Camp-c541934a4bad4ad48d1e37ab94c10de8",
+    "file": "web/Notion_GCamp.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.647191+00:00",
+    "http_status": 200,
+    "final_url": "https://app.notion.com/p/SpotMicro-for-G-Camp-c541934a4bad4ad48d1e37ab94c10de8?__dm_a=1",
+    "status": "failed",
+    "error": "Expected text missing"
+  },
+  {
+    "id": "youtube_playlist",
+    "url": "https://www.youtube.com/playlist?list=PLK2UKp8KOXe1ZRbSmcO3VvE_TNs66K6lA",
+    "file": "web/YouTube_playlist.html",
+    "retrieved_at_utc": "2026-10-22T14:49:45.685079+00:00",
+    "http_status": 200,
+    "final_url": "https://www.youtube.com/playlist?list=PLK2UKp8KOXe1ZRbSmcO3VvE_TNs66K6lA",
+    "status": "saved",
+    "bytes": 1243523,
+    "sha256": "8fa653344ba1067d021e262dbea9be622e31ad9abc04915f3470303e5e3b5fc9",
+    "videos_listed": 0,
+    "browser_verified_video_count": 25,
+    "note": "HTTP HTML shell has no video list; 25 videos verified through rendered browser DOM"
+  }
+]
