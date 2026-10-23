@@ -1,0 +1,35 @@
+[package]
+name = "pico2-device-bench"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.90"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[dependencies]
+pico-device-protocol = { path = "../../crates/pico-device-protocol" }
+
+[target.'cfg(target_os = "none")'.dependencies]
+cortex-m = { version = "=0.7.7", features = ["inline-asm"] }
+cortex-m-rt = "=0.7.5"
+embassy-executor = "=0.10.0"
+embassy-rp = { version = "=0.10.0", features = ["rp235xa", "time-driver", "critical-section-impl", "binary-info", "executor-thread", "unstable-pac"] }
+embassy-time = "=0.5.1"
+embassy-sync = "=0.8.0"
+embassy-usb = "=0.6.0"
+embassy-futures = "=0.1.2"
+heapless = "=0.9.1"
+static_cell = "=2.1.1"
+smart-leds = "=0.4.0"
+fixed = "=1.29.0"
+
+[profile.release]
+debug = 2
+lto = "fat"
+codegen-units = 1
+opt-level = "s"
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
+
