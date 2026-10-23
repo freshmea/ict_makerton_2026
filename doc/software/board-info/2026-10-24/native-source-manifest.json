@@ -1,0 +1,42 @@
+{
+  "remote_source_root": "/home/jetson/.cache/300seconds-validation-20261024/source",
+  "files": [
+    {
+      "path": "tools/pico-device-bench/Cargo.lock",
+      "sha256": "8bb83479f674fe8706c6e7d92557f4c4898aeb008b7b2d807a1d346d86a4a4bf"
+    },
+    {
+      "path": "tools/pico-device-bench/Cargo.toml",
+      "sha256": "b4f259c9131b1394f9a8b9d62180c3cb295a5adcdae4b6c56ea31d28a2777885"
+    },
+    {
+      "path": "tools/pico-device-bench/src/lib.rs",
+      "sha256": "c0d3fa3a628b0b0a8588b586a7edc96c58ae71bd4c498cdf818aadff02c42e39"
+    },
+    {
+      "path": "tools/pico-device-bench/src/main.rs",
+      "sha256": "7906db82327337c8b15767cc8c3204978c2ed4307f630a0503e37465a88b0b9d"
+    },
+    {
+      "path": "crates/pico-device-protocol/Cargo.lock",
+      "sha256": "05d6ae887ea5f6c32b30de11b86d8ffc1caaabea0256c0e0a7fb67030a6a2880"
+    },
+    {
+      "path": "crates/pico-device-protocol/Cargo.toml",
+      "sha256": "f6827b5ab0c4444ae76b912818bee12e36ba0a3af803d03f9aabae3c3c535111"
+    },
+    {
+      "path": "crates/pico-device-protocol/src/lib.rs",
+      "sha256": "f79c939ddd12b71f280479dab26e37336abaf1fba9da1a0406fbf99c719fc6d8"
+    },
+    {
+      "path": "crates/pico-device-protocol/tests/invariants.rs",
+      "sha256": "f656874a646431a338dd6840517e6c485da637c213d587fd3f5f3c453be7eebb"
+    },
+    {
+      "path": "tools/jetson/native-uds-smoke.rs",
+      "remote_example_path": "/home/jetson/.cache/300seconds-validation-20261024/source/tools/pico-device-bench/examples/native_uds_smoke.rs",
+      "sha256": "206b58170afe185ff3e7916c88c4339cbb90d8a7437f75d55385dec684e781a3"
+    }
+  ]
+}

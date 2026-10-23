@@ -1,0 +1,6 @@
+{
+  "360p30": {"label": "640×360 · 30 fps", "width": 640, "height": 360, "fps": 30, "sensor_mode": 4, "capture_width": 1280, "capture_height": 720, "bitrate": 1000000},
+  "720p30": {"label": "1280×720 · 30 fps", "width": 1280, "height": 720, "fps": 30, "sensor_mode": 4, "capture_width": 1280, "capture_height": 720, "bitrate": 2500000},
+  "720p60": {"label": "1280×720 · 60 fps", "width": 1280, "height": 720, "fps": 60, "sensor_mode": 4, "capture_width": 1280, "capture_height": 720, "bitrate": 4500000},
+  "1080p30": {"label": "1920×1080 · 30 fps", "width": 1920, "height": 1080, "fps": 30, "sensor_mode": 2, "capture_width": 1920, "capture_height": 1080, "bitrate": 4500000}
+}

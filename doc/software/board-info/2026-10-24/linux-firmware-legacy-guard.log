@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/jetson/ict_makerton_2026/firmware/pico_linux.py", line 173, in cdc_device
+    raise RuntimeError('Current device is %s:%s. Legacy firmware requires initial physical BOOTSEL; no CDC bytes sent.' % (vid, pid))
+RuntimeError: Current device is c0de:caff. Legacy firmware requires initial physical BOOTSEL; no CDC bytes sent.
+[{'sysfs': '/sys/devices/70090000.xusb/usb1/1-2/1-2.3', 'vid': 'c0de', 'pid': 'caff', 'serial': 'E679675A69C4039B', 'bus': 1, 'address': 5, 'usb_node': '/dev/bus/usb/001/005', 'read_write': True}]
+
+EXPECTED_REJECTION_RC 1

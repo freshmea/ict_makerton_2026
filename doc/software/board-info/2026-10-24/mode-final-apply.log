@@ -1,0 +1,67 @@
+Stopped/guarded: cups.socket
+Stopped/guarded: cups.path
+Stopped/guarded: avahi-daemon.socket
+Stopped/guarded: gpsd.socket
+Stopped/guarded: docker.socket
+Stopped/guarded: snapd.socket
+Stopped/guarded: snapd.snap-repair.timer
+Stopped/guarded: cups-browsed.service
+Stopped/guarded: cups.service
+Stopped/guarded: avahi-daemon.service
+Stopped/guarded: bluetooth.service
+Stopped/guarded: blueman-mechanism.service
+Stopped/guarded: ModemManager.service
+Stopped/guarded: gpsd.service
+Stopped/guarded: colord.service
+Stopped/guarded: packagekit.service
+Stopped/guarded: whoopsie.service
+Stopped/guarded: kerneloops.service
+Stopped/guarded: teamviewerd.service
+Stopped/guarded: switcheroo-control.service
+Stopped/guarded: geoclue.service
+Stopped/guarded: spice-vdagentd.service
+Stopped/guarded: nvweston.service
+Stopped/guarded: nvmemwarning.service
+Stopped/guarded: docker.service
+Stopped/guarded: containerd.service
+Stopped/guarded: snapd.snap-repair.service
+Stopped/guarded: snapd.service
+Stopped/guarded: gdm.service
+{
+  "mode": "project",
+  "at_utc": "2026-10-23T17:02:14.991492+00:00",
+  "bnep_loaded": false,
+  "bnep_unload_exit": 0,
+  "bnep_unload_output": "",
+  "memory_after": "              total        used        free      shared  buff/cache   available\nMem:     4156661760  1293955072   788615168     8503296  2074091520  2699304960\nSwap:    4225806336    53981184  4171825152\n"
+}
+Project mode already active; baseline unchanged.
+Disabled ROS cron entries for: jetson
+Disabled ROS lines: /etc/apt/sources.list.d/ros2.list
+ROS sources/key/cron/service disabled; zero matching ROS processes.
+Get:1 file:/var/cuda-repo-l4t-10-2-local  InRelease
+Ign:1 file:/var/cuda-repo-l4t-10-2-local  InRelease
+Get:2 file:/var/visionworks-repo  InRelease
+Ign:2 file:/var/visionworks-repo  InRelease
+Get:3 file:/var/visionworks-sfm-repo  InRelease
+Ign:3 file:/var/visionworks-sfm-repo  InRelease
+Get:4 file:/var/visionworks-tracking-repo  InRelease
+Ign:4 file:/var/visionworks-tracking-repo  InRelease
+Get:5 file:/var/cuda-repo-l4t-10-2-local  Release [564 B]
+Get:6 file:/var/visionworks-repo  Release [2,001 B]
+Get:5 file:/var/cuda-repo-l4t-10-2-local  Release [564 B]
+Get:7 file:/var/visionworks-sfm-repo  Release [2,005 B]
+Get:8 file:/var/visionworks-tracking-repo  Release [2,010 B]
+Get:6 file:/var/visionworks-repo  Release [2,001 B]
+Get:7 file:/var/visionworks-sfm-repo  Release [2,005 B]
+Get:8 file:/var/visionworks-tracking-repo  Release [2,010 B]
+Hit:9 https://packages.microsoft.com/repos/code stable InRelease
+Hit:10 https://repo.download.nvidia.com/jetson/common r32.6 InRelease
+Get:12 https://repo.download.nvidia.com/jetson/t210 r32.6 InRelease [2,547 B]
+Hit:15 http://ports.ubuntu.com/ubuntu-ports focal InRelease
+Hit:17 http://ports.ubuntu.com/ubuntu-ports focal-updates InRelease
+Hit:18 http://ports.ubuntu.com/ubuntu-ports focal-backports InRelease
+Hit:19 http://ports.ubuntu.com/ubuntu-ports focal-security InRelease
+Hit:20 https://linux.teamviewer.com/deb stable InRelease
+Fetched 2,547 B in 3s (828 B/s)
+Reading package lists...

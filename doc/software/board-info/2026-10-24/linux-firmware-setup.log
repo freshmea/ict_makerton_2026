@@ -1,0 +1,216 @@
+info: syncing channel updates for 1.90.0-aarch64-unknown-linux-gnu
+
+  1.90.0-aarch64-unknown-linux-gnu unchanged - rustc 1.90.0 (1159e78c4 2025-09-14)
+
+info: checking for self-update (current version: 1.29.2)
+info: downloading component rust-std
+Initialized empty Git repository in /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/source/.git/
+From https://github.com/raspberrypi/picotool
+ * branch            2041936441b48a3cc53ae3da9e805229fe8f4e18 -> FETCH_HEAD
+HEAD is now at 2041936 release picotool version 2.3.1
+Initialized empty Git repository in /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/sdk/.git/
+From https://github.com/raspberrypi/pico-sdk
+ * branch            a1438dff1d38bd9c65dbd693f0e5db4b9ae91779 -> FETCH_HEAD
+HEAD is now at a1438df SDK 2.2.0 Release
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using the single-header code from /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/source/lib/nlohmann_json/single_include/
+lib/mbedtls submodule needs to be initialized for bintool hashing/signing
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'libusb-1.0'
+--   Found libusb-1.0, version 1.0.23
+-- Found LIBUSB: /usr/lib/aarch64-linux-gnu/libusb-1.0.so  
+mbedtls not found - no signing/hashing support will be built
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/build
+Scanning dependencies of target xip_ram_perms
+Scanning dependencies of target enc_bootloader
+[  3%] Creating directories for 'xip_ram_perms'
+[  3%] Creating directories for 'enc_bootloader'
+[  6%] No download step for 'enc_bootloader'
+[  6%] No download step for 'xip_ram_perms'
+[  9%] No patch step for 'enc_bootloader'
+[  9%] No patch step for 'xip_ram_perms'
+[ 12%] No update step for 'enc_bootloader'
+[ 12%] No update step for 'xip_ram_perms'
+[ 15%] Performing configure step for 'xip_ram_perms'
+[ 15%] Performing configure step for 'enc_bootloader'
+-- The C compiler identification is GNU 8.4.0
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- The ASM compiler identification is GNU
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Found assembler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CXX compile features - done
+Using precompiled xip_ram_perms.elf
+Using precompiled enc_bootloader.elf
+-- Configuring done
+-- Configuring done
+-- Generating done
+-- Generating done
+-- Build files have been written to: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/build/xip_ram_perms
+-- Build files have been written to: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/build/enc_bootloader
+[ 18%] Performing build step for 'enc_bootloader'
+[ 18%] Performing build step for 'xip_ram_perms'
+[ 21%] No install step for 'xip_ram_perms'
+[ 21%] No install step for 'enc_bootloader'
+[ 25%] Completed 'enc_bootloader'
+[ 25%] Completed 'xip_ram_perms'
+[ 25%] Built target enc_bootloader
+[ 25%] Built target xip_ram_perms
+Scanning dependencies of target otp_header_parser
+Scanning dependencies of target errors
+[ 26%] Creating directories for 'otp_header_parser'
+[ 28%] Building CXX object errors/CMakeFiles/errors.dir/errors.cpp.o
+[ 29%] No download step for 'otp_header_parser'
+[ 31%] No patch step for 'otp_header_parser'
+[ 32%] No update step for 'otp_header_parser'
+[ 34%] Performing configure step for 'otp_header_parser'
+-- The CXX compiler identification is GNU 8.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+[ 35%] Linking CXX static library liberrors.a
+[ 35%] Built target errors
+Scanning dependencies of target unreadable_rom_data
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+[ 37%] Configuring rp2350_a2_rom_end.h
+-- Detecting CXX compiler ABI info
+[ 39%] Configuring rp2350_a3_rom_end.h
+[ 40%] Configuring rp2350_a4_rom_end.h
+[ 40%] Built target unreadable_rom_data
+Scanning dependencies of target flash_id
+-- Detecting CXX compiler ABI info - done
+[ 42%] Creating directories for 'flash_id'
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using the single-header code from /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/source/lib/nlohmann_json/single_include/
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/build/otp_header_parser
+[ 43%] Performing build step for 'otp_header_parser'
+[ 45%] No download step for 'flash_id'
+Scanning dependencies of target otp_header_parse
+[ 46%] No patch step for 'flash_id'
+[ 50%] Building CXX object CMakeFiles/otp_header_parse.dir/otp_header_parse.cpp.o
+[ 48%] No update step for 'flash_id'
+[ 50%] Performing configure step for 'flash_id'
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+Using precompiled flash_id.bin
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/build/picoboot_flash_id
+[ 51%] Performing build step for 'flash_id'
+[ 53%] No install step for 'flash_id'
+[ 54%] Completed 'flash_id'
+[ 54%] Built target flash_id
+Scanning dependencies of target embedded_data_no_libusb
+[ 56%] Configuring enc_bootloader_elf.h
+[ 56%] Built target embedded_data_no_libusb
+Scanning dependencies of target model
+[ 57%] Building CXX object model/CMakeFiles/model.dir/model.cpp.o
+[ 59%] Linking CXX static library libmodel.a
+[ 59%] Built target model
+Scanning dependencies of target embedded_data
+[ 60%] Configuring xip_ram_perms_elf.h
+[ 62%] Configuring flash_id_bin.h
+[ 62%] Built target embedded_data
+Scanning dependencies of target elf
+[ 64%] Building CXX object elf/CMakeFiles/elf.dir/elf_file.cpp.o
+[ 65%] Linking CXX static library libelf.a
+[ 65%] Built target elf
+Scanning dependencies of target bintool
+[ 67%] Building CXX object bintool/CMakeFiles/bintool.dir/bintool.cpp.o
+[100%] Linking CXX executable otp_header_parse
+[100%] Built target otp_header_parse
+[ 68%] No install step for 'otp_header_parser'
+[ 70%] Completed 'otp_header_parser'
+[ 70%] Built target otp_header_parser
+Scanning dependencies of target elf2uf2
+[ 71%] Building CXX object elf2uf2/CMakeFiles/elf2uf2.dir/elf2uf2.cpp.o
+[ 73%] Linking CXX static library libelf2uf2.a
+[ 73%] Built target elf2uf2
+Scanning dependencies of target generate_otp_header
+[ 75%] Generating /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/build/rp2350_otp_contents.json
+[ 76%] Configuring rp2350.json.h
+[ 76%] Built target generate_otp_header
+[ 78%] Linking CXX static library libbintool.a
+[ 78%] Built target bintool
+Scanning dependencies of target picotool
+[ 81%] Building CXX object CMakeFiles/picotool.dir/data_locs.cpp.o
+[ 81%] Building CXX object CMakeFiles/picotool.dir/get_enc_bootloader.cpp.o
+[ 82%] Building CXX object CMakeFiles/picotool.dir/otp.cpp.o
+[ 84%] Building CXX object CMakeFiles/picotool.dir/main.cpp.o
+[ 85%] Building CXX object CMakeFiles/picotool.dir/get_xip_ram_perms.cpp.o
+[ 87%] Building C object CMakeFiles/picotool.dir/lib/whereami/whereami.c.o
+[ 89%] Building CXX object CMakeFiles/picotool.dir/lib/whereami/whereami++.cpp.o
+[ 90%] Building CXX object CMakeFiles/picotool.dir/picoboot_connection/picoboot_connection_cxx.cpp.o
+[ 92%] Building C object CMakeFiles/picotool.dir/picoboot_connection/picoboot_connection.c.o
+[ 93%] Building C object CMakeFiles/picotool.dir/lib/oofatfs/src/ff.c.o
+[ 95%] Building C object CMakeFiles/picotool.dir/lib/oofatfs/src/ffunicode.c.o
+[ 96%] Building C object CMakeFiles/picotool.dir/lib/littlefs/lfs.c.o
+[ 98%] Building C object CMakeFiles/picotool.dir/lib/littlefs/lfs_util.c.o
+[100%] Linking CXX executable picotool
+[100%] Built target picotool
+-- Install configuration: "Release"
+-- Installing: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/bin/picotool
+-- Installing: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/lib/cmake/picotool/picotoolTargets.cmake
+-- Installing: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/lib/cmake/picotool/picotoolTargets-release.cmake
+-- Installing: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/lib/cmake/picotool/picotoolConfig.cmake
+-- Installing: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/lib/cmake/picotool/picotoolConfigVersion.cmake
+-- Installing: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/share/picotool/enc_bootloader.elf
+-- Installing: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/share/picotool/rp2350_otp_contents.json
+-- Installing: /home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/share/picotool/xip_ram_perms.elf
+/home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/bin/picotool
+Linux tools ready. Next: bash firmware/build-pico-device.sh

@@ -131,6 +131,10 @@ ict_makerton_2026/
 ├── README.md                 # 팀 소개, 진행 현황, 협업 안내
 ├── ict_makerton_2026.ino     # 현재 메인 Arduino 스케치
 ├── ino_src/                  # 장별 Arduino 실습 예제
+├── apps/device-dashboard/    # Nano FastAPI 장치 대시보드·systemd 설치
+├── firmware/                 # Rust/Embassy Pico 펌웨어·Linux 업로드 도구
+├── crates/                   # 공통 장치 protocol
+├── tools/                    # Rust USB 브리지·Jetson 관리/점검 도구
 ├── doc/                      # 참가 신청서, 계획서, 회의록, 자료 모음
 │   ├── 계획서/
 │   ├── 회의록/
@@ -179,6 +183,8 @@ cd ict_makerton_2026
 | 실제 장치 동작 | 배선·전원·입력 조건·예상 출력 작성 예정 | 미검증 | 작성 예정 |
 | 전체 시연 | 처음부터 끝까지 재현할 시나리오 작성 예정 | 미검증 | 작성 예정 |
 
+Nano/Pico 후속 작업에서는 통합 펌웨어의 실제 flash, USB 제어, 두 카메라·오디오, LED/서보 실물 확인과 장치 대시보드 자동 시작을 검증했습니다. 위 Arduino 검증표 및 최종 AI 학습 시나리오와 구분하며, [2026-10-24 작업 종합 기록](doc/software/Jetson_Nano_작업_종합기록_2026-10-24.md)에 설정·증거·복원 방법·남은 확인 사항을 정리했습니다.
+
 ## 자료 모음
 
 | 자료 | 링크 · 상태 |
@@ -186,9 +192,11 @@ cd ict_makerton_2026
 | 개인참가 신청서 | [PPTX 열기](<doc/1. 배재대 스마트 ICT 메이커톤_개인참가_신청서.pptx>) |
 | 사전행사 안내 | [PDF 열기](<doc/2. (배포용)_2026_배재대_스마트ICT메이커톤_사전행사.pdf>) |
 | 메인 스케치 | [ict_makerton_2026.ino](ict_makerton_2026.ino) |
+| Nano·Pico 작업 종합 기록 | [설정·펌웨어·실물 검증·대시보드·HDMI·남은 항목](doc/software/Jetson_Nano_작업_종합기록_2026-10-24.md) |
 | Jetson Nano 보드 실측 정보 | [2026-10-24 SSH 수집·환경 manifest](doc/software/Jetson_Nano_보드_정보.md) |
 | Nano 개발 환경·운영 모드 | [라이브러리 설치·GUI 복원·서비스/ROS 비활성화](doc/software/Jetson_Nano_개발환경_설치와_모드전환.md) |
-| Nano 디바이스·접근 권한 | [실제 오디오·Pico 점검, 서비스 계정·udev, IMX708 두 카메라 실패 근거](doc/software/Jetson_Nano_디바이스_권한과_실물점검.md) |
+| Nano 디바이스·접근 권한 | [실제 오디오·Pico 점검, 서비스 계정·udev](doc/software/Jetson_Nano_디바이스_권한과_실물점검.md) / [Camera V2 두 개 촬영 이미지·동시 검증](doc/software/Jetson_Nano_Camera_V2_실물검증.md) |
+| Nano 장치 대시보드 | [FastAPI·Pico·두 카메라·오디오·systemd 운영](doc/software/Jetson_Nano_장치_대시보드.md) / [소스와 설치](apps/device-dashboard/README.md) |
 | Nano Linux 펌웨어 업그레이드 | [Rust 크로스 빌드·BOOTSEL 권한·picotool 설치·flash 백업/검증](doc/software/Jetson_Nano_Linux_펌웨어_업데이트.md) |
 | 개인과제 C 언어 예제 | [ino_src/](ino_src/) |
 | 기획서 · 요구사항 | 작성 예정 |

@@ -4,3 +4,10 @@ firmware/pico_linux.py text eol=lf
 firmware/test_pico_linux.py text eol=lf
 tools/jetson/*.sh text eol=lf
 tools/jetson/*.py text eol=lf
+apps/device-dashboard/*.sh text eol=lf
+apps/device-dashboard/*.py text eol=lf
+apps/device-dashboard/*.service text eol=lf
+
+# Preserve diagnostic command output and upstream license whitespace verbatim.
+doc/software/board-info/**/*.log -text -whitespace
+apps/device-dashboard/static/fonts/LICENSE.txt -whitespace

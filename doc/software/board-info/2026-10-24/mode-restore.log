@@ -1,0 +1,29 @@
+START 2026-10-23T16:59:24+00:00 user=jetson
+Log: /var/log/300seconds/deps-20261023T165924Z.log
+info: syncing channel updates for 1.90.0-aarch64-unknown-linux-gnu
+
+  1.90.0-aarch64-unknown-linux-gnu unchanged - rustc 1.90.0 (1159e78c4 2025-09-14)
+
+info: component rustfmt is up to date
+info: component clippy is up to date
+info: component rust-analyzer is up to date
+rustc 1.90.0 (1159e78c4 2025-09-14)
+binary: rustc
+commit-hash: 1159e78c4747b02ef996e55082b704c09b970588
+commit-date: 2025-09-14
+host: aarch64-unknown-linux-gnu
+release: 1.90.0
+LLVM version: 20.1.8
+cargo 1.90.0 (840b83a10 2025-07-30)
+openssl: 1.1.1f
+libudev: 245
+alsa: 1.2.2
+glib-2.0: 2.64.6
+gstreamer-1.0: 1.16.3
+gstreamer-app-1.0: 1.16.3
+sqlite3: 3.31.1
+User groups: jetson adm dialout cdrom sudo audio dip video plugdev i2c lpadmin gdm lightdm gpio weston-launch sambashare jtop. Reconnect SSH/VS Code for new dialout membership.
+FINISHED 2026-10-23T16:59:28+00:00
+Activate project Rust: source /home/jetson/.local/share/300seconds/rust/env.sh
+Desktop baseline restored; GUI applications/logged-in sessions are not recreated.
+RESTORED_STATUS_READY

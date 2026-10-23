@@ -1,0 +1,2463 @@
+{
+  "results": [
+    {
+      "module": "left",
+      "http": 200,
+      "reply": {
+        "ack_code": "Ok",
+        "ack_request_seq": 139,
+        "cmd": "test",
+        "ok": true,
+        "session": "E00DAD30F04F5FF5",
+        "status": {
+          "age_ms": 0,
+          "device": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 661,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": true,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": "NeoLeft",
+            "touches": [
+              {
+                "held_ms": 26771,
+                "interval_count": 53,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 26771,
+                "interval_count": 53,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 26771,
+                "interval_count": 53,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 26771,
+                "interval_count": 53,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 26771,
+                "interval_count": 53,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 712075
+          },
+          "received_unix_ms": 1792783079641
+        }
+      },
+      "events": [
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 27056,
+          "host_unix_ms": 1792783079641,
+          "module": "NeoLeft",
+          "phase": 0,
+          "seq": 14297,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 27466,
+          "host_unix_ms": 1792783080050,
+          "module": "NeoLeft",
+          "phase": 1,
+          "seq": 14308,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 27886,
+          "host_unix_ms": 1792783080470,
+          "module": "NeoLeft",
+          "phase": 2,
+          "seq": 14318,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 28306,
+          "host_unix_ms": 1792783080890,
+          "module": "NeoLeft",
+          "phase": 3,
+          "seq": 14328,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 28726,
+          "host_unix_ms": 1792783081310,
+          "module": "NeoLeft",
+          "phase": 4,
+          "seq": 14333,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 29146,
+          "host_unix_ms": 1792783081730,
+          "module": "NeoLeft",
+          "phase": 5,
+          "seq": 14343,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 29566,
+          "host_unix_ms": 1792783082150,
+          "module": "NeoLeft",
+          "phase": 6,
+          "seq": 14354,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 29986,
+          "host_unix_ms": 1792783082570,
+          "module": "NeoLeft",
+          "phase": 7,
+          "seq": 14364,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 30406,
+          "host_unix_ms": 1792783082990,
+          "module": "NeoLeft",
+          "phase": 8,
+          "seq": 14374,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 30906,
+          "host_unix_ms": 1792783083490,
+          "module": "NeoLeft",
+          "phase": 10,
+          "seq": 14386,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 31066,
+          "host_unix_ms": 1792783083650,
+          "module": "NeoLeft",
+          "phase": 12,
+          "seq": 14390,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 31226,
+          "host_unix_ms": 1792783083810,
+          "module": "NeoLeft",
+          "phase": 14,
+          "seq": 14393,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 31386,
+          "host_unix_ms": 1792783083970,
+          "module": "NeoLeft",
+          "phase": 16,
+          "seq": 14402,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 31546,
+          "host_unix_ms": 1792783084130,
+          "module": "NeoLeft",
+          "phase": 18,
+          "seq": 14405,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 31706,
+          "host_unix_ms": 1792783084290,
+          "module": "NeoLeft",
+          "phase": 20,
+          "seq": 14409,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 31866,
+          "host_unix_ms": 1792783084451,
+          "module": "NeoLeft",
+          "phase": 22,
+          "seq": 14418,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 32026,
+          "host_unix_ms": 1792783084611,
+          "module": "NeoLeft",
+          "phase": 24,
+          "seq": 14421,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": true,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 32267,
+          "host_unix_ms": 1792783084851,
+          "module": "NeoLeft",
+          "phase": 0,
+          "seq": 14427,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        }
+      ],
+      "final": {
+        "connected": true,
+        "age_ms": 23,
+        "device": {
+          "config": {
+            "hold_interval_ms": 500,
+            "left_segments": [
+              4,
+              4,
+              10
+            ],
+            "local_tests_enabled": false,
+            "press_window_ms": 2000,
+            "right_segments": [
+              4,
+              4,
+              10
+            ],
+            "servo_max_us": 2000,
+            "servo_min_us": 1000,
+            "test_span_degrees": 10,
+            "test_switch": 0,
+            "touch_active_low_mask": 0
+          },
+          "dropped_events": 661,
+          "faults": 0,
+          "local_enabled": false,
+          "oe_high": true,
+          "pressed_mask": 55,
+          "raw_mask": 55,
+          "running": "NeoLeft",
+          "touches": [
+            {
+              "held_ms": 31978,
+              "interval_count": 63,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 31978,
+              "interval_count": 63,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 31978,
+              "interval_count": 63,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 31978,
+              "interval_count": 63,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 31978,
+              "interval_count": 63,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            }
+          ],
+          "uptime_ms": 717283
+        },
+        "session": "E00DAD30F04F5FF5",
+        "error": null,
+        "last_test": {
+          "done": true,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 32267,
+          "host_unix_ms": 1792783084851,
+          "module": "NeoLeft",
+          "phase": 0,
+          "seq": 14427,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        "last_touch": null,
+        "bridge_pid": 9909,
+        "port": "/dev/pico-device",
+        "protocol": "pico-device-v1",
+        "installation": {
+          "touch_inputs_connected": false,
+          "matrix_connected": false,
+          "note": "사용자 확인: 현재 스위치와 도트매트릭스는 연결하지 않음"
+        }
+      },
+      "completed": true
+    },
+    {
+      "module": "right",
+      "http": 200,
+      "reply": {
+        "ack_code": "Ok",
+        "ack_request_seq": 169,
+        "cmd": "test",
+        "ok": true,
+        "session": "E00DAD30F04F5FF5",
+        "status": {
+          "age_ms": 0,
+          "device": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 661,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": true,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": "NeoRight",
+            "touches": [
+              {
+                "held_ms": 32063,
+                "interval_count": 64,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 32063,
+                "interval_count": 64,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 32063,
+                "interval_count": 64,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 32063,
+                "interval_count": 64,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 32063,
+                "interval_count": 64,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 717370
+          },
+          "received_unix_ms": 1792783084937
+        }
+      },
+      "events": [
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 32352,
+          "host_unix_ms": 1792783084936,
+          "module": "NeoRight",
+          "phase": 0,
+          "seq": 14434,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 32768,
+          "host_unix_ms": 1792783085352,
+          "module": "NeoRight",
+          "phase": 1,
+          "seq": 14440,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 33187,
+          "host_unix_ms": 1792783085771,
+          "module": "NeoRight",
+          "phase": 2,
+          "seq": 14450,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 33607,
+          "host_unix_ms": 1792783086191,
+          "module": "NeoRight",
+          "phase": 3,
+          "seq": 14460,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 34027,
+          "host_unix_ms": 1792783086611,
+          "module": "NeoRight",
+          "phase": 4,
+          "seq": 14470,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 34447,
+          "host_unix_ms": 1792783087031,
+          "module": "NeoRight",
+          "phase": 5,
+          "seq": 14480,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 34869,
+          "host_unix_ms": 1792783087453,
+          "module": "NeoRight",
+          "phase": 6,
+          "seq": 14491,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 35287,
+          "host_unix_ms": 1792783087871,
+          "module": "NeoRight",
+          "phase": 7,
+          "seq": 14501,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 35707,
+          "host_unix_ms": 1792783088291,
+          "module": "NeoRight",
+          "phase": 8,
+          "seq": 14506,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 36127,
+          "host_unix_ms": 1792783088711,
+          "module": "NeoRight",
+          "phase": 9,
+          "seq": 14516,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 36287,
+          "host_unix_ms": 1792783088871,
+          "module": "NeoRight",
+          "phase": 11,
+          "seq": 14525,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 36447,
+          "host_unix_ms": 1792783089031,
+          "module": "NeoRight",
+          "phase": 13,
+          "seq": 14528,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 36607,
+          "host_unix_ms": 1792783089191,
+          "module": "NeoRight",
+          "phase": 15,
+          "seq": 14532,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 36767,
+          "host_unix_ms": 1792783089351,
+          "module": "NeoRight",
+          "phase": 17,
+          "seq": 14536,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 36927,
+          "host_unix_ms": 1792783089511,
+          "module": "NeoRight",
+          "phase": 19,
+          "seq": 14544,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 37168,
+          "host_unix_ms": 1792783089752,
+          "module": "NeoRight",
+          "phase": 22,
+          "seq": 14550,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 37327,
+          "host_unix_ms": 1792783089912,
+          "module": "NeoRight",
+          "phase": 24,
+          "seq": 14558,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 37487,
+          "host_unix_ms": 1792783090072,
+          "module": "NeoRight",
+          "phase": 26,
+          "seq": 14562,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": true,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 37568,
+          "host_unix_ms": 1792783090152,
+          "module": "NeoRight",
+          "phase": 0,
+          "seq": 14564,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        }
+      ],
+      "final": {
+        "connected": true,
+        "age_ms": 56,
+        "device": {
+          "config": {
+            "hold_interval_ms": 500,
+            "left_segments": [
+              4,
+              4,
+              10
+            ],
+            "local_tests_enabled": false,
+            "press_window_ms": 2000,
+            "right_segments": [
+              4,
+              4,
+              10
+            ],
+            "servo_max_us": 2000,
+            "servo_min_us": 1000,
+            "test_span_degrees": 10,
+            "test_switch": 0,
+            "touch_active_low_mask": 0
+          },
+          "dropped_events": 661,
+          "faults": 0,
+          "local_enabled": false,
+          "oe_high": true,
+          "pressed_mask": 55,
+          "raw_mask": 55,
+          "running": null,
+          "touches": [
+            {
+              "held_ms": 37380,
+              "interval_count": 74,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 37380,
+              "interval_count": 74,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 37380,
+              "interval_count": 74,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 37380,
+              "interval_count": 74,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 37380,
+              "interval_count": 74,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            }
+          ],
+          "uptime_ms": 722684
+        },
+        "session": "E00DAD30F04F5FF5",
+        "error": null,
+        "last_test": {
+          "done": true,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 37568,
+          "host_unix_ms": 1792783090152,
+          "module": "NeoRight",
+          "phase": 0,
+          "seq": 14564,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        "last_touch": null,
+        "bridge_pid": 9909,
+        "port": "/dev/pico-device",
+        "protocol": "pico-device-v1",
+        "installation": {
+          "touch_inputs_connected": false,
+          "matrix_connected": false,
+          "note": "사용자 확인: 현재 스위치와 도트매트릭스는 연결하지 않음"
+        }
+      },
+      "completed": true
+    },
+    {
+      "module": "servos",
+      "http": 200,
+      "reply": {
+        "ack_code": "Ok",
+        "ack_request_seq": 201,
+        "cmd": "test",
+        "ok": true,
+        "session": "E00DAD30F04F5FF5",
+        "status": {
+          "age_ms": 0,
+          "device": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 661,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": false,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": "Servos",
+            "touches": [
+              {
+                "held_ms": 37536,
+                "interval_count": 75,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 37536,
+                "interval_count": 75,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 37536,
+                "interval_count": 75,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 37536,
+                "interval_count": 75,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 37536,
+                "interval_count": 75,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 722842
+          },
+          "received_unix_ms": 1792783090408
+        }
+      },
+      "events": [
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 37823,
+          "host_unix_ms": 1792783090407,
+          "module": "Servos",
+          "phase": 0,
+          "seq": 14573,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 38326,
+          "host_unix_ms": 1792783090911,
+          "module": "Servos",
+          "phase": 1,
+          "seq": 14584,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 38847,
+          "host_unix_ms": 1792783091431,
+          "module": "Servos",
+          "phase": 2,
+          "seq": 14595,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 39367,
+          "host_unix_ms": 1792783091951,
+          "module": "Servos",
+          "phase": 3,
+          "seq": 14607,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 39887,
+          "host_unix_ms": 1792783092471,
+          "module": "Servos",
+          "phase": 4,
+          "seq": 14618,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 40407,
+          "host_unix_ms": 1792783092991,
+          "module": "Servos",
+          "phase": 5,
+          "seq": 14629,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 40927,
+          "host_unix_ms": 1792783093511,
+          "module": "Servos",
+          "phase": 6,
+          "seq": 14640,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 41447,
+          "host_unix_ms": 1792783094031,
+          "module": "Servos",
+          "phase": 7,
+          "seq": 14651,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 41968,
+          "host_unix_ms": 1792783094552,
+          "module": "Servos",
+          "phase": 8,
+          "seq": 14663,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 42487,
+          "host_unix_ms": 1792783095071,
+          "module": "Servos",
+          "phase": 9,
+          "seq": 14674,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 43008,
+          "host_unix_ms": 1792783095592,
+          "module": "Servos",
+          "phase": 10,
+          "seq": 14685,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 43527,
+          "host_unix_ms": 1792783096112,
+          "module": "Servos",
+          "phase": 11,
+          "seq": 14696,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 44048,
+          "host_unix_ms": 1792783096632,
+          "module": "Servos",
+          "phase": 12,
+          "seq": 14707,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 44568,
+          "host_unix_ms": 1792783097152,
+          "module": "Servos",
+          "phase": 13,
+          "seq": 14719,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 45088,
+          "host_unix_ms": 1792783097672,
+          "module": "Servos",
+          "phase": 14,
+          "seq": 14730,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 45608,
+          "host_unix_ms": 1792783098192,
+          "module": "Servos",
+          "phase": 15,
+          "seq": 14741,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 46131,
+          "host_unix_ms": 1792783098715,
+          "module": "Servos",
+          "phase": 16,
+          "seq": 14752,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 46648,
+          "host_unix_ms": 1792783099232,
+          "module": "Servos",
+          "phase": 17,
+          "seq": 14763,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 47168,
+          "host_unix_ms": 1792783099752,
+          "module": "Servos",
+          "phase": 18,
+          "seq": 14775,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 47689,
+          "host_unix_ms": 1792783100273,
+          "module": "Servos",
+          "phase": 19,
+          "seq": 14786,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 48209,
+          "host_unix_ms": 1792783100793,
+          "module": "Servos",
+          "phase": 20,
+          "seq": 14797,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 48729,
+          "host_unix_ms": 1792783101313,
+          "module": "Servos",
+          "phase": 21,
+          "seq": 14808,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 49249,
+          "host_unix_ms": 1792783101833,
+          "module": "Servos",
+          "phase": 22,
+          "seq": 14819,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": false,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 49769,
+          "host_unix_ms": 1792783102353,
+          "module": "Servos",
+          "phase": 23,
+          "seq": 14831,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        {
+          "done": true,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 50289,
+          "host_unix_ms": 1792783102873,
+          "module": "Servos",
+          "phase": 0,
+          "seq": 14847,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        }
+      ],
+      "final": {
+        "connected": true,
+        "age_ms": 37,
+        "device": {
+          "config": {
+            "hold_interval_ms": 500,
+            "left_segments": [
+              4,
+              4,
+              10
+            ],
+            "local_tests_enabled": false,
+            "press_window_ms": 2000,
+            "right_segments": [
+              4,
+              4,
+              10
+            ],
+            "servo_max_us": 2000,
+            "servo_min_us": 1000,
+            "test_span_degrees": 10,
+            "test_switch": 0,
+            "touch_active_low_mask": 0
+          },
+          "dropped_events": 661,
+          "faults": 0,
+          "local_enabled": false,
+          "oe_high": true,
+          "pressed_mask": 55,
+          "raw_mask": 55,
+          "running": null,
+          "touches": [
+            {
+              "held_ms": 50080,
+              "interval_count": 100,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 50080,
+              "interval_count": 100,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 50080,
+              "interval_count": 100,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 50080,
+              "interval_count": 100,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 50080,
+              "interval_count": 100,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": true,
+              "window_remaining_ms": 0
+            }
+          ],
+          "uptime_ms": 735387
+        },
+        "session": "E00DAD30F04F5FF5",
+        "error": null,
+        "last_test": {
+          "done": true,
+          "event": "test_event",
+          "fault": false,
+          "host_monotonic_ms": 50289,
+          "host_unix_ms": 1792783102873,
+          "module": "Servos",
+          "phase": 0,
+          "seq": 14847,
+          "session": "E00DAD30F04F5FF5",
+          "version": 1
+        },
+        "last_touch": null,
+        "bridge_pid": 9909,
+        "port": "/dev/pico-device",
+        "protocol": "pico-device-v1",
+        "installation": {
+          "touch_inputs_connected": false,
+          "matrix_connected": false,
+          "note": "사용자 확인: 현재 스위치와 도트매트릭스는 연결하지 않음"
+        }
+      },
+      "completed": true
+    }
+  ],
+  "stop": {
+    "ack_code": "Ok",
+    "ack_request_seq": 268,
+    "cmd": "stop",
+    "ok": true,
+    "session": "E00DAD30F04F5FF5",
+    "status": {
+      "age_ms": 0,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 661,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 55,
+        "raw_mask": 55,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 735471
+      },
+      "received_unix_ms": 1792783103036
+    }
+  },
+  "status": {
+    "server_time": 1792783103.0468502,
+    "pico": {
+      "connected": true,
+      "age_ms": 9,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 661,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 55,
+        "raw_mask": 55,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 50166,
+            "interval_count": 100,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": true,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 735471
+      },
+      "session": "E00DAD30F04F5FF5",
+      "error": null,
+      "last_test": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 50289,
+        "host_unix_ms": 1792783102873,
+        "module": "Servos",
+        "phase": 0,
+        "seq": 14847,
+        "session": "E00DAD30F04F5FF5",
+        "version": 1
+      },
+      "last_touch": null,
+      "bridge_pid": 9909,
+      "port": "/dev/pico-device",
+      "protocol": "pico-device-v1",
+      "installation": {
+        "touch_inputs_connected": false,
+        "matrix_connected": false,
+        "note": "사용자 확인: 현재 스위치와 도트매트릭스는 연결하지 않음"
+      }
+    },
+    "cameras": {
+      "run_id": "2ececa593ec44590afc43e3a25aa4bc3",
+      "profile": "720p30",
+      "settings": {
+        "label": "1280×720 · 30 fps",
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "sensor_mode": 4,
+        "capture_width": 1280,
+        "capture_height": 720,
+        "bitrate": 2500000
+      },
+      "preview": {
+        "width": 640,
+        "height": 360,
+        "fps": 15,
+        "quality": 72
+      },
+      "encoder": "omxh264enc",
+      "preview_encoder": "jpegenc",
+      "uptime_seconds": 50.2,
+      "updated_monotonic": 737.016199655,
+      "error": null,
+      "cameras": [
+        {
+          "sensor_id": 0,
+          "node": "/dev/video0",
+          "ready": true,
+          "frames": 1393,
+          "encoded_frames": 1362,
+          "preview_frames": 704,
+          "fps": 30.05,
+          "encoded_fps": 30.01,
+          "preview_fps": 15.02,
+          "capture_delivery_fps": 30.01,
+          "encoded_delivery_fps": 30.02,
+          "preview_delivery_fps": 15.02,
+          "encoder_pts_lag_ms": 33.2,
+          "encoded_mbps": 2.502,
+          "age_ms": 4,
+          "jpeg_bytes": 7809,
+          "preview_age_ms": 0,
+          "encoded_age_ms": 30,
+          "rtsp_feeds": 0
+        },
+        {
+          "sensor_id": 1,
+          "node": "/dev/video1",
+          "ready": true,
+          "frames": 1395,
+          "encoded_frames": 1365,
+          "preview_frames": 704,
+          "fps": 30.01,
+          "encoded_fps": 30.01,
+          "preview_fps": 15.0,
+          "capture_delivery_fps": 30.01,
+          "encoded_delivery_fps": 30.01,
+          "preview_delivery_fps": 15.0,
+          "encoder_pts_lag_ms": 0.0,
+          "encoded_mbps": 2.494,
+          "age_ms": 10,
+          "jpeg_bytes": 6633,
+          "preview_age_ms": 5,
+          "encoded_age_ms": 4,
+          "rtsp_feeds": 0
+        }
+      ],
+      "pipeline": "nvarguscamerasrc name=source0 sensor-id=0 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t0 t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder0 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2640 emit-signals=true max-buffers=2 drop=true sync=false t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg0 emit-signals=true max-buffers=1 drop=true sync=false nvarguscamerasrc name=source1 sensor-id=1 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t1 t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder1 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2641 emit-signals=true max-buffers=2 drop=true sync=false t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg1 emit-signals=true max-buffers=1 drop=true sync=false",
+      "uid": 996,
+      "rtsp_port": 8554,
+      "worker_alive": true,
+      "ready": true
+    },
+    "audio": {
+      "rms_dbfs": -47.4,
+      "peak_dbfs": -38.8,
+      "waveform": [
+        0.001500000013038516,
+        0.00279999990016222,
+        0.0015999999595806003,
+        0.00559999980032444,
+        -0.003800000064074993,
+        -0.0008999999845400453,
+        0.003000000026077032,
+        -0.0006000000284984708,
+        -0.002199999988079071,
+        -0.005499999970197678,
+        -0.002899999963119626,
+        -0.0,
+        -0.0005000000237487257,
+        -0.00279999990016222,
+        0.0006000000284984708,
+        -0.0031999999191612005,
+        -0.002099999925121665,
+        0.004100000020116568,
+        0.0026000000070780516,
+        0.004800000227987766,
+        -9.999999747378752e-05,
+        -0.0026000000070780516,
+        0.000699999975040555,
+        0.0034000000450760126,
+        0.0015999999595806003,
+        0.005799999926239252,
+        -0.00419999985024333,
+        -0.00039999998989515007,
+        0.0005000000237487257,
+        -0.0038999998942017555,
+        0.0017000000225380063,
+        -0.0066999997943639755,
+        -0.0052999998442828655,
+        -0.0010000000474974513,
+        0.0035000001080334187,
+        0.0,
+        0.003800000064074993,
+        -0.007000000216066837,
+        -0.0020000000949949026,
+        0.006099999882280827,
+        0.0020000000949949026,
+        0.006800000090152025,
+        -0.00419999985024333,
+        -0.0015999999595806003,
+        -0.0008999999845400453,
+        0.00559999980032444,
+        0.005200000014156103,
+        0.007899999618530273,
+        -0.005799999926239252,
+        -0.004800000227987766,
+        0.0003000000142492354,
+        -0.003599999938160181,
+        0.002199999988079071,
+        -0.005400000140070915,
+        -0.002899999963119626,
+        -0.002099999925121665,
+        0.004000000189989805,
+        -0.005100000184029341,
+        0.007600000128149986,
+        -0.010200000368058681,
+        -0.0010999999940395355,
+        0.003800000064074993,
+        0.00139999995008111,
+        0.004000000189989805,
+        0.0027000000700354576,
+        -0.003100000089034438,
+        -0.0005000000237487257,
+        0.006899999920278788,
+        0.0008999999845400453,
+        0.009399999864399433,
+        -0.009200000204145908,
+        -0.00559999980032444,
+        -0.002199999988079071,
+        0.002199999988079071,
+        -0.0017000000225380063,
+        0.00570000009611249,
+        -0.009600000455975533,
+        -0.0013000000035390258,
+        0.0032999999821186066,
+        -0.005799999926239252,
+        0.0010000000474974513,
+        -0.0006000000284984708,
+        -0.0034000000450760126,
+        0.005799999926239252,
+        0.007699999958276749,
+        -9.999999747378752e-05,
+        0.0044999998062849045,
+        -0.00430000014603138,
+        -0.006099999882280827,
+        0.005499999970197678,
+        0.006899999920278788,
+        0.0008999999845400453,
+        0.002400000113993883,
+        -0.009399999864399433,
+        -0.007899999618530273,
+        0.0020000000949949026,
+        0.0006000000284984708,
+        -0.002300000051036477,
+        0.002300000051036477,
+        -0.00419999985024333,
+        -0.005400000140070915,
+        0.0006000000284984708,
+        -0.000699999975040555,
+        -0.0005000000237487257,
+        0.0052999998442828655,
+        -0.0015999999595806003,
+        0.0044999998062849045,
+        0.007400000002235174,
+        -0.0003000000142492354,
+        0.0003000000142492354,
+        -0.003100000089034438,
+        -0.002400000113993883,
+        0.003100000089034438,
+        0.0066999997943639755,
+        -0.0005000000237487257,
+        0.0010000000474974513,
+        -0.007000000216066837,
+        -0.007699999958276749,
+        -0.00039999998989515007,
+        0.0017999999690800905,
+        -0.00279999990016222,
+        0.005400000140070915,
+        -0.009200000204145908,
+        0.0007999999797903001,
+        0.003100000089034438,
+        0.0006000000284984708,
+        0.00019999999494757503,
+        0.004600000102072954
+      ],
+      "connected": true,
+      "age_ms": 68,
+      "error": null,
+      "rate": 48000,
+      "channels": 1,
+      "buffered_seconds": 6.0,
+      "speaker": {
+        "state": "idle",
+        "last_result": null
+      }
+    },
+    "system": {
+      "cpu_percent": 29.9,
+      "gpu_percent": 0.0,
+      "memory_used_mib": 1576,
+      "memory_total_mib": 3964,
+      "memory_percent": 44.1,
+      "temperature_c": 51.5,
+      "uptime_seconds": 737,
+      "cpu_history": [
+        23.2,
+        38.1,
+        24.5,
+        26.2,
+        26.8,
+        26.6,
+        26.0,
+        27.0,
+        27.0,
+        37.4,
+        29.1,
+        24.7,
+        26.8,
+        51.6,
+        41.8,
+        27.7,
+        26.4,
+        27.3,
+        41.1,
+        27.9,
+        30.7,
+        36.6,
+        31.2,
+        30.5,
+        33.5,
+        29.1,
+        35.2,
+        33.8,
+        27.9,
+        27.8,
+        29.6,
+        28.3,
+        30.8,
+        29.5,
+        31.2,
+        47.3,
+        30.5,
+        28.4,
+        38.2,
+        32.0,
+        28.4,
+        27.8,
+        29.1,
+        29.5,
+        38.1,
+        30.5,
+        30.5,
+        30.5,
+        33.2,
+        30.4,
+        30.3,
+        30.3,
+        42.0,
+        29.4,
+        34.2,
+        29.4,
+        29.6,
+        28.4,
+        28.6,
+        29.9
+      ]
+    },
+    "events": [
+      {
+        "id": "f9f6f1d9bc",
+        "time": 1792783103.037599,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "69a956801d",
+        "time": 1792783103.021224,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "6f4b21c5f3",
+        "time": 1792783102.873916,
+        "source": "pico",
+        "message": "{\"done\": true, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 50289, \"host_unix_ms\": 1792783102873, \"module\": \"Servos\", \"phase\": 0, \"seq\": 14847, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "4ba6d68c56",
+        "time": 1792783102.3537378,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 49769, \"host_unix_ms\": 1792783102353, \"module\": \"Servos\", \"phase\": 23, \"seq\": 14831, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "b3ebb31d56",
+        "time": 1792783101.8344393,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 49249, \"host_unix_ms\": 1792783101833, \"module\": \"Servos\", \"phase\": 22, \"seq\": 14819, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "8ac605d06c",
+        "time": 1792783101.3138256,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 48729, \"host_unix_ms\": 1792783101313, \"module\": \"Servos\", \"phase\": 21, \"seq\": 14808, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "604320a0fc",
+        "time": 1792783100.794235,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 48209, \"host_unix_ms\": 1792783100793, \"module\": \"Servos\", \"phase\": 20, \"seq\": 14797, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "2f7e74633f",
+        "time": 1792783100.2734652,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 47689, \"host_unix_ms\": 1792783100273, \"module\": \"Servos\", \"phase\": 19, \"seq\": 14786, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "5accc14b15",
+        "time": 1792783099.7532582,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 47168, \"host_unix_ms\": 1792783099752, \"module\": \"Servos\", \"phase\": 18, \"seq\": 14775, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "c40b0d14e7",
+        "time": 1792783099.2343514,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 46648, \"host_unix_ms\": 1792783099232, \"module\": \"Servos\", \"phase\": 17, \"seq\": 14763, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "dcfcb7f1e9",
+        "time": 1792783098.722867,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 46131, \"host_unix_ms\": 1792783098715, \"module\": \"Servos\", \"phase\": 16, \"seq\": 14752, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "3bd72c786c",
+        "time": 1792783098.1961827,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 45608, \"host_unix_ms\": 1792783098192, \"module\": \"Servos\", \"phase\": 15, \"seq\": 14741, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "85f68e9ef8",
+        "time": 1792783097.672932,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 45088, \"host_unix_ms\": 1792783097672, \"module\": \"Servos\", \"phase\": 14, \"seq\": 14730, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "d6f2c4c8e2",
+        "time": 1792783097.152668,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 44568, \"host_unix_ms\": 1792783097152, \"module\": \"Servos\", \"phase\": 13, \"seq\": 14719, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "208b317d02",
+        "time": 1792783096.6331558,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 44048, \"host_unix_ms\": 1792783096632, \"module\": \"Servos\", \"phase\": 12, \"seq\": 14707, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "cc837bb3f3",
+        "time": 1792783096.1123977,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 43527, \"host_unix_ms\": 1792783096112, \"module\": \"Servos\", \"phase\": 11, \"seq\": 14696, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "eac79e8a25",
+        "time": 1792783095.5931835,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 43008, \"host_unix_ms\": 1792783095592, \"module\": \"Servos\", \"phase\": 10, \"seq\": 14685, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "8f2fe16f61",
+        "time": 1792783095.0724561,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 42487, \"host_unix_ms\": 1792783095071, \"module\": \"Servos\", \"phase\": 9, \"seq\": 14674, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "9e98e71e28",
+        "time": 1792783094.5528765,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 41968, \"host_unix_ms\": 1792783094552, \"module\": \"Servos\", \"phase\": 8, \"seq\": 14663, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "4c4f13f71f",
+        "time": 1792783094.032045,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 41447, \"host_unix_ms\": 1792783094031, \"module\": \"Servos\", \"phase\": 7, \"seq\": 14651, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "aa80413d23",
+        "time": 1792783093.5118842,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 40927, \"host_unix_ms\": 1792783093511, \"module\": \"Servos\", \"phase\": 6, \"seq\": 14640, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "ca68a8b804",
+        "time": 1792783092.992034,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 40407, \"host_unix_ms\": 1792783092991, \"module\": \"Servos\", \"phase\": 5, \"seq\": 14629, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "ddc27039a7",
+        "time": 1792783092.4722815,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 39887, \"host_unix_ms\": 1792783092471, \"module\": \"Servos\", \"phase\": 4, \"seq\": 14618, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "3c2633fe34",
+        "time": 1792783091.9519613,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 39367, \"host_unix_ms\": 1792783091951, \"module\": \"Servos\", \"phase\": 3, \"seq\": 14607, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "9e5d144422",
+        "time": 1792783091.4334724,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 38847, \"host_unix_ms\": 1792783091431, \"module\": \"Servos\", \"phase\": 2, \"seq\": 14595, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "bb8d74d4ae",
+        "time": 1792783090.9115462,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 38326, \"host_unix_ms\": 1792783090911, \"module\": \"Servos\", \"phase\": 1, \"seq\": 14584, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "22b8d822d0",
+        "time": 1792783090.4096456,
+        "source": "pico",
+        "message": "{'cmd': 'test', 'module': 'servos'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "0f5185828b",
+        "time": 1792783090.4080276,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37823, \"host_unix_ms\": 1792783090407, \"module\": \"Servos\", \"phase\": 0, \"seq\": 14573, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "55a6260a5a",
+        "time": 1792783090.3469334,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "cb1b7bb5d0",
+        "time": 1792783090.1524706,
+        "source": "pico",
+        "message": "{\"done\": true, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37568, \"host_unix_ms\": 1792783090152, \"module\": \"NeoRight\", \"phase\": 0, \"seq\": 14564, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "75e7012fc9",
+        "time": 1792783090.0726984,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37487, \"host_unix_ms\": 1792783090072, \"module\": \"NeoRight\", \"phase\": 26, \"seq\": 14562, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "189dac5e21",
+        "time": 1792783089.992403,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37407, \"host_unix_ms\": 1792783089992, \"module\": \"NeoRight\", \"phase\": 25, \"seq\": 14560, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "64db33f6fa",
+        "time": 1792783089.912412,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37327, \"host_unix_ms\": 1792783089912, \"module\": \"NeoRight\", \"phase\": 24, \"seq\": 14558, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "ba4937d312",
+        "time": 1792783089.8323643,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37247, \"host_unix_ms\": 1792783089832, \"module\": \"NeoRight\", \"phase\": 23, \"seq\": 14551, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "65f97126ed",
+        "time": 1792783089.7554567,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37168, \"host_unix_ms\": 1792783089752, \"module\": \"NeoRight\", \"phase\": 22, \"seq\": 14550, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "f5031d04ee",
+        "time": 1792783089.6724062,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37087, \"host_unix_ms\": 1792783089672, \"module\": \"NeoRight\", \"phase\": 21, \"seq\": 14548, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "c34fdeb2fe",
+        "time": 1792783089.598328,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 37010, \"host_unix_ms\": 1792783089594, \"module\": \"NeoRight\", \"phase\": 20, \"seq\": 14546, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "5e3dcb4b22",
+        "time": 1792783089.512421,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36927, \"host_unix_ms\": 1792783089511, \"module\": \"NeoRight\", \"phase\": 19, \"seq\": 14544, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "68d651cfcc",
+        "time": 1792783089.4323418,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36847, \"host_unix_ms\": 1792783089431, \"module\": \"NeoRight\", \"phase\": 18, \"seq\": 14542, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "9216f9c759",
+        "time": 1792783089.3522375,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36767, \"host_unix_ms\": 1792783089351, \"module\": \"NeoRight\", \"phase\": 17, \"seq\": 14536, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "c629d84904",
+        "time": 1792783089.2723234,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36687, \"host_unix_ms\": 1792783089272, \"module\": \"NeoRight\", \"phase\": 16, \"seq\": 14534, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "85c1f36996",
+        "time": 1792783089.1922307,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36607, \"host_unix_ms\": 1792783089191, \"module\": \"NeoRight\", \"phase\": 15, \"seq\": 14532, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "b49b5cff2f",
+        "time": 1792783089.1123443,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36527, \"host_unix_ms\": 1792783089111, \"module\": \"NeoRight\", \"phase\": 14, \"seq\": 14530, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "44d09e25fb",
+        "time": 1792783089.0322015,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36447, \"host_unix_ms\": 1792783089031, \"module\": \"NeoRight\", \"phase\": 13, \"seq\": 14528, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "27a9ed1877",
+        "time": 1792783088.9523444,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36367, \"host_unix_ms\": 1792783088952, \"module\": \"NeoRight\", \"phase\": 12, \"seq\": 14527, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "14e3ba3a7c",
+        "time": 1792783088.8720472,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36287, \"host_unix_ms\": 1792783088871, \"module\": \"NeoRight\", \"phase\": 11, \"seq\": 14525, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "718e3e4798",
+        "time": 1792783088.7927074,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36208, \"host_unix_ms\": 1792783088792, \"module\": \"NeoRight\", \"phase\": 10, \"seq\": 14518, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "e23a1577b1",
+        "time": 1792783088.712912,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 36127, \"host_unix_ms\": 1792783088711, \"module\": \"NeoRight\", \"phase\": 9, \"seq\": 14516, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "6c09082521",
+        "time": 1792783088.2920413,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 35707, \"host_unix_ms\": 1792783088291, \"module\": \"NeoRight\", \"phase\": 8, \"seq\": 14506, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "c162df693d",
+        "time": 1792783087.8731902,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 35287, \"host_unix_ms\": 1792783087871, \"module\": \"NeoRight\", \"phase\": 7, \"seq\": 14501, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "f2281bc692",
+        "time": 1792783087.4539707,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 34869, \"host_unix_ms\": 1792783087453, \"module\": \"NeoRight\", \"phase\": 6, \"seq\": 14491, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "b4d86210da",
+        "time": 1792783087.0317938,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 34447, \"host_unix_ms\": 1792783087031, \"module\": \"NeoRight\", \"phase\": 5, \"seq\": 14480, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "16ea4a00ce",
+        "time": 1792783086.611746,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 34027, \"host_unix_ms\": 1792783086611, \"module\": \"NeoRight\", \"phase\": 4, \"seq\": 14470, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "7f416e3a87",
+        "time": 1792783086.1916673,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 33607, \"host_unix_ms\": 1792783086191, \"module\": \"NeoRight\", \"phase\": 3, \"seq\": 14460, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "d93adbd6ee",
+        "time": 1792783085.771645,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 33187, \"host_unix_ms\": 1792783085771, \"module\": \"NeoRight\", \"phase\": 2, \"seq\": 14450, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "b7f62c2d7b",
+        "time": 1792783085.3538613,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 32768, \"host_unix_ms\": 1792783085352, \"module\": \"NeoRight\", \"phase\": 1, \"seq\": 14440, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "554f5b433d",
+        "time": 1792783084.9382603,
+        "source": "pico",
+        "message": "{'cmd': 'test', 'module': 'right'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "3ea1b69181",
+        "time": 1792783084.9369159,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 32352, \"host_unix_ms\": 1792783084936, \"module\": \"NeoRight\", \"phase\": 0, \"seq\": 14434, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "203be0b079",
+        "time": 1792783084.9012103,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "f23c9a83a3",
+        "time": 1792783084.8529358,
+        "source": "pico",
+        "message": "{\"done\": true, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 32267, \"host_unix_ms\": 1792783084851, \"module\": \"NeoLeft\", \"phase\": 0, \"seq\": 14427, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "956570fcee",
+        "time": 1792783084.7719214,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 32186, \"host_unix_ms\": 1792783084771, \"module\": \"NeoLeft\", \"phase\": 26, \"seq\": 14425, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "642d45d8f5",
+        "time": 1792783084.697604,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 32107, \"host_unix_ms\": 1792783084691, \"module\": \"NeoLeft\", \"phase\": 25, \"seq\": 14423, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "ae0896fb5c",
+        "time": 1792783084.6113827,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 32026, \"host_unix_ms\": 1792783084611, \"module\": \"NeoLeft\", \"phase\": 24, \"seq\": 14421, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "47a20d3763",
+        "time": 1792783084.5322704,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31946, \"host_unix_ms\": 1792783084530, \"module\": \"NeoLeft\", \"phase\": 23, \"seq\": 14419, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "200d7c186a",
+        "time": 1792783084.451424,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31866, \"host_unix_ms\": 1792783084451, \"module\": \"NeoLeft\", \"phase\": 22, \"seq\": 14418, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "4a570a909e",
+        "time": 1792783084.3713186,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31786, \"host_unix_ms\": 1792783084370, \"module\": \"NeoLeft\", \"phase\": 21, \"seq\": 14416, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "4d7f21a8ab",
+        "time": 1792783084.2912579,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31706, \"host_unix_ms\": 1792783084290, \"module\": \"NeoLeft\", \"phase\": 20, \"seq\": 14409, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "e8f58b175f",
+        "time": 1792783084.2113311,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31626, \"host_unix_ms\": 1792783084210, \"module\": \"NeoLeft\", \"phase\": 19, \"seq\": 14407, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "c7bc62bf3f",
+        "time": 1792783084.1312735,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31546, \"host_unix_ms\": 1792783084130, \"module\": \"NeoLeft\", \"phase\": 18, \"seq\": 14405, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "f689d19e38",
+        "time": 1792783084.0542169,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31469, \"host_unix_ms\": 1792783084053, \"module\": \"NeoLeft\", \"phase\": 17, \"seq\": 14404, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "0139b0884d",
+        "time": 1792783083.9712129,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31386, \"host_unix_ms\": 1792783083970, \"module\": \"NeoLeft\", \"phase\": 16, \"seq\": 14402, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "e100332727",
+        "time": 1792783083.891167,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31306, \"host_unix_ms\": 1792783083890, \"module\": \"NeoLeft\", \"phase\": 15, \"seq\": 14400, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "0dab1c04d9",
+        "time": 1792783083.8112185,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31226, \"host_unix_ms\": 1792783083810, \"module\": \"NeoLeft\", \"phase\": 14, \"seq\": 14393, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "0e6e1f4d10",
+        "time": 1792783083.7311716,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31146, \"host_unix_ms\": 1792783083730, \"module\": \"NeoLeft\", \"phase\": 13, \"seq\": 14391, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "81d8077be6",
+        "time": 1792783083.651322,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 31066, \"host_unix_ms\": 1792783083650, \"module\": \"NeoLeft\", \"phase\": 12, \"seq\": 14390, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "8acc873101",
+        "time": 1792783083.571178,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 30986, \"host_unix_ms\": 1792783083570, \"module\": \"NeoLeft\", \"phase\": 11, \"seq\": 14388, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "8aee0dc523",
+        "time": 1792783083.4911327,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 30906, \"host_unix_ms\": 1792783083490, \"module\": \"NeoLeft\", \"phase\": 10, \"seq\": 14386, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "ee3da37fa2",
+        "time": 1792783083.411097,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 30826, \"host_unix_ms\": 1792783083410, \"module\": \"NeoLeft\", \"phase\": 9, \"seq\": 14384, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "3f6263ab66",
+        "time": 1792783082.9910107,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 30406, \"host_unix_ms\": 1792783082990, \"module\": \"NeoLeft\", \"phase\": 8, \"seq\": 14374, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      },
+      {
+        "id": "bdd2f5c62d",
+        "time": 1792783082.5709863,
+        "source": "pico",
+        "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 29986, \"host_unix_ms\": 1792783082570, \"module\": \"NeoLeft\", \"phase\": 7, \"seq\": 14364, \"session\": \"E00DAD30F04F5FF5\", \"version\": 1}",
+        "level": "info"
+      }
+    ]
+  }
+}

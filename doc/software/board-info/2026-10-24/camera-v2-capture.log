@@ -1,0 +1,596 @@
+Running as unit: 300seconds-camera-v2-20261024.service
+Starting single-0
+{
+  "name": "single-0",
+  "at_utc": "2026-10-23T18:08:18.331845+00:00",
+  "sensors": [
+    0
+  ],
+  "pipeline": "nvarguscamerasrc sensor-id=0 ! video/x-raw(memory:NVMM),width=1280,height=720,framerate=30/1,format=NV12 ! nvvidconv ! video/x-raw,format=BGRx,width=1280,height=720 ! videoconvert ! video/x-raw,format=RGB ! appsink name=frame0 max-buffers=4 drop=true sync=false",
+  "requested_frames_each": 90,
+  "streams": {
+    "0": {
+      "frames_received": 90,
+      "pts_ns": [
+        424913610,
+        455161759,
+        488293834,
+        521593067,
+        554921921,
+        588406690,
+        620734151,
+        653289523,
+        686103105,
+        719270110,
+        753120953,
+        786261115,
+        819161767,
+        852975375,
+        886335550,
+        919173367,
+        953104784,
+        986039795,
+        1020049405,
+        1053220346,
+        1086376919,
+        1119587842,
+        1152891793,
+        1186086161,
+        1219386260,
+        1253308255,
+        1286154297,
+        1319503280,
+        1352700250,
+        1386411147,
+        1419343450,
+        1452826068,
+        1486239916,
+        1519729562,
+        1552611940,
+        1586146096,
+        1619411473,
+        1652492560,
+        1685888188,
+        1719014618,
+        1752454132,
+        1786197934,
+        1819085690,
+        1852360510,
+        1885685306,
+        1919252804,
+        1952253530,
+        1985931602,
+        2019429340,
+        2052231407,
+        2085622007,
+        2118951228,
+        2152248433,
+        2186137711,
+        2218791565,
+        2252135987,
+        2285462502,
+        2318817441,
+        2352246929,
+        2385353075,
+        2418650384,
+        2452039526,
+        2485715204,
+        2518617745,
+        2552088881,
+        2585256874,
+        2618702605,
+        2651936089,
+        2685132246,
+        2718492079,
+        2751902201,
+        2785520918,
+        2818509988,
+        2851833700,
+        2884992382,
+        2918537662,
+        2951819309,
+        2984995691,
+        3018329087,
+        3051799296,
+        3085205263,
+        3118356240,
+        3151690468,
+        3184861697,
+        3218238926,
+        3262712555,
+        3284587838,
+        3318237395,
+        3351493793,
+        3385160009
+      ],
+      "first_monotonic": 169.829759374,
+      "last_monotonic": 172.780509575,
+      "pts_strictly_increasing": true,
+      "fps_from_pts": 30.065,
+      "pts_gaps_over_50ms": 0,
+      "image": {
+        "path": "/var/tmp/300seconds-camera-v2-20261024/single-0-sensor-0.png",
+        "width": 1280,
+        "height": 720,
+        "sha256": "1672dac32d1d511c5f0dee3b43193086aec926318869d107f8bda23d1369508e",
+        "bytes": 1503792,
+        "sampled_channel_mean": 121.486,
+        "sampled_channel_stddev": 36.581
+      }
+    }
+  },
+  "passed": true,
+  "set_playing_result": "<enum GST_STATE_CHANGE_ASYNC of type Gst.StateChangeReturn>",
+  "observed_stream_overlap_seconds": 2.951
+}
+Starting single-1
+{
+  "name": "single-1",
+  "at_utc": "2026-10-23T18:08:23.089723+00:00",
+  "sensors": [
+    1
+  ],
+  "pipeline": "nvarguscamerasrc sensor-id=1 ! video/x-raw(memory:NVMM),width=1280,height=720,framerate=30/1,format=NV12 ! nvvidconv ! video/x-raw,format=BGRx,width=1280,height=720 ! videoconvert ! video/x-raw,format=RGB ! appsink name=frame1 max-buffers=4 drop=true sync=false",
+  "requested_frames_each": 90,
+  "streams": {
+    "1": {
+      "frames_received": 90,
+      "pts_ns": [
+        331776690,
+        363362771,
+        396602663,
+        429888577,
+        463124096,
+        496522512,
+        528837078,
+        561480303,
+        595028863,
+        628048486,
+        661382451,
+        694702985,
+        728051528,
+        761411628,
+        794611381,
+        828209086,
+        861450227,
+        894658883,
+        927909797,
+        961453867,
+        994363364,
+        1027921023,
+        1061713373,
+        1095008279,
+        1128442501,
+        1161648069,
+        1195165953,
+        1228250844,
+        1261542002,
+        1294988822,
+        1328423668,
+        1361650010,
+        1394889731,
+        1428227170,
+        1461425971,
+        1494694014,
+        1528074560,
+        1561408824,
+        1594694775,
+        1628213388,
+        1661207276,
+        1694836571,
+        1727826919,
+        1761244169,
+        1794611960,
+        1828044776,
+        1861116756,
+        1894432850,
+        1928008036,
+        1961394702,
+        1994424953,
+        2027698488,
+        2061104156,
+        2094309386,
+        2127704694,
+        2161209175,
+        2194239218,
+        2227835744,
+        2260949814,
+        2294303524,
+        2327405412,
+        2361052490,
+        2394385428,
+        2427560411,
+        2460793598,
+        2494204108,
+        2527425946,
+        2560680947,
+        2593982283,
+        2627376810,
+        2660600991,
+        2694094956,
+        2727264107,
+        2760621722,
+        2793844133,
+        2827171344,
+        2860548274,
+        2894044581,
+        2927085565,
+        2960552736,
+        2993492724,
+        3027343177,
+        3060483814,
+        3093754033,
+        3127153054,
+        3160332217,
+        3193915591,
+        3226963817,
+        3260260640,
+        3293611660
+      ],
+      "first_monotonic": 173.586376621,
+      "last_monotonic": 176.542201065,
+      "pts_strictly_increasing": true,
+      "fps_from_pts": 30.049,
+      "pts_gaps_over_50ms": 0,
+      "image": {
+        "path": "/var/tmp/300seconds-camera-v2-20261024/single-1-sensor-1.png",
+        "width": 1280,
+        "height": 720,
+        "sha256": "193f3eb1c5e3ea948bf14a6e669699c363f33eb142ae6cfb8fa711accaa2bbe9",
+        "bytes": 952000,
+        "sampled_channel_mean": 121.527,
+        "sampled_channel_stddev": 70.046
+      }
+    }
+  },
+  "passed": true,
+  "set_playing_result": "<enum GST_STATE_CHANGE_ASYNC of type Gst.StateChangeReturn>",
+  "observed_stream_overlap_seconds": 2.956
+}
+Starting dual
+nvbuf_utils: Could not get EGL display connection
+GST_ARGUS: Creating output stream
+CONSUMER: Waiting until producer is connected...
+GST_ARGUS: Available Sensor modes :
+GST_ARGUS: 3264 x 2464 FR = 21.000000 fps Duration = 47619048 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 3264 x 1848 FR = 28.000001 fps Duration = 35714284 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1920 x 1080 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1640 x 1232 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1280 x 720 FR = 59.999999 fps Duration = 16666667 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1280 x 720 FR = 120.000005 fps Duration = 8333333 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: Running with following settings:
+   Camera index = 0 
+   Camera mode  = 5 
+   Output Stream W = 1280 H = 720 
+   seconds to Run    = 0 
+   Frame Rate = 120.000005 
+GST_ARGUS: Setup Complete, Starting captures for 0 seconds
+GST_ARGUS: Starting repeat capture requests.
+CONSUMER: Producer has connected; continuing.
+GST_ARGUS: Cleaning up
+CONSUMER: Done Success
+GST_ARGUS: Done Success
+GST_ARGUS: Creating output stream
+CONSUMER: Waiting until producer is connected...
+GST_ARGUS: Available Sensor modes :
+GST_ARGUS: 3264 x 2464 FR = 21.000000 fps Duration = 47619048 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 3264 x 1848 FR = 28.000001 fps Duration = 35714284 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1920 x 1080 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1640 x 1232 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1280 x 720 FR = 59.999999 fps Duration = 16666667 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1280 x 720 FR = 120.000005 fps Duration = 8333333 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: Running with following settings:
+   Camera index = 1 
+   Camera mode  = 5 
+   Output Stream W = 1280 H = 720 
+   seconds to Run    = 0 
+   Frame Rate = 120.000005 
+GST_ARGUS: Setup Complete, Starting captures for 0 seconds
+GST_ARGUS: Starting repeat capture requests.
+CONSUMER: Producer has connected; continuing.
+GST_ARGUS: Cleaning up
+CONSUMER: Done Success
+GST_ARGUS: Done Success
+GST_ARGUS: Creating output stream
+GST_ARGUS: Creating output stream
+CONSUMER: Waiting until producer is connected...
+GST_ARGUS: Available Sensor modes :
+GST_ARGUS: 3264 x 2464 FR = 21.000000 fps Duration = 47619048 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 3264 x 1848 FR = 28.000001 fps Duration = 35714284 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1920 x 1080 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1640 x 1232 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1280 x 720 FR = 59.999999 fps Duration = 16666667 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1280 x 720 FR = 120.000005 fps Duration = 8333333 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: Running with following settings:
+   Camera index = 0 
+   Camera mode  = 5 
+   Output Stream W = 1280 H = 7{
+  "name": "dual",
+  "at_utc": "2026-10-23T18:08:26.755107+00:00",
+  "sensors": [
+    0,
+    1
+  ],
+  "pipeline": "nvarguscamerasrc sensor-id=0 ! video/x-raw(memory:NVMM),width=1280,height=720,framerate=30/1,format=NV12 ! nvvidconv ! video/x-raw,format=BGRx,width=1280,height=720 ! videoconvert ! video/x-raw,format=RGB ! appsink name=frame0 max-buffers=4 drop=true sync=false nvarguscamerasrc sensor-id=1 ! video/x-raw(memory:NVMM),width=1280,height=720,framerate=30/1,format=NV12 ! nvvidconv ! video/x-raw,format=BGRx,width=1280,height=720 ! videoconvert ! video/x-raw,format=RGB ! appsink name=frame1 max-buffers=4 drop=true sync=false",
+  "requested_frames_each": 90,
+  "streams": {
+    "0": {
+      "frames_received": 90,
+      "pts_ns": [
+        377751700,
+        457419614,
+        466797258,
+        476775447,
+        510298957,
+        542265584,
+        575534559,
+        609030320,
+        642018417,
+        675087108,
+        707821086,
+        741102713,
+        774373563,
+        808075232,
+        841075825,
+        874292113,
+        907699471,
+        941447528,
+        974344828,
+        1007674300,
+        1041108419,
+        1076616665,
+        1108199589,
+        1142144495,
+        1174613266,
+        1208245848,
+        1241371764,
+        1274973679,
+        1307933760,
+        1341775270,
+        1374665586,
+        1408114540,
+        1441337019,
+        1474793418,
+        1508025633,
+        1541130813,
+        1575484938,
+        1608106191,
+        1641241829,
+        1674401624,
+        1707783260,
+        1741201236,
+        1774469895,
+        1807815139,
+        1840974362,
+        1874053927,
+        1907679531,
+        1941552176,
+        1974257771,
+        2007786851,
+        2041067797,
+        2074409656,
+        2107498854,
+        2140939113,
+        2174376665,
+        2207518498,
+        2240788461,
+        2274053097,
+        2307555821,
+        2340833785,
+        2374043963,
+        2408535272,
+        2440998023,
+        2473837924,
+        2507114795,
+        2540995813,
+        2573895275,
+        2607382952,
+        2640491658,
+        2673984281,
+        2707121153,
+        2740565149,
+        2773550932,
+        2807260504,
+        2841253512,
+        2873998708,
+        2907300206,
+        2940432132,
+        2973581759,
+        3007075216,
+        3040572525,
+        3073590639,
+        3106943159,
+        3140241793,
+        3172352906,
+        3206467795,
+        3239830980,
+        3272926123,
+        3306202191,
+        3339680110
+      ],
+      "first_monotonic": 177.370527136,
+      "last_monotonic": 180.289910824,
+      "pts_strictly_increasing": true,
+      "fps_from_pts": 30.048,
+      "pts_gaps_over_50ms": 1,
+      "image": {
+        "path": "/var/tmp/300seconds-camera-v2-20261024/dual-sensor-0.png",
+        "width": 1280,
+        "height": 720,
+        "sha256": "0a44f07eb60cb85afe146ba5453d392a07d61b18773383bd41ea36e25a56d8f6",
+        "bytes": 1513461,
+        "sampled_channel_mean": 120.724,
+        "sampled_channel_stddev": 36.43
+      }
+    },
+    "1": {
+      "frames_received": 90,
+      "pts_ns": [
+        441053796,
+        473158700,
+        505133969,
+        538679294,
+        572063484,
+        605557735,
+        637748492,
+        670785944,
+        703553972,
+        736813264,
+        770106033,
+        803727681,
+        836858795,
+        870095335,
+        903486971,
+        937205300,
+        970034033,
+        1003435144,
+        1036878842,
+        1069953988,
+        1103878277,
+        1137836720,
+        1170334438,
+        1203980921,
+        1237050360,
+        1270405444,
+        1303689149,
+        1337451420,
+        1370458930,
+        1403751590,
+        1436952723,
+        1470374760,
+        1503614732,
+        1536861681,
+        1571262403,
+        1603707682,
+        1636853368,
+        1670113384,
+        1703530111,
+        1736899356,
+        1770096897,
+        1803440111,
+        1836687424,
+        1869761575,
+        1903367551,
+        1937248318,
+        1969950737,
+        2003336434,
+        2036608634,
+        2070137765,
+        2103286835,
+        2136716473,
+        2170035165,
+        2203208236,
+        2236513615,
+        2269803190,
+        2303197934,
+        2336452469,
+        2369835394,
+        2404165618,
+        2436591457,
+        2469628210,
+        2502850414,
+        2536726851,
+        2569642973,
+        2602990026,
+        2636128981,
+        2669604631,
+        2702861198,
+        2736260627,
+        2769335335,
+        2802974673,
+        2837004802,
+        2869622287,
+        2903004171,
+        2936159890,
+        2969299521,
+        3002860920,
+        3036080626,
+        3069236813,
+        3102606618,
+        3139190523,
+        3168363318,
+        3202443115,
+        3235699741,
+        3268934574,
+        3302245160,
+        3335661384,
+        3368981341,
+        3402297393
+      ],
+      "first_monotonic": 177.370661457,
+      "last_monotonic": 180.323400979,
+      "pts_strictly_increasing": true,
+      "fps_from_pts": 30.055,
+      "pts_gaps_over_50ms": 0,
+      "image": {
+        "path": "/var/tmp/300seconds-camera-v2-20261024/dual-sensor-1.png",
+        "width": 1280,
+        "height": 720,
+        "sha256": "399db11e8b8c199e4e986a407466af92e7e8c5be1f7a48323246b99365ca3f4d",
+        "bytes": 950375,
+        "sampled_channel_mean": 121.593,
+        "sampled_channel_stddev": 70.091
+      }
+    }
+  },
+  "passed": true,
+  "set_playing_result": "<enum GST_STATE_CHANGE_ASYNC of type Gst.StateChangeReturn>",
+  "observed_stream_overlap_seconds": 2.919
+}
+All scenarios passed: True
+20 
+   seconds to Run    = 0 
+   Frame Rate = 120.000005 
+GST_ARGUS: Setup Complete, Starting captures for 0 seconds
+GST_ARGUS: Starting repeat capture requests.
+CONSUMER: Waiting until producer is connected...
+CONSUMER: Producer has connected; continuing.
+GST_ARGUS: Available Sensor modes :
+GST_ARGUS: 3264 x 2464 FR = 21.000000 fps Duration = 47619048 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 3264 x 1848 FR = 28.000001 fps Duration = 35714284 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1920 x 1080 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1640 x 1232 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1280 x 720 FR = 59.999999 fps Duration = 16666667 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: 1280 x 720 FR = 120.000005 fps Duration = 8333333 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;
+
+GST_ARGUS: Running with following settings:
+   Camera index = 1 
+   Camera mode  = 5 
+   Output Stream W = 1280 H = 720 
+   seconds to Run    = 0 
+   Frame Rate = 120.000005 
+GST_ARGUS: Setup Complete, Starting captures for 0 seconds
+GST_ARGUS: Starting repeat capture requests.
+CONSUMER: Producer has connected; continuing.
+GST_ARGUS: Cleaning up
+CONSUMER: Done Success
+GST_ARGUS: Done Success
+GST_ARGUS: Cleaning up
+CONSUMER: Done Success
+GST_ARGUS: Done Success
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 14.100s

@@ -1,0 +1,5 @@
+/usr/bin/gdb
+{'target': 'thumbv8m.main-none-eabihf', 'family': '0xe48bff59', 'blocks': 271, 'bytes': 138752, 'sha256': 'e4f2352f342465035603079809e4103ef51acfde3f9cd5986199ebc230f9d44f'}
+No accessible RP-series devices in BOOTSEL mode were found.
+bash: line 1: 83195 Segmentation fault      (core dumped) .local-tools/linux/picotool/2.3.1/install/bin/picotool info firmware/pico2-device-bench/dist/linux/pico2-device-bench.uf2
+bash: line 1: 83203 Segmentation fault      (core dumped) .local-tools/linux/picotool/2.3.1/install/bin/picotool info -m firmware/pico2-device-bench/dist/linux/pico2-device-bench.uf2

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f2f2ed">
+  <title>300 Seconds · 디바이스 모니터</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="300 Seconds 홈"><span class="brand-mark">300<span>″</span></span><span>SECONDS<span class="brand-caption">DEVICE OBSERVATORY</span></span></a>
+    <nav aria-label="주 메뉴"><a class="active" href="#cameras">실시간 모니터</a><a href="#devices">Pico 장치</a><a href="#audio">오디오</a></nav>
+    <div class="header-actions"><span class="connection" id="connection"><i></i> 연결 중</span><button class="stop-button" id="stop-all" type="button"><span aria-hidden="true">■</span> Pico 전체 정지</button></div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="title"><div><p class="eyebrow">WORKBENCH / JETSON NANO</p><h1 id="title">디바이스 모니터<span class="title-dot">.</span></h1><p class="muted">카메라, 소리, 움직임. 연결된 장치의 지금을 확인하세요.</p></div><div class="host-label"><span class="pulse-dot"></span><div><strong id="host">192.168.219.127</strong><span id="clock">데이터 수신 대기</span></div><span class="host-icon" aria-hidden="true">↗</span></div></section>
+
+    <section class="summary" aria-label="시스템 요약">
+      <article class="summary-item"><span class="summary-label">PICO 2 W <span class="tiny-dot" id="pico-dot"></span></span><strong id="pico-summary">연결 확인 중</strong><span id="pico-detail">USB · pico-device-v1</span></article>
+      <article class="summary-item"><span class="summary-label">CSI CAMERAS</span><strong><span id="camera-count">—</span><small> / 2 온라인</small></strong><span id="camera-detail">IMX219 · 두 채널</span></article>
+      <article class="summary-item"><span class="summary-label">MICROPHONE</span><strong><span id="mic-db">—</span><small> dBFS</small></strong><span id="mic-detail">48 kHz · Mono</span></article>
+      <article class="summary-item"><span class="summary-label">BOARD LOAD</span><strong><span id="cpu">—</span><small>% CPU</small></strong><span id="board-detail">메모리·온도 확인 중</span></article>
+    </section>
+
+    <section id="cameras" class="camera-section" aria-labelledby="cameras-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / VISION</p><h2 id="cameras-title">카메라 라이브 <span class="tag">DUAL CSI</span></h2></div><button class="quiet-button" id="pause-preview" type="button" aria-pressed="false">Ⅱ 미리보기 일시정지</button></div>
+      <form id="profile-form" class="profile-form" action="/api/cameras/profile" method="post"><fieldset><legend>촬영 프로필</legend><div class="profile-options">
+        <label><input type="radio" name="profile" value="360p30"><span>360p <small>30 fps</small></span></label>
+        <label><input type="radio" name="profile" value="720p30" checked><span>720p <small>30 fps</small><em>기본</em></span></label>
+        <label><input type="radio" name="profile" value="720p60"><span>720p <small>60 fps</small></span></label>
+        <label><input type="radio" name="profile" value="1080p30"><span>1080p <small>30 fps</small></span></label>
+      </div></fieldset><button class="primary-button" type="submit">프로필 적용 <span aria-hidden="true">↗</span></button><p class="profile-help" id="profile-help">H.264 RTSP · 브라우저 미리보기 640×360 / 최대 15fps</p></form>
+      <div class="camera-grid">
+        <article class="camera-card" data-camera="0"><div class="camera-stage"><img id="camera-image-0" width="640" height="360" alt="CSI 카메라 0 실시간 영상"><span class="camera-label"><span class="live-dot"></span>CAM 01 <span>/ SENSOR 0</span></span><span class="video-state" id="video-state-0">준비 중</span><span class="stage-cross" aria-hidden="true">+</span></div><div class="camera-info"><div><strong>Camera 01</strong><span>IMX219 · /dev/video0</span></div><div class="camera-fps"><strong id="fps-0">—</strong><span>capture fps</span></div></div><div class="camera-specs" id="camera-specs-0">프레임 데이터 대기 중</div><div class="camera-links"><a href="/api/cameras/0/snapshot.jpg" download="camera-0.jpg">프레임 저장 ↓</a><button class="text-button rtsp-copy" data-sensor="0" type="button">RTSP 주소 복사 ↗</button></div><input class="rtsp-address" id="rtsp-0" readonly aria-label="카메라 0 RTSP 주소"></article>
+        <article class="camera-card" data-camera="1"><div class="camera-stage"><img id="camera-image-1" width="640" height="360" alt="CSI 카메라 1 실시간 영상"><span class="camera-label"><span class="live-dot"></span>CAM 02 <span>/ SENSOR 1</span></span><span class="video-state" id="video-state-1">준비 중</span><span class="stage-cross" aria-hidden="true">+</span></div><div class="camera-info"><div><strong>Camera 02</strong><span>IMX219 · /dev/video1</span></div><div class="camera-fps"><strong id="fps-1">—</strong><span>capture fps</span></div></div><div class="camera-specs" id="camera-specs-1">프레임 데이터 대기 중</div><div class="camera-links"><a href="/api/cameras/1/snapshot.jpg" download="camera-1.jpg">프레임 저장 ↓</a><button class="text-button rtsp-copy" data-sensor="1" type="button">RTSP 주소 복사 ↗</button></div><input class="rtsp-address" id="rtsp-1" readonly aria-label="카메라 1 RTSP 주소"></article>
+      </div>
+    </section>
+
+    <section id="devices" class="device-section" aria-labelledby="devices-title"><div class="section-heading"><div><p class="eyebrow">02 / INTERACTION</p><h2 id="devices-title">Pico 장치 <span class="badge neutral" id="pico-badge">연결 대기</span></h2></div><button class="quiet-button" id="pico-reconnect" type="button">↻ USB 연결 재시도</button></div>
+      <div class="touch-panel"><div class="touch-heading"><div><h3>터치 입력 <span>6 CHANNELS</span></h3><p class="muted">연결된 입력만 눌림·유지 시간·횟수를 해석합니다.</p></div><code id="touch-mask">RAW — / PRESSED —</code></div><div class="touch-grid" id="touch-grid"></div><div class="touch-footer"><span id="local-tests">로컬 검사 상태 대기</span><span id="pico-age">수신 시각 —</span></div></div>
+      <div class="actuator-grid">
+        <article class="actuator"><span class="module-number">A / DISPLAY</span><div class="module-visual matrix-visual" aria-hidden="true"><span>▦</span><span>▦</span></div><h3>눈 매트릭스</h3><p>MAX7219 · 좌/우 2개</p><span class="module-status" id="matrix-status">장치 데이터 대기</span><button class="module-test" data-module="matrix" type="button">눈 시험 실행 <span>↗</span></button></article>
+        <article class="actuator"><span class="module-number">B / LIGHT</span><div class="module-visual led-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>왼손 NeoPixel</h3><p id="left-segments">구간 데이터 대기</p><span class="module-status" id="left-status">장치 데이터 대기</span><button class="module-test" data-module="left" type="button">왼손 시험 실행 <span>↗</span></button></article>
+        <article class="actuator"><span class="module-number">C / LIGHT</span><div class="module-visual led-visual right" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>오른손 NeoPixel</h3><p id="right-segments">구간 데이터 대기</p><span class="module-status" id="right-status">장치 데이터 대기</span><button class="module-test" data-module="right" type="button">오른손 시험 실행 <span>↗</span></button></article>
+        <article class="actuator"><span class="module-number">D / MOTION</span><div class="module-visual servo-visual" aria-hidden="true"><span>◴</span><i></i></div><h3>서보 모터</h3><p>PCA9685 · 6개 채널</p><span class="module-status" id="servo-status">OE 데이터 대기</span><button class="module-test" data-module="servos" type="button">서보 순차 시험 <span>↗</span></button></article>
+      </div><div class="device-footnote"><span id="device-running">실행 상태 대기</span><span>명령·전송 상태입니다. 실제 각도와 발광 센서 피드백은 없습니다.</span></div>
+    </section>
+
+    <section id="audio" class="lower-grid" aria-label="오디오와 시스템"><article class="audio-panel panel"><div class="section-heading"><div><p class="eyebrow">03 / SOUND</p><h2>오디오 <span class="badge neutral" id="audio-badge">연결 대기</span></h2></div><span class="subtle-code">USB / C-MEDIA</span></div><div class="waveform-wrap"><canvas id="waveform" width="800" height="140" aria-label="실제 마이크 입력 파형"></canvas><div class="wave-scale"><span>MIC INPUT</span><strong id="audio-level">— dBFS</strong></div></div><div class="audio-metrics"><span>48,000 Hz <small>샘플링</small></span><span>S16_LE <small>Mono PCM</small></span><span id="audio-peak">— <small>Peak dBFS</small></span></div><div class="audio-buttons"><button class="secondary-button" id="listen-mic" type="button">▷ 최근 3초 듣기</button><button class="secondary-button" data-audio="tone" type="button">♪ 스피커 시험음</button><button class="quiet-button" data-audio="replay" type="button">녹음 → 스피커</button></div><audio id="recording" controls preload="none" aria-label="최근 마이크 녹음 재생"></audio><div class="audio-footer"><span id="speaker-state">스피커 대기</span><span>최근 최대 6초를 메모리에 보관</span></div></article>
+      <article class="system-panel panel"><p class="eyebrow">04 / HEALTH</p><div class="system-title"><h2>보드 상태</h2><span class="badge neutral" id="system-badge">수신 대기</span></div><div class="load-head"><span>CPU 사용률</span><strong id="cpu-large">—<small>%</small></strong></div><canvas id="cpu-chart" width="500" height="95" aria-label="최근 CPU 사용률"></canvas><div class="system-rows"><div><span>메모리</span><strong id="memory">—</strong></div><div class="memory-track"><span id="memory-bar"></span></div><div><span>GPU</span><strong id="gpu">—</strong></div><div><span>최고 센서 온도</span><strong id="temperature">—</strong></div><div><span>보드 가동 시간</span><strong id="uptime">—</strong></div></div></article>
+    </section>
+
+    <section class="events-panel panel" aria-labelledby="events-title"><div class="section-heading"><div><p class="eyebrow">EVENT STREAM</p><h2 id="events-title">최근 이벤트</h2></div><a class="text-button" href="/api/status" target="_blank" rel="noopener">원본 JSON ↗</a></div><div class="event-list" id="event-list"><p class="muted">장치 이벤트를 기다리고 있습니다.</p></div></section>
+    <footer><span><strong>300 SECONDS</strong> / DEVICE OBSERVATORY</span><span>FastAPI · GStreamer · Rust USB bridge <a href="/openapi.json" target="_blank" rel="noopener">API 명세 ↗</a></span></footer>
+  </main><div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

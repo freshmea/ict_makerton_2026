@@ -1,0 +1,20 @@
+MainPID=8088
+ExecMainStartTimestamp=Fri 2026-10-23 21:32:33 CEST
+User=boarddash
+Group=boarddash
+SupplementaryGroups=audio video render robot-device dialout
+ActiveState=active
+SubState=running
+FragmentPath=/etc/systemd/system/300seconds-dashboard.service
+UnitFileState=enabled
+uid=996(boarddash) gid=989(boarddash) groups=989(boarddash),20(dialout),29(audio),44(video),134(render),993(robot-device)
+lrwxrwxrwx 1 root root        7 Oct 23 21:10 /dev/pico-device -> ttyACM0
+crw-rw---- 1 root audio 116, 27 Oct 23 21:10 /dev/snd/pcmC2D0c
+crw-rw---- 1 root audio 116, 26 Oct 23 21:32 /dev/snd/pcmC2D0p
+crw-rw---- 1 root video  81,  0 Oct 23 21:10 /dev/video0
+crw-rw---- 1 root video  81,  3 Oct 23 21:10 /dev/video1
+multi-user.target
+inactive
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed. Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.

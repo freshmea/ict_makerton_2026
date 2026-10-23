@@ -389,10 +389,24 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
     pub async fn hello(&mut self) -> Result<u64> {
         self.emit(json!({"event":"session_open","security_token":false,"protocol":PROTOCOL_NAME}));
         self.boundary().await?;
-        let request_seq = self.send(Message::Hello).await?;
+        let mut request_seq = self.send(Message::Hello).await?;
         let deadline = Instant::now() + REQUEST_TIMEOUT;
+        let mut next_hello = Instant::now() + Duration::from_millis(250);
         loop {
-            let frame = self.next_frame(deadline).await?;
+            // A newly opened CDC port can contain an unfinished telemetry frame
+            // from the previous owner. Only the stop-safe Hello handshake is
+            // repeated; actuator requests are still sent exactly once.
+            // KeepAlive is disabled until HelloReply, so cancelling this receive
+            // cannot cancel a serial write half way through a frame.
+            let frame = match time::timeout_at(next_hello.min(deadline), self.next_frame(deadline)).await {
+                Ok(frame) => frame?,
+                Err(_) if Instant::now() < deadline => {
+                    request_seq = self.send(Message::Hello).await?;
+                    next_hello = Instant::now() + Duration::from_millis(250);
+                    continue;
+                }
+                Err(_) => return Err(failure("Timed out waiting for HelloReply")),
+            };
             if frame.seq == request_seq {
                 if let Message::HelloReply { device_id, .. } = frame.body {
                     if device_id == 0 { return Err(failure("Device returned an invalid zero chip identity")); }
@@ -405,6 +419,7 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
             }
         }
     }
+
 
     pub async fn request_ack(&mut self, body: Message) -> Result<u32> {
         let request_seq = self.send(body).await?;
@@ -589,6 +604,27 @@ mod tests {
         });
         let reply = udp_roundtrip(address, &IpcRequest::Status).await.unwrap();
         assert_eq!(reply["ok"], true);
+        simulated.await.unwrap();
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn hello_retries_a_lost_identity_reply_without_replaying_actuators() {
+        let (host, mut device) = tokio::io::duplex(4096);
+        let mut link = DeviceLink::new(host, 46, Arc::new(AtomicBool::new(false)), false);
+        let simulated = tokio::spawn(async move {
+            let first = read_frame(&mut device).await;
+            assert_eq!(first.body, Message::Hello);
+            // ACK alone does not verify identity; the identity reply was lost.
+            write_fragmented(&mut device, Frame { version: VERSION, session: 46, seq: first.seq,
+                body: Message::Ack { request_seq: first.seq, code: AckCode::Ok } }).await;
+            let second = read_frame(&mut device).await;
+            assert_eq!(second.body, Message::Hello);
+            assert!(second.seq > first.seq);
+            write_fragmented(&mut device, Frame { version: VERSION, session: 46, seq: second.seq,
+                body: Message::HelloReply { device_id: 123, uptime_ms: 42 } }).await;
+        });
+        assert_eq!(link.hello().await.unwrap(), 123);
+        assert!(link.hello_verified);
         simulated.await.unwrap();
     }
 

@@ -1,0 +1,109 @@
+{
+  "recorded_utc": "2026-10-23T19:39:09.480575+00:00",
+  "desktop": {
+    "timestamp": "2026-10-23T19:34:31.290Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100,
+      "scrollWidth": 1440
+    },
+    "pico": "USB 연결됨",
+    "cameras": [
+      {
+        "width": 640,
+        "height": 360
+      },
+      {
+        "width": 640,
+        "height": 360
+      }
+    ],
+    "touchStates": [
+      "미연결",
+      "미연결",
+      "미연결",
+      "미연결",
+      "미연결",
+      "미연결"
+    ],
+    "moduleTests": [
+      {
+        "module": "matrix",
+        "disabled": true,
+        "reason": "도트매트릭스 미연결"
+      },
+      {
+        "module": "left",
+        "disabled": false,
+        "reason": ""
+      },
+      {
+        "module": "right",
+        "disabled": false,
+        "reason": ""
+      },
+      {
+        "module": "servos",
+        "disabled": false,
+        "reason": ""
+      }
+    ],
+    "servo": "OE HIGH · 출력 차단 · 외부 전원 별도"
+  },
+  "mobile": {
+    "timestamp": "2026-10-23T19:35:06.947Z",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390
+    },
+    "touchStates": [
+      "미연결",
+      "미연결",
+      "미연결",
+      "미연결",
+      "미연결",
+      "미연결"
+    ],
+    "moduleTests": [
+      {
+        "module": "matrix",
+        "disabled": true
+      },
+      {
+        "module": "left",
+        "disabled": false
+      },
+      {
+        "module": "right",
+        "disabled": false
+      },
+      {
+        "module": "servos",
+        "disabled": false
+      }
+    ],
+    "smallButtons": []
+  },
+  "fresh_tab_console": "### Result\nTotal messages: 0 (Errors: 0, Warnings: 0)",
+  "earlier_live_interactions": {
+    "microphone_browser_wav": {
+      "duration_seconds": 3,
+      "ready_state": 4,
+      "ended": true,
+      "error": null
+    },
+    "preview_pause": {
+      "both_image_src_removed": true,
+      "pico_telemetry_remained_live": true
+    },
+    "source": "실제 Playwright UI 조작 및 eval 결과. 마이크/일시정지 검증은 영상 프로필 비교 단계에서 수행."
+  },
+  "user_confirmed": {
+    "neopixel_illumination": true,
+    "servo_movement": true,
+    "switches_connected": false,
+    "matrix_connected": false,
+    "note": "사용자 대화 답변. 서보는 처음 외부 전원 미연결로 미확인, 후속 답변에서 움직임 확인. 개별 축 각도·부하 계측은 아님."
+  }
+}

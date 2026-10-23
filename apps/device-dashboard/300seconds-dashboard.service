@@ -1,0 +1,39 @@
+[Unit]
+Description=300 Seconds FastAPI device dashboard
+Wants=network-online.target
+After=network-online.target nvargus-daemon.service sound.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=boarddash
+Group=boarddash
+SupplementaryGroups=audio video render robot-device dialout
+WorkingDirectory=/opt/300seconds/dashboard/app
+EnvironmentFile=/etc/300seconds/dashboard.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+Environment=DISPLAY=
+Environment=HOME=/var/lib/300seconds-dashboard
+Environment=XDG_CACHE_HOME=/run/300seconds-dashboard/cache
+ExecStart=/opt/300seconds/dashboard/venv/bin/python -B -m uvicorn app:app --host ${DASHBOARD_BIND} --port 8000 --workers 1 --no-access-log
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+KillMode=mixed
+TimeoutStopSec=30
+RuntimeDirectory=300seconds-dashboard
+RuntimeDirectoryMode=0750
+StateDirectory=300seconds-dashboard
+StateDirectoryMode=0750
+UMask=0027
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=false
+PrivateDevices=false
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

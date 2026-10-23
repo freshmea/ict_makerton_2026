@@ -5,6 +5,7 @@
 | 파일 | 용도 |
 | --- | --- |
 | `collect_board_info.py` | 설치·장치 구동 없이 하드웨어/환경 JSON 수집 |
+| `dashboard-network.py status/apply/restore` | RTL8188EUS Wi-Fi 정책 백업·복원과 최대 16MiB 영구 진단 로그. 드라이버 옵션은 다음 로드 때 반영 |
 | `install-project-deps.sh` | Ubuntu 개발 패키지·격리 Rust1.90·Pico udev/dialout 준비 |
 | `project-mode.sh` / `desktop-mode.sh` | headless 정책 적용 / 최초 GUI·서비스·모듈 정책 복원 |
 | `jetson-mode.sh status` | 현재 상태 JSON |
@@ -16,6 +17,7 @@
 | `check-device-access.sh` / `probe-device-access.py` | 비root systemd transient 프로세스에서 실제 장치 open 확인 |
 | `check-usb-audio.py` | 짧은 실물 녹음·시험음 재생·full duplex와 주파수 확인 |
 | `check-csi-camera.py` | sensor-id0/1의 실제 프레임 취득. 수신 프레임이 없으면 실패 |
+| `verify-csi-cameras.py` | 비root에서 각 카메라와 두 카메라 동시 90프레임 수신·PTS 측정·실제 RGB PNG 저장 |
 
 보드에는 `/opt/300seconds/jetson`에 root 소유로 설치했다. `.sh`는 `0755`, Python 엔진은 root 소유이며 상태 폴더는 `/var/lib/300seconds/` 아래 root 전용이다. 일반 사용자가 수정 가능한 스크립트 경로를 서비스나 root 자동 시작 경로로 등록하지 않는다.
 
@@ -38,6 +40,10 @@ sudo install -o root -g root -m 0644 tools/jetson/*.c tools/jetson/*.rs /opt/300
 
 프로젝트 서비스/펌웨어를 자동 시작하거나 ROS 패키지·기존 작업 디렉터리를 삭제하는 도구는 아니다.
 
-실제 연결 장치의 최신 결과는 [디바이스 권한·실물 점검](../../doc/software/Jetson_Nano_디바이스_권한과_실물점검.md)을 따른다. 오디오·Pico 접근은 확인했고, IMX708 두 카메라는 현재 BSP에 드라이버가 없어 프레임 취득에 실패했다. `camera` 권한 probe 성공은 센서 촬영 성공이 아니다.
+실제 연결 장치의 최신 결과는 [디바이스 권한·실물 점검](../../doc/software/Jetson_Nano_디바이스_권한과_실물점검.md)을 따른다. IMX708 취득 실패 후 Camera V2로 교체했고, [IMX219 두 개의 비root 개별·동시 촬영과 실제 PNG](../../doc/software/Jetson_Nano_Camera_V2_실물검증.md)를 확인했다. `camera` 권한 probe와 실제 프레임 수신 시험을 구분한다.
 
 Nano clone의 Linux 펌웨어 빌드/업로드는 저장소 루트의 `firmware/setup-linux.sh`, `build-pico-device.sh`, `flash-pico.sh`를 사용한다. RP2350 BOOTSEL `2e8a:000f`도 `robot-device:0660`을 적용한다. [설정·업데이트·검증 범위](../../doc/software/Jetson_Nano_Linux_펌웨어_업데이트.md)를 확인한다.
+
+실시간 장치 모니터는 [FastAPI 대시보드](../../apps/device-dashboard/README.md)를 사용한다. 해당 앱의 별도 `install.sh`는 사용자 요청에 따라 `300seconds-dashboard.service`를 자동 시작으로 등록한다. [실제 영상·오디오·LED/서보 확인과 네트워크 제한](../../doc/software/Jetson_Nano_장치_대시보드.md)을 참고한다.
+
+프로젝트 모드에서도 HDMI 텍스트 로그인은 유지된다. 2026-10-24에는 `getty@tty1` enabled/active, VT1 화면의 `nano login:`, framebuffer console 연결을 확인했다. [HDMI 콘솔 점검과 실제 화면 검증 범위](../../doc/software/Jetson_Nano_HDMI_콘솔_점검.md)를 참고한다.

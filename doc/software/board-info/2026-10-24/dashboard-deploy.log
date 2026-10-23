@@ -1,0 +1,12 @@
+test_camera_previous_generation_is_never_live (test_hardware.TelemetryTests) ... ok
+test_missing_matrix_is_rejected_before_usb_command (test_hardware.TelemetryTests) ... ok
+test_pico_old_sample_is_never_connected (test_hardware.TelemetryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.602s
+
+OK
+{"api":"ok","pico":true,"cameras":true,"microphone":true}
+05f62a8b0461593d34b10019da87ef5add3a6ef681e86278a3e543a696dc5569  /opt/300seconds/dashboard/pico-device-bench
+enabled
+active

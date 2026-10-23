@@ -10,6 +10,7 @@ cd "$FW"
 cargo build --release --locked --jobs "${PICO_BUILD_JOBS:-2}" --target thumbv8m.main-none-eabihf
 "$PICOTOOL" uf2 convert target/thumbv8m.main-none-eabihf/release/pico2-device-bench \
     -t elf dist/linux/pico2-device-bench.uf2 --family rp2350-arm-s --platform rp2350
+"$PICOTOOL" info -a dist/linux/pico2-device-bench.uf2
 cd "$PICO_REPO"
 cargo build --release --locked --jobs "${PICO_BUILD_JOBS:-2}" --manifest-path tools/pico-device-bench/Cargo.toml
 python3 -B "$PICO_REPO/firmware/pico_linux.py" record-image

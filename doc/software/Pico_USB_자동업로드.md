@@ -40,12 +40,12 @@ cd /home/jetson/ict_makerton_2026
 bash firmware/setup-linux.sh
 bash firmware/build-pico-device.sh
 bash firmware/flash-pico.sh --check
-# 최초 구형 이미지 교체: BOOTSEL을 누른 채 USB 재연결 후
+# 이미 ROM BOOTSEL에 진입한 상태에서 (원격 Reset 또는 버튼)
 bash firmware/flash-pico.sh --bootsel
 # 통합 이미지 설치 후의 업데이트
 bash firmware/flash-pico.sh --port /dev/pico-device
 ```
 
-현재 연결된 구형 `c0de:caff`에는 통합 CDC 명령을 보내지 않는다. RP2350 BOOTSEL 권한·도구 버전·flash 백업·readback 검증·실제 검증 범위는 [Nano Linux 펌웨어 업데이트](Jetson_Nano_Linux_펌웨어_업데이트.md)를 따른다.
+현재 연결된 `c0de:caff`는 NeoPixel 변형이며, 통합 CDC 명령을 보내지 않는다. 이 이미지는 picotool USB Reset을 지원하며 실제 버튼 없는 ROM 정보 조회·앱 복귀를 확인했다. `--bootsel`은 이미 ROM에 들어간 상태를 뜻하며 물리 버튼을 요구하는 옵션이 아니다. 원격 진입 명령·권한·도구 버전·flash 백업·readback 검증 범위는 [Nano Linux 펌웨어 업데이트](Jetson_Nano_Linux_펌웨어_업데이트.md)를 따른다.
 
-실행·설정은 [통합 도구 README](../../tools/pico-device-bench/README.md), 결과는 [RUN08](test-results/2026-10-23/RUN-20261023-08.md)을 따른다.
+실행·설정은 [통합 도구 README](../../tools/pico-device-bench/README.md), 결과는 [초기·후속 검증 범위](Jetson_Nano_작업_종합기록_2026-10-24.md)을 따른다.

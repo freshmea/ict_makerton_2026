@@ -1,0 +1,21 @@
+Input #0, rtsp, from 'rtsp://192.168.219.127:8554/cam0':
+  Metadata:
+    title           : Session streamed with GStreamer
+    comment         : rtsp-server
+  Duration: N/A, start: 0.064633, bitrate: N/A
+  Stream #0:0: Video: h264 (Constrained Baseline), yuv420p(progressive), 1280x720, 30 fps, 30 tbr, 90k tbn, start 0.064633
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Session streamed with GStreamer
+    comment         : rtsp-server
+    encoder         : Lavf62.12.100
+  Stream #0:0: Video: wrapped_avframe, yuv420p(progressive), 1280x720, q=2-31, 200 kb/s, 30 fps, 30 tbn
+    Metadata:
+      encoder         : Lavc62.28.100 wrapped_avframe
+frame=   28 fps=0.0 q=-0.0 size=N/A time=00:00:01.86 bitrate=N/A speed=3.61x elapsed=0:00:00.51    
+frame=   44 fps= 43 q=-0.0 size=N/A time=00:00:02.40 bitrate=N/A speed=2.32x elapsed=0:00:01.03    
+frame=   59 fps= 38 q=-0.0 size=N/A time=00:00:02.90 bitrate=N/A speed=1.86x elapsed=0:00:01.56    
+[out#0/null @ 000001d9dde59040] video:25KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=   60 fps= 37 q=-0.0 Lsize=N/A time=00:00:02.93 bitrate=N/A speed=1.82x elapsed=0:00:01.60    

@@ -1,0 +1,43 @@
+-- Logs begin at Fri 2026-10-23 21:10:28 CEST, end at Fri 2026-10-23 21:35:16 CEST. --
+Oct 23 21:10:33 nano systemd[1]: Started 300 Seconds FastAPI device dashboard.
+Oct 23 21:10:36 nano python[5836]: INFO:     Started server process [5836]
+Oct 23 21:10:36 nano python[5836]: INFO:     Waiting for application startup.
+Oct 23 21:10:36 nano python[5836]: INFO:     Application startup complete.
+Oct 23 21:10:36 nano python[5836]: ERROR:    [Errno 99] error while attempting to bind on address ('192.168.219.127', 8000): cannot assign requested address
+Oct 23 21:10:36 nano python[5836]: INFO:     Waiting for application shutdown.
+Oct 23 21:10:36 nano python[5836]: INFO:     Application shutdown complete.
+Oct 23 21:10:36 nano systemd[1]: 300seconds-dashboard.service: Main process exited, code=exited, status=1/FAILURE
+Oct 23 21:10:36 nano systemd[1]: 300seconds-dashboard.service: Failed with result 'exit-code'.
+Oct 23 21:10:41 nano systemd[1]: 300seconds-dashboard.service: Scheduled restart job, restart counter is at 1.
+Oct 23 21:10:41 nano systemd[1]: Stopped 300 Seconds FastAPI device dashboard.
+Oct 23 21:10:41 nano systemd[1]: Started 300 Seconds FastAPI device dashboard.
+Oct 23 21:10:43 nano python[6416]: INFO:     Started server process [6416]
+Oct 23 21:10:43 nano python[6416]: INFO:     Waiting for application startup.
+Oct 23 21:10:43 nano python[6416]: INFO:     Application startup complete.
+Oct 23 21:10:43 nano python[6416]: INFO:     Uvicorn running on http://192.168.219.127:8000 (Press CTRL+C to quit)
+Oct 23 21:10:44 nano python[6416]: INFO:     ('192.168.219.114', 62185) - "WebSocket /ws/status" [accepted]
+Oct 23 21:10:44 nano python[6416]: INFO:     connection open
+Oct 23 21:10:44 nano python[6416]: INFO:     ('192.168.219.114', 60250) - "WebSocket /ws/status" [accepted]
+Oct 23 21:10:44 nano python[6416]: INFO:     connection open
+Oct 23 21:32:27 nano systemd[1]: Stopping 300 Seconds FastAPI device dashboard...
+Oct 23 21:32:27 nano python[6416]: INFO:     Shutting down
+Oct 23 21:32:27 nano python[6416]: INFO:     connection closed
+Oct 23 21:32:27 nano python[6416]: INFO:     connection closed
+Oct 23 21:32:28 nano python[6416]: INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+Oct 23 21:32:28 nano python[6416]: INFO:     Waiting for application shutdown.
+Oct 23 21:32:29 nano python[6416]: INFO:     Application shutdown complete.
+Oct 23 21:32:29 nano python[6416]: INFO:     Finished server process [6416]
+Oct 23 21:32:29 nano systemd[1]: 300seconds-dashboard.service: Succeeded.
+Oct 23 21:32:29 nano systemd[1]: Stopped 300 Seconds FastAPI device dashboard.
+Oct 23 21:32:33 nano systemd[1]: Started 300 Seconds FastAPI device dashboard.
+Oct 23 21:32:34 nano python[8088]: INFO:     Started server process [8088]
+Oct 23 21:32:34 nano python[8088]: INFO:     Waiting for application startup.
+Oct 23 21:32:34 nano python[8088]: INFO:     Application startup complete.
+Oct 23 21:32:34 nano python[8088]: INFO:     Uvicorn running on http://192.168.219.127:8000 (Press CTRL+C to quit)
+Oct 23 21:32:36 nano python[8088]: INFO:     ('192.168.219.114', 46493) - "WebSocket /ws/status" [accepted]
+Oct 23 21:32:36 nano python[8088]: INFO:     connection open
+Oct 23 21:32:36 nano python[8088]: INFO:     ('192.168.219.114', 38941) - "WebSocket /ws/status" [accepted]
+Oct 23 21:32:36 nano python[8088]: INFO:     connection open
+Oct 23 21:34:26 nano python[8088]: INFO:     connection closed
+Oct 23 21:34:26 nano python[8088]: INFO:     ('192.168.219.114', 38595) - "WebSocket /ws/status" [accepted]
+Oct 23 21:34:26 nano python[8088]: INFO:     connection open

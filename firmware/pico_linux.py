@@ -69,16 +69,22 @@ def tool_path(record=False):
         raise RuntimeError('Run bash firmware/setup-linux.sh first.')
     if not record:
         info = json.loads((TOOL_HOME / 'install-info.json').read_text())
-        if info.get('sha256') != digest(binary) or info.get('version') != '2.3.1':
+        if (info.get('sha256') != digest(binary) or info.get('version') != '2.3.1'
+                or not info.get('file_info_smoke_verified')):
             raise RuntimeError('Installed picotool hash/version differs from setup manifest.')
     version = run([binary, 'version'])
     if not re.search(r'picotool v?2\.3\.1\b', version, re.I) or 'without USB support' in version:
         raise RuntimeError('Require picotool 2.3.1 with USB support: ' + version)
     if record:
+        # Version alone missed a formatter crash. Exercise file-info without USB.
+        sample = TOOL_HOME / 'debug/xip_ram_perms/xip_ram_perms.elf'
+        smoke = run([binary, 'info', '-a', sample])
         info = {'at_utc': now(), 'version': '2.3.1', 'sha256': digest(binary),
                 'picotool_revision': run(['git', '-C', TOOL_HOME / 'source', 'rev-parse', 'HEAD']).strip(),
                 'sdk_revision': run(['git', '-C', TOOL_HOME / 'sdk', 'rev-parse', 'HEAD']).strip(),
-                'architecture': os.uname().machine, 'version_output': version.strip()}
+                'architecture': os.uname().machine, 'version_output': version.strip(),
+                'build_type': 'Debug', 'file_info_smoke_verified': True,
+                'file_info_smoke_output': smoke.strip()}
         save(TOOL_HOME / 'install-info.json', info)
     return binary
 
@@ -170,7 +176,7 @@ def cdc_device(port):
             vid = (candidate / 'idVendor').read_text().strip()
             pid = (candidate / 'idProduct').read_text().strip()
             if (vid, pid) != ('c0de', 'cafc'):
-                raise RuntimeError('Current device is %s:%s. Legacy firmware requires initial physical BOOTSEL; no CDC bytes sent.' % (vid, pid))
+                raise RuntimeError('Current device is %s:%s, not the integrated c0de:cafc variant required by --port. No CDC bytes sent. A different variant may support picotool USB reset; BOOTSEL-button necessity is not inferred from VID/PID.' % (vid, pid))
             device = [d for d in inventory() if d['sysfs'] == str(candidate)]
             if len(device) != 1:
                 raise RuntimeError('Selected CDC device disappeared.')
@@ -226,7 +232,7 @@ def flash(argv):
     if args.check:
         print(json.dumps({'at_utc': now(), 'environment_ready': True, 'image': image_info,
                           'devices': inventory(), 'flash_written': False,
-                          'note': 'Legacy c0de:caff requires physical BOOTSEL for the first integrated image.'}, indent=2))
+                          'note': '--port accepts integrated c0de:cafc CDC only. Other variants may support picotool USB reset; VID/PID does not identify firmware age.'}, indent=2))
         return
     # Prevent two copies of this updater running for this user across checkouts.
     cache = Path.home() / '.cache/300seconds'

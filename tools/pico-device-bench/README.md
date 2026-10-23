@@ -2,9 +2,9 @@
 
 Rust Tokio와 tokio-serial로 Pico의 단일 USB 연결을 소유하고, Nano의 다른 프로세스에 loopback UDP JSON IPC를 제공하는 임시 시험 도구다. 왼손·오른손 NeoPixel 기본 구간은 각각 `[4,4,10]`, 손당18개·총36개다. 매트릭스·각 손 NeoPixel·서보의 유한 시험과6개 터치의 상태·누른 시간·500ms 간격 횟수·2초 창 누름 횟수를 전달한다. 최종 Nano 영상·음성 앱 전체를 구현한 것은 아니다.
 
-**이 새 통합 호스트와 `c0de:cafc` 펌웨어의 실제 USB·배선·점등·서보·Nano 실행은 아직 검증하지 않았다.** 기존 개별 벤치의 실물 성공을 이 도구의 성공으로 확대하지 않는다. Windows 빌드·가짜 직렬 스트림/UDP 검사와 aarch64 정적 검사의 결과는 실제 Pico/Nano 시험과 구분해 [validation](validation/2026-10-23/README.md)에 기록한다.
+**2026-10-24 Nano에서 native 빌드·통합 `c0de:cafc` USB 왕복·양손 LED와 서보 시험 완료 및 사용자 실물 점등/움직임 확인을 확보했다.** [대시보드 검증](../../doc/software/Jetson_Nano_장치_대시보드.md)을 따른다. 현재 스위치·매트릭스는 미연결이며 전원 부하·축 보정·체계적인 실물 장애 회귀는 남아 있다. Windows 빌드·가짜 직렬 스트림/UDP 검사와 aarch64 정적 검사의 결과는 실제 Pico/Nano 시험과 구분해 [후속 native 검사 원본](../../doc/software/board-info/2026-10-24/dashboard-rust-tests-build.log)에 기록한다.
 
-2026-10-23 호스트 검사8개, Windows release 빌드, `aarch64-unknown-linux-gnu` 대상 `cargo check`를 통과했다. aarch64 검사는 최종 ELF 링크나 Nano glibc·실행 검증이 아니다. 통과 후 소스 변경이나 불필요한 반복 검사는 하지 않았다.
+2026-10-23 호스트 검사8개, Windows release 빌드, `aarch64-unknown-linux-gnu` 대상 `cargo check`를 통과했다. aarch64 검사는 최종 ELF 링크나 Nano glibc·실행 검증이 아니다. 이는 초기 검증 기록이다. 후속 Hello 신원 응답 유실 재시도 수정 뒤 Nano의 호스트 9개 검사가 통과했다. 구동 명령은 재전송하지 않는다.
 
 ## 통신과 하나의 USB 소유자
 
@@ -12,7 +12,7 @@ Rust Tokio와 tokio-serial로 Pico의 단일 USB 연결을 소유하고, Nano의
 - 연결마다 새 무작위64비트 session과 증가하는 seq를 사용한다. session은 인증 토큰이 아니다. HelloReply의 버전·session·seq를 확인하며 Ack는 프레임 seq와 `request_seq`를 모두 대조한다.
 - **새 Hello는 이전 세션과 진행 중인 로컬 시험도 정지시킨다.** 단독 `status`도 새로 USB를 열고 Hello를 보내므로 단순 무영향 조회가 아니다. 브리지 실행 중에는 별도 USB CLI를 열지 않고 `ctl status`나 UDP IPC를 사용한다.
 - 브리지는200ms마다 KeepAlive를 보내고 장치의 약100ms Status push와 Touch/TestEvent를 수신한다. USB 오류나 종료 시 Stop Ack를 시도하고 자동 재접속·과거 Test 재전송은 하지 않는다. 재시작은 수동이며 새 Hello·Configure 이후에도 Test를 자동 실행하지 않는다.
-- `local_tests_enabled=true`가 기본이다. 브리지가 연결된 유휴 상태에서도 SW6 로컬 모듈 선택·유한 시험을 허용한다. 동작 중 SW6는 정지 역할을 하며 로컬 시험 진행 중 원격 Test가 Busy를 반환하면 기존 시험을 임의 재시작하지 않는다.
+- `local_tests_enabled=true`가 기본이다. 현재 대시보드 배포는 스위치 미연결이므로 `false`, `test_switch=0`을 사용한다. 브리지가 연결된 유휴 상태에서도 SW6 로컬 모듈 선택·유한 시험을 허용한다. 동작 중 SW6는 정지 역할을 하며 로컬 시험 진행 중 원격 Test가 Busy를 반환하면 기존 시험을 임의 재시작하지 않는다.
 
 브리지 stdout은 NDJSON이다. `event=status/touch/test_event/ack` 등에 session16진수 문자열·호스트 UTC Unix ms·호스트 단조 경과 ms를 포함한다. 터치 이벤트의 장치 uptime과 event_seq, Status의 dropped_events는 별도다. 반복 KeepAlive 성공 Ack는 출력에서 생략한다. 입력 이벤트 유실 가능성은 최신6개 TouchState 스냅샷과 dropped_events로 확인하며 모든 누름 이벤트가 전달됐다고 보장하지 않는다.
 
@@ -32,7 +32,7 @@ cargo build --release --locked --offline --manifest-path tools/pico-device-bench
 ```powershell
 & .\tools\pico-device-bench\target\release\pico-device-bench.exe list
 & .\tools\pico-device-bench\target\release\pico-device-bench.exe --port COM11 status
-& .\tools\pico-device-bench\target\release\pico-device-bench.exe --port COM11 configure --config .\tools\pico-device-bench\config.example.json
+& .\tools\pico-device-bench\target\release\pico-device-bench.exe --port COM11 configure --config .\apps\device-dashboard\pico-config.json
 & .\tools\pico-device-bench\target\release\pico-device-bench.exe --port COM11 test matrix
 & .\tools\pico-device-bench\target\release\pico-device-bench.exe --port COM11 test left
 & .\tools\pico-device-bench\target\release\pico-device-bench.exe --port COM11 test right
@@ -50,7 +50,7 @@ Linux에서도 `--port`는 필수다. `/dev/ttyACM0`를 고정값으로 사용�
 ```bash
 ./pico-device-bench list
 ./pico-device-bench --port /dev/serial/by-id/YOUR_BOARD bridge \
-  --config config.example.json --listen 127.0.0.1:37920
+  --config /home/jetson/ict_makerton_2026/apps/device-dashboard/pico-config.json --listen 127.0.0.1:37920
 ```
 
 이 프로세스가 USB의 유일한 소유자다. 다른 Nano 프로세스는 다음 명령이나 같은 UDP JSON을 사용한다.
@@ -58,7 +58,7 @@ Linux에서도 `--port`는 필수다. `/dev/ttyACM0`를 고정값으로 사용�
 ```bash
 ./pico-device-bench ctl --addr 127.0.0.1:37920 status
 ./pico-device-bench ctl --addr 127.0.0.1:37920 test left
-./pico-device-bench ctl --addr 127.0.0.1:37920 configure --config config.example.json
+./pico-device-bench ctl --addr 127.0.0.1:37920 configure --config /home/jetson/ict_makerton_2026/apps/device-dashboard/pico-config.json
 ./pico-device-bench ctl --addr 127.0.0.1:37920 stop
 ```
 
@@ -75,7 +75,7 @@ Linux에서도 `--port`는 필수다. `/dev/ttyACM0`를 고정값으로 사용�
 
 ## 설정과 터치 수치
 
-[config.example.json](config.example.json)은 공통 DeviceConfig 전체 기본값과 일치한다. CLI 파일에서는 필요한 키만 덮어쓸 수도 있고 누락값은 기본값을 사용한다. 알 수 없는 키·잘못된 길이·범위는 거부한다. 손당 총1~36개, 극성 마스크 하위6비트, local test switch0~6, hold/window100~60000ms, 서보500~2500µs 내부 범위와 min<max, 시험 폭1~30도 등은 공유 validate를 따른다.
+현재 배포 설정은 [pico-config.json](../../apps/device-dashboard/pico-config.json)이다. 스위치 미연결에 맞춰 SW6 기능을 끄며 공통 기본값과 구분한다. CLI 파일에서는 필요한 키만 덮어쓸 수도 있고 누락값은 기본값을 사용한다. 알 수 없는 키·잘못된 길이·범위는 거부한다. 손당 총1~36개, 극성 마스크 하위6비트, local test switch0~6, hold/window100~60000ms, 서보500~2500µs 내부 범위와 min<max, 시험 폭1~30도 등은 공유 validate를 따른다.
 
 `hold_interval_ms=500`은 누르고 있는 동안의 구간 횟수이며, `press_window_ms=2000`의 누름 횟수와 다른 값이다. Touch의 Pressed/Interval/Released/WindowClosed와 최신6개 TouchState를 그대로 전달한다. 손당 구간을18개보다 크게 바꿨다고 전원 공급까지 검증된 것은 아니다. **30개 초과 NeoPixel 추가 전원 공급·주입 실부하 시험은 별도 TODO**다.
 
@@ -89,8 +89,8 @@ rustup run 1.90.0 cargo build --release --locked \
   --manifest-path tools/pico-device-bench/Cargo.toml
 ```
 
-tokio-serial과 serialport의 기본 기능을 끄므로 libudev 설치를 빌드 전제로 두지 않는다. **구형 Jetson Nano Ubuntu18.04에서의 도구 설치·최종 native 링크·실행은 아직 검증하지 않았다.** Windows 테스트나 `cargo check --target aarch64-unknown-linux-gnu`의 성공은 그 실물 검증을 대신하지 않는다. 이 작업에서 apt·WSL·Nano 시스템 설정을 실제 변경하지 않는다.
+tokio-serial과 serialport의 기본 기능을 끄므로 libudev 설치를 빌드 전제로 두지 않는다. **실제 보드는 Ubuntu20.04.6 / L4T R32.6.1이며 Rust1.90 native 링크·실행을 검증했다.** [환경 설치](../../doc/software/Jetson_Nano_개발환경_설치와_모드전환.md)와 [Linux 빌드·업데이트](../../doc/software/Jetson_Nano_Linux_펌웨어_업데이트.md)를 따른다. Windows/정적 검사만으로 판단한 결과가 아니다.
 
-[90-pico-device.rules](90-pico-device.rules)는 dialout/uaccess와 `/dev/pico-device` 별칭용 템플릿이다. 여러 보드를 연결하면 by-id나 serial을 추가한 규칙을 사용한다. [picod.service](picod.service)는 전용 `pico` 계정과 `/etc/default/picod`의 환경값을 쓰는 **수동 시작용** 템플릿이다. 실제 설치 시 운영자가 계정·dialout 권한·바이너리/설정 경로를 준비하고 [환경 예시](picod.env.example)를 맞춘다. 현재 장치에 이 파일을 설치하거나 서비스를 실행하지 않았다.
+현재 udev·계정 설정은 [장치 접근 설정 도구](../jetson/configure-device-access.sh)를 따른다. `/dev/pico-device`와 robot-device 그룹 0660 권한을 사용하며 여러 보드는 serial/by-id로 구분한다.
 
-서비스에는 `[Install]`을 두지 않았고 `Restart=no`다. 운영자가 준비한 뒤 `systemctl start picod`/`stop picod`로만 사용하고 **enable이나 자동 부팅 시작을 설정하지 않는다.** SIGINT를 사용하므로 Stop Ack 정리를 시도한다. USB가 끊기면 명확히 종료하고 과거 Test를 자동으로 재생하지 않는다.
+자동 시작은 [대시보드 서비스](../../apps/device-dashboard/300seconds-dashboard.service)가 이 Rust 브리지를 자식 프로세스로 실행하는 방식이다. 예전 문서에서 언급한 별도 `picod.service` 템플릿은 현재 저장소에 없으므로 설치 대상으로 안내하지 않는다. 직접 CLI를 실행하기 전 대시보드를 중지해야 USB 소유자가 충돌하지 않는다. 수동 시험 후에는 대시보드를 다시 시작한다. SIGINT 종료 시 Stop Ack 정리를 시도하며 USB가 끊겨도 과거 Test를 자동으로 재생하지 않는다.

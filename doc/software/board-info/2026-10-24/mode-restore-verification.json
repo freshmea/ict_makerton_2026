@@ -1,0 +1,455 @@
+{
+  "at_utc": "2026-10-23T17:00:40.786416+00:00",
+  "units": [
+    {
+      "id": "cups.socket",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "cups.path",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "avahi-daemon.socket",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "gpsd.socket",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "cups-browsed.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "cups.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "avahi-daemon.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "bluetooth.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "blueman-mechanism.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "inactive",
+      "restored_active_state": "inactive"
+    },
+    {
+      "id": "ModemManager.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "gpsd.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "colord.service",
+      "before_unit_file_state": "static",
+      "restored_unit_file_state": "static",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "packagekit.service",
+      "before_unit_file_state": "static",
+      "restored_unit_file_state": "static",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "whoopsie.service",
+      "before_unit_file_state": "disabled",
+      "restored_unit_file_state": "disabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "kerneloops.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "teamviewerd.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "switcheroo-control.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "geoclue.service",
+      "before_unit_file_state": "static",
+      "restored_unit_file_state": "static",
+      "before_active_state": "inactive",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "spice-vdagentd.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "inactive",
+      "restored_active_state": "inactive"
+    },
+    {
+      "id": "nvweston.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "inactive",
+      "restored_active_state": "inactive"
+    },
+    {
+      "id": "nvmemwarning.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "docker.socket",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "docker.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "containerd.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "snapd.socket",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "snapd.snap-repair.timer",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "inactive",
+      "restored_active_state": "inactive"
+    },
+    {
+      "id": "snapd.snap-repair.service",
+      "before_unit_file_state": "static",
+      "restored_unit_file_state": "static",
+      "before_active_state": "inactive",
+      "restored_active_state": "inactive"
+    },
+    {
+      "id": "snapd.service",
+      "before_unit_file_state": "enabled",
+      "restored_unit_file_state": "enabled",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    },
+    {
+      "id": "gdm.service",
+      "before_unit_file_state": "static",
+      "restored_unit_file_state": "static",
+      "before_active_state": "active",
+      "restored_active_state": "active"
+    }
+  ],
+  "files": [
+    {
+      "path": "/etc/modprobe.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/modules-load.d/cups-filters.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/cups.socket.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/cups.path.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/avahi-daemon.socket.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/gpsd.socket.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/cups-browsed.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/cups.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/avahi-daemon.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/bluetooth.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/blueman-mechanism.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/ModemManager.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/gpsd.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/colord.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/packagekit.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/whoopsie.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/kerneloops.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/teamviewerd.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/switcheroo-control.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/geoclue.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/spice-vdagentd.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/nvweston.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/nvmemwarning.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/docker.socket.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/docker.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/containerd.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/snapd.socket.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/snapd.snap-repair.timer.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/snapd.snap-repair.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/snapd.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/gdm.service.d/90-300seconds-project.conf",
+      "restored": true
+    },
+    {
+      "path": "/etc/apt/apt.conf.d/20packagekit",
+      "restored": true
+    }
+  ],
+  "links": [
+    {
+      "path": "/etc/systemd/system/bluetooth.target.wants/bluetooth.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/dbus-org.bluez.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/dbus-org.freedesktop.Avahi.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/dbus-org.freedesktop.ModemManager1.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/display-manager.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/graphical.target.wants/switcheroo-control.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/ModemManager.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/avahi-daemon.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/blueman-mechanism.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/containerd.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/cups-browsed.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/cups.path",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/docker.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/gpsd.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/kerneloops.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/nvmemwarning.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/nvweston.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/snapd.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/teamviewerd.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/nv-oem-config.target.wants/nvweston.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/printer.target.wants/cups.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/sockets.target.wants/avahi-daemon.socket",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/sockets.target.wants/cups.socket",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/sockets.target.wants/docker.socket",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/sockets.target.wants/gpsd.socket",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/sockets.target.wants/snapd.socket",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/spice-vdagentd.target.wants/spice-vdagentd.service",
+      "restored": true
+    },
+    {
+      "path": "/etc/systemd/system/timers.target.wants/snapd.snap-repair.timer",
+      "restored": true
+    }
+  ],
+  "errors": [],
+  "bnep_loaded": true,
+  "expected_bnep_loaded": true
+}

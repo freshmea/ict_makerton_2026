@@ -1,0 +1,22 @@
+multi-user.target
+active
+active
+inactive
+inactive
+Jun 17 22:29:41 nano kernel: imx219 7-0010: tegracam sensor driver:imx219_v2.0.6
+Jun 17 22:29:41 nano kernel: imx219 8-0010: tegracam sensor driver:imx219_v2.0.6
+Jun 17 22:29:41 nano kernel: vi 54080000.vi: subdev imx219 7-0010 bound
+Jun 17 22:29:41 nano kernel: vi 54080000.vi: subdev imx219 8-0010 bound
+-- Logs begin at Mon 2024-06-17 22:29:41 CEST, end at Fri 2026-10-23 20:09:22 CEST. --
+Oct 23 19:48:23 nano systemd[1]: Started Argus daemon.
+Oct 23 20:08:18 nano nvargus-daemon[5822]: === NVIDIA Libargus Camera Service (0.98.3)=== Listening for connections...=== python3[7168]: Connection established (7F9EBF11B0)OFParserListModules: module list: /proc/device-tree/tegra-camera-platform/modules/module0
+Oct 23 20:08:18 nano nvargus-daemon[5822]: OFParserListModules: module list: /proc/device-tree/tegra-camera-platform/modules/module1
+Oct 23 20:08:18 nano nvargus-daemon[5822]: OFParserGetVirtualDevice: NVIDIA Camera virtual enumerator not found in proc device-tree
+Oct 23 20:08:18 nano nvargus-daemon[5822]: ---- imager: No override file found. ----
+Oct 23 20:08:19 nano nvargus-daemon[5822]: LSC: LSC surface is not based on full res!
+Oct 23 20:08:19 nano nvargus-daemon[5822]: ---- imager: No override file found. ----
+Oct 23 20:08:19 nano nvargus-daemon[5822]: LSC: LSC surface is not based on full res!
+Oct 23 20:08:19 nano nvargus-daemon[5822]: === python3[7168]: CameraProvider initialized (0x7f98c76b80)LSC: LSC surface is not based on full res!
+Oct 23 20:08:23 nano nvargus-daemon[5822]: LSC: LSC surface is not based on full res!
+Oct 23 20:08:26 nano nvargus-daemon[5822]: LSC: LSC surface is not based on full res!
+Oct 23 20:08:26 nano nvargus-daemon[5822]: LSC: LSC surface is not based on full res!

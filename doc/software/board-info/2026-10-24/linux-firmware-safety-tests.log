@@ -1,0 +1,16 @@
+test_bootsel_permission_rejected (test_pico_linux.UpdaterSafety) ... ok
+test_check_mode_never_runs_a_device_command (test_pico_linux.UpdaterSafety) ... ok
+test_duplicate_block_rejected (test_pico_linux.UpdaterSafety) ... ok
+test_multiple_roms_rejected (test_pico_linux.UpdaterSafety) ... ok
+test_other_board_serial_rejected (test_pico_linux.UpdaterSafety) ... ok
+test_out_of_flash_rejected (test_pico_linux.UpdaterSafety) ... ok
+test_overlapping_flash_rejected (test_pico_linux.UpdaterSafety) ... ok
+test_payload_change_rejected_by_hash (test_pico_linux.UpdaterSafety) ... ok
+test_rp2040_image_rejected (test_pico_linux.UpdaterSafety) ... ok
+test_stale_linux_host_rejected_before_usb_inventory (test_pico_linux.UpdaterSafety) ... ok
+test_valid_image_and_manifest (test_pico_linux.UpdaterSafety) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.049s
+
+OK

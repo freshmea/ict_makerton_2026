@@ -1,0 +1,882 @@
+{
+  "at_utc": "2026-10-23T17:02:15.168706+00:00",
+  "default_target": "multi-user.target",
+  "baseline_files": {
+    "/var/lib/300seconds/jetson-mode/baseline.json": {
+      "schema_version": 1,
+      "created_at_utc": "2026-10-23T16:51:20.713253+00:00",
+      "hostname": "nano",
+      "kernel": "4.9.253-tegra",
+      "default_target": "graphical.target",
+      "units": [
+        {
+          "Id": "cups.socket",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/cups.socket",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "cups.path",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/cups.path",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "avahi-daemon.socket",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/avahi-daemon.socket",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "gpsd.socket",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/gpsd.socket",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "cups-browsed.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/cups-browsed.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "cups.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/cups.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "avahi-daemon.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/avahi-daemon.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "bluetooth.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/bluetooth.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "blueman-mechanism.service",
+          "LoadState": "loaded",
+          "ActiveState": "inactive",
+          "FragmentPath": "/lib/systemd/system/blueman-mechanism.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "ModemManager.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/ModemManager.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "gpsd.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/gpsd.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "colord.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/colord.service",
+          "UnitFileState": "static"
+        },
+        {
+          "Id": "packagekit.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/packagekit.service",
+          "UnitFileState": "static"
+        },
+        {
+          "Id": "whoopsie.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/whoopsie.service",
+          "UnitFileState": "disabled"
+        },
+        {
+          "Id": "kerneloops.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/kerneloops.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "teamviewerd.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/etc/systemd/system/teamviewerd.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "switcheroo-control.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/switcheroo-control.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "geoclue.service",
+          "LoadState": "loaded",
+          "ActiveState": "inactive",
+          "FragmentPath": "/lib/systemd/system/geoclue.service",
+          "UnitFileState": "static"
+        },
+        {
+          "Id": "spice-vdagentd.service",
+          "LoadState": "loaded",
+          "ActiveState": "inactive",
+          "FragmentPath": "/lib/systemd/system/spice-vdagentd.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "nvweston.service",
+          "LoadState": "loaded",
+          "ActiveState": "inactive",
+          "FragmentPath": "/etc/systemd/system/nvweston.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "nvmemwarning.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/etc/systemd/system/nvmemwarning.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "docker.socket",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/docker.socket",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "docker.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/docker.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "containerd.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/containerd.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "snapd.socket",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/snapd.socket",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "snapd.snap-repair.timer",
+          "LoadState": "loaded",
+          "ActiveState": "inactive",
+          "FragmentPath": "/lib/systemd/system/snapd.snap-repair.timer",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "snapd.snap-repair.service",
+          "LoadState": "loaded",
+          "ActiveState": "inactive",
+          "FragmentPath": "/lib/systemd/system/snapd.snap-repair.service",
+          "UnitFileState": "static"
+        },
+        {
+          "Id": "snapd.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/snapd.service",
+          "UnitFileState": "enabled"
+        },
+        {
+          "Id": "gdm.service",
+          "LoadState": "loaded",
+          "ActiveState": "active",
+          "FragmentPath": "/lib/systemd/system/gdm.service",
+          "UnitFileState": "static"
+        }
+      ],
+      "links": [
+        {
+          "path": "/etc/systemd/system/bluetooth.target.wants/bluetooth.service",
+          "target": "/lib/systemd/system/bluetooth.service"
+        },
+        {
+          "path": "/etc/systemd/system/dbus-org.bluez.service",
+          "target": "/lib/systemd/system/bluetooth.service"
+        },
+        {
+          "path": "/etc/systemd/system/dbus-org.freedesktop.Avahi.service",
+          "target": "/lib/systemd/system/avahi-daemon.service"
+        },
+        {
+          "path": "/etc/systemd/system/dbus-org.freedesktop.ModemManager1.service",
+          "target": "/lib/systemd/system/ModemManager.service"
+        },
+        {
+          "path": "/etc/systemd/system/display-manager.service",
+          "target": "/lib/systemd/system/gdm3.service"
+        },
+        {
+          "path": "/etc/systemd/system/graphical.target.wants/switcheroo-control.service",
+          "target": "/lib/systemd/system/switcheroo-control.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/ModemManager.service",
+          "target": "/lib/systemd/system/ModemManager.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/avahi-daemon.service",
+          "target": "/lib/systemd/system/avahi-daemon.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/blueman-mechanism.service",
+          "target": "/lib/systemd/system/blueman-mechanism.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/containerd.service",
+          "target": "/lib/systemd/system/containerd.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/cups-browsed.service",
+          "target": "/lib/systemd/system/cups-browsed.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/cups.path",
+          "target": "/lib/systemd/system/cups.path"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/docker.service",
+          "target": "/lib/systemd/system/docker.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/gpsd.service",
+          "target": "/lib/systemd/system/gpsd.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/kerneloops.service",
+          "target": "/lib/systemd/system/kerneloops.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/nvmemwarning.service",
+          "target": "../nvmemwarning.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/nvweston.service",
+          "target": "../nvweston.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/snapd.service",
+          "target": "/lib/systemd/system/snapd.service"
+        },
+        {
+          "path": "/etc/systemd/system/multi-user.target.wants/teamviewerd.service",
+          "target": "/etc/systemd/system/teamviewerd.service"
+        },
+        {
+          "path": "/etc/systemd/system/nv-oem-config.target.wants/nvweston.service",
+          "target": "../nvweston.service"
+        },
+        {
+          "path": "/etc/systemd/system/printer.target.wants/cups.service",
+          "target": "/lib/systemd/system/cups.service"
+        },
+        {
+          "path": "/etc/systemd/system/sockets.target.wants/avahi-daemon.socket",
+          "target": "/lib/systemd/system/avahi-daemon.socket"
+        },
+        {
+          "path": "/etc/systemd/system/sockets.target.wants/cups.socket",
+          "target": "/lib/systemd/system/cups.socket"
+        },
+        {
+          "path": "/etc/systemd/system/sockets.target.wants/docker.socket",
+          "target": "/lib/systemd/system/docker.socket"
+        },
+        {
+          "path": "/etc/systemd/system/sockets.target.wants/gpsd.socket",
+          "target": "/lib/systemd/system/gpsd.socket"
+        },
+        {
+          "path": "/etc/systemd/system/sockets.target.wants/snapd.socket",
+          "target": "/lib/systemd/system/snapd.socket"
+        },
+        {
+          "path": "/etc/systemd/system/spice-vdagentd.target.wants/spice-vdagentd.service",
+          "target": "/lib/systemd/system/spice-vdagentd.service"
+        },
+        {
+          "path": "/etc/systemd/system/timers.target.wants/snapd.snap-repair.timer",
+          "target": "/lib/systemd/system/snapd.snap-repair.timer"
+        }
+      ],
+      "files": [
+        {
+          "path": "/etc/modprobe.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/modules-load.d/cups-filters.conf",
+          "kind": "file",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "data": "IyBQYXJhbGxlbCBwcmludGVyIGRyaXZlciBtb2R1bGVzIGxvYWRpbmcgZm9yIGN1cHMKIyBMT0FEX0xQX01PRFVMRSB3YXMgJ3llcycgaW4gL2V0Yy9kZWZhdWx0L2N1cHMKbHAKcHBkZXYKcGFycG9ydF9wYwo="
+        },
+        {
+          "path": "/etc/systemd/system/cups.socket.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/cups.path.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/avahi-daemon.socket.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/gpsd.socket.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/cups-browsed.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/cups.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/avahi-daemon.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/bluetooth.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/blueman-mechanism.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/ModemManager.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/gpsd.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/colord.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/packagekit.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/whoopsie.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/kerneloops.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/teamviewerd.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/switcheroo-control.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/geoclue.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/spice-vdagentd.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/nvweston.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/nvmemwarning.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/docker.socket.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/docker.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/containerd.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/snapd.socket.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/snapd.snap-repair.timer.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/snapd.snap-repair.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/snapd.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/systemd/system/gdm.service.d/90-300seconds-project.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/etc/apt/apt.conf.d/20packagekit",
+          "kind": "file",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "data": "Ly8gVEhJUyBGSUxFIElTIFVTRUQgVE8gSU5GT1JNIFBBQ0tBR0VLSVQKLy8gVEhBVCBUSEUgVVBEQVRFLUlORk8gTUlHSFQgSEFWRSBDSEFOR0VECgovLyBXaGVuZXZlciBkcGtnIGlzIGNhbGxlZCB3ZSBtaWdodCBoYXZlIGRpZmZlcmVudCB1cGRhdGVzCi8vIGkuZS4gaWYgYW4gdXNlciByZW1vdmVzIGEgcGFja2FnZSB0aGF0IGhhZCBhbiB1cGRhdGUKRFBrZzo6UG9zdC1JbnZva2UgewoiL3Vzci9iaW4vdGVzdCAtZSAvdXNyL3NoYXJlL2RidXMtMS9zeXN0ZW0tc2VydmljZXMvb3JnLmZyZWVkZXNrdG9wLlBhY2thZ2VLaXQuc2VydmljZSAmJiAvdXNyL2Jpbi90ZXN0IC1TIC92YXIvcnVuL2RidXMvc3lzdGVtX2J1c19zb2NrZXQgJiYgL3Vzci9iaW4vZ2RidXMgY2FsbCAtLXN5c3RlbSAtLWRlc3Qgb3JnLmZyZWVkZXNrdG9wLlBhY2thZ2VLaXQgLS1vYmplY3QtcGF0aCAvb3JnL2ZyZWVkZXNrdG9wL1BhY2thZ2VLaXQgLS10aW1lb3V0IDQgLS1tZXRob2Qgb3JnLmZyZWVkZXNrdG9wLlBhY2thZ2VLaXQuU3RhdGVIYXNDaGFuZ2VkIGNhY2hlLXVwZGF0ZSA+IC9kZXYvbnVsbDsgL2Jpbi9lY2hvID4gL2Rldi9udWxsIjsKfTsKCi8vIFdoZW4gQXB0J3MgY2FjaGUgaXMgdXBkYXRlZCAoaS5lLiBhcHQtY2FjaGUgdXBkYXRlKQpBUFQ6OlVwZGF0ZTo6UG9zdC1JbnZva2UtU3VjY2VzcyB7CiIvdXNyL2Jpbi90ZXN0IC1lIC91c3Ivc2hhcmUvZGJ1cy0xL3N5c3RlbS1zZXJ2aWNlcy9vcmcuZnJlZWRlc2t0b3AuUGFja2FnZUtpdC5zZXJ2aWNlICYmIC91c3IvYmluL3Rlc3QgLVMgL3Zhci9ydW4vZGJ1cy9zeXN0ZW1fYnVzX3NvY2tldCAmJiAvdXNyL2Jpbi9nZGJ1cyBjYWxsIC0tc3lzdGVtIC0tZGVzdCBvcmcuZnJlZWRlc2t0b3AuUGFja2FnZUtpdCAtLW9iamVjdC1wYXRoIC9vcmcvZnJlZWRlc2t0b3AvUGFja2FnZUtpdCAtLXRpbWVvdXQgNCAtLW1ldGhvZCBvcmcuZnJlZWRlc2t0b3AuUGFja2FnZUtpdC5TdGF0ZUhhc0NoYW5nZWQgY2FjaGUtdXBkYXRlID4gL2Rldi9udWxsOyAvYmluL2VjaG8gPiAvZGV2L251bGwiOwp9Owo="
+        }
+      ],
+      "bnep_loaded": true,
+      "decisions": [
+        "Docker selected: zero existing containers.",
+        "Snap selected: no installed snap services."
+      ],
+      "memory_before": "              total        used        free      shared  buff/cache   available\nMem:     4156661760  1937580032   442146816     5922816  1776934912  2005573632\nSwap:    4225806336   122417152  4103389184\n"
+    },
+    "/var/lib/300seconds/ros-disabled/baseline.json": {
+      "created_at_utc": "2026-10-23T16:56:49.581751+00:00",
+      "files": [
+        {
+          "path": "/etc/systemd/system/ros_init.service.d/90-300seconds-no-ros.conf",
+          "kind": "absent"
+        },
+        {
+          "path": "/usr/share/keyrings/ros-archive-keyring.gpg",
+          "kind": "file",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "data": "mQINBFzvJpYBEADY8l1YvO7iYW5gUESyzsTGnMvVUmlV3XarBaJz9bGRmgPXh7jcVFrQhE0L/HV7LOfoLI9H2GWYyHBqN5ERBlcA8XxG3ZvX7t9nAZPQT2Xxe3GT3trou5oCR+SyHN9xPnUwDuqUSvJ2eqMYb9B/Hph3OmtjG30jSNq9kOF5bBTk1hOTGPH4K/AY0jzT6OpHfXU6ytlFsI47ZKsnTUhipGsKucQ1CXlyirndZ3V3k70YaooZ55rGaIoAWlx2H0J7sAHmqS29N9jV9mo135d+d+TdLBXI0PXtiHzE9IPaX+ctdSUrPnp+TwR99lxglpIG6hLuvOMAaxiqFBB/Jf3XJ8OBakfS6nHrWH2WqQxRbiITl0irkQozpwNEF2Bv0+Jvs1UFEdVGz5a8xexQHst/RmKrtHLct3iOCvBNqoAQRbvWvBhPjO/pV5cYeUljZ5wpHyFkaEViClaVWqa6PIsyLqmyjsruPCWlURLsQoQxABcL8bwxX7UThM6CtH6tGlYZ85RIzRifIm2oudzV5l+8oRgFr9yVcwyOFT6JCioqkwldW52P1pk//SnuexC6LYqqDuHUs5NnokzzpfS6QaWfTY5P5tz4KHJfsjDIktly3mKVfY0fSPVVokdGpcUzvz2hq1fqjxB6MlB/1vtk0bImfcsoxBmF7H+4E9ZN1sX/tSb0KQARAQABtCZPcGVuIFJvYm90aWNzIDxpbmZvQG9zcmZvdW5kYXRpb24ub3JnPokCVAQTAQgAPgIbAwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgBYhBMHPbjHmut6IaLFytPQu1vurF8ZUBQJgsdhRBQkLTMW7AAoJEPQu1vurF8ZUTMwP/3f7EkOPIFjUdRmpNJ2db4iBRQu5b2SJRG+KIdbvQBzKUBMV6/RUhEDPjhXZI3zDevzBewvAMKkqs2Q1cWo9WV7ZPyTkvSyey/Tjn+PozcdvzkvrEjDMftIk8E1WzLGq7vnPLZ1q/b6Vq4H373Z+EDWaDaDwW72CbCBLWAVtqff80CwlI2x8fYHKr3VBUnwcXNHR4+nRABfAWnaU4k+oTshCQucsd8vitNfsSXrKuKyz91IRHRPnJjx8UvGU4tRGfrHkw1505EZvgP02vXeRyWBRfKiL1vGy4tCSRDdZO3ms2J2m08VPv65HsHaWYMnO+rNJmMZj9d9JdL/9GRf5F6U0quoIFL39BhUEvBynuqlrqistnyOhw8W/IQy/ymNzBMcMz6rcMjMwhkgm/LNXoSD11OrJu4ktQwRhwvGVarnB8ihwjsTxZFylaLmFSfaA+OAlOqCLS1OkIVMzjW+Ul6A6qjiCEUOsnlf4CGlhzNMZOx3low6ixzEqKOcfECpeIj80a2fBDmWkcAAjlHu6VBhATUDG9e2xKLzV2Z/DLYsb3+n9QW7KO0yZKfiuUo6AYboAioQKn5jh3iRvjGh2Ujpo22G+oae3PcCc7G+z12j6xIY709FQuA49dA2YpzMda0/OX4LP56STEveDRrO+CnV6WE+F5FaIKwb72PL4rLi4"
+        },
+        {
+          "path": "/etc/apt/sources.list.d/ros2.list",
+          "kind": "file",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0,
+          "data": "ZGViIFthcmNoPWFybTY0IHNpZ25lZC1ieT0vdXNyL3NoYXJlL2tleXJpbmdzL3Jvcy1hcmNoaXZlLWtleXJpbmcuZ3BnXSBodHRwOi8vcGFja2FnZXMucm9zLm9yZy9yb3MyL3VidW50dSBmb2NhbCBtYWluCg=="
+        }
+      ],
+      "crontabs": {
+        "jetson": "# Edit this file to introduce tasks to be run by cron.\n# \n# Each task to run has to be defined through a single line\n# indicating with different fields when the task will be run\n# and what command to run for the task\n# \n# To define the time you can provide concrete values for\n# minute (m), hour (h), day of month (dom), month (mon),\n# and day of week (dow) or use '*' in these fields (for 'any').\n# \n# Notice that tasks will be started based on the cron's system\n# daemon's notion of time and timezones.\n# \n# Output of the crontab jobs (including errors) is sent through\n# email to the user the crontab file belongs to (unless redirected).\n# \n# For example, you can run a backup of all your user accounts\n# at 5 a.m every week with:\n# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/\n# \n# For more information see the manual pages of crontab(5) and cron(8)\n# \n# m h  dom mon dow   command\nSHELL=/bin/bash\nPATH=/user/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin\n\n* * * * * bash -ic \"ros2 launch digitalphoto digitalphoto.launch.py\" > /home/jetson/cront.log\n"
+      },
+      "unit": {
+        "Id": "ros_init.service",
+        "LoadState": "loaded",
+        "ActiveState": "inactive",
+        "FragmentPath": "/etc/systemd/system/ros_init.service",
+        "UnitFileState": "disabled"
+      }
+    }
+  },
+  "mode_result": {
+    "mode": "project",
+    "at_utc": "2026-10-23T17:02:14.991492+00:00",
+    "bnep_loaded": false,
+    "bnep_unload_exit": 0,
+    "bnep_unload_output": "",
+    "memory_after": "              total        used        free      shared  buff/cache   available\nMem:     4156661760  1293955072   788615168     8503296  2074091520  2699304960\nSwap:    4225806336    53981184  4171825152\n"
+  },
+  "units": [
+    {
+      "Id": "cups.socket",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/cups.socket",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "cups.path",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/cups.path",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "avahi-daemon.socket",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/avahi-daemon.socket",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "gpsd.socket",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/gpsd.socket",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "cups-browsed.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/cups-browsed.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "cups.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/cups.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "avahi-daemon.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/avahi-daemon.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "bluetooth.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/bluetooth.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "blueman-mechanism.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/blueman-mechanism.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "ModemManager.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/ModemManager.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "gpsd.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/gpsd.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "colord.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/colord.service",
+      "UnitFileState": "static"
+    },
+    {
+      "Id": "packagekit.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/packagekit.service",
+      "UnitFileState": "static"
+    },
+    {
+      "Id": "whoopsie.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/whoopsie.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "kerneloops.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/kerneloops.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "teamviewerd.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/etc/systemd/system/teamviewerd.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "switcheroo-control.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/switcheroo-control.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "geoclue.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/geoclue.service",
+      "UnitFileState": "static"
+    },
+    {
+      "Id": "spice-vdagentd.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/spice-vdagentd.service",
+      "UnitFileState": "indirect"
+    },
+    {
+      "Id": "nvweston.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/etc/systemd/system/nvweston.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "nvmemwarning.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/etc/systemd/system/nvmemwarning.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "docker.socket",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/docker.socket",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "docker.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/docker.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "containerd.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/containerd.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "snapd.socket",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/snapd.socket",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "snapd.snap-repair.timer",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/snapd.snap-repair.timer",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "snapd.snap-repair.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/snapd.snap-repair.service",
+      "UnitFileState": "static"
+    },
+    {
+      "Id": "snapd.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/snapd.service",
+      "UnitFileState": "disabled"
+    },
+    {
+      "Id": "gdm.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/gdm.service",
+      "UnitFileState": "static"
+    }
+  ],
+  "essential_units": [
+    {
+      "Id": "ssh.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/lib/systemd/system/ssh.service",
+      "UnitFileState": "enabled"
+    },
+    {
+      "Id": "NetworkManager.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/lib/systemd/system/NetworkManager.service",
+      "UnitFileState": "enabled"
+    },
+    {
+      "Id": "automagic-fan.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/lib/systemd/system/automagic-fan.service",
+      "UnitFileState": "enabled"
+    },
+    {
+      "Id": "nvargus-daemon.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/etc/systemd/system/nvargus-daemon.service",
+      "UnitFileState": "enabled"
+    },
+    {
+      "Id": "nvpmodel.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/etc/systemd/system/nvpmodel.service",
+      "UnitFileState": "enabled"
+    },
+    {
+      "Id": "nvzramconfig.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/etc/systemd/system/nvzramconfig.service",
+      "UnitFileState": "enabled"
+    },
+    {
+      "Id": "systemd-timesyncd.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/lib/systemd/system/systemd-timesyncd.service",
+      "UnitFileState": "enabled"
+    },
+    {
+      "Id": "cron.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/lib/systemd/system/cron.service",
+      "UnitFileState": "enabled"
+    }
+  ],
+  "ros_processes": [],
+  "ros_unit": {
+    "Id": "ros_init.service",
+    "LoadState": "loaded",
+    "ActiveState": "inactive",
+    "FragmentPath": "/etc/systemd/system/ros_init.service",
+    "UnitFileState": "disabled"
+  },
+  "ros_key_active": false,
+  "ros_apt_active_lines": [],
+  "ros_cron_active_lines": [],
+  "loaded_modules": "fuse 104554 1 - Live 0xffffff8001222000\nxt_conntrack 3609 1 - Live 0xffffff8001154000\nipt_MASQUERADE 2346 1 - Live 0xffffff8001156000\nnf_nat_masquerade_ipv4 3111 1 ipt_MASQUERADE, Live 0xffffff8001133000\nnf_conntrack_netlink 29413 0 - Live 0xffffff8001219000\nnfnetlink 7959 1 nf_conntrack_netlink, Live 0xffffff8001151000\niptable_nat 2882 1 - Live 0xffffff8001178000\nnf_conntrack_ipv4 11992 2 - Live 0xffffff800116e000\nnf_defrag_ipv4 1836 1 nf_conntrack_ipv4, Live 0xffffff800116a000\nnf_nat_ipv4 6712 1 iptable_nat, Live 0xffffff8001165000\nnf_nat 20406 2 nf_nat_masquerade_ipv4,nf_nat_ipv4, Live 0xffffff800115b000\nnf_conntrack 106659 6 xt_conntrack,nf_nat_masquerade_ipv4,nf_conntrack_netlink,nf_conntrack_ipv4,nf_nat_ipv4,nf_nat, Live 0xffffff8001135000\nxt_addrtype 3670 2 - Live 0xffffff8001131000\niptable_filter 2481 1 - Live 0xffffff8000f94000\nbr_netfilter 16216 0 - Live 0xffffff8000f89000\nzram 25920 4 - Live 0xffffff8001129000\noverlay 48718 0 - Live 0xffffff800111c000\nr8188eu 470649 0 - Live 0xffffff8001242000 (C)\ncfg80211 591474 1 r8188eu, Live 0xffffff8001187000\nbinfmt_misc 13103 1 - Live 0xffffff800117f000\nuserspace_alert 5828 0 - Live 0xffffff8001175000\nnvgpu 1589200 17 - Live 0xffffff8000f97000\nip_tables 19441 2 iptable_nat,iptable_filter, Live 0xffffff8000f8e000\nx_tables 28951 5 xt_conntrack,ipt_MASQUERADE,xt_addrtype,iptable_filter,ip_tables, Live 0xffffff8000f80000\n",
+  "free_bytes": "              total        used        free      shared  buff/cache   available\nMem:     4156661760  1336545280   742559744     8507392  2077556736  2656698368\nSwap:    4225806336    53977088  4171829248\n",
+  "user_groups": "jetson adm dialout cdrom sudo audio dip video plugdev i2c lpadmin gdm lightdm gpio weston-launch sambashare jtop",
+  "scripts": {
+    "collect_board_info.py": "64c6c55bebe0cfb3b666d365467720b5bdd536e8556b168f9eef489fe568a39f",
+    "disable-ros.sh": "84117110a85390d0085426968ccc866b04a9af86f638a3e6a60a5be5908c463e",
+    "ros_control.py": "20b4cd3cb5332f4ecd17d2f8e3138dbe3fb6122716b2d342ecc1853810dfe755",
+    "install-project-deps.sh": "c661e0fc53431b7553e7c5fba54ea3b9dc00bde7ff4ce9328e03cb9343e01c46",
+    "restore-ros.sh": "b428a09aff90d157f4bd6648309ed0c348a3a91d5db9c6e42dcd65e5e5b7db92",
+    "native-uds-smoke.rs": "206b58170afe185ff3e7916c88c4339cbb90d8a7437f75d55385dec684e781a3",
+    "validate-native.c": "3b961392ee4e63a667a450bf5174c53ef92ec0fcea926de47f29957a09d5de7b",
+    "jetson-mode.sh": "399f13e8c5981571dce820de42e1070061a9fedfa30b08067f7b3fc84815d8ce",
+    "validate-environment.sh": "e2ba19ed817c3cd03e10c5eaf69e157b8e54bf3a9250209b4a5e0168cde1a897",
+    "project-mode.sh": "ab0e29f25d7d41e70857b14c8c8ab9293289b5c63b8ad9cdf57548db08af76b4",
+    "desktop-mode.sh": "dda2918a8f61a56ce233c63decd8561bca553eb0550f20e4a29e73af61a70f6f",
+    "jetson_mode.py": "6d2c66ba81f0cfba7e842dd35906fe4b34d93830c0cfb7dd80abe7a61860779f"
+  },
+  "package_delta": {
+    "libclang-10-dev": {
+      "before": null,
+      "after": {
+        "version": "1:10.0.0-4ubuntu1",
+        "status": "ii "
+      }
+    },
+    "libclang-common-10-dev": {
+      "before": null,
+      "after": {
+        "version": "1:10.0.0-4ubuntu1",
+        "status": "ii "
+      }
+    },
+    "libclang-dev": {
+      "before": null,
+      "after": {
+        "version": "1:10.0-50~exp1",
+        "status": "ii "
+      }
+    },
+    "libclang1-10": {
+      "before": null,
+      "after": {
+        "version": "1:10.0.0-4ubuntu1",
+        "status": "ii "
+      }
+    },
+    "libllvm10:arm64": {
+      "before": null,
+      "after": {
+        "version": "1:10.0.0-4ubuntu1",
+        "status": "ii "
+      }
+    },
+    "libobjc-9-dev:arm64": {
+      "before": null,
+      "after": {
+        "version": "9.4.0-1ubuntu1~20.04.2",
+        "status": "ii "
+      }
+    },
+    "libobjc4:arm64": {
+      "before": null,
+      "after": {
+        "version": "10.5.0-1ubuntu1~20.04",
+        "status": "ii "
+      }
+    },
+    "libssl-dev:arm64": {
+      "before": null,
+      "after": {
+        "version": "1.1.1f-1ubuntu2.24",
+        "status": "ii "
+      }
+    },
+    "libudev-dev:arm64": {
+      "before": null,
+      "after": {
+        "version": "245.4-4ubuntu3.24",
+        "status": "ii "
+      }
+    },
+    "shellcheck": {
+      "before": null,
+      "after": {
+        "version": "0.7.0-2build2",
+        "status": "ii "
+      }
+    }
+  }
+}

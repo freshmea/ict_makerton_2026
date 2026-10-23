@@ -1,0 +1,69 @@
+{
+  "at_utc": "2026-10-23T18:12:53.931293+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "70617e63b44e68a60e207369058922d1855adc10a00af8e4bdb56ebb59544a6f"
+    },
+    {
+      "path": "doc/software/README.md",
+      "sha256": "2899baec37c76b3698fcd6eef9e04364034636955427bce9e6b6f6ee42396f58"
+    },
+    {
+      "path": "doc/software/Jetson_Nano_\ub514\ubc14\uc774\uc2a4_\uad8c\ud55c\uacfc_\uc2e4\ubb3c\uc810\uac80.md",
+      "sha256": "f01505ce1375d741df0a39e1174e105ea39be57aca8ae8aa49a7e69f4fd04fb3"
+    },
+    {
+      "path": "doc/software/\uac1c\ubc1c_\ub2e8\uacc4_\ubc0f_\uc810\uac80\ud45c.md",
+      "sha256": "49ae1cef7776881a47208ff71032f13d63d82f3cccfee174c641da8331ca0c2a"
+    },
+    {
+      "path": "doc/software/\uc18c\ud504\ud2b8\uc6e8\uc5b4_\uc544\ud0a4\ud14d\ucc98_\uacc4\ud68d.md",
+      "sha256": "7faff06914c0428d0a10ea20c987cbc913995cecc130fd54f60c1e0e987676c8"
+    },
+    {
+      "path": "doc/software/Jetson_Nano_Camera_V2_\uc2e4\ubb3c\uac80\uc99d.md",
+      "sha256": "a2fff426ebcd1db2bbf699d93772ec30423b09f1595ef98f5f9f5a3bfe146db1"
+    },
+    {
+      "path": "tools/jetson/README.md",
+      "sha256": "08ba27f688a54db6155c82bc1ec08fda39caa5496df3701254bd8ab1c22f4d47"
+    },
+    {
+      "path": "tools/jetson/verify-csi-cameras.py",
+      "sha256": "18f38d3b09e5456ad44cc8dad95319f9e9b53f51d43421ba81716de9d13d3a43"
+    },
+    {
+      "path": "doc/software/camera-check/2026-10-24-v2/dual-sensor-0.png",
+      "sha256": "0a44f07eb60cb85afe146ba5453d392a07d61b18773383bd41ea36e25a56d8f6"
+    },
+    {
+      "path": "doc/software/camera-check/2026-10-24-v2/dual-sensor-1.png",
+      "sha256": "399db11e8b8c199e4e986a407466af92e7e8c5be1f7a48323246b99365ca3f4d"
+    },
+    {
+      "path": "doc/software/camera-check/2026-10-24-v2/single-0-sensor-0.png",
+      "sha256": "1672dac32d1d511c5f0dee3b43193086aec926318869d107f8bda23d1369508e"
+    },
+    {
+      "path": "doc/software/camera-check/2026-10-24-v2/single-1-sensor-1.png",
+      "sha256": "193f3eb1c5e3ea948bf14a6e669699c363f33eb142ae6cfb8fa711accaa2bbe9"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/camera-v2-capture-results.json",
+      "sha256": "a6001fbeac99e2712de8d80daeb00ba0a665be3ce88befbf5197e748f0c0cc52"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/camera-v2-capture.log",
+      "sha256": "9a8c9178cd32a099855a7b830047f6f4b19b2e353aa7b77cf49e4823cf8ac749"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/camera-v2-postcheck.log",
+      "sha256": "7a86abc5744e87e7b57aa9666bf6740edfebc30b991a22cf36b287e088672e2f"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/camera-v2-preflight.json",
+      "sha256": "bb9b7f037a2bd7628e4ac168fdca8e602c188d57c09b5c7f727b2e3ad1aae0bc"
+    }
+  ]
+}

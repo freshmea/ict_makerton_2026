@@ -1,0 +1,225 @@
+2026-10-23T21:46:31+02:00
+ 21:46:31 up 19 min,  0 users,  load average: 6.43, 2.95, 1.62
+multi-user.target
+Id=getty@tty1.service
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+
+Id=gdm.service
+ActiveState=inactive
+SubState=dead
+UnitFileState=static
+
+Id=300seconds-dashboard.service
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+# /lib/systemd/system/getty@.service
+#  SPDX-License-Identifier: LGPL-2.1+
+#
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+
+[Unit]
+Description=Getty on %I
+Documentation=man:agetty(8) man:systemd-getty-generator(8)
+Documentation=http://0pointer.de/blog/projects/serial-console.html
+After=systemd-user-sessions.service plymouth-quit-wait.service getty-pre.target
+After=rc-local.service
+
+# If additional gettys are spawned during boot then we should make
+# sure that this is synchronized before getty.target, even though
+# getty.target didn't actually pull it in.
+Before=getty.target
+IgnoreOnIsolate=yes
+
+# IgnoreOnIsolate causes issues with sulogin, if someone isolates
+# rescue.target or starts rescue.service from multi-user.target or
+# graphical.target.
+Conflicts=rescue.service
+Before=rescue.service
+
+# On systems without virtual consoles, don't start any getty. Note
+# that serial gettys are covered by serial-getty@.service, not this
+# unit.
+ConditionPathExists=/dev/tty0
+
+[Service]
+# the VT is cleared by TTYVTDisallocate
+# The '-o' option value tells agetty to replace 'login' arguments with an
+# option to preserve environment (-p), followed by '--' for safety, and then
+# the entered username.
+ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear %I $TERM
+Type=idle
+Restart=always
+RestartSec=0
+UtmpIdentifier=%I
+TTYPath=/dev/%I
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+KillMode=process
+IgnoreSIGPIPE=no
+SendSIGHUP=yes
+
+# Unset locale for the console getty since the console has problems
+# displaying some internationalized messages.
+UnsetEnvironment=LANG LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION
+
+[Install]
+WantedBy=getty.target
+DefaultInstance=tty1
+tegraid=21.1.2.0.0 ddr_die=4096M@2048M section=512M memtype=0 vpr_resize usb_port_owner_info=0 lane_owner_info=0 emc_max_dvfs=0 touch_id=0@63 video=tegrafb no_console_suspend=1 console=ttyS0,115200n8 debug_uartport=lsport,4 earlyprintk=uart8250-32bit,0x70006000 maxcpus=4 usbcore.old_scheme_first=1 lp0_vec=0x1000@0xff780000 core_edp_mv=1125 core_edp_ma=4000 gpt  earlycon=uart8250,mmio32,0x70006000  root=/dev/mmcblk0p1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 quiet root=/dev/mmcblk0p1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 
+TIMEOUT 30
+DEFAULT primary
+
+MENU TITLE L4T boot options
+
+LABEL primary
+      MENU LABEL primary kernel
+      LINUX /boot/Image
+      INITRD /boot/initrd
+      APPEND ${cbootargs} quiet root=/dev/mmcblk0p1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 
+
+# When testing a custom kernel, it is recommended that you create a backup of
+# the original kernel and add a new entry to this file so that the device can
+# fallback to the original kernel. To do this:
+#
+# 1, Make a backup of the original kernel
+#      sudo cp /boot/Image /boot/Image.backup
+#
+# 2, Copy your custom kernel into /boot/Image
+#
+# 3, Uncomment below menu setting lines for the original kernel
+#
+# 4, Reboot
+
+# LABEL backup
+#    MENU LABEL backup kernel
+#    LINUX /boot/Image.backup
+#    INITRD /boot/initrd
+#    APPEND ${cbootargs}
+
+ttyS0 tty0
+1
+0 tegra_fb
+1 tegra_fb
+/sys/class/vtconsole/vtcon0
+(S) dummy device
+0
+/sys/class/vtconsole/vtcon1
+(M) frame buffer device
+1
+/sys/class/graphics/fb0
+name
+tegra_fb
+blank
+mode
+U:640x480p-60
+modes
+U:640x480p-60
+virtual_size
+4096,2160
+/sys/class/graphics/fb1
+name
+tegra_fb
+blank
+mode
+modes
+U:640x480p-60
+virtual_size
+0,0
+/sys/class/graphics/fbcon
+   5652 ttyGS0   /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyGS0 vt220
+   5676 tty1     /sbin/agetty -o -p -- \u --noclear tty1 linux
+   5774 ttyS0    /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyS0 vt220
+crw--w---- 1 root tty 4, 0 Oct 23 21:10 /dev/tty0
+crw--w---- 1 root tty 4, 1 Oct 23 21:10 /dev/tty1
+#NAutoVTs=6
+#ReserveVT=6
+Bus 002 Device 002: ID 0bda:0411 Realtek Semiconductor Corp. 4-Port USB 3.1 Hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 005: ID 0d8c:0014 C-Media Electronics, Inc. Audio Adapter (Unitek Y-247A)
+Bus 001 Device 004: ID c0de:cafc  
+Bus 001 Device 003: ID 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n Wireless Network Adapter
+Bus 001 Device 002: ID 0bda:5411 Realtek Semiconductor Corp. 4-Port USB 2.1 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+/etc/systemd/system/display-manager.service:4:# replaces the getty
+/etc/systemd/system/display-manager.service:5:Conflicts=getty@tty1.service
+/etc/systemd/system/display-manager.service:6:After=getty@tty1.service
+/etc/systemd/system/display-manager.service:13:# pulled from getty@.service and plymouth-quit.service
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:12:Documentation=man:agetty(8) man:systemd-getty-generator(8)
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:15:After=dev-%i.device systemd-user-sessions.service plymouth-quit-wait.service getty-pre.target
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:18:# If additional gettys are spawned during boot then we should make
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:19:# sure that this is synchronized before getty.target, even though
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:20:# getty.target didn't actually pull it in.
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:21:Before=getty.target
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:31:# The '-o' option value tells agetty to replace 'login' arguments with an
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:34:ExecStart=-/sbin/agetty -o '-p -- \\u' --keep-baud 115200,38400,9600 %I $TERM
+/etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service:46:WantedBy=getty.target
+/etc/systemd/system/getty.target.wants/getty@tty1.service:12:Documentation=man:agetty(8) man:systemd-getty-generator(8)
+/etc/systemd/system/getty.target.wants/getty@tty1.service:14:After=systemd-user-sessions.service plymouth-quit-wait.service getty-pre.target
+/etc/systemd/system/getty.target.wants/getty@tty1.service:17:# If additional gettys are spawned during boot then we should make
+/etc/systemd/system/getty.target.wants/getty@tty1.service:18:# sure that this is synchronized before getty.target, even though
+/etc/systemd/system/getty.target.wants/getty@tty1.service:19:# getty.target didn't actually pull it in.
+/etc/systemd/system/getty.target.wants/getty@tty1.service:20:Before=getty.target
+/etc/systemd/system/getty.target.wants/getty@tty1.service:29:# On systems without virtual consoles, don't start any getty. Note
+/etc/systemd/system/getty.target.wants/getty@tty1.service:30:# that serial gettys are covered by serial-getty@.service, not this
+/etc/systemd/system/getty.target.wants/getty@tty1.service:36:# The '-o' option value tells agetty to replace 'login' arguments with an
+/etc/systemd/system/getty.target.wants/getty@tty1.service:39:ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear %I $TERM
+/etc/systemd/system/getty.target.wants/getty@tty1.service:52:# Unset locale for the console getty since the console has problems
+/etc/systemd/system/getty.target.wants/getty@tty1.service:57:WantedBy=getty.target
+/etc/systemd/system/getty.target.wants/getty@tty1.service:58:DefaultInstance=tty1
+/etc/systemd/system/nvgetty.service:11:After=getty.target
+/etc/systemd/system/nvgetty.service:12:Wants=getty.target
+/etc/systemd/system/nvgetty.service:16:ExecStart=/etc/systemd/nvgetty.sh
+/etc/systemd/system/multi-user.target.wants/nvgetty.service:11:After=getty.target
+/etc/systemd/system/multi-user.target.wants/nvgetty.service:12:Wants=getty.target
+/etc/systemd/system/multi-user.target.wants/nvgetty.service:16:ExecStart=/etc/systemd/nvgetty.sh
+/etc/systemd/system/multi-user.target.wants/nv-l4t-bootloader-config.service:30:After=nvgetty.service
+/etc/systemd/system/multi-user.target.wants/snapd.recovery-chooser-trigger.service:3:Wants=getty-pre.target
+/etc/systemd/system/multi-user.target.wants/snapd.recovery-chooser-trigger.service:4:Before=getty-pre.target
+/etc/systemd/system/multi-user.target.wants/nv.service:33:Before=serial-getty@ttyS0.service
+/etc/systemd/system/sysinit.target.wants/setvtrgb.service:5:Before=system-getty.slice
+/etc/systemd/system/nv.service:33:Before=serial-getty@ttyS0.service
+[    0.000000] bootconsole [uart8250] enabled
+[    0.000000] Kernel command line: tegraid=21.1.2.0.0 ddr_die=4096M@2048M section=512M memtype=0 vpr_resize usb_port_owner_info=0 lane_owner_info=0 emc_max_dvfs=0 touch_id=0@63 video=tegrafb no_console_suspend=1 console=ttyS0,115200n8 debug_uartport=lsport,4 earlyprintk=uart8250-32bit,0x70006000 maxcpus=4 usbcore.old_scheme_first=1 lp0_vec=0x1000@0xff780000 core_edp_mv=1125 core_edp_ma=4000 gpt  earlycon=uart8250,mmio32,0x70006000  root=/dev/mmcblk0p1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 quiet root=/dev/mmcblk0p1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 
+[    0.001650] Console: colour dummy device 80x25
+[    0.001662] console [tty0] enabled
+[    0.001668] bootconsole [uart8250] disabled
+[    0.386825] console [pstore-1] enabled
+[    0.434800] iommu: Adding device tegradc.0 to group 14
+[    0.434855] platform tegradc.0: domain=ffffffc0f94e1918 allocates as[0]=ffffffc0f9bdc248
+[    0.435368] platform tegradc.0: IOVA linear map 0x00000000d7000000(19000000)
+[    0.435688] iommu: Adding device tegradc.1 to group 15
+[    0.435733] platform tegradc.1: domain=ffffffc0f94e1b58 allocates as[0]=ffffffc0f9bdc2b0
+[    0.436238] platform tegradc.1: IOVA linear map 0x00000000d7000000(19000000)
+[    0.501085] vdd-5v0-hdmi: 5000 mV 
+[    0.501515] vdd-5v0-hdmi: supplied by vdd-5v0-sys
+[    0.596235] avdd-io-hdmi-dp: 1050 mV 
+[    1.067257] tegradc tegradc.0: disp0 connected to head0->/host1x/sor1
+[    1.067568] tegradc tegradc.0: DT parsed successfully
+[    1.067627] tegradc tegradc.0: Display dc.ffffff800abc0000 registered with id=0
+[    1.075790] tegradc tegradc.0: probed
+[    1.076529] Console: switching to colour frame buffer device 80x30
+[    1.076564] tegradc tegradc.0: fb registered
+[    1.077987] tegradc tegradc.1: disp1 connected to head1->/host1x/sor
+[    1.078072] tegradc tegradc.1: No lt-data, using default setting
+[    1.078099] tegradc tegradc.1: No hpd-gpio in DT
+[    1.078134] tegradc tegradc.1: DT parsed successfully
+[    1.078189] tegradc tegradc.1: Display dc.ffffff800ad40000 registered with id=1
+[    1.079760] tegradc tegradc.1: dpd enable lookup fail:-19
+[    1.586798] tegradc tegradc.1: probed
+[    1.587202] tegradc tegradc.1: fb registered
+[    1.590438] tegradc tegradc.1: blank - powerdown
+[    1.596163] console [ttyS0] disabled
+[    1.606516] console [ttyS0] enabled
+[    1.891721] input: tegra-hda HDMI/DP,pcm=3 as /devices/70030000.hda/sound/card0/input0
+[    6.771972] systemd[1]: Starting Set the console keyboard layout...
+[    7.045046] systemd[1]: Finished Set the console keyboard layout.
+{"api":"ok","pico":true,"cameras":true,"microphone":true}

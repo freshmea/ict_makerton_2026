@@ -1,0 +1,43 @@
+{
+  "command": [
+    "/home/jetson/ict_makerton_2026/.local-tools/linux/picotool/2.3.1/install/bin/picotool",
+    "info",
+    "-d",
+    "-f",
+    "--vid",
+    "0xc0de",
+    "--pid",
+    "0xcaff",
+    "--ser",
+    "E679675A69C4039B"
+  ],
+  "rc": 0,
+  "stdout": "The device was asked to reboot into BOOTSEL mode so the command can be executed.\n\nDevice Information\n type:                 RP2350\n package:              QFN60\n chipid:               0xe679675a69c4039b\n flash devinfo:        0x0c00\n current cpu:          ARM\n available cpus:       ARM, RISC-V\n default cpu:          ARM\n secure boot:          0\n debug enable:         1\n secure debug enable:  1\n flash size:           4096K\n\n                       The device was asked to reboot back into application\n                       mode.\n",
+  "stderr": "",
+  "at_utc": "2026-10-23T17:56:25.363038+00:00",
+  "before": [
+    {
+      "sysfs": "/sys/devices/70090000.xusb/usb1/1-2/1-2.3",
+      "vid": "c0de",
+      "pid": "caff",
+      "serial": "E679675A69C4039B",
+      "bus": 1,
+      "address": 5,
+      "usb_node": "/dev/bus/usb/001/005",
+      "read_write": true
+    }
+  ],
+  "after": [
+    {
+      "sysfs": "/sys/devices/70090000.xusb/usb1/1-2/1-2.3",
+      "vid": "c0de",
+      "pid": "caff",
+      "serial": "E679675A69C4039B",
+      "bus": 1,
+      "address": 7,
+      "usb_node": "/dev/bus/usb/001/007",
+      "read_write": true
+    }
+  ],
+  "flash_written": false
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "path": "firmware/build-pico-device.sh",
+    "changed": true,
+    "new": true,
+    "sha256": "99109b6cbfb6c7567b2959b9261703d2ceba6bf8342f414b46f91a0cc4e4dade"
+  },
+  {
+    "path": "firmware/flash-pico.sh",
+    "changed": true,
+    "new": true,
+    "sha256": "b52fb0fa44db11781ebc28ed47f934efd21e6da0e50a14a35f0e13db5f48301e"
+  },
+  {
+    "path": "firmware/setup-linux.sh",
+    "changed": true,
+    "new": true,
+    "sha256": "b9d623602f575612e7bdb67d4e2eef68af358fb20e76ef3def3ceefca1cf44f6"
+  },
+  {
+    "path": "firmware/use-linux-tools.sh",
+    "changed": true,
+    "new": true,
+    "sha256": "35220ca10b65bf27235eab211bf04d8e5bac5c2f2cc0edeb2f2c4469a796f58a"
+  },
+  {
+    "path": "firmware/pico_linux.py",
+    "changed": true,
+    "new": true,
+    "sha256": "f8975491f9ba502c6af2e295aaaa5d3e92f4477ea9c4524e610e5bd278a0c3b3"
+  },
+  {
+    "path": "firmware/pico2-device-bench/build.rs",
+    "changed": false,
+    "new": false,
+    "sha256": "74fbfc498c904689039120d722ceb8360ec0e0c4eda8d799d8caf95f313e406d"
+  },
+  {
+    "path": "firmware/pico2-device-bench/Cargo.lock",
+    "changed": false,
+    "new": false,
+    "sha256": "54b6d26c470c2657b8426b930af58e70cc6c5729a43a4c66bca581e51765ea3d"
+  },
+  {
+    "path": "firmware/pico2-device-bench/Cargo.toml",
+    "changed": false,
+    "new": false,
+    "sha256": "a13cb3c042d5b0c8a66d1393d1cb2329503ac6071812a3437bc6225bdd2d9977"
+  },
+  {
+    "path": "firmware/pico2-device-bench/memory.x",
+    "changed": false,
+    "new": false,
+    "sha256": "9c493a7dcaa96535a529b5afecf048d12468b7e7ce6edf26fb022f81b3fe865c"
+  },
+  {
+    "path": "firmware/pico2-device-bench/.cargo/config.toml",
+    "changed": false,
+    "new": false,
+    "sha256": "f3591d029f55429aa462e9a61c5b1b637bd3cc6c86ac55695c4d2df7d41c00be"
+  },
+  {
+    "path": "firmware/pico2-device-bench/src/lib.rs",
+    "changed": true,
+    "new": false,
+    "sha256": "4c49ebfa0a68c821e1dc1bbbac057eb55f779138ae128e0d859b836782fa0447"
+  },
+  {
+    "path": "firmware/pico2-device-bench/src/main.rs",
+    "changed": true,
+    "new": false,
+    "sha256": "105ef3309fb1f36959179129da61c2ddd8f5c6d1727930a2b681b7b4bf243fe2"
+  },
+  {
+    "path": "firmware/pico2-device-bench/src/picotool_reset.rs",
+    "changed": true,
+    "new": true,
+    "sha256": "cea22c71542735530df078f9756d475c57eca219ada1084c2df1763337b62b12"
+  },
+  {
+    "path": "tools/pico-device-bench/Cargo.lock",
+    "changed": false,
+    "new": false,
+    "sha256": "05ee34f0655ed3da851be8bbce1283ba22b98c5b1c071a9fa4c2b5cf9dc0bd4d"
+  },
+  {
+    "path": "tools/pico-device-bench/Cargo.toml",
+    "changed": false,
+    "new": false,
+    "sha256": "67b2405e0436bb046e7d68e8d0aff2fec8bf90a44053a7bc9ea00ad2228fd844"
+  },
+  {
+    "path": "tools/pico-device-bench/src/lib.rs",
+    "changed": true,
+    "new": false,
+    "sha256": "ec7f289d087209b23d0c6c5beb1c9cf0b793ad52ac57f24d3d9e926c38a550e5"
+  },
+  {
+    "path": "tools/pico-device-bench/src/main.rs",
+    "changed": true,
+    "new": true,
+    "sha256": "7906db82327337c8b15767cc8c3204978c2ed4307f630a0503e37465a88b0b9d"
+  },
+  {
+    "path": "crates/pico-device-protocol/Cargo.lock",
+    "changed": false,
+    "new": false,
+    "sha256": "b42ef9404d2bfcb40e8cd3a220392cfadb92bb2d4ac6b32fb497bb57ca6bc3d7"
+  },
+  {
+    "path": "crates/pico-device-protocol/Cargo.toml",
+    "changed": false,
+    "new": false,
+    "sha256": "0955b50577747b844d45ee518c1009cf3c99aeca0d256a145415cde3ffc461d6"
+  },
+  {
+    "path": "crates/pico-device-protocol/src/lib.rs",
+    "changed": false,
+    "new": false,
+    "sha256": "88eb31f129dcce8e69a906d6dd66f058c7d8df1bfd689f31f13ee0e40b9a5312"
+  },
+  {
+    "path": "tools/jetson/device_access.py",
+    "changed": true,
+    "new": true,
+    "sha256": "e281a07c65455b9be324cc2b7d613bb1948806104c4d6a0dfda87309cbf6d4ac"
+  }
+]

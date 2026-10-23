@@ -1,0 +1,33 @@
+Fri 23 Oct 2026 07:08:23 PM UTC
+ 21:08:23 up 2 min,  0 users,  load average: 2.70, 1.41, 0.55
+Timezone=Europe/Amsterdam
+NTP=yes
+NTPSynchronized=yes
+ 0 80888ead7fae4eb4ab13b7a841a80ed9 Mon 2024-06-17 22:29:41 CEST—Fri 2026-10-23 21:08:23 CEST
+Specifying boot ID or boot offset has no effect, no persistent journal was found.
+[    0.439556] tegra-pmc 7000e400.pmc: i2c-thermtrip node not found, emergency thermal reset disabled.
+[    0.665550] thermal thermal_zone0: Registering thermal zone thermal_zone0 for type AO-therm
+[    0.666039] thermal thermal_zone1: Registering thermal zone thermal_zone1 for type CPU-therm
+[    0.666399] thermal thermal_zone2: Registering thermal zone thermal_zone2 for type GPU-therm
+[    0.666675] thermal thermal_zone3: Registering thermal zone thermal_zone3 for type PLL-therm
+[    0.666850] thermal thermal_zone4: Registering thermal zone thermal_zone4 for type PMIC-Die
+[    1.619463] THERMAL EST: found 2 subdevs
+[    1.619472] THERMAL EST num_resources: 0
+[    1.619479] [THERMAL EST subdev 0]
+[    1.619486] [THERMAL EST subdev 1]
+[    1.619940] thermal thermal_zone5: Registering thermal zone thermal_zone5 for type thermal-fan-est
+[    1.619944] THERMAL EST: thz register success.
+[    1.620098] THERMAL EST: end of probe, return err: 0
+[    1.846023] tegra_soctherm 700e2000.soctherm: throttrip: will throttle when cpu reaches 100500 mC
+[    1.846190] tegra_soctherm 700e2000.soctherm: throttrip: will throttle when gpu reaches 101000 mC
+[    1.849130] parse_throttle_dt_data: Num cap clks = 6
+[    1.849138] parse_throttle_dt_data: clk=cclk_g type=2
+[    1.849151] parse_throttle_dt_data: clk=gpu type=4
+[    1.849178] parse_throttle_dt_data: clk=cap.throttle.c2bus type=0
+[    1.849200] parse_throttle_dt_data: clk=cap.throttle.c3bus type=0
+[    1.849223] parse_throttle_dt_data: clk=cap.throttle.sclk type=0
+[    1.849227] parse_throttle_dt_data: clk=emc type=3
+[    1.850095] tegra_throttle_probe: probe successful. #cdevs=4
+[    9.164576] cpu-throttle-alert cooling device registered.
+[    9.164727] gpu-throttle-alert cooling device registered.
+{"pico": true, "cameras": true, "camera_state": [{"sensor_id": 0, "node": "/dev/video0", "ready": true, "frames": 1154, "encoded_frames": 1124, "preview_frames": 583, "fps": 30.01, "encoded_fps": 30.01, "preview_fps": 15.0, "capture_delivery_fps": 30.01, "encoded_delivery_fps": 30.01, "preview_delivery_fps": 14.99, "encoder_pts_lag_ms": 0.0, "encoded_mbps": 2.453, "age_ms": 14, "jpeg_bytes": 12021, "preview_age_ms": 40, "encoded_age_ms": 8, "rtsp_feeds": 0}, {"sensor_id": 1, "node": "/dev/video1", "ready": true, "frames": 1152, "encoded_frames": 1122, "preview_frames": 583, "fps": 30.0, "encoded_fps": 30.0, "preview_fps": 14.98, "capture_delivery_fps": 30.0, "encoded_delivery_fps": 30.04, "preview_delivery_fps": 14.97, "encoder_pts_lag_ms": 0.0, "encoded_mbps": 2.488, "age_ms": 8, "jpeg_bytes": 17840, "preview_age_ms": 31, "encoded_age_ms": 2, "rtsp_feeds": 0}], "system": {"cpu_percent": 71.9, "gpu_percent": 0.0, "memory_used_mib": 1529, "memory_total_mib": 3964, "memory_percent": 42.9, "temperature_c": 50.0, "uptime_seconds": 137, "cpu_history": [26.1, 24.5, 22.9, 22.6, 38.4, 26.1, 26.6, 26.4, 28.1, 27.5, 26.6, 43.4, 52.0, 56.3, 23.7, 24.9, 25.0, 24.5, 27.5, 27.2, 32.8, 27.8, 37.9, 24.6, 25.4, 22.8, 24.4, 25.0, 24.9, 25.3, 26.3, 42.8, 99.5, 70.3, 32.4, 100.0, 65.5, 24.2, 24.2, 24.6, 35.4, 26.2, 24.2, 26.4, 27.0, 26.0, 29.5, 44.4, 54.3, 60.1, 33.0, 23.8, 27.8, 27.9, 24.6, 33.2, 26.7, 25.5, 28.5, 71.9]}}

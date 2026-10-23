@@ -1,0 +1,16 @@
+{
+  "at_utc": "2026-10-23T17:34:45.091837+00:00",
+  "audio_card": {
+    "card": "card2",
+    "alsa_id": "Device"
+  },
+  "accounts": {
+    "pico": "uid=999(pico) gid=992(pico) groups=992(pico),20(dialout),993(robot-device)",
+    "audiod": "uid=998(audiod) gid=991(audiod) groups=991(audiod),29(audio)",
+    "camerad": "uid=997(camerad) gid=990(camerad) groups=990(camerad),44(video),134(render)",
+    "jetson": "uid=1000(jetson) gid=1000(jetson) groups=1000(jetson),4(adm),20(dialout),24(cdrom),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(i2c),118(lpadmin),124(gdm),125(lightdm),999(gpio),996(weston-launch),130(sambashare),134(render),1001(jtop),993(robot-device)"
+  },
+  "rules": "/etc/udev/rules.d/99-z-300seconds-devices.rules",
+  "alsa_config": "/etc/alsa/conf.d/99-300seconds-usb.conf",
+  "baseline": "/var/lib/300seconds/device-access/baseline.json"
+}

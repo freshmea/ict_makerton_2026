@@ -1,0 +1,18 @@
+   Compiling pico2-device-bench v0.1.0 (D:\repository\ict_makerton_2026\firmware\pico2-device-bench)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.94s
+     Running unittests src\lib.rs (firmware\pico2-device-bench\target\x86_64-pc-windows-msvc\debug\deps\pico2_device_bench-dc10373cfc586df2.exe)
+
+running 10 tests
+test picotool_reset::tests::only_exact_picotool_bootsel_control_shape_is_accepted ... ok
+test picotool_reset::tests::serial_is_rom_compatible_uppercase_and_fixed_width ... ok
+test tests::boot_or_config_held_requires_real_raw_release_before_new_press ... ok
+test tests::corrupt_wire_never_reaches_stop_admission ... ok
+test tests::duplicate_and_out_of_order_never_restart ... ok
+test tests::matrix_wire_order_is_far_right_before_near_left ... ok
+test tests::stop_requires_protocol_version_but_not_session_or_sequence ... ok
+test tests::switch_hold_mapping_and_stop_consumes_release ... ok
+test tests::segments_tail_black_and_small_servo_excursion ... ok
+test tests::stop_during_pending_debounce_consumes_later_release ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

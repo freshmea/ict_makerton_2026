@@ -1,0 +1,11 @@
+{
+  "rtw_power_mgnt": "1",
+  "rtw_ips_mode": "1",
+  "rtw_enusbss": "0",
+  "usb_power_control": "on",
+  "networkmanager_powersave": "default",
+  "driver_config": null,
+  "journal_config": null,
+  "uptime_seconds": 250.41,
+  "timestamp_utc": "2026-10-23T19:30:56Z"
+}

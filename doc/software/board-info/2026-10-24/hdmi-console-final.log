@@ -1,0 +1,45 @@
+2026-10-23T19:47:22+00:00
+HDMI panel_connected: 0
+HDMI controller enabled: 0
+Framebuffer console bound: 1
+Keyboard module availability: CONFIG_VT=y
+CONFIG_VT_CONSOLE=y
+CONFIG_FRAMEBUFFER_CONSOLE=y
+CONFIG_HID=y
+CONFIG_HID_GENERIC=y
+CONFIG_USB_HID=y
+VT1 geometry: 80x30, cursor 0,29
+VT1 text:
+Ubuntu 20.04.6 LTS nano tty1
+nano login: [   22.876163] soctherm: OC ALARM 0x00000001
+[   29.356404] soctherm: OC ALARM 0x00000001
+[   31.038248] soctherm: OC ALARM 0x00000001
+[   35.216671] soctherm: OC ALARM 0x00000001
+[   36.315368] soctherm: OC ALARM 0x00000001
+[   37.750341] soctherm: OC ALARM 0x00000001
+[   38.751116] soctherm: OC ALARM 0x00000001
+[   39.951171] soctherm: OC ALARM 0x00000001
+[   41.149061] soctherm: OC ALARM 0x00000001
+[   42.551163] soctherm: OC ALARM 0x00000001
+[   43.840333] soctherm: OC ALARM 0x00000001
+[   45.350461] soctherm: OC ALARM 0x00000001
+[   46.747817] soctherm: OC ALARM 0x00000001
+[   48.079606] soctherm: OC ALARM 0x00000001
+[   49.344908] soctherm: OC ALARM 0x00000001
+[   50.350125] soctherm: OC ALARM 0x00000001
+[   51.611155] soctherm: OC ALARM 0x00000001
+[   53.049799] soctherm: OC ALARM 0x00000001
+[   54.446101] soctherm: OC ALARM 0x00000001
+[   55.449191] soctherm: OC ALARM 0x00000001
+[   56.479128] soctherm: OC ALARM 0x00000001
+[   57.876311] soctherm: OC ALARM 0x00000001
+[   58.879339] soctherm: OC ALARM 0x00000001
+[   60.077655] soctherm: OC ALARM 0x00000001
+[   61.545601] soctherm: OC ALARM 0x00000001
+[   62.644910] soctherm: OC ALARM 0x00000001
+[ 1159.873649] tegra-i2c 7000c400.i2c: no acknowledge from address 0x50
+active
+active
+active
+active
+{"api":"ok","pico":true,"cameras":true,"microphone":true}

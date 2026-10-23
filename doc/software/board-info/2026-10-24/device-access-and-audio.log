@@ -1,0 +1,135 @@
+{
+  "at_utc": "2026-10-23T17:18:10.607026+00:00",
+  "audio_card": {
+    "card": "card2",
+    "alsa_id": "Device"
+  },
+  "accounts": {
+    "pico": "uid=999(pico) gid=992(pico) groups=992(pico),20(dialout),993(robot-device)",
+    "audiod": "uid=998(audiod) gid=991(audiod) groups=991(audiod),29(audio)",
+    "camerad": "uid=997(camerad) gid=990(camerad) groups=990(camerad),44(video),134(render)",
+    "jetson": "uid=1000(jetson) gid=1000(jetson) groups=1000(jetson),4(adm),20(dialout),24(cdrom),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(i2c),118(lpadmin),124(gdm),125(lightdm),999(gpio),996(weston-launch),130(sambashare),134(render),1001(jtop),993(robot-device)"
+  },
+  "rules": "/etc/udev/rules.d/99-z-300seconds-devices.rules",
+  "alsa_config": "/etc/alsa/conf.d/99-300seconds-usb.conf",
+  "baseline": "/var/lib/300seconds/device-access/baseline.json"
+}
+{
+  "at_utc": "2026-10-23T17:18:10.818648+00:00",
+  "uid": 998,
+  "sample_rate": 48000,
+  "commands": [
+    {
+      "argv": [
+        "arecord",
+        "-q",
+        "-D",
+        "robot_capture",
+        "-t",
+        "wav",
+        "-f",
+        "S16_LE",
+        "-r",
+        "48000",
+        "-c",
+        "1",
+        "-d",
+        "2",
+        "/var/tmp/300seconds-audio-20261024/microphone-baseline.wav"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.0342592570000306,
+      "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+    },
+    {
+      "argv": [
+        "aplay",
+        "-q",
+        "-D",
+        "robot_playback",
+        "/var/tmp/300seconds-audio-20261024/speaker-test-tone.wav"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.0281099029998586,
+      "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+    },
+    {
+      "argv": [
+        "arecord",
+        "-q",
+        "-D",
+        "robot_capture",
+        "-t",
+        "wav",
+        "-f",
+        "S16_LE",
+        "-r",
+        "48000",
+        "-c",
+        "1",
+        "-d",
+        "5",
+        "/var/tmp/300seconds-audio-20261024/duplex-capture.wav"
+      ],
+      "exit_code": 0,
+      "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+    },
+    {
+      "argv": [
+        "aplay",
+        "-q",
+        "-D",
+        "robot_playback",
+        "/var/tmp/300seconds-audio-20261024/microphone-baseline.wav"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.0345686470000146,
+      "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+    }
+  ],
+  "baseline": {
+    "metadata": {
+      "channels": 1,
+      "rate": 48000,
+      "frames": 96000,
+      "sample_width": 2
+    },
+    "samples": 96000,
+    "rms_dbfs": -49.54172321642676,
+    "peak": 617,
+    "clipped_samples": 0,
+    "nonzero_fraction": 0.9938854166666666
+  },
+  "duplex": {
+    "metadata": {
+      "channels": 1,
+      "rate": 48000,
+      "frames": 240000,
+      "sample_width": 2
+    },
+    "samples": 240000,
+    "rms_dbfs": -49.66819598902461,
+    "peak": 701,
+    "clipped_samples": 0,
+    "nonzero_fraction": 0.9913416666666667
+  },
+  "tone_detections": [
+    {
+      "frequency_hz": 660,
+      "above_baseline_db": 18.907430651312822,
+      "above_other_test_frequencies_db": 26.956286127182377
+    },
+    {
+      "frequency_hz": 880,
+      "above_baseline_db": 19.221906458906478,
+      "above_other_test_frequencies_db": 6.927537582859325
+    },
+    {
+      "frequency_hz": 1100,
+      "above_baseline_db": 22.393880736551285,
+      "above_other_test_frequencies_db": 9.919962732541215
+    }
+  ],
+  "acoustic_sequence_detected": true,
+  "pcm_capture_playback_duplex_pass": true
+}

@@ -1,0 +1,209 @@
+START 2026-10-23T16:46:47+00:00 user=jetson
+Log: /var/log/300seconds/deps-20261023T164647Z.log
+Get:1 file:/var/cuda-repo-l4t-10-2-local  InRelease
+Ign:1 file:/var/cuda-repo-l4t-10-2-local  InRelease
+Get:2 file:/var/visionworks-repo  InRelease
+Ign:2 file:/var/visionworks-repo  InRelease
+Get:3 file:/var/visionworks-sfm-repo  InRelease
+Ign:3 file:/var/visionworks-sfm-repo  InRelease
+Get:4 file:/var/visionworks-tracking-repo  InRelease
+Ign:4 file:/var/visionworks-tracking-repo  InRelease
+Get:5 file:/var/cuda-repo-l4t-10-2-local  Release [564 B]
+Get:5 file:/var/cuda-repo-l4t-10-2-local  Release [564 B]
+Get:6 file:/var/visionworks-repo  Release [2001 B]
+Get:6 file:/var/visionworks-repo  Release [2001 B]
+Get:7 file:/var/visionworks-sfm-repo  Release [2005 B]
+Get:7 file:/var/visionworks-sfm-repo  Release [2005 B]
+Get:8 file:/var/visionworks-tracking-repo  Release [2010 B]
+Get:8 file:/var/visionworks-tracking-repo  Release [2010 B]
+Hit:9 https://packages.microsoft.com/repos/code stable InRelease
+Hit:11 https://repo.download.nvidia.com/jetson/common r32.6 InRelease
+Hit:13 https://linux.teamviewer.com/deb stable InRelease
+Get:14 https://repo.download.nvidia.com/jetson/t210 r32.6 InRelease [2547 B]
+Hit:17 http://ports.ubuntu.com/ubuntu-ports focal InRelease
+Hit:18 http://ports.ubuntu.com/ubuntu-ports focal-updates InRelease
+Hit:19 http://ports.ubuntu.com/ubuntu-ports focal-backports InRelease
+Hit:20 http://ports.ubuntu.com/ubuntu-ports focal-security InRelease
+Get:21 http://packages.ros.org/ros2/ubuntu focal InRelease [4685 B]
+Err:21 http://packages.ros.org/ros2/ubuntu focal InRelease
+  The following signatures were invalid: EXPKEYSIG F42ED6FBAB17C654 Open Robotics <info@osrfoundation.org>
+Fetched 7232 B in 4s (1874 B/s)
+Reading package lists...
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://packages.ros.org/ros2/ubuntu focal InRelease: The following signatures were invalid: EXPKEYSIG F42ED6FBAB17C654 Open Robotics <info@osrfoundation.org>
+W: Failed to fetch http://packages.ros.org/ros2/ubuntu/dists/focal/InRelease  The following signatures were invalid: EXPKEYSIG F42ED6FBAB17C654 Open Robotics <info@osrfoundation.org>
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  gir1.2-goa-1.0 libxmlb1
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libclang-10-dev libclang-common-10-dev libclang1-10 libllvm10 libobjc-9-dev
+  libobjc4
+Suggested packages:
+  libssl-doc
+The following NEW packages will be installed:
+  libclang-10-dev libclang-common-10-dev libclang-dev libclang1-10 libllvm10
+  libobjc-9-dev libobjc4 libssl-dev libudev-dev shellcheck
+0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+Inst libobjc4 (10.5.0-1ubuntu1~20.04 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [arm64])
+Inst libobjc-9-dev (9.4.0-1ubuntu1~20.04.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [arm64])
+Inst libllvm10 (1:10.0.0-4ubuntu1 Ubuntu:20.04/focal [arm64])
+Inst libclang1-10 (1:10.0.0-4ubuntu1 Ubuntu:20.04/focal [arm64])
+Inst libclang-common-10-dev (1:10.0.0-4ubuntu1 Ubuntu:20.04/focal [arm64])
+Inst libclang-10-dev (1:10.0.0-4ubuntu1 Ubuntu:20.04/focal [arm64])
+Inst libclang-dev (1:10.0-50~exp1 Ubuntu:20.04/focal [arm64])
+Inst libssl-dev (1.1.1f-1ubuntu2.24 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [arm64])
+Inst libudev-dev (245.4-4ubuntu3.24 Ubuntu:20.04/focal-updates [arm64])
+Inst shellcheck (0.7.0-2build2 Ubuntu:20.04/focal [arm64])
+Conf libobjc4 (10.5.0-1ubuntu1~20.04 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [arm64])
+Conf libobjc-9-dev (9.4.0-1ubuntu1~20.04.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [arm64])
+Conf libllvm10 (1:10.0.0-4ubuntu1 Ubuntu:20.04/focal [arm64])
+Conf libclang1-10 (1:10.0.0-4ubuntu1 Ubuntu:20.04/focal [arm64])
+Conf libclang-common-10-dev (1:10.0.0-4ubuntu1 Ubuntu:20.04/focal [arm64])
+Conf libclang-10-dev (1:10.0.0-4ubuntu1 Ubuntu:20.04/focal [arm64])
+Conf libclang-dev (1:10.0-50~exp1 Ubuntu:20.04/focal [arm64])
+Conf libssl-dev (1.1.1f-1ubuntu2.24 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [arm64])
+Conf libudev-dev (245.4-4ubuntu3.24 Ubuntu:20.04/focal-updates [arm64])
+Conf shellcheck (0.7.0-2build2 Ubuntu:20.04/focal [arm64])
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  gir1.2-goa-1.0 libxmlb1
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libclang-10-dev libclang-common-10-dev libclang1-10 libllvm10 libobjc-9-dev
+  libobjc4
+Suggested packages:
+  libssl-doc
+The following NEW packages will be installed:
+  libclang-10-dev libclang-common-10-dev libclang-dev libclang1-10 libllvm10
+  libobjc-9-dev libobjc4 libssl-dev libudev-dev shellcheck
+0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+Need to get 42.6 MB of archives.
+After this operation, 332 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libobjc4 arm64 10.5.0-1ubuntu1~20.04 [39.5 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libobjc-9-dev arm64 9.4.0-1ubuntu1~20.04.2 [211 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libllvm10 arm64 1:10.0.0-4ubuntu1 [12.7 MB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libclang1-10 arm64 1:10.0.0-4ubuntu1 [6176 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libclang-common-10-dev arm64 1:10.0.0-4ubuntu1 [3267 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libclang-10-dev arm64 1:10.0.0-4ubuntu1 [15.5 MB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libclang-dev arm64 1:10.0-50~exp1 [2880 B]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libssl-dev arm64 1.1.1f-1ubuntu2.24 [1462 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libudev-dev arm64 245.4-4ubuntu3.24 [19.7 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 shellcheck arm64 0.7.0-2build2 [3189 kB]
+Fetched 42.6 MB in 11s (3787 kB/s)
+Selecting previously unselected package libobjc4:arm64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 217455 files and directories currently installed.)
+Preparing to unpack .../0-libobjc4_10.5.0-1ubuntu1~20.04_arm64.deb ...
+Unpacking libobjc4:arm64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libobjc-9-dev:arm64.
+Preparing to unpack .../1-libobjc-9-dev_9.4.0-1ubuntu1~20.04.2_arm64.deb ...
+Unpacking libobjc-9-dev:arm64 (9.4.0-1ubuntu1~20.04.2) ...
+Selecting previously unselected package libllvm10:arm64.
+Preparing to unpack .../2-libllvm10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libllvm10:arm64 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libclang1-10.
+Preparing to unpack .../3-libclang1-10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libclang1-10 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libclang-common-10-dev.
+Preparing to unpack .../4-libclang-common-10-dev_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libclang-common-10-dev (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libclang-10-dev.
+Preparing to unpack .../5-libclang-10-dev_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libclang-10-dev (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libclang-dev.
+Preparing to unpack .../6-libclang-dev_1%3a10.0-50~exp1_arm64.deb ...
+Unpacking libclang-dev (1:10.0-50~exp1) ...
+Selecting previously unselected package libssl-dev:arm64.
+Preparing to unpack .../7-libssl-dev_1.1.1f-1ubuntu2.24_arm64.deb ...
+Unpacking libssl-dev:arm64 (1.1.1f-1ubuntu2.24) ...
+Selecting previously unselected package libudev-dev:arm64.
+Preparing to unpack .../8-libudev-dev_245.4-4ubuntu3.24_arm64.deb ...
+Unpacking libudev-dev:arm64 (245.4-4ubuntu3.24) ...
+Selecting previously unselected package shellcheck.
+Preparing to unpack .../9-shellcheck_0.7.0-2build2_arm64.deb ...
+Unpacking shellcheck (0.7.0-2build2) ...
+Setting up libobjc4:arm64 (10.5.0-1ubuntu1~20.04) ...
+Setting up shellcheck (0.7.0-2build2) ...
+Setting up libllvm10:arm64 (1:10.0.0-4ubuntu1) ...
+Setting up libclang1-10 (1:10.0.0-4ubuntu1) ...
+Setting up libssl-dev:arm64 (1.1.1f-1ubuntu2.24) ...
+Setting up libudev-dev:arm64 (245.4-4ubuntu3.24) ...
+Setting up libobjc-9-dev:arm64 (9.4.0-1ubuntu1~20.04.2) ...
+Setting up libclang-common-10-dev (1:10.0.0-4ubuntu1) ...
+Setting up libclang-10-dev (1:10.0.0-4ubuntu1) ...
+Setting up libclang-dev (1:10.0-50~exp1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.18) ...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 29915  100 29915    0     0    99k      0 --:--:-- --:--:-- --:--:--  100k
+9502b514362a21096210d498f143b8cdacda365d3dfcf45e8f5541e089ccafc0  /home/jetson/.local/share/300seconds/rust/rustup-init.sh
+info: downloading installer
+info: profile set to minimal
+info: default host tuple is aarch64-unknown-linux-gnu
+info: syncing channel updates for 1.90.0-aarch64-unknown-linux-gnu
+info: latest update on 2025-09-18 for version 1.90.0 (1159e78c4 2025-09-14)
+info: downloading 3 components
+info: default toolchain set to 1.90.0-aarch64-unknown-linux-gnu
+
+  1.90.0-aarch64-unknown-linux-gnu installed - rustc 1.90.0 (1159e78c4 2025-09-14)
+
+
+Rust is installed now. Great!
+
+To get started you need Cargo's bin directory 
+(/home/jetson/.local/share/300seconds/rust/cargo/bin) in your PATH
+environment variable. This has not been done automatically.
+
+To configure your current shell, you need to source
+the corresponding env file under 
+/home/jetson/.local/share/300seconds/rust/cargo.
+
+Consider running the right command for your shell (note the leading DOT):
+. "/home/jetson/.local/share/300seconds/rust/cargo/env" # For 
+sh/ash/dash/pdksh/bash
+cargo:rerun-if-env-changed=CC_aarch64-unknown-linux-gnu
+CC_aarch64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CC_aarch64_unknown_linux_gnu
+CC_aarch64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_unknown_linux_gnu
+CFLAGS_aarch64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64-unknown-linux-gnu
+CFLAGS_aarch64-unknown-linux-gnu = None
+info: syncing channel updates for 1.90.0-aarch64-unknown-linux-gnu
+
+  1.90.0-aarch64-unknown-linux-gnu unchanged - rustc 1.90.0 (1159e78c4 2025-09-14)
+
+info: downloading 3 components
+rustc 1.90.0 (1159e78c4 2025-09-14)
+binary: rustc
+commit-hash: 1159e78c4747b02ef996e55082b704c09b970588
+commit-date: 2025-09-14
+host: aarch64-unknown-linux-gnu
+release: 1.90.0
+LLVM version: 20.1.8
+cargo 1.90.0 (840b83a10 2025-07-30)
+openssl: 1.1.1f
+libudev: 245
+alsa: 1.2.2
+glib-2.0: 2.64.6
+gstreamer-1.0: 1.16.3
+gstreamer-app-1.0: 1.16.3
+sqlite3: 3.31.1
+FINISHED 2026-10-23T16:49:07+00:00
+Activate project Rust: source /home/jetson/.local/share/300seconds/rust/env.sh

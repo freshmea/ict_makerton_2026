@@ -1,0 +1,335 @@
+{
+  "at_utc": "2026-10-23T17:23:08.688860+00:00",
+  "user_camera_model_report": "Two Camera V3 / IMX708 modules connected by CSI",
+  "user_speaker_report": "Test tones heard normally (user confirmation in chat)",
+  "audio": {
+    "at_utc": "2026-10-23T17:18:10.818648+00:00",
+    "uid": 998,
+    "sample_rate": 48000,
+    "commands": [
+      {
+        "argv": [
+          "arecord",
+          "-q",
+          "-D",
+          "robot_capture",
+          "-t",
+          "wav",
+          "-f",
+          "S16_LE",
+          "-r",
+          "48000",
+          "-c",
+          "1",
+          "-d",
+          "2",
+          "/var/tmp/300seconds-audio-20261024/microphone-baseline.wav"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 2.0342592570000306,
+        "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+      },
+      {
+        "argv": [
+          "aplay",
+          "-q",
+          "-D",
+          "robot_playback",
+          "/var/tmp/300seconds-audio-20261024/speaker-test-tone.wav"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 3.0281099029998586,
+        "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+      },
+      {
+        "argv": [
+          "arecord",
+          "-q",
+          "-D",
+          "robot_capture",
+          "-t",
+          "wav",
+          "-f",
+          "S16_LE",
+          "-r",
+          "48000",
+          "-c",
+          "1",
+          "-d",
+          "5",
+          "/var/tmp/300seconds-audio-20261024/duplex-capture.wav"
+        ],
+        "exit_code": 0,
+        "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+      },
+      {
+        "argv": [
+          "aplay",
+          "-q",
+          "-D",
+          "robot_playback",
+          "/var/tmp/300seconds-audio-20261024/microphone-baseline.wav"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 2.0345686470000146,
+        "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+      }
+    ],
+    "baseline": {
+      "metadata": {
+        "channels": 1,
+        "rate": 48000,
+        "frames": 96000,
+        "sample_width": 2
+      },
+      "samples": 96000,
+      "rms_dbfs": -49.54172321642676,
+      "peak": 617,
+      "clipped_samples": 0,
+      "nonzero_fraction": 0.9938854166666666
+    },
+    "duplex": {
+      "metadata": {
+        "channels": 1,
+        "rate": 48000,
+        "frames": 240000,
+        "sample_width": 2
+      },
+      "samples": 240000,
+      "rms_dbfs": -49.66819598902461,
+      "peak": 701,
+      "clipped_samples": 0,
+      "nonzero_fraction": 0.9913416666666667
+    },
+    "tone_detections": [
+      {
+        "frequency_hz": 660,
+        "above_baseline_db": 18.907430651312822,
+        "above_other_test_frequencies_db": 26.956286127182377
+      },
+      {
+        "frequency_hz": 880,
+        "above_baseline_db": 19.221906458906478,
+        "above_other_test_frequencies_db": 6.927537582859325
+      },
+      {
+        "frequency_hz": 1100,
+        "above_baseline_db": 22.393880736551285,
+        "above_other_test_frequencies_db": 9.919962732541215
+      }
+    ],
+    "acoustic_sequence_detected": true,
+    "pcm_capture_playback_duplex_pass": true
+  },
+  "cameras": [
+    {
+      "at_utc": "2026-10-23T17:20:18.754741+00:00",
+      "sensor_id": 0,
+      "uid": 997,
+      "video_nodes": [],
+      "frames_received": 0,
+      "pipeline": "nvarguscamerasrc sensor-id=0 num-buffers=1 ! video/x-raw(memory:NVMM),width=1280,height=720,framerate=30/1,format=NV12 ! nvvidconv ! video/x-raw,format=BGRx,width=640,height=480 ! videoconvert ! video/x-raw,format=RGB ! appsink name=frame max-buffers=1 drop=true sync=false",
+      "set_playing_result": "<enum GST_STATE_CHANGE_ASYNC of type Gst.StateChangeReturn>",
+      "error": "No real frame received within 10 seconds."
+    },
+    {
+      "at_utc": "2026-10-23T17:20:22.941544+00:00",
+      "sensor_id": 1,
+      "uid": 997,
+      "video_nodes": [],
+      "frames_received": 0,
+      "pipeline": "nvarguscamerasrc sensor-id=1 num-buffers=1 ! video/x-raw(memory:NVMM),width=1280,height=720,framerate=30/1,format=NV12 ! nvvidconv ! video/x-raw,format=BGRx,width=640,height=480 ! videoconvert ! video/x-raw,format=RGB ! appsink name=frame max-buffers=1 drop=true sync=false",
+      "set_playing_result": "<enum GST_STATE_CHANGE_ASYNC of type Gst.StateChangeReturn>",
+      "error": "No real frame received within 10 seconds."
+    }
+  ],
+  "device_access_setup": {
+    "at_utc": "2026-10-23T17:20:16.880832+00:00",
+    "audio_card": {
+      "card": "card2",
+      "alsa_id": "Device"
+    },
+    "accounts": {
+      "pico": "uid=999(pico) gid=992(pico) groups=992(pico),20(dialout),993(robot-device)",
+      "audiod": "uid=998(audiod) gid=991(audiod) groups=991(audiod),29(audio)",
+      "camerad": "uid=997(camerad) gid=990(camerad) groups=990(camerad),44(video),134(render)",
+      "jetson": "uid=1000(jetson) gid=1000(jetson) groups=1000(jetson),4(adm),20(dialout),24(cdrom),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(i2c),118(lpadmin),124(gdm),125(lightdm),999(gpio),996(weston-launch),130(sambashare),134(render),1001(jtop),993(robot-device)"
+    },
+    "rules": "/etc/udev/rules.d/99-z-300seconds-devices.rules",
+    "alsa_config": "/etc/alsa/conf.d/99-300seconds-usb.conf",
+    "baseline": "/var/lib/300seconds/device-access/baseline.json"
+  },
+  "device_access_baseline": {
+    "at_utc": "2026-10-23T17:18:09.856291+00:00",
+    "files": [
+      {
+        "path": "/etc/udev/rules.d/99-z-300seconds-devices.rules",
+        "kind": "absent"
+      },
+      {
+        "path": "/etc/alsa/conf.d/99-300seconds-usb.conf",
+        "kind": "absent"
+      }
+    ],
+    "accounts": {
+      "pico": "id: \u2018pico\u2019: no such user\n",
+      "audiod": "id: \u2018audiod\u2019: no such user\n",
+      "camerad": "id: \u2018camerad\u2019: no such user\n",
+      "jetson": "uid=1000(jetson) gid=1000(jetson) groups=1000(jetson),4(adm),20(dialout),24(cdrom),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(i2c),118(lpadmin),124(gdm),125(lightdm),999(gpio),996(weston-launch),130(sambashare),1001(jtop)\n"
+    },
+    "groups": {
+      "audio": "audio:x:29:pulse,jetson\n",
+      "video": "video:x:44:jetson,gdm,lightdm\n",
+      "render": "render:x:134:\n",
+      "dialout": "dialout:x:20:jetson\n",
+      "robot-device": ""
+    }
+  },
+  "accounts": {
+    "jetson": {
+      "id": "uid=1000(jetson) gid=1000(jetson) groups=1000(jetson),4(adm),20(dialout),24(cdrom),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(i2c),118(lpadmin),124(gdm),125(lightdm),999(gpio),996(weston-launch),130(sambashare),134(render),1001(jtop),993(robot-device)",
+      "passwd_entry": "jetson:x:1000:1000:MyJetson,,,:/home/jetson:/bin/bash"
+    },
+    "pico": {
+      "id": "uid=999(pico) gid=992(pico) groups=992(pico),20(dialout),993(robot-device)",
+      "passwd_entry": "pico:x:999:992::/var/lib/300seconds/pico:/usr/sbin/nologin"
+    },
+    "audiod": {
+      "id": "uid=998(audiod) gid=991(audiod) groups=991(audiod),29(audio)",
+      "passwd_entry": "audiod:x:998:991::/var/lib/300seconds/audiod:/usr/sbin/nologin"
+    },
+    "camerad": {
+      "id": "uid=997(camerad) gid=990(camerad) groups=990(camerad),44(video),134(render)",
+      "passwd_entry": "camerad:x:997:990::/var/lib/300seconds/camerad:/usr/sbin/nologin"
+    }
+  },
+  "device_nodes": [
+    {
+      "path": "/dev/pico-neopixel",
+      "realpath": "/dev/ttyACM0",
+      "mode": "0o660",
+      "uid": 0,
+      "gid": 993
+    },
+    {
+      "path": "/dev/snd/controlC2",
+      "realpath": "/dev/snd/controlC2",
+      "mode": "0o660",
+      "uid": 0,
+      "gid": 29
+    },
+    {
+      "path": "/dev/snd/pcmC2D0c",
+      "realpath": "/dev/snd/pcmC2D0c",
+      "mode": "0o660",
+      "uid": 0,
+      "gid": 29
+    },
+    {
+      "path": "/dev/snd/pcmC2D0p",
+      "realpath": "/dev/snd/pcmC2D0p",
+      "mode": "0o660",
+      "uid": 0,
+      "gid": 29
+    },
+    {
+      "path": "/dev/media0",
+      "realpath": "/dev/media0",
+      "mode": "0o660",
+      "uid": 0,
+      "gid": 44
+    }
+  ],
+  "camera_device_tree": [
+    {
+      "path": "/proc/device-tree/cam_i2cmux/i2c@0/rbpcv3_imx477_a@1a",
+      "compatible": "ridgerun,imx477",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/cam_i2cmux/i2c@0/rbpcv2_imx219_a@10",
+      "compatible": "nvidia,imx219"
+    },
+    {
+      "path": "/proc/device-tree/cam_i2cmux/i2c@1/rbpcv2_imx219_e@10",
+      "compatible": "nvidia,imx219"
+    },
+    {
+      "path": "/proc/device-tree/cam_i2cmux/i2c@1/rbpcv3_imx477_e@1a",
+      "compatible": "ridgerun,imx477",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/tegra-camera-platform/modules/module0/drivernode1",
+      "pcl_id": "v4l2_lens"
+    },
+    {
+      "path": "/proc/device-tree/tegra-camera-platform/modules/module0/drivernode0",
+      "devname": "imx219 7-0010",
+      "pcl_id": "v4l2_sensor"
+    },
+    {
+      "path": "/proc/device-tree/tegra-camera-platform/modules/module1/drivernode1",
+      "pcl_id": "v4l2_lens"
+    },
+    {
+      "path": "/proc/device-tree/tegra-camera-platform/modules/module1/drivernode0",
+      "devname": "imx219 8-0010",
+      "pcl_id": "v4l2_sensor"
+    }
+  ],
+  "default_target": "multi-user.target",
+  "services": {
+    "ssh.service": {
+      "Id": "ssh.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/lib/systemd/system/ssh.service",
+      "UnitFileState": "enabled"
+    },
+    "NetworkManager.service": {
+      "Id": "NetworkManager.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/lib/systemd/system/NetworkManager.service",
+      "UnitFileState": "enabled"
+    },
+    "automagic-fan.service": {
+      "Id": "automagic-fan.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/lib/systemd/system/automagic-fan.service",
+      "UnitFileState": "enabled"
+    },
+    "nvargus-daemon.service": {
+      "Id": "nvargus-daemon.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "FragmentPath": "/etc/systemd/system/nvargus-daemon.service",
+      "UnitFileState": "enabled"
+    },
+    "gdm.service": {
+      "Id": "gdm.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/lib/systemd/system/gdm.service",
+      "UnitFileState": "static"
+    },
+    "ros_init.service": {
+      "Id": "ros_init.service",
+      "LoadState": "loaded",
+      "ActiveState": "inactive",
+      "FragmentPath": "/etc/systemd/system/ros_init.service",
+      "UnitFileState": "disabled"
+    }
+  },
+  "ros_processes": [],
+  "scripts": {
+    "probe-device-access.py": "5a8b91bee3bc60fdc5ca5c5ab20877a5aad1b0af20c17daa1b4e787bb91ccc19",
+    "configure-device-access.sh": "a00c1b841a666eef030f227e44b76bf2123c0690a430b92d40c8224ccfe95c84",
+    "device_access.py": "421e6bd672b2c4decb1cfcdffdb8729f007a7968604bd032529275ae15d37002",
+    "check-device-access.sh": "302701c9ade56df695f550fdadc856a2112b2e1e62a1c5f2941155425cf5a38b",
+    "check-csi-camera.py": "c477d19623565d463691698e13cd30a94da69a664a964e13dedd7d0df57c715e",
+    "check-usb-audio.py": "ea873b177bbb478a1dd6cba4b715163dbcd2441c23d3e0011d657484375fa9d2"
+  }
+}

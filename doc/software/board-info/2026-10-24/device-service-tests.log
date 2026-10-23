@@ -1,0 +1,165 @@
+{
+  "at_utc": "2026-10-23T17:20:16.880832+00:00",
+  "audio_card": {
+    "card": "card2",
+    "alsa_id": "Device"
+  },
+  "accounts": {
+    "pico": "uid=999(pico) gid=992(pico) groups=992(pico),20(dialout),993(robot-device)",
+    "audiod": "uid=998(audiod) gid=991(audiod) groups=991(audiod),29(audio)",
+    "camerad": "uid=997(camerad) gid=990(camerad) groups=990(camerad),44(video),134(render)",
+    "jetson": "uid=1000(jetson) gid=1000(jetson) groups=1000(jetson),4(adm),20(dialout),24(cdrom),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(i2c),118(lpadmin),124(gdm),125(lightdm),999(gpio),996(weston-launch),130(sambashare),134(render),1001(jtop),993(robot-device)"
+  },
+  "rules": "/etc/udev/rules.d/99-z-300seconds-devices.rules",
+  "alsa_config": "/etc/alsa/conf.d/99-300seconds-usb.conf",
+  "baseline": "/var/lib/300seconds/device-access/baseline.json"
+}
+
+PICO_SERVICE_PROCESS
+{
+  "role": "pico",
+  "uid": 999,
+  "groups": [
+    "dialout",
+    "pico",
+    "robot-device"
+  ],
+  "devices": [
+    {
+      "path": "/dev/pico-neopixel",
+      "mode": "0o660",
+      "group": "robot-device",
+      "open_rw": true
+    },
+    {
+      "path": "/dev/bus/usb/001/005",
+      "mode": "0o660",
+      "group": "robot-device",
+      "open_rw": true
+    }
+  ]
+}
+
+AUDIO_SERVICE_PROCESS
+{
+  "role": "audio",
+  "uid": 998,
+  "groups": [
+    "audio",
+    "audiod"
+  ],
+  "devices": [
+    {
+      "path": "/dev/snd/controlC2",
+      "mode": "0o660",
+      "group": "audio",
+      "open_rw": true
+    },
+    {
+      "path": "/dev/snd/pcmC2D0c",
+      "mode": "0o660",
+      "group": "audio",
+      "open_rw": true
+    },
+    {
+      "path": "/dev/snd/pcmC2D0p",
+      "mode": "0o660",
+      "group": "audio",
+      "open_rw": true
+    }
+  ]
+}
+
+CAMERA_SERVICE_PROCESS
+{
+  "role": "camera",
+  "uid": 997,
+  "groups": [
+    "video",
+    "render",
+    "camerad"
+  ],
+  "devices": [
+    {
+      "path": "/dev/media0",
+      "mode": "0o660",
+      "group": "video",
+      "open_rw": true
+    },
+    {
+      "path": "/dev/nvmap",
+      "mode": "0o660",
+      "group": "video",
+      "open_rw": true
+    },
+    {
+      "path": "/dev/nvhost-vi",
+      "mode": "0o660",
+      "group": "video",
+      "open_rw": true
+    },
+    {
+      "path": "/dev/nvhost-isp",
+      "mode": "0o660",
+      "group": "video",
+      "open_rw": true
+    },
+    {
+      "path": "/dev/nvhost-vic",
+      "mode": "0o660",
+      "group": "video",
+      "open_rw": true
+    },
+    {
+      "path": "/dev/nvhost-gpu",
+      "mode": "0o660",
+      "group": "video",
+      "open_rw": true
+    }
+  ],
+  "video_nodes": []
+}
+
+ALSA_WARNING_RECHECK
+
+CAMERA_0_CAPTURE
+{
+  "at_utc": "2026-10-23T17:20:18.754741+00:00",
+  "sensor_id": 0,
+  "uid": 997,
+  "video_nodes": [],
+  "frames_received": 0,
+  "pipeline": "nvarguscamerasrc sensor-id=0 num-buffers=1 ! video/x-raw(memory:NVMM),width=1280,height=720,framerate=30/1,format=NV12 ! nvvidconv ! video/x-raw,format=BGRx,width=640,height=480 ! videoconvert ! video/x-raw,format=RGB ! appsink name=frame max-buffers=1 drop=true sync=false",
+  "set_playing_result": "<enum GST_STATE_CHANGE_ASYNC of type Gst.StateChangeReturn>",
+  "error": "No real frame received within 10 seconds."
+}
+CAMERA_0_EXIT=1
+
+CAMERA_1_CAPTURE
+{
+  "at_utc": "2026-10-23T17:20:22.941544+00:00",
+  "sensor_id": 1,
+  "uid": 997,
+  "video_nodes": [],
+  "frames_received": 0,
+  "pipeline": "nvarguscamerasrc sensor-id=1 num-buffers=1 ! video/x-raw(memory:NVMM),width=1280,height=720,framerate=30/1,format=NV12 ! nvvidconv ! video/x-raw,format=BGRx,width=640,height=480 ! videoconvert ! video/x-raw,format=RGB ! appsink name=frame max-buffers=1 drop=true sync=false",
+  "set_playing_result": "<enum GST_STATE_CHANGE_ASYNC of type Gst.StateChangeReturn>",
+  "error": "No real frame received within 10 seconds."
+}
+CAMERA_1_EXIT=1
+Running as unit: 300seconds-access-pico-74615.service
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 156ms
+Running as unit: 300seconds-access-audio-74628.service
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 185ms
+Running as unit: 300seconds-access-camera-74641.service
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 158ms
+
+(gst-plugin-scanner:74662): GStreamer-WARNING **: 19:20:20.218: Failed to load plugin '/usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstnvcompositor.so': libgstbadvideo-1.0.so.0: cannot open shared object file: No such file or directory
+Error generated. /dvs/git/dirty/git-master_linux/multimedia/nvgstreamer/gst-nvarguscamera/gstnvarguscamerasrc.cpp, execute:725 No cameras available
+Error generated. /dvs/git/dirty/git-master_linux/multimedia/nvgstreamer/gst-nvarguscamera/gstnvarguscamerasrc.cpp, execute:725 No cameras available

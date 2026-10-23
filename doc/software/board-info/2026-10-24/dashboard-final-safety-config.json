@@ -1,0 +1,159 @@
+{
+  "health": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  },
+  "missing_device_rejection": {
+    "matrix": 409,
+    "all": 409
+  },
+  "pico": {
+    "connected": true,
+    "age_ms": 7,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 544,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 55,
+      "raw_mask": 55,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 350344,
+          "interval_count": 700,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": true,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 350344,
+          "interval_count": 700,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": true,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 350344,
+          "interval_count": 700,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": true,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 350344,
+          "interval_count": 700,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": true,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 350344,
+          "interval_count": 700,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": true,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 697771
+    },
+    "session": "36C6CE15AE48278F",
+    "error": null,
+    "last_test": null,
+    "last_touch": null,
+    "module_tests": {},
+    "bridge_pid": 8142,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v1",
+    "installation": {
+      "touch_inputs_connected": false,
+      "matrix_connected": false,
+      "note": "사용자 확인: 현재 스위치와 도트매트릭스는 연결하지 않음"
+    }
+  },
+  "camera_state": [
+    {
+      "sensor_id": 0,
+      "node": "/dev/video0",
+      "ready": true,
+      "frames": 10404,
+      "encoded_frames": 10374,
+      "preview_frames": 5208,
+      "fps": 29.99,
+      "encoded_fps": 29.99,
+      "preview_fps": 14.99,
+      "capture_delivery_fps": 29.99,
+      "encoded_delivery_fps": 29.97,
+      "preview_delivery_fps": 14.95,
+      "encoder_pts_lag_ms": 0.0,
+      "encoded_mbps": 2.478,
+      "age_ms": 9,
+      "jpeg_bytes": 7661,
+      "preview_age_ms": 28,
+      "encoded_age_ms": 1,
+      "rtsp_feeds": 0
+    },
+    {
+      "sensor_id": 1,
+      "node": "/dev/video1",
+      "ready": true,
+      "frames": 10406,
+      "encoded_frames": 10376,
+      "preview_frames": 5208,
+      "fps": 29.98,
+      "encoded_fps": 29.98,
+      "preview_fps": 14.98,
+      "capture_delivery_fps": 29.98,
+      "encoded_delivery_fps": 29.96,
+      "preview_delivery_fps": 14.98,
+      "encoder_pts_lag_ms": 0.0,
+      "encoded_mbps": 2.499,
+      "age_ms": 14,
+      "jpeg_bytes": 7421,
+      "preview_age_ms": 38,
+      "encoded_age_ms": 6,
+      "rtsp_feeds": 0
+    }
+  ]
+}

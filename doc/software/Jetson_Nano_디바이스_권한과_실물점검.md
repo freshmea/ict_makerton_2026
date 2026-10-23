@@ -8,11 +8,11 @@
 | --- | --- | --- |
 | 스피커 | C-Media USB `0d8c:0014`, ALSA `Device` 카드의 재생 성공. 사용자가 **시험음이 정상적으로 들렸음**을 확인 | 실제 출력 확인 |
 | 마이크 | 같은 USB 장치에서 48kHz/S16_LE/mono 녹음 성공. 동시 재생한 660/880/1100Hz 순서가 마이크 입력에서 검출됨 | 실제 입력·동시 입출력 확인 |
-| Pico | USB `c0de:caff`, product **Pico2 NeoPixel Bench**, `/dev/ttyACM0`. 일반 사용자·별도 서비스 계정에서 serial/USB node 읽기·쓰기 open 성공 | 열거·접근 확인. 현재는 통합 binary 펌웨어 아님 |
-| 카메라 0 | 사용자 확인 Camera V3/IMX708, CSI 연결. `/dev/video*` 없음, 실제 Argus 취득 **0프레임**, `No cameras available` | 실패: 현재 BSP의 IMX708 지원 부재 |
-| 카메라 1 | 같은 조건에서 `sensor-id=1`도 실제 취득 **0프레임**, `No cameras available` | 실패: 현재 BSP의 IMX708 지원 부재 |
+| Pico | 초기 `c0de:caff` NeoPixel Bench의 비root 접근 확인 후, 승인된 flash로 현재 `c0de:cafc` / `/dev/pico-device` 통합 USB 왕복·LED/서보 시험 확인 | [최신 통합 결과](Jetson_Nano_장치_대시보드.md). 아래 초기 권한/제품명 로그는 당시 기록 |
+| 카메라 0 | **Camera V2로 교체 후** IMX219 `7-0010`, `/dev/video0`. 개별·동시 1280×720, 각각 90프레임, 약30fps | 실제 촬영·PNG 확인 성공 |
+| 카메라 1 | **Camera V2로 교체 후** IMX219 `8-0010`, `/dev/video1`. 개별·동시 1280×720, 각각 90프레임, 약30fps | 실제 촬영·PNG 확인 성공 |
 
-카메라의 media/GPU/VI/ISP 장치에 대한 일반 계정 접근은 통과했다. 이것을 카메라 센서 인식이나 프레임 취득 성공으로 표시하지 않는다. 센서 드라이버 지원 부재는 확인했지만 케이블·물리 모듈의 정상 여부까지 판별한 결과는 아니다.
+최신 [Camera V2 촬영 검증·실제 이미지](Jetson_Nano_Camera_V2_실물검증.md)에서 비root `camerad`의 개별·동시 취득을 확인했다. 아래 6절의 IMX708 실패는 교체 전 이력이다. 당시 media/GPU 권한만으로는 프레임 취득 성공을 입증하지 못했으며, 이번 V2 시험에서 실제 영상을 확보했다.
 
 ## 2. 권한 설정
 
@@ -99,9 +99,9 @@ NVIDIA Argus socket은 `/tmp/argus_socket`에 있으므로 카메라 프로세�
 
 현재 USB descriptor는 **`c0de:caff / Pico2 NeoPixel Bench`**다. 통합 진단은 **`c0de:cafc / pico-device-v1`**이므로 서로 다른 장치로 구분했다. 현재 보드에 통합 바이너리 Hello/Status를 보내거나 펌웨어를 바꾸지 않았다.
 
-검증한 것은 실제 USB 열거, CDC 드라이버 바인딩, 별칭/권한, `jetson`과 `pico`의 읽기·쓰기 open이다. protocol/서보·터치·LED 통합 동작은 후속 시험이다. 기존 [picod 템플릿](../../tools/pico-device-bench/picod.service)의 User `pico`도 준비됐지만 서비스 자체를 등록/자동 시작하지 않았다.
+검증한 것은 실제 USB 열거, CDC 드라이버 바인딩, 별칭/권한, `jetson`과 `pico`의 읽기·쓰기 open이다. 이 초기 단계 이후 protocol·LED·서보는 [대시보드 작업](Jetson_Nano_장치_대시보드.md)에서 실증했다. 현재 터치·매트릭스는 미연결이다. 초기 `pico` 서비스 계정은 준비했지만 별도 picod 서비스는 등록하지 않았다. 후속 자동 시작은 `boarddash` 계정의 [대시보드 서비스](../../apps/device-dashboard/300seconds-dashboard.service)를 사용한다.
 
-## 6. IMX708 카메라 두 개의 실패 근거
+## 6. 이전 IMX708 카메라 두 개의 실패 근거
 
 사용자는 두 모듈 모두 **Camera V3 / IMX708, CSI 연결**이라고 확인했다. 보드에서 확인한 값은 다음과 같다.
 
@@ -137,4 +137,4 @@ sudo -u audiod python3 -B /opt/300seconds/jetson/check-usb-audio.py \
 | [커널·USB·오디오 조사](board-info/2026-10-24/device-root-preflight.json) / [드라이버 조사](board-info/2026-10-24/device-diagnostics.json) | 포맷·mixer·probe 오류·IMX708 미존재 근거 |
 | [구현 소스](../../tools/jetson/) | 권한 설정기·서비스 open 확인·오디오·실제 프레임 확인 코드 |
 
-최종 상태에서도 SSH·네트워크·팬·Argus 서비스는 active, GUI와 ROS 서비스는 inactive였다. 카메라 실패를 성공으로 처리하지 않았다.
+당시 최종 상태에서도 SSH·네트워크·팬·Argus 서비스는 active, GUI와 ROS 서비스는 inactive였다. IMX708 실패 기록과 이후 V2 교체 성공을 구분한다.

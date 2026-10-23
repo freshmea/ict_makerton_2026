@@ -1,0 +1,46 @@
+{
+  "at_utc": "2026-10-23T18:06:27.388555+00:00",
+  "boot_id": "db574766-5526-4878-8218-4cb5d9a9f2c3",
+  "checks": {
+    "uptime": {
+      "rc": 0,
+      "output": " 20:06:27 up 0 min,  0 users,  load average: 1.23, 0.46, 0.16\n"
+    },
+    "devices": {
+      "rc": 0,
+      "output": "crw-rw---- 1 root video 251, 0 Oct 23 19:48 /dev/media0\ncrw-rw---- 1 root video  81, 0 Oct 23 19:48 /dev/video0\ncrw-rw---- 1 root video  81, 3 Oct 23 19:48 /dev/video1\n"
+    },
+    "v4l2": {
+      "rc": 0,
+      "output": "vi-output, imx219 7-0010 (platform:54080000.vi:0):\n\t/dev/video0\n\nvi-output, imx219 8-0010 (platform:54080000.vi:4):\n\t/dev/video1\n\nNVIDIA Tegra Video Input Device (platform:vi):\n\t/dev/media0\n\n"
+    },
+    "formats0": {
+      "rc": 0,
+      "output": "ioctl: VIDIOC_ENUM_FMT\n\tType: Video Capture\n\n\t[0]: 'RG10' (10-bit Bayer RGRG/GBGB)\n\t\tSize: Discrete 3264x2464\n\t\t\tInterval: Discrete 0.048s (21.000 fps)\n\t\tSize: Discrete 3264x1848\n\t\t\tInterval: Discrete 0.036s (28.000 fps)\n\t\tSize: Discrete 1920x1080\n\t\t\tInterval: Discrete 0.033s (30.000 fps)\n\t\tSize: Discrete 1640x1232\n\t\t\tInterval: Discrete 0.033s (30.000 fps)\n\t\tSize: Discrete 1280x720\n\t\t\tInterval: Discrete 0.017s (60.000 fps)\n"
+    },
+    "formats1": {
+      "rc": 0,
+      "output": "ioctl: VIDIOC_ENUM_FMT\n\tType: Video Capture\n\n\t[0]: 'RG10' (10-bit Bayer RGRG/GBGB)\n\t\tSize: Discrete 3264x2464\n\t\t\tInterval: Discrete 0.048s (21.000 fps)\n\t\tSize: Discrete 3264x1848\n\t\t\tInterval: Discrete 0.036s (28.000 fps)\n\t\tSize: Discrete 1920x1080\n\t\t\tInterval: Discrete 0.033s (30.000 fps)\n\t\tSize: Discrete 1640x1232\n\t\t\tInterval: Discrete 0.033s (30.000 fps)\n\t\tSize: Discrete 1280x720\n\t\t\tInterval: Discrete 0.017s (60.000 fps)\n"
+    },
+    "topology": {
+      "rc": 0,
+      "output": "Media controller API version 0.1.0\n\nMedia device information\n------------------------\ndriver          vi\nmodel           NVIDIA Tegra Video Input Device\nserial          \nbus info        \nhw revision     0x3\ndriver version  0.0.0\n\nDevice topology\n- entity 1: nvcsi--2 (2 pads, 2 links)\n            type V4L2 subdev subtype Unknown flags 0\n            device node name /dev/v4l-subdev0\n\tpad0: Sink\n\t\t<- \"imx219 7-0010\":0 [ENABLED]\n\tpad1: Source\n\t\t-> \"vi-output, imx219 7-0010\":0 [ENABLED]\n\n- entity 4: imx219 7-0010 (1 pad, 1 link)\n            type V4L2 subdev subtype Sensor flags 0\n            device node name /dev/v4l-subdev1\n\tpad0: Source\n\t\t[fmt:SRGGB10_1X10/3264x2464 field:none colorspace:srgb]\n\t\t-> \"nvcsi--2\":0 [ENABLED]\n\n- entity 6: vi-output, imx219 7-0010 (1 pad, 1 link)\n            type Node subtype V4L flags 0\n            device node name /dev/video0\n\tpad0: Sink\n\t\t<- \"nvcsi--2\":1 [ENABLED]\n\n- entity 18: nvcsi--1 (2 pads, 2 links)\n             type V4L2 subdev subtype Unknown flags 0\n             device node name /dev/v4l-subdev2\n\tpad0: Sink\n\t\t<- \"imx219 8-0010\":0 [ENABLED]\n\tpad1: Source\n\t\t-> \"vi-output, imx219 8-0010\":0 [ENABLED]\n\n- entity 21: imx219 8-0010 (1 pad, 1 link)\n             type V4L2 subdev subtype Sensor flags 0\n             device node name /dev/v4l-subdev3\n\tpad0: Source\n\t\t[fmt:SRGGB10_1X10/3264x2464 field:none colorspace:srgb]\n\t\t-> \"nvcsi--1\":0 [ENABLED]\n\n- entity 23: vi-output, imx219 8-0010 (1 pad, 1 link)\n             type Node subtype V4L flags 0\n             device node name /dev/video1\n\tpad0: Sink\n\t\t<- \"nvcsi--1\":1 [ENABLED]\n\n"
+    },
+    "kernel": {
+      "rc": 0,
+      "output": "Jun 17 22:29:41 nano kernel: Linux version 4.9.253-tegra (buildbrain@mobile-u64-5496-d5000) (gcc version 7.3.1 20180425 [linaro-7.3-2018.05 revision d29120a424ecfbc167ef90065c0eeb7f91977701] (Linaro GCC 7.3-2018.05) ) #1 SMP PREEMPT Mon Jul 26 12:13:06 PDT 2021\nJun 17 22:29:41 nano kernel: Kernel command line: tegraid=21.1.2.0.0 ddr_die=4096M@2048M section=512M memtype=0 vpr_resize usb_port_owner_info=0 lane_owner_info=0 emc_max_dvfs=0 touch_id=0@63 video=tegrafb no_console_suspend=1 console=ttyS0,115200n8 debug_uartport=lsport,4 earlyprintk=uart8250-32bit,0x70006000 maxcpus=4 usbcore.old_scheme_first=1 lp0_vec=0x1000@0xff780000 core_edp_mv=1125 core_edp_ma=4000 gpt  earlycon=uart8250,mmio32,0x70006000  root=/dev/mmcblk0p1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 quiet root=/dev/mmcblk0p1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 \nJun 17 22:29:41 nano kernel: tegra-id: opt_subrevision=0.\nJun 17 22:29:41 nano kernel: Tegra Speedo/IDDQ fuse revision 4\nJun 17 22:29:41 nano kernel: Tegra Revision: A02 SKU: 0x8f CPU Process: 0 SoC Process: 0\nJun 17 22:29:41 nano kernel: GPIO line 151 (camera-control-output-low) hogged as output/low\nJun 17 22:29:41 nano kernel: GPIO line 152 (camera-control-output-low) hogged as output/low\nJun 17 22:29:41 nano kernel: tegra_camera_platform tegra-camera-platform: tegra_camera_probe:camera_platform_driver probe\nJun 17 22:29:41 nano kernel: misc tegra_camera_ctrl: tegra_camera_isomgr_register isp_iso_bw=1500000, vi_iso_bw=1500000, max_bw=1500000\nJun 17 22:29:41 nano kernel: tegra-xudc-new 700d0000.xudc: device count: 1\nJun 17 22:29:41 nano kernel: imx219 7-0010: tegracam sensor driver:imx219_v2.0.6\nJun 17 22:29:41 nano kernel: imx219 8-0010: tegracam sensor driver:imx219_v2.0.6\nJun 17 22:29:41 nano kernel: tegra_dfll_action dfll-cdev-cap: Tegra DFLL 'cap cooling device' registered\nJun 17 22:29:41 nano kernel: tegra_dfll_action dfll-cdev-floor: Tegra DFLL 'floor cooling device' registered\nJun 17 22:29:41 nano kernel: tegra21x_actmon 6000c800.actmon: initialization Completed for the device mc_all\nJun 17 22:29:41 nano kernel: input: tegra-hda HDMI/DP,pcm=3 as /devices/70030000.hda/sound/card0/input0\nJun 17 22:29:41 nano kernel: tegra_core_action core_dvfs_cdev_floor: Tegra CORE DVFS 'floor cooling device' registered\nJun 17 22:29:41 nano kernel: tegra_core_action core_dvfs_cdev_cap: Tegra CORE DVFS 'cap cooling device' registered\nJun 17 22:29:41 nano kernel: vi 54080000.vi: subdev imx219 7-0010 bound\nJun 17 22:29:41 nano kernel: vi 54080000.vi: subdev imx219 8-0010 bound\n"
+    },
+    "camera_user": {
+      "rc": 0,
+      "output": "uid=997(camerad) gid=990(camerad) groups=990(camerad),44(video),134(render)\n"
+    },
+    "modules": {
+      "rc": 1,
+      "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nNameError: name 'Gst' is not defined\n"
+    }
+  },
+  "device_tree": {
+    "/proc/device-tree/tegra-camera-platform/modules/module0/drivernode0/devname": "imx219 7-0010 ",
+    "/proc/device-tree/tegra-camera-platform/modules/module1/drivernode0/devname": "imx219 8-0010 "
+  }
+}

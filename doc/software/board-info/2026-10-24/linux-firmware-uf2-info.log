@@ -1,0 +1,1 @@
+bash: line 1: 82871 Segmentation fault      (core dumped) .local-tools/linux/picotool/2.3.1/install/bin/picotool info -a firmware/pico2-device-bench/dist/linux/pico2-device-bench.uf2

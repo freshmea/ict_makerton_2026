@@ -4,11 +4,12 @@
 
 ## 설치 위치와 소스
 
-- Nano clone HEAD: `6e84286ee4bb49a93ce38bd9c4e4ea9ea33827ab`, origin `https://github.com/freshmea/ict_makerton_2026.git`. 적용 전 작업 트리는 깨끗했다.
-- Windows 작업본에는 아직 commit되지 않은 통합 host `src/main.rs`와 crate 내부 reset 모듈 등이 있다. 빌드에 필요한 현재 소스와 Linux 스크립트만 Nano clone에 반영했다. 따라서 HEAD만으로 이번 빌드 소스 전체를 재현할 수 없다. 변경 전 파일은 `/home/jetson/.cache/300seconds-linux-firmware-20261024/clone-baseline/`, 전송 목록·SHA-256은 같은 상위 폴더의 `sync-manifest.json`에 보존한다. 기존 clone을 reset하거나 push하지 않았다.
+- 최초 확인한 Nano clone HEAD는 `6e84286ee4bb49a93ce38bd9c4e4ea9ea33827ab`, origin은 `https://github.com/freshmea/ict_makerton_2026.git`이며 당시 작업 트리는 깨끗했다. 최종 빌드 시 HEAD는 `ef8b7d6b4698ac45a0400d67b8dafb11c93c20d3`으로 갱신되어 있었다. 이 설정 작업에서는 commit·push·reset을 실행하지 않았다.
+- 최초 전송 때 Windows 작업본의 미커밋 통합 host `src/main.rs`와 crate 내부 reset 모듈 등을 Nano clone에 반영했다. 변경 전 파일은 `/home/jetson/.cache/300seconds-linux-firmware-20261024/clone-baseline/`, 전송 목록·SHA-256은 같은 상위 폴더의 `sync-manifest.json`에 보존한다. 최종 빌드 당시의 HEAD·dirty 여부·실제 source SHA-256은 build-info.json으로 확인한다. Linux 설치 스크립트의 후속 수정도 포함하므로 HEAD만으로 이번 작업본 전체를 설명하지 않는다.
 - Rust 1.90.0: 기존 격리 설치 `$HOME/.local/share/300seconds/rust/`. `thumbv8m.main-none-eabihf` 타깃을 추가한다. 별도 ARM GCC는 필요하지 않다.
 - picotool 2.3.1: 저장소의 `.local-tools/linux/picotool/2.3.1/install/bin/picotool`. 소스 commit `2041936441b48a3cc53ae3da9e805229fe8f4e18`, Pico SDK 2.2.0 commit `a1438dff1d38bd9c65dbd693f0e5db4b9ae91779`를 고정한다. Nano aarch64에서 직접 빌드하고 install-info.json에 바이너리 SHA-256을 기록한다.
 - SDK의 사전 빌드 보조 ELF를 사용하는 `USE_PRECOMPILED=ON`이다. SDK mbedTLS를 받지 않아 picotool의 이미지 암호화·서명 기능은 설치하지 않는다. USB 읽기/쓰기/검증과 UF2 변환을 사용한다. UF2 SHA-256은 Python으로 별도 계산한다.
+- 이 Nano의 GNU 8.4.0 조합에서 picotool Release 빌드가 `info`의 clipp 출력 중 SIGSEGV를 일으켰다. 새 UF2와 SDK 기본 ELF 양쪽에서 재현했다. 같은 고정 소스를 **Debug**로 빌드하면 파일 정보 조회가 성공해, setup의 picotool만 Debug로 고정했다. 최적화·assert 등 어느 차이가 근본 원인인지는 확정하지 않았다. Pico 펌웨어와 Rust host는 Release다. setup은 SDK ELF의 실제 `info -a` 검사를 통과해야 install-info.json을 갱신하며, firmware 빌드도 새 UF2의 `info -a`를 확인한다.
 
 공식 [picotool 빌드 안내](https://github.com/raspberrypi/picotool/blob/2.3.1/BUILDING.md), [UF2·load·verify 명령](https://github.com/raspberrypi/picotool/blob/2.3.1/README.md)을 기준으로 했다.
 
@@ -50,11 +51,25 @@ SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="2e8a", ATTR{idPro
 
 ## 최초 업로드와 이후 업데이트
 
-현재 연결된 Pico는 `c0de:caff` **구형 NeoPixel Bench**다. 그 이미지의 Linux용 CLI와 소스가 현재 저장소에 없으므로 통합 바이너리 명령을 보내거나 미확인 reset을 강제로 수행하지 않는다. 처음 통합 이미지를 설치할 때에는 Pico의 **BOOTSEL을 누른 채 USB를 Nano에 다시 연결**해 `2e8a:000f`로 열거한 뒤 실행한다.
+대시보드 작업 전 연결된 Pico는 `c0de:caff` **NeoPixel Bench 변형**이다. VID/PID는 통합 `c0de:cafc`와 구분하는 식별자이며 이미지가 오래됐다는 뜻이 아니다. 재점검에서 interface 2의 class/subclass/protocol `ff/00/01`, 이름 `Reset`을 확인했고, **picotool `info -d -f`로 버튼 없이 ROM 진입·4 MiB flash 정보 조회·같은 앱 복귀에 성공했다.** 이전의 “구형이어서 최초 물리 BOOTSEL이 필요하다”는 판정은 잘못된 추론이었다.
+
+당시 이미지에는 통합 바이너리 CDC 명령 대신 picotool의 USB Reset 경로를 사용한다. 다음 명령은 flash를 쓰지 않고 ROM 정보를 읽은 뒤 앱으로 복귀하며 실제 성공을 확인했다. 아래 serial은 이번 보드의 public chip ID다. 다른 보드는 그 보드의 serial로 바꾼다.
 
 ```bash
 cd /home/jetson/ict_makerton_2026
-# 한 개의 RP2350 BOOTSEL 보드만 연결된 상태
+PICOTOOL="$PWD/.local-tools/linux/picotool/2.3.1/install/bin/picotool"
+PICO_SERIAL='E679675A69C4039B'
+# 읽기 점검: 버튼 없는 ROM 진입 → 정보 조회 → 앱 복귀
+"$PICOTOOL" info -d -f --vid 0xc0de --pid 0xcaff --ser "$PICO_SERIAL"
+```
+
+통합 이미지로 교체할 때에는 원격으로 ROM에 남도록 전환한 다음 기존 업로더를 사용할 수 있다. 이후 사용자 승인으로 아래 `reboot -u`→쓰기 조합도 실행해 성공했다. [대시보드 작업 기록](Jetson_Nano_장치_대시보드.md)을 따른다. 물리 BOOTSEL은 소프트웨어 Reset이 없는 이미지·손상된 앱의 복구 경로다.
+
+```bash
+cd /home/jetson/ict_makerton_2026
+# 먼저 위와 같이 PICOTOOL 변수를 지정한다. 한 개의 대상 보드만 연결한다.
+"$PICOTOOL" reboot -u -f --vid 0xc0de --pid 0xcaff --ser "$PICO_SERIAL"
+# ROM 2e8a:000f 진입 후, 백업·쓰기·읽기 검증·통합 CDC 확인
 bash firmware/flash-pico.sh --bootsel
 ```
 
@@ -79,4 +94,10 @@ bash firmware/flash-pico.sh --port /dev/pico-device
 
 ## 검증 기록
 
-2026-10-24 Nano 실측 로그는 [board-info/2026-10-24](board-info/2026-10-24/)의 `linux-firmware-*`에 보존한다. 최종 빌드·검사 결과와 실제 업로드 여부는 후속 검증 기록을 따른다.
+2026-10-24 KST Nano에서 다음을 확인했다. 원본은 [최종 설치·빌드 로그](board-info/2026-10-24/linux-firmware-setup-and-build-final.log), [호스트 검사](board-info/2026-10-24/linux-firmware-host-tests.log), [업로더 방어 검사](board-info/2026-10-24/linux-firmware-safety-tests.log), [최종 상태 JSON](board-info/2026-10-24/linux-firmware-final.json)을 따른다.
+
+- 고정 Rust 1.90.0 / RP2350 크로스 빌드와 Nano aarch64 Release host 빌드 성공.
+- UF2는 271블록·138,752바이트·Arm Secure다. SHA-256은 `e4f2352f342465035603079809e4103ef51acfde3f9cd5986199ebc230f9d44f`다. picotool에서도 이름 `Pico2 Device Bench`, target `RP2350`, `ARM Secure`, release 정보를 확인했다.
+- Rust host 테스트 8개와 업로더 방어 검사 11개 통과. shellcheck와 Bash 구문 검사 통과.
+- `flash-pico.sh --check`에서 준비 상태·UF2/host/tool 해시·현재 USB 접근을 확인했다. `/dev/pico-neopixel`을 통합 CDC 업로드 대상으로 지정하면 쓰기 전에 거부했다. 이는 스크립트의 변형 제한이며 picotool Reset 불가 판정이 아니다.
+- **재점검에서 버튼 없는 ROM 진입·정보 조회·동일 앱 복귀는 실제 성공했다.** 결과는 [현재 이미지·picotool 재점검](board-info/2026-10-24/picotool-current-image-recheck.json)에 기록했다. 이 재점검 당시에는 4 MiB 전체 백업·flash 쓰기/readback·새 통합 CDC 재연결을 실행하지 않았다. 이후 대시보드 작업 중 사용자 승인으로 모두 실행했고, 장치는 `c0de:cafc` 통합 이미지로 바뀌었다. [실제 flash 결과](board-info/2026-10-24/dashboard-pico-flash-result.json)를 따른다. 이전 [최종 상태 JSON](board-info/2026-10-24/linux-firmware-final.json)의 `initial_physical_bootsel_required: true`는 당시의 잘못된 추론이며 이 재점검으로 정정한다.

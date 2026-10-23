@@ -27,10 +27,12 @@ checkout() {
 }
 checkout https://github.com/raspberrypi/picotool.git 2041936441b48a3cc53ae3da9e805229fe8f4e18 "$PICO_TOOL_HOME/source"
 checkout https://github.com/raspberrypi/pico-sdk.git a1438dff1d38bd9c65dbd693f0e5db4b9ae91779 "$PICO_TOOL_HOME/sdk"
-cmake -S "$PICO_TOOL_HOME/source" -B "$PICO_TOOL_HOME/build" \
+# GNU 8.4 on this Nano crashes in clipp's formatter in Release. The same
+# unmodified source passes file-info smoke tests in Debug; only picotool uses it.
+cmake -S "$PICO_TOOL_HOME/source" -B "$PICO_TOOL_HOME/debug" \
     -DPICO_SDK_PATH="$PICO_TOOL_HOME/sdk" -DCMAKE_INSTALL_PREFIX="$PICO_TOOL_HOME/install" \
-    -DUSE_PRECOMPILED=ON -DPICOTOOL_NO_LIBUSB=OFF -DCMAKE_BUILD_TYPE=Release
-cmake --build "$PICO_TOOL_HOME/build" --parallel "${PICO_BUILD_JOBS:-2}"
-cmake --install "$PICO_TOOL_HOME/build"
+    -DUSE_PRECOMPILED=ON -DPICOTOOL_NO_LIBUSB=OFF -DCMAKE_BUILD_TYPE=Debug
+cmake --build "$PICO_TOOL_HOME/debug" --parallel "${PICO_BUILD_JOBS:-2}"
+cmake --install "$PICO_TOOL_HOME/debug"
 python3 -B "$PICO_REPO/firmware/pico_linux.py" record-tool
 echo 'Linux tools ready. Next: bash firmware/build-pico-device.sh'

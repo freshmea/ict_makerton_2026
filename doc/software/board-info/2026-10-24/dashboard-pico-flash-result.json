@@ -1,0 +1,41 @@
+{
+  "started_utc": "2026-10-23T18:28:28.948798+00:00",
+  "image": {
+    "target": "thumbv8m.main-none-eabihf",
+    "family": "0xe48bff59",
+    "blocks": 271,
+    "bytes": 138752,
+    "sha256": "e4f2352f342465035603079809e4103ef51acfde3f9cd5986199ebc230f9d44f"
+  },
+  "flash_verified": true,
+  "application_status_verified": true,
+  "completed": true,
+  "rom": {
+    "sysfs": "/sys/devices/70090000.xusb/usb1/1-2/1-2.3",
+    "vid": "2e8a",
+    "pid": "000f",
+    "serial": "E679675A69C4039B",
+    "bus": 1,
+    "address": 6,
+    "usb_node": "/dev/bus/usb/001/006",
+    "read_write": true
+  },
+  "backup": {
+    "path": "/home/jetson/ict_makerton_2026/tmp/pico-flash/20261023T182828.948488Z-linux/previous-flash.bin",
+    "sha256": "7570ec1f26cb83e2435acf285603f02ecdb46b49bac109eee0927f07a81512b8"
+  },
+  "status": {
+    "protocol": "pico-device-v1",
+    "bootloader": "picotool-v1",
+    "oe_high": "1",
+    "version": "1",
+    "session": "721373C66474702A",
+    "left_pixels": "18",
+    "right_pixels": "18",
+    "running": "None",
+    "faults": "0",
+    "dropped_events": "7"
+  },
+  "application_port": "/dev/ttyACM0",
+  "finished_utc": "2026-10-23T18:28:41.225547+00:00"
+}

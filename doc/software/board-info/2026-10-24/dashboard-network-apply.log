@@ -1,0 +1,12 @@
+{
+  "rtw_power_mgnt": "1",
+  "rtw_ips_mode": "1",
+  "rtw_enusbss": "0",
+  "usb_power_control": "on",
+  "networkmanager_powersave": "disable",
+  "driver_config": "# Applies on next driver load; no live module reload over SSH.\noptions r8188eu rtw_power_mgnt=0 rtw_ips_mode=0 rtw_enusbss=0\n",
+  "journal_config": "[Journal]\nStorage=persistent\nSystemMaxUse=16M\nSystemMaxFileSize=4M\nRuntimeMaxUse=8M\nMaxRetentionSec=2day\nSyncIntervalSec=30s\nRateLimitIntervalSec=30s\nRateLimitBurst=200\n",
+  "uptime_seconds": 251.39,
+  "timestamp_utc": "2026-10-23T19:30:57Z"
+}
+Archived and active journals take up 4.0M in the file system.

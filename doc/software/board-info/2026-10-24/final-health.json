@@ -1,0 +1,7 @@
+{
+  "at_utc": "2026-10-23T17:08:47.962445+00:00",
+  "command": "set -e\nfor f in /opt/300seconds/jetson/*.sh; do bash -n \"$f\"; done\nshellcheck /opt/300seconds/jetson/*.sh\nsystemctl is-active --quiet ssh.service\nsystemctl is-active --quiet NetworkManager.service\nsystemctl is-active --quiet automagic-fan.service\nsystemctl is-active --quiet nvargus-daemon.service\nprintf 'GUI: '; systemctl is-active gdm.service || true\nprintf 'Default: '; systemctl get-default\nprintf 'Rollback timer: '; systemctl is-active 300seconds-mode-rollback.timer || true\nprintf 'bnep: '; if [ -d /sys/module/bnep ]; then exit 1; else echo absent; fi\nprintf 'nvgpu: '; test -d /sys/module/nvgpu; echo present\nprintf 'ROS key: '; test ! -e /usr/share/keyrings/ros-archive-keyring.gpg; echo inactive\nprintf 'ROS marker: '; test -f /var/lib/300seconds/ros-disabled/disabled; echo present\nprintf 'PackageKit APT hook: '; cat /etc/apt/apt.conf.d/20packagekit\nprintf 'Current SSH groups: '; id -nG jetson\nprintf 'Final shell and essential-service checks passed\\n'\n",
+  "stdout": "GUI: inactive\nDefault: multi-user.target\nRollback timer: inactive\nbnep: absent\nnvgpu: present\nROS key: inactive\nROS marker: present\nPackageKit APT hook: // PackageKit APT notifications paused by 300seconds project mode.\nCurrent SSH groups: jetson adm dialout cdrom sudo audio dip video plugdev i2c lpadmin gdm lightdm gpio weston-launch sambashare jtop\nFinal shell and essential-service checks passed\n",
+  "stderr": "",
+  "exit_code": 0
+}

@@ -1,0 +1,30 @@
+   Compiling tokio v1.48.0
+   Compiling tokio-serial v5.4.5
+   Compiling pico-device-bench v0.1.0 (/home/jetson/ict_makerton_2026/tools/pico-device-bench)
+    Finished `release` profile [optimized] target(s) in 1m 31s
+     Running unittests src/lib.rs (tools/pico-device-bench/target/release/deps/pico_device_bench-695d9633170d9b03)
+
+running 6 tests
+test tests::json_requests_allow_only_typed_loopback_commands_and_valid_config ... ok
+test tests::keepalive_runs_while_waiting_without_replaying_test ... ok
+test tests::fragmented_codec_session_and_ack_matching_over_fake_serial ... ok
+test tests::get_status_requires_both_correlated_snapshot_and_ack ... ok
+test tests::udp_client_sends_one_typed_command_and_receives_ack_snapshot ... ok
+test tests::udp_stop_preempts_a_lost_test_ack_without_waiting_for_rpc_timeout ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (tools/pico-device-bench/target/release/deps/pico_device_bench-4e58e73f33a29708)
+
+running 2 tests
+test tests::canonical_alias_matching_and_usb_identity_are_explicit ... ok
+test tests::one_usb_owner_and_four_typed_ipc_commands_are_enforced ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pico_device_bench
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

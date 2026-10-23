@@ -1,0 +1,42 @@
+{
+  "app.py": {
+    "repo_sha256": "9b93ae34ed9188d0f560ab57444589ae15f9e7ce00e3b41006e08b263c4a284e",
+    "installed_sha256": "9b93ae34ed9188d0f560ab57444589ae15f9e7ce00e3b41006e08b263c4a284e",
+    "match": true
+  },
+  "hardware.py": {
+    "repo_sha256": "54c0ab394e470501d830cd864172bfe21a5cc5cb0da61a1a5e5bcffb0489d607",
+    "installed_sha256": "54c0ab394e470501d830cd864172bfe21a5cc5cb0da61a1a5e5bcffb0489d607",
+    "match": true
+  },
+  "media_worker.py": {
+    "repo_sha256": "6a6395f15beba3e8b65d927380449601ddb0d0d2bd594466e70e9e3f3dfdc03f",
+    "installed_sha256": "6a6395f15beba3e8b65d927380449601ddb0d0d2bd594466e70e9e3f3dfdc03f",
+    "match": true
+  },
+  "pico-config.json": {
+    "repo_sha256": "9be04869677760d2110326ecacabf027e5ae9681e493626d179ec5f92f3119d8",
+    "installed_sha256": "9be04869677760d2110326ecacabf027e5ae9681e493626d179ec5f92f3119d8",
+    "match": true
+  },
+  "installation.json": {
+    "repo_sha256": "266a95fc6fd3c5dd87996c46da105a9663dec5e4c376d04e283bf200fd49eca6",
+    "installed_sha256": "266a95fc6fd3c5dd87996c46da105a9663dec5e4c376d04e283bf200fd49eca6",
+    "match": true
+  },
+  "static/app.js": {
+    "repo_sha256": "4656af8b4b3755a6f255eb7355234dae5e32a8f71ee998c3aed2b88ad69a2ca6",
+    "installed_sha256": "4656af8b4b3755a6f255eb7355234dae5e32a8f71ee998c3aed2b88ad69a2ca6",
+    "match": true
+  },
+  "static/index.html": {
+    "repo_sha256": "688ab45b798e11d09d4a00c3a8efbee39d08e43bf9a2fa09dad70d737df45e19",
+    "installed_sha256": "688ab45b798e11d09d4a00c3a8efbee39d08e43bf9a2fa09dad70d737df45e19",
+    "match": true
+  },
+  "static/styles.css": {
+    "repo_sha256": "6ad6633d4f988056f250258a0a09ebf3e0b0b88f1f91a1150497bffdbb68ae77",
+    "installed_sha256": "6ad6633d4f988056f250258a0a09ebf3e0b0b88f1f91a1150497bffdbb68ae77",
+    "match": true
+  }
+}

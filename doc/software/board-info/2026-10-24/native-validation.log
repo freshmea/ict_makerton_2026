@@ -1,0 +1,160 @@
+Element registered: nvarguscamerasrc
+Element registered: nvvidconv
+Element registered: nvv4l2h264enc
+Element registered: webrtcdsp
+Element registered: webrtcechoprobe
+Element registered: alsasrc
+Element registered: alsasink
+Native link/load OK: GStreamer=GStreamer 1.16.3 ALSA=1.2.2 SQLite=3.31.1 OpenSSL=OpenSSL 1.1.1f  31 Mar 2020
+Synthetic WebRTC DSP pipeline reached EOS; hardware audio/AEC is untested.
+rustc 1.90.0 (1159e78c4 2025-09-14)
+binary: rustc
+commit-hash: 1159e78c4747b02ef996e55082b704c09b970588
+commit-date: 2025-09-14
+host: aarch64-unknown-linux-gnu
+release: 1.90.0
+LLVM version: 20.1.8
+cargo 1.90.0 (840b83a10 2025-07-30)
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded bitflags v1.3.2
+  Downloaded errno v0.3.14
+  Downloaded cfg-if v1.0.5
+  Downloaded futures v0.3.34
+  Downloaded cobs v0.3.0
+  Downloaded cfg_aliases v0.2.2
+  Downloaded byteorder v1.5.0
+  Downloaded futures-io v0.3.34
+  Downloaded scopeguard v1.2.0
+  Downloaded futures-sink v0.3.34
+  Downloaded futures-macro v0.3.34
+  Downloaded itoa v1.0.18
+  Downloaded futures-task v0.3.34
+  Downloaded hash32 v0.3.1
+  Downloaded futures-core v0.3.34
+  Downloaded signal-hook-registry v1.4.8
+  Downloaded mio-serial v5.0.7
+  Downloaded futures-executor v0.3.34
+  Downloaded tokio-serial v5.4.5
+  Downloaded slab v0.4.12
+  Downloaded bytes v1.12.1
+  Downloaded thiserror v2.0.21
+  Downloaded stable_deref_trait v1.2.1
+  Downloaded postcard v1.1.3
+  Downloaded unicode-ident v1.0.27
+  Downloaded unescaper v0.1.10
+  Downloaded futures-channel v0.3.34
+  Downloaded tokio-macros v2.6.1
+  Downloaded getrandom v0.2.16
+  Downloaded serde_derive v1.0.228
+  Downloaded ryu v1.0.23
+  Downloaded bitflags v2.13.2
+  Downloaded socket2 v0.6.5
+  Downloaded serialport v4.8.1
+  Downloaded heapless v0.8.0
+  Downloaded serde v1.0.228
+  Downloaded memchr v2.8.3
+  Downloaded log v0.4.34
+  Downloaded mio v1.2.4
+  Downloaded serde_core v1.0.228
+  Downloaded proc-macro2 v1.0.107
+  Downloaded quote v1.0.40
+  Downloaded serde_json v1.0.145
+  Downloaded pin-project-lite v0.2.17
+  Downloaded futures-util v0.3.34
+  Downloaded thiserror-impl v2.0.21
+  Downloaded nix v0.26.4
+  Downloaded syn v3.0.9
+  Downloaded nix v0.31.3
+  Downloaded syn v2.0.119
+  Downloaded tokio v1.48.0
+  Downloaded libc v0.2.191
+   Compiling unicode-ident v1.0.27
+   Compiling proc-macro2 v1.0.107
+   Compiling libc v0.2.191
+   Compiling quote v1.0.40
+   Compiling syn v3.0.9
+   Compiling thiserror v2.0.21
+   Compiling syn v2.0.119
+   Compiling thiserror-impl v2.0.21
+   Compiling cfg-if v1.0.5
+   Compiling serde_core v1.0.228
+   Compiling futures-sink v0.3.34
+   Compiling cfg_aliases v0.2.2
+   Compiling memchr v2.8.3
+   Compiling futures-core v0.3.34
+   Compiling pin-project-lite v0.2.17
+   Compiling futures-channel v0.3.34
+   Compiling nix v0.31.3
+   Compiling futures-macro v0.3.34
+   Compiling log v0.4.34
+   Compiling slab v0.4.12
+   Compiling bitflags v2.13.2
+   Compiling futures-task v0.3.34
+   Compiling futures-io v0.3.34
+   Compiling bitflags v1.3.2
+   Compiling serde v1.0.228
+   Compiling nix v0.26.4
+   Compiling futures-util v0.3.34
+   Compiling mio v1.2.4
+   Compiling unescaper v0.1.10
+   Compiling serde_derive v1.0.228
+   Compiling errno v0.3.14
+   Compiling byteorder v1.5.0
+   Compiling heapless v0.8.0
+   Compiling scopeguard v1.2.0
+   Compiling serialport v4.8.1
+   Compiling hash32 v0.3.1
+   Compiling signal-hook-registry v1.4.8
+   Compiling futures-executor v0.3.34
+   Compiling cobs v0.3.0
+   Compiling tokio-macros v2.6.1
+   Compiling socket2 v0.6.5
+   Compiling stable_deref_trait v1.2.1
+   Compiling serde_json v1.0.145
+   Compiling bytes v1.12.1
+   Compiling tokio v1.48.0
+   Compiling postcard v1.1.3
+   Compiling mio-serial v5.0.7
+   Compiling futures v0.3.34
+   Compiling itoa v1.0.18
+   Compiling ryu v1.0.23
+   Compiling pico-device-protocol v0.1.0 (/home/jetson/.cache/300seconds-validation-20261024/source/crates/pico-device-protocol)
+   Compiling getrandom v0.2.16
+   Compiling tokio-serial v5.4.5
+   Compiling pico-device-bench v0.1.0 (/home/jetson/.cache/300seconds-validation-20261024/source/tools/pico-device-bench)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 41s
+     Running unittests src/lib.rs (tools/pico-device-bench/target/debug/deps/pico_device_bench-6f5432a586f3cb31)
+
+running 6 tests
+test tests::keepalive_runs_while_waiting_without_replaying_test ... ok
+test tests::fragmented_codec_session_and_ack_matching_over_fake_serial ... ok
+test tests::json_requests_allow_only_typed_loopback_commands_and_valid_config ... ok
+test tests::udp_client_sends_one_typed_command_and_receives_ack_snapshot ... ok
+test tests::get_status_requires_both_correlated_snapshot_and_ack ... ok
+test tests::udp_stop_preempts_a_lost_test_ack_without_waiting_for_rpc_timeout ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/main.rs (tools/pico-device-bench/target/debug/deps/pico_device_bench-da73d837139056fd)
+
+running 2 tests
+test tests::canonical_alias_matching_and_usb_identity_are_explicit ... ok
+test tests::one_usb_owner_and_four_typed_ipc_commands_are_enforced ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pico_device_bench
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.15s
+     Running `tools/pico-device-bench/target/debug/examples/native_uds_smoke`
+Tokio AF_UNIX native roundtrip OK on aarch64
+   Compiling tokio v1.48.0
+   Compiling tokio-serial v5.4.5
+   Compiling pico-device-bench v0.1.0 (/home/jetson/.cache/300seconds-validation-20261024/source/tools/pico-device-bench)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 38.15s
+bd4900c6b1e181740145834b0e80e71a0462e83fde20f5c8f4fb69a710c1c863  tools/pico-device-bench/target/debug/pico-device-bench

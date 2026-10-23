@@ -1,0 +1,39 @@
+Stopped/guarded: cups.socket
+Stopped/guarded: cups.path
+Stopped/guarded: avahi-daemon.socket
+Stopped/guarded: gpsd.socket
+Stopped/guarded: docker.socket
+Stopped/guarded: snapd.socket
+Stopped/guarded: snapd.snap-repair.timer
+Stopped/guarded: cups-browsed.service
+Stopped/guarded: cups.service
+Stopped/guarded: avahi-daemon.service
+Stopped/guarded: bluetooth.service
+Stopped/guarded: blueman-mechanism.service
+Stopped/guarded: ModemManager.service
+Stopped/guarded: gpsd.service
+Stopped/guarded: colord.service
+Stopped/guarded: packagekit.service
+Stopped/guarded: whoopsie.service
+Stopped/guarded: kerneloops.service
+Stopped/guarded: teamviewerd.service
+Stopped/guarded: switcheroo-control.service
+Stopped/guarded: geoclue.service
+Stopped/guarded: spice-vdagentd.service
+Stopped/guarded: nvweston.service
+Stopped/guarded: nvmemwarning.service
+Stopped/guarded: docker.service
+Stopped/guarded: containerd.service
+Stopped/guarded: snapd.snap-repair.service
+Stopped/guarded: snapd.service
+Stopped/guarded: gdm.service
+{
+  "mode": "project",
+  "at_utc": "2026-10-23T16:52:36.171802+00:00",
+  "bnep_loaded": false,
+  "bnep_unload_exit": 0,
+  "bnep_unload_output": "",
+  "memory_after": "              total        used        free      shared  buff/cache   available\nMem:     4156661760  1261846528  1126498304    10731520  1768316928  2713198592\nSwap:    4225806336    49004544  4176801792\n"
+}
+Running timer as unit: 300seconds-mode-rollback.timer
+Will run service as unit: 300seconds-mode-rollback.service
