@@ -2,3 +2,7 @@
 tmp/
 .local-tools/
 **/target/
+doc/BOM/mechanical_v8/videos/capture
+doc/BOM/mechanical_v8/videos/P5_joint_drive_demo_audit
+doc/BOM/mechanical_v8/videos/P5_section_side30_to_front_audit
+*.zip

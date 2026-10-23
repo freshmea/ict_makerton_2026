@@ -14,7 +14,7 @@ use embassy_usb::{class::cdc_acm::{CdcAcmClass,Receiver,Sender,State},UsbDevice}
 use pico_device_protocol::{AckCode,DeviceConfig,DeviceStatus,Frame as WireFrame,FrameDecoder,
     Message,Module,TouchEngine,TouchState,VERSION,MAX_WIRE};
 use pico2_device_bench::{picotool_reset,Admission,Gesture,GestureAction,MatrixFrame,
-    SessionGate,CAPACITY,matrix_frame,neo_frame,servo_angle,servo_ticks,stage};
+    ReleaseGuard,SessionGate,CAPACITY,matrix_frame,neo_frame,servo_angle,servo_ticks,stage};
 use smart_leds::RGB8;
 use static_cell::StaticCell;
 
@@ -174,28 +174,26 @@ async fn touch_task(mut pins:[Flex<'static>;6],mut config:DeviceConfig){
     for pin in &mut pins{pin.set_as_input();pin.set_pull(Pull::None);}
     let mut engine=TouchEngine::new(config).unwrap();let mut gesture=Gesture::new();
     // Require an initial release: a held input at boot/configuration is not a new gesture.
-    let mut await_release=true;let mut release_since=None;
+    let mut release_guard=ReleaseGuard::new();let mut was_armed=false;
     loop{
         let time=Instant::now().as_millis();
-        if let Some(value)=TOUCH_CONFIG.try_take(){config=value;let _=engine.configure(value,time);gesture.clear(true);await_release=true;release_since=None;}
+        if let Some(value)=TOUCH_CONFIG.try_take(){config=value;let _=engine.configure(value,time);gesture.clear(true);release_guard.cancel();was_armed=false;}
         let mut raw=0;for(index,pin)in pins.iter().enumerate(){if pin.is_high(){raw|=1<<index;}}
         for value in engine.sample(raw,time){event(Message::Touch(value));}
         let pressed=engine.pressed_mask();
         SNAPSHOT.lock(|v|*v.borrow_mut()=Some(TouchSnapshot{raw,pressed,states:engine.states(time)}));
         let bit=if config.test_switch==0{0}else{1<<(config.test_switch-1)};
         let logical_raw=(raw^config.touch_active_low_mask)&bit!=0;
-        if await_release{
-            if logical_raw{release_since=None;}else{
-                let since=release_since.get_or_insert(time);
-                if time.saturating_sub(*since)>=30{await_release=false;gesture.clear(false);}
-            }
-        }else if let Some(action)=gesture.sample(pressed&bit!=0,ACTIVE.load(Ordering::SeqCst),
+        let armed=release_guard.armed(logical_raw,time);
+        if armed&&!was_armed{gesture.clear(false);}
+        was_armed=armed;
+        if armed{if let Some(action)=gesture.sample(pressed&bit!=0,ACTIVE.load(Ordering::SeqCst),
             config.local_tests_enabled&&bit!=0,GENERATION.load(Ordering::SeqCst),time,config.hold_interval_ms){
             match action{
                 GestureAction::Stop=>request_stop(3),
                 GestureAction::Test(module)=>{let generation=GENERATION.load(Ordering::SeqCst);let _=LOCALS.try_send(LocalCommand{module,generation});}
             }
-        }
+        }}
         Timer::after_millis(5).await;
     }
 }
@@ -287,7 +285,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
             Either3::First(())=>{
                 let old=run.take();ACTIVE.store(false,Ordering::SeqCst);
                 faults|=devices.stop_all().await;
-                if let Some(value)=old{event(Message::TestEvent{module:value.selected,phase:value.phase,done:true,fault:faults!=0});}
+                if let Some(value)=old{event(Message::TestEvent{module:value.selected,phase:value.phase,done:true,fault:true});}
                 if matches!(STOP_REASON.load(Ordering::SeqCst),2|4){gate.open(0);set_session(0);}
                 if let Some(frame)=STOP_ACK.try_take(){if frame.session==gate.session{gate.finish(frame.seq,AckCode::Ok);}ack(frame,AckCode::Ok);}
                 if BOOT_REQUESTED.load(Ordering::SeqCst){

@@ -32,6 +32,22 @@ impl SessionGate {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GestureAction { Test(Module), Stop }
+pub struct ReleaseGuard { waiting: bool, since: Option<u64> }
+impl ReleaseGuard {
+    pub const fn new() -> Self { Self { waiting: true, since: None } }
+    pub fn cancel(&mut self) { self.waiting = true; self.since = None; }
+    /// Use the logical raw level, not a debouncer's reset-to-false state.
+    pub fn armed(&mut self, raw_pressed: bool, now: u64) -> bool {
+        if self.waiting {
+            if raw_pressed { self.since = None; }
+            else {
+                let since = self.since.get_or_insert(now);
+                if now.saturating_sub(*since) >= 30 { self.waiting = false; }
+            }
+        }
+        !self.waiting
+    }
+}
 pub struct Gesture {
     was_pressed: bool,
     started: u64,
@@ -139,6 +155,21 @@ mod tests {
         assert_eq!(g.sample(false,false,true,2,200,500),None);
         let mut g = Gesture::new(); assert_eq!(g.sample(true,true,true,0,0,500),Some(GestureAction::Stop));
         assert_eq!(g.sample(false,false,true,1,200,500),None);
+    }
+    #[test]
+    fn boot_or_config_held_requires_real_raw_release_before_new_press() {
+        let mut guard = ReleaseGuard::new();
+        assert!(!guard.armed(true,0)); assert!(!guard.armed(true,2000));
+        assert!(!guard.armed(false,2010)); assert!(!guard.armed(false,2039));
+        assert!(guard.armed(false,2040));
+        guard.cancel();
+        // Even if TouchEngine.configure temporarily reports debounced false,
+        // a physically held raw input cannot re-arm the diagnostic gesture.
+        assert!(!guard.armed(true,3000)); assert!(!guard.armed(true,4000));
+        assert!(!guard.armed(false,4010)); assert!(guard.armed(false,4040));
+        let mut g = Gesture::new();
+        assert_eq!(g.sample(true,false,true,1,4100,500),None);
+        assert_eq!(g.sample(false,false,true,1,4200,500),Some(GestureAction::Test(Module::Matrix)));
     }
     #[test]
     fn segments_tail_black_and_small_servo_excursion() {
