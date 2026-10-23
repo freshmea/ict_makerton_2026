@@ -1,0 +1,607 @@
+{
+  "commands": [
+    {
+      "command": "occurrence.ground",
+      "params": {
+        "occurrence": 2,
+        "grounded": true
+      }
+    },
+    {
+      "command": "joint.rigid_group",
+      "params": {
+        "occurrences": [
+          2,
+          8,
+          12,
+          16,
+          20,
+          24,
+          28,
+          40,
+          44,
+          48,
+          52,
+          56,
+          60,
+          64,
+          68,
+          72,
+          76,
+          80,
+          84,
+          116,
+          120,
+          124,
+          128,
+          132,
+          164,
+          168,
+          172,
+          176
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "L_J1_YAW",
+        "type": "revolute",
+        "a": "P1_closed_base:1",
+        "b": "P4_L_YAW_CARRIER:1",
+        "at": {
+          "occurrence": "P1_closed_base:1",
+          "point": [
+            -275,
+            40,
+            130
+          ],
+          "z": [
+            0,
+            0,
+            1
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "L_J2_SHOULDER_PITCH",
+        "type": "revolute",
+        "a": "P4_L_YAW_CARRIER:1",
+        "b": "P4_L_ARM:1",
+        "at": {
+          "occurrence": "P4_L_YAW_CARRIER:1",
+          "point": [
+            -275,
+            40,
+            180
+          ],
+          "z": [
+            0,
+            1,
+            0
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "L_J3_WRIST_PITCH",
+        "type": "revolute",
+        "a": "P4_L_ARM:1",
+        "b": "P4_L_HAND:1",
+        "at": {
+          "occurrence": "P4_L_ARM:1",
+          "point": [
+            -220,
+            40,
+            315
+          ],
+          "z": [
+            0,
+            1,
+            0
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "R_J1_YAW",
+        "type": "revolute",
+        "a": "P1_closed_base:1",
+        "b": "P4_R_YAW_CARRIER:1",
+        "at": {
+          "occurrence": "P1_closed_base:1",
+          "point": [
+            275,
+            40,
+            130
+          ],
+          "z": [
+            0,
+            0,
+            1
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "R_J2_SHOULDER_PITCH",
+        "type": "revolute",
+        "a": "P4_R_YAW_CARRIER:1",
+        "b": "P4_R_ARM:1",
+        "at": {
+          "occurrence": "P4_R_YAW_CARRIER:1",
+          "point": [
+            275,
+            40,
+            180
+          ],
+          "z": [
+            0,
+            1,
+            0
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "R_J3_WRIST_PITCH",
+        "type": "revolute",
+        "a": "P4_R_ARM:1",
+        "b": "P4_R_HAND:1",
+        "at": {
+          "occurrence": "P4_R_ARM:1",
+          "point": [
+            220,
+            40,
+            315
+          ],
+          "z": [
+            0,
+            1,
+            0
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "P4_SIX_JOINT_DEMO",
+        "steps": 120,
+        "keys": [
+          {
+            "joint": "L_J1_YAW",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                120,
+                0
+              ]
+            ]
+          },
+          {
+            "joint": "L_J2_SHOULDER_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                20,
+                0
+              ],
+              [
+                25,
+                10
+              ],
+              [
+                30,
+                -10
+              ],
+              [
+                35,
+                0
+              ],
+              [
+                120,
+                0
+              ]
+            ]
+          },
+          {
+            "joint": "L_J3_WRIST_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                40,
+                0
+              ],
+              [
+                45,
+                10
+              ],
+              [
+                50,
+                -10
+              ],
+              [
+                55,
+                0
+              ],
+              [
+                120,
+                0
+              ]
+            ]
+          },
+          {
+            "joint": "R_J1_YAW",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                60,
+                0
+              ],
+              [
+                65,
+                10
+              ],
+              [
+                70,
+                -10
+              ],
+              [
+                75,
+                0
+              ],
+              [
+                120,
+                0
+              ]
+            ]
+          },
+          {
+            "joint": "R_J2_SHOULDER_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                80,
+                0
+              ],
+              [
+                85,
+                10
+              ],
+              [
+                90,
+                -10
+              ],
+              [
+                95,
+                0
+              ],
+              [
+                120,
+                0
+              ]
+            ]
+          },
+          {
+            "joint": "R_J3_WRIST_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                100,
+                0
+              ],
+              [
+                105,
+                10
+              ],
+              [
+                110,
+                -10
+              ],
+              [
+                115,
+                0
+              ],
+              [
+                120,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "L_J1_YAW_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "L_J1_YAW",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "L_J2_SHOULDER_PITCH_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "L_J2_SHOULDER_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "L_J3_WRIST_PITCH_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "L_J3_WRIST_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "R_J1_YAW_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "R_J1_YAW",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "R_J2_SHOULDER_PITCH_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "R_J2_SHOULDER_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "R_J3_WRIST_PITCH_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "R_J3_WRIST_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "document.metadata.set",
+      "params": {
+        "values": {
+          "project": "Fold Wing Buddy v8 P4 - six servos",
+          "revision": "P4",
+          "description": "Six CLS6336HV servo envelopes, three serial revolute joints per arm: yaw, shoulder pitch, wrist pitch. Native added shoulder housing and carrier. Neutral save; +/-15 degree provisional CAD limits only."
+        }
+      }
+    }
+  ]
+}

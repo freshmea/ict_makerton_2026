@@ -1,0 +1,2471 @@
+[
+  {
+    "display_value": -1.0,
+    "name": "hand",
+    "unit": "",
+    "value": -1.0
+  },
+  {
+    "display_value": -220.0,
+    "name": "qx",
+    "unit": "mm",
+    "value": -220.0
+  },
+  {
+    "display_value": 315.0,
+    "name": "zc",
+    "unit": "mm",
+    "value": 315.0
+  },
+  {
+    "display_value": -139.0,
+    "name": "pcx",
+    "unit": "mm",
+    "value": -139.0
+  },
+  {
+    "display_value": 90.0,
+    "name": "cap_d",
+    "unit": "mm",
+    "value": 90.0
+  },
+  {
+    "display_value": 80.0,
+    "name": "palm_l",
+    "unit": "mm",
+    "value": 80.0
+  },
+  {
+    "display_value": 42.0,
+    "name": "palm_h",
+    "unit": "mm",
+    "value": 42.0
+  },
+  {
+    "display_value": 3.2,
+    "name": "wall",
+    "unit": "mm",
+    "value": 3.2
+  },
+  {
+    "display_value": 3.4,
+    "name": "bolt_d",
+    "unit": "mm",
+    "value": 3.4
+  },
+  {
+    "display_value": 4.0,
+    "name": "dowel_d",
+    "unit": "mm",
+    "value": 4.0
+  },
+  {
+    "display_value": 0.4,
+    "name": "fit",
+    "unit": "mm",
+    "value": 0.4
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [],
+    "created_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "feature": 1,
+    "ms": 2.64,
+    "name": "BearingCap",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 2,
+    "ms": 118.58829999999999,
+    "name": "OuterBridge",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "PalmOuterProfile",
+    "projected": null,
+    "sketch": 3
+  },
+  {
+    "constraints": [
+      "k1",
+      "k2",
+      "k3",
+      "k4",
+      "k5"
+    ],
+    "created": {
+      "constraints": [
+        "k1",
+        "k2",
+        "k3",
+        "k4",
+        "k5"
+      ],
+      "curves": [
+        "l1",
+        "a1",
+        "l2",
+        "a2"
+      ],
+      "dimensions": [
+        "k6",
+        "k7"
+      ],
+      "points": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "a1.center",
+        "a2.center"
+      ]
+    },
+    "curves": [
+      "l1",
+      "a1",
+      "l2",
+      "a2"
+    ],
+    "dimensions": {
+      "length": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k6"
+          ],
+          "points": []
+        },
+        "expression": "palm_l",
+        "measured": 80.0,
+        "param": "d7",
+        "sketch": {
+          "dof": 4,
+          "solved": true
+        },
+        "type": "LinearDimension",
+        "unit": "mm"
+      },
+      "width": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k7"
+          ],
+          "points": []
+        },
+        "expression": "palm_h",
+        "measured": 42.0,
+        "param": "d8",
+        "sketch": {
+          "dof": 3,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 5,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k8"
+      ],
+      "points": []
+    },
+    "expression": "abs((pcx)+((palm_l)-(palm_h))/2)",
+    "measured": 120.0,
+    "param": "d9",
+    "sketch": {
+      "dof": 2,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k9"
+      ],
+      "points": []
+    },
+    "expression": "zc",
+    "measured": 315.0,
+    "param": "d10",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k10"
+      ],
+      "points": []
+    },
+    "expression": "zc",
+    "measured": 315.0,
+    "param": "d11",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 3
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR",
+      "L_WRAP_HAND_REAR_Palm"
+    ],
+    "changed_bodies": [],
+    "created_bodies": [
+      "L_WRAP_HAND_REAR_Palm"
+    ],
+    "feature": 4,
+    "ms": 1.7135,
+    "name": "PalmOuter",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "PalmCavityProfile",
+    "projected": null,
+    "sketch": 5
+  },
+  {
+    "constraints": [
+      "k1",
+      "k2",
+      "k3",
+      "k4",
+      "k5"
+    ],
+    "created": {
+      "constraints": [
+        "k1",
+        "k2",
+        "k3",
+        "k4",
+        "k5"
+      ],
+      "curves": [
+        "l1",
+        "a1",
+        "l2",
+        "a2"
+      ],
+      "dimensions": [
+        "k6",
+        "k7"
+      ],
+      "points": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "a1.center",
+        "a2.center"
+      ]
+    },
+    "curves": [
+      "l1",
+      "a1",
+      "l2",
+      "a2"
+    ],
+    "dimensions": {
+      "length": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k6"
+          ],
+          "points": []
+        },
+        "expression": "palm_l-2*wall",
+        "measured": 73.6,
+        "param": "d14",
+        "sketch": {
+          "dof": 4,
+          "solved": true
+        },
+        "type": "LinearDimension",
+        "unit": "mm"
+      },
+      "width": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k7"
+          ],
+          "points": []
+        },
+        "expression": "palm_h-2*wall",
+        "measured": 35.6,
+        "param": "d15",
+        "sketch": {
+          "dof": 3,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 5,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k8"
+      ],
+      "points": []
+    },
+    "expression": "abs((pcx)+((palm_l-2*wall)-(palm_h-2*wall))/2)",
+    "measured": 120.0,
+    "param": "d16",
+    "sketch": {
+      "dof": 2,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k9"
+      ],
+      "points": []
+    },
+    "expression": "zc",
+    "measured": 315.0,
+    "param": "d17",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k10"
+      ],
+      "points": []
+    },
+    "expression": "zc",
+    "measured": 315.0,
+    "param": "d18",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 5
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR",
+      "L_WRAP_HAND_REAR_Palm"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR_Palm"
+    ],
+    "created_bodies": [],
+    "feature": 6,
+    "ms": 20.5794,
+    "name": "PalmCavity",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 7,
+    "ms": 297.44739999999996,
+    "name": "Combine1",
+    "removed_bodies": [
+      "L_WRAP_HAND_REAR_Palm"
+    ],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "OuterFingerProfile",
+    "projected": null,
+    "sketch": 8
+  },
+  {
+    "constraints": [
+      "k1",
+      "k2",
+      "k3",
+      "k4",
+      "k5"
+    ],
+    "created": {
+      "constraints": [
+        "k1",
+        "k2",
+        "k3",
+        "k4",
+        "k5"
+      ],
+      "curves": [
+        "l1",
+        "a1",
+        "l2",
+        "a2"
+      ],
+      "dimensions": [
+        "k6",
+        "k7"
+      ],
+      "points": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "a1.center",
+        "a2.center"
+      ]
+    },
+    "curves": [
+      "l1",
+      "a1",
+      "l2",
+      "a2"
+    ],
+    "dimensions": {
+      "length": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k6"
+          ],
+          "points": []
+        },
+        "expression": "24",
+        "measured": 24.0,
+        "param": "d21",
+        "sketch": {
+          "dof": 4,
+          "solved": true
+        },
+        "type": "LinearDimension",
+        "unit": "mm"
+      },
+      "width": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k7"
+          ],
+          "points": []
+        },
+        "expression": "18",
+        "measured": 18.0,
+        "param": "d22",
+        "sketch": {
+          "dof": 3,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 5,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k8"
+      ],
+      "points": []
+    },
+    "expression": "abs((pcx-hand*34)+((24)-(18))/2)",
+    "measured": 102.0,
+    "param": "d23",
+    "sketch": {
+      "dof": 2,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k9"
+      ],
+      "points": []
+    },
+    "expression": "316",
+    "measured": 316.0,
+    "param": "d24",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k10"
+      ],
+      "points": []
+    },
+    "expression": "316",
+    "measured": 316.0,
+    "param": "d25",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 8
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 9,
+    "ms": 512.2101,
+    "name": "OuterFinger",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "CentreFingerProfile",
+    "projected": null,
+    "sketch": 10
+  },
+  {
+    "constraints": [
+      "k1",
+      "k2",
+      "k3",
+      "k4",
+      "k5"
+    ],
+    "created": {
+      "constraints": [
+        "k1",
+        "k2",
+        "k3",
+        "k4",
+        "k5"
+      ],
+      "curves": [
+        "l1",
+        "a1",
+        "l2",
+        "a2"
+      ],
+      "dimensions": [
+        "k6",
+        "k7"
+      ],
+      "points": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "a1.center",
+        "a2.center"
+      ]
+    },
+    "curves": [
+      "l1",
+      "a1",
+      "l2",
+      "a2"
+    ],
+    "dimensions": {
+      "length": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k6"
+          ],
+          "points": []
+        },
+        "expression": "24",
+        "measured": 24.0,
+        "param": "d28",
+        "sketch": {
+          "dof": 4,
+          "solved": true
+        },
+        "type": "LinearDimension",
+        "unit": "mm"
+      },
+      "width": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k7"
+          ],
+          "points": []
+        },
+        "expression": "18",
+        "measured": 18.0,
+        "param": "d29",
+        "sketch": {
+          "dof": 3,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 5,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k8"
+      ],
+      "points": []
+    },
+    "expression": "abs((pcx-hand*34)+((24)-(18))/2)",
+    "measured": 102.0,
+    "param": "d30",
+    "sketch": {
+      "dof": 2,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k9"
+      ],
+      "points": []
+    },
+    "expression": "316",
+    "measured": 316.0,
+    "param": "d31",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k10"
+      ],
+      "points": []
+    },
+    "expression": "316",
+    "measured": 316.0,
+    "param": "d32",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 10
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 11,
+    "ms": 133.8187,
+    "name": "CentreFinger",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 12,
+    "ms": 26.4104,
+    "name": "DiffuserAperture",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "BearingBodySeatProfile",
+    "projected": null,
+    "sketch": 13
+  },
+  {
+    "constraints": [],
+    "created": {
+      "constraints": [],
+      "curves": [
+        "c1"
+      ],
+      "dimensions": [
+        "k1"
+      ],
+      "points": [
+        "c1.center"
+      ]
+    },
+    "curves": [
+      "c1"
+    ],
+    "dimensions": {
+      "diameter": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k1"
+          ],
+          "points": []
+        },
+        "expression": "16.3",
+        "measured": 16.3,
+        "param": "d38",
+        "sketch": {
+          "dof": 2,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 3,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k2"
+      ],
+      "points": []
+    },
+    "expression": "abs(qx)",
+    "measured": 220.0,
+    "param": "d39",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k3"
+      ],
+      "points": []
+    },
+    "expression": "zc",
+    "measured": 315.0,
+    "param": "d40",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 13
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 14,
+    "ms": 48.4295,
+    "name": "BearingBodySeat",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "BearingFlangeSeatProfile",
+    "projected": null,
+    "sketch": 15
+  },
+  {
+    "constraints": [],
+    "created": {
+      "constraints": [],
+      "curves": [
+        "c1"
+      ],
+      "dimensions": [
+        "k1"
+      ],
+      "points": [
+        "c1.center"
+      ]
+    },
+    "curves": [
+      "c1"
+    ],
+    "dimensions": {
+      "diameter": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k1"
+          ],
+          "points": []
+        },
+        "expression": "18.2",
+        "measured": 18.2,
+        "param": "d43",
+        "sketch": {
+          "dof": 2,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 3,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k2"
+      ],
+      "points": []
+    },
+    "expression": "abs(qx)",
+    "measured": 220.0,
+    "param": "d44",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k3"
+      ],
+      "points": []
+    },
+    "expression": "zc",
+    "measured": 315.0,
+    "param": "d45",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 15
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 16,
+    "ms": 40.6957,
+    "name": "BearingFlangeSeat",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "BridgeBolt1Profile",
+    "projected": null,
+    "sketch": 17
+  },
+  {
+    "constraints": [],
+    "created": {
+      "constraints": [],
+      "curves": [
+        "c1"
+      ],
+      "dimensions": [
+        "k1"
+      ],
+      "points": [
+        "c1.center"
+      ]
+    },
+    "curves": [
+      "c1"
+    ],
+    "dimensions": {
+      "diameter": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k1"
+          ],
+          "points": []
+        },
+        "expression": "bolt_d",
+        "measured": 3.4,
+        "param": "d48",
+        "sketch": {
+          "dof": 2,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 3,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k2"
+      ],
+      "points": []
+    },
+    "expression": "abs(qx-hand*50)",
+    "measured": 170.0,
+    "param": "d49",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k3"
+      ],
+      "points": []
+    },
+    "expression": "zc-5",
+    "measured": 310.0,
+    "param": "d50",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 17
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 18,
+    "ms": 43.8677,
+    "name": "BridgeBolt1",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "BridgeBolt2Profile",
+    "projected": null,
+    "sketch": 19
+  },
+  {
+    "constraints": [],
+    "created": {
+      "constraints": [],
+      "curves": [
+        "c1"
+      ],
+      "dimensions": [
+        "k1"
+      ],
+      "points": [
+        "c1.center"
+      ]
+    },
+    "curves": [
+      "c1"
+    ],
+    "dimensions": {
+      "diameter": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k1"
+          ],
+          "points": []
+        },
+        "expression": "bolt_d",
+        "measured": 3.4,
+        "param": "d53",
+        "sketch": {
+          "dof": 2,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 3,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k2"
+      ],
+      "points": []
+    },
+    "expression": "abs(qx-hand*50)",
+    "measured": 170.0,
+    "param": "d54",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k3"
+      ],
+      "points": []
+    },
+    "expression": "zc+5",
+    "measured": 320.0,
+    "param": "d55",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 19
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 20,
+    "ms": 50.4898,
+    "name": "BridgeBolt2",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "AlignmentSocket1Profile",
+    "projected": null,
+    "sketch": 21
+  },
+  {
+    "constraints": [],
+    "created": {
+      "constraints": [],
+      "curves": [
+        "c1"
+      ],
+      "dimensions": [
+        "k1"
+      ],
+      "points": [
+        "c1.center"
+      ]
+    },
+    "curves": [
+      "c1"
+    ],
+    "dimensions": {
+      "diameter": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k1"
+          ],
+          "points": []
+        },
+        "expression": "dowel_d+fit",
+        "measured": 4.4,
+        "param": "d58",
+        "sketch": {
+          "dof": 2,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 3,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k2"
+      ],
+      "points": []
+    },
+    "expression": "abs(qx-hand*60)",
+    "measured": 160.0,
+    "param": "d59",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k3"
+      ],
+      "points": []
+    },
+    "expression": "zc-4",
+    "measured": 311.0,
+    "param": "d60",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 21
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 22,
+    "ms": 51.1133,
+    "name": "AlignmentSocket1",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "attachment": "fixed",
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "name": "AlignmentSocket2Profile",
+    "projected": null,
+    "sketch": 23
+  },
+  {
+    "constraints": [],
+    "created": {
+      "constraints": [],
+      "curves": [
+        "c1"
+      ],
+      "dimensions": [
+        "k1"
+      ],
+      "points": [
+        "c1.center"
+      ]
+    },
+    "curves": [
+      "c1"
+    ],
+    "dimensions": {
+      "diameter": {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [
+            "k1"
+          ],
+          "points": []
+        },
+        "expression": "dowel_d+fit",
+        "measured": 4.4,
+        "param": "d63",
+        "sketch": {
+          "dof": 2,
+          "solved": true
+        },
+        "type": "DiameterDimension",
+        "unit": "mm"
+      }
+    },
+    "sketch": {
+      "dof": 3,
+      "solved": true
+    }
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k2"
+      ],
+      "points": []
+    },
+    "expression": "abs(qx-hand*60)",
+    "measured": 160.0,
+    "param": "d64",
+    "sketch": {
+      "dof": 1,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [
+        "k3"
+      ],
+      "points": []
+    },
+    "expression": "zc+4",
+    "measured": 319.0,
+    "param": "d65",
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    },
+    "type": "LinearDimension",
+    "unit": "mm"
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 23
+  },
+  {
+    "bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "changed_bodies": [
+      "L_WRAP_HAND_REAR"
+    ],
+    "created_bodies": [],
+    "feature": 24,
+    "ms": 53.9085,
+    "name": "AlignmentSocket2",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "active_sketch": null,
+    "bodies": [
+      {
+        "area_mm2": 31685.026386005677,
+        "bbox": {
+          "max": [
+            -93.00000147666917,
+            74.00000000004269,
+            359.99988656318305
+          ],
+          "min": [
+            -264.99999178732634,
+            40.00000000014627,
+            270.0000010965372
+          ]
+        },
+        "center_of_mass": [
+          -178.07614453356382,
+          63.14175989917468,
+          315.5195601533311
+        ],
+        "edges": 103,
+        "face_types": {
+          "cylinder": 17,
+          "plane": 25
+        },
+        "faces": 42,
+        "kernel": {
+          "edges": 144,
+          "faces": 55,
+          "shells": 1,
+          "vertices": 94
+        },
+        "name": "L_WRAP_HAND_REAR",
+        "vertices": 73,
+        "visible": true,
+        "volume_mm3": 76394.8386634291
+      }
+    ],
+    "dirty": true,
+    "hidden_origin": [],
+    "marker": 24,
+    "metadata": {},
+    "name": "Untitled",
+    "params": [
+      {
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "error": null,
+        "expression": "-1",
+        "model": false,
+        "name": "hand",
+        "unit": "",
+        "value": -1.0
+      },
+      {
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "error": null,
+        "expression": "-220",
+        "model": false,
+        "name": "qx",
+        "unit": "mm",
+        "value": -220.0
+      },
+      {
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "error": null,
+        "expression": "315",
+        "model": false,
+        "name": "zc",
+        "unit": "mm",
+        "value": 315.0
+      },
+      {
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "error": null,
+        "expression": "qx-hand*81",
+        "model": false,
+        "name": "pcx",
+        "unit": "mm",
+        "value": -139.0
+      },
+      {
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "error": null,
+        "expression": "90",
+        "model": false,
+        "name": "cap_d",
+        "unit": "mm",
+        "value": 90.0
+      },
+      {
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "error": null,
+        "expression": "80",
+        "model": false,
+        "name": "palm_l",
+        "unit": "mm",
+        "value": 80.0
+      },
+      {
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "error": null,
+        "expression": "42",
+        "model": false,
+        "name": "palm_h",
+        "unit": "mm",
+        "value": 42.0
+      },
+      {
+        "comment": "Palm wall, mm. Allowed 3.0 to 3.6.",
+        "error": null,
+        "expression": "3.2",
+        "model": false,
+        "name": "wall",
+        "unit": "mm",
+        "value": 3.2
+      },
+      {
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; fit trial.",
+        "error": null,
+        "expression": "3.4",
+        "model": false,
+        "name": "bolt_d",
+        "unit": "mm",
+        "value": 3.4
+      },
+      {
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; fit trial.",
+        "error": null,
+        "expression": "4.0",
+        "model": false,
+        "name": "dowel_d",
+        "unit": "mm",
+        "value": 4.0
+      },
+      {
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "error": null,
+        "expression": "0.4",
+        "model": false,
+        "name": "fit",
+        "unit": "mm",
+        "value": 0.4
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "palm_l",
+        "model": true,
+        "name": "d7",
+        "unit": "mm",
+        "value": 80.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "palm_h",
+        "model": true,
+        "name": "d8",
+        "unit": "mm",
+        "value": 42.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs((pcx)+((palm_l)-(palm_h))/2)",
+        "model": true,
+        "name": "d9",
+        "unit": "mm",
+        "value": 120.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc",
+        "model": true,
+        "name": "d10",
+        "unit": "mm",
+        "value": 315.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc",
+        "model": true,
+        "name": "d11",
+        "unit": "mm",
+        "value": 315.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "palm_l-2*wall",
+        "model": true,
+        "name": "d14",
+        "unit": "mm",
+        "value": 73.6
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "palm_h-2*wall",
+        "model": true,
+        "name": "d15",
+        "unit": "mm",
+        "value": 35.6
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs((pcx)+((palm_l-2*wall)-(palm_h-2*wall))/2)",
+        "model": true,
+        "name": "d16",
+        "unit": "mm",
+        "value": 120.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc",
+        "model": true,
+        "name": "d17",
+        "unit": "mm",
+        "value": 315.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc",
+        "model": true,
+        "name": "d18",
+        "unit": "mm",
+        "value": 315.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "24",
+        "model": true,
+        "name": "d21",
+        "unit": "mm",
+        "value": 24.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "18",
+        "model": true,
+        "name": "d22",
+        "unit": "mm",
+        "value": 18.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "model": true,
+        "name": "d23",
+        "unit": "mm",
+        "value": 102.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "316",
+        "model": true,
+        "name": "d24",
+        "unit": "mm",
+        "value": 316.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "316",
+        "model": true,
+        "name": "d25",
+        "unit": "mm",
+        "value": 316.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "24",
+        "model": true,
+        "name": "d28",
+        "unit": "mm",
+        "value": 24.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "18",
+        "model": true,
+        "name": "d29",
+        "unit": "mm",
+        "value": 18.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "model": true,
+        "name": "d30",
+        "unit": "mm",
+        "value": 102.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "316",
+        "model": true,
+        "name": "d31",
+        "unit": "mm",
+        "value": 316.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "316",
+        "model": true,
+        "name": "d32",
+        "unit": "mm",
+        "value": 316.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "16.3",
+        "model": true,
+        "name": "d38",
+        "unit": "mm",
+        "value": 16.3
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs(qx)",
+        "model": true,
+        "name": "d39",
+        "unit": "mm",
+        "value": 220.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc",
+        "model": true,
+        "name": "d40",
+        "unit": "mm",
+        "value": 315.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "18.2",
+        "model": true,
+        "name": "d43",
+        "unit": "mm",
+        "value": 18.2
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs(qx)",
+        "model": true,
+        "name": "d44",
+        "unit": "mm",
+        "value": 220.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc",
+        "model": true,
+        "name": "d45",
+        "unit": "mm",
+        "value": 315.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "bolt_d",
+        "model": true,
+        "name": "d48",
+        "unit": "mm",
+        "value": 3.4
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs(qx-hand*50)",
+        "model": true,
+        "name": "d49",
+        "unit": "mm",
+        "value": 170.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc-5",
+        "model": true,
+        "name": "d50",
+        "unit": "mm",
+        "value": 310.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "bolt_d",
+        "model": true,
+        "name": "d53",
+        "unit": "mm",
+        "value": 3.4
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs(qx-hand*50)",
+        "model": true,
+        "name": "d54",
+        "unit": "mm",
+        "value": 170.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc+5",
+        "model": true,
+        "name": "d55",
+        "unit": "mm",
+        "value": 320.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "dowel_d+fit",
+        "model": true,
+        "name": "d58",
+        "unit": "mm",
+        "value": 4.4
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs(qx-hand*60)",
+        "model": true,
+        "name": "d59",
+        "unit": "mm",
+        "value": 160.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc-4",
+        "model": true,
+        "name": "d60",
+        "unit": "mm",
+        "value": 311.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "dowel_d+fit",
+        "model": true,
+        "name": "d63",
+        "unit": "mm",
+        "value": 4.4
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "abs(qx-hand*60)",
+        "model": true,
+        "name": "d64",
+        "unit": "mm",
+        "value": 160.0
+      },
+      {
+        "comment": "",
+        "error": null,
+        "expression": "zc+4",
+        "model": true,
+        "name": "d65",
+        "unit": "mm",
+        "value": 319.0
+      }
+    ],
+    "path": null,
+    "redo": 0,
+    "revision": 139,
+    "selection": [],
+    "sketches": [
+      {
+        "curves": 4,
+        "dof": 0,
+        "id": 3,
+        "name": "PalmOuterProfile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 4,
+        "dof": 0,
+        "id": 5,
+        "name": "PalmCavityProfile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 4,
+        "dof": 0,
+        "id": 8,
+        "name": "OuterFingerProfile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 4,
+        "dof": 0,
+        "id": 10,
+        "name": "CentreFingerProfile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 1,
+        "dof": 0,
+        "id": 13,
+        "name": "BearingBodySeatProfile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 1,
+        "dof": 0,
+        "id": 15,
+        "name": "BearingFlangeSeatProfile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 1,
+        "dof": 0,
+        "id": 17,
+        "name": "BridgeBolt1Profile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 1,
+        "dof": 0,
+        "id": 19,
+        "name": "BridgeBolt2Profile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 1,
+        "dof": 0,
+        "id": 21,
+        "name": "AlignmentSocket1Profile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      },
+      {
+        "curves": 1,
+        "dof": 0,
+        "id": 23,
+        "name": "AlignmentSocket2Profile",
+        "profiles": 1,
+        "status": "solved",
+        "visible": false
+      }
+    ],
+    "timeline": [
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 1,
+        "ms": 2.64,
+        "name": "BearingCap",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "CylinderFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 2,
+        "ms": 118.58829999999999,
+        "name": "OuterBridge",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "BoxFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 3,
+        "ms": 0.108,
+        "name": "PalmOuterProfile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 4,
+        "ms": 1.7135,
+        "name": "PalmOuter",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 5,
+        "ms": 0.1028,
+        "name": "PalmCavityProfile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 6,
+        "ms": 20.5794,
+        "name": "PalmCavity",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 7,
+        "ms": 297.44739999999996,
+        "name": "Combine1",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "CombineFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 8,
+        "ms": 0.1052,
+        "name": "OuterFingerProfile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 9,
+        "ms": 512.2101,
+        "name": "OuterFinger",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 10,
+        "ms": 0.0991,
+        "name": "CentreFingerProfile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 11,
+        "ms": 133.8187,
+        "name": "CentreFinger",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 12,
+        "ms": 26.4104,
+        "name": "DiffuserAperture",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "BoxFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 13,
+        "ms": 0.0494,
+        "name": "BearingBodySeatProfile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 14,
+        "ms": 48.4295,
+        "name": "BearingBodySeat",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 15,
+        "ms": 0.0306,
+        "name": "BearingFlangeSeatProfile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 16,
+        "ms": 40.6957,
+        "name": "BearingFlangeSeat",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 17,
+        "ms": 0.0299,
+        "name": "BridgeBolt1Profile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 18,
+        "ms": 43.8677,
+        "name": "BridgeBolt1",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 19,
+        "ms": 0.0262,
+        "name": "BridgeBolt2Profile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 20,
+        "ms": 50.4898,
+        "name": "BridgeBolt2",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 21,
+        "ms": 0.027100000000000003,
+        "name": "AlignmentSocket1Profile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 22,
+        "ms": 51.1133,
+        "name": "AlignmentSocket1",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 23,
+        "ms": 0.0314,
+        "name": "AlignmentSocket2Profile",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "Sketch",
+        "warning": null
+      },
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 24,
+        "ms": 53.9085,
+        "name": "AlignmentSocket2",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "ExtrudeFeature",
+        "warning": null
+      }
+    ],
+    "undo": 69,
+    "units": "mm"
+  }
+]

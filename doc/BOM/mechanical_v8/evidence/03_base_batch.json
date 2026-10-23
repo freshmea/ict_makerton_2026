@@ -1,0 +1,962 @@
+{
+  "completed": 90,
+  "ok": true,
+  "results": [
+    {
+      "display_value": 48.0,
+      "name": "splice_L",
+      "unit": "mm",
+      "value": 48.0
+    },
+    {
+      "display_value": 44.0,
+      "name": "splice_W",
+      "unit": "mm",
+      "value": 44.0
+    },
+    {
+      "display_value": 8.0,
+      "name": "splice_T",
+      "unit": "mm",
+      "value": 8.0
+    },
+    {
+      "display_value": 3.4,
+      "name": "m3_clear",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "display_value": 5.8,
+      "name": "square_nut",
+      "unit": "mm",
+      "value": 5.8
+    },
+    {
+      "display_value": 2.2,
+      "name": "nut_depth",
+      "unit": "mm",
+      "value": 2.2
+    },
+    {
+      "display_value": 4.0,
+      "name": "key_d",
+      "unit": "mm",
+      "value": 4.0
+    },
+    {
+      "display_value": 4.4,
+      "name": "key_socket_d",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [],
+      "feature": 265,
+      "ms": 0.0152,
+      "name": "Remove1",
+      "removed_bodies": [
+        "SEAM_PLATE_1_part",
+        "SEAM_PLATE_2_part"
+      ],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "feature": 266,
+      "ms": 0.6433,
+      "name": "SEAM_SPLICE_1_FRONT_Blank",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 267,
+      "ms": 13.9857,
+      "name": "SEAM_SPLICE_1_FRONT_L_F_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 268,
+      "ms": 10.689,
+      "name": "SEAM_SPLICE_1_FRONT_L_F_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "created_bodies": [],
+      "feature": 269,
+      "ms": 164.816,
+      "name": "SEAM_SPLICE_1_FRONT_L_F_FloorBolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "created_bodies": [],
+      "feature": 270,
+      "ms": 32.3298,
+      "name": "SEAM_SPLICE_1_FRONT_L_F_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 271,
+      "ms": 17.7873,
+      "name": "SEAM_SPLICE_1_FRONT_L_B_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 272,
+      "ms": 13.22,
+      "name": "SEAM_SPLICE_1_FRONT_L_B_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "created_bodies": [],
+      "feature": 273,
+      "ms": 39.243,
+      "name": "SEAM_SPLICE_1_FRONT_L_B_FloorBolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "created_bodies": [],
+      "feature": 274,
+      "ms": 30.1706,
+      "name": "SEAM_SPLICE_1_FRONT_L_B_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 275,
+      "ms": 22.4856,
+      "name": "SEAM_SPLICE_1_FRONT_R_F_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 276,
+      "ms": 17.2313,
+      "name": "SEAM_SPLICE_1_FRONT_R_F_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 277,
+      "ms": 36.1239,
+      "name": "SEAM_SPLICE_1_FRONT_R_F_FloorBolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 278,
+      "ms": 30.7251,
+      "name": "SEAM_SPLICE_1_FRONT_R_F_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 279,
+      "ms": 26.0672,
+      "name": "SEAM_SPLICE_1_FRONT_R_B_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 280,
+      "ms": 19.700599999999998,
+      "name": "SEAM_SPLICE_1_FRONT_R_B_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 281,
+      "ms": 45.463499999999996,
+      "name": "SEAM_SPLICE_1_FRONT_R_B_FloorBolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 282,
+      "ms": 38.3603,
+      "name": "SEAM_SPLICE_1_FRONT_R_B_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 283,
+      "ms": 217.46689999999998,
+      "name": "SEAM_SPLICE_1_FRONT_KeyL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "created_bodies": [],
+      "feature": 284,
+      "ms": 45.3063,
+      "name": "SEAM_SPLICE_1_FRONT_KeyL_Socket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 285,
+      "ms": 87.82230000000001,
+      "name": "SEAM_SPLICE_1_FRONT_KeyR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 286,
+      "ms": 51.9866,
+      "name": "SEAM_SPLICE_1_FRONT_KeyR_Socket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "appearance": {
+        "color": "#68724d",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "SEAM_SPLICE_1_FRONT"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "feature": 287,
+      "ms": 0.46599999999999997,
+      "name": "SEAM_SPLICE_1_REAR_Blank",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 288,
+      "ms": 13.980400000000001,
+      "name": "SEAM_SPLICE_1_REAR_L_F_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 289,
+      "ms": 10.6041,
+      "name": "SEAM_SPLICE_1_REAR_L_F_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "created_bodies": [],
+      "feature": 290,
+      "ms": 38.177099999999996,
+      "name": "SEAM_SPLICE_1_REAR_L_F_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 291,
+      "ms": 21.8899,
+      "name": "SEAM_SPLICE_1_REAR_L_B_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 292,
+      "ms": 15.7349,
+      "name": "SEAM_SPLICE_1_REAR_L_B_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "created_bodies": [],
+      "feature": 293,
+      "ms": 43.4852,
+      "name": "SEAM_SPLICE_1_REAR_L_B_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 294,
+      "ms": 20.7617,
+      "name": "SEAM_SPLICE_1_REAR_R_F_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 295,
+      "ms": 17.2816,
+      "name": "SEAM_SPLICE_1_REAR_R_F_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 296,
+      "ms": 43.645900000000005,
+      "name": "SEAM_SPLICE_1_REAR_R_F_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 297,
+      "ms": 23.933699999999998,
+      "name": "SEAM_SPLICE_1_REAR_R_B_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 298,
+      "ms": 20.703400000000002,
+      "name": "SEAM_SPLICE_1_REAR_R_B_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 299,
+      "ms": 46.1997,
+      "name": "SEAM_SPLICE_1_REAR_R_B_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 300,
+      "ms": 199.7936,
+      "name": "SEAM_SPLICE_1_REAR_KeyL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "created_bodies": [],
+      "feature": 301,
+      "ms": 49.8048,
+      "name": "SEAM_SPLICE_1_REAR_KeyL_Socket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 302,
+      "ms": 96.1615,
+      "name": "SEAM_SPLICE_1_REAR_KeyR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 303,
+      "ms": 52.867,
+      "name": "SEAM_SPLICE_1_REAR_KeyR_Socket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "appearance": {
+        "color": "#68724d",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "SEAM_SPLICE_1_REAR"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "feature": 304,
+      "ms": 0.4867,
+      "name": "SEAM_SPLICE_2_FRONT_Blank",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 305,
+      "ms": 14.1279,
+      "name": "SEAM_SPLICE_2_FRONT_L_F_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 306,
+      "ms": 9.521099999999999,
+      "name": "SEAM_SPLICE_2_FRONT_L_F_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 307,
+      "ms": 59.2788,
+      "name": "SEAM_SPLICE_2_FRONT_L_F_FloorBolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 308,
+      "ms": 54.978100000000005,
+      "name": "SEAM_SPLICE_2_FRONT_L_F_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 309,
+      "ms": 20.400499999999997,
+      "name": "SEAM_SPLICE_2_FRONT_L_B_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 310,
+      "ms": 11.9493,
+      "name": "SEAM_SPLICE_2_FRONT_L_B_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 311,
+      "ms": 60.302,
+      "name": "SEAM_SPLICE_2_FRONT_L_B_FloorBolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 312,
+      "ms": 52.890899999999995,
+      "name": "SEAM_SPLICE_2_FRONT_L_B_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 313,
+      "ms": 20.7594,
+      "name": "SEAM_SPLICE_2_FRONT_R_F_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 314,
+      "ms": 16.418100000000003,
+      "name": "SEAM_SPLICE_2_FRONT_R_F_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "created_bodies": [],
+      "feature": 315,
+      "ms": 42.3121,
+      "name": "SEAM_SPLICE_2_FRONT_R_F_FloorBolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "created_bodies": [],
+      "feature": 316,
+      "ms": 34.4454,
+      "name": "SEAM_SPLICE_2_FRONT_R_F_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 317,
+      "ms": 24.5629,
+      "name": "SEAM_SPLICE_2_FRONT_R_B_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 318,
+      "ms": 18.706500000000002,
+      "name": "SEAM_SPLICE_2_FRONT_R_B_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "created_bodies": [],
+      "feature": 319,
+      "ms": 44.629799999999996,
+      "name": "SEAM_SPLICE_2_FRONT_R_B_FloorBolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "created_bodies": [],
+      "feature": 320,
+      "ms": 37.6366,
+      "name": "SEAM_SPLICE_2_FRONT_R_B_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 321,
+      "ms": 195.0101,
+      "name": "SEAM_SPLICE_2_FRONT_KeyL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 322,
+      "ms": 62.3231,
+      "name": "SEAM_SPLICE_2_FRONT_KeyL_Socket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 323,
+      "ms": 81.99380000000001,
+      "name": "SEAM_SPLICE_2_FRONT_KeyR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "created_bodies": [],
+      "feature": 324,
+      "ms": 54.7684,
+      "name": "SEAM_SPLICE_2_FRONT_KeyR_Socket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "appearance": {
+        "color": "#68724d",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "SEAM_SPLICE_2_FRONT"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "feature": 325,
+      "ms": 0.3729,
+      "name": "SEAM_SPLICE_2_REAR_Blank",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 326,
+      "ms": 12.6888,
+      "name": "SEAM_SPLICE_2_REAR_L_F_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 327,
+      "ms": 9.5331,
+      "name": "SEAM_SPLICE_2_REAR_L_F_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 328,
+      "ms": 53.965199999999996,
+      "name": "SEAM_SPLICE_2_REAR_L_F_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 329,
+      "ms": 18.434800000000003,
+      "name": "SEAM_SPLICE_2_REAR_L_B_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 330,
+      "ms": 13.0291,
+      "name": "SEAM_SPLICE_2_REAR_L_B_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 331,
+      "ms": 56.5456,
+      "name": "SEAM_SPLICE_2_REAR_L_B_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 332,
+      "ms": 19.5768,
+      "name": "SEAM_SPLICE_2_REAR_R_F_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 333,
+      "ms": 17.3921,
+      "name": "SEAM_SPLICE_2_REAR_R_F_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "created_bodies": [],
+      "feature": 334,
+      "ms": 43.5119,
+      "name": "SEAM_SPLICE_2_REAR_R_F_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 335,
+      "ms": 24.9068,
+      "name": "SEAM_SPLICE_2_REAR_R_B_Bolt",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 336,
+      "ms": 19.4391,
+      "name": "SEAM_SPLICE_2_REAR_R_B_SquareNut",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "created_bodies": [],
+      "feature": 337,
+      "ms": 37.100500000000004,
+      "name": "SEAM_SPLICE_2_REAR_R_B_BottomHeadRecess",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 338,
+      "ms": 192.9697,
+      "name": "SEAM_SPLICE_2_REAR_KeyL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "created_bodies": [],
+      "feature": 339,
+      "ms": 65.41510000000001,
+      "name": "SEAM_SPLICE_2_REAR_KeyL_Socket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 340,
+      "ms": 96.16850000000001,
+      "name": "SEAM_SPLICE_2_REAR_KeyR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "created_bodies": [],
+      "feature": 341,
+      "ms": 58.3338,
+      "name": "SEAM_SPLICE_2_REAR_KeyR_Socket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "appearance": {
+        "color": "#68724d",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "changed_bodies": [
+        "POWER_RESERVED_ZONE_part",
+        "BATTERY_RESERVED_ZONE_part"
+      ],
+      "created_bodies": [],
+      "feature": 342,
+      "ms": 0.1696,
+      "name": "Move1",
+      "removed_bodies": [],
+      "warning": null
+    }
+  ]
+}

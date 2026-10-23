@@ -1,0 +1,556 @@
+{
+  "verified_at_utc": "2026-10-23T01:02:50.019722+00:00",
+  "revision": "P1",
+  "printed_parts": 22,
+  "static_pairs": 22,
+  "static_intersection_max_mm3": 0.0,
+  "checks_from_model_generation": "cad\\validation.json",
+  "motion_check": "not performed",
+  "hardware_fit": "not measured",
+  "release": "PENDING",
+  "pdfs": [
+    {
+      "file": "drawings/FWB_ASM_001_orthographic_A3.pdf",
+      "pages": 1,
+      "page_mm": [
+        [
+          420.0,
+          297.0
+        ]
+      ]
+    },
+    {
+      "file": "drawings/FWB_BASE_internal_layout.pdf",
+      "pages": 1,
+      "page_mm": [
+        [
+          304.8,
+          127.0
+        ]
+      ]
+    },
+    {
+      "file": "drawings/FWB_JOINT_P1_reference_A3.pdf",
+      "pages": 2,
+      "page_mm": [
+        [
+          420.0,
+          297.0
+        ],
+        [
+          420.0,
+          297.0
+        ]
+      ]
+    }
+  ],
+  "v6_replaced_with_identical_P1": [
+    "FWB_DETAIL_reference_A3.pdf",
+    "FWB_DETAIL_reference_A3.png",
+    "FWB_DETAIL_reference_A3_page2.png"
+  ],
+  "broken_links": [],
+  "SolidCraft_import": "47 bodies; 4 open-body warnings on wrap hand parts; unresolved",
+  "files": [
+    {
+      "file": "cad/build_v7.py",
+      "bytes": 27922,
+      "sha256": "57eba5b5427653f3f2829b46501c65501cbc561021193c43688c5996610c13e4"
+    },
+    {
+      "file": "cad/CAPSULE_VISOR_TRIAL.step",
+      "bytes": 256300,
+      "sha256": "289f37ad9145025167559ec793710099675028ce857844ab932f4a69e8c1a651"
+    },
+    {
+      "file": "cad/fold_wing_v7_P1_assembly.step",
+      "bytes": 6680981,
+      "sha256": "d8963190c12f120d750797ed8511aab453ee6df4fe4be20f2b4e0f9c84a64592"
+    },
+    {
+      "file": "cad/joint_topology.json",
+      "bytes": 1066,
+      "sha256": "6d24cf8967bb5352c81c6319c247b0713102815003a1a74e337f05aea6f67748"
+    },
+    {
+      "file": "cad/L_CURVED_ARM_CORE_FRONT.step",
+      "bytes": 516083,
+      "sha256": "cc56a1fe0048db88e9eb792d0ea07d998adfd10807aa721afd5fb2ddabf14b88"
+    },
+    {
+      "file": "cad/L_CURVED_ARM_CORE_REAR.step",
+      "bytes": 422810,
+      "sha256": "6d97df83654bc621e3aebba91f1de07c0b75a83b61be0776e90c197c80af2337"
+    },
+    {
+      "file": "cad/L_ROUND_YAW_COLLAR_TRIAL.step",
+      "bytes": 9250,
+      "sha256": "5ef46d163eeffdd64d0b2dee8442e14a64a7d7c69bdb299911fe5e130ab7246c"
+    },
+    {
+      "file": "cad/L_WRAP_HAND_FRONT.step",
+      "bytes": 666080,
+      "sha256": "9366f259b8d4dd36f237b1d5a1d7264219d437b684fc75261a6a0b1edde2f259"
+    },
+    {
+      "file": "cad/L_WRAP_HAND_REAR.step",
+      "bytes": 601610,
+      "sha256": "749119d0dcd5acb858339e61af6cdc2a98148617f948a2e1c1d0f8e1513c9dfe"
+    },
+    {
+      "file": "cad/model_P1.py",
+      "bytes": 12300,
+      "sha256": "84f9e763413a9cf9e7da2cb206f9aaf9ff08e46091156fc0beb73d474adcb0a7"
+    },
+    {
+      "file": "cad/parameters_used.json",
+      "bytes": 1135,
+      "sha256": "c318ebb7f9bbd035d671d73e632a7c1f7aa09b7b923b095cf425dd00e3b5e1d4"
+    },
+    {
+      "file": "cad/PEBBLE_HEAD_FRONT_TRIAL.step",
+      "bytes": 375756,
+      "sha256": "fc60654cd165df90f842caaa6f6e092e1125482b35e3fa063c7d82f331300294"
+    },
+    {
+      "file": "cad/PEBBLE_HEAD_REAR_TRIAL.step",
+      "bytes": 343949,
+      "sha256": "2531bdb3722cac8e7fdcf36cafc771937754fd7de83b0b210cf1d32c41a5477b"
+    },
+    {
+      "file": "cad/PILL_BASE_LID_1.step",
+      "bytes": 44442,
+      "sha256": "070d9f7d1cf37549c190dcaf37c58c10d35eef86c83bbee955fd8b57b6f3a207"
+    },
+    {
+      "file": "cad/PILL_BASE_LID_2.step",
+      "bytes": 36797,
+      "sha256": "0f98e3f1a9c6706e929f1ddfaa7677911429b7279d577e0cea1936cb1d0a291b"
+    },
+    {
+      "file": "cad/PILL_BASE_LID_3.step",
+      "bytes": 45060,
+      "sha256": "9856227c3608824a2f8866b2105886fd67a8902b9b5d21afccf4cd6ac6819ba1"
+    },
+    {
+      "file": "cad/PILL_BASE_TRAY_1.step",
+      "bytes": 117073,
+      "sha256": "3e10e9b89992bb0f06fe6a6b756ca31f6340ba88c24290e9d7d1caef612c7067"
+    },
+    {
+      "file": "cad/PILL_BASE_TRAY_2.step",
+      "bytes": 104370,
+      "sha256": "0da9856804a23468d123579e8a00e3a1f89879fd1ffe3e38af7692af057a8caf"
+    },
+    {
+      "file": "cad/PILL_BASE_TRAY_3.step",
+      "bytes": 118422,
+      "sha256": "bd099519c4a368eb4f525f0dc8ab84ca5cb4ba7136501e3a82c3f5fde8157f26"
+    },
+    {
+      "file": "cad/R_CURVED_ARM_CORE_FRONT.step",
+      "bytes": 521532,
+      "sha256": "29e289a33c6f1388b3421e1c01ed71bf8609797f815416c5caefc31e2b41a7d0"
+    },
+    {
+      "file": "cad/R_CURVED_ARM_CORE_REAR.step",
+      "bytes": 425846,
+      "sha256": "f6b5626f7cfe5f3cf952114585ca0cbe9e34182767f72f59984e138ab8f4f25e"
+    },
+    {
+      "file": "cad/R_ROUND_YAW_COLLAR_TRIAL.step",
+      "bytes": 9250,
+      "sha256": "2f70fb662dcbb37c260279d19e1b315c3285f36068dd21e9bb1ab083f3f6166f"
+    },
+    {
+      "file": "cad/R_WRAP_HAND_FRONT.step",
+      "bytes": 674606,
+      "sha256": "946bc90a6d99fe90872c99c285e443411d2b597798a12c3f5964bb2caeb60a22"
+    },
+    {
+      "file": "cad/R_WRAP_HAND_REAR.step",
+      "bytes": 611660,
+      "sha256": "7286241827ff51f15491c5cfad3b960677565d386dd94492c0dd92a68fb4fcc8"
+    },
+    {
+      "file": "cad/ROUNDED_PHONE_CRADLE_TRIAL.step",
+      "bytes": 78765,
+      "sha256": "7a34f5eb7509bd014b44db1478131929a8e53bdbad95876b9722620c1473f1f2"
+    },
+    {
+      "file": "cad/SEAM_PLATE_1.step",
+      "bytes": 29852,
+      "sha256": "89529af3477d4ebaec4131ffc632ee5186f4be8d8ca4c862ccd82cb26d8ecf96"
+    },
+    {
+      "file": "cad/SEAM_PLATE_2.step",
+      "bytes": 29852,
+      "sha256": "2a465664233f211b07c9f7a9fc82012742b2deb803d77693f513681f0df68e6f"
+    },
+    {
+      "file": "cad/validation.json",
+      "bytes": 12036,
+      "sha256": "e19d8dab6a4f61bd14a6628a06012249750ee211444cfd2f3e3179c7ab16a5fe"
+    },
+    {
+      "file": "drawings/CAD_HLR_front.png",
+      "bytes": 70006,
+      "sha256": "ab8440f76d708056a68580a4183b3e8bc6a47ff1cb552e6c33b294d29b24a5ea"
+    },
+    {
+      "file": "drawings/CAD_HLR_front.svg",
+      "bytes": 521819,
+      "sha256": "92af2056cb6de8a77715f5545777f6f8c52dd5d9caf4dffde6a2908fa725ec91"
+    },
+    {
+      "file": "drawings/CAD_HLR_side.png",
+      "bytes": 84678,
+      "sha256": "b161c3fa7c13b9fba6f1bd5a45d2fbdc9aaa99c8ffe25594373d8dffb8a36219"
+    },
+    {
+      "file": "drawings/CAD_HLR_side.svg",
+      "bytes": 92135,
+      "sha256": "ebe8d773e7373cc34dd5baef05ff75d0cb681e57fb455c731cb01aa128cfebe2"
+    },
+    {
+      "file": "drawings/CAD_HLR_top.png",
+      "bytes": 54375,
+      "sha256": "4e93fffaa4c92c53792e1e339204998f4aef5642351e3c1d0a130e0af4b26987"
+    },
+    {
+      "file": "drawings/CAD_HLR_top.svg",
+      "bytes": 423572,
+      "sha256": "487318ee67bbad715184c3cf6bb03c8cbe53cba27f5b7b3a9b5b205784f0b7ba"
+    },
+    {
+      "file": "drawings/FWB_ASM_001_orthographic_A3.pdf",
+      "bytes": 138602,
+      "sha256": "629763ffd60565c58d76629f3d9b3b9af901fa3197007b41722d2dcf252764f8"
+    },
+    {
+      "file": "drawings/FWB_ASM_001_orthographic_A3.png",
+      "bytes": 379824,
+      "sha256": "1e42753ab51b4d6706270aa77201e60506d08d694c1bd78f54f132f5bd94f898"
+    },
+    {
+      "file": "drawings/FWB_ASM_001_orthographic_A3.svg",
+      "bytes": 258785,
+      "sha256": "5b4ed88651fed7fccb56cdb0d2c86561678022ecf16947549f6719976c911c6b"
+    },
+    {
+      "file": "drawings/FWB_BASE_internal_layout.pdf",
+      "bytes": 15908,
+      "sha256": "27a7e658eb4bf2878f87ac23a38d2423edfdc9fed2814232fa57ada88760b688"
+    },
+    {
+      "file": "drawings/FWB_BASE_internal_layout.png",
+      "bytes": 49921,
+      "sha256": "f50195897eba359766bc6eb902d645df34757f1a5a8012826d289e22bf0861d0"
+    },
+    {
+      "file": "drawings/FWB_JOINT_P1_reference_A3.pdf",
+      "bytes": 85091,
+      "sha256": "650978abf542c3c32bd94ec9d2a32d5e8d68be61e092398ad41d8392123f78f8"
+    },
+    {
+      "file": "drawings/FWB_JOINT_P1_reference_A3_page1.png",
+      "bytes": 185432,
+      "sha256": "b8ac6c4c31215eec6efd40cee9603802bcbc0fcc3ad6dc032dc498d6f5ca4c4f"
+    },
+    {
+      "file": "drawings/FWB_JOINT_P1_reference_A3_page2.png",
+      "bytes": 155760,
+      "sha256": "532cddb68833a98b317c5ae9fd29f0b861f375072221fcf399b4d7aba91f89f8"
+    },
+    {
+      "file": "finalize_delivery.py",
+      "bytes": 6181,
+      "sha256": "dde155dd52480decbbb402085ae43b995ec0e5504d83742ac046aa2d26efe299"
+    },
+    {
+      "file": "PARTS.md",
+      "bytes": 3190,
+      "sha256": "98ac31a4e3e9aac7a75c9ffc9ac3c4da3adcc75d4dff610ee897742629287e6e"
+    },
+    {
+      "file": "README.md",
+      "bytes": 8066,
+      "sha256": "85917e79347aa4705a51ce2bc507cbcc1547f4eecb81b15b0c8899c40afb7e78"
+    },
+    {
+      "file": "reference/CLS_STEP_section_audit.png",
+      "bytes": 258982,
+      "sha256": "bd44c425d8f98c169220866ae5fc58c66f7c82df858b26793a21bc456a5d8ced"
+    },
+    {
+      "file": "reference/generate_joint_detail.py",
+      "bytes": 9388,
+      "sha256": "e4239c93049f6e976ae786d217657e623505fc7d02e416e41af21d9ca0d2f0d4"
+    },
+    {
+      "file": "reference/I_shoulder_cls_modi_sections.png",
+      "bytes": 128630,
+      "sha256": "ac1ae9463b3d8d74a63f3b3017b1de68ff9a0509bbc8e023ae52cb614847bdb2"
+    },
+    {
+      "file": "reference/independent_QA.json",
+      "bytes": 7002,
+      "sha256": "6193b5e7a1384092a4ec3c79dd99633c268c6f6555ca7f39cb12eddc8a840996"
+    },
+    {
+      "file": "reference/independent_QA.md",
+      "bytes": 1675,
+      "sha256": "69ac6c0dd3dbb37daa64837122ed11f5cefb4d93644fcf1bf4d51caadf2b6121"
+    },
+    {
+      "file": "reference/L_arm_cover_section_audit.png",
+      "bytes": 137524,
+      "sha256": "f9a17fc64c5abc556d82cb5d55f3132143e46b460af13de264493285152281f9"
+    },
+    {
+      "file": "reference/L_arm_cover_sections.png",
+      "bytes": 144858,
+      "sha256": "24c4ed219937bfd928aec9cd27ef418da3890868da47f5cc683579619d56eabf"
+    },
+    {
+      "file": "reference/L_arm_joint_section_audit.png",
+      "bytes": 118355,
+      "sha256": "e2a08b8da8f715b9a0417c7ed2e1028a34783a1eb4f20871fcf59db30ee7b44e"
+    },
+    {
+      "file": "reference/L_arm_joint_sections.png",
+      "bytes": 81084,
+      "sha256": "0d0c210dd846c734aa1c4367ea95c1a268f61db729d0f770d03cc1b9aedc344d"
+    },
+    {
+      "file": "reference/L_arm_section_audit.png",
+      "bytes": 193229,
+      "sha256": "b45f36287f4312f73ef90f6233f2cc1dd822adea5383e0ac9983fb32aaa2a6f8"
+    },
+    {
+      "file": "reference/L_arm_sections.png",
+      "bytes": 147125,
+      "sha256": "15e315afb511de9216a5c77bbb10dc6609c010e97549cd36dc25c0cc7ddf8b48"
+    },
+    {
+      "file": "reference/L_wrist_section_audit.png",
+      "bytes": 143236,
+      "sha256": "a560c3f12119b6a86b35d31e0a6f0cd739c0c611867b19fd148412cf2d93620b"
+    },
+    {
+      "file": "reference/L_wrist_sections.png",
+      "bytes": 90914,
+      "sha256": "e3d7d0db69afb6a324391fc315dbb0e3ee5bb855021bf75e1504934022aa3ac3"
+    },
+    {
+      "file": "reference/O_shoulder_cls_grooved_modi_sections.png",
+      "bytes": 173894,
+      "sha256": "c2d4567132cdca88c6d293ad225a21246b4b0771023cd31ebbbc885eeac74d93"
+    },
+    {
+      "file": "reference/original_joint_reaudit.md",
+      "bytes": 5129,
+      "sha256": "8047941966fa43998be3efe043e7ec0666eee243aaf05adaccfd768026d66aef"
+    },
+    {
+      "file": "reference/original_joint_sections.json",
+      "bytes": 1717370,
+      "sha256": "d7256de8cbdbecda556e013b9a61203c2059c1feec85790e1cd3819687011366"
+    },
+    {
+      "file": "reference/P1_core_cutaway.png",
+      "bytes": 215989,
+      "sha256": "beb91ed7df3313b174e3abc1ebb87ebb8e0052b3a5ee05526826cfe384c7817f"
+    },
+    {
+      "file": "reference/P1_core_cutaway.svg",
+      "bytes": 142539,
+      "sha256": "a9223dfa46312470f497bc97c6950be866a3a682ff1b58fdd82f24b8b919f5fd"
+    },
+    {
+      "file": "reference/recheck_original_joint.py",
+      "bytes": 2489,
+      "sha256": "9c18efe2cecad04f2ea288564ade2b0ec4f33fd748158f69049107ec3a3524ec"
+    },
+    {
+      "file": "reference/render_P1_core_cutaway.py",
+      "bytes": 4675,
+      "sha256": "cdd828762f72774febb1d831add919825a831af7557e7f95f39f38501dc5f6f7"
+    },
+    {
+      "file": "reference/solidcraft/fold_wing_v7_P1_assembly.solidcraft",
+      "bytes": 6688388,
+      "sha256": "7c68562f3fcd576119f0ca5caeb2fcaafb7c66a5668ba498782c8c6d5a03a73f"
+    },
+    {
+      "file": "reference/solidcraft/mcp_initialize.json",
+      "bytes": 1291,
+      "sha256": "bb92c07368208795852bdabd68cdbe58392a25c8f36392f8e3d42b9c09c172b9"
+    },
+    {
+      "file": "reference/solidcraft/mcp_stderr.txt",
+      "bytes": 320,
+      "sha256": "53db56859109327701d67b12eb78f5b747ac0fd93df747761eafd09d2619a549"
+    },
+    {
+      "file": "reference/solidcraft/P1_assembly_iso.png",
+      "bytes": 168666,
+      "sha256": "b1f0a76ad1ce831fca3452805995509f5994c70c40082b8fc99f85eaae4eccd4"
+    },
+    {
+      "file": "reference/solidcraft/P1_inspect.json",
+      "bytes": 37461,
+      "sha256": "62a5dbe0ac27ca1dc32c7e239137ea9d9962b034cddb0d63e7b9d72aeed4518c"
+    },
+    {
+      "file": "reference/solidcraft/P1_open.json",
+      "bytes": 2436,
+      "sha256": "5d2beb2a97bc6442a352fc6787e0729c7d3f62d3233016adf89bdf6b6df9015d"
+    },
+    {
+      "file": "reference/solidcraft/P1_save.json",
+      "bytes": 367,
+      "sha256": "837b05b010d4c6e2bcc11aa7aa0268f05ad5c105ca10c1951a60bebec1a6589c"
+    },
+    {
+      "file": "reference/solidcraft/P1_screenshot_result.json",
+      "bytes": 504,
+      "sha256": "4bfd00dde7ddb614e73d3b05653abcc948ae6087cbad1ee347bb29537320993a"
+    },
+    {
+      "file": "reference/solidcraft/README.md",
+      "bytes": 1902,
+      "sha256": "3872aa17dd133291bb479caaac1926a28095310af930645449beb297c4edc461"
+    },
+    {
+      "file": "reference/solidcraft_P1_analysis.py",
+      "bytes": 2385,
+      "sha256": "5e19def065eef6b671c104d53de84bb951b5d956ec79627c4d5d325ade8f8730"
+    },
+    {
+      "file": "renders/v7_appearance_concept.png",
+      "bytes": 1920305,
+      "sha256": "8250ea185fc6df71f8fa86fc6b3828727244f02ca969780af26ee3d2367a62cc"
+    },
+    {
+      "file": "renders/v7_appearance_prompts.json",
+      "bytes": 3966,
+      "sha256": "e8169a38bd7dab9bf56cbb867edebe54787696e947db3e6a23b9be60b43f2486"
+    },
+    {
+      "file": "renders/v7_CAD_isometric.png",
+      "bytes": 69640,
+      "sha256": "11cba4192056c4a14f8a156a64bc3d23ecebf8e48b4c041cbdc131d8f13d3f7b"
+    },
+    {
+      "file": "stl/CAPSULE_VISOR_TRIAL.stl",
+      "bytes": 44984,
+      "sha256": "fe8fb81234eacbfc6b80e6064ef83742282c597b8b1546f79be5d22faef0f782"
+    },
+    {
+      "file": "stl/L_CURVED_ARM_CORE_FRONT.stl",
+      "bytes": 322684,
+      "sha256": "4a2e3bcfcfa17688964263894e04dadd81a9a3eefbe5c8e1f40feeff97b91f69"
+    },
+    {
+      "file": "stl/L_CURVED_ARM_CORE_REAR.stl",
+      "bytes": 249384,
+      "sha256": "4fed6e060ddb1d6e525dca9a7e485dff7e4c98cbc34ac2163bcdf9c0f4bdf5f5"
+    },
+    {
+      "file": "stl/L_ROUND_YAW_COLLAR_TRIAL.stl",
+      "bytes": 33684,
+      "sha256": "16431f537e8dc33e54c0dd2ebe2b227e436be33a7b1ea77aabb6f743c8106b88"
+    },
+    {
+      "file": "stl/L_WRAP_HAND_FRONT.stl",
+      "bytes": 244184,
+      "sha256": "873a8f48778f0c8bc9dff02c4639bcb373a0df8ba93c490c96239a70b4c1c8b7"
+    },
+    {
+      "file": "stl/L_WRAP_HAND_REAR.stl",
+      "bytes": 278384,
+      "sha256": "042f34b27d440ce2fa08d799fe85a95d5bafebeb77ca5e7fc513834ef251c70d"
+    },
+    {
+      "file": "stl/PEBBLE_HEAD_FRONT_TRIAL.stl",
+      "bytes": 76084,
+      "sha256": "71f1fe0257ea560f533864335555c358594b899677adc03f462c776b9f56792c"
+    },
+    {
+      "file": "stl/PEBBLE_HEAD_REAR_TRIAL.stl",
+      "bytes": 169584,
+      "sha256": "4151d4267a7acb81fefb8ea2ca63c7f333d85d65bdd12c97d788d93b2bd9f71a"
+    },
+    {
+      "file": "stl/PILL_BASE_LID_1.stl",
+      "bytes": 44084,
+      "sha256": "4e8f0cc9d48e98307dc779568da75369c7a74ef73050d185488ee8dc3ee6f8e7"
+    },
+    {
+      "file": "stl/PILL_BASE_LID_2.stl",
+      "bytes": 35684,
+      "sha256": "41bd2292b38495dd43824525520abed03668d5c772f6bebe55df9fa893a30dc9"
+    },
+    {
+      "file": "stl/PILL_BASE_LID_3.stl",
+      "bytes": 44084,
+      "sha256": "3d8ad0129c62cd5486060bf2a8073068fcf93e4a2a6d62f51e8a7ac3be7f2b6a"
+    },
+    {
+      "file": "stl/PILL_BASE_TRAY_1.stl",
+      "bytes": 90084,
+      "sha256": "842e6dcdb8e50f8291c493c4592d22124c7c1fdf371e6f69cb767e062aa2bac2"
+    },
+    {
+      "file": "stl/PILL_BASE_TRAY_2.stl",
+      "bytes": 106484,
+      "sha256": "797c5302a8d74df7c39cf6b08b33c289623381b3f7a92c460eb97653971b7ef9"
+    },
+    {
+      "file": "stl/PILL_BASE_TRAY_3.stl",
+      "bytes": 90084,
+      "sha256": "2ec7f1487d73f7463780f2d86ac8c199cb4ecb62133bded59081549e6e88cd32"
+    },
+    {
+      "file": "stl/R_CURVED_ARM_CORE_FRONT.stl",
+      "bytes": 323384,
+      "sha256": "a488bead1f6d345d08adbd562d1602bc5e0e03a38774a569f2022d8ae071f364"
+    },
+    {
+      "file": "stl/R_CURVED_ARM_CORE_REAR.stl",
+      "bytes": 250084,
+      "sha256": "b8f407169315e5b29f2e23a7bbb13923b849886805f99c63ea039267b31994af"
+    },
+    {
+      "file": "stl/R_ROUND_YAW_COLLAR_TRIAL.stl",
+      "bytes": 33684,
+      "sha256": "16431f537e8dc33e54c0dd2ebe2b227e436be33a7b1ea77aabb6f743c8106b88"
+    },
+    {
+      "file": "stl/R_WRAP_HAND_FRONT.stl",
+      "bytes": 243784,
+      "sha256": "8068381f1340eaa5f84becf5f3ee96d291e0e83ce9a17bc44597a7e5c593c581"
+    },
+    {
+      "file": "stl/R_WRAP_HAND_REAR.stl",
+      "bytes": 278784,
+      "sha256": "da14839563e7448e91f80d35f7935b86a5ca43f778f48657d90706b7fd248574"
+    },
+    {
+      "file": "stl/ROUNDED_PHONE_CRADLE_TRIAL.stl",
+      "bytes": 32884,
+      "sha256": "6b7e1f3f1b7c5468062c87d3b3c2a58d28cbf2dc6b90062abfb94512b9139621"
+    },
+    {
+      "file": "stl/SEAM_PLATE_1.stl",
+      "bytes": 68684,
+      "sha256": "62afbd9e5274548115d3241ab636d82a5640808744d71437c571344a8b9896af"
+    },
+    {
+      "file": "stl/SEAM_PLATE_2.stl",
+      "bytes": 68684,
+      "sha256": "3fb7cc3cb703656cd7d5f164ad5f0d1a48f14576ccac7ee8e817f6b50603fb5b"
+    }
+  ]
+}

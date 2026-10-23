@@ -1,0 +1,12 @@
+{
+  "id": 4,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bytes\": 6688388,\n  \"name\": \"fold_wing_v7_P1_assembly\",\n  \"path\": \"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v7\\\\reference\\\\solidcraft\\\\fold_wing_v7_P1_assembly.solidcraft\"\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

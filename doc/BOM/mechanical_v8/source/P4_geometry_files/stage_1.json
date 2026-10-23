@@ -1,0 +1,700 @@
+{
+  "completed": 60,
+  "ok": true,
+  "results": [
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 443,
+      "ms": 227.28590000000003,
+      "name": "L_TrimArm_FRONT",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 444,
+      "ms": 221.36040000000003,
+      "name": "L_TrimArm_REAR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "feature": 445,
+      "ms": 1.363,
+      "name": "L_YawRotor",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 446,
+      "ms": 48.4682,
+      "name": "L_YawShoulderPedestal",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 447,
+      "ms": 337.5358,
+      "name": "L_FixedShoulderCore",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 448,
+      "ms": 61.1574,
+      "name": "L_ShoulderCoreCavity",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 449,
+      "ms": 162.99089999999998,
+      "name": "L_ServoServiceOpening",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 450,
+      "ms": 530.1791999999999,
+      "name": "L_ServoRail_1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 451,
+      "ms": 550.6695000000001,
+      "name": "L_ServoFlangeHole_1_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 452,
+      "ms": 484.0024,
+      "name": "L_ServoFlangeHole_1_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 453,
+      "ms": 187.0158,
+      "name": "L_ServoRail_2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 454,
+      "ms": 439.64799999999997,
+      "name": "L_ServoFlangeHole_2_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 455,
+      "ms": 494.8148,
+      "name": "L_ServoFlangeHole_2_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 456,
+      "ms": 408.8569,
+      "name": "L_FixedStubOpening",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 457,
+      "ms": 691.3521000000001,
+      "name": "L_YawCross_30",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 458,
+      "ms": 1130.7338,
+      "name": "L_YawCross_6.4",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "created_bodies": [],
+      "feature": 459,
+      "ms": 402.4648,
+      "name": "L_YawHornCentre",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_ShoulderCapTemp_FRONT"
+      ],
+      "feature": 460,
+      "ms": 0.998,
+      "name": "L_MovingShoulderCap_FRONT",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ShoulderCapTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 461,
+      "ms": 85.1538,
+      "name": "L_ShoulderTopBridge_FRONT",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 462,
+      "ms": 578.7945,
+      "name": "Combine5",
+      "removed_bodies": [
+        "L_ShoulderCapTemp_FRONT"
+      ],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "L_ShoulderCrossProfile",
+      "projected": null,
+      "sketch": 463
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "l1",
+          "l2",
+          "l3",
+          "l4",
+          "l5",
+          "l6",
+          "l7",
+          "l8",
+          "l9",
+          "l10",
+          "l11",
+          "l12"
+        ],
+        "dimensions": [],
+        "points": [
+          "l1.start",
+          "l1.end",
+          "l2.end",
+          "l3.end",
+          "l4.end",
+          "l5.end",
+          "l6.end",
+          "l7.end",
+          "l8.end",
+          "l9.end",
+          "l10.end",
+          "l11.end"
+        ]
+      },
+      "sketch": {
+        "dof": 24,
+        "solved": true
+      }
+    },
+    {
+      "dof": 24,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 463
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 464,
+      "ms": 631.4975000000001,
+      "name": "L_ShoulderHornCrossPocket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 465,
+      "ms": 889.5899000000001,
+      "name": "L_ShoulderHornScrew",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 466,
+      "ms": 1531.9582999999998,
+      "name": "L_ShoulderBridgeBolt_FRONT_-14",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 467,
+      "ms": 1119.5767999999998,
+      "name": "L_BridgeFastenerSeat_FRONT_-14",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 468,
+      "ms": 1384.393,
+      "name": "L_ShoulderBridgeBolt_FRONT_14",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 469,
+      "ms": 1292.3478,
+      "name": "L_BridgeFastenerSeat_FRONT_14",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_ShoulderCapTemp_REAR"
+      ],
+      "feature": 470,
+      "ms": 1.2085,
+      "name": "L_MovingShoulderCap_REAR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ShoulderCapTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 471,
+      "ms": 65.2046,
+      "name": "L_ShoulderTopBridge_REAR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 472,
+      "ms": 594.1556,
+      "name": "Combine6",
+      "removed_bodies": [
+        "L_ShoulderCapTemp_REAR"
+      ],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 473,
+      "ms": 870.3226,
+      "name": "L_ShoulderBearingSeat",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 474,
+      "ms": 1667.3399,
+      "name": "L_ShoulderBearingFlange",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 475,
+      "ms": 1759.6485,
+      "name": "L_ShoulderBridgeBolt_REAR_-14",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 476,
+      "ms": 1654.8591999999999,
+      "name": "L_BridgeFastenerSeat_REAR_-14",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 477,
+      "ms": 1949.503,
+      "name": "L_ShoulderBridgeBolt_REAR_14",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 478,
+      "ms": 1839.8479,
+      "name": "L_BridgeFastenerSeat_REAR_14",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_SHOULDER_SERVO_TRIAL"
+      ],
+      "feature": 479,
+      "ms": 0.5083000000000001,
+      "name": "L_SHOULDER_SERVO_TRIAL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_SHOULDER_SHAFT_TRIAL"
+      ],
+      "feature": 480,
+      "ms": 1.1318000000000001,
+      "name": "L_SHOULDER_SHAFT_TRIAL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_SHOULDER_HORN_TRIAL"
+      ],
+      "feature": 481,
+      "ms": 0.5630999999999999,
+      "name": "L_SHOULDER_HORN_TRIAL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_HORN_TRIAL"
+      ],
+      "created_bodies": [],
+      "feature": 482,
+      "ms": 5.8369,
+      "name": "L_SHOULDER_HORN_TRIAL_Cross",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_HORN_TRIAL"
+      ],
+      "created_bodies": [],
+      "feature": 483,
+      "ms": 9.4579,
+      "name": "L_SHOULDER_HORN_TRIAL_Centre",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_SHOULDER_BEARING_TRIAL"
+      ],
+      "feature": 484,
+      "ms": 1.2072999999999998,
+      "name": "L_SHOULDER_BEARING_TRIAL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_BEARING_TRIAL"
+      ],
+      "created_bodies": [],
+      "feature": 485,
+      "ms": 44.9835,
+      "name": "L_SHOULDER_BEARING_TRIAL_Flange",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_BEARING_TRIAL"
+      ],
+      "created_bodies": [],
+      "feature": 486,
+      "ms": 15.654499999999999,
+      "name": "L_SHOULDER_BEARING_TRIAL_Bore",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_SHOULDER_FIXED_STUB_TRIAL"
+      ],
+      "feature": 487,
+      "ms": 1.1965000000000001,
+      "name": "L_SHOULDER_FIXED_STUB_TRIAL",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_SHOULDER_FIXED_STUB_TRIAL"
+      ],
+      "created_bodies": [],
+      "feature": 488,
+      "ms": 74.3219,
+      "name": "L_SHOULDER_FIXED_STUB_TRIAL_Shoulder",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_0"
+      ],
+      "feature": 489,
+      "ms": 1.4357,
+      "name": "L_RGB_0",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_1"
+      ],
+      "feature": 490,
+      "ms": 1.3262,
+      "name": "L_RGB_1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_2"
+      ],
+      "feature": 491,
+      "ms": 1.1479000000000001,
+      "name": "L_RGB_2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_3"
+      ],
+      "feature": 492,
+      "ms": 1.3946,
+      "name": "L_RGB_3",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_4"
+      ],
+      "feature": 493,
+      "ms": 1.2819,
+      "name": "L_RGB_4",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_5"
+      ],
+      "feature": 494,
+      "ms": 1.1764,
+      "name": "L_RGB_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "appearance": {
+        "color": "#68724d",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_SHOULDER_YAW_TURRET"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "appearance": {
+        "color": "#e8dbb7",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part",
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "appearance": {
+        "color": "#303338",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_SHOULDER_SERVO_TRIAL",
+        "L_SHOULDER_SHAFT_TRIAL"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "appearance": {
+        "color": "#8d969b",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_SHOULDER_HORN_TRIAL",
+        "L_SHOULDER_BEARING_TRIAL",
+        "L_SHOULDER_FIXED_STUB_TRIAL"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "appearance": {
+        "color": "#e8a340",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_RGB_0",
+        "L_RGB_1",
+        "L_RGB_2",
+        "L_RGB_3",
+        "L_RGB_4",
+        "L_RGB_5"
+      ],
+      "components": [],
+      "faces": []
+    }
+  ]
+}

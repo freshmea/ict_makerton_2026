@@ -1,0 +1,17 @@
+STATUS protocol=servo-bench-v1 state=stopped servo=0 angle=180 address=0x41 i2c=ok min_us=500 max_us=2500 reason=host_stop oe_high=1
+OK ARM
+OK SWEEP
+EVENT servo=1 angle=0 phase=start
+EVENT servo=1 angle=180 phase=end
+EVENT servo=2 angle=0 phase=start
+EVENT servo=2 angle=180 phase=end
+EVENT servo=3 angle=0 phase=start
+EVENT servo=3 angle=180 phase=end
+EVENT servo=4 angle=0 phase=start
+EVENT servo=4 angle=180 phase=end
+EVENT servo=5 angle=0 phase=start
+EVENT servo=5 angle=180 phase=end
+EVENT servo=6 angle=0 phase=start
+EVENT servo=6 angle=180 phase=end
+EVENT DONE
+OK STOP

@@ -1,0 +1,497 @@
+{
+  "scope": "Independent export re-input, no original generation script executed",
+  "unique_parts": 27,
+  "physical_parts": 30,
+  "all_checks_pass": true,
+  "max_mesh_step_volume_gap": 0.007834236615093606,
+  "sliced": false,
+  "physically_printed": false,
+  "parts": [
+    {
+      "part": "CAPSULE_VISOR_TRIAL",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        144.0,
+        27.76810073852539,
+        67.0
+      ],
+      "step_volume_mm3": 23265.09889309645,
+      "mesh_volume_mm3": 23254.306602553832,
+      "mesh_step_volume_relative_gap": 0.00046388328681547643
+    },
+    {
+      "part": "HAND_DOWEL_4x6",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        3.9992802143096924,
+        3.999892473220825,
+        6.0
+      ],
+      "step_volume_mm3": 75.39822368615506,
+      "mesh_volume_mm3": 75.36343009306329,
+      "mesh_step_volume_relative_gap": 0.0004614643607070287
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_FRONT",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        138.99209594726562,
+        34.0,
+        218.9988250732422
+      ],
+      "step_volume_mm3": 113676.28406389337,
+      "mesh_volume_mm3": 113649.89972933994,
+      "mesh_step_volume_relative_gap": 0.0002321006071820251
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_REAR",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        138.99209594726562,
+        34.0,
+        218.9988250732422
+      ],
+      "step_volume_mm3": 110260.0332469262,
+      "mesh_volume_mm3": 110265.16959076113,
+      "mesh_step_volume_relative_gap": 4.658391335162151e-05
+    },
+    {
+      "part": "L_ROUND_YAW_COLLAR_TRIAL",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        82.0,
+        82.0,
+        35.0
+      ],
+      "step_volume_mm3": 38365.08088494677,
+      "mesh_volume_mm3": 38332.61349253209,
+      "mesh_step_volume_relative_gap": 0.000846274572235393
+    },
+    {
+      "part": "L_SHOULDER_YAW_TURRET",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        79.985595703125,
+        71.9980640411377,
+        90.99893188476562
+      ],
+      "step_volume_mm3": 98285.72567125729,
+      "mesh_volume_mm3": 98257.47630662518,
+      "mesh_step_volume_relative_gap": 0.00028742082778730825
+    },
+    {
+      "part": "L_WRAP_HAND_FRONT",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        171.97805786132812,
+        34.0,
+        89.99740600585938
+      ],
+      "step_volume_mm3": 76700.34356350798,
+      "mesh_volume_mm3": 76678.1303995302,
+      "mesh_step_volume_relative_gap": 0.0002896097063683605
+    },
+    {
+      "part": "L_WRAP_HAND_REAR",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        171.97805786132812,
+        34.0,
+        89.99740600585938
+      ],
+      "step_volume_mm3": 76395.83813712066,
+      "mesh_volume_mm3": 76376.05164776424,
+      "mesh_step_volume_relative_gap": 0.0002589995716901672
+    },
+    {
+      "part": "PEBBLE_HEAD_FRONT_TRIAL",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        160.52832412719727,
+        25.524303436279297,
+        140.48287200927734
+      ],
+      "step_volume_mm3": 29840.201043447036,
+      "mesh_volume_mm3": 29833.840869788517,
+      "mesh_step_volume_relative_gap": 0.00021314111286510474
+    },
+    {
+      "part": "PEBBLE_HEAD_REAR_TRIAL",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        191.99676513671875,
+        96.00178909301758,
+        155.0
+      ],
+      "step_volume_mm3": 167878.35158755246,
+      "mesh_volume_mm3": 169193.55031644122,
+      "mesh_step_volume_relative_gap": 0.007834236615093606
+    },
+    {
+      "part": "PILL_BASE_LID_1",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        4.0
+      ],
+      "step_volume_mm3": 160973.4491412748,
+      "mesh_volume_mm3": 160961.33558090622,
+      "mesh_step_volume_relative_gap": 7.525191535119354e-05
+    },
+    {
+      "part": "PILL_BASE_LID_2",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        213.3333282470703,
+        200.0,
+        4.0
+      ],
+      "step_volume_mm3": 166093.99897437295,
+      "mesh_volume_mm3": 166095.85788536505,
+      "mesh_step_volume_relative_gap": 1.1191921463629257e-05
+    },
+    {
+      "part": "PILL_BASE_LID_3",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        4.0
+      ],
+      "step_volume_mm3": 160973.44913919724,
+      "mesh_volume_mm3": 160961.33558090622,
+      "mesh_step_volume_relative_gap": 7.525190244601256e-05
+    },
+    {
+      "part": "PILL_BASE_TRAY_1",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        96.0
+      ],
+      "step_volume_mm3": 311783.8812864999,
+      "mesh_volume_mm3": 311532.10121582693,
+      "mesh_step_volume_relative_gap": 0.0008075467841187524
+    },
+    {
+      "part": "PILL_BASE_TRAY_2",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        213.3333282470703,
+        200.0,
+        96.00000000001323
+      ],
+      "step_volume_mm3": 239201.24051597508,
+      "mesh_volume_mm3": 239213.8409279854,
+      "mesh_step_volume_relative_gap": 5.267703454694299e-05
+    },
+    {
+      "part": "PILL_BASE_TRAY_3",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        96.0
+      ],
+      "step_volume_mm3": 311783.8812736852,
+      "mesh_volume_mm3": 311751.03465146635,
+      "mesh_step_volume_relative_gap": 0.00010535061044419628
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_FRONT",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        138.99826049804688,
+        34.0,
+        218.9988250732422
+      ],
+      "step_volume_mm3": 113678.1201079709,
+      "mesh_volume_mm3": 113650.06078756227,
+      "mesh_step_volume_relative_gap": 0.00024683131971202577
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_REAR",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        138.99826049804688,
+        34.0,
+        218.9988250732422
+      ],
+      "step_volume_mm3": 110242.24199832931,
+      "mesh_volume_mm3": 110264.99093733438,
+      "mesh_step_volume_relative_gap": 0.00020635410340639397
+    },
+    {
+      "part": "R_ROUND_YAW_COLLAR_TRIAL",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        82.0,
+        82.0,
+        35.0
+      ],
+      "step_volume_mm3": 38365.08088494677,
+      "mesh_volume_mm3": 38332.61388180618,
+      "mesh_step_volume_relative_gap": 0.0008462644256624067
+    },
+    {
+      "part": "R_SHOULDER_YAW_TURRET",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        79.985595703125,
+        71.9980640411377,
+        90.99893188476562
+      ],
+      "step_volume_mm3": 98285.72566721034,
+      "mesh_volume_mm3": 98257.47630662595,
+      "mesh_step_volume_relative_gap": 0.0002874207866159797
+    },
+    {
+      "part": "R_WRAP_HAND_FRONT",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        171.97805786132812,
+        34.0,
+        89.99740600585938
+      ],
+      "step_volume_mm3": 76700.34354127542,
+      "mesh_volume_mm3": 76678.1305165777,
+      "mesh_step_volume_relative_gap": 0.0002896078905535011
+    },
+    {
+      "part": "R_WRAP_HAND_REAR",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        171.97805786132812,
+        34.0,
+        89.99740600585938
+      ],
+      "step_volume_mm3": 76395.83813888876,
+      "mesh_volume_mm3": 76376.05164776428,
+      "mesh_step_volume_relative_gap": 0.0002589995948275501
+    },
+    {
+      "part": "ROUNDED_PHONE_CRADLE_TRIAL",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        82.0,
+        60.53793907165527,
+        53.50926208496094
+      ],
+      "step_volume_mm3": 46552.10368556148,
+      "mesh_volume_mm3": 46543.28349282383,
+      "mesh_step_volume_relative_gap": 0.00018946926216754443
+    },
+    {
+      "part": "SEAM_SPLICE_1_FRONT",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.0
+      ],
+      "step_volume_mm3": 16439.595978219284,
+      "mesh_volume_mm3": 16440.916749611493,
+      "mesh_step_volume_relative_gap": 8.034086688986532e-05
+    },
+    {
+      "part": "SEAM_SPLICE_1_REAR",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.0
+      ],
+      "step_volume_mm3": 16439.595978219524,
+      "mesh_volume_mm3": 16440.916749611504,
+      "mesh_step_volume_relative_gap": 8.034086687592264e-05
+    },
+    {
+      "part": "SEAM_SPLICE_2_FRONT",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.0
+      ],
+      "step_volume_mm3": 16439.595978219313,
+      "mesh_volume_mm3": 16440.916749611497,
+      "mesh_step_volume_relative_gap": 8.034086688831612e-05
+    },
+    {
+      "part": "SEAM_SPLICE_2_REAR",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_closed_shells": true,
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "volume_positive": true,
+      "mesh_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.0
+      ],
+      "step_volume_mm3": 16439.59597821951,
+      "mesh_volume_mm3": 16440.9167496115,
+      "mesh_step_volume_relative_gap": 8.034086687658659e-05
+    }
+  ]
+}

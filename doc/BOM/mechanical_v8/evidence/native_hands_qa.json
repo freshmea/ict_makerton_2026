@@ -1,0 +1,682 @@
+{
+  "method": "Independent OCCT and trimesh STEP/STL import; high precision adaptive volume integration eps=1e-9; mirror, point, fit and static-interference checks",
+  "parts": [
+    {
+      "name": "L_WRAP_HAND_FRONT",
+      "step_sha256": "93d7ee38b48e802e3da906302a6d1afb74b82a3c67abdacc47579ab458c064e8",
+      "native_sha256": "68879081ac238fbf0c4bf2ecba511b5015b78d82697709dee978e693c5f167ef",
+      "stl_sha256": "91c2ab551f35e05f66ca831e9a7e9cbfdb55cbd5b04b0c467e59b6cc30f70578",
+      "valid": true,
+      "closed_shells": true,
+      "solid_count": 1,
+      "volume_mm3": 76700.34356350375,
+      "bounds_mm": [
+        [
+          -265.0000001000002,
+          5.9999999,
+          269.9999998999999
+        ],
+        [
+          -92.99999989999998,
+          40.00000010000001,
+          360.00000009999985
+        ]
+      ],
+      "stl_watertight": true,
+      "stl_is_volume": true,
+      "stl_volume_mm3": 76678.1303995302,
+      "stl_volume_relative_gap": 0.0002896097063131667,
+      "stl_bbox_max_abs_gap_mm": 0.013855080468772485,
+      "native_zip_crc": "pass",
+      "native_features": 24,
+      "native_parameters": {
+        "hand": "-1",
+        "qx": "-220",
+        "zc": "315",
+        "pcx": "qx-hand*81",
+        "cap_d": "90",
+        "palm_l": "80",
+        "palm_h": "42",
+        "wall": "3.2",
+        "bolt_d": "3.4",
+        "dowel_d": "4.0",
+        "fit": "0.4",
+        "d7": "palm_l",
+        "d8": "palm_h",
+        "d9": "abs((pcx)+((palm_l)-(palm_h))/2)",
+        "d10": "zc",
+        "d11": "zc",
+        "d14": "palm_l-2*wall",
+        "d15": "palm_h-2*wall",
+        "d16": "abs((pcx)+((palm_l-2*wall)-(palm_h-2*wall))/2)",
+        "d17": "zc",
+        "d18": "zc",
+        "d21": "24",
+        "d22": "18",
+        "d23": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "d24": "316",
+        "d25": "316",
+        "d28": "24",
+        "d29": "18",
+        "d30": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "d31": "316",
+        "d32": "316",
+        "d44": "5.3",
+        "d45": "abs(qx)",
+        "d46": "zc",
+        "d49": "bolt_d",
+        "d50": "abs(qx-hand*50)",
+        "d51": "zc-5",
+        "d54": "bolt_d",
+        "d55": "abs(qx-hand*50)",
+        "d56": "zc+5",
+        "d59": "dowel_d+fit",
+        "d60": "abs(qx-hand*60)",
+        "d61": "zc-4",
+        "d64": "dowel_d+fit",
+        "d65": "abs(qx-hand*60)",
+        "d66": "zc+4"
+      },
+      "feature_probes": [
+        {
+          "point_mm": [
+            -170,
+            25,
+            310
+          ],
+          "role": "M3 bore free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            -170,
+            25,
+            312.0
+          ],
+          "role": "material beside M3 bore",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            -170,
+            25,
+            320
+          ],
+          "role": "M3 bore free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            -170,
+            25,
+            322.0
+          ],
+          "role": "material beside M3 bore",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            -160,
+            38.5,
+            311
+          ],
+          "role": "blind socket free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            -160,
+            36.6,
+            311
+          ],
+          "role": "socket blind bottom material",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            -160,
+            38.5,
+            319
+          ],
+          "role": "blind socket free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            -160,
+            36.6,
+            319
+          ],
+          "role": "socket blind bottom material",
+          "inside": true
+        }
+      ]
+    },
+    {
+      "name": "L_WRAP_HAND_REAR",
+      "step_sha256": "7adb79d35d8b24d42cabfb006e8dc658e542a5ecaab8c4fd31d1fb98e474a665",
+      "native_sha256": "54951d2ffcca06004d84b526a009cb503cf739798b88ae8c850c84cdfbe65f0c",
+      "stl_sha256": "332ec06ad817f63be45275ac1d22c4fadf68b3fee1d73ecba4584d2887be977a",
+      "valid": true,
+      "closed_shells": true,
+      "solid_count": 1,
+      "volume_mm3": 76395.83813711621,
+      "bounds_mm": [
+        [
+          -265.00000010000923,
+          39.999999900146264,
+          269.9999998999805
+        ],
+        [
+          -92.99999990000293,
+          74.0000001000426,
+          360.00000009999985
+        ]
+      ],
+      "stl_watertight": true,
+      "stl_is_volume": true,
+      "stl_volume_mm3": 76376.05164776424,
+      "stl_volume_relative_gap": 0.00025899957163189524,
+      "stl_bbox_max_abs_gap_mm": 0.013855080465816627,
+      "native_zip_crc": "pass",
+      "native_features": 24,
+      "native_parameters": {
+        "hand": "-1",
+        "qx": "-220",
+        "zc": "315",
+        "pcx": "qx-hand*81",
+        "cap_d": "90",
+        "palm_l": "80",
+        "palm_h": "42",
+        "wall": "3.2",
+        "bolt_d": "3.4",
+        "dowel_d": "4.0",
+        "fit": "0.4",
+        "d7": "palm_l",
+        "d8": "palm_h",
+        "d9": "abs((pcx)+((palm_l)-(palm_h))/2)",
+        "d10": "zc",
+        "d11": "zc",
+        "d14": "palm_l-2*wall",
+        "d15": "palm_h-2*wall",
+        "d16": "abs((pcx)+((palm_l-2*wall)-(palm_h-2*wall))/2)",
+        "d17": "zc",
+        "d18": "zc",
+        "d21": "24",
+        "d22": "18",
+        "d23": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "d24": "316",
+        "d25": "316",
+        "d28": "24",
+        "d29": "18",
+        "d30": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "d31": "316",
+        "d32": "316",
+        "d38": "16.3",
+        "d39": "abs(qx)",
+        "d40": "zc",
+        "d43": "18.2",
+        "d44": "abs(qx)",
+        "d45": "zc",
+        "d48": "bolt_d",
+        "d49": "abs(qx-hand*50)",
+        "d50": "zc-5",
+        "d53": "bolt_d",
+        "d54": "abs(qx-hand*50)",
+        "d55": "zc+5",
+        "d58": "dowel_d+fit",
+        "d59": "abs(qx-hand*60)",
+        "d60": "zc-4",
+        "d63": "dowel_d+fit",
+        "d64": "abs(qx-hand*60)",
+        "d65": "zc+4"
+      },
+      "feature_probes": [
+        {
+          "point_mm": [
+            -170,
+            55,
+            310
+          ],
+          "role": "M3 bore free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            -170,
+            55,
+            312.0
+          ],
+          "role": "material beside M3 bore",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            -170,
+            55,
+            320
+          ],
+          "role": "M3 bore free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            -170,
+            55,
+            322.0
+          ],
+          "role": "material beside M3 bore",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            -160,
+            41.5,
+            311
+          ],
+          "role": "blind socket free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            -160,
+            43.4,
+            311
+          ],
+          "role": "socket blind bottom material",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            -160,
+            41.5,
+            319
+          ],
+          "role": "blind socket free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            -160,
+            43.4,
+            319
+          ],
+          "role": "socket blind bottom material",
+          "inside": true
+        }
+      ]
+    },
+    {
+      "name": "R_WRAP_HAND_FRONT",
+      "step_sha256": "7537cdc57951a63af55a862cfcdcd9325ccd53bb28cf16e4ae282617da5acd04",
+      "native_sha256": "645f429f2715c183e320b3bd6f6235e464f0eb1e93ed25700d5696a5b89323b7",
+      "stl_sha256": "8f8e636bf59121e1d278dfcaf1e36cae7b531f1905ccb88940fba990b30f3c06",
+      "valid": true,
+      "closed_shells": true,
+      "solid_count": 1,
+      "volume_mm3": 76700.34354127101,
+      "bounds_mm": [
+        [
+          92.99999989942073,
+          5.999999900461399,
+          269.9999998999216
+        ],
+        [
+          265.0000001000003,
+          40.00000009535111,
+          360.0000000999996
+        ]
+      ],
+      "stl_watertight": true,
+      "stl_is_volume": true,
+      "stl_volume_mm3": 76678.1305165777,
+      "stl_volume_relative_gap": 0.00028960789049603135,
+      "stl_bbox_max_abs_gap_mm": 0.013855081048021134,
+      "native_zip_crc": "pass",
+      "native_features": 24,
+      "native_parameters": {
+        "hand": "1",
+        "qx": "220",
+        "zc": "315",
+        "pcx": "qx-hand*81",
+        "cap_d": "90",
+        "palm_l": "80",
+        "palm_h": "42",
+        "wall": "3.2",
+        "bolt_d": "3.4",
+        "dowel_d": "4.0",
+        "fit": "0.4",
+        "d7": "palm_l",
+        "d8": "palm_h",
+        "d9": "abs((pcx)+((palm_l)-(palm_h))/2)",
+        "d10": "zc",
+        "d11": "zc",
+        "d14": "palm_l-2*wall",
+        "d15": "palm_h-2*wall",
+        "d16": "abs((pcx)+((palm_l-2*wall)-(palm_h-2*wall))/2)",
+        "d17": "zc",
+        "d18": "zc",
+        "d21": "24",
+        "d22": "18",
+        "d23": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "d24": "316",
+        "d25": "316",
+        "d28": "24",
+        "d29": "18",
+        "d30": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "d31": "316",
+        "d32": "316",
+        "d44": "5.3",
+        "d45": "abs(qx)",
+        "d46": "zc",
+        "d49": "bolt_d",
+        "d50": "abs(qx-hand*50)",
+        "d51": "zc-5",
+        "d54": "bolt_d",
+        "d55": "abs(qx-hand*50)",
+        "d56": "zc+5",
+        "d59": "dowel_d+fit",
+        "d60": "abs(qx-hand*60)",
+        "d61": "zc-4",
+        "d64": "dowel_d+fit",
+        "d65": "abs(qx-hand*60)",
+        "d66": "zc+4"
+      },
+      "feature_probes": [
+        {
+          "point_mm": [
+            170,
+            25,
+            310
+          ],
+          "role": "M3 bore free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            170,
+            25,
+            312.0
+          ],
+          "role": "material beside M3 bore",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            170,
+            25,
+            320
+          ],
+          "role": "M3 bore free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            170,
+            25,
+            322.0
+          ],
+          "role": "material beside M3 bore",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            160,
+            38.5,
+            311
+          ],
+          "role": "blind socket free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            160,
+            36.6,
+            311
+          ],
+          "role": "socket blind bottom material",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            160,
+            38.5,
+            319
+          ],
+          "role": "blind socket free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            160,
+            36.6,
+            319
+          ],
+          "role": "socket blind bottom material",
+          "inside": true
+        }
+      ]
+    },
+    {
+      "name": "R_WRAP_HAND_REAR",
+      "step_sha256": "baa25e4098f5e9917de0b939ee27979638a631a7bf8003603e22402e18c4f269",
+      "native_sha256": "3c605511c1bfeb64692e5ee4b710484fc6c04bc4c69ada7178348732f5661cdc",
+      "stl_sha256": "7701e1338d352e05b135a160ed191ac2ec0775910f1affdc2fcf1b43792b91e9",
+      "valid": true,
+      "closed_shells": true,
+      "solid_count": 1,
+      "volume_mm3": 76395.83813888452,
+      "bounds_mm": [
+        [
+          92.99999990000005,
+          39.9999999,
+          269.9999998999992
+        ],
+        [
+          265.00000010000025,
+          74.00000009997733,
+          360.0000001000001
+        ]
+      ],
+      "stl_watertight": true,
+      "stl_is_volume": true,
+      "stl_volume_mm3": 76376.05164776428,
+      "stl_volume_relative_gap": 0.00025899959477194425,
+      "stl_bbox_max_abs_gap_mm": 0.01385508046870143,
+      "native_zip_crc": "pass",
+      "native_features": 24,
+      "native_parameters": {
+        "hand": "1",
+        "qx": "220",
+        "zc": "315",
+        "pcx": "qx-hand*81",
+        "cap_d": "90",
+        "palm_l": "80",
+        "palm_h": "42",
+        "wall": "3.2",
+        "bolt_d": "3.4",
+        "dowel_d": "4.0",
+        "fit": "0.4",
+        "d7": "palm_l",
+        "d8": "palm_h",
+        "d9": "abs((pcx)+((palm_l)-(palm_h))/2)",
+        "d10": "zc",
+        "d11": "zc",
+        "d14": "palm_l-2*wall",
+        "d15": "palm_h-2*wall",
+        "d16": "abs((pcx)+((palm_l-2*wall)-(palm_h-2*wall))/2)",
+        "d17": "zc",
+        "d18": "zc",
+        "d21": "24",
+        "d22": "18",
+        "d23": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "d24": "316",
+        "d25": "316",
+        "d28": "24",
+        "d29": "18",
+        "d30": "abs((pcx-hand*34)+((24)-(18))/2)",
+        "d31": "316",
+        "d32": "316",
+        "d38": "16.3",
+        "d39": "abs(qx)",
+        "d40": "zc",
+        "d43": "18.2",
+        "d44": "abs(qx)",
+        "d45": "zc",
+        "d48": "bolt_d",
+        "d49": "abs(qx-hand*50)",
+        "d50": "zc-5",
+        "d53": "bolt_d",
+        "d54": "abs(qx-hand*50)",
+        "d55": "zc+5",
+        "d58": "dowel_d+fit",
+        "d59": "abs(qx-hand*60)",
+        "d60": "zc-4",
+        "d63": "dowel_d+fit",
+        "d64": "abs(qx-hand*60)",
+        "d65": "zc+4"
+      },
+      "feature_probes": [
+        {
+          "point_mm": [
+            170,
+            55,
+            310
+          ],
+          "role": "M3 bore free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            170,
+            55,
+            312.0
+          ],
+          "role": "material beside M3 bore",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            170,
+            55,
+            320
+          ],
+          "role": "M3 bore free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            170,
+            55,
+            322.0
+          ],
+          "role": "material beside M3 bore",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            160,
+            41.5,
+            311
+          ],
+          "role": "blind socket free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            160,
+            43.4,
+            311
+          ],
+          "role": "socket blind bottom material",
+          "inside": true
+        },
+        {
+          "point_mm": [
+            160,
+            41.5,
+            319
+          ],
+          "role": "blind socket free centre",
+          "inside": false
+        },
+        {
+          "point_mm": [
+            160,
+            43.4,
+            319
+          ],
+          "role": "socket blind bottom material",
+          "inside": true
+        }
+      ]
+    }
+  ],
+  "symmetry": [
+    {
+      "half": "FRONT",
+      "mirrored_left_minus_right_mm3": 0.0,
+      "right_minus_mirrored_left_mm3": 0.0
+    },
+    {
+      "half": "REAR",
+      "mirrored_left_minus_right_mm3": 0.0,
+      "right_minus_mirrored_left_mm3": 0.0
+    }
+  ],
+  "static_intersections": [],
+  "dowels": [
+    {
+      "name": "L_HAND_DOWEL_1",
+      "analytic_volume_mm3": 75.39822368615503,
+      "diameter_mm": 4,
+      "length_mm": 6,
+      "front_rear_intersection_mm3": [
+        0.0,
+        0.0
+      ],
+      "nominal_diametral_clearance_mm": 0.4,
+      "total_axial_blind_bottom_clearance_mm": 0.4
+    },
+    {
+      "name": "L_HAND_DOWEL_2",
+      "analytic_volume_mm3": 75.39822368615503,
+      "diameter_mm": 4,
+      "length_mm": 6,
+      "front_rear_intersection_mm3": [
+        0.0,
+        0.0
+      ],
+      "nominal_diametral_clearance_mm": 0.4,
+      "total_axial_blind_bottom_clearance_mm": 0.4
+    },
+    {
+      "name": "R_HAND_DOWEL_1",
+      "analytic_volume_mm3": 75.39822368615503,
+      "diameter_mm": 4,
+      "length_mm": 6,
+      "front_rear_intersection_mm3": [
+        0.0,
+        0.0
+      ],
+      "nominal_diametral_clearance_mm": 0.4,
+      "total_axial_blind_bottom_clearance_mm": 0.4
+    },
+    {
+      "name": "R_HAND_DOWEL_2",
+      "analytic_volume_mm3": 75.39822368615503,
+      "diameter_mm": 4,
+      "length_mm": 6,
+      "front_rear_intersection_mm3": [
+        0.0,
+        0.0
+      ],
+      "nominal_diametral_clearance_mm": 0.4,
+      "total_axial_blind_bottom_clearance_mm": 0.4
+    }
+  ],
+  "accepted": true,
+  "limitations": [
+    "Static CAD/mesh checks only; material strength, dynamic servo sweep, physical hardware fit and actual slicing/printing are unverified."
+  ]
+}

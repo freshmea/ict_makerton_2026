@@ -1,0 +1,441 @@
+{
+  "revision": "P1",
+  "units": "mm",
+  "parts": [
+    {
+      "part": "PILL_BASE_TRAY_1",
+      "bbox_mm": [
+        213.3333333,
+        200.0,
+        96.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 312207.0103432878,
+      "notes": "P1 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "PILL_BASE_LID_1",
+      "bbox_mm": [
+        213.3333333,
+        200.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 160973.48326488768,
+      "notes": "P1 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "PILL_BASE_TRAY_2",
+      "bbox_mm": [
+        213.33333340000001,
+        200.0,
+        96.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 240047.49862964448,
+      "notes": "P1 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "PILL_BASE_LID_2",
+      "bbox_mm": [
+        213.33333340000001,
+        200.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 166094.033097849,
+      "notes": "P1 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "PILL_BASE_TRAY_3",
+      "bbox_mm": [
+        213.3333333,
+        200.0,
+        96.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 312207.0103432886,
+      "notes": "P1 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "PILL_BASE_LID_3",
+      "bbox_mm": [
+        213.3333333,
+        200.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 160973.48326488765,
+      "notes": "P1 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "SEAM_PLATE_1",
+      "bbox_mm": [
+        44.000000000000014,
+        42.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 7246.732755698012,
+      "notes": "P1 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "SEAM_PLATE_2",
+      "bbox_mm": [
+        44.000000000000014,
+        42.0,
+        4.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 7246.732755698012,
+      "notes": "P1 dimensional trial; measure hardware first"
+    },
+    {
+      "part": "PEBBLE_HEAD_FRONT_TRIAL",
+      "bbox_mm": [
+        160.55512459930821,
+        25.524303769377603,
+        140.48573404940367
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 30467.27305854708,
+      "notes": "Ellipsoid front shell; unknown matrix/camera mount coordinates remain trial"
+    },
+    {
+      "part": "PEBBLE_HEAD_REAR_TRIAL",
+      "bbox_mm": [
+        192.0000002,
+        96.00000020000002,
+        155.0000002000001
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": false,
+      "duplicate_degenerate_cleanup": true,
+      "volume_mm3": 165529.4405008119,
+      "notes": "Domed service shell; detachable fastener details pending"
+    },
+    {
+      "part": "CAPSULE_VISOR_TRIAL",
+      "bbox_mm": [
+        144.00000020000002,
+        27.77567504236139,
+        67.00000020000002
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 23259.100638005948,
+      "notes": "A dark trim/frame, not a transparent optical window"
+    },
+    {
+      "part": "L_ROUND_YAW_COLLAR_TRIAL",
+      "bbox_mm": [
+        82.0,
+        82.0,
+        35.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 38347.065327880424,
+      "notes": "Motor inside base/collar; rotary bearing carrier still needs as-built shaft offsets"
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_FRONT",
+      "bbox_mm": [
+        131.00000020000002,
+        36.00000020000001,
+        226.00000020000002
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 82642.89578963435,
+      "notes": "Embedded servo pocket + source-inspired crossed horn/wrap/bearing; actual flange/shaft fit pending"
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_REAR",
+      "bbox_mm": [
+        131.00000020000002,
+        36.00000020000001,
+        226.00000020000002
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 79558.50085312864,
+      "notes": "Embedded servo pocket + source-inspired crossed horn/wrap/bearing; actual flange/shaft fit pending"
+    },
+    {
+      "part": "L_WRAP_HAND_FRONT",
+      "bbox_mm": [
+        172.00000010000002,
+        34.000000100001024,
+        90.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": false,
+      "duplicate_degenerate_cleanup": true,
+      "volume_mm3": 59640.76275783558,
+      "notes": "Moving wrap captures cross horn on front and F625ZZ on rear; bearing stub fixed to core"
+    },
+    {
+      "part": "L_WRAP_HAND_REAR",
+      "bbox_mm": [
+        172.00000010000002,
+        34.000000100003554,
+        90.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": false,
+      "duplicate_degenerate_cleanup": true,
+      "volume_mm3": 59335.743726347784,
+      "notes": "Moving wrap captures cross horn on front and F625ZZ on rear; bearing stub fixed to core"
+    },
+    {
+      "part": "R_ROUND_YAW_COLLAR_TRIAL",
+      "bbox_mm": [
+        82.0,
+        82.0,
+        35.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 38347.065327880424,
+      "notes": "Motor inside base/collar; rotary bearing carrier still needs as-built shaft offsets"
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_FRONT",
+      "bbox_mm": [
+        131.00000020000002,
+        36.00000020000002,
+        226.00000020000002
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 82642.92618351661,
+      "notes": "Embedded servo pocket + source-inspired crossed horn/wrap/bearing; actual flange/shaft fit pending"
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_REAR",
+      "bbox_mm": [
+        131.00000020000002,
+        36.00000020000001,
+        226.00000020000002
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 79558.50046013117,
+      "notes": "Embedded servo pocket + source-inspired crossed horn/wrap/bearing; actual flange/shaft fit pending"
+    },
+    {
+      "part": "R_WRAP_HAND_FRONT",
+      "bbox_mm": [
+        172.00000010000002,
+        34.000000100001024,
+        90.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": false,
+      "duplicate_degenerate_cleanup": true,
+      "volume_mm3": 59640.76275783558,
+      "notes": "Moving wrap captures cross horn on front and F625ZZ on rear; bearing stub fixed to core"
+    },
+    {
+      "part": "R_WRAP_HAND_REAR",
+      "bbox_mm": [
+        172.00000010000002,
+        34.000000100003554,
+        90.0
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": false,
+      "duplicate_degenerate_cleanup": true,
+      "volume_mm3": 59335.743726347784,
+      "notes": "Moving wrap captures cross horn on front and F625ZZ on rear; bearing stub fixed to core"
+    },
+    {
+      "part": "ROUNDED_PHONE_CRADLE_TRIAL",
+      "bbox_mm": [
+        82.00000019999999,
+        60.53793903390714,
+        53.509262809877356
+      ],
+      "valid": true,
+      "watertight": true,
+      "raw_mesh_watertight": true,
+      "duplicate_degenerate_cleanup": false,
+      "volume_mm3": 46552.10368486245,
+      "notes": "P1 dimensional trial; measure hardware first"
+    }
+  ],
+  "all_solids_valid": true,
+  "all_print_parts_within_256_cube": true,
+  "STL_scale": "mm assumed; STL has no unit metadata; STEP declares mm",
+  "assembly_components": 75,
+  "parts_count": 22,
+  "motion_check": "not performed",
+  "hardware_fit": "not measured",
+  "release": "PENDING",
+  "base_nominal": [
+    640,
+    200,
+    100
+  ],
+  "arm_axis_distance": 193.0025906561878,
+  "static_checks": [
+    {
+      "a": "L_PITCH_SERVO_EMBEDDED",
+      "b": "L_CURVED_ARM_CORE_FRONT",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_PITCH_SERVO_EMBEDDED",
+      "b": "L_CURVED_ARM_CORE_REAR",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_PITCH_SERVO_EMBEDDED",
+      "b": "L_WRAP_HAND_FRONT",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_PITCH_SERVO_EMBEDDED",
+      "b": "L_WRAP_HAND_REAR",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_CURVED_ARM_CORE_FRONT",
+      "b": "L_WRAP_HAND_FRONT",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_CURVED_ARM_CORE_FRONT",
+      "b": "L_WRAP_HAND_REAR",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_CURVED_ARM_CORE_REAR",
+      "b": "L_WRAP_HAND_FRONT",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "L_CURVED_ARM_CORE_REAR",
+      "b": "L_WRAP_HAND_REAR",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_PITCH_SERVO_EMBEDDED",
+      "b": "R_CURVED_ARM_CORE_FRONT",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_PITCH_SERVO_EMBEDDED",
+      "b": "R_CURVED_ARM_CORE_REAR",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_PITCH_SERVO_EMBEDDED",
+      "b": "R_WRAP_HAND_FRONT",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_PITCH_SERVO_EMBEDDED",
+      "b": "R_WRAP_HAND_REAR",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_CURVED_ARM_CORE_FRONT",
+      "b": "R_WRAP_HAND_FRONT",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_CURVED_ARM_CORE_FRONT",
+      "b": "R_WRAP_HAND_REAR",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_CURVED_ARM_CORE_REAR",
+      "b": "R_WRAP_HAND_FRONT",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R_CURVED_ARM_CORE_REAR",
+      "b": "R_WRAP_HAND_REAR",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "PILL_BASE_TRAY_1",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "PILL_BASE_LID_1",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "PILL_BASE_TRAY_2",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "PILL_BASE_LID_2",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "PILL_BASE_TRAY_3",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "PILL_BASE_LID_3",
+      "b": "BA_R9_ENVELOPE",
+      "intersection_mm3": 0.0
+    }
+  ],
+  "all_print_parts_single_solid": true
+}

@@ -1,0 +1,104 @@
+{
+  "grounded": {
+    "component": 1,
+    "grounded": true,
+    "id": 2,
+    "name": "P1_closed_base:1",
+    "parent": 0,
+    "transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "fixed_occurrences": [
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60,
+    64,
+    68,
+    72,
+    76,
+    80,
+    84,
+    116,
+    120,
+    124,
+    128,
+    132,
+    164,
+    168,
+    172,
+    176
+  ],
+  "arm_bodies": {
+    "L": [
+      "L_CURVED_ARM_CORE_FRONT_part",
+      "L_CURVED_ARM_CORE_REAR_part",
+      "L_PITCH_SERVO_EMBEDDED_part",
+      "L_FIXED_SUPPORT_STUB_TRIAL_part"
+    ],
+    "R": [
+      "R_CURVED_ARM_CORE_FRONT_part",
+      "R_CURVED_ARM_CORE_REAR_part",
+      "R_PITCH_SERVO_EMBEDDED_part",
+      "R_FIXED_SUPPORT_STUB_TRIAL_part"
+    ]
+  },
+  "hand_rigid_bodies": {
+    "L": [
+      "L_SHORT_SERVO_SHAFT_TRIAL_part",
+      "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+      "L_F625ZZ_BEARING_part"
+    ],
+    "R": [
+      "R_SHORT_SERVO_SHAFT_TRIAL_part",
+      "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+      "R_F625ZZ_BEARING_part"
+    ]
+  },
+  "native_hand_component_bodies": {
+    "L": [
+      "L_WRAP_HAND_FRONT",
+      "L_WRAP_HAND_REAR",
+      "L_HAND_DOWEL_1",
+      "L_HAND_DOWEL_2"
+    ],
+    "R": [
+      "R_WRAP_HAND_FRONT",
+      "R_WRAP_HAND_REAR",
+      "R_HAND_DOWEL_1",
+      "R_HAND_DOWEL_2"
+    ]
+  }
+}

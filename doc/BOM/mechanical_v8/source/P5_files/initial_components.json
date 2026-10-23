@@ -1,0 +1,7555 @@
+{
+  "active": 0,
+  "components": [
+    {
+      "bodies": [
+        "L_HAND_DOWEL_1",
+        "L_HAND_DOWEL_2",
+        "R_HAND_DOWEL_1",
+        "R_HAND_DOWEL_2",
+        "L_SHOULDER_YAW_TURRET",
+        "L_SHOULDER_SERVO_TRIAL",
+        "L_SHOULDER_SHAFT_TRIAL",
+        "L_SHOULDER_HORN_TRIAL",
+        "L_SHOULDER_BEARING_TRIAL",
+        "L_SHOULDER_FIXED_STUB_TRIAL",
+        "R_SHOULDER_YAW_TURRET",
+        "R_SHOULDER_SERVO_TRIAL",
+        "R_SHOULDER_SHAFT_TRIAL",
+        "R_SHOULDER_HORN_TRIAL",
+        "R_SHOULDER_BEARING_TRIAL",
+        "R_SHOULDER_FIXED_STUB_TRIAL",
+        "L_P5_WRIST_SERVO_CASE",
+        "L_P5_WRIST_FIXED_STUB",
+        "L_ROLL_YOKE_PALM_FRONT",
+        "L_ROLL_PALM_REAR",
+        "L_ROLL_BEARING_CAP",
+        "L_P5_WRIST_SHAFT",
+        "L_P5_WRIST_HORN",
+        "L_P5_WRIST_BEARING",
+        "L_RGB_0",
+        "L_RGB_1",
+        "L_RGB_2",
+        "L_RGB_3",
+        "L_RGB_4",
+        "L_RGB_5",
+        "R_P5_WRIST_SERVO_CASE",
+        "R_P5_WRIST_FIXED_STUB",
+        "R_ROLL_YOKE_PALM_FRONT",
+        "R_ROLL_PALM_REAR",
+        "R_ROLL_BEARING_CAP",
+        "R_P5_WRIST_SHAFT",
+        "R_P5_WRIST_HORN",
+        "R_P5_WRIST_BEARING",
+        "R_RGB_0",
+        "R_RGB_1",
+        "R_RGB_2",
+        "R_RGB_3",
+        "R_RGB_4",
+        "R_RGB_5"
+      ],
+      "children": [
+        {
+          "component": 1,
+          "grounded": false,
+          "id": 2,
+          "name": "P1_closed_base:1",
+          "parent": 0,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [
+        "L_WRAP_HAND_FRONT__DriveCap",
+        "L_WRAP_HAND_FRONT__OuterBridge",
+        "L_WRAP_HAND_FRONT__PalmOuter",
+        "L_WRAP_HAND_FRONT__PalmCavity",
+        "Combine1",
+        "L_WRAP_HAND_FRONT__OuterFinger",
+        "L_WRAP_HAND_FRONT__CentreFinger",
+        "L_WRAP_HAND_FRONT__DiffuserAperture",
+        "L_WRAP_HAND_FRONT__HornPocketHorizontal",
+        "L_WRAP_HAND_FRONT__HornPocketVertical",
+        "L_WRAP_HAND_FRONT__HornScrewAccess",
+        "L_WRAP_HAND_FRONT__BridgeBolt1",
+        "L_WRAP_HAND_FRONT__BridgeBolt2",
+        "L_WRAP_HAND_FRONT__AlignmentSocket1",
+        "L_WRAP_HAND_FRONT__AlignmentSocket2",
+        "L_WRAP_HAND_REAR__BearingCap",
+        "L_WRAP_HAND_REAR__OuterBridge",
+        "L_WRAP_HAND_REAR__PalmOuter",
+        "L_WRAP_HAND_REAR__PalmCavity",
+        "Combine2",
+        "L_WRAP_HAND_REAR__OuterFinger",
+        "L_WRAP_HAND_REAR__CentreFinger",
+        "L_WRAP_HAND_REAR__DiffuserAperture",
+        "L_WRAP_HAND_REAR__BearingBodySeat",
+        "L_WRAP_HAND_REAR__BearingFlangeSeat",
+        "L_WRAP_HAND_REAR__BridgeBolt1",
+        "L_WRAP_HAND_REAR__BridgeBolt2",
+        "L_WRAP_HAND_REAR__AlignmentSocket1",
+        "L_WRAP_HAND_REAR__AlignmentSocket2",
+        "R_WRAP_HAND_FRONT__DriveCap",
+        "R_WRAP_HAND_FRONT__OuterBridge",
+        "R_WRAP_HAND_FRONT__PalmOuter",
+        "R_WRAP_HAND_FRONT__PalmCavity",
+        "Combine3",
+        "R_WRAP_HAND_FRONT__OuterFinger",
+        "R_WRAP_HAND_FRONT__CentreFinger",
+        "R_WRAP_HAND_FRONT__DiffuserAperture",
+        "R_WRAP_HAND_FRONT__HornPocketHorizontal",
+        "R_WRAP_HAND_FRONT__HornPocketVertical",
+        "R_WRAP_HAND_FRONT__HornScrewAccess",
+        "R_WRAP_HAND_FRONT__BridgeBolt1",
+        "R_WRAP_HAND_FRONT__BridgeBolt2",
+        "R_WRAP_HAND_FRONT__AlignmentSocket1",
+        "R_WRAP_HAND_FRONT__AlignmentSocket2",
+        "R_WRAP_HAND_REAR__BearingCap",
+        "R_WRAP_HAND_REAR__OuterBridge",
+        "R_WRAP_HAND_REAR__PalmOuter",
+        "R_WRAP_HAND_REAR__PalmCavity",
+        "Combine4",
+        "R_WRAP_HAND_REAR__OuterFinger",
+        "R_WRAP_HAND_REAR__CentreFinger",
+        "R_WRAP_HAND_REAR__DiffuserAperture",
+        "R_WRAP_HAND_REAR__BearingBodySeat",
+        "R_WRAP_HAND_REAR__BearingFlangeSeat",
+        "R_WRAP_HAND_REAR__BridgeBolt1",
+        "R_WRAP_HAND_REAR__BridgeBolt2",
+        "R_WRAP_HAND_REAR__AlignmentSocket1",
+        "R_WRAP_HAND_REAR__AlignmentSocket2",
+        "L_HAND_DOWEL_1",
+        "L_HAND_DOWEL_2",
+        "R_HAND_DOWEL_1",
+        "R_HAND_DOWEL_2",
+        "L_TrimArm_FRONT",
+        "L_TrimArm_REAR",
+        "L_YawRotor",
+        "L_YawShoulderPedestal",
+        "L_FixedShoulderCore",
+        "L_ShoulderCoreCavity",
+        "L_ServoServiceOpening",
+        "L_ServoRail_1",
+        "L_ServoFlangeHole_1_-5",
+        "L_ServoFlangeHole_1_5",
+        "L_ServoRail_2",
+        "L_ServoFlangeHole_2_-5",
+        "L_ServoFlangeHole_2_5",
+        "L_FixedStubOpening",
+        "L_YawCross_30",
+        "L_YawCross_6.4",
+        "L_YawHornCentre",
+        "L_MovingShoulderCap_FRONT",
+        "L_ShoulderTopBridge_FRONT",
+        "Combine5",
+        "L_ShoulderHornCrossPocket",
+        "L_ShoulderHornScrew",
+        "L_ShoulderBridgeBolt_FRONT_-14",
+        "L_BridgeFastenerSeat_FRONT_-14",
+        "L_ShoulderBridgeBolt_FRONT_14",
+        "L_BridgeFastenerSeat_FRONT_14",
+        "L_MovingShoulderCap_REAR",
+        "L_ShoulderTopBridge_REAR",
+        "Combine6",
+        "L_ShoulderBearingSeat",
+        "L_ShoulderBearingFlange",
+        "L_ShoulderBridgeBolt_REAR_-14",
+        "L_BridgeFastenerSeat_REAR_-14",
+        "L_ShoulderBridgeBolt_REAR_14",
+        "L_BridgeFastenerSeat_REAR_14",
+        "L_SHOULDER_SERVO_TRIAL",
+        "L_SHOULDER_SHAFT_TRIAL",
+        "L_SHOULDER_HORN_TRIAL",
+        "L_SHOULDER_HORN_TRIAL_Cross",
+        "L_SHOULDER_HORN_TRIAL_Centre",
+        "L_SHOULDER_BEARING_TRIAL",
+        "L_SHOULDER_BEARING_TRIAL_Flange",
+        "L_SHOULDER_BEARING_TRIAL_Bore",
+        "L_SHOULDER_FIXED_STUB_TRIAL",
+        "L_SHOULDER_FIXED_STUB_TRIAL_Shoulder",
+        "L_RGB_0",
+        "L_RGB_1",
+        "L_RGB_2",
+        "L_RGB_3",
+        "L_RGB_4",
+        "L_RGB_5",
+        "R_TrimArm_FRONT",
+        "R_TrimArm_REAR",
+        "R_YawRotor",
+        "R_YawShoulderPedestal",
+        "R_FixedShoulderCore",
+        "R_ShoulderCoreCavity",
+        "R_ServoServiceOpening",
+        "R_ServoRail_1",
+        "R_ServoFlangeHole_1_-5",
+        "R_ServoFlangeHole_1_5",
+        "R_ServoRail_2",
+        "R_ServoFlangeHole_2_-5",
+        "R_ServoFlangeHole_2_5",
+        "R_FixedStubOpening",
+        "R_YawCross_30",
+        "R_YawCross_6.4",
+        "R_YawHornCentre",
+        "R_MovingShoulderCap_FRONT",
+        "R_ShoulderTopBridge_FRONT",
+        "Combine7",
+        "R_ShoulderHornCrossPocket",
+        "R_ShoulderHornScrew",
+        "R_ShoulderBridgeBolt_FRONT_-14",
+        "R_BridgeFastenerSeat_FRONT_-14",
+        "R_ShoulderBridgeBolt_FRONT_14",
+        "R_BridgeFastenerSeat_FRONT_14",
+        "R_MovingShoulderCap_REAR",
+        "R_ShoulderTopBridge_REAR",
+        "Combine8",
+        "R_ShoulderBearingSeat",
+        "R_ShoulderBearingFlange",
+        "R_ShoulderBridgeBolt_REAR_-14",
+        "R_BridgeFastenerSeat_REAR_-14",
+        "R_ShoulderBridgeBolt_REAR_14",
+        "R_BridgeFastenerSeat_REAR_14",
+        "R_SHOULDER_SERVO_TRIAL",
+        "R_SHOULDER_SHAFT_TRIAL",
+        "R_SHOULDER_HORN_TRIAL",
+        "R_SHOULDER_HORN_TRIAL_Cross",
+        "R_SHOULDER_HORN_TRIAL_Centre",
+        "R_SHOULDER_BEARING_TRIAL",
+        "R_SHOULDER_BEARING_TRIAL_Flange",
+        "R_SHOULDER_BEARING_TRIAL_Bore",
+        "R_SHOULDER_FIXED_STUB_TRIAL",
+        "R_SHOULDER_FIXED_STUB_TRIAL_Shoulder",
+        "R_RGB_0",
+        "R_RGB_1",
+        "R_RGB_2",
+        "R_RGB_3",
+        "R_RGB_4",
+        "R_RGB_5",
+        "Remove2",
+        "P5_L_RemoveYWrist_FRONT",
+        "L_RollCoreTemp_FRONT",
+        "L_RollCoreTemp_FRONT_Cavity",
+        "L_RollCoreTemp_FRONT_ServoRail1",
+        "L_RollCoreTemp_FRONT_ServoBolt1_-5",
+        "L_RollCoreTemp_FRONT_ServoBolt1_5",
+        "L_RollCoreTemp_FRONT_ServoRail2",
+        "L_RollCoreTemp_FRONT_ServoBolt2_-5",
+        "L_RollCoreTemp_FRONT_ServoBolt2_5",
+        "L_RollCoreTemp_FRONT_DriveOpening",
+        "L_RollCoreTemp_FRONT_StubOpening",
+        "L_RollCoreTemp_FRONT_ServiceSplit",
+        "L_RollCoreTemp_FRONT_LinkAdapter",
+        "L_RollCoreTemp_FRONT_CaseBoss_-15_-26",
+        "L_RollCoreTemp_FRONT_CaseBolt_-15_-26",
+        "L_RollCoreTemp_FRONT_CaseBoss_-15_26",
+        "L_RollCoreTemp_FRONT_CaseBolt_-15_26",
+        "L_RollCoreTemp_FRONT_CaseBoss_15_-26",
+        "L_RollCoreTemp_FRONT_CaseBolt_15_-26",
+        "L_RollCoreTemp_FRONT_CaseBoss_15_26",
+        "L_RollCoreTemp_FRONT_CaseBolt_15_26",
+        "Combine9",
+        "P5_L_RemoveYWrist_REAR",
+        "L_RollCoreTemp_REAR",
+        "L_RollCoreTemp_REAR_Cavity",
+        "L_RollCoreTemp_REAR_ServoRail1",
+        "L_RollCoreTemp_REAR_ServoBolt1_-5",
+        "L_RollCoreTemp_REAR_ServoBolt1_5",
+        "L_RollCoreTemp_REAR_ServoRail2",
+        "L_RollCoreTemp_REAR_ServoBolt2_-5",
+        "L_RollCoreTemp_REAR_ServoBolt2_5",
+        "L_RollCoreTemp_REAR_DriveOpening",
+        "L_RollCoreTemp_REAR_StubOpening",
+        "L_RollCoreTemp_REAR_ServiceSplit",
+        "L_RollCoreTemp_REAR_LinkAdapter",
+        "L_RollCoreTemp_REAR_CaseBoss_-15_-26",
+        "L_RollCoreTemp_REAR_CaseBolt_-15_-26",
+        "L_RollCoreTemp_REAR_CaseBoss_-15_26",
+        "L_RollCoreTemp_REAR_CaseBolt_-15_26",
+        "L_RollCoreTemp_REAR_CaseBoss_15_-26",
+        "L_RollCoreTemp_REAR_CaseBolt_15_-26",
+        "L_RollCoreTemp_REAR_CaseBoss_15_26",
+        "L_RollCoreTemp_REAR_CaseBolt_15_26",
+        "Combine10",
+        "L_P5_WRIST_SERVO_CASE",
+        "L_P5_WRIST_FIXED_STUB",
+        "L_P5_WRIST_FIXED_STUB_Shoulder",
+        "L_ROLL_YOKE_PALM_FRONT_Neck",
+        "P5_L_ROLL_YOKE_PALM_FRONT__PalmOuter",
+        "P5_L_ROLL_YOKE_PALM_FRONT__PalmCavity",
+        "Combine11",
+        "P5_L_ROLL_YOKE_PALM_FRONT__OuterFinger",
+        "P5_L_ROLL_YOKE_PALM_FRONT__CentreFinger",
+        "P5_L_ROLL_YOKE_PALM_FRONT__DiffuserAperture",
+        "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt1",
+        "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt2",
+        "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket1",
+        "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket2",
+        "L_ROLL_PALM_REAR_Neck",
+        "P5_L_ROLL_PALM_REAR__PalmOuter",
+        "P5_L_ROLL_PALM_REAR__PalmCavity",
+        "Combine12",
+        "P5_L_ROLL_PALM_REAR__OuterFinger",
+        "P5_L_ROLL_PALM_REAR__CentreFinger",
+        "P5_L_ROLL_PALM_REAR__DiffuserAperture",
+        "P5_L_ROLL_PALM_REAR__BridgeBolt1",
+        "P5_L_ROLL_PALM_REAR__BridgeBolt2",
+        "P5_L_ROLL_PALM_REAR__AlignmentSocket1",
+        "P5_L_ROLL_PALM_REAR__AlignmentSocket2",
+        "L_P5_YokeTemp",
+        "L_P5_YokeTemp_RadialBridge",
+        "Combine13",
+        "L_P5_RollHornPocket",
+        "L_P5_HornCentre",
+        "L_ROLL_BEARING_CAP",
+        "L_ROLL_BEARING_CAP_Ear",
+        "L_ROLL_BEARING_CAP_BearingSeat",
+        "L_ROLL_BEARING_CAP_FlangeSeat",
+        "L_P5_CapBolt_-5",
+        "L_P5_CapNut_-5",
+        "L_P5_CapHead_-5",
+        "L_P5_CapBolt_5",
+        "L_P5_CapNut_5",
+        "L_P5_CapHead_5",
+        "L_P5_WRIST_SHAFT",
+        "L_P5_WRIST_HORN",
+        "L_P5_WRIST_HORN_Cross",
+        "L_P5_WRIST_HORN_Centre",
+        "L_P5_WRIST_BEARING",
+        "L_P5_WRIST_BEARING_Flange",
+        "L_P5_WRIST_BEARING_Bore",
+        "P5_L_RGB_0",
+        "P5_L_RGB_1",
+        "P5_L_RGB_2",
+        "P5_L_RGB_3",
+        "P5_L_RGB_4",
+        "P5_L_RGB_5",
+        "Remove3",
+        "P5_R_RemoveYWrist_FRONT",
+        "R_RollCoreTemp_FRONT",
+        "R_RollCoreTemp_FRONT_Cavity",
+        "R_RollCoreTemp_FRONT_ServoRail1",
+        "R_RollCoreTemp_FRONT_ServoBolt1_-5",
+        "R_RollCoreTemp_FRONT_ServoBolt1_5",
+        "R_RollCoreTemp_FRONT_ServoRail2",
+        "R_RollCoreTemp_FRONT_ServoBolt2_-5",
+        "R_RollCoreTemp_FRONT_ServoBolt2_5",
+        "R_RollCoreTemp_FRONT_DriveOpening",
+        "R_RollCoreTemp_FRONT_StubOpening",
+        "R_RollCoreTemp_FRONT_ServiceSplit",
+        "R_RollCoreTemp_FRONT_LinkAdapter",
+        "R_RollCoreTemp_FRONT_CaseBoss_-15_-26",
+        "R_RollCoreTemp_FRONT_CaseBolt_-15_-26",
+        "R_RollCoreTemp_FRONT_CaseBoss_-15_26",
+        "R_RollCoreTemp_FRONT_CaseBolt_-15_26",
+        "R_RollCoreTemp_FRONT_CaseBoss_15_-26",
+        "R_RollCoreTemp_FRONT_CaseBolt_15_-26",
+        "R_RollCoreTemp_FRONT_CaseBoss_15_26",
+        "R_RollCoreTemp_FRONT_CaseBolt_15_26",
+        "Combine14",
+        "P5_R_RemoveYWrist_REAR",
+        "R_RollCoreTemp_REAR",
+        "R_RollCoreTemp_REAR_Cavity",
+        "R_RollCoreTemp_REAR_ServoRail1",
+        "R_RollCoreTemp_REAR_ServoBolt1_-5",
+        "R_RollCoreTemp_REAR_ServoBolt1_5",
+        "R_RollCoreTemp_REAR_ServoRail2",
+        "R_RollCoreTemp_REAR_ServoBolt2_-5",
+        "R_RollCoreTemp_REAR_ServoBolt2_5",
+        "R_RollCoreTemp_REAR_DriveOpening",
+        "R_RollCoreTemp_REAR_StubOpening",
+        "R_RollCoreTemp_REAR_ServiceSplit",
+        "R_RollCoreTemp_REAR_LinkAdapter",
+        "R_RollCoreTemp_REAR_CaseBoss_-15_-26",
+        "R_RollCoreTemp_REAR_CaseBolt_-15_-26",
+        "R_RollCoreTemp_REAR_CaseBoss_-15_26",
+        "R_RollCoreTemp_REAR_CaseBolt_-15_26",
+        "R_RollCoreTemp_REAR_CaseBoss_15_-26",
+        "R_RollCoreTemp_REAR_CaseBolt_15_-26",
+        "R_RollCoreTemp_REAR_CaseBoss_15_26",
+        "R_RollCoreTemp_REAR_CaseBolt_15_26",
+        "Combine15",
+        "R_P5_WRIST_SERVO_CASE",
+        "R_P5_WRIST_FIXED_STUB",
+        "R_P5_WRIST_FIXED_STUB_Shoulder",
+        "R_ROLL_YOKE_PALM_FRONT_Neck",
+        "P5_R_ROLL_YOKE_PALM_FRONT__PalmOuter",
+        "P5_R_ROLL_YOKE_PALM_FRONT__PalmCavity",
+        "Combine16",
+        "P5_R_ROLL_YOKE_PALM_FRONT__OuterFinger",
+        "P5_R_ROLL_YOKE_PALM_FRONT__CentreFinger",
+        "P5_R_ROLL_YOKE_PALM_FRONT__DiffuserAperture",
+        "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt1",
+        "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt2",
+        "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket1",
+        "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket2",
+        "R_ROLL_PALM_REAR_Neck",
+        "P5_R_ROLL_PALM_REAR__PalmOuter",
+        "P5_R_ROLL_PALM_REAR__PalmCavity",
+        "Combine17",
+        "P5_R_ROLL_PALM_REAR__OuterFinger",
+        "P5_R_ROLL_PALM_REAR__CentreFinger",
+        "P5_R_ROLL_PALM_REAR__DiffuserAperture",
+        "P5_R_ROLL_PALM_REAR__BridgeBolt1",
+        "P5_R_ROLL_PALM_REAR__BridgeBolt2",
+        "P5_R_ROLL_PALM_REAR__AlignmentSocket1",
+        "P5_R_ROLL_PALM_REAR__AlignmentSocket2",
+        "R_P5_YokeTemp",
+        "R_P5_YokeTemp_RadialBridge",
+        "Combine18",
+        "R_P5_RollHornPocket",
+        "R_P5_HornCentre",
+        "R_ROLL_BEARING_CAP",
+        "R_ROLL_BEARING_CAP_Ear",
+        "R_ROLL_BEARING_CAP_BearingSeat",
+        "R_ROLL_BEARING_CAP_FlangeSeat",
+        "R_P5_CapBolt_-5",
+        "R_P5_CapNut_-5",
+        "R_P5_CapHead_-5",
+        "R_P5_CapBolt_5",
+        "R_P5_CapNut_5",
+        "R_P5_CapHead_5",
+        "R_P5_WRIST_SHAFT",
+        "R_P5_WRIST_HORN",
+        "R_P5_WRIST_HORN_Cross",
+        "R_P5_WRIST_HORN_Centre",
+        "R_P5_WRIST_BEARING",
+        "R_P5_WRIST_BEARING_Flange",
+        "R_P5_WRIST_BEARING_Bore",
+        "P5_R_RGB_0",
+        "P5_R_RGB_1",
+        "P5_R_RGB_2",
+        "P5_R_RGB_3",
+        "P5_R_RGB_4",
+        "P5_R_RGB_5"
+      ],
+      "id": 0,
+      "name": "P1_closed_base",
+      "occurrences": [],
+      "parent": null,
+      "sketches": [
+        "L_WRAP_HAND_FRONT__PalmOuterProfile",
+        "L_WRAP_HAND_FRONT__PalmCavityProfile",
+        "L_WRAP_HAND_FRONT__OuterFingerProfile",
+        "L_WRAP_HAND_FRONT__CentreFingerProfile",
+        "L_WRAP_HAND_FRONT__HornScrewAccessProfile",
+        "L_WRAP_HAND_FRONT__BridgeBolt1Profile",
+        "L_WRAP_HAND_FRONT__BridgeBolt2Profile",
+        "L_WRAP_HAND_FRONT__AlignmentSocket1Profile",
+        "L_WRAP_HAND_FRONT__AlignmentSocket2Profile",
+        "L_WRAP_HAND_REAR__PalmOuterProfile",
+        "L_WRAP_HAND_REAR__PalmCavityProfile",
+        "L_WRAP_HAND_REAR__OuterFingerProfile",
+        "L_WRAP_HAND_REAR__CentreFingerProfile",
+        "L_WRAP_HAND_REAR__BearingBodySeatProfile",
+        "L_WRAP_HAND_REAR__BearingFlangeSeatProfile",
+        "L_WRAP_HAND_REAR__BridgeBolt1Profile",
+        "L_WRAP_HAND_REAR__BridgeBolt2Profile",
+        "L_WRAP_HAND_REAR__AlignmentSocket1Profile",
+        "L_WRAP_HAND_REAR__AlignmentSocket2Profile",
+        "R_WRAP_HAND_FRONT__PalmOuterProfile",
+        "R_WRAP_HAND_FRONT__PalmCavityProfile",
+        "R_WRAP_HAND_FRONT__OuterFingerProfile",
+        "R_WRAP_HAND_FRONT__CentreFingerProfile",
+        "R_WRAP_HAND_FRONT__HornScrewAccessProfile",
+        "R_WRAP_HAND_FRONT__BridgeBolt1Profile",
+        "R_WRAP_HAND_FRONT__BridgeBolt2Profile",
+        "R_WRAP_HAND_FRONT__AlignmentSocket1Profile",
+        "R_WRAP_HAND_FRONT__AlignmentSocket2Profile",
+        "R_WRAP_HAND_REAR__PalmOuterProfile",
+        "R_WRAP_HAND_REAR__PalmCavityProfile",
+        "R_WRAP_HAND_REAR__OuterFingerProfile",
+        "R_WRAP_HAND_REAR__CentreFingerProfile",
+        "R_WRAP_HAND_REAR__BearingBodySeatProfile",
+        "R_WRAP_HAND_REAR__BearingFlangeSeatProfile",
+        "R_WRAP_HAND_REAR__BridgeBolt1Profile",
+        "R_WRAP_HAND_REAR__BridgeBolt2Profile",
+        "R_WRAP_HAND_REAR__AlignmentSocket1Profile",
+        "R_WRAP_HAND_REAR__AlignmentSocket2Profile",
+        "L_ShoulderCrossProfile",
+        "R_ShoulderCrossProfile",
+        "P5_L_ROLL_YOKE_PALM_FRONT__PalmOuterProfile",
+        "P5_L_ROLL_YOKE_PALM_FRONT__PalmCavityProfile",
+        "P5_L_ROLL_YOKE_PALM_FRONT__OuterFingerProfile",
+        "P5_L_ROLL_YOKE_PALM_FRONT__CentreFingerProfile",
+        "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt1Profile",
+        "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt2Profile",
+        "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket1Profile",
+        "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket2Profile",
+        "P5_L_ROLL_PALM_REAR__PalmOuterProfile",
+        "P5_L_ROLL_PALM_REAR__PalmCavityProfile",
+        "P5_L_ROLL_PALM_REAR__OuterFingerProfile",
+        "P5_L_ROLL_PALM_REAR__CentreFingerProfile",
+        "P5_L_ROLL_PALM_REAR__BridgeBolt1Profile",
+        "P5_L_ROLL_PALM_REAR__BridgeBolt2Profile",
+        "P5_L_ROLL_PALM_REAR__AlignmentSocket1Profile",
+        "P5_L_ROLL_PALM_REAR__AlignmentSocket2Profile",
+        "L_P5_RollHornProfile",
+        "P5_R_ROLL_YOKE_PALM_FRONT__PalmOuterProfile",
+        "P5_R_ROLL_YOKE_PALM_FRONT__PalmCavityProfile",
+        "P5_R_ROLL_YOKE_PALM_FRONT__OuterFingerProfile",
+        "P5_R_ROLL_YOKE_PALM_FRONT__CentreFingerProfile",
+        "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt1Profile",
+        "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt2Profile",
+        "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket1Profile",
+        "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket2Profile",
+        "P5_R_ROLL_PALM_REAR__PalmOuterProfile",
+        "P5_R_ROLL_PALM_REAR__PalmCavityProfile",
+        "P5_R_ROLL_PALM_REAR__OuterFingerProfile",
+        "P5_R_ROLL_PALM_REAR__CentreFingerProfile",
+        "P5_R_ROLL_PALM_REAR__BridgeBolt1Profile",
+        "P5_R_ROLL_PALM_REAR__BridgeBolt2Profile",
+        "P5_R_ROLL_PALM_REAR__AlignmentSocket1Profile",
+        "P5_R_ROLL_PALM_REAR__AlignmentSocket2Profile",
+        "R_P5_RollHornProfile"
+      ]
+    },
+    {
+      "bodies": [
+        "SEAM_SPLICE_1_FRONT",
+        "SEAM_SPLICE_1_REAR",
+        "SEAM_SPLICE_2_FRONT",
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "children": [
+        {
+          "component": 3,
+          "grounded": false,
+          "id": 4,
+          "name": "fold_wing_v7_P1_assembly:1",
+          "parent": 1,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [
+        "fold_wing_v7_P1_assembly",
+        "Remove1",
+        "SEAM_SPLICE_1_FRONT_Blank",
+        "SEAM_SPLICE_1_FRONT_L_F_Bolt",
+        "SEAM_SPLICE_1_FRONT_L_F_SquareNut",
+        "SEAM_SPLICE_1_FRONT_L_F_FloorBolt",
+        "SEAM_SPLICE_1_FRONT_L_F_BottomHeadRecess",
+        "SEAM_SPLICE_1_FRONT_L_B_Bolt",
+        "SEAM_SPLICE_1_FRONT_L_B_SquareNut",
+        "SEAM_SPLICE_1_FRONT_L_B_FloorBolt",
+        "SEAM_SPLICE_1_FRONT_L_B_BottomHeadRecess",
+        "SEAM_SPLICE_1_FRONT_R_F_Bolt",
+        "SEAM_SPLICE_1_FRONT_R_F_SquareNut",
+        "SEAM_SPLICE_1_FRONT_R_F_FloorBolt",
+        "SEAM_SPLICE_1_FRONT_R_F_BottomHeadRecess",
+        "SEAM_SPLICE_1_FRONT_R_B_Bolt",
+        "SEAM_SPLICE_1_FRONT_R_B_SquareNut",
+        "SEAM_SPLICE_1_FRONT_R_B_FloorBolt",
+        "SEAM_SPLICE_1_FRONT_R_B_BottomHeadRecess",
+        "SEAM_SPLICE_1_FRONT_KeyL",
+        "SEAM_SPLICE_1_FRONT_KeyL_Socket",
+        "SEAM_SPLICE_1_FRONT_KeyR",
+        "SEAM_SPLICE_1_FRONT_KeyR_Socket",
+        "SEAM_SPLICE_1_REAR_Blank",
+        "SEAM_SPLICE_1_REAR_L_F_Bolt",
+        "SEAM_SPLICE_1_REAR_L_F_SquareNut",
+        "SEAM_SPLICE_1_REAR_L_F_BottomHeadRecess",
+        "SEAM_SPLICE_1_REAR_L_B_Bolt",
+        "SEAM_SPLICE_1_REAR_L_B_SquareNut",
+        "SEAM_SPLICE_1_REAR_L_B_BottomHeadRecess",
+        "SEAM_SPLICE_1_REAR_R_F_Bolt",
+        "SEAM_SPLICE_1_REAR_R_F_SquareNut",
+        "SEAM_SPLICE_1_REAR_R_F_BottomHeadRecess",
+        "SEAM_SPLICE_1_REAR_R_B_Bolt",
+        "SEAM_SPLICE_1_REAR_R_B_SquareNut",
+        "SEAM_SPLICE_1_REAR_R_B_BottomHeadRecess",
+        "SEAM_SPLICE_1_REAR_KeyL",
+        "SEAM_SPLICE_1_REAR_KeyL_Socket",
+        "SEAM_SPLICE_1_REAR_KeyR",
+        "SEAM_SPLICE_1_REAR_KeyR_Socket",
+        "SEAM_SPLICE_2_FRONT_Blank",
+        "SEAM_SPLICE_2_FRONT_L_F_Bolt",
+        "SEAM_SPLICE_2_FRONT_L_F_SquareNut",
+        "SEAM_SPLICE_2_FRONT_L_F_FloorBolt",
+        "SEAM_SPLICE_2_FRONT_L_F_BottomHeadRecess",
+        "SEAM_SPLICE_2_FRONT_L_B_Bolt",
+        "SEAM_SPLICE_2_FRONT_L_B_SquareNut",
+        "SEAM_SPLICE_2_FRONT_L_B_FloorBolt",
+        "SEAM_SPLICE_2_FRONT_L_B_BottomHeadRecess",
+        "SEAM_SPLICE_2_FRONT_R_F_Bolt",
+        "SEAM_SPLICE_2_FRONT_R_F_SquareNut",
+        "SEAM_SPLICE_2_FRONT_R_F_FloorBolt",
+        "SEAM_SPLICE_2_FRONT_R_F_BottomHeadRecess",
+        "SEAM_SPLICE_2_FRONT_R_B_Bolt",
+        "SEAM_SPLICE_2_FRONT_R_B_SquareNut",
+        "SEAM_SPLICE_2_FRONT_R_B_FloorBolt",
+        "SEAM_SPLICE_2_FRONT_R_B_BottomHeadRecess",
+        "SEAM_SPLICE_2_FRONT_KeyL",
+        "SEAM_SPLICE_2_FRONT_KeyL_Socket",
+        "SEAM_SPLICE_2_FRONT_KeyR",
+        "SEAM_SPLICE_2_FRONT_KeyR_Socket",
+        "SEAM_SPLICE_2_REAR_Blank",
+        "SEAM_SPLICE_2_REAR_L_F_Bolt",
+        "SEAM_SPLICE_2_REAR_L_F_SquareNut",
+        "SEAM_SPLICE_2_REAR_L_F_BottomHeadRecess",
+        "SEAM_SPLICE_2_REAR_L_B_Bolt",
+        "SEAM_SPLICE_2_REAR_L_B_SquareNut",
+        "SEAM_SPLICE_2_REAR_L_B_BottomHeadRecess",
+        "SEAM_SPLICE_2_REAR_R_F_Bolt",
+        "SEAM_SPLICE_2_REAR_R_F_SquareNut",
+        "SEAM_SPLICE_2_REAR_R_F_BottomHeadRecess",
+        "SEAM_SPLICE_2_REAR_R_B_Bolt",
+        "SEAM_SPLICE_2_REAR_R_B_SquareNut",
+        "SEAM_SPLICE_2_REAR_R_B_BottomHeadRecess",
+        "SEAM_SPLICE_2_REAR_KeyL",
+        "SEAM_SPLICE_2_REAR_KeyL_Socket",
+        "SEAM_SPLICE_2_REAR_KeyR",
+        "SEAM_SPLICE_2_REAR_KeyR_Socket",
+        "Move1"
+      ],
+      "id": 1,
+      "name": "P1_closed_base",
+      "occurrences": [
+        {
+          "component": 1,
+          "grounded": false,
+          "id": 2,
+          "name": "P1_closed_base:1",
+          "parent": 0,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 0,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 5,
+          "grounded": false,
+          "id": 6,
+          "name": "PILL_BASE_TRAY_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 9,
+          "grounded": false,
+          "id": 10,
+          "name": "PILL_BASE_LID_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 13,
+          "grounded": false,
+          "id": 14,
+          "name": "PILL_BASE_TRAY_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 17,
+          "grounded": false,
+          "id": 18,
+          "name": "PILL_BASE_LID_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 21,
+          "grounded": false,
+          "id": 22,
+          "name": "PILL_BASE_TRAY_3:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 25,
+          "grounded": false,
+          "id": 26,
+          "name": "PILL_BASE_LID_3:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 29,
+          "grounded": false,
+          "id": 30,
+          "name": "SEAM_PLATE_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 33,
+          "grounded": false,
+          "id": 34,
+          "name": "SEAM_PLATE_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 37,
+          "grounded": false,
+          "id": 38,
+          "name": "BA_R9_ENVELOPE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 41,
+          "grounded": false,
+          "id": 42,
+          "name": "PEBBLE_HEAD_FRONT_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 45,
+          "grounded": false,
+          "id": 46,
+          "name": "PEBBLE_HEAD_REAR_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 49,
+          "grounded": false,
+          "id": 50,
+          "name": "CAPSULE_VISOR_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 53,
+          "grounded": false,
+          "id": 54,
+          "name": "EYE_1_DISPLAY_ONLY:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 57,
+          "grounded": false,
+          "id": 58,
+          "name": "EYE_2_DISPLAY_ONLY:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 61,
+          "grounded": false,
+          "id": 62,
+          "name": "CAMERA_LENS_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 65,
+          "grounded": false,
+          "id": 66,
+          "name": "JETSON_RESERVED_ZONE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 69,
+          "grounded": false,
+          "id": 70,
+          "name": "POWER_RESERVED_ZONE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 73,
+          "grounded": false,
+          "id": 74,
+          "name": "BATTERY_RESERVED_ZONE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 77,
+          "grounded": false,
+          "id": 78,
+          "name": "L_ROUND_YAW_COLLAR_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 81,
+          "grounded": false,
+          "id": 82,
+          "name": "L_YAW_SERVO_INSIDE_BASE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 85,
+          "grounded": false,
+          "id": 86,
+          "name": "L_CURVED_ARM_CORE_FRONT:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 89,
+          "grounded": false,
+          "id": 90,
+          "name": "L_CURVED_ARM_CORE_REAR:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 93,
+          "grounded": false,
+          "id": 94,
+          "name": "L_PITCH_SERVO_EMBEDDED:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 97,
+          "grounded": false,
+          "id": 98,
+          "name": "L_SHORT_SERVO_SHAFT_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 101,
+          "grounded": false,
+          "id": 102,
+          "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 105,
+          "grounded": false,
+          "id": 106,
+          "name": "L_F625ZZ_BEARING:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 109,
+          "grounded": false,
+          "id": 110,
+          "name": "L_FIXED_SUPPORT_STUB_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 113,
+          "grounded": false,
+          "id": 114,
+          "name": "L_TOUCH_0:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 117,
+          "grounded": false,
+          "id": 118,
+          "name": "L_TOUCH_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 121,
+          "grounded": false,
+          "id": 122,
+          "name": "L_TOUCH_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 125,
+          "grounded": false,
+          "id": 126,
+          "name": "R_ROUND_YAW_COLLAR_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 129,
+          "grounded": false,
+          "id": 130,
+          "name": "R_YAW_SERVO_INSIDE_BASE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 133,
+          "grounded": false,
+          "id": 134,
+          "name": "R_CURVED_ARM_CORE_FRONT:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 137,
+          "grounded": false,
+          "id": 138,
+          "name": "R_CURVED_ARM_CORE_REAR:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 141,
+          "grounded": false,
+          "id": 142,
+          "name": "R_PITCH_SERVO_EMBEDDED:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 145,
+          "grounded": false,
+          "id": 146,
+          "name": "R_SHORT_SERVO_SHAFT_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 149,
+          "grounded": false,
+          "id": 150,
+          "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 153,
+          "grounded": false,
+          "id": 154,
+          "name": "R_F625ZZ_BEARING:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 157,
+          "grounded": false,
+          "id": 158,
+          "name": "R_FIXED_SUPPORT_STUB_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 161,
+          "grounded": false,
+          "id": 162,
+          "name": "R_TOUCH_0:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 165,
+          "grounded": false,
+          "id": 166,
+          "name": "R_TOUCH_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 169,
+          "grounded": false,
+          "id": 170,
+          "name": "R_TOUCH_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "component": 173,
+          "grounded": false,
+          "id": 174,
+          "name": "ROUNDED_PHONE_CRADLE_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 3,
+      "name": "fold_wing_v7_P1_assembly",
+      "occurrences": [
+        {
+          "component": 3,
+          "grounded": false,
+          "id": 4,
+          "name": "fold_wing_v7_P1_assembly:1",
+          "parent": 1,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 1,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 7,
+          "grounded": false,
+          "id": 8,
+          "name": "PILL_BASE_TRAY_1_part:1",
+          "parent": 5,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 5,
+      "name": "PILL_BASE_TRAY_1",
+      "occurrences": [
+        {
+          "component": 5,
+          "grounded": false,
+          "id": 6,
+          "name": "PILL_BASE_TRAY_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 7,
+      "name": "PILL_BASE_TRAY_1_part",
+      "occurrences": [
+        {
+          "component": 7,
+          "grounded": false,
+          "id": 8,
+          "name": "PILL_BASE_TRAY_1_part:1",
+          "parent": 5,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 5,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 11,
+          "grounded": false,
+          "id": 12,
+          "name": "PILL_BASE_LID_1_part:1",
+          "parent": 9,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 9,
+      "name": "PILL_BASE_LID_1",
+      "occurrences": [
+        {
+          "component": 9,
+          "grounded": false,
+          "id": 10,
+          "name": "PILL_BASE_LID_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "PILL_BASE_LID_1_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 11,
+      "name": "PILL_BASE_LID_1_part",
+      "occurrences": [
+        {
+          "component": 11,
+          "grounded": false,
+          "id": 12,
+          "name": "PILL_BASE_LID_1_part:1",
+          "parent": 9,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 9,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 15,
+          "grounded": false,
+          "id": 16,
+          "name": "PILL_BASE_TRAY_2_part:1",
+          "parent": 13,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 13,
+      "name": "PILL_BASE_TRAY_2",
+      "occurrences": [
+        {
+          "component": 13,
+          "grounded": false,
+          "id": 14,
+          "name": "PILL_BASE_TRAY_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 15,
+      "name": "PILL_BASE_TRAY_2_part",
+      "occurrences": [
+        {
+          "component": 15,
+          "grounded": false,
+          "id": 16,
+          "name": "PILL_BASE_TRAY_2_part:1",
+          "parent": 13,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 13,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 19,
+          "grounded": false,
+          "id": 20,
+          "name": "PILL_BASE_LID_2_part:1",
+          "parent": 17,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 17,
+      "name": "PILL_BASE_LID_2",
+      "occurrences": [
+        {
+          "component": 17,
+          "grounded": false,
+          "id": 18,
+          "name": "PILL_BASE_LID_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "PILL_BASE_LID_2_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 19,
+      "name": "PILL_BASE_LID_2_part",
+      "occurrences": [
+        {
+          "component": 19,
+          "grounded": false,
+          "id": 20,
+          "name": "PILL_BASE_LID_2_part:1",
+          "parent": 17,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 17,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 23,
+          "grounded": false,
+          "id": 24,
+          "name": "PILL_BASE_TRAY_3_part:1",
+          "parent": 21,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 21,
+      "name": "PILL_BASE_TRAY_3",
+      "occurrences": [
+        {
+          "component": 21,
+          "grounded": false,
+          "id": 22,
+          "name": "PILL_BASE_TRAY_3:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 23,
+      "name": "PILL_BASE_TRAY_3_part",
+      "occurrences": [
+        {
+          "component": 23,
+          "grounded": false,
+          "id": 24,
+          "name": "PILL_BASE_TRAY_3_part:1",
+          "parent": 21,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 21,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 27,
+          "grounded": false,
+          "id": 28,
+          "name": "PILL_BASE_LID_3_part:1",
+          "parent": 25,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 25,
+      "name": "PILL_BASE_LID_3",
+      "occurrences": [
+        {
+          "component": 25,
+          "grounded": false,
+          "id": 26,
+          "name": "PILL_BASE_LID_3:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "PILL_BASE_LID_3_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 27,
+      "name": "PILL_BASE_LID_3_part",
+      "occurrences": [
+        {
+          "component": 27,
+          "grounded": false,
+          "id": 28,
+          "name": "PILL_BASE_LID_3_part:1",
+          "parent": 25,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 25,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 31,
+          "grounded": false,
+          "id": 32,
+          "name": "SEAM_PLATE_1_part:1",
+          "parent": 29,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 29,
+      "name": "SEAM_PLATE_1",
+      "occurrences": [
+        {
+          "component": 29,
+          "grounded": false,
+          "id": 30,
+          "name": "SEAM_PLATE_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 31,
+      "name": "SEAM_PLATE_1_part",
+      "occurrences": [
+        {
+          "component": 31,
+          "grounded": false,
+          "id": 32,
+          "name": "SEAM_PLATE_1_part:1",
+          "parent": 29,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 29,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 35,
+          "grounded": false,
+          "id": 36,
+          "name": "SEAM_PLATE_2_part:1",
+          "parent": 33,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 33,
+      "name": "SEAM_PLATE_2",
+      "occurrences": [
+        {
+          "component": 33,
+          "grounded": false,
+          "id": 34,
+          "name": "SEAM_PLATE_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 35,
+      "name": "SEAM_PLATE_2_part",
+      "occurrences": [
+        {
+          "component": 35,
+          "grounded": false,
+          "id": 36,
+          "name": "SEAM_PLATE_2_part:1",
+          "parent": 33,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 33,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 39,
+          "grounded": false,
+          "id": 40,
+          "name": "BA_R9_ENVELOPE_part:1",
+          "parent": 37,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 37,
+      "name": "BA_R9_ENVELOPE",
+      "occurrences": [
+        {
+          "component": 37,
+          "grounded": false,
+          "id": 38,
+          "name": "BA_R9_ENVELOPE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "BA_R9_ENVELOPE_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 39,
+      "name": "BA_R9_ENVELOPE_part",
+      "occurrences": [
+        {
+          "component": 39,
+          "grounded": false,
+          "id": 40,
+          "name": "BA_R9_ENVELOPE_part:1",
+          "parent": 37,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 37,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 43,
+          "grounded": false,
+          "id": 44,
+          "name": "PEBBLE_HEAD_FRONT_TRIAL_part:1",
+          "parent": 41,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 41,
+      "name": "PEBBLE_HEAD_FRONT_TRIAL",
+      "occurrences": [
+        {
+          "component": 41,
+          "grounded": false,
+          "id": 42,
+          "name": "PEBBLE_HEAD_FRONT_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "PEBBLE_HEAD_FRONT_TRIAL_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 43,
+      "name": "PEBBLE_HEAD_FRONT_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 43,
+          "grounded": false,
+          "id": 44,
+          "name": "PEBBLE_HEAD_FRONT_TRIAL_part:1",
+          "parent": 41,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 41,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 47,
+          "grounded": false,
+          "id": 48,
+          "name": "PEBBLE_HEAD_REAR_TRIAL_part:1",
+          "parent": 45,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 45,
+      "name": "PEBBLE_HEAD_REAR_TRIAL",
+      "occurrences": [
+        {
+          "component": 45,
+          "grounded": false,
+          "id": 46,
+          "name": "PEBBLE_HEAD_REAR_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "PEBBLE_HEAD_REAR_TRIAL_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 47,
+      "name": "PEBBLE_HEAD_REAR_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 47,
+          "grounded": false,
+          "id": 48,
+          "name": "PEBBLE_HEAD_REAR_TRIAL_part:1",
+          "parent": 45,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 45,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 51,
+          "grounded": false,
+          "id": 52,
+          "name": "CAPSULE_VISOR_TRIAL_part:1",
+          "parent": 49,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 49,
+      "name": "CAPSULE_VISOR_TRIAL",
+      "occurrences": [
+        {
+          "component": 49,
+          "grounded": false,
+          "id": 50,
+          "name": "CAPSULE_VISOR_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "CAPSULE_VISOR_TRIAL_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 51,
+      "name": "CAPSULE_VISOR_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 51,
+          "grounded": false,
+          "id": 52,
+          "name": "CAPSULE_VISOR_TRIAL_part:1",
+          "parent": 49,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 49,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 55,
+          "grounded": false,
+          "id": 56,
+          "name": "EYE_1_DISPLAY_ONLY_part:1",
+          "parent": 53,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 53,
+      "name": "EYE_1_DISPLAY_ONLY",
+      "occurrences": [
+        {
+          "component": 53,
+          "grounded": false,
+          "id": 54,
+          "name": "EYE_1_DISPLAY_ONLY:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "EYE_1_DISPLAY_ONLY_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 55,
+      "name": "EYE_1_DISPLAY_ONLY_part",
+      "occurrences": [
+        {
+          "component": 55,
+          "grounded": false,
+          "id": 56,
+          "name": "EYE_1_DISPLAY_ONLY_part:1",
+          "parent": 53,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 53,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 59,
+          "grounded": false,
+          "id": 60,
+          "name": "EYE_2_DISPLAY_ONLY_part:1",
+          "parent": 57,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 57,
+      "name": "EYE_2_DISPLAY_ONLY",
+      "occurrences": [
+        {
+          "component": 57,
+          "grounded": false,
+          "id": 58,
+          "name": "EYE_2_DISPLAY_ONLY:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "EYE_2_DISPLAY_ONLY_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 59,
+      "name": "EYE_2_DISPLAY_ONLY_part",
+      "occurrences": [
+        {
+          "component": 59,
+          "grounded": false,
+          "id": 60,
+          "name": "EYE_2_DISPLAY_ONLY_part:1",
+          "parent": 57,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 57,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 63,
+          "grounded": false,
+          "id": 64,
+          "name": "CAMERA_LENS_TRIAL_part:1",
+          "parent": 61,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 61,
+      "name": "CAMERA_LENS_TRIAL",
+      "occurrences": [
+        {
+          "component": 61,
+          "grounded": false,
+          "id": 62,
+          "name": "CAMERA_LENS_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "CAMERA_LENS_TRIAL_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 63,
+      "name": "CAMERA_LENS_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 63,
+          "grounded": false,
+          "id": 64,
+          "name": "CAMERA_LENS_TRIAL_part:1",
+          "parent": 61,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 61,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 67,
+          "grounded": false,
+          "id": 68,
+          "name": "JETSON_RESERVED_ZONE_part:1",
+          "parent": 65,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 65,
+      "name": "JETSON_RESERVED_ZONE",
+      "occurrences": [
+        {
+          "component": 65,
+          "grounded": false,
+          "id": 66,
+          "name": "JETSON_RESERVED_ZONE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "JETSON_RESERVED_ZONE_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 67,
+      "name": "JETSON_RESERVED_ZONE_part",
+      "occurrences": [
+        {
+          "component": 67,
+          "grounded": false,
+          "id": 68,
+          "name": "JETSON_RESERVED_ZONE_part:1",
+          "parent": 65,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 65,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 71,
+          "grounded": false,
+          "id": 72,
+          "name": "POWER_RESERVED_ZONE_part:1",
+          "parent": 69,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 69,
+      "name": "POWER_RESERVED_ZONE",
+      "occurrences": [
+        {
+          "component": 69,
+          "grounded": false,
+          "id": 70,
+          "name": "POWER_RESERVED_ZONE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "POWER_RESERVED_ZONE_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 71,
+      "name": "POWER_RESERVED_ZONE_part",
+      "occurrences": [
+        {
+          "component": 71,
+          "grounded": false,
+          "id": 72,
+          "name": "POWER_RESERVED_ZONE_part:1",
+          "parent": 69,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 69,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 75,
+          "grounded": false,
+          "id": 76,
+          "name": "BATTERY_RESERVED_ZONE_part:1",
+          "parent": 73,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 73,
+      "name": "BATTERY_RESERVED_ZONE",
+      "occurrences": [
+        {
+          "component": 73,
+          "grounded": false,
+          "id": 74,
+          "name": "BATTERY_RESERVED_ZONE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "BATTERY_RESERVED_ZONE_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 75,
+      "name": "BATTERY_RESERVED_ZONE_part",
+      "occurrences": [
+        {
+          "component": 75,
+          "grounded": false,
+          "id": 76,
+          "name": "BATTERY_RESERVED_ZONE_part:1",
+          "parent": 73,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 73,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 79,
+          "grounded": false,
+          "id": 80,
+          "name": "L_ROUND_YAW_COLLAR_TRIAL_part:1",
+          "parent": 77,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 77,
+      "name": "L_ROUND_YAW_COLLAR_TRIAL",
+      "occurrences": [
+        {
+          "component": 77,
+          "grounded": false,
+          "id": 78,
+          "name": "L_ROUND_YAW_COLLAR_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "L_ROUND_YAW_COLLAR_TRIAL_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 79,
+      "name": "L_ROUND_YAW_COLLAR_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 79,
+          "grounded": false,
+          "id": 80,
+          "name": "L_ROUND_YAW_COLLAR_TRIAL_part:1",
+          "parent": 77,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 77,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 83,
+          "grounded": false,
+          "id": 84,
+          "name": "L_YAW_SERVO_INSIDE_BASE_part:1",
+          "parent": 81,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 81,
+      "name": "L_YAW_SERVO_INSIDE_BASE",
+      "occurrences": [
+        {
+          "component": 81,
+          "grounded": false,
+          "id": 82,
+          "name": "L_YAW_SERVO_INSIDE_BASE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "L_YAW_SERVO_INSIDE_BASE_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 83,
+      "name": "L_YAW_SERVO_INSIDE_BASE_part",
+      "occurrences": [
+        {
+          "component": 83,
+          "grounded": false,
+          "id": 84,
+          "name": "L_YAW_SERVO_INSIDE_BASE_part:1",
+          "parent": 81,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 81,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 87,
+          "grounded": false,
+          "id": 88,
+          "name": "L_CURVED_ARM_CORE_FRONT_part:1",
+          "parent": 85,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 85,
+      "name": "L_CURVED_ARM_CORE_FRONT",
+      "occurrences": [
+        {
+          "component": 85,
+          "grounded": false,
+          "id": 86,
+          "name": "L_CURVED_ARM_CORE_FRONT:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 87,
+      "name": "L_CURVED_ARM_CORE_FRONT_part",
+      "occurrences": [
+        {
+          "component": 87,
+          "grounded": false,
+          "id": 88,
+          "name": "L_CURVED_ARM_CORE_FRONT_part:1",
+          "parent": 85,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 85,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 91,
+          "grounded": false,
+          "id": 92,
+          "name": "L_CURVED_ARM_CORE_REAR_part:1",
+          "parent": 89,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 89,
+      "name": "L_CURVED_ARM_CORE_REAR",
+      "occurrences": [
+        {
+          "component": 89,
+          "grounded": false,
+          "id": 90,
+          "name": "L_CURVED_ARM_CORE_REAR:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 91,
+      "name": "L_CURVED_ARM_CORE_REAR_part",
+      "occurrences": [
+        {
+          "component": 91,
+          "grounded": false,
+          "id": 92,
+          "name": "L_CURVED_ARM_CORE_REAR_part:1",
+          "parent": 89,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 89,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 95,
+          "grounded": false,
+          "id": 96,
+          "name": "L_PITCH_SERVO_EMBEDDED_part:1",
+          "parent": 93,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 93,
+      "name": "L_PITCH_SERVO_EMBEDDED",
+      "occurrences": [
+        {
+          "component": 93,
+          "grounded": false,
+          "id": 94,
+          "name": "L_PITCH_SERVO_EMBEDDED:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 95,
+      "name": "L_PITCH_SERVO_EMBEDDED_part",
+      "occurrences": [
+        {
+          "component": 95,
+          "grounded": false,
+          "id": 96,
+          "name": "L_PITCH_SERVO_EMBEDDED_part:1",
+          "parent": 93,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 93,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 99,
+          "grounded": false,
+          "id": 100,
+          "name": "L_SHORT_SERVO_SHAFT_TRIAL_part:1",
+          "parent": 97,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 97,
+      "name": "L_SHORT_SERVO_SHAFT_TRIAL",
+      "occurrences": [
+        {
+          "component": 97,
+          "grounded": false,
+          "id": 98,
+          "name": "L_SHORT_SERVO_SHAFT_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 99,
+      "name": "L_SHORT_SERVO_SHAFT_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 99,
+          "grounded": false,
+          "id": 100,
+          "name": "L_SHORT_SERVO_SHAFT_TRIAL_part:1",
+          "parent": 97,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 97,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 103,
+          "grounded": false,
+          "id": 104,
+          "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+          "parent": 101,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 101,
+      "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER",
+      "occurrences": [
+        {
+          "component": 101,
+          "grounded": false,
+          "id": 102,
+          "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 103,
+      "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+      "occurrences": [
+        {
+          "component": 103,
+          "grounded": false,
+          "id": 104,
+          "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+          "parent": 101,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 101,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 107,
+          "grounded": false,
+          "id": 108,
+          "name": "L_F625ZZ_BEARING_part:1",
+          "parent": 105,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 105,
+      "name": "L_F625ZZ_BEARING",
+      "occurrences": [
+        {
+          "component": 105,
+          "grounded": false,
+          "id": 106,
+          "name": "L_F625ZZ_BEARING:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 107,
+      "name": "L_F625ZZ_BEARING_part",
+      "occurrences": [
+        {
+          "component": 107,
+          "grounded": false,
+          "id": 108,
+          "name": "L_F625ZZ_BEARING_part:1",
+          "parent": 105,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 105,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 111,
+          "grounded": false,
+          "id": 112,
+          "name": "L_FIXED_SUPPORT_STUB_TRIAL_part:1",
+          "parent": 109,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 109,
+      "name": "L_FIXED_SUPPORT_STUB_TRIAL",
+      "occurrences": [
+        {
+          "component": 109,
+          "grounded": false,
+          "id": 110,
+          "name": "L_FIXED_SUPPORT_STUB_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 111,
+      "name": "L_FIXED_SUPPORT_STUB_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 111,
+          "grounded": false,
+          "id": 112,
+          "name": "L_FIXED_SUPPORT_STUB_TRIAL_part:1",
+          "parent": 109,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 109,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 115,
+          "grounded": false,
+          "id": 116,
+          "name": "L_TOUCH_0_part:1",
+          "parent": 113,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 113,
+      "name": "L_TOUCH_0",
+      "occurrences": [
+        {
+          "component": 113,
+          "grounded": false,
+          "id": 114,
+          "name": "L_TOUCH_0:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "L_TOUCH_0_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 115,
+      "name": "L_TOUCH_0_part",
+      "occurrences": [
+        {
+          "component": 115,
+          "grounded": false,
+          "id": 116,
+          "name": "L_TOUCH_0_part:1",
+          "parent": 113,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 113,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 119,
+          "grounded": false,
+          "id": 120,
+          "name": "L_TOUCH_1_part:1",
+          "parent": 117,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 117,
+      "name": "L_TOUCH_1",
+      "occurrences": [
+        {
+          "component": 117,
+          "grounded": false,
+          "id": 118,
+          "name": "L_TOUCH_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "L_TOUCH_1_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 119,
+      "name": "L_TOUCH_1_part",
+      "occurrences": [
+        {
+          "component": 119,
+          "grounded": false,
+          "id": 120,
+          "name": "L_TOUCH_1_part:1",
+          "parent": 117,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 117,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 123,
+          "grounded": false,
+          "id": 124,
+          "name": "L_TOUCH_2_part:1",
+          "parent": 121,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 121,
+      "name": "L_TOUCH_2",
+      "occurrences": [
+        {
+          "component": 121,
+          "grounded": false,
+          "id": 122,
+          "name": "L_TOUCH_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "L_TOUCH_2_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 123,
+      "name": "L_TOUCH_2_part",
+      "occurrences": [
+        {
+          "component": 123,
+          "grounded": false,
+          "id": 124,
+          "name": "L_TOUCH_2_part:1",
+          "parent": 121,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 121,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 127,
+          "grounded": false,
+          "id": 128,
+          "name": "R_ROUND_YAW_COLLAR_TRIAL_part:1",
+          "parent": 125,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 125,
+      "name": "R_ROUND_YAW_COLLAR_TRIAL",
+      "occurrences": [
+        {
+          "component": 125,
+          "grounded": false,
+          "id": 126,
+          "name": "R_ROUND_YAW_COLLAR_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "R_ROUND_YAW_COLLAR_TRIAL_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 127,
+      "name": "R_ROUND_YAW_COLLAR_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 127,
+          "grounded": false,
+          "id": 128,
+          "name": "R_ROUND_YAW_COLLAR_TRIAL_part:1",
+          "parent": 125,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 125,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 131,
+          "grounded": false,
+          "id": 132,
+          "name": "R_YAW_SERVO_INSIDE_BASE_part:1",
+          "parent": 129,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 129,
+      "name": "R_YAW_SERVO_INSIDE_BASE",
+      "occurrences": [
+        {
+          "component": 129,
+          "grounded": false,
+          "id": 130,
+          "name": "R_YAW_SERVO_INSIDE_BASE:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "R_YAW_SERVO_INSIDE_BASE_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 131,
+      "name": "R_YAW_SERVO_INSIDE_BASE_part",
+      "occurrences": [
+        {
+          "component": 131,
+          "grounded": false,
+          "id": 132,
+          "name": "R_YAW_SERVO_INSIDE_BASE_part:1",
+          "parent": 129,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 129,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 135,
+          "grounded": false,
+          "id": 136,
+          "name": "R_CURVED_ARM_CORE_FRONT_part:1",
+          "parent": 133,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 133,
+      "name": "R_CURVED_ARM_CORE_FRONT",
+      "occurrences": [
+        {
+          "component": 133,
+          "grounded": false,
+          "id": 134,
+          "name": "R_CURVED_ARM_CORE_FRONT:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "R_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 135,
+      "name": "R_CURVED_ARM_CORE_FRONT_part",
+      "occurrences": [
+        {
+          "component": 135,
+          "grounded": false,
+          "id": 136,
+          "name": "R_CURVED_ARM_CORE_FRONT_part:1",
+          "parent": 133,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 133,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 139,
+          "grounded": false,
+          "id": 140,
+          "name": "R_CURVED_ARM_CORE_REAR_part:1",
+          "parent": 137,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 137,
+      "name": "R_CURVED_ARM_CORE_REAR",
+      "occurrences": [
+        {
+          "component": 137,
+          "grounded": false,
+          "id": 138,
+          "name": "R_CURVED_ARM_CORE_REAR:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "R_CURVED_ARM_CORE_REAR_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 139,
+      "name": "R_CURVED_ARM_CORE_REAR_part",
+      "occurrences": [
+        {
+          "component": 139,
+          "grounded": false,
+          "id": 140,
+          "name": "R_CURVED_ARM_CORE_REAR_part:1",
+          "parent": 137,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 137,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 143,
+          "grounded": false,
+          "id": 144,
+          "name": "R_PITCH_SERVO_EMBEDDED_part:1",
+          "parent": 141,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 141,
+      "name": "R_PITCH_SERVO_EMBEDDED",
+      "occurrences": [
+        {
+          "component": 141,
+          "grounded": false,
+          "id": 142,
+          "name": "R_PITCH_SERVO_EMBEDDED:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 143,
+      "name": "R_PITCH_SERVO_EMBEDDED_part",
+      "occurrences": [
+        {
+          "component": 143,
+          "grounded": false,
+          "id": 144,
+          "name": "R_PITCH_SERVO_EMBEDDED_part:1",
+          "parent": 141,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 141,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 147,
+          "grounded": false,
+          "id": 148,
+          "name": "R_SHORT_SERVO_SHAFT_TRIAL_part:1",
+          "parent": 145,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 145,
+      "name": "R_SHORT_SERVO_SHAFT_TRIAL",
+      "occurrences": [
+        {
+          "component": 145,
+          "grounded": false,
+          "id": 146,
+          "name": "R_SHORT_SERVO_SHAFT_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 147,
+      "name": "R_SHORT_SERVO_SHAFT_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 147,
+          "grounded": false,
+          "id": 148,
+          "name": "R_SHORT_SERVO_SHAFT_TRIAL_part:1",
+          "parent": 145,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 145,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 151,
+          "grounded": false,
+          "id": 152,
+          "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+          "parent": 149,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 149,
+      "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER",
+      "occurrences": [
+        {
+          "component": 149,
+          "grounded": false,
+          "id": 150,
+          "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 151,
+      "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+      "occurrences": [
+        {
+          "component": 151,
+          "grounded": false,
+          "id": 152,
+          "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+          "parent": 149,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 149,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 155,
+          "grounded": false,
+          "id": 156,
+          "name": "R_F625ZZ_BEARING_part:1",
+          "parent": 153,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 153,
+      "name": "R_F625ZZ_BEARING",
+      "occurrences": [
+        {
+          "component": 153,
+          "grounded": false,
+          "id": 154,
+          "name": "R_F625ZZ_BEARING:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 155,
+      "name": "R_F625ZZ_BEARING_part",
+      "occurrences": [
+        {
+          "component": 155,
+          "grounded": false,
+          "id": 156,
+          "name": "R_F625ZZ_BEARING_part:1",
+          "parent": 153,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 153,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 159,
+          "grounded": false,
+          "id": 160,
+          "name": "R_FIXED_SUPPORT_STUB_TRIAL_part:1",
+          "parent": 157,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 157,
+      "name": "R_FIXED_SUPPORT_STUB_TRIAL",
+      "occurrences": [
+        {
+          "component": 157,
+          "grounded": false,
+          "id": 158,
+          "name": "R_FIXED_SUPPORT_STUB_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 159,
+      "name": "R_FIXED_SUPPORT_STUB_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 159,
+          "grounded": false,
+          "id": 160,
+          "name": "R_FIXED_SUPPORT_STUB_TRIAL_part:1",
+          "parent": 157,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 157,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 163,
+          "grounded": false,
+          "id": 164,
+          "name": "R_TOUCH_0_part:1",
+          "parent": 161,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 161,
+      "name": "R_TOUCH_0",
+      "occurrences": [
+        {
+          "component": 161,
+          "grounded": false,
+          "id": 162,
+          "name": "R_TOUCH_0:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "R_TOUCH_0_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 163,
+      "name": "R_TOUCH_0_part",
+      "occurrences": [
+        {
+          "component": 163,
+          "grounded": false,
+          "id": 164,
+          "name": "R_TOUCH_0_part:1",
+          "parent": 161,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 161,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 167,
+          "grounded": false,
+          "id": 168,
+          "name": "R_TOUCH_1_part:1",
+          "parent": 165,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 165,
+      "name": "R_TOUCH_1",
+      "occurrences": [
+        {
+          "component": 165,
+          "grounded": false,
+          "id": 166,
+          "name": "R_TOUCH_1:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "R_TOUCH_1_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 167,
+      "name": "R_TOUCH_1_part",
+      "occurrences": [
+        {
+          "component": 167,
+          "grounded": false,
+          "id": 168,
+          "name": "R_TOUCH_1_part:1",
+          "parent": 165,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 165,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 171,
+          "grounded": false,
+          "id": 172,
+          "name": "R_TOUCH_2_part:1",
+          "parent": 169,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 169,
+      "name": "R_TOUCH_2",
+      "occurrences": [
+        {
+          "component": 169,
+          "grounded": false,
+          "id": 170,
+          "name": "R_TOUCH_2:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "R_TOUCH_2_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 171,
+      "name": "R_TOUCH_2_part",
+      "occurrences": [
+        {
+          "component": 171,
+          "grounded": false,
+          "id": 172,
+          "name": "R_TOUCH_2_part:1",
+          "parent": 169,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 169,
+      "sketches": []
+    },
+    {
+      "bodies": [],
+      "children": [
+        {
+          "component": 175,
+          "grounded": false,
+          "id": 176,
+          "name": "ROUNDED_PHONE_CRADLE_TRIAL_part:1",
+          "parent": 173,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "construction": [],
+      "features": [],
+      "id": 173,
+      "name": "ROUNDED_PHONE_CRADLE_TRIAL",
+      "occurrences": [
+        {
+          "component": 173,
+          "grounded": false,
+          "id": 174,
+          "name": "ROUNDED_PHONE_CRADLE_TRIAL:1",
+          "parent": 3,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 3,
+      "sketches": []
+    },
+    {
+      "bodies": [
+        "ROUNDED_PHONE_CRADLE_TRIAL_part"
+      ],
+      "children": [],
+      "construction": [],
+      "features": [],
+      "id": 175,
+      "name": "ROUNDED_PHONE_CRADLE_TRIAL_part",
+      "occurrences": [
+        {
+          "component": 175,
+          "grounded": false,
+          "id": 176,
+          "name": "ROUNDED_PHONE_CRADLE_TRIAL_part:1",
+          "parent": 173,
+          "transform": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "parent": 173,
+      "sketches": []
+    }
+  ],
+  "pending_moves": []
+}

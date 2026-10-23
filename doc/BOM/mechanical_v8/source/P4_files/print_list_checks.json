@@ -1,0 +1,146 @@
+{
+  "print_designs": 27,
+  "print_quantity": 30,
+  "largest_print_height_mm": 96.00178909301758,
+  "source_geometry_set_matches_manifest": true,
+  "checks": [
+    {
+      "part": "CAPSULE_VISOR_TRIAL",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "HAND_DOWEL_4x6",
+      "quantity": 4,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_FRONT",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_REAR",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "L_ROUND_YAW_COLLAR_TRIAL",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "L_SHOULDER_YAW_TURRET",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "L_WRAP_HAND_FRONT",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "L_WRAP_HAND_REAR",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "PEBBLE_HEAD_FRONT_TRIAL",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "PEBBLE_HEAD_REAR_TRIAL",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "PILL_BASE_LID_1",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "PILL_BASE_LID_2",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "PILL_BASE_LID_3",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "PILL_BASE_TRAY_1",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "PILL_BASE_TRAY_2",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "PILL_BASE_TRAY_3",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_FRONT",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_REAR",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "R_ROUND_YAW_COLLAR_TRIAL",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "R_SHOULDER_YAW_TURRET",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "R_WRAP_HAND_FRONT",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "R_WRAP_HAND_REAR",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "ROUNDED_PHONE_CRADLE_TRIAL",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "SEAM_SPLICE_1_FRONT",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "SEAM_SPLICE_1_REAR",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "SEAM_SPLICE_2_FRONT",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    },
+    {
+      "part": "SEAM_SPLICE_2_REAR",
+      "quantity": 1,
+      "three_export_hashes_match": true
+    }
+  ],
+  "static_manifest_pass": true,
+  "slicing_performed": false,
+  "physical_print_verified": false
+}

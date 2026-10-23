@@ -1,0 +1,272 @@
+{
+  "completed": 13,
+  "ok": true,
+  "results": [
+    {
+      "component": 1,
+      "joints": [
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264
+      ]
+    },
+    {
+      "component": 777,
+      "name": "P5_L_YAW_CARRIER",
+      "occurrence": 778,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "L_SHOULDER_YAW_TURRET",
+        "L_SHOULDER_SERVO_TRIAL",
+        "L_SHOULDER_FIXED_STUB_TRIAL"
+      ],
+      "component": 777,
+      "features": [
+        779,
+        780,
+        781
+      ]
+    },
+    {
+      "component": 782,
+      "name": "P5_L_ARM",
+      "occurrence": 783,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part",
+        "L_CURVED_ARM_CORE_REAR_part",
+        "L_P5_WRIST_SERVO_CASE",
+        "L_P5_WRIST_FIXED_STUB",
+        "L_SHOULDER_SHAFT_TRIAL",
+        "L_SHOULDER_HORN_TRIAL",
+        "L_SHOULDER_BEARING_TRIAL",
+        "L_RGB_0",
+        "L_RGB_1",
+        "L_RGB_2",
+        "L_RGB_3",
+        "L_RGB_4",
+        "L_RGB_5"
+      ],
+      "component": 782,
+      "features": [
+        784,
+        785,
+        786,
+        787,
+        788,
+        789,
+        790,
+        791,
+        792,
+        793,
+        794,
+        795,
+        796
+      ]
+    },
+    {
+      "component": 797,
+      "name": "P5_L_HAND",
+      "occurrence": 798,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "L_ROLL_YOKE_PALM_FRONT",
+        "L_ROLL_PALM_REAR",
+        "L_ROLL_BEARING_CAP",
+        "L_HAND_DOWEL_1",
+        "L_HAND_DOWEL_2",
+        "L_P5_WRIST_SHAFT",
+        "L_P5_WRIST_HORN",
+        "L_P5_WRIST_BEARING"
+      ],
+      "component": 797,
+      "features": [
+        799,
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806
+      ]
+    },
+    {
+      "component": 807,
+      "name": "P5_R_YAW_CARRIER",
+      "occurrence": 808,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "R_SHOULDER_YAW_TURRET",
+        "R_SHOULDER_SERVO_TRIAL",
+        "R_SHOULDER_FIXED_STUB_TRIAL"
+      ],
+      "component": 807,
+      "features": [
+        809,
+        810,
+        811
+      ]
+    },
+    {
+      "component": 812,
+      "name": "P5_R_ARM",
+      "occurrence": 813,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "R_CURVED_ARM_CORE_FRONT_part",
+        "R_CURVED_ARM_CORE_REAR_part",
+        "R_P5_WRIST_SERVO_CASE",
+        "R_P5_WRIST_FIXED_STUB",
+        "R_SHOULDER_SHAFT_TRIAL",
+        "R_SHOULDER_HORN_TRIAL",
+        "R_SHOULDER_BEARING_TRIAL",
+        "R_RGB_0",
+        "R_RGB_1",
+        "R_RGB_2",
+        "R_RGB_3",
+        "R_RGB_4",
+        "R_RGB_5"
+      ],
+      "component": 812,
+      "features": [
+        814,
+        815,
+        816,
+        817,
+        818,
+        819,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826
+      ]
+    },
+    {
+      "component": 827,
+      "name": "P5_R_HAND",
+      "occurrence": 828,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "R_ROLL_YOKE_PALM_FRONT",
+        "R_ROLL_PALM_REAR",
+        "R_ROLL_BEARING_CAP",
+        "R_HAND_DOWEL_1",
+        "R_HAND_DOWEL_2",
+        "R_P5_WRIST_SHAFT",
+        "R_P5_WRIST_HORN",
+        "R_P5_WRIST_BEARING"
+      ],
+      "component": 827,
+      "features": [
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "completed": 8,
+  "ok": true,
+  "results": [
+    {
+      "display_value": 180.0,
+      "name": "p4_shoulder_z",
+      "unit": "mm",
+      "value": 180.0
+    },
+    {
+      "display_value": 80.0,
+      "name": "p4_core_d",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "display_value": 88.0,
+      "name": "p4_cap_d",
+      "unit": "mm",
+      "value": 88.0
+    },
+    {
+      "display_value": 225.0,
+      "name": "p4_arm_cut_z",
+      "unit": "mm",
+      "value": 225.0
+    },
+    {
+      "display_value": 9.75,
+      "name": "p4_servo_offset",
+      "unit": "mm",
+      "value": 9.75
+    },
+    {
+      "display_value": 40.5,
+      "name": "p4_servo_l",
+      "unit": "mm",
+      "value": 40.5
+    },
+    {
+      "display_value": 40.0,
+      "name": "p4_servo_d",
+      "unit": "mm",
+      "value": 40.0
+    },
+    {
+      "display_value": 20.2,
+      "name": "p4_servo_h",
+      "unit": "mm",
+      "value": 20.2
+    }
+  ]
+}

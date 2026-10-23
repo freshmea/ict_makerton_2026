@@ -1,0 +1,2662 @@
+{
+  "generated_at_utc": "2026-10-23T04:09:34.662217+00:00",
+  "units": "mm",
+  "input_dir": "P4/stl",
+  "format": "3MF Core model only; one object per file",
+  "printer_evidence": {
+    "checked_date": "2026-10-23",
+    "printer": "Bambu Lab X1 Carbon 0.4 nozzle",
+    "official_nominal_build_mm": [
+      256,
+      256,
+      256
+    ],
+    "stock_profile_printable_height_mm": 250,
+    "stock_profile_excluded_polygon_xy_mm": [
+      [
+        0,
+        0
+      ],
+      [
+        18,
+        0
+      ],
+      [
+        18,
+        28
+      ],
+      [
+        0,
+        28
+      ]
+    ],
+    "sources": [
+      {
+        "claim": "Nominal build volume 256 x 256 x 256 mm",
+        "url": "https://public-cdn.bambulab.com/store/bambulab-X1-carbon-tech-specs.pdf?v=20241019045941"
+      },
+      {
+        "claim": "X1 Carbon 0.4 nozzle bed_exclude_area overrides common profile: 0x0,18x0,18x28,0x28",
+        "url": "https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/machine/Bambu%20Lab%20X1%20Carbon%200.4%20nozzle.json"
+      },
+      {
+        "claim": "Inherited printable_area 0x0,256x0,256x256,0x256",
+        "url": "https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/machine/fdm_bbl_3dp_001_common.json"
+      },
+      {
+        "claim": "Inherited printable_height 250",
+        "url": "https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/machine/fdm_machine_common.json"
+      }
+    ],
+    "profile_note": "Official upstream source values; the installed Bambu Studio profile was not inspected."
+  },
+  "brim_is_reserved_only": true,
+  "edge_clearance_mm": 1.0,
+  "part_count": 27,
+  "physical_part_count": 30,
+  "all_static_checks_pass": true,
+  "slicer_import_verified": false,
+  "slicing_performed": false,
+  "physical_print_verified": false,
+  "limitations": [
+    "No Bambu preset/material/process profile, support or G-code is included.",
+    "The brim reservation is an axis-aligned bbox expansion at every height, not a real toolpath.",
+    "Purge lines, prime towers, support growth and head travel are not checked.",
+    "Automatic directions and planar contact area do not validate strength or adhesion.",
+    "Opening a model may cause a slicer to recenter it; compare its position against this manifest."
+  ],
+  "parts": [
+    {
+      "part": "CAPSULE_VISOR_TRIAL",
+      "quantity": 1,
+      "source_stl": "P4/stl/CAPSULE_VISOR_TRIAL.stl",
+      "source_sha256": "18adab95c6b337792bcdcd775108806933bd58a6302ceaaa0da492b0f5d891c8",
+      "source_bbox_mm": [
+        144.0,
+        27.76810073852539,
+        67.0
+      ],
+      "orientation": "Rx 180; largest axial planar boundary face (automatic)",
+      "orientation_status": "automatic_review_required",
+      "oriented_bbox_mm": [
+        144.0,
+        27.768100738525394,
+        67.0
+      ],
+      "bottom_planar_triangle_area_mm2": 299.973,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 299.973,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          56.0,
+          114.1159496307373,
+          0.0
+        ],
+        [
+          200.0,
+          141.8840503692627,
+          67.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          51.0,
+          109.1159496307373
+        ],
+        [
+          205.0,
+          146.8840503692627
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          103.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          86.88871574401858
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          214.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/CAPSULE_VISOR_TRIAL.stl",
+      "oriented_stl_sha256": "c7d4fc876a66225418bc7fa29ef15c5f501580e345e67f18f6446ba3449155ad",
+      "model_3mf": "P4/print/single_part_3mf/CAPSULE_VISOR_TRIAL.3mf",
+      "model_3mf_sha256": "964968318a7a107a3b395169860920453e08fa32eb770afc95e18cc41374fa3b",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "HAND_DOWEL_4x6",
+      "quantity": 4,
+      "source_stl": "P4/stl/HAND_DOWEL_4x6.stl",
+      "source_sha256": "c860b48a5508c7070f441f5642b73ed900a8140b67cb241c2e06ea862c233f4b",
+      "source_bbox_mm": [
+        3.9992802143096924,
+        3.999892473220825,
+        6.0
+      ],
+      "orientation": "R0; largest axial planar boundary face (automatic)",
+      "orientation_status": "automatic_review_required",
+      "oriented_bbox_mm": [
+        3.9992802143096924,
+        3.999892473220825,
+        6.0
+      ],
+      "bottom_planar_triangle_area_mm2": 12.561,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 12.561,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          126.00035989284515,
+          126.00005376338959,
+          0.0
+        ],
+        [
+          129.99964010715485,
+          129.9999462366104,
+          6.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          121.00035989284515,
+          121.00005376338959
+        ],
+        [
+          134.99964010715485,
+          134.9999462366104
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/HAND_DOWEL_4x6.stl",
+      "oriented_stl_sha256": "09780082a7e41c729734281b1c061e372a729f250eac51efd899870e02271b89",
+      "model_3mf": "P4/print/single_part_3mf/HAND_DOWEL_4x6.3mf",
+      "model_3mf_sha256": "cc1af8a3eeff1ba61f4048b668b2d238e381b5310ab52af4fdc192624fa5da0d",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_FRONT",
+      "quantity": 1,
+      "source_stl": "P4/stl/L_CURVED_ARM_CORE_FRONT.stl",
+      "source_sha256": "8a40f3d1c37703b4fe3973e6380e038ca427ffe67a6310647026bae4aa99d460",
+      "source_bbox_mm": [
+        138.99209594726562,
+        34.0,
+        218.9988250732422
+      ],
+      "orientation": "Rx -90 deg; original max-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        138.99209594726562,
+        218.9988250732422,
+        34.0
+      ],
+      "bottom_planar_triangle_area_mm2": 1311.068,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1311.068,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          58.50395202636719,
+          18.500587463378906,
+          0.0
+        ],
+        [
+          197.4960479736328,
+          237.4994125366211,
+          34.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          53.50395202636719,
+          13.500587463378906
+        ],
+        [
+          202.4960479736328,
+          242.4994125366211
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          377.4960479736328
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -117.5005874633789
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          39.999999999999986
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/L_CURVED_ARM_CORE_FRONT.stl",
+      "oriented_stl_sha256": "1c90b1cb157c7a2aa710489824e1986be771d0751b8dbdc5abccb110fbe05a78",
+      "model_3mf": "P4/print/single_part_3mf/L_CURVED_ARM_CORE_FRONT.3mf",
+      "model_3mf_sha256": "aeec79e7ae50a524b81f3707415f9307966a645d6416e5a57da0570e6fd4db0f",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_REAR",
+      "quantity": 1,
+      "source_stl": "P4/stl/L_CURVED_ARM_CORE_REAR.stl",
+      "source_sha256": "a8d8d5bda9c3e036ed46afb70bd802e0f51b96c3cdf7ab6c4f3db54a241b6074",
+      "source_bbox_mm": [
+        138.99209594726562,
+        34.0,
+        218.9988250732422
+      ],
+      "orientation": "Rx +90 deg; original min-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        138.99209594726562,
+        218.9988250732422,
+        34.0
+      ],
+      "bottom_planar_triangle_area_mm2": 1311.068,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1311.068,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          58.50395202636719,
+          18.500587463378906,
+          0.0
+        ],
+        [
+          197.4960479736328,
+          237.4994125366211,
+          34.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          53.50395202636719,
+          13.500587463378906
+        ],
+        [
+          202.4960479736328,
+          242.4994125366211
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          377.4960479736328
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          373.5005874633789
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -40.000000000000014
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/L_CURVED_ARM_CORE_REAR.stl",
+      "oriented_stl_sha256": "874e4fe594f75cc1e1e2a10e5532bc6067cfd8372ca96c05d951cb2fb856aa08",
+      "model_3mf": "P4/print/single_part_3mf/L_CURVED_ARM_CORE_REAR.3mf",
+      "model_3mf_sha256": "0925390bb053feef5d8bc0fe2da62c9239aaffa8b113159e76a191f55be0b3c8",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "L_ROUND_YAW_COLLAR_TRIAL",
+      "quantity": 1,
+      "source_stl": "P4/stl/L_ROUND_YAW_COLLAR_TRIAL.stl",
+      "source_sha256": "8fc82c86acf1aca0a60e8d96e8772a992e416c0d280d66a0f98ff39937fc4e3c",
+      "source_bbox_mm": [
+        82.0,
+        82.0,
+        35.0
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        82.0,
+        82.0,
+        35.0
+      ],
+      "bottom_planar_triangle_area_mm2": 1095.188,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1095.188,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          87.0,
+          87.0,
+          0.0
+        ],
+        [
+          169.0,
+          169.0,
+          35.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          82.0,
+          82.0
+        ],
+        [
+          174.0,
+          174.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          403.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          88.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -100.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/L_ROUND_YAW_COLLAR_TRIAL.stl",
+      "oriented_stl_sha256": "65e993d1abdeaab6c60e9802a549b29eca65a8608190d16551f0494eed5aadcb",
+      "model_3mf": "P4/print/single_part_3mf/L_ROUND_YAW_COLLAR_TRIAL.3mf",
+      "model_3mf_sha256": "0a446da1e50213537ec223ae56779121f78e7950dc19ffe414f0452dff881744",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "L_SHOULDER_YAW_TURRET",
+      "quantity": 1,
+      "source_stl": "P4/stl/L_SHOULDER_YAW_TURRET.stl",
+      "source_sha256": "5953c3cb86f9b0bd96528cafda4b0fdd81dc3ad7ff621bbb0defc09631ab7bd0",
+      "source_bbox_mm": [
+        79.985595703125,
+        71.9980640411377,
+        90.99893188476562
+      ],
+      "orientation": "R0; largest axial planar boundary face (automatic)",
+      "orientation_status": "automatic_review_required",
+      "oriented_bbox_mm": [
+        79.985595703125,
+        71.9980640411377,
+        90.99893188476562
+      ],
+      "bottom_planar_triangle_area_mm2": 3726.626,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 3726.626,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          88.0072021484375,
+          92.00096797943115,
+          0.0
+        ],
+        [
+          167.9927978515625,
+          163.99903202056885,
+          90.99893188476562
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          83.0072021484375,
+          87.00096797943115
+        ],
+        [
+          172.9927978515625,
+          168.99903202056885
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          403.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          88.00000095367432
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -129.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/L_SHOULDER_YAW_TURRET.stl",
+      "oriented_stl_sha256": "57b7b564722019fe06a32e7b12b00d9f92b7f18624a252eb4eaf27d41506ad34",
+      "model_3mf": "P4/print/single_part_3mf/L_SHOULDER_YAW_TURRET.3mf",
+      "model_3mf_sha256": "f0425f3843e474ce973b622aeb4bb5ac4f58a93a66b39b16356a21915cd58523",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "L_WRAP_HAND_FRONT",
+      "quantity": 1,
+      "source_stl": "P4/stl/L_WRAP_HAND_FRONT.stl",
+      "source_sha256": "91c2ab551f35e05f66ca831e9a7e9cbfdb55cbd5b04b0c467e59b6cc30f70578",
+      "source_bbox_mm": [
+        171.97805786132812,
+        34.0,
+        89.99740600585938
+      ],
+      "orientation": "Rx -90 deg; original max-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        171.97805786132812,
+        89.99740600585938,
+        34.0
+      ],
+      "bottom_planar_triangle_area_mm2": 1132.076,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1132.076,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          42.01097106933594,
+          83.00129699707031,
+          0.0
+        ],
+        [
+          213.98902893066406,
+          172.9987030029297,
+          34.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          37.01097106933594,
+          78.00129699707031
+        ],
+        [
+          218.98902893066406,
+          177.9987030029297
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          307.0028839111328
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -186.9999237060547
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          39.99999999999998
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/L_WRAP_HAND_FRONT.stl",
+      "oriented_stl_sha256": "eaba030bc1573e85c0d111258584ff49b17995df262ed5a2ba563be5d639f2f2",
+      "model_3mf": "P4/print/single_part_3mf/L_WRAP_HAND_FRONT.3mf",
+      "model_3mf_sha256": "fef90dc7e3b8cc2d3e3b1624f97c354d47a52b9e65e7396e25cedbdda84f086a",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "L_WRAP_HAND_REAR",
+      "quantity": 1,
+      "source_stl": "P4/stl/L_WRAP_HAND_REAR.stl",
+      "source_sha256": "332ec06ad817f63be45275ac1d22c4fadf68b3fee1d73ecba4584d2887be977a",
+      "source_bbox_mm": [
+        171.97805786132812,
+        34.0,
+        89.99740600585938
+      ],
+      "orientation": "Rx +90 deg; original min-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        171.97805786132812,
+        89.99740600585938,
+        34.00000000000001
+      ],
+      "bottom_planar_triangle_area_mm2": 1132.076,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1132.076,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          42.01097106933594,
+          83.00129699707031,
+          0.0
+        ],
+        [
+          213.98902893066406,
+          172.9987030029297,
+          34.00000000000001
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          37.01097106933594,
+          78.00129699707031
+        ],
+        [
+          218.98902893066406,
+          177.9987030029297
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          307.0028839111328
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          442.9999237060547
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -40.00000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/L_WRAP_HAND_REAR.stl",
+      "oriented_stl_sha256": "5468dbf1e44752b2eb1bd2cc0d661570055202a88c1823e305d0750ec795e626",
+      "model_3mf": "P4/print/single_part_3mf/L_WRAP_HAND_REAR.3mf",
+      "model_3mf_sha256": "9a55d6356ce5c859cc1f64cfc2cf6ac2b0cef3862609e01f16afab5e5d11984f",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "PEBBLE_HEAD_FRONT_TRIAL",
+      "quantity": 1,
+      "source_stl": "P4/stl/PEBBLE_HEAD_FRONT_TRIAL.stl",
+      "source_sha256": "8d5192ac7ee3f665d12259c7944074ce8b89d47f4f1fd934805415a85966f0ef",
+      "source_bbox_mm": [
+        160.52832412719727,
+        25.524303436279297,
+        140.48287200927734
+      ],
+      "orientation": "Rx -90 deg; original max-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        160.52832412719727,
+        140.48287200927734,
+        25.524303436279297
+      ],
+      "bottom_planar_triangle_area_mm2": 2032.667,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 2032.667,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          47.73583793640137,
+          57.75856399536133,
+          0.0
+        ],
+        [
+          208.26416206359863,
+          198.24143600463867,
+          25.524303436279297
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          42.73583793640137,
+          52.75856399536133
+        ],
+        [
+          213.26416206359863,
+          203.24143600463867
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          103.00369453430176
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -42.99856948852539
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          -27.000000000000007
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/PEBBLE_HEAD_FRONT_TRIAL.stl",
+      "oriented_stl_sha256": "df4370d7392d12ee313d8e2bfc1ca8348ad5d7460bedfc3f24383e5d38f47641",
+      "model_3mf": "P4/print/single_part_3mf/PEBBLE_HEAD_FRONT_TRIAL.3mf",
+      "model_3mf_sha256": "114f9653aae32dd134edd07f46e3fc65791995566c6af0ffac2e30164e62ab34",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "PEBBLE_HEAD_REAR_TRIAL",
+      "quantity": 1,
+      "source_stl": "P4/stl/PEBBLE_HEAD_REAR_TRIAL.stl",
+      "source_sha256": "9d44395ba1491ab1eabc3b9ac0b6755d0f46923a759bfab0bc2adb0f48f13c53",
+      "source_bbox_mm": [
+        191.99676513671875,
+        96.00178909301758,
+        155.0
+      ],
+      "orientation": "Rx +90 deg; original min-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        191.99676513671875,
+        155.0,
+        96.00178909301758
+      ],
+      "bottom_planar_triangle_area_mm2": 2036.208,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 2036.208,
+        "height_above_bottom_mm": 0.0072
+      },
+      "plate_bbox_mm": [
+        [
+          32.001617431640625,
+          50.5,
+          0.0
+        ],
+        [
+          223.99838256835938,
+          205.5,
+          96.00178909301758
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          27.001617431640625,
+          45.5
+        ],
+        [
+          228.99838256835938,
+          210.5
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          103.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          305.5
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          27.007183074951158
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/PEBBLE_HEAD_REAR_TRIAL.stl",
+      "oriented_stl_sha256": "0987ac75783634978544c1c06e909225f7a5d21502e0ec43498ae12581b8d550",
+      "model_3mf": "P4/print/single_part_3mf/PEBBLE_HEAD_REAR_TRIAL.3mf",
+      "model_3mf_sha256": "f52c56f68116e313f3955555d996abb663d69cdbd8670f58f38f80e96f1e3b45",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "PILL_BASE_LID_1",
+      "quantity": 1,
+      "source_stl": "P4/stl/PILL_BASE_LID_1.stl",
+      "source_sha256": "c68d5b36f2159ff088d5cb4ffc8afbbdb438e5e291dcdc888df8318fef6ecfd1",
+      "source_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        4.0
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        4.0
+      ],
+      "bottom_planar_triangle_area_mm2": 40240.342,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 40240.342,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          24.0,
+          28.0,
+          0.0
+        ],
+        [
+          237.33333587646484,
+          228.0,
+          4.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        130.66666793823242,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          19.0,
+          23.0
+        ],
+        [
+          242.33333587646484,
+          233.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          344.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -96.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/PILL_BASE_LID_1.stl",
+      "oriented_stl_sha256": "0b05e1ebeac660af417d4b5c74dc71f79c15f34da15650b7e74dfb927ce595c8",
+      "model_3mf": "P4/print/single_part_3mf/PILL_BASE_LID_1.3mf",
+      "model_3mf_sha256": "6f6e0c6883eaff2f437fb5d49c992d3b2812ec5a0561cb36aad0dc6952e38890",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "PILL_BASE_LID_2",
+      "quantity": 1,
+      "source_stl": "P4/stl/PILL_BASE_LID_2.stl",
+      "source_sha256": "72c7b9cbb690a0b0938baa0db8825b008960aeb3eb6100ab4c18da3bc1084f5d",
+      "source_bbox_mm": [
+        213.3333282470703,
+        200.0,
+        4.0
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        213.3333282470703,
+        200.0,
+        4.0
+      ],
+      "bottom_planar_triangle_area_mm2": 41523.973,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 41523.973,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          24.0,
+          28.0,
+          0.0
+        ],
+        [
+          237.3333282470703,
+          228.0,
+          4.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        130.66666412353516,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          19.0,
+          23.0
+        ],
+        [
+          242.3333282470703,
+          233.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          130.66666412353516
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -96.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/PILL_BASE_LID_2.stl",
+      "oriented_stl_sha256": "7e8274bc9a542fc7350e3fb46195ecbfd5b52a2643ca9b805ef23bd56b5b6c92",
+      "model_3mf": "P4/print/single_part_3mf/PILL_BASE_LID_2.3mf",
+      "model_3mf_sha256": "091e633ba8adaab902a8d5603886c08b7c080f8896afd8d7f08d64b5cb52c566",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "PILL_BASE_LID_3",
+      "quantity": 1,
+      "source_stl": "P4/stl/PILL_BASE_LID_3.stl",
+      "source_sha256": "fe23f459c0987e99ed98caea799a6506be3dcc5237c08ac1a85dfc891a1fd47b",
+      "source_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        4.0
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        4.0
+      ],
+      "bottom_planar_triangle_area_mm2": 40240.342,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 40240.342,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          24.0,
+          28.0,
+          0.0
+        ],
+        [
+          237.33333587646484,
+          228.0,
+          4.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        130.66666793823242,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          19.0,
+          23.0
+        ],
+        [
+          242.33333587646484,
+          233.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -82.66666412353516
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -96.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/PILL_BASE_LID_3.stl",
+      "oriented_stl_sha256": "c48db8f9c72b2e9c81b5ad31e6dca4cea09ce9d9ed84373dc18b30f7802462eb",
+      "model_3mf": "P4/print/single_part_3mf/PILL_BASE_LID_3.3mf",
+      "model_3mf_sha256": "3b88616f43bfd2dfdc3e5e9910a1e41018205a13de93ff9cf9ea4af0c3051b1f",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "PILL_BASE_TRAY_1",
+      "quantity": 1,
+      "source_stl": "P4/stl/PILL_BASE_TRAY_1.stl",
+      "source_sha256": "83e73803cd3f9077d2a861300f87b0d09b86689d4fd0682fc44fa126713d74dd",
+      "source_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        96.0
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        96.0
+      ],
+      "bottom_planar_triangle_area_mm2": 41628.549,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 41628.549,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          24.0,
+          28.0,
+          0.0
+        ],
+        [
+          237.33333587646484,
+          228.0,
+          96.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        130.66666793823242,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          19.0,
+          23.0
+        ],
+        [
+          242.33333587646484,
+          233.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          344.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -4.0684809158744225e-39
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/PILL_BASE_TRAY_1.stl",
+      "oriented_stl_sha256": "0a3231ab568ae0e2e1616f2af137e183539423aecb51d440157d612e06efb847",
+      "model_3mf": "P4/print/single_part_3mf/PILL_BASE_TRAY_1.3mf",
+      "model_3mf_sha256": "4624ae08ca2adbef458a3eef71a8ef076158b967a946bf61da8a2b1fdcd282e4",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "PILL_BASE_TRAY_2",
+      "quantity": 1,
+      "source_stl": "P4/stl/PILL_BASE_TRAY_2.stl",
+      "source_sha256": "bfcf07f3d4a9f7755531f97bf3344b929c83a9fac1ec1da9b7e396025432174f",
+      "source_bbox_mm": [
+        213.3333282470703,
+        200.0,
+        96.00000000001323
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        213.3333282470703,
+        200.0,
+        96.00000000001323
+      ],
+      "bottom_planar_triangle_area_mm2": 42338.986,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 42338.986,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          24.0,
+          28.0,
+          0.0
+        ],
+        [
+          237.3333282470703,
+          228.0,
+          96.00000000001323
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        130.66666412353516,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          19.0,
+          23.0
+        ],
+        [
+          242.3333282470703,
+          233.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          130.66666412353516
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.32290142382252e-11
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/PILL_BASE_TRAY_2.stl",
+      "oriented_stl_sha256": "a2686f935302b6684b361101723be3be8144209661ad6f21b241e25344d0eaa9",
+      "model_3mf": "P4/print/single_part_3mf/PILL_BASE_TRAY_2.3mf",
+      "model_3mf_sha256": "1bcb57b91d8e65171dee7166574654572183f1632ed61ea0a348c97595b78592",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "PILL_BASE_TRAY_3",
+      "quantity": 1,
+      "source_stl": "P4/stl/PILL_BASE_TRAY_3.stl",
+      "source_sha256": "0ae21e8d99cf867fc7b59c4df67d1e473f0f1c01f10c9b3e59333345b23ecb0a",
+      "source_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        96.0
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        213.33333587646484,
+        200.0,
+        96.0
+      ],
+      "bottom_planar_triangle_area_mm2": 41630.83,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 41630.83,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          24.0,
+          28.0,
+          0.0
+        ],
+        [
+          237.33333587646484,
+          228.0,
+          96.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        130.66666793823242,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          19.0,
+          23.0
+        ],
+        [
+          242.33333587646484,
+          233.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -82.66666412353516
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -1.9001560205677562e-22
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/PILL_BASE_TRAY_3.stl",
+      "oriented_stl_sha256": "a0554a6bf7080f1edab9fe1819526fa5ab34e5955f1b55987272a564d75b3d42",
+      "model_3mf": "P4/print/single_part_3mf/PILL_BASE_TRAY_3.3mf",
+      "model_3mf_sha256": "caeb3cc093bab4d0719bccd7b9bb97a467314c7cc23b2dd792dbd4de8205a4f4",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_FRONT",
+      "quantity": 1,
+      "source_stl": "P4/stl/R_CURVED_ARM_CORE_FRONT.stl",
+      "source_sha256": "cdc5c7ed8e50303268f13020c2ec20024e85e2e0435cbfeef2b3b3a26e461f4d",
+      "source_bbox_mm": [
+        138.99826049804688,
+        34.0,
+        218.9988250732422
+      ],
+      "orientation": "Rx -90 deg; original max-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        138.99826049804688,
+        218.9988250732422,
+        34.0
+      ],
+      "bottom_planar_triangle_area_mm2": 1311.068,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1311.068,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          58.50086975097656,
+          18.500587463378906,
+          0.0
+        ],
+        [
+          197.49913024902344,
+          237.4994125366211,
+          34.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          53.50086975097656,
+          13.500587463378906
+        ],
+        [
+          202.49913024902344,
+          242.4994125366211
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -121.49913024902344
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -117.5005874633789
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          39.999999999999986
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/R_CURVED_ARM_CORE_FRONT.stl",
+      "oriented_stl_sha256": "d35a357300f9de53fcdf45cc60b6d08c019a0dd8d4edbd9e24d74ffc451c944b",
+      "model_3mf": "P4/print/single_part_3mf/R_CURVED_ARM_CORE_FRONT.3mf",
+      "model_3mf_sha256": "ebd6cb45f0a6d9d36141da341b48138b4bf517b235098503d96711d5ff05ff5b",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_REAR",
+      "quantity": 1,
+      "source_stl": "P4/stl/R_CURVED_ARM_CORE_REAR.stl",
+      "source_sha256": "877716dafeb04bf0578d9fc9ab0dc096d64680dca48d404cab250fb35181a4e4",
+      "source_bbox_mm": [
+        138.99826049804688,
+        34.0,
+        218.9988250732422
+      ],
+      "orientation": "Rx +90 deg; original min-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        138.99826049804688,
+        218.9988250732422,
+        34.0
+      ],
+      "bottom_planar_triangle_area_mm2": 1311.068,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1311.068,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          58.50086975097656,
+          18.500587463378906,
+          0.0
+        ],
+        [
+          197.49913024902344,
+          237.4994125366211,
+          34.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          53.50086975097656,
+          13.500587463378906
+        ],
+        [
+          202.49913024902344,
+          242.4994125366211
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -121.49913024902344
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          373.5005874633789
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -40.000000000000014
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/R_CURVED_ARM_CORE_REAR.stl",
+      "oriented_stl_sha256": "e0f9ba18eb2ffcfe0b2fd8947fea961daac18aa784799dc5b7e674834459125d",
+      "model_3mf": "P4/print/single_part_3mf/R_CURVED_ARM_CORE_REAR.3mf",
+      "model_3mf_sha256": "98518c66bf2e023acef58eec0bc2d4814bf97449df25cbb15f6affefe68e4e15",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "R_ROUND_YAW_COLLAR_TRIAL",
+      "quantity": 1,
+      "source_stl": "P4/stl/R_ROUND_YAW_COLLAR_TRIAL.stl",
+      "source_sha256": "215f72cc2db71bf81860db9ad2838adae65f6767ef906f590c5d14fd8c154e65",
+      "source_bbox_mm": [
+        82.0,
+        82.0,
+        35.0
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        82.0,
+        82.0,
+        35.0
+      ],
+      "bottom_planar_triangle_area_mm2": 1095.188,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1095.188,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          87.0,
+          87.0,
+          0.0
+        ],
+        [
+          169.0,
+          169.0,
+          35.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          82.0,
+          82.0
+        ],
+        [
+          174.0,
+          174.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -147.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          88.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -100.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/R_ROUND_YAW_COLLAR_TRIAL.stl",
+      "oriented_stl_sha256": "c038916b82a3fa96d2f99732d0ce20629a88b4f2300bc9944a373b0584feb5e1",
+      "model_3mf": "P4/print/single_part_3mf/R_ROUND_YAW_COLLAR_TRIAL.3mf",
+      "model_3mf_sha256": "5c1da1f1faaa86a29e0c93f9d459e814f9e4a79ca665f9a374ab59dcea231731",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "R_SHOULDER_YAW_TURRET",
+      "quantity": 1,
+      "source_stl": "P4/stl/R_SHOULDER_YAW_TURRET.stl",
+      "source_sha256": "3ce7d7d726b6cb78c30c2db0815230807698bb369fae5df2a50b7193bd7ceb8e",
+      "source_bbox_mm": [
+        79.985595703125,
+        71.9980640411377,
+        90.99893188476562
+      ],
+      "orientation": "R0; largest axial planar boundary face (automatic)",
+      "orientation_status": "automatic_review_required",
+      "oriented_bbox_mm": [
+        79.985595703125,
+        71.9980640411377,
+        90.99893188476562
+      ],
+      "bottom_planar_triangle_area_mm2": 3726.626,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 3726.626,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          88.0072021484375,
+          92.00096797943115,
+          0.0
+        ],
+        [
+          167.9927978515625,
+          163.99903202056885,
+          90.99893188476562
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          83.0072021484375,
+          87.00096797943115
+        ],
+        [
+          172.9927978515625,
+          168.99903202056885
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -147.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          88.00000095367432
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -129.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/R_SHOULDER_YAW_TURRET.stl",
+      "oriented_stl_sha256": "db5d9757eac5a7e78f8074d2fda9133505896f930f6d6ad85d9ec48449cb2f90",
+      "model_3mf": "P4/print/single_part_3mf/R_SHOULDER_YAW_TURRET.3mf",
+      "model_3mf_sha256": "1da350bb8743dd2d9d7fdd11c9f71cc12b44503c89330a009df1c5838a2a51a5",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "R_WRAP_HAND_FRONT",
+      "quantity": 1,
+      "source_stl": "P4/stl/R_WRAP_HAND_FRONT.stl",
+      "source_sha256": "8f8e636bf59121e1d278dfcaf1e36cae7b531f1905ccb88940fba990b30f3c06",
+      "source_bbox_mm": [
+        171.97805786132812,
+        34.0,
+        89.99740600585938
+      ],
+      "orientation": "Rx -90 deg; original max-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        171.97805786132812,
+        89.99740600585938,
+        34.0
+      ],
+      "bottom_planar_triangle_area_mm2": 1132.076,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1132.076,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          42.01097106933594,
+          83.00129699707031,
+          0.0
+        ],
+        [
+          213.98902893066406,
+          172.9987030029297,
+          34.0
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          37.01097106933594,
+          78.00129699707031
+        ],
+        [
+          218.98902893066406,
+          177.9987030029297
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -51.00288391113281
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          -187.0000762939453
+        ],
+        [
+          0.0,
+          -1.0,
+          6.123233995736766e-17,
+          39.99999999999998
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/R_WRAP_HAND_FRONT.stl",
+      "oriented_stl_sha256": "16b35b43d596edc410eef450aee219dee0f6990ca63b9b6cfd99053261619201",
+      "model_3mf": "P4/print/single_part_3mf/R_WRAP_HAND_FRONT.3mf",
+      "model_3mf_sha256": "7315b221a0afe86f54039489a4bbc9039351936310e7c200f528699f3bb0b797",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "R_WRAP_HAND_REAR",
+      "quantity": 1,
+      "source_stl": "P4/stl/R_WRAP_HAND_REAR.stl",
+      "source_sha256": "7701e1338d352e05b135a160ed191ac2ec0775910f1affdc2fcf1b43792b91e9",
+      "source_bbox_mm": [
+        171.97805786132812,
+        34.0,
+        89.99740600585938
+      ],
+      "orientation": "Rx +90 deg; original min-Y split face down",
+      "orientation_status": "defined_service_split",
+      "oriented_bbox_mm": [
+        171.97805786132812,
+        89.99740600585938,
+        34.00000000000001
+      ],
+      "bottom_planar_triangle_area_mm2": 1132.076,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1132.076,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          42.01097106933594,
+          83.00129699707031,
+          0.0
+        ],
+        [
+          213.98902893066406,
+          172.9987030029297,
+          34.00000000000001
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          37.01097106933594,
+          78.00129699707031
+        ],
+        [
+          218.98902893066406,
+          177.9987030029297
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -51.00288391113281
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          -1.0,
+          443.0000762939453
+        ],
+        [
+          0.0,
+          1.0,
+          6.123233995736766e-17,
+          -40.00000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/R_WRAP_HAND_REAR.stl",
+      "oriented_stl_sha256": "35e45f526573ba2c5fa1f78144e0566634304af59f276917e8c30ed3b4779d9e",
+      "model_3mf": "P4/print/single_part_3mf/R_WRAP_HAND_REAR.3mf",
+      "model_3mf_sha256": "5b8165feb471a2469534d43d0bb2571e11daeef1d7a463353e18331728615439",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "ROUNDED_PHONE_CRADLE_TRIAL",
+      "quantity": 1,
+      "source_stl": "P4/stl/ROUNDED_PHONE_CRADLE_TRIAL.stl",
+      "source_sha256": "245454a7906bfd0bfe2d4587d2c368abcd035dd9eb75092345011641d8cf9ae0",
+      "source_bbox_mm": [
+        82.0,
+        60.53793907165527,
+        53.50926208496094
+      ],
+      "orientation": "R0; original flat lower-Z face down",
+      "orientation_status": "defined_source_base",
+      "oriented_bbox_mm": [
+        82.0,
+        60.53793907165527,
+        53.50926208496094
+      ],
+      "bottom_planar_triangle_area_mm2": 4094.757,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 4094.757,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          87.0,
+          97.73103046417236,
+          0.0
+        ],
+        [
+          169.0,
+          158.26896953582764,
+          53.50926208496094
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          82.0,
+          92.73103046417236
+        ],
+        [
+          174.0,
+          163.26896953582764
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          285.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          141.73103046417236
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -100.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/ROUNDED_PHONE_CRADLE_TRIAL.stl",
+      "oriented_stl_sha256": "8bd309c4f0110594e9a90fc36d69fb238df954a0efd578f95860cd7b4a2b4817",
+      "model_3mf": "P4/print/single_part_3mf/ROUNDED_PHONE_CRADLE_TRIAL.3mf",
+      "model_3mf_sha256": "3695b405e6bc4e43e878ef00f88ff75f5469ec311aa9cb921150dc2365e641a5",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "SEAM_SPLICE_1_FRONT",
+      "quantity": 1,
+      "source_stl": "P4/stl/SEAM_SPLICE_1_FRONT.stl",
+      "source_sha256": "96d137ab61658ec45f2d2bf2ad238c3a1a5e1906d273545f9abdb9873f7c8c50",
+      "source_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.0
+      ],
+      "orientation": "Rx 180 deg; top nut-pocket face down, locator pegs up; pocket bridges need preview",
+      "orientation_status": "defined_splice_pegs_up",
+      "oriented_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.000000000000004
+      ],
+      "bottom_planar_triangle_area_mm2": 1977.44,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1977.44,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          103.99999618530273,
+          106.0,
+          0.0
+        ],
+        [
+          152.00000381469727,
+          150.0,
+          10.000000000000004
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          98.99999618530273,
+          101.0
+        ],
+        [
+          157.00000381469727,
+          155.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          234.66666793823242
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          66.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          12.00000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/SEAM_SPLICE_1_FRONT.stl",
+      "oriented_stl_sha256": "87fc85cff5f548999e7bc18cf8fe150fea96ea1220f67af80c27666efd5f7b06",
+      "model_3mf": "P4/print/single_part_3mf/SEAM_SPLICE_1_FRONT.3mf",
+      "model_3mf_sha256": "8ae55224aae0519e881a8365add796a9451c9841d721b9f2a05d5d58205e6fc8",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "SEAM_SPLICE_1_REAR",
+      "quantity": 1,
+      "source_stl": "P4/stl/SEAM_SPLICE_1_REAR.stl",
+      "source_sha256": "4b2c84fb57286145e84ae3e30e492db4a201a9aee39a1d3a2f7212dd7a980768",
+      "source_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.0
+      ],
+      "orientation": "Rx 180 deg; top nut-pocket face down, locator pegs up; pocket bridges need preview",
+      "orientation_status": "defined_splice_pegs_up",
+      "oriented_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.000000000000002
+      ],
+      "bottom_planar_triangle_area_mm2": 1977.44,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1977.44,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          103.99999618530273,
+          106.0,
+          0.0
+        ],
+        [
+          152.00000381469727,
+          150.0,
+          10.000000000000002
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          98.99999618530273,
+          101.0
+        ],
+        [
+          157.00000381469727,
+          155.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          234.66666793823242
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          190.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          11.999999999999995
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/SEAM_SPLICE_1_REAR.stl",
+      "oriented_stl_sha256": "12406327eab6d0e0f776fdd7639bf52631dcebcac31590295ff5bdbc85db25f1",
+      "model_3mf": "P4/print/single_part_3mf/SEAM_SPLICE_1_REAR.3mf",
+      "model_3mf_sha256": "143aec44fc56d6cb2a1c1bbeee651b646500a49e48351b61eddaeb1abc05fb20",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "SEAM_SPLICE_2_FRONT",
+      "quantity": 1,
+      "source_stl": "P4/stl/SEAM_SPLICE_2_FRONT.stl",
+      "source_sha256": "3b5718202065840646a13e19577df76e045dd56e2ac3257605e1e91452bbd001",
+      "source_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.0
+      ],
+      "orientation": "Rx 180 deg; top nut-pocket face down, locator pegs up; pocket bridges need preview",
+      "orientation_status": "defined_splice_pegs_up",
+      "oriented_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.000000000000004
+      ],
+      "bottom_planar_triangle_area_mm2": 1977.44,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1977.44,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          103.99999618530273,
+          106.0,
+          0.0
+        ],
+        [
+          152.00000381469727,
+          150.0,
+          10.000000000000004
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          98.99999618530273,
+          101.0
+        ],
+        [
+          157.00000381469727,
+          155.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          21.333332061767578
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          66.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          12.00000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/SEAM_SPLICE_2_FRONT.stl",
+      "oriented_stl_sha256": "7baabc1c1855dcf1ecf260f4399ea09d102eaf3225747cf313caefd04016b07e",
+      "model_3mf": "P4/print/single_part_3mf/SEAM_SPLICE_2_FRONT.3mf",
+      "model_3mf_sha256": "7fa6c98871307e4b4d71ee03179d95efb6ad642aed21034ccca1578c873b5c70",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    },
+    {
+      "part": "SEAM_SPLICE_2_REAR",
+      "quantity": 1,
+      "source_stl": "P4/stl/SEAM_SPLICE_2_REAR.stl",
+      "source_sha256": "620ce6784de77ba51ae1eeb09ff9bb3a7ebb2dfcddb16ba1f5d282969e064bcb",
+      "source_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.0
+      ],
+      "orientation": "Rx 180 deg; top nut-pocket face down, locator pegs up; pocket bridges need preview",
+      "orientation_status": "defined_splice_pegs_up",
+      "oriented_bbox_mm": [
+        48.00000762939453,
+        44.0,
+        10.000000000000002
+      ],
+      "bottom_planar_triangle_area_mm2": 1977.44,
+      "largest_downward_plane_within_5mm_of_bottom": {
+        "area_mm2": 1977.44,
+        "height_above_bottom_mm": 0.0
+      },
+      "plate_bbox_mm": [
+        [
+          103.99999618530273,
+          106.0,
+          0.0
+        ],
+        [
+          152.00000381469727,
+          150.0,
+          10.000000000000002
+        ]
+      ],
+      "plate_bbox_centre_xy_mm": [
+        128.0,
+        128.0
+      ],
+      "brim_width_reserved_mm": 5.0,
+      "brim_bbox_xy_mm": [
+        [
+          98.99999618530273,
+          101.0
+        ],
+        [
+          157.00000381469727,
+          155.0
+        ]
+      ],
+      "source_to_plate_transform_4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          21.333332061767578
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          190.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          11.999999999999995
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bed_boundary_with_brim": "pass",
+      "stock_exclusion_with_brim": "pass",
+      "stock_250_height": "pass",
+      "watertight": true,
+      "connected_components": 1,
+      "oriented_stl": "P4/print/oriented_stl/SEAM_SPLICE_2_REAR.stl",
+      "oriented_stl_sha256": "c470a731df6fe1047c8310c944ddd4156ccc05753d957e687ad63880b5f793a0",
+      "model_3mf": "P4/print/single_part_3mf/SEAM_SPLICE_2_REAR.3mf",
+      "model_3mf_sha256": "ffc6060acd27b695779027cba303d13e83d0a78e5d006d65cfa4bdcc95ed127a",
+      "model_3mf_checks": {
+        "zip_crc": "pass",
+        "unit": "millimeter",
+        "objects": 1,
+        "build_items": 1,
+        "watertight": true,
+        "bounds_roundtrip": "pass"
+      },
+      "support": "candidate direction only; slicer preview and support placement required",
+      "sliced": false,
+      "physical_print_verified": false
+    }
+  ]
+}

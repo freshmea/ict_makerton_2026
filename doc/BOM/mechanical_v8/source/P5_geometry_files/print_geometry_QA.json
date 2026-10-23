@@ -1,0 +1,1213 @@
+{
+  "checked_at_utc": "2026-10-23T04:56:33.293258+00:00",
+  "manifest_sha256": "e8ee1d8a1f825c133a3587776f7294e65625307841f7c8137e21fb0133eef6a3",
+  "unique_parts": 29,
+  "physical_parts": 32,
+  "step_valid_closed_single_solid_count": 29,
+  "source_stl_closed_single_mesh_count": 29,
+  "oriented_stl_closed_single_mesh_count": 29,
+  "model_3mf_verified_count": 29,
+  "manifest_hash_matches": 87,
+  "maximum_source_step_bbox_gap_mm": 0.02023325429695433,
+  "maximum_mesh_step_volume_relative_gap": 0.007834236615093606,
+  "maximum_print_height_mm": 106.99208188056946,
+  "all_static_checks_pass": true,
+  "arm_mesh_conversion_report": "arm_tessellation.json",
+  "limitations": [
+    "No triangle self-intersection audit.",
+    "No slicer import or support/toolpath verification.",
+    "No physical print or hardware fit/strength verification.",
+    "Mesh/STEP volume differences are tessellation/integration differences, not print tolerances."
+  ],
+  "parts": [
+    {
+      "part": "CAPSULE_VISOR_TRIAL",
+      "quantity": 1,
+      "step_sha256": "3c1c29009e8584d2356fea82bb69051e3feb99e41753b6e9bd515a1ea7813b3d",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -47.0000001,
+          -55.00000009997938,
+          147.4999999
+        ],
+        [
+          97.0000001,
+          -27.22432505763641,
+          214.5000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -47.0,
+          -54.99533462524414,
+          147.5
+        ],
+        [
+          97.0,
+          -27.22723388671875,
+          214.5
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.004665474735240593,
+      "step_volume_mm3": 23265.09889309645,
+      "source_mesh_volume_mm3": 23254.306602553832,
+      "mesh_step_volume_relative_gap": 0.00046388328681547643,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "HAND_DOWEL_4x6",
+      "quantity": 4,
+      "step_sha256": "56aa08e8fc44b6cf846c03366514aa8cdc9caa6fdda7b4c21c9b16ffd6f8d3af",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -2.0000001000000003,
+          -2.0000001,
+          -1e-07
+        ],
+        [
+          2.0000001000000007,
+          2.0000001,
+          6.000000100000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -1.9996401071548462,
+          -1.9999462366104126,
+          0.0
+        ],
+        [
+          1.9996401071548462,
+          1.9999462366104126,
+          6.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.0003599928451545331,
+      "step_volume_mm3": 75.39822368615506,
+      "source_mesh_volume_mm3": 75.36343009306329,
+      "mesh_step_volume_relative_gap": 0.0004614643607070287,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_FRONT",
+      "quantity": 1,
+      "step_sha256": "adf0b702b3018d94c6bb9237f0a3c2a3327226af9011bd75b556c3baad0262c8",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -319.0000001000001,
+          -1.0002359201868787e-07,
+          135.9999998999999
+        ],
+        [
+          -192.9999999000083,
+          40.000000100000015,
+          354.99987509980355
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -318.9966735839844,
+          0.0005597987328656018,
+          136.00001525878906
+        ],
+        [
+          -193.0,
+          40.0,
+          354.9998779296875
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.0033265160157043283,
+      "step_volume_mm3": 112150.62912668897,
+      "source_mesh_volume_mm3": 112470.49647480407,
+      "mesh_step_volume_relative_gap": 0.0028521226372592023,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "L_CURVED_ARM_CORE_REAR",
+      "quantity": 1,
+      "step_sha256": "cb5708b56763e78d597964d921317dc0e29c605e0b93876fef07f3f7e1148a17",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -319.0000001000001,
+          39.99999989999999,
+          135.9999998999999
+        ],
+        [
+          -192.99999990003684,
+          80.00000010001513,
+          354.99987509980383
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -318.9966735839844,
+          40.0,
+          136.00001525878906
+        ],
+        [
+          -193.0,
+          79.99999237060547,
+          354.9998779296875
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.0033265160157043283,
+      "step_volume_mm3": 112023.82400541824,
+      "source_mesh_volume_mm3": 111948.2836785363,
+      "mesh_step_volume_relative_gap": 0.0006743237659721545,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "L_ROLL_BEARING_CAP",
+      "quantity": 1,
+      "step_sha256": "ee4c495f6f05f2c0995649dbcefe4a160803ac49fe934d584bd99692a3408735",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -254.00000009995537,
+          -4.000000100001656,
+          270.99999989999895
+        ],
+        [
+          -247.99999990001353,
+          103.00000009999998,
+          359.00000009999957
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -254.0,
+          -3.992081880569458,
+          271.0011901855469
+        ],
+        [
+          -248.0,
+          103.0,
+          358.99786376953125
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.007918219432197837,
+      "step_volume_mm3": 37304.4866350847,
+      "source_mesh_volume_mm3": 37295.6855277449,
+      "mesh_step_volume_relative_gap": 0.00023592624195299046,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "L_ROLL_PALM_REAR",
+      "quantity": 1,
+      "step_sha256": "086374763abae0da72640b817707f16a9222701d10b821b9faeaa794763ef803",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -186.0000001,
+          39.99999989999999,
+          293.9999999
+        ],
+        [
+          -92.99999989999988,
+          69.00000010000001,
+          336.00000010000014
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -186.0,
+          40.0,
+          294.0
+        ],
+        [
+          -93.01385498046875,
+          69.0,
+          336.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.013855080468871961,
+      "step_volume_mm3": 47273.54160721335,
+      "source_mesh_volume_mm3": 47257.4345853653,
+      "mesh_step_volume_relative_gap": 0.00034071959283023023,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "L_ROLL_YOKE_PALM_FRONT",
+      "quantity": 1,
+      "step_sha256": "bbfe375a93ec864a9b0350fcfd6063ab1bd6efba655c9d74b8ac1bc79d6f8c43",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -248.0,
+          -4.000000100000048,
+          270.9999999
+        ],
+        [
+          -92.99999990000006,
+          103.0000001,
+          359.0000001000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -248.0,
+          -3.992081880569458,
+          271.0011901855469
+        ],
+        [
+          -93.01385498046875,
+          103.0,
+          358.9797668457031
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.02023325429695433,
+      "step_volume_mm3": 107870.82754983069,
+      "source_mesh_volume_mm3": 107854.86177334642,
+      "mesh_step_volume_relative_gap": 0.00014800828775412062,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "L_ROUND_YAW_COLLAR_TRIAL",
+      "quantity": 1,
+      "step_sha256": "49d47473f71842fcdfc433c3cc1180d28c4f828929b3901a1faef9eb45565d79",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -316.0000001,
+          -1.0000001000000098,
+          99.99999989999999
+        ],
+        [
+          -233.9999999,
+          81.0000001,
+          135.0000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -316.0,
+          -1.0,
+          100.0
+        ],
+        [
+          -234.0,
+          81.0,
+          135.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 1.0000002248489182e-07,
+      "step_volume_mm3": 38365.08088494677,
+      "source_mesh_volume_mm3": 38332.61349253209,
+      "mesh_step_volume_relative_gap": 0.000846274572235393,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "L_SHOULDER_YAW_TURRET",
+      "quantity": 1,
+      "step_sha256": "cebbb16fc646428db74fbc19314c76ad9adc34638bdda8a63a8b8a8b9f5cd1fc",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -315.0000001,
+          3.9999998999999846,
+          128.99999989999904
+        ],
+        [
+          -234.9999999,
+          76.00000010000001,
+          220.00000010000002
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -314.9927978515625,
+          4.000967025756836,
+          129.0
+        ],
+        [
+          -235.0072021484375,
+          75.99903106689453,
+          219.99893188476562
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.007202248437522485,
+      "step_volume_mm3": 98285.72567125729,
+      "source_mesh_volume_mm3": 98257.47630662518,
+      "mesh_step_volume_relative_gap": 0.00028742082778730825,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "PEBBLE_HEAD_FRONT_TRIAL",
+      "quantity": 1,
+      "step_sha256": "de729b00d47b1269469d58b99540eba79019b098824d49c183dab89f9a3979aa",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -55.27756229964005,
+          -52.52430366937135,
+          100.7571329752726
+        ],
+        [
+          105.27756229966157,
+          -26.9999999,
+          241.24286702468095
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -55.26785659790039,
+          -52.5243034362793,
+          100.75713348388672
+        ],
+        [
+          105.26046752929688,
+          -27.0,
+          241.24000549316406
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.01709477036469309,
+      "step_volume_mm3": 29840.201043447036,
+      "source_mesh_volume_mm3": 29833.840869788517,
+      "mesh_step_volume_relative_gap": 0.00021314111286510474,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "PEBBLE_HEAD_REAR_TRIAL",
+      "quantity": 1,
+      "step_sha256": "816d198b23cf2e75b353dbd4cdd540fa7e9ff8d77122d3cd79dd469f87ff0cdd",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -71.00000010000001,
+          -27.0000001,
+          99.99999879391626
+        ],
+        [
+          121.00000010000001,
+          69.0000000999998,
+          255.00000010000002
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -70.99838256835938,
+          -27.007183074951172,
+          100.0
+        ],
+        [
+          120.99838256835938,
+          68.9946060180664,
+          255.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.007182974951170706,
+      "step_volume_mm3": 167878.35158755246,
+      "source_mesh_volume_mm3": 169193.55031644122,
+      "mesh_step_volume_relative_gap": 0.007834236615093606,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "PILL_BASE_LID_1",
+      "quantity": 1,
+      "step_sha256": "0a46d68455f8136bc9b09fdcc3cc34f881f16e726d72079ea24fcb6cf552ed15",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -320.0000001000001,
+          -100.0000001,
+          95.99999989999999
+        ],
+        [
+          -106.6666666,
+          100.0000001,
+          100.00000010000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -320.0,
+          -100.0,
+          96.0
+        ],
+        [
+          -106.66666412353516,
+          100.0,
+          100.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 2.476464842970927e-06,
+      "step_volume_mm3": 160973.4491412748,
+      "source_mesh_volume_mm3": 160961.33558090622,
+      "mesh_step_volume_relative_gap": 7.525191535119354e-05,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "PILL_BASE_LID_2",
+      "quantity": 1,
+      "step_sha256": "51cf1d8e4415ed02a012cd22af350092fc5ffae9e529932d47c62c6930cbea07",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -106.66666679999999,
+          -100.0000001,
+          95.99999989999999
+        ],
+        [
+          106.66666679999999,
+          100.0000001,
+          100.00000010000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -106.66666412353516,
+          -100.0,
+          96.0
+        ],
+        [
+          106.66666412353516,
+          100.0,
+          100.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 2.6764648310972916e-06,
+      "step_volume_mm3": 166093.99897437295,
+      "source_mesh_volume_mm3": 166095.85788536505,
+      "mesh_step_volume_relative_gap": 1.1191921463629257e-05,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "PILL_BASE_LID_3",
+      "quantity": 1,
+      "step_sha256": "4a17aeb91a7486520ff7cd0c528bf36e3cd756e23d82e64ded6999a304734142",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          106.6666666,
+          -100.0000001,
+          95.99999989999999
+        ],
+        [
+          320.0000001000001,
+          100.0000001,
+          100.00000010000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          106.66666412353516,
+          -100.0,
+          96.0
+        ],
+        [
+          320.0,
+          100.0,
+          100.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 2.476464842970927e-06,
+      "step_volume_mm3": 160973.44913919724,
+      "source_mesh_volume_mm3": 160961.33558090622,
+      "mesh_step_volume_relative_gap": 7.525190244601256e-05,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "PILL_BASE_TRAY_1",
+      "quantity": 1,
+      "step_sha256": "4e7ae670a9e2a7d91898bdde87272c732d44fcf1a2f917b819ab2b7db3be374c",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -320.0000001000012,
+          -100.0000001,
+          -1e-07
+        ],
+        [
+          -106.6666666,
+          100.00000010000002,
+          96.00000009999418
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -320.0,
+          -100.0,
+          4.0684809158744225e-39
+        ],
+        [
+          -106.66666412353516,
+          100.0,
+          96.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 2.476464842970927e-06,
+      "step_volume_mm3": 311783.8812864999,
+      "source_mesh_volume_mm3": 311532.10121582693,
+      "mesh_step_volume_relative_gap": 0.0008075467841187524,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "PILL_BASE_TRAY_2",
+      "quantity": 1,
+      "step_sha256": "ad55ac36ebfa5680c9ebc01524392b79ef5c079761c1ce3253671bfbf87095b9",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -106.66666679999999,
+          -100.00000000000092,
+          -1.3229013844e-11
+        ],
+        [
+          106.66666679999999,
+          100.00000009999364,
+          96.00000009958485
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -106.66666412353516,
+          -100.0,
+          -1.32290142382252e-11
+        ],
+        [
+          106.66666412353516,
+          100.0,
+          96.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 2.6764648310972916e-06,
+      "step_volume_mm3": 239201.24051597508,
+      "source_mesh_volume_mm3": 239213.8409279854,
+      "mesh_step_volume_relative_gap": 5.267703454694299e-05,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "PILL_BASE_TRAY_3",
+      "quantity": 1,
+      "step_sha256": "a3965b01ab31916585931d3ec6346e198cea794cd20ef256156a83ee34860692",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          106.66666659999504,
+          -100.00000010000007,
+          -1e-07
+        ],
+        [
+          320.0000001000001,
+          100.00000010101589,
+          96.00000009749324
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          106.66666412353516,
+          -100.0,
+          1.9001560205677562e-22
+        ],
+        [
+          320.0,
+          100.0,
+          96.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 2.4764598833826312e-06,
+      "step_volume_mm3": 311783.8812736852,
+      "source_mesh_volume_mm3": 311751.03465146635,
+      "mesh_step_volume_relative_gap": 0.00010535061044419628,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_FRONT",
+      "quantity": 1,
+      "step_sha256": "0aad1acd92b8ad97482ed0ac88d38fc4ce721d0484ba5e5e293ce1f967ca0b2a",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          192.99999990001564,
+          -1.0000511167336126e-07,
+          135.99999989999998
+        ],
+        [
+          319.0000001000001,
+          40.00000010000002,
+          354.99987509980923
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          193.0,
+          0.0005477877566590905,
+          136.00001525878906
+        ],
+        [
+          318.9995422363281,
+          40.0,
+          354.9998779296875
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.0005478877617707639,
+      "step_volume_mm3": 112182.48639217987,
+      "source_mesh_volume_mm3": 111994.19258743637,
+      "mesh_step_volume_relative_gap": 0.001678459898680117,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "R_CURVED_ARM_CORE_REAR",
+      "quantity": 1,
+      "step_sha256": "240b922ca1927de79444683dba512523e23eac3db89c25a7cd3305c70a357823",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          192.99999990000026,
+          39.99999989999999,
+          135.99999989999998
+        ],
+        [
+          319.0000001000001,
+          80.00000010001902,
+          354.99987509980906
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          193.0,
+          40.0,
+          136.00001525878906
+        ],
+        [
+          318.9995422363281,
+          79.99999237060547,
+          354.9998779296875
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.0004578636719543283,
+      "step_volume_mm3": 112053.98794650484,
+      "source_mesh_volume_mm3": 111957.25091878932,
+      "mesh_step_volume_relative_gap": 0.000863307317198836,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "R_ROLL_BEARING_CAP",
+      "quantity": 1,
+      "step_sha256": "a3ba2ec5a7c76caab3c54ff61c0c485987bee31a556447ea06aeec585ce47e35",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          247.99999990003175,
+          -4.000000100000659,
+          270.9999999
+        ],
+        [
+          254.00000009994054,
+          103.00000010000527,
+          359.0000001000007
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          248.0,
+          -3.992081880569458,
+          271.00213623046875
+        ],
+        [
+          254.0,
+          103.0,
+          358.9988098144531
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.007918219431201301,
+      "step_volume_mm3": 37304.48663443532,
+      "source_mesh_volume_mm3": 37295.6855277449,
+      "mesh_step_volume_relative_gap": 0.00023592622454956074,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "R_ROLL_PALM_REAR",
+      "quantity": 1,
+      "step_sha256": "c3e134de3d1f53d2b03fadf2468bec5600fc79f0a12a354af3be6507d53d13c7",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          92.99999990000009,
+          39.99999989999999,
+          293.9999998999999
+        ],
+        [
+          186.0000001,
+          69.00000010000001,
+          336.0000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          93.01385498046875,
+          40.0,
+          294.0
+        ],
+        [
+          186.0,
+          69.0,
+          336.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.013855080468658798,
+      "step_volume_mm3": 47273.541607213156,
+      "source_mesh_volume_mm3": 47257.434585365314,
+      "mesh_step_volume_relative_gap": 0.0003407195928257682,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "R_ROLL_YOKE_PALM_FRONT",
+      "quantity": 1,
+      "step_sha256": "b850e6f9c2dc8baed923c118d698c7ea29582ece17c2aecbfc7a7ebb0d91cb03",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          92.99999990000002,
+          -4.000000099999991,
+          270.9999998999999
+        ],
+        [
+          248.0,
+          103.0000001,
+          359.00000009999997
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          93.01385498046875,
+          -3.992081880569458,
+          271.0202331542969
+        ],
+        [
+          248.0,
+          103.0,
+          358.9988098144531
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.02023325429695433,
+      "step_volume_mm3": 107870.82754992477,
+      "source_mesh_volume_mm3": 107854.86177334645,
+      "mesh_step_volume_relative_gap": 0.00014800828862585866,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "R_ROUND_YAW_COLLAR_TRIAL",
+      "quantity": 1,
+      "step_sha256": "f2bf22b4c333f8374145d94be9252240c4bc68e31dc6b72087aea0f8dd689bec",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          233.9999999,
+          -1.0000001000000098,
+          99.99999989999999
+        ],
+        [
+          316.0000001,
+          81.0000001,
+          135.0000001
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          234.0,
+          -1.0,
+          100.0
+        ],
+        [
+          316.0,
+          81.0,
+          135.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 1.0000002248489182e-07,
+      "step_volume_mm3": 38365.08088494677,
+      "source_mesh_volume_mm3": 38332.61388180618,
+      "mesh_step_volume_relative_gap": 0.0008462644256624067,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "R_SHOULDER_YAW_TURRET",
+      "quantity": 1,
+      "step_sha256": "4bee594d318e4d2f936b11dcb0675c961217bbd9291a0d989ae56652dab602ab",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          234.9999999,
+          3.999999899999988,
+          128.99999989999998
+        ],
+        [
+          315.0000001,
+          76.00000009999998,
+          220.00000010000002
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          235.0072021484375,
+          4.000967025756836,
+          129.0
+        ],
+        [
+          314.9927978515625,
+          75.99903106689453,
+          219.99893188476562
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 0.007202248437522485,
+      "step_volume_mm3": 98285.72566721034,
+      "source_mesh_volume_mm3": 98257.47630662595,
+      "mesh_step_volume_relative_gap": 0.0002874207866159797,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "ROUNDED_PHONE_CRADLE_TRIAL",
+      "quantity": 1,
+      "step_sha256": "fb00e2343882d7e69b36f7cb1f8027a71702d98a6375dd5b8d5d36afc3663e03",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -198.00000010000002,
+          -44.0000001,
+          99.9999999
+        ],
+        [
+          -115.99999989999999,
+          16.537939133907003,
+          153.50926280987
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -198.0,
+          -44.0,
+          100.0
+        ],
+        [
+          -116.0,
+          16.537939071655273,
+          153.50926208496094
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 7.249090572258865e-07,
+      "step_volume_mm3": 46552.10368556148,
+      "source_mesh_volume_mm3": 46543.28349282383,
+      "mesh_step_volume_relative_gap": 0.00018946926216754443,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "SEAM_SPLICE_1_FRONT",
+      "quantity": 1,
+      "step_sha256": "7106debe2061e204eacf86e5103d7def4cda1a47c81b7a9efdd8cb2feabda6c4",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -130.6666668,
+          -84.00000010000001,
+          1.9999999000000008
+        ],
+        [
+          -82.66666660000001,
+          -39.99999990000001,
+          12.00000000000007
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -130.6666717529297,
+          -84.0,
+          2.0
+        ],
+        [
+          -82.66666412353516,
+          -40.0,
+          12.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 4.952929685941854e-06,
+      "step_volume_mm3": 16439.595978219284,
+      "source_mesh_volume_mm3": 16440.916749611493,
+      "mesh_step_volume_relative_gap": 8.034086688986532e-05,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "SEAM_SPLICE_1_REAR",
+      "quantity": 1,
+      "step_sha256": "32ca5611f6d8678a1eb8d4285f66754d6188119a7ae9b5ef0b3e418274788b3f",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          -130.6666668,
+          39.9999999,
+          1.999999899999999
+        ],
+        [
+          -82.66666660000001,
+          84.0000001,
+          11.999999999999991
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          -130.6666717529297,
+          40.0,
+          2.0
+        ],
+        [
+          -82.66666412353516,
+          84.0,
+          12.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 4.952929685941854e-06,
+      "step_volume_mm3": 16439.595978219524,
+      "source_mesh_volume_mm3": 16440.916749611504,
+      "mesh_step_volume_relative_gap": 8.034086687592264e-05,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "SEAM_SPLICE_2_FRONT",
+      "quantity": 1,
+      "step_sha256": "eb7c9acb3dcd8a95713713adaaf14581a4231498632d2ab0ec91ac8d89f85a34",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          82.6666666,
+          -84.0000001,
+          1.999999899999999
+        ],
+        [
+          130.6666668,
+          -39.9999999,
+          11.999999999999991
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          82.66666412353516,
+          -84.0,
+          2.0
+        ],
+        [
+          130.6666717529297,
+          -40.0,
+          12.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 4.952929685941854e-06,
+      "step_volume_mm3": 16439.595978219313,
+      "source_mesh_volume_mm3": 16440.916749611497,
+      "mesh_step_volume_relative_gap": 8.034086688831612e-05,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    },
+    {
+      "part": "SEAM_SPLICE_2_REAR",
+      "quantity": 1,
+      "step_sha256": "8badd22d87cb6b7ec96d5b1b47b63235e5ee9e71eab56b69dd0d8b1ee21a8b78",
+      "step_valid": true,
+      "step_solids": 1,
+      "step_shells_closed": true,
+      "step_exact_bounds_mm": [
+        [
+          82.6666666,
+          39.9999999,
+          1.9999999
+        ],
+        [
+          130.6666668,
+          84.0000001,
+          11.999999999999995
+        ]
+      ],
+      "source_stl_bounds_mm": [
+        [
+          82.66666412353516,
+          40.0,
+          2.0
+        ],
+        [
+          130.6666717529297,
+          84.0,
+          12.0
+        ]
+      ],
+      "source_step_bbox_max_abs_gap_mm": 4.952929685941854e-06,
+      "step_volume_mm3": 16439.59597821951,
+      "source_mesh_volume_mm3": 16440.9167496115,
+      "mesh_step_volume_relative_gap": 8.034086687658659e-05,
+      "source_and_oriented_stl_closed_consistent_single_positive": true,
+      "model_3mf_crc_mm_closed_consistent_single_positive": true,
+      "model_3mf_all_vertices_match_source_transform": true,
+      "manifest_hash_checks": 3,
+      "brim_bed_exclusion_height_checks": true
+    }
+  ]
+}

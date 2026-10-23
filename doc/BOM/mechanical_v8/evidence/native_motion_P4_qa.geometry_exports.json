@@ -1,0 +1,45 @@
+{
+  "native_sha256": "1651fa24acf1d24314a0442f74fb693c540d079cb72ede110eda1a93a4b01a45",
+  "exports": {
+    "L_SHOULDER_YAW_TURRET": {
+      "path": "native_motion_P4_qa.geometry_L_SHOULDER_YAW_TURRET.step",
+      "sha256": "d3946fd2738f0d171dae180af2acf8eb9353ba32fabbb214d31f08dd31eeca95"
+    },
+    "L_SHOULDER_SERVO_TRIAL": {
+      "path": "native_motion_P4_qa.geometry_L_SHOULDER_SERVO_TRIAL.step",
+      "sha256": "dc0da736bb4110aea8ec2265a5162e506d601cd8e5f9d145bf7a0a68564bafd6"
+    },
+    "L_CURVED_ARM_CORE_FRONT_part": {
+      "path": "native_motion_P4_qa.geometry_L_CURVED_ARM_CORE_FRONT_part.step",
+      "sha256": "c99113d381b9c29968a25e6b75889975ca0450b7cbc1988238643a2e2cec7a57"
+    },
+    "L_CURVED_ARM_CORE_REAR_part": {
+      "path": "native_motion_P4_qa.geometry_L_CURVED_ARM_CORE_REAR_part.step",
+      "sha256": "0810e2065c8de450cb1d9c2c5cb1a674e5c03f67089336c6f68a192ccb583bf5"
+    },
+    "L_ROUND_YAW_COLLAR_TRIAL_part": {
+      "path": "native_motion_P4_qa.geometry_L_ROUND_YAW_COLLAR_TRIAL_part.step",
+      "sha256": "1d924049bd54f87422c4f874625c41de0c7269246fda53a1ee246a09b861a9cf"
+    },
+    "R_SHOULDER_YAW_TURRET": {
+      "path": "native_motion_P4_qa.geometry_R_SHOULDER_YAW_TURRET.step",
+      "sha256": "a0f452a67fb3aca1ab52441ebebc7317653b7547a5393fe55d1e4d2903d1cf1a"
+    },
+    "R_SHOULDER_SERVO_TRIAL": {
+      "path": "native_motion_P4_qa.geometry_R_SHOULDER_SERVO_TRIAL.step",
+      "sha256": "a65d6e4a002ed9503fc0689e339590e0177b6d5e04b90ca685ac6749cc300a79"
+    },
+    "R_CURVED_ARM_CORE_FRONT_part": {
+      "path": "native_motion_P4_qa.geometry_R_CURVED_ARM_CORE_FRONT_part.step",
+      "sha256": "9078f14305904f4af76ae7b056e360d772f8c23e5c34c748100c226df13e1bfa"
+    },
+    "R_CURVED_ARM_CORE_REAR_part": {
+      "path": "native_motion_P4_qa.geometry_R_CURVED_ARM_CORE_REAR_part.step",
+      "sha256": "615d034090e0ef9dfc96905b7e806878439a92c20c1ae64b0dc4a267aac1a497"
+    },
+    "R_ROUND_YAW_COLLAR_TRIAL_part": {
+      "path": "native_motion_P4_qa.geometry_R_ROUND_YAW_COLLAR_TRIAL_part.step",
+      "sha256": "162390d612fc9c16ba698d491ba06c98d02bbc6f5c48ede7c154165caafbaf3b"
+    }
+  }
+}

@@ -1,0 +1,2451 @@
+{
+  "completed": 16,
+  "ok": true,
+  "results": [
+    {
+      "grounded": true,
+      "occurrence": 2
+    },
+    {
+      "joints": [
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619,
+        620,
+        621,
+        622,
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631
+      ]
+    },
+    {
+      "conflicts": [],
+      "dof": [
+        {
+          "dof": 0,
+          "occurrence": 0
+        },
+        {
+          "dof": 0,
+          "occurrence": 2
+        },
+        {
+          "dof": 6,
+          "occurrence": 4
+        },
+        {
+          "dof": 6,
+          "occurrence": 6
+        },
+        {
+          "dof": 0,
+          "occurrence": 8
+        },
+        {
+          "dof": 6,
+          "occurrence": 10
+        },
+        {
+          "dof": 0,
+          "occurrence": 12
+        },
+        {
+          "dof": 6,
+          "occurrence": 14
+        },
+        {
+          "dof": 0,
+          "occurrence": 16
+        },
+        {
+          "dof": 6,
+          "occurrence": 18
+        },
+        {
+          "dof": 0,
+          "occurrence": 20
+        },
+        {
+          "dof": 6,
+          "occurrence": 22
+        },
+        {
+          "dof": 0,
+          "occurrence": 24
+        },
+        {
+          "dof": 6,
+          "occurrence": 26
+        },
+        {
+          "dof": 0,
+          "occurrence": 28
+        },
+        {
+          "dof": 6,
+          "occurrence": 30
+        },
+        {
+          "dof": 6,
+          "occurrence": 32
+        },
+        {
+          "dof": 6,
+          "occurrence": 34
+        },
+        {
+          "dof": 6,
+          "occurrence": 36
+        },
+        {
+          "dof": 6,
+          "occurrence": 38
+        },
+        {
+          "dof": 0,
+          "occurrence": 40
+        },
+        {
+          "dof": 6,
+          "occurrence": 42
+        },
+        {
+          "dof": 0,
+          "occurrence": 44
+        },
+        {
+          "dof": 6,
+          "occurrence": 46
+        },
+        {
+          "dof": 0,
+          "occurrence": 48
+        },
+        {
+          "dof": 6,
+          "occurrence": 50
+        },
+        {
+          "dof": 0,
+          "occurrence": 52
+        },
+        {
+          "dof": 6,
+          "occurrence": 54
+        },
+        {
+          "dof": 0,
+          "occurrence": 56
+        },
+        {
+          "dof": 6,
+          "occurrence": 58
+        },
+        {
+          "dof": 0,
+          "occurrence": 60
+        },
+        {
+          "dof": 6,
+          "occurrence": 62
+        },
+        {
+          "dof": 0,
+          "occurrence": 64
+        },
+        {
+          "dof": 6,
+          "occurrence": 66
+        },
+        {
+          "dof": 0,
+          "occurrence": 68
+        },
+        {
+          "dof": 6,
+          "occurrence": 70
+        },
+        {
+          "dof": 0,
+          "occurrence": 72
+        },
+        {
+          "dof": 6,
+          "occurrence": 74
+        },
+        {
+          "dof": 0,
+          "occurrence": 76
+        },
+        {
+          "dof": 6,
+          "occurrence": 78
+        },
+        {
+          "dof": 0,
+          "occurrence": 80
+        },
+        {
+          "dof": 6,
+          "occurrence": 82
+        },
+        {
+          "dof": 0,
+          "occurrence": 84
+        },
+        {
+          "dof": 6,
+          "occurrence": 86
+        },
+        {
+          "dof": 6,
+          "occurrence": 88
+        },
+        {
+          "dof": 6,
+          "occurrence": 90
+        },
+        {
+          "dof": 6,
+          "occurrence": 92
+        },
+        {
+          "dof": 6,
+          "occurrence": 94
+        },
+        {
+          "dof": 6,
+          "occurrence": 96
+        },
+        {
+          "dof": 6,
+          "occurrence": 98
+        },
+        {
+          "dof": 6,
+          "occurrence": 100
+        },
+        {
+          "dof": 6,
+          "occurrence": 102
+        },
+        {
+          "dof": 6,
+          "occurrence": 104
+        },
+        {
+          "dof": 6,
+          "occurrence": 106
+        },
+        {
+          "dof": 6,
+          "occurrence": 108
+        },
+        {
+          "dof": 6,
+          "occurrence": 110
+        },
+        {
+          "dof": 6,
+          "occurrence": 112
+        },
+        {
+          "dof": 6,
+          "occurrence": 114
+        },
+        {
+          "dof": 0,
+          "occurrence": 116
+        },
+        {
+          "dof": 6,
+          "occurrence": 118
+        },
+        {
+          "dof": 0,
+          "occurrence": 120
+        },
+        {
+          "dof": 6,
+          "occurrence": 122
+        },
+        {
+          "dof": 0,
+          "occurrence": 124
+        },
+        {
+          "dof": 6,
+          "occurrence": 126
+        },
+        {
+          "dof": 0,
+          "occurrence": 128
+        },
+        {
+          "dof": 6,
+          "occurrence": 130
+        },
+        {
+          "dof": 0,
+          "occurrence": 132
+        },
+        {
+          "dof": 6,
+          "occurrence": 134
+        },
+        {
+          "dof": 6,
+          "occurrence": 136
+        },
+        {
+          "dof": 6,
+          "occurrence": 138
+        },
+        {
+          "dof": 6,
+          "occurrence": 140
+        },
+        {
+          "dof": 6,
+          "occurrence": 142
+        },
+        {
+          "dof": 6,
+          "occurrence": 144
+        },
+        {
+          "dof": 6,
+          "occurrence": 146
+        },
+        {
+          "dof": 6,
+          "occurrence": 148
+        },
+        {
+          "dof": 6,
+          "occurrence": 150
+        },
+        {
+          "dof": 6,
+          "occurrence": 152
+        },
+        {
+          "dof": 6,
+          "occurrence": 154
+        },
+        {
+          "dof": 6,
+          "occurrence": 156
+        },
+        {
+          "dof": 6,
+          "occurrence": 158
+        },
+        {
+          "dof": 6,
+          "occurrence": 160
+        },
+        {
+          "dof": 6,
+          "occurrence": 162
+        },
+        {
+          "dof": 0,
+          "occurrence": 164
+        },
+        {
+          "dof": 6,
+          "occurrence": 166
+        },
+        {
+          "dof": 0,
+          "occurrence": 168
+        },
+        {
+          "dof": 6,
+          "occurrence": 170
+        },
+        {
+          "dof": 0,
+          "occurrence": 172
+        },
+        {
+          "dof": 6,
+          "occurrence": 174
+        },
+        {
+          "dof": 0,
+          "occurrence": 176
+        },
+        {
+          "dof": 1,
+          "occurrence": 548
+        },
+        {
+          "dof": 6,
+          "occurrence": 553
+        },
+        {
+          "dof": 6,
+          "occurrence": 568
+        },
+        {
+          "dof": 6,
+          "occurrence": 577
+        },
+        {
+          "dof": 6,
+          "occurrence": 582
+        },
+        {
+          "dof": 6,
+          "occurrence": 597
+        }
+      ],
+      "errors": [],
+      "fixed": [
+        0,
+        2
+      ],
+      "joint": 632,
+      "name": "L_J1_YAW"
+    },
+    {
+      "conflicts": [],
+      "dof": [
+        {
+          "dof": 0,
+          "occurrence": 0
+        },
+        {
+          "dof": 0,
+          "occurrence": 2
+        },
+        {
+          "dof": 6,
+          "occurrence": 4
+        },
+        {
+          "dof": 6,
+          "occurrence": 6
+        },
+        {
+          "dof": 0,
+          "occurrence": 8
+        },
+        {
+          "dof": 6,
+          "occurrence": 10
+        },
+        {
+          "dof": 0,
+          "occurrence": 12
+        },
+        {
+          "dof": 6,
+          "occurrence": 14
+        },
+        {
+          "dof": 0,
+          "occurrence": 16
+        },
+        {
+          "dof": 6,
+          "occurrence": 18
+        },
+        {
+          "dof": 0,
+          "occurrence": 20
+        },
+        {
+          "dof": 6,
+          "occurrence": 22
+        },
+        {
+          "dof": 0,
+          "occurrence": 24
+        },
+        {
+          "dof": 6,
+          "occurrence": 26
+        },
+        {
+          "dof": 0,
+          "occurrence": 28
+        },
+        {
+          "dof": 6,
+          "occurrence": 30
+        },
+        {
+          "dof": 6,
+          "occurrence": 32
+        },
+        {
+          "dof": 6,
+          "occurrence": 34
+        },
+        {
+          "dof": 6,
+          "occurrence": 36
+        },
+        {
+          "dof": 6,
+          "occurrence": 38
+        },
+        {
+          "dof": 0,
+          "occurrence": 40
+        },
+        {
+          "dof": 6,
+          "occurrence": 42
+        },
+        {
+          "dof": 0,
+          "occurrence": 44
+        },
+        {
+          "dof": 6,
+          "occurrence": 46
+        },
+        {
+          "dof": 0,
+          "occurrence": 48
+        },
+        {
+          "dof": 6,
+          "occurrence": 50
+        },
+        {
+          "dof": 0,
+          "occurrence": 52
+        },
+        {
+          "dof": 6,
+          "occurrence": 54
+        },
+        {
+          "dof": 0,
+          "occurrence": 56
+        },
+        {
+          "dof": 6,
+          "occurrence": 58
+        },
+        {
+          "dof": 0,
+          "occurrence": 60
+        },
+        {
+          "dof": 6,
+          "occurrence": 62
+        },
+        {
+          "dof": 0,
+          "occurrence": 64
+        },
+        {
+          "dof": 6,
+          "occurrence": 66
+        },
+        {
+          "dof": 0,
+          "occurrence": 68
+        },
+        {
+          "dof": 6,
+          "occurrence": 70
+        },
+        {
+          "dof": 0,
+          "occurrence": 72
+        },
+        {
+          "dof": 6,
+          "occurrence": 74
+        },
+        {
+          "dof": 0,
+          "occurrence": 76
+        },
+        {
+          "dof": 6,
+          "occurrence": 78
+        },
+        {
+          "dof": 0,
+          "occurrence": 80
+        },
+        {
+          "dof": 6,
+          "occurrence": 82
+        },
+        {
+          "dof": 0,
+          "occurrence": 84
+        },
+        {
+          "dof": 6,
+          "occurrence": 86
+        },
+        {
+          "dof": 6,
+          "occurrence": 88
+        },
+        {
+          "dof": 6,
+          "occurrence": 90
+        },
+        {
+          "dof": 6,
+          "occurrence": 92
+        },
+        {
+          "dof": 6,
+          "occurrence": 94
+        },
+        {
+          "dof": 6,
+          "occurrence": 96
+        },
+        {
+          "dof": 6,
+          "occurrence": 98
+        },
+        {
+          "dof": 6,
+          "occurrence": 100
+        },
+        {
+          "dof": 6,
+          "occurrence": 102
+        },
+        {
+          "dof": 6,
+          "occurrence": 104
+        },
+        {
+          "dof": 6,
+          "occurrence": 106
+        },
+        {
+          "dof": 6,
+          "occurrence": 108
+        },
+        {
+          "dof": 6,
+          "occurrence": 110
+        },
+        {
+          "dof": 6,
+          "occurrence": 112
+        },
+        {
+          "dof": 6,
+          "occurrence": 114
+        },
+        {
+          "dof": 0,
+          "occurrence": 116
+        },
+        {
+          "dof": 6,
+          "occurrence": 118
+        },
+        {
+          "dof": 0,
+          "occurrence": 120
+        },
+        {
+          "dof": 6,
+          "occurrence": 122
+        },
+        {
+          "dof": 0,
+          "occurrence": 124
+        },
+        {
+          "dof": 6,
+          "occurrence": 126
+        },
+        {
+          "dof": 0,
+          "occurrence": 128
+        },
+        {
+          "dof": 6,
+          "occurrence": 130
+        },
+        {
+          "dof": 0,
+          "occurrence": 132
+        },
+        {
+          "dof": 6,
+          "occurrence": 134
+        },
+        {
+          "dof": 6,
+          "occurrence": 136
+        },
+        {
+          "dof": 6,
+          "occurrence": 138
+        },
+        {
+          "dof": 6,
+          "occurrence": 140
+        },
+        {
+          "dof": 6,
+          "occurrence": 142
+        },
+        {
+          "dof": 6,
+          "occurrence": 144
+        },
+        {
+          "dof": 6,
+          "occurrence": 146
+        },
+        {
+          "dof": 6,
+          "occurrence": 148
+        },
+        {
+          "dof": 6,
+          "occurrence": 150
+        },
+        {
+          "dof": 6,
+          "occurrence": 152
+        },
+        {
+          "dof": 6,
+          "occurrence": 154
+        },
+        {
+          "dof": 6,
+          "occurrence": 156
+        },
+        {
+          "dof": 6,
+          "occurrence": 158
+        },
+        {
+          "dof": 6,
+          "occurrence": 160
+        },
+        {
+          "dof": 6,
+          "occurrence": 162
+        },
+        {
+          "dof": 0,
+          "occurrence": 164
+        },
+        {
+          "dof": 6,
+          "occurrence": 166
+        },
+        {
+          "dof": 0,
+          "occurrence": 168
+        },
+        {
+          "dof": 6,
+          "occurrence": 170
+        },
+        {
+          "dof": 0,
+          "occurrence": 172
+        },
+        {
+          "dof": 6,
+          "occurrence": 174
+        },
+        {
+          "dof": 0,
+          "occurrence": 176
+        },
+        {
+          "dof": 1,
+          "occurrence": 548
+        },
+        {
+          "dof": 2,
+          "occurrence": 553
+        },
+        {
+          "dof": 6,
+          "occurrence": 568
+        },
+        {
+          "dof": 6,
+          "occurrence": 577
+        },
+        {
+          "dof": 6,
+          "occurrence": 582
+        },
+        {
+          "dof": 6,
+          "occurrence": 597
+        }
+      ],
+      "errors": [],
+      "fixed": [
+        0,
+        2
+      ],
+      "joint": 633,
+      "name": "L_J2_SHOULDER_PITCH"
+    },
+    {
+      "conflicts": [],
+      "dof": [
+        {
+          "dof": 0,
+          "occurrence": 0
+        },
+        {
+          "dof": 0,
+          "occurrence": 2
+        },
+        {
+          "dof": 6,
+          "occurrence": 4
+        },
+        {
+          "dof": 6,
+          "occurrence": 6
+        },
+        {
+          "dof": 0,
+          "occurrence": 8
+        },
+        {
+          "dof": 6,
+          "occurrence": 10
+        },
+        {
+          "dof": 0,
+          "occurrence": 12
+        },
+        {
+          "dof": 6,
+          "occurrence": 14
+        },
+        {
+          "dof": 0,
+          "occurrence": 16
+        },
+        {
+          "dof": 6,
+          "occurrence": 18
+        },
+        {
+          "dof": 0,
+          "occurrence": 20
+        },
+        {
+          "dof": 6,
+          "occurrence": 22
+        },
+        {
+          "dof": 0,
+          "occurrence": 24
+        },
+        {
+          "dof": 6,
+          "occurrence": 26
+        },
+        {
+          "dof": 0,
+          "occurrence": 28
+        },
+        {
+          "dof": 6,
+          "occurrence": 30
+        },
+        {
+          "dof": 6,
+          "occurrence": 32
+        },
+        {
+          "dof": 6,
+          "occurrence": 34
+        },
+        {
+          "dof": 6,
+          "occurrence": 36
+        },
+        {
+          "dof": 6,
+          "occurrence": 38
+        },
+        {
+          "dof": 0,
+          "occurrence": 40
+        },
+        {
+          "dof": 6,
+          "occurrence": 42
+        },
+        {
+          "dof": 0,
+          "occurrence": 44
+        },
+        {
+          "dof": 6,
+          "occurrence": 46
+        },
+        {
+          "dof": 0,
+          "occurrence": 48
+        },
+        {
+          "dof": 6,
+          "occurrence": 50
+        },
+        {
+          "dof": 0,
+          "occurrence": 52
+        },
+        {
+          "dof": 6,
+          "occurrence": 54
+        },
+        {
+          "dof": 0,
+          "occurrence": 56
+        },
+        {
+          "dof": 6,
+          "occurrence": 58
+        },
+        {
+          "dof": 0,
+          "occurrence": 60
+        },
+        {
+          "dof": 6,
+          "occurrence": 62
+        },
+        {
+          "dof": 0,
+          "occurrence": 64
+        },
+        {
+          "dof": 6,
+          "occurrence": 66
+        },
+        {
+          "dof": 0,
+          "occurrence": 68
+        },
+        {
+          "dof": 6,
+          "occurrence": 70
+        },
+        {
+          "dof": 0,
+          "occurrence": 72
+        },
+        {
+          "dof": 6,
+          "occurrence": 74
+        },
+        {
+          "dof": 0,
+          "occurrence": 76
+        },
+        {
+          "dof": 6,
+          "occurrence": 78
+        },
+        {
+          "dof": 0,
+          "occurrence": 80
+        },
+        {
+          "dof": 6,
+          "occurrence": 82
+        },
+        {
+          "dof": 0,
+          "occurrence": 84
+        },
+        {
+          "dof": 6,
+          "occurrence": 86
+        },
+        {
+          "dof": 6,
+          "occurrence": 88
+        },
+        {
+          "dof": 6,
+          "occurrence": 90
+        },
+        {
+          "dof": 6,
+          "occurrence": 92
+        },
+        {
+          "dof": 6,
+          "occurrence": 94
+        },
+        {
+          "dof": 6,
+          "occurrence": 96
+        },
+        {
+          "dof": 6,
+          "occurrence": 98
+        },
+        {
+          "dof": 6,
+          "occurrence": 100
+        },
+        {
+          "dof": 6,
+          "occurrence": 102
+        },
+        {
+          "dof": 6,
+          "occurrence": 104
+        },
+        {
+          "dof": 6,
+          "occurrence": 106
+        },
+        {
+          "dof": 6,
+          "occurrence": 108
+        },
+        {
+          "dof": 6,
+          "occurrence": 110
+        },
+        {
+          "dof": 6,
+          "occurrence": 112
+        },
+        {
+          "dof": 6,
+          "occurrence": 114
+        },
+        {
+          "dof": 0,
+          "occurrence": 116
+        },
+        {
+          "dof": 6,
+          "occurrence": 118
+        },
+        {
+          "dof": 0,
+          "occurrence": 120
+        },
+        {
+          "dof": 6,
+          "occurrence": 122
+        },
+        {
+          "dof": 0,
+          "occurrence": 124
+        },
+        {
+          "dof": 6,
+          "occurrence": 126
+        },
+        {
+          "dof": 0,
+          "occurrence": 128
+        },
+        {
+          "dof": 6,
+          "occurrence": 130
+        },
+        {
+          "dof": 0,
+          "occurrence": 132
+        },
+        {
+          "dof": 6,
+          "occurrence": 134
+        },
+        {
+          "dof": 6,
+          "occurrence": 136
+        },
+        {
+          "dof": 6,
+          "occurrence": 138
+        },
+        {
+          "dof": 6,
+          "occurrence": 140
+        },
+        {
+          "dof": 6,
+          "occurrence": 142
+        },
+        {
+          "dof": 6,
+          "occurrence": 144
+        },
+        {
+          "dof": 6,
+          "occurrence": 146
+        },
+        {
+          "dof": 6,
+          "occurrence": 148
+        },
+        {
+          "dof": 6,
+          "occurrence": 150
+        },
+        {
+          "dof": 6,
+          "occurrence": 152
+        },
+        {
+          "dof": 6,
+          "occurrence": 154
+        },
+        {
+          "dof": 6,
+          "occurrence": 156
+        },
+        {
+          "dof": 6,
+          "occurrence": 158
+        },
+        {
+          "dof": 6,
+          "occurrence": 160
+        },
+        {
+          "dof": 6,
+          "occurrence": 162
+        },
+        {
+          "dof": 0,
+          "occurrence": 164
+        },
+        {
+          "dof": 6,
+          "occurrence": 166
+        },
+        {
+          "dof": 0,
+          "occurrence": 168
+        },
+        {
+          "dof": 6,
+          "occurrence": 170
+        },
+        {
+          "dof": 0,
+          "occurrence": 172
+        },
+        {
+          "dof": 6,
+          "occurrence": 174
+        },
+        {
+          "dof": 0,
+          "occurrence": 176
+        },
+        {
+          "dof": 1,
+          "occurrence": 548
+        },
+        {
+          "dof": 2,
+          "occurrence": 553
+        },
+        {
+          "dof": 3,
+          "occurrence": 568
+        },
+        {
+          "dof": 6,
+          "occurrence": 577
+        },
+        {
+          "dof": 6,
+          "occurrence": 582
+        },
+        {
+          "dof": 6,
+          "occurrence": 597
+        }
+      ],
+      "errors": [],
+      "fixed": [
+        0,
+        2
+      ],
+      "joint": 634,
+      "name": "L_J3_WRIST_PITCH"
+    },
+    {
+      "conflicts": [],
+      "dof": [
+        {
+          "dof": 0,
+          "occurrence": 0
+        },
+        {
+          "dof": 0,
+          "occurrence": 2
+        },
+        {
+          "dof": 6,
+          "occurrence": 4
+        },
+        {
+          "dof": 6,
+          "occurrence": 6
+        },
+        {
+          "dof": 0,
+          "occurrence": 8
+        },
+        {
+          "dof": 6,
+          "occurrence": 10
+        },
+        {
+          "dof": 0,
+          "occurrence": 12
+        },
+        {
+          "dof": 6,
+          "occurrence": 14
+        },
+        {
+          "dof": 0,
+          "occurrence": 16
+        },
+        {
+          "dof": 6,
+          "occurrence": 18
+        },
+        {
+          "dof": 0,
+          "occurrence": 20
+        },
+        {
+          "dof": 6,
+          "occurrence": 22
+        },
+        {
+          "dof": 0,
+          "occurrence": 24
+        },
+        {
+          "dof": 6,
+          "occurrence": 26
+        },
+        {
+          "dof": 0,
+          "occurrence": 28
+        },
+        {
+          "dof": 6,
+          "occurrence": 30
+        },
+        {
+          "dof": 6,
+          "occurrence": 32
+        },
+        {
+          "dof": 6,
+          "occurrence": 34
+        },
+        {
+          "dof": 6,
+          "occurrence": 36
+        },
+        {
+          "dof": 6,
+          "occurrence": 38
+        },
+        {
+          "dof": 0,
+          "occurrence": 40
+        },
+        {
+          "dof": 6,
+          "occurrence": 42
+        },
+        {
+          "dof": 0,
+          "occurrence": 44
+        },
+        {
+          "dof": 6,
+          "occurrence": 46
+        },
+        {
+          "dof": 0,
+          "occurrence": 48
+        },
+        {
+          "dof": 6,
+          "occurrence": 50
+        },
+        {
+          "dof": 0,
+          "occurrence": 52
+        },
+        {
+          "dof": 6,
+          "occurrence": 54
+        },
+        {
+          "dof": 0,
+          "occurrence": 56
+        },
+        {
+          "dof": 6,
+          "occurrence": 58
+        },
+        {
+          "dof": 0,
+          "occurrence": 60
+        },
+        {
+          "dof": 6,
+          "occurrence": 62
+        },
+        {
+          "dof": 0,
+          "occurrence": 64
+        },
+        {
+          "dof": 6,
+          "occurrence": 66
+        },
+        {
+          "dof": 0,
+          "occurrence": 68
+        },
+        {
+          "dof": 6,
+          "occurrence": 70
+        },
+        {
+          "dof": 0,
+          "occurrence": 72
+        },
+        {
+          "dof": 6,
+          "occurrence": 74
+        },
+        {
+          "dof": 0,
+          "occurrence": 76
+        },
+        {
+          "dof": 6,
+          "occurrence": 78
+        },
+        {
+          "dof": 0,
+          "occurrence": 80
+        },
+        {
+          "dof": 6,
+          "occurrence": 82
+        },
+        {
+          "dof": 0,
+          "occurrence": 84
+        },
+        {
+          "dof": 6,
+          "occurrence": 86
+        },
+        {
+          "dof": 6,
+          "occurrence": 88
+        },
+        {
+          "dof": 6,
+          "occurrence": 90
+        },
+        {
+          "dof": 6,
+          "occurrence": 92
+        },
+        {
+          "dof": 6,
+          "occurrence": 94
+        },
+        {
+          "dof": 6,
+          "occurrence": 96
+        },
+        {
+          "dof": 6,
+          "occurrence": 98
+        },
+        {
+          "dof": 6,
+          "occurrence": 100
+        },
+        {
+          "dof": 6,
+          "occurrence": 102
+        },
+        {
+          "dof": 6,
+          "occurrence": 104
+        },
+        {
+          "dof": 6,
+          "occurrence": 106
+        },
+        {
+          "dof": 6,
+          "occurrence": 108
+        },
+        {
+          "dof": 6,
+          "occurrence": 110
+        },
+        {
+          "dof": 6,
+          "occurrence": 112
+        },
+        {
+          "dof": 6,
+          "occurrence": 114
+        },
+        {
+          "dof": 0,
+          "occurrence": 116
+        },
+        {
+          "dof": 6,
+          "occurrence": 118
+        },
+        {
+          "dof": 0,
+          "occurrence": 120
+        },
+        {
+          "dof": 6,
+          "occurrence": 122
+        },
+        {
+          "dof": 0,
+          "occurrence": 124
+        },
+        {
+          "dof": 6,
+          "occurrence": 126
+        },
+        {
+          "dof": 0,
+          "occurrence": 128
+        },
+        {
+          "dof": 6,
+          "occurrence": 130
+        },
+        {
+          "dof": 0,
+          "occurrence": 132
+        },
+        {
+          "dof": 6,
+          "occurrence": 134
+        },
+        {
+          "dof": 6,
+          "occurrence": 136
+        },
+        {
+          "dof": 6,
+          "occurrence": 138
+        },
+        {
+          "dof": 6,
+          "occurrence": 140
+        },
+        {
+          "dof": 6,
+          "occurrence": 142
+        },
+        {
+          "dof": 6,
+          "occurrence": 144
+        },
+        {
+          "dof": 6,
+          "occurrence": 146
+        },
+        {
+          "dof": 6,
+          "occurrence": 148
+        },
+        {
+          "dof": 6,
+          "occurrence": 150
+        },
+        {
+          "dof": 6,
+          "occurrence": 152
+        },
+        {
+          "dof": 6,
+          "occurrence": 154
+        },
+        {
+          "dof": 6,
+          "occurrence": 156
+        },
+        {
+          "dof": 6,
+          "occurrence": 158
+        },
+        {
+          "dof": 6,
+          "occurrence": 160
+        },
+        {
+          "dof": 6,
+          "occurrence": 162
+        },
+        {
+          "dof": 0,
+          "occurrence": 164
+        },
+        {
+          "dof": 6,
+          "occurrence": 166
+        },
+        {
+          "dof": 0,
+          "occurrence": 168
+        },
+        {
+          "dof": 6,
+          "occurrence": 170
+        },
+        {
+          "dof": 0,
+          "occurrence": 172
+        },
+        {
+          "dof": 6,
+          "occurrence": 174
+        },
+        {
+          "dof": 0,
+          "occurrence": 176
+        },
+        {
+          "dof": 1,
+          "occurrence": 548
+        },
+        {
+          "dof": 2,
+          "occurrence": 553
+        },
+        {
+          "dof": 3,
+          "occurrence": 568
+        },
+        {
+          "dof": 1,
+          "occurrence": 577
+        },
+        {
+          "dof": 6,
+          "occurrence": 582
+        },
+        {
+          "dof": 6,
+          "occurrence": 597
+        }
+      ],
+      "errors": [],
+      "fixed": [
+        0,
+        2
+      ],
+      "joint": 635,
+      "name": "R_J1_YAW"
+    },
+    {
+      "conflicts": [],
+      "dof": [
+        {
+          "dof": 0,
+          "occurrence": 0
+        },
+        {
+          "dof": 0,
+          "occurrence": 2
+        },
+        {
+          "dof": 6,
+          "occurrence": 4
+        },
+        {
+          "dof": 6,
+          "occurrence": 6
+        },
+        {
+          "dof": 0,
+          "occurrence": 8
+        },
+        {
+          "dof": 6,
+          "occurrence": 10
+        },
+        {
+          "dof": 0,
+          "occurrence": 12
+        },
+        {
+          "dof": 6,
+          "occurrence": 14
+        },
+        {
+          "dof": 0,
+          "occurrence": 16
+        },
+        {
+          "dof": 6,
+          "occurrence": 18
+        },
+        {
+          "dof": 0,
+          "occurrence": 20
+        },
+        {
+          "dof": 6,
+          "occurrence": 22
+        },
+        {
+          "dof": 0,
+          "occurrence": 24
+        },
+        {
+          "dof": 6,
+          "occurrence": 26
+        },
+        {
+          "dof": 0,
+          "occurrence": 28
+        },
+        {
+          "dof": 6,
+          "occurrence": 30
+        },
+        {
+          "dof": 6,
+          "occurrence": 32
+        },
+        {
+          "dof": 6,
+          "occurrence": 34
+        },
+        {
+          "dof": 6,
+          "occurrence": 36
+        },
+        {
+          "dof": 6,
+          "occurrence": 38
+        },
+        {
+          "dof": 0,
+          "occurrence": 40
+        },
+        {
+          "dof": 6,
+          "occurrence": 42
+        },
+        {
+          "dof": 0,
+          "occurrence": 44
+        },
+        {
+          "dof": 6,
+          "occurrence": 46
+        },
+        {
+          "dof": 0,
+          "occurrence": 48
+        },
+        {
+          "dof": 6,
+          "occurrence": 50
+        },
+        {
+          "dof": 0,
+          "occurrence": 52
+        },
+        {
+          "dof": 6,
+          "occurrence": 54
+        },
+        {
+          "dof": 0,
+          "occurrence": 56
+        },
+        {
+          "dof": 6,
+          "occurrence": 58
+        },
+        {
+          "dof": 0,
+          "occurrence": 60
+        },
+        {
+          "dof": 6,
+          "occurrence": 62
+        },
+        {
+          "dof": 0,
+          "occurrence": 64
+        },
+        {
+          "dof": 6,
+          "occurrence": 66
+        },
+        {
+          "dof": 0,
+          "occurrence": 68
+        },
+        {
+          "dof": 6,
+          "occurrence": 70
+        },
+        {
+          "dof": 0,
+          "occurrence": 72
+        },
+        {
+          "dof": 6,
+          "occurrence": 74
+        },
+        {
+          "dof": 0,
+          "occurrence": 76
+        },
+        {
+          "dof": 6,
+          "occurrence": 78
+        },
+        {
+          "dof": 0,
+          "occurrence": 80
+        },
+        {
+          "dof": 6,
+          "occurrence": 82
+        },
+        {
+          "dof": 0,
+          "occurrence": 84
+        },
+        {
+          "dof": 6,
+          "occurrence": 86
+        },
+        {
+          "dof": 6,
+          "occurrence": 88
+        },
+        {
+          "dof": 6,
+          "occurrence": 90
+        },
+        {
+          "dof": 6,
+          "occurrence": 92
+        },
+        {
+          "dof": 6,
+          "occurrence": 94
+        },
+        {
+          "dof": 6,
+          "occurrence": 96
+        },
+        {
+          "dof": 6,
+          "occurrence": 98
+        },
+        {
+          "dof": 6,
+          "occurrence": 100
+        },
+        {
+          "dof": 6,
+          "occurrence": 102
+        },
+        {
+          "dof": 6,
+          "occurrence": 104
+        },
+        {
+          "dof": 6,
+          "occurrence": 106
+        },
+        {
+          "dof": 6,
+          "occurrence": 108
+        },
+        {
+          "dof": 6,
+          "occurrence": 110
+        },
+        {
+          "dof": 6,
+          "occurrence": 112
+        },
+        {
+          "dof": 6,
+          "occurrence": 114
+        },
+        {
+          "dof": 0,
+          "occurrence": 116
+        },
+        {
+          "dof": 6,
+          "occurrence": 118
+        },
+        {
+          "dof": 0,
+          "occurrence": 120
+        },
+        {
+          "dof": 6,
+          "occurrence": 122
+        },
+        {
+          "dof": 0,
+          "occurrence": 124
+        },
+        {
+          "dof": 6,
+          "occurrence": 126
+        },
+        {
+          "dof": 0,
+          "occurrence": 128
+        },
+        {
+          "dof": 6,
+          "occurrence": 130
+        },
+        {
+          "dof": 0,
+          "occurrence": 132
+        },
+        {
+          "dof": 6,
+          "occurrence": 134
+        },
+        {
+          "dof": 6,
+          "occurrence": 136
+        },
+        {
+          "dof": 6,
+          "occurrence": 138
+        },
+        {
+          "dof": 6,
+          "occurrence": 140
+        },
+        {
+          "dof": 6,
+          "occurrence": 142
+        },
+        {
+          "dof": 6,
+          "occurrence": 144
+        },
+        {
+          "dof": 6,
+          "occurrence": 146
+        },
+        {
+          "dof": 6,
+          "occurrence": 148
+        },
+        {
+          "dof": 6,
+          "occurrence": 150
+        },
+        {
+          "dof": 6,
+          "occurrence": 152
+        },
+        {
+          "dof": 6,
+          "occurrence": 154
+        },
+        {
+          "dof": 6,
+          "occurrence": 156
+        },
+        {
+          "dof": 6,
+          "occurrence": 158
+        },
+        {
+          "dof": 6,
+          "occurrence": 160
+        },
+        {
+          "dof": 6,
+          "occurrence": 162
+        },
+        {
+          "dof": 0,
+          "occurrence": 164
+        },
+        {
+          "dof": 6,
+          "occurrence": 166
+        },
+        {
+          "dof": 0,
+          "occurrence": 168
+        },
+        {
+          "dof": 6,
+          "occurrence": 170
+        },
+        {
+          "dof": 0,
+          "occurrence": 172
+        },
+        {
+          "dof": 6,
+          "occurrence": 174
+        },
+        {
+          "dof": 0,
+          "occurrence": 176
+        },
+        {
+          "dof": 1,
+          "occurrence": 548
+        },
+        {
+          "dof": 2,
+          "occurrence": 553
+        },
+        {
+          "dof": 3,
+          "occurrence": 568
+        },
+        {
+          "dof": 1,
+          "occurrence": 577
+        },
+        {
+          "dof": 2,
+          "occurrence": 582
+        },
+        {
+          "dof": 6,
+          "occurrence": 597
+        }
+      ],
+      "errors": [],
+      "fixed": [
+        0,
+        2
+      ],
+      "joint": 636,
+      "name": "R_J2_SHOULDER_PITCH"
+    },
+    {
+      "conflicts": [],
+      "dof": [
+        {
+          "dof": 0,
+          "occurrence": 0
+        },
+        {
+          "dof": 0,
+          "occurrence": 2
+        },
+        {
+          "dof": 6,
+          "occurrence": 4
+        },
+        {
+          "dof": 6,
+          "occurrence": 6
+        },
+        {
+          "dof": 0,
+          "occurrence": 8
+        },
+        {
+          "dof": 6,
+          "occurrence": 10
+        },
+        {
+          "dof": 0,
+          "occurrence": 12
+        },
+        {
+          "dof": 6,
+          "occurrence": 14
+        },
+        {
+          "dof": 0,
+          "occurrence": 16
+        },
+        {
+          "dof": 6,
+          "occurrence": 18
+        },
+        {
+          "dof": 0,
+          "occurrence": 20
+        },
+        {
+          "dof": 6,
+          "occurrence": 22
+        },
+        {
+          "dof": 0,
+          "occurrence": 24
+        },
+        {
+          "dof": 6,
+          "occurrence": 26
+        },
+        {
+          "dof": 0,
+          "occurrence": 28
+        },
+        {
+          "dof": 6,
+          "occurrence": 30
+        },
+        {
+          "dof": 6,
+          "occurrence": 32
+        },
+        {
+          "dof": 6,
+          "occurrence": 34
+        },
+        {
+          "dof": 6,
+          "occurrence": 36
+        },
+        {
+          "dof": 6,
+          "occurrence": 38
+        },
+        {
+          "dof": 0,
+          "occurrence": 40
+        },
+        {
+          "dof": 6,
+          "occurrence": 42
+        },
+        {
+          "dof": 0,
+          "occurrence": 44
+        },
+        {
+          "dof": 6,
+          "occurrence": 46
+        },
+        {
+          "dof": 0,
+          "occurrence": 48
+        },
+        {
+          "dof": 6,
+          "occurrence": 50
+        },
+        {
+          "dof": 0,
+          "occurrence": 52
+        },
+        {
+          "dof": 6,
+          "occurrence": 54
+        },
+        {
+          "dof": 0,
+          "occurrence": 56
+        },
+        {
+          "dof": 6,
+          "occurrence": 58
+        },
+        {
+          "dof": 0,
+          "occurrence": 60
+        },
+        {
+          "dof": 6,
+          "occurrence": 62
+        },
+        {
+          "dof": 0,
+          "occurrence": 64
+        },
+        {
+          "dof": 6,
+          "occurrence": 66
+        },
+        {
+          "dof": 0,
+          "occurrence": 68
+        },
+        {
+          "dof": 6,
+          "occurrence": 70
+        },
+        {
+          "dof": 0,
+          "occurrence": 72
+        },
+        {
+          "dof": 6,
+          "occurrence": 74
+        },
+        {
+          "dof": 0,
+          "occurrence": 76
+        },
+        {
+          "dof": 6,
+          "occurrence": 78
+        },
+        {
+          "dof": 0,
+          "occurrence": 80
+        },
+        {
+          "dof": 6,
+          "occurrence": 82
+        },
+        {
+          "dof": 0,
+          "occurrence": 84
+        },
+        {
+          "dof": 6,
+          "occurrence": 86
+        },
+        {
+          "dof": 6,
+          "occurrence": 88
+        },
+        {
+          "dof": 6,
+          "occurrence": 90
+        },
+        {
+          "dof": 6,
+          "occurrence": 92
+        },
+        {
+          "dof": 6,
+          "occurrence": 94
+        },
+        {
+          "dof": 6,
+          "occurrence": 96
+        },
+        {
+          "dof": 6,
+          "occurrence": 98
+        },
+        {
+          "dof": 6,
+          "occurrence": 100
+        },
+        {
+          "dof": 6,
+          "occurrence": 102
+        },
+        {
+          "dof": 6,
+          "occurrence": 104
+        },
+        {
+          "dof": 6,
+          "occurrence": 106
+        },
+        {
+          "dof": 6,
+          "occurrence": 108
+        },
+        {
+          "dof": 6,
+          "occurrence": 110
+        },
+        {
+          "dof": 6,
+          "occurrence": 112
+        },
+        {
+          "dof": 6,
+          "occurrence": 114
+        },
+        {
+          "dof": 0,
+          "occurrence": 116
+        },
+        {
+          "dof": 6,
+          "occurrence": 118
+        },
+        {
+          "dof": 0,
+          "occurrence": 120
+        },
+        {
+          "dof": 6,
+          "occurrence": 122
+        },
+        {
+          "dof": 0,
+          "occurrence": 124
+        },
+        {
+          "dof": 6,
+          "occurrence": 126
+        },
+        {
+          "dof": 0,
+          "occurrence": 128
+        },
+        {
+          "dof": 6,
+          "occurrence": 130
+        },
+        {
+          "dof": 0,
+          "occurrence": 132
+        },
+        {
+          "dof": 6,
+          "occurrence": 134
+        },
+        {
+          "dof": 6,
+          "occurrence": 136
+        },
+        {
+          "dof": 6,
+          "occurrence": 138
+        },
+        {
+          "dof": 6,
+          "occurrence": 140
+        },
+        {
+          "dof": 6,
+          "occurrence": 142
+        },
+        {
+          "dof": 6,
+          "occurrence": 144
+        },
+        {
+          "dof": 6,
+          "occurrence": 146
+        },
+        {
+          "dof": 6,
+          "occurrence": 148
+        },
+        {
+          "dof": 6,
+          "occurrence": 150
+        },
+        {
+          "dof": 6,
+          "occurrence": 152
+        },
+        {
+          "dof": 6,
+          "occurrence": 154
+        },
+        {
+          "dof": 6,
+          "occurrence": 156
+        },
+        {
+          "dof": 6,
+          "occurrence": 158
+        },
+        {
+          "dof": 6,
+          "occurrence": 160
+        },
+        {
+          "dof": 6,
+          "occurrence": 162
+        },
+        {
+          "dof": 0,
+          "occurrence": 164
+        },
+        {
+          "dof": 6,
+          "occurrence": 166
+        },
+        {
+          "dof": 0,
+          "occurrence": 168
+        },
+        {
+          "dof": 6,
+          "occurrence": 170
+        },
+        {
+          "dof": 0,
+          "occurrence": 172
+        },
+        {
+          "dof": 6,
+          "occurrence": 174
+        },
+        {
+          "dof": 0,
+          "occurrence": 176
+        },
+        {
+          "dof": 1,
+          "occurrence": 548
+        },
+        {
+          "dof": 2,
+          "occurrence": 553
+        },
+        {
+          "dof": 3,
+          "occurrence": 568
+        },
+        {
+          "dof": 1,
+          "occurrence": 577
+        },
+        {
+          "dof": 2,
+          "occurrence": 582
+        },
+        {
+          "dof": 3,
+          "occurrence": 597
+        }
+      ],
+      "errors": [],
+      "fixed": [
+        0,
+        2
+      ],
+      "joint": 637,
+      "name": "R_J3_WRIST_PITCH"
+    },
+    {
+      "keys": 6,
+      "name": "P4_SIX_JOINT_DEMO",
+      "steps": 120,
+      "study": 638
+    },
+    {
+      "keys": 1,
+      "name": "L_J1_YAW_DEMO",
+      "steps": 20,
+      "study": 639
+    },
+    {
+      "keys": 1,
+      "name": "L_J2_SHOULDER_PITCH_DEMO",
+      "steps": 20,
+      "study": 640
+    },
+    {
+      "keys": 1,
+      "name": "L_J3_WRIST_PITCH_DEMO",
+      "steps": 20,
+      "study": 641
+    },
+    {
+      "keys": 1,
+      "name": "R_J1_YAW_DEMO",
+      "steps": 20,
+      "study": 642
+    },
+    {
+      "keys": 1,
+      "name": "R_J2_SHOULDER_PITCH_DEMO",
+      "steps": 20,
+      "study": 643
+    },
+    {
+      "keys": 1,
+      "name": "R_J3_WRIST_PITCH_DEMO",
+      "steps": 20,
+      "study": 644
+    },
+    {
+      "changed": [
+        "description",
+        "project"
+      ],
+      "metadata": {
+        "com.bindsoft.fwb": {
+          "printer": "Bambu Lab X1 Carbon 256x256x256; 250mm profile height",
+          "status": "Print / assembly trials; servo horn and bearing retention still require measurement",
+          "units": "mm"
+        },
+        "description": "Six CLS6336HV servo envelopes, three serial revolute joints per arm: yaw, shoulder pitch, wrist pitch. Native added shoulder housing and carrier. Neutral save; +/-15 degree provisional CAD limits only.",
+        "project": "Fold Wing Buddy v8 P4 - six servos",
+        "revision": "P4"
+      }
+    }
+  ]
+}

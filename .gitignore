@@ -1,2 +1,4 @@
 메이킷올_자료모음/
 tmp/
+.local-tools/
+**/target/

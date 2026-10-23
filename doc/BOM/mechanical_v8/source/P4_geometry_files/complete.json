@@ -1,0 +1,15 @@
+{
+  "native": "D:\\repository\\ict_makerton_2026\\doc\\BOM\\mechanical_v8\\cad\\fold_wing_v8_P4_geometry.solidcraft",
+  "bodies": 77,
+  "printed_unique": 27,
+  "servo_case_bodies": [
+    "L_YAW_SERVO_INSIDE_BASE_part",
+    "L_SHOULDER_SERVO_TRIAL",
+    "L_PITCH_SERVO_EMBEDDED_part",
+    "R_YAW_SERVO_INSIDE_BASE_part",
+    "R_SHOULDER_SERVO_TRIAL",
+    "R_PITCH_SERVO_EMBEDDED_part"
+  ],
+  "P2_sha256_unchanged": true,
+  "status": "CAD trial, motion and interference checks separate"
+}

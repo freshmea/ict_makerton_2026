@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="2506" viewBox="0 0 1320 2506">
+<rect width="100%" height="100%" fill="#f6f5f0"/>
+<g font-family="Arial,sans-serif" fill="#243129">
+<text x="20" y="28" font-size="21">X1 Carbon / one part per model 3MF / mm</text>
+<text x="20" y="51" font-size="14">Static bbox placement only. Dashed: 5 mm brim reservation. Red: stock 18 x 28 exclusion. No slicing performed.</text>
+<text x="22" y="89" font-size="12">01 CAPSULE_VISOR_TRIAL</text>
+<g transform="translate(22,102)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="51.000" y="109.116" width="154.000" height="37.768" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="56.000" y="114.116" width="144.000" height="27.768" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">144.00 x 27.77; height 67.00</text>
+<text x="0" y="302" font-size="11">automatic_review_required</text>
+</g>
+<text x="352" y="89" font-size="12">02 HAND_DOWEL_4x6</text>
+<g transform="translate(352,102)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="121.000" y="121.000" width="13.999" height="14.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="126.000" y="126.000" width="3.999" height="4.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">4.00 x 4.00; height 6.00</text>
+<text x="0" y="302" font-size="11">automatic_review_required</text>
+</g>
+<text x="682" y="89" font-size="12">03 L_CURVED_ARM_CORE_FRONT</text>
+<g transform="translate(682,102)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="53.504" y="13.501" width="148.992" height="228.999" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="58.504" y="18.501" width="138.992" height="218.999" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">138.99 x 219.00; height 34.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="1012" y="89" font-size="12">04 L_CURVED_ARM_CORE_REAR</text>
+<g transform="translate(1012,102)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="53.504" y="13.501" width="148.992" height="228.999" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="58.504" y="18.501" width="138.992" height="218.999" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">138.99 x 219.00; height 34.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="22" y="437" font-size="12">05 L_ROUND_YAW_COLLAR_TRIAL</text>
+<g transform="translate(22,450)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="82.000" y="82.000" width="92.000" height="92.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="87.000" y="87.000" width="82.000" height="82.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">82.00 x 82.00; height 35.00</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="352" y="437" font-size="12">06 L_SHOULDER_YAW_TURRET</text>
+<g transform="translate(352,450)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="83.007" y="87.001" width="89.986" height="81.998" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="88.007" y="92.001" width="79.986" height="71.998" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">79.99 x 72.00; height 91.00</text>
+<text x="0" y="302" font-size="11">automatic_review_required</text>
+</g>
+<text x="682" y="437" font-size="12">07 L_WRAP_HAND_FRONT</text>
+<g transform="translate(682,450)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="37.011" y="78.001" width="181.978" height="99.997" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="42.011" y="83.001" width="171.978" height="89.997" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">171.98 x 90.00; height 34.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="1012" y="437" font-size="12">08 L_WRAP_HAND_REAR</text>
+<g transform="translate(1012,450)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="37.011" y="78.001" width="181.978" height="99.997" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="42.011" y="83.001" width="171.978" height="89.997" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">171.98 x 90.00; height 34.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="22" y="785" font-size="12">09 PEBBLE_HEAD_FRONT_TRIAL</text>
+<g transform="translate(22,798)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="42.736" y="52.759" width="170.528" height="150.483" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="47.736" y="57.759" width="160.528" height="140.483" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">160.53 x 140.48; height 25.52</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="352" y="785" font-size="12">10 PEBBLE_HEAD_REAR_TRIAL</text>
+<g transform="translate(352,798)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="27.002" y="45.500" width="201.997" height="165.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="32.002" y="50.500" width="191.997" height="155.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">192.00 x 155.00; height 96.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="682" y="785" font-size="12">11 PILL_BASE_LID_1</text>
+<g transform="translate(682,798)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">213.33 x 200.00; height 4.00</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="1012" y="785" font-size="12">12 PILL_BASE_LID_2</text>
+<g transform="translate(1012,798)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">213.33 x 200.00; height 4.00</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="22" y="1133" font-size="12">13 PILL_BASE_LID_3</text>
+<g transform="translate(22,1146)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">213.33 x 200.00; height 4.00</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="352" y="1133" font-size="12">14 PILL_BASE_TRAY_1</text>
+<g transform="translate(352,1146)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">213.33 x 200.00; height 96.00</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="682" y="1133" font-size="12">15 PILL_BASE_TRAY_2</text>
+<g transform="translate(682,1146)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">213.33 x 200.00; height 96.00</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="1012" y="1133" font-size="12">16 PILL_BASE_TRAY_3</text>
+<g transform="translate(1012,1146)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">213.33 x 200.00; height 96.00</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="22" y="1481" font-size="12">17 R_CURVED_ARM_CORE_FRONT</text>
+<g transform="translate(22,1494)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="53.501" y="13.501" width="148.998" height="228.999" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="58.501" y="18.501" width="138.998" height="218.999" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">139.00 x 219.00; height 34.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="352" y="1481" font-size="12">18 R_CURVED_ARM_CORE_REAR</text>
+<g transform="translate(352,1494)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="53.501" y="13.501" width="148.998" height="228.999" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="58.501" y="18.501" width="138.998" height="218.999" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">139.00 x 219.00; height 34.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="682" y="1481" font-size="12">19 R_ROUND_YAW_COLLAR_TRIAL</text>
+<g transform="translate(682,1494)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="82.000" y="82.000" width="92.000" height="92.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="87.000" y="87.000" width="82.000" height="82.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">82.00 x 82.00; height 35.00</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="1012" y="1481" font-size="12">20 R_SHOULDER_YAW_TURRET</text>
+<g transform="translate(1012,1494)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="83.007" y="87.001" width="89.986" height="81.998" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="88.007" y="92.001" width="79.986" height="71.998" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">79.99 x 72.00; height 91.00</text>
+<text x="0" y="302" font-size="11">automatic_review_required</text>
+</g>
+<text x="22" y="1829" font-size="12">21 R_WRAP_HAND_FRONT</text>
+<g transform="translate(22,1842)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="37.011" y="78.001" width="181.978" height="99.997" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="42.011" y="83.001" width="171.978" height="89.997" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">171.98 x 90.00; height 34.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="352" y="1829" font-size="12">22 R_WRAP_HAND_REAR</text>
+<g transform="translate(352,1842)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="37.011" y="78.001" width="181.978" height="99.997" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="42.011" y="83.001" width="171.978" height="89.997" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">171.98 x 90.00; height 34.00</text>
+<text x="0" y="302" font-size="11">defined_service_split</text>
+</g>
+<text x="682" y="1829" font-size="12">23 ROUNDED_PHONE_CRADLE_TRIAL</text>
+<g transform="translate(682,1842)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="82.000" y="92.731" width="92.000" height="70.538" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="87.000" y="97.731" width="82.000" height="60.538" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">82.00 x 60.54; height 53.51</text>
+<text x="0" y="302" font-size="11">defined_source_base</text>
+</g>
+<text x="1012" y="1829" font-size="12">24 SEAM_SPLICE_1_FRONT</text>
+<g transform="translate(1012,1842)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="99.000" y="101.000" width="58.000" height="54.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="104.000" y="106.000" width="48.000" height="44.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">48.00 x 44.00; height 10.00</text>
+<text x="0" y="302" font-size="11">defined_splice_pegs_up</text>
+</g>
+<text x="22" y="2177" font-size="12">25 SEAM_SPLICE_1_REAR</text>
+<g transform="translate(22,2190)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="99.000" y="101.000" width="58.000" height="54.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="104.000" y="106.000" width="48.000" height="44.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">48.00 x 44.00; height 10.00</text>
+<text x="0" y="302" font-size="11">defined_splice_pegs_up</text>
+</g>
+<text x="352" y="2177" font-size="12">26 SEAM_SPLICE_2_FRONT</text>
+<g transform="translate(352,2190)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="99.000" y="101.000" width="58.000" height="54.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="104.000" y="106.000" width="48.000" height="44.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">48.00 x 44.00; height 10.00</text>
+<text x="0" y="302" font-size="11">defined_splice_pegs_up</text>
+</g>
+<text x="682" y="2177" font-size="12">27 SEAM_SPLICE_2_REAR</text>
+<g transform="translate(682,2190)">
+<rect width="256" height="256" fill="white" stroke="#708478"/>
+<rect x="0" y="228" width="18" height="28" fill="#d55145"/>
+<rect x="99.000" y="101.000" width="58.000" height="54.000" fill="none" stroke="#c18d2e" stroke-dasharray="4 3"/>
+<rect x="104.000" y="106.000" width="48.000" height="44.000" fill="#dce7d8" stroke="#506a49"/>
+<text x="0" y="272" font-size="11">Front-left = (0,0); centre = (128,128)</text>
+<text x="0" y="287" font-size="12">48.00 x 44.00; height 10.00</text>
+<text x="0" y="302" font-size="11">defined_splice_pegs_up</text>
+</g>
+</g></svg>

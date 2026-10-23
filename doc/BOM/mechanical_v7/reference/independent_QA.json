@@ -1,0 +1,200 @@
+{
+  "checked_at": "2026-10-23T10:01:18.051768+09:00",
+  "scope": "Independent read-back of exported assembly STEP and the four hand STEP/STL pairs warned by SolidCraft. Source CAD builder not executed.",
+  "runtime": {
+    "python": "3.9.13",
+    "cadquery": "2.4.0",
+    "trimesh": "4.5.3",
+    "non_fatal_import_warning": "The pre-existing global SciPy emitted a NumPy compatibility warning (SciPy expected NumPy <1.25, found 1.26.4). The read-back checks completed without error; no packages were modified."
+  },
+  "method": [
+    "CadQuery importers.importStep loads each exported STEP file into OpenCascade.",
+    "Report imported BREP validity, solid/shell counts, shell Closed flags, and BREP volume.",
+    "trimesh.load_mesh loads each exported STL using its default processing; no repairs or writes to canonical CAD/STL files were performed.",
+    "Report STL watertightness, winding consistency, body count, volume and percentage difference from the STEP BREP.",
+    "SHA-256 hashes bind this result to the exact inspected files."
+  ],
+  "assembly_step": {
+    "file": "cad/fold_wing_v7_P1_assembly.step",
+    "sha256": "d8963190c12f120d750797ed8511aab453ee6df4fe4be20f2b4e0f9c84a64592",
+    "solids_count": 47,
+    "shells_count": 47,
+    "closed_shell_flags": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "brep_valid": true,
+    "volume_mm3": 5518524.216808159,
+    "step_declares_millimetres": true
+  },
+  "warned_part_checks": [
+    {
+      "name": "L_WRAP_HAND_FRONT",
+      "step": {
+        "file": "cad/L_WRAP_HAND_FRONT.step",
+        "sha256": "9366f259b8d4dd36f237b1d5a1d7264219d437b684fc75261a6a0b1edde2f259",
+        "solids_count": 1,
+        "shells_count": 1,
+        "closed_shell_flags": [
+          true
+        ],
+        "brep_valid": true,
+        "volume_mm3": 59640.856501882794
+      },
+      "stl": {
+        "file": "stl/L_WRAP_HAND_FRONT.stl",
+        "sha256": "873a8f48778f0c8bc9dff02c4639bcb373a0df8ba93c490c96239a70b4c1c8b7",
+        "watertight": true,
+        "winding_consistent": true,
+        "body_count": 1,
+        "vertices": 2441,
+        "faces": 4882,
+        "volume_mm3": 59338.28083399134
+      },
+      "mesh_minus_step_volume_percent": -0.507329514762926
+    },
+    {
+      "name": "L_WRAP_HAND_REAR",
+      "step": {
+        "file": "cad/L_WRAP_HAND_REAR.step",
+        "sha256": "749119d0dcd5acb858339e61af6cdc2a98148617f948a2e1c1d0f8e1513c9dfe",
+        "solids_count": 1,
+        "shells_count": 1,
+        "closed_shell_flags": [
+          true
+        ],
+        "brep_valid": true,
+        "volume_mm3": 59336.34982686129
+      },
+      "stl": {
+        "file": "stl/L_WRAP_HAND_REAR.stl",
+        "sha256": "042f34b27d440ce2fa08d799fe85a95d5bafebeb77ca5e7fc513834ef251c70d",
+        "watertight": true,
+        "winding_consistent": true,
+        "body_count": 1,
+        "vertices": 2783,
+        "faces": 5566,
+        "volume_mm3": 59027.415474778005
+      },
+      "mesh_minus_step_volume_percent": -0.5206494045972327
+    },
+    {
+      "name": "R_WRAP_HAND_FRONT",
+      "step": {
+        "file": "cad/R_WRAP_HAND_FRONT.step",
+        "sha256": "946bc90a6d99fe90872c99c285e443411d2b597798a12c3f5964bb2caeb60a22",
+        "solids_count": 1,
+        "shells_count": 1,
+        "closed_shell_flags": [
+          true
+        ],
+        "brep_valid": true,
+        "volume_mm3": 59638.9371977487
+      },
+      "stl": {
+        "file": "stl/R_WRAP_HAND_FRONT.stl",
+        "sha256": "8068381f1340eaa5f84becf5f3ee96d291e0e83ce9a17bc44597a7e5c593c581",
+        "watertight": true,
+        "winding_consistent": true,
+        "body_count": 1,
+        "vertices": 2437,
+        "faces": 4874,
+        "volume_mm3": 59331.13160251282
+      },
+      "mesh_minus_step_volume_percent": -0.5161151584832464
+    },
+    {
+      "name": "R_WRAP_HAND_REAR",
+      "step": {
+        "file": "cad/R_WRAP_HAND_REAR.step",
+        "sha256": "7286241827ff51f15491c5cfad3b960677565d386dd94492c0dd92a68fb4fcc8",
+        "solids_count": 1,
+        "shells_count": 1,
+        "closed_shell_flags": [
+          true
+        ],
+        "brep_valid": true,
+        "volume_mm3": 59335.02698236107
+      },
+      "stl": {
+        "file": "stl/R_WRAP_HAND_REAR.stl",
+        "sha256": "da14839563e7448e91f80d35f7935b86a5ca43f778f48657d90706b7fd248574",
+        "watertight": true,
+        "winding_consistent": true,
+        "body_count": 1,
+        "vertices": 2787,
+        "faces": 5574,
+        "volume_mm3": 59035.43703918876
+      },
+      "mesh_minus_step_volume_percent": -0.5049124579674948
+    }
+  ],
+  "cross_tool_context": {
+    "solidcraft_response_file": "reference/solidcraft/P1_open.json",
+    "solidcraft_response_sha256": "5d2beb2a97bc6442a352fc6787e0729c7d3f62d3233016adf89bdf6b6df9015d",
+    "solidcraft_bodies_count": 47,
+    "solidcraft_errors": 0,
+    "solidcraft_open_shell_warnings": [
+      "solid #44729: imported as an open body (the shell is not closed)",
+      "solid #54231: imported as an open body (the shell is not closed)",
+      "solid #81662: imported as an open body (the shell is not closed)",
+      "solid #91214: imported as an open body (the shell is not closed)"
+    ],
+    "source_validation_file": "cad/validation.json",
+    "source_validation_sha256": "e19d8dab6a4f61bd14a6628a06012249750ee211444cfd2f3e3179c7ab16a5fe",
+    "source_validation_assembly_components": 75,
+    "counts_note": "Source validation component count and exported/imported STEP body counts are different reported quantities; this QA does not infer a reason from the counts alone."
+  },
+  "limitations": [
+    "CadQuery/OpenCascade validity and STL closure do not resolve the four SolidCraft open-body import warnings. Those bodies are not certified as editable closed SolidCraft solids.",
+    "STL volume differs because tessellated geometry is an approximation; these percentage differences are not manufacturing tolerances.",
+    "STL files do not declare physical units; mesh coordinates are interpreted as mm, consistent with project CAD documentation.",
+    "This is static file QA, not print, fit, fastener, bearing-retention, torque, load, or full-range motion validation.",
+    "Only the named four individual STEP/STL pairs were independently checked; full assembly BREP was checked as a whole."
+  ]
+}

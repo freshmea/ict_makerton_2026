@@ -1,0 +1,102 @@
+[
+  {
+    "name": "L_J1_YAW",
+    "type": "revolute",
+    "a": "P1_closed_base:1",
+    "b": "L_CURVED_ARM_CORE_FRONT_part:1",
+    "at": {
+      "occurrence": "P1_closed_base:1",
+      "point": [
+        -275,
+        40,
+        130
+      ],
+      "z": [
+        0,
+        0,
+        1
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  },
+  {
+    "name": "L_J2_PITCH",
+    "type": "revolute",
+    "a": "L_CURVED_ARM_CORE_FRONT_part:1",
+    "b": "P3_L_HAND:1",
+    "at": {
+      "occurrence": "L_CURVED_ARM_CORE_FRONT_part:1",
+      "point": [
+        -220,
+        40,
+        315
+      ],
+      "z": [
+        0,
+        1,
+        0
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  },
+  {
+    "name": "R_J1_YAW",
+    "type": "revolute",
+    "a": "P1_closed_base:1",
+    "b": "R_CURVED_ARM_CORE_FRONT_part:1",
+    "at": {
+      "occurrence": "P1_closed_base:1",
+      "point": [
+        275,
+        40,
+        130
+      ],
+      "z": [
+        0,
+        0,
+        1
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  },
+  {
+    "name": "R_J2_PITCH",
+    "type": "revolute",
+    "a": "R_CURVED_ARM_CORE_FRONT_part:1",
+    "b": "P3_R_HAND:1",
+    "at": {
+      "occurrence": "R_CURVED_ARM_CORE_FRONT_part:1",
+      "point": [
+        220,
+        40,
+        315
+      ],
+      "z": [
+        0,
+        1,
+        0
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  }
+]

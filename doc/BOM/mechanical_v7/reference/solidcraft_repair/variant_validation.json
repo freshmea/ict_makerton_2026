@@ -1,0 +1,134 @@
+[
+  {
+    "part": "L_WRAP_HAND_FRONT",
+    "variant": "no_pcurves",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\L_WRAP_HAND_FRONT_no_pcurves.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4062.7037554825656,
+    "bbox_max_delta_mm": 2.842170943040401e-14
+  },
+  {
+    "part": "L_WRAP_HAND_FRONT",
+    "variant": "precision_max",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\L_WRAP_HAND_FRONT_precision_max.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4061.512597932022,
+    "bbox_max_delta_mm": 2.842170943040401e-14
+  },
+  {
+    "part": "L_WRAP_HAND_FRONT",
+    "variant": "no_pcurves_precision_max",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\L_WRAP_HAND_FRONT_no_pcurves_precision_max.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4061.4434190804823,
+    "bbox_max_delta_mm": 2.842170943040401e-14
+  },
+  {
+    "part": "L_WRAP_HAND_REAR",
+    "variant": "no_pcurves",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\L_WRAP_HAND_REAR_no_pcurves.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4065.1047340392906,
+    "bbox_max_delta_mm": 0.0
+  },
+  {
+    "part": "L_WRAP_HAND_REAR",
+    "variant": "precision_max",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\L_WRAP_HAND_REAR_precision_max.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4064.004625792506,
+    "bbox_max_delta_mm": 2.842170943040401e-14
+  },
+  {
+    "part": "L_WRAP_HAND_REAR",
+    "variant": "no_pcurves_precision_max",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\L_WRAP_HAND_REAR_no_pcurves_precision_max.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4065.104734039145,
+    "bbox_max_delta_mm": 0.0
+  },
+  {
+    "part": "R_WRAP_HAND_FRONT",
+    "variant": "no_pcurves",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\R_WRAP_HAND_FRONT_no_pcurves.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4061.448169317271,
+    "bbox_max_delta_mm": 6.303820496140374e-16
+  },
+  {
+    "part": "R_WRAP_HAND_FRONT",
+    "variant": "precision_max",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\R_WRAP_HAND_FRONT_precision_max.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4061.5173481376114,
+    "bbox_max_delta_mm": 1.4355430613213443e-15
+  },
+  {
+    "part": "R_WRAP_HAND_FRONT",
+    "variant": "no_pcurves_precision_max",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\R_WRAP_HAND_FRONT_no_pcurves_precision_max.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4061.448169317242,
+    "bbox_max_delta_mm": 6.303820496140374e-16
+  },
+  {
+    "part": "R_WRAP_HAND_REAR",
+    "variant": "no_pcurves",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\R_WRAP_HAND_REAR_no_pcurves.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4065.0900273885927,
+    "bbox_max_delta_mm": 5.654754898178267e-16
+  },
+  {
+    "part": "R_WRAP_HAND_REAR",
+    "variant": "precision_max",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\R_WRAP_HAND_REAR_precision_max.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4063.989919143256,
+    "bbox_max_delta_mm": 1.4355430613213443e-15
+  },
+  {
+    "part": "R_WRAP_HAND_REAR",
+    "variant": "no_pcurves_precision_max",
+    "path": "doc\\BOM\\mechanical_v7\\reference\\solidcraft_repair\\R_WRAP_HAND_REAR_no_pcurves_precision_max.step",
+    "source_valid": true,
+    "roundtrip_valid": true,
+    "source_closed": false,
+    "roundtrip_closed": false,
+    "volume_delta_mm3": -4065.0900273881416,
+    "bbox_max_delta_mm": 5.654754898178267e-16
+  }
+]

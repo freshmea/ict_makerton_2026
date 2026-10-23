@@ -1,0 +1,3567 @@
+{
+  "bodies": [
+    {
+      "area_mm2": 32123.960612711464,
+      "bbox": {
+        "max": [
+          -93.00000147666621,
+          40.00000000000002,
+          359.999886563183
+        ],
+        "min": [
+          -264.99999178731736,
+          5.999999999999998,
+          270.0000010965567
+        ]
+      },
+      "center_of_mass": [
+        -178.24254983859052,
+        16.806726976369713,
+        315.5174979010522
+      ],
+      "density_g_cm3": 1.29,
+      "edges": 137,
+      "face_types": {
+        "cylinder": 16,
+        "plane": 37
+      },
+      "faces": 53,
+      "kernel": {
+        "edges": 174,
+        "faces": 65,
+        "shells": 1,
+        "vertices": 114
+      },
+      "mass_g": 98.94206541527815,
+      "material": "Default",
+      "name": "L_WRAP_HAND_FRONT",
+      "vertices": 95,
+      "volume_mm3": 76699.27551571949
+    },
+    {
+      "area_mm2": 31685.026386005677,
+      "bbox": {
+        "max": [
+          -93.00000147666917,
+          74.00000000004269,
+          359.99988656318305
+        ],
+        "min": [
+          -264.99999178732634,
+          40.00000000014627,
+          270.0000010965372
+        ]
+      },
+      "center_of_mass": [
+        -178.07614453356382,
+        63.14175989917468,
+        315.5195601533311
+      ],
+      "density_g_cm3": 1.29,
+      "edges": 103,
+      "face_types": {
+        "cylinder": 17,
+        "plane": 25
+      },
+      "faces": 42,
+      "kernel": {
+        "edges": 144,
+        "faces": 55,
+        "shells": 1,
+        "vertices": 94
+      },
+      "mass_g": 98.54934187582353,
+      "material": "Default",
+      "name": "L_WRAP_HAND_REAR",
+      "vertices": 73,
+      "volume_mm3": 76394.8386634291
+    },
+    {
+      "area_mm2": 32123.960609826754,
+      "bbox": {
+        "max": [
+          264.99999178731775,
+          39.99999999535111,
+          359.999998903443
+        ],
+        "min": [
+          93.00000147608695,
+          6.0000000004613945,
+          270.0001134367385
+        ]
+      },
+      "center_of_mass": [
+        178.24254983645702,
+        16.806726975981608,
+        315.5175450692451
+      ],
+      "density_g_cm3": 1.29,
+      "edges": 137,
+      "face_types": {
+        "cylinder": 16,
+        "plane": 37
+      },
+      "faces": 53,
+      "kernel": {
+        "edges": 174,
+        "faces": 65,
+        "shells": 1,
+        "vertices": 114
+      },
+      "mass_g": 98.94206538661446,
+      "material": "Default",
+      "name": "R_WRAP_HAND_FRONT",
+      "vertices": 95,
+      "volume_mm3": 76699.27549349958
+    },
+    {
+      "area_mm2": 31685.026385861835,
+      "bbox": {
+        "max": [
+          264.99999178731736,
+          73.99999999997735,
+          359.9999989034433
+        ],
+        "min": [
+          93.00000147666627,
+          39.99999999999999,
+          270.0001134368161
+        ]
+      },
+      "center_of_mass": [
+        178.076144531851,
+        63.14175989894939,
+        315.5196075096511
+      ],
+      "density_g_cm3": 1.29,
+      "edges": 103,
+      "face_types": {
+        "cylinder": 17,
+        "plane": 25
+      },
+      "faces": 42,
+      "kernel": {
+        "edges": 144,
+        "faces": 55,
+        "shells": 1,
+        "vertices": 94
+      },
+      "mass_g": 98.54934187826501,
+      "material": "Default",
+      "name": "R_WRAP_HAND_REAR",
+      "vertices": 73,
+      "volume_mm3": 76394.83866532172
+    }
+  ],
+  "body_count": 4,
+  "params": [
+    {
+      "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+      "error": null,
+      "expression": "-1",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__hand",
+      "unit": "",
+      "value": -1.0
+    },
+    {
+      "comment": "World wrist centre X, mm. Fixed assembly datum.",
+      "error": null,
+      "expression": "-220",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__qx",
+      "unit": "mm",
+      "value": -220.0
+    },
+    {
+      "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+      "error": null,
+      "expression": "315",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__zc",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "Palm centre, mm; derived from wrist datum.",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*81",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__pcx",
+      "unit": "mm",
+      "value": -139.0
+    },
+    {
+      "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+      "error": null,
+      "expression": "90",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__cap_d",
+      "unit": "mm",
+      "value": 90.0
+    },
+    {
+      "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+      "error": null,
+      "expression": "80",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__palm_l",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+      "error": null,
+      "expression": "42",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__palm_h",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "comment": "Palm L_WRAP_HAND_FRONT__wall, mm. Allowed 3.0 to 3.6.",
+      "error": null,
+      "expression": "3.2",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__wall",
+      "unit": "mm",
+      "value": 3.2
+    },
+    {
+      "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; L_WRAP_HAND_FRONT__fit trial.",
+      "error": null,
+      "expression": "3.4",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__bolt_d",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; L_WRAP_HAND_FRONT__fit trial.",
+      "error": null,
+      "expression": "4.0",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__dowel_d",
+      "unit": "mm",
+      "value": 4.0
+    },
+    {
+      "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+      "error": null,
+      "expression": "0.4",
+      "model": false,
+      "name": "L_WRAP_HAND_FRONT__fit",
+      "unit": "mm",
+      "value": 0.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__palm_l",
+      "model": true,
+      "name": "d7",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__palm_h",
+      "model": true,
+      "name": "d8",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((L_WRAP_HAND_FRONT__pcx)+((L_WRAP_HAND_FRONT__palm_l)-(L_WRAP_HAND_FRONT__palm_h))/2)",
+      "model": true,
+      "name": "d9",
+      "unit": "mm",
+      "value": 120.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d10",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d11",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__palm_l-2*L_WRAP_HAND_FRONT__wall",
+      "model": true,
+      "name": "d14",
+      "unit": "mm",
+      "value": 73.6
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__palm_h-2*L_WRAP_HAND_FRONT__wall",
+      "model": true,
+      "name": "d15",
+      "unit": "mm",
+      "value": 35.6
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((L_WRAP_HAND_FRONT__pcx)+((L_WRAP_HAND_FRONT__palm_l-2*L_WRAP_HAND_FRONT__wall)-(L_WRAP_HAND_FRONT__palm_h-2*L_WRAP_HAND_FRONT__wall))/2)",
+      "model": true,
+      "name": "d16",
+      "unit": "mm",
+      "value": 120.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d17",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d18",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "24",
+      "model": true,
+      "name": "d21",
+      "unit": "mm",
+      "value": 24.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18",
+      "model": true,
+      "name": "d22",
+      "unit": "mm",
+      "value": 18.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((L_WRAP_HAND_FRONT__pcx-L_WRAP_HAND_FRONT__hand*34)+((24)-(18))/2)",
+      "model": true,
+      "name": "d23",
+      "unit": "mm",
+      "value": 102.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d24",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d25",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "24",
+      "model": true,
+      "name": "d28",
+      "unit": "mm",
+      "value": 24.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18",
+      "model": true,
+      "name": "d29",
+      "unit": "mm",
+      "value": 18.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((L_WRAP_HAND_FRONT__pcx-L_WRAP_HAND_FRONT__hand*34)+((24)-(18))/2)",
+      "model": true,
+      "name": "d30",
+      "unit": "mm",
+      "value": 102.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d31",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d32",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "5.3",
+      "model": true,
+      "name": "d44",
+      "unit": "mm",
+      "value": 5.3
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_FRONT__qx)",
+      "model": true,
+      "name": "d45",
+      "unit": "mm",
+      "value": 220.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d46",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__bolt_d",
+      "model": true,
+      "name": "d49",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*50)",
+      "model": true,
+      "name": "d50",
+      "unit": "mm",
+      "value": 170.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc-5",
+      "model": true,
+      "name": "d51",
+      "unit": "mm",
+      "value": 310.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__bolt_d",
+      "model": true,
+      "name": "d54",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*50)",
+      "model": true,
+      "name": "d55",
+      "unit": "mm",
+      "value": 170.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc+5",
+      "model": true,
+      "name": "d56",
+      "unit": "mm",
+      "value": 320.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__dowel_d+L_WRAP_HAND_FRONT__fit",
+      "model": true,
+      "name": "d59",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*60)",
+      "model": true,
+      "name": "d60",
+      "unit": "mm",
+      "value": 160.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc-4",
+      "model": true,
+      "name": "d61",
+      "unit": "mm",
+      "value": 311.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__dowel_d+L_WRAP_HAND_FRONT__fit",
+      "model": true,
+      "name": "d64",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*60)",
+      "model": true,
+      "name": "d65",
+      "unit": "mm",
+      "value": 160.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_FRONT__zc+4",
+      "model": true,
+      "name": "d66",
+      "unit": "mm",
+      "value": 319.0
+    },
+    {
+      "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+      "error": null,
+      "expression": "-1",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__hand",
+      "unit": "",
+      "value": -1.0
+    },
+    {
+      "comment": "World wrist centre X, mm. Fixed assembly datum.",
+      "error": null,
+      "expression": "-220",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__qx",
+      "unit": "mm",
+      "value": -220.0
+    },
+    {
+      "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+      "error": null,
+      "expression": "315",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__zc",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "Palm centre, mm; derived from wrist datum.",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*81",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__pcx",
+      "unit": "mm",
+      "value": -139.0
+    },
+    {
+      "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+      "error": null,
+      "expression": "90",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__cap_d",
+      "unit": "mm",
+      "value": 90.0
+    },
+    {
+      "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+      "error": null,
+      "expression": "80",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__palm_l",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+      "error": null,
+      "expression": "42",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__palm_h",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "comment": "Palm L_WRAP_HAND_REAR__wall, mm. Allowed 3.0 to 3.6.",
+      "error": null,
+      "expression": "3.2",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__wall",
+      "unit": "mm",
+      "value": 3.2
+    },
+    {
+      "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; L_WRAP_HAND_REAR__fit trial.",
+      "error": null,
+      "expression": "3.4",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__bolt_d",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; L_WRAP_HAND_REAR__fit trial.",
+      "error": null,
+      "expression": "4.0",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__dowel_d",
+      "unit": "mm",
+      "value": 4.0
+    },
+    {
+      "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+      "error": null,
+      "expression": "0.4",
+      "model": false,
+      "name": "L_WRAP_HAND_REAR__fit",
+      "unit": "mm",
+      "value": 0.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__palm_l",
+      "model": true,
+      "name": "d74",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__palm_h",
+      "model": true,
+      "name": "d75",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((L_WRAP_HAND_REAR__pcx)+((L_WRAP_HAND_REAR__palm_l)-(L_WRAP_HAND_REAR__palm_h))/2)",
+      "model": true,
+      "name": "d76",
+      "unit": "mm",
+      "value": 120.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d77",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d78",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__palm_l-2*L_WRAP_HAND_REAR__wall",
+      "model": true,
+      "name": "d81",
+      "unit": "mm",
+      "value": 73.6
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__palm_h-2*L_WRAP_HAND_REAR__wall",
+      "model": true,
+      "name": "d82",
+      "unit": "mm",
+      "value": 35.6
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((L_WRAP_HAND_REAR__pcx)+((L_WRAP_HAND_REAR__palm_l-2*L_WRAP_HAND_REAR__wall)-(L_WRAP_HAND_REAR__palm_h-2*L_WRAP_HAND_REAR__wall))/2)",
+      "model": true,
+      "name": "d83",
+      "unit": "mm",
+      "value": 120.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d84",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d85",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "24",
+      "model": true,
+      "name": "d88",
+      "unit": "mm",
+      "value": 24.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18",
+      "model": true,
+      "name": "d89",
+      "unit": "mm",
+      "value": 18.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((L_WRAP_HAND_REAR__pcx-L_WRAP_HAND_REAR__hand*34)+((24)-(18))/2)",
+      "model": true,
+      "name": "d90",
+      "unit": "mm",
+      "value": 102.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d91",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d92",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "24",
+      "model": true,
+      "name": "d95",
+      "unit": "mm",
+      "value": 24.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18",
+      "model": true,
+      "name": "d96",
+      "unit": "mm",
+      "value": 18.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((L_WRAP_HAND_REAR__pcx-L_WRAP_HAND_REAR__hand*34)+((24)-(18))/2)",
+      "model": true,
+      "name": "d97",
+      "unit": "mm",
+      "value": 102.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d98",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d99",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "16.3",
+      "model": true,
+      "name": "d105",
+      "unit": "mm",
+      "value": 16.3
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_REAR__qx)",
+      "model": true,
+      "name": "d106",
+      "unit": "mm",
+      "value": 220.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d107",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18.2",
+      "model": true,
+      "name": "d110",
+      "unit": "mm",
+      "value": 18.2
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_REAR__qx)",
+      "model": true,
+      "name": "d111",
+      "unit": "mm",
+      "value": 220.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d112",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__bolt_d",
+      "model": true,
+      "name": "d115",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*50)",
+      "model": true,
+      "name": "d116",
+      "unit": "mm",
+      "value": 170.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc-5",
+      "model": true,
+      "name": "d117",
+      "unit": "mm",
+      "value": 310.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__bolt_d",
+      "model": true,
+      "name": "d120",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*50)",
+      "model": true,
+      "name": "d121",
+      "unit": "mm",
+      "value": 170.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc+5",
+      "model": true,
+      "name": "d122",
+      "unit": "mm",
+      "value": 320.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__dowel_d+L_WRAP_HAND_REAR__fit",
+      "model": true,
+      "name": "d125",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*60)",
+      "model": true,
+      "name": "d126",
+      "unit": "mm",
+      "value": 160.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc-4",
+      "model": true,
+      "name": "d127",
+      "unit": "mm",
+      "value": 311.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__dowel_d+L_WRAP_HAND_REAR__fit",
+      "model": true,
+      "name": "d130",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*60)",
+      "model": true,
+      "name": "d131",
+      "unit": "mm",
+      "value": 160.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "L_WRAP_HAND_REAR__zc+4",
+      "model": true,
+      "name": "d132",
+      "unit": "mm",
+      "value": 319.0
+    },
+    {
+      "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+      "error": null,
+      "expression": "1",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__hand",
+      "unit": "",
+      "value": 1.0
+    },
+    {
+      "comment": "World wrist centre X, mm. Fixed assembly datum.",
+      "error": null,
+      "expression": "220",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__qx",
+      "unit": "mm",
+      "value": 220.0
+    },
+    {
+      "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+      "error": null,
+      "expression": "315",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__zc",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "Palm centre, mm; derived from wrist datum.",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*81",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__pcx",
+      "unit": "mm",
+      "value": 139.0
+    },
+    {
+      "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+      "error": null,
+      "expression": "90",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__cap_d",
+      "unit": "mm",
+      "value": 90.0
+    },
+    {
+      "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+      "error": null,
+      "expression": "80",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__palm_l",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+      "error": null,
+      "expression": "42",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__palm_h",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "comment": "Palm R_WRAP_HAND_FRONT__wall, mm. Allowed 3.0 to 3.6.",
+      "error": null,
+      "expression": "3.2",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__wall",
+      "unit": "mm",
+      "value": 3.2
+    },
+    {
+      "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; R_WRAP_HAND_FRONT__fit trial.",
+      "error": null,
+      "expression": "3.4",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__bolt_d",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; R_WRAP_HAND_FRONT__fit trial.",
+      "error": null,
+      "expression": "4.0",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__dowel_d",
+      "unit": "mm",
+      "value": 4.0
+    },
+    {
+      "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+      "error": null,
+      "expression": "0.4",
+      "model": false,
+      "name": "R_WRAP_HAND_FRONT__fit",
+      "unit": "mm",
+      "value": 0.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__palm_l",
+      "model": true,
+      "name": "d140",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__palm_h",
+      "model": true,
+      "name": "d141",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((R_WRAP_HAND_FRONT__pcx)+((R_WRAP_HAND_FRONT__palm_l)-(R_WRAP_HAND_FRONT__palm_h))/2)",
+      "model": true,
+      "name": "d142",
+      "unit": "mm",
+      "value": 158.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d143",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d144",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__palm_l-2*R_WRAP_HAND_FRONT__wall",
+      "model": true,
+      "name": "d147",
+      "unit": "mm",
+      "value": 73.6
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__palm_h-2*R_WRAP_HAND_FRONT__wall",
+      "model": true,
+      "name": "d148",
+      "unit": "mm",
+      "value": 35.6
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((R_WRAP_HAND_FRONT__pcx)+((R_WRAP_HAND_FRONT__palm_l-2*R_WRAP_HAND_FRONT__wall)-(R_WRAP_HAND_FRONT__palm_h-2*R_WRAP_HAND_FRONT__wall))/2)",
+      "model": true,
+      "name": "d149",
+      "unit": "mm",
+      "value": 158.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d150",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d151",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "24",
+      "model": true,
+      "name": "d154",
+      "unit": "mm",
+      "value": 24.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18",
+      "model": true,
+      "name": "d155",
+      "unit": "mm",
+      "value": 18.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((R_WRAP_HAND_FRONT__pcx-R_WRAP_HAND_FRONT__hand*34)+((24)-(18))/2)",
+      "model": true,
+      "name": "d156",
+      "unit": "mm",
+      "value": 108.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d157",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d158",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "24",
+      "model": true,
+      "name": "d161",
+      "unit": "mm",
+      "value": 24.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18",
+      "model": true,
+      "name": "d162",
+      "unit": "mm",
+      "value": 18.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((R_WRAP_HAND_FRONT__pcx-R_WRAP_HAND_FRONT__hand*34)+((24)-(18))/2)",
+      "model": true,
+      "name": "d163",
+      "unit": "mm",
+      "value": 108.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d164",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d165",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "5.3",
+      "model": true,
+      "name": "d177",
+      "unit": "mm",
+      "value": 5.3
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_FRONT__qx)",
+      "model": true,
+      "name": "d178",
+      "unit": "mm",
+      "value": 220.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc",
+      "model": true,
+      "name": "d179",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__bolt_d",
+      "model": true,
+      "name": "d182",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*50)",
+      "model": true,
+      "name": "d183",
+      "unit": "mm",
+      "value": 170.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc-5",
+      "model": true,
+      "name": "d184",
+      "unit": "mm",
+      "value": 310.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__bolt_d",
+      "model": true,
+      "name": "d187",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*50)",
+      "model": true,
+      "name": "d188",
+      "unit": "mm",
+      "value": 170.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc+5",
+      "model": true,
+      "name": "d189",
+      "unit": "mm",
+      "value": 320.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__dowel_d+R_WRAP_HAND_FRONT__fit",
+      "model": true,
+      "name": "d192",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*60)",
+      "model": true,
+      "name": "d193",
+      "unit": "mm",
+      "value": 160.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc-4",
+      "model": true,
+      "name": "d194",
+      "unit": "mm",
+      "value": 311.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__dowel_d+R_WRAP_HAND_FRONT__fit",
+      "model": true,
+      "name": "d197",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*60)",
+      "model": true,
+      "name": "d198",
+      "unit": "mm",
+      "value": 160.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_FRONT__zc+4",
+      "model": true,
+      "name": "d199",
+      "unit": "mm",
+      "value": 319.0
+    },
+    {
+      "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+      "error": null,
+      "expression": "1",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__hand",
+      "unit": "",
+      "value": 1.0
+    },
+    {
+      "comment": "World wrist centre X, mm. Fixed assembly datum.",
+      "error": null,
+      "expression": "220",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__qx",
+      "unit": "mm",
+      "value": 220.0
+    },
+    {
+      "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+      "error": null,
+      "expression": "315",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__zc",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "Palm centre, mm; derived from wrist datum.",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*81",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__pcx",
+      "unit": "mm",
+      "value": 139.0
+    },
+    {
+      "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+      "error": null,
+      "expression": "90",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__cap_d",
+      "unit": "mm",
+      "value": 90.0
+    },
+    {
+      "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+      "error": null,
+      "expression": "80",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__palm_l",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+      "error": null,
+      "expression": "42",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__palm_h",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "comment": "Palm R_WRAP_HAND_REAR__wall, mm. Allowed 3.0 to 3.6.",
+      "error": null,
+      "expression": "3.2",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__wall",
+      "unit": "mm",
+      "value": 3.2
+    },
+    {
+      "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; R_WRAP_HAND_REAR__fit trial.",
+      "error": null,
+      "expression": "3.4",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__bolt_d",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; R_WRAP_HAND_REAR__fit trial.",
+      "error": null,
+      "expression": "4.0",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__dowel_d",
+      "unit": "mm",
+      "value": 4.0
+    },
+    {
+      "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+      "error": null,
+      "expression": "0.4",
+      "model": false,
+      "name": "R_WRAP_HAND_REAR__fit",
+      "unit": "mm",
+      "value": 0.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__palm_l",
+      "model": true,
+      "name": "d207",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__palm_h",
+      "model": true,
+      "name": "d208",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((R_WRAP_HAND_REAR__pcx)+((R_WRAP_HAND_REAR__palm_l)-(R_WRAP_HAND_REAR__palm_h))/2)",
+      "model": true,
+      "name": "d209",
+      "unit": "mm",
+      "value": 158.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d210",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d211",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__palm_l-2*R_WRAP_HAND_REAR__wall",
+      "model": true,
+      "name": "d214",
+      "unit": "mm",
+      "value": 73.6
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__palm_h-2*R_WRAP_HAND_REAR__wall",
+      "model": true,
+      "name": "d215",
+      "unit": "mm",
+      "value": 35.6
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((R_WRAP_HAND_REAR__pcx)+((R_WRAP_HAND_REAR__palm_l-2*R_WRAP_HAND_REAR__wall)-(R_WRAP_HAND_REAR__palm_h-2*R_WRAP_HAND_REAR__wall))/2)",
+      "model": true,
+      "name": "d216",
+      "unit": "mm",
+      "value": 158.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d217",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d218",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "24",
+      "model": true,
+      "name": "d221",
+      "unit": "mm",
+      "value": 24.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18",
+      "model": true,
+      "name": "d222",
+      "unit": "mm",
+      "value": 18.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((R_WRAP_HAND_REAR__pcx-R_WRAP_HAND_REAR__hand*34)+((24)-(18))/2)",
+      "model": true,
+      "name": "d223",
+      "unit": "mm",
+      "value": 108.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d224",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d225",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "24",
+      "model": true,
+      "name": "d228",
+      "unit": "mm",
+      "value": 24.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18",
+      "model": true,
+      "name": "d229",
+      "unit": "mm",
+      "value": 18.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs((R_WRAP_HAND_REAR__pcx-R_WRAP_HAND_REAR__hand*34)+((24)-(18))/2)",
+      "model": true,
+      "name": "d230",
+      "unit": "mm",
+      "value": 108.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d231",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "316",
+      "model": true,
+      "name": "d232",
+      "unit": "mm",
+      "value": 316.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "16.3",
+      "model": true,
+      "name": "d238",
+      "unit": "mm",
+      "value": 16.3
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_REAR__qx)",
+      "model": true,
+      "name": "d239",
+      "unit": "mm",
+      "value": 220.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d240",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "18.2",
+      "model": true,
+      "name": "d243",
+      "unit": "mm",
+      "value": 18.2
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_REAR__qx)",
+      "model": true,
+      "name": "d244",
+      "unit": "mm",
+      "value": 220.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc",
+      "model": true,
+      "name": "d245",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__bolt_d",
+      "model": true,
+      "name": "d248",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*50)",
+      "model": true,
+      "name": "d249",
+      "unit": "mm",
+      "value": 170.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc-5",
+      "model": true,
+      "name": "d250",
+      "unit": "mm",
+      "value": 310.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__bolt_d",
+      "model": true,
+      "name": "d253",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*50)",
+      "model": true,
+      "name": "d254",
+      "unit": "mm",
+      "value": 170.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc+5",
+      "model": true,
+      "name": "d255",
+      "unit": "mm",
+      "value": 320.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__dowel_d+R_WRAP_HAND_REAR__fit",
+      "model": true,
+      "name": "d258",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*60)",
+      "model": true,
+      "name": "d259",
+      "unit": "mm",
+      "value": 160.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc-4",
+      "model": true,
+      "name": "d260",
+      "unit": "mm",
+      "value": 311.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__dowel_d+R_WRAP_HAND_REAR__fit",
+      "model": true,
+      "name": "d263",
+      "unit": "mm",
+      "value": 4.4
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "abs(R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*60)",
+      "model": true,
+      "name": "d264",
+      "unit": "mm",
+      "value": 160.0
+    },
+    {
+      "comment": "",
+      "error": null,
+      "expression": "R_WRAP_HAND_REAR__zc+4",
+      "model": true,
+      "name": "d265",
+      "unit": "mm",
+      "value": 319.0
+    }
+  ],
+  "sketches": [
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 3,
+      "name": "L_WRAP_HAND_FRONT__PalmOuterProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 5,
+      "name": "L_WRAP_HAND_FRONT__PalmCavityProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 8,
+      "name": "L_WRAP_HAND_FRONT__OuterFingerProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 10,
+      "name": "L_WRAP_HAND_FRONT__CentreFingerProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 15,
+      "name": "L_WRAP_HAND_FRONT__HornScrewAccessProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 17,
+      "name": "L_WRAP_HAND_FRONT__BridgeBolt1Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 19,
+      "name": "L_WRAP_HAND_FRONT__BridgeBolt2Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 21,
+      "name": "L_WRAP_HAND_FRONT__AlignmentSocket1Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 23,
+      "name": "L_WRAP_HAND_FRONT__AlignmentSocket2Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 27,
+      "name": "L_WRAP_HAND_REAR__PalmOuterProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 29,
+      "name": "L_WRAP_HAND_REAR__PalmCavityProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 32,
+      "name": "L_WRAP_HAND_REAR__OuterFingerProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 34,
+      "name": "L_WRAP_HAND_REAR__CentreFingerProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 37,
+      "name": "L_WRAP_HAND_REAR__BearingBodySeatProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 39,
+      "name": "L_WRAP_HAND_REAR__BearingFlangeSeatProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 41,
+      "name": "L_WRAP_HAND_REAR__BridgeBolt1Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 43,
+      "name": "L_WRAP_HAND_REAR__BridgeBolt2Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 45,
+      "name": "L_WRAP_HAND_REAR__AlignmentSocket1Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 47,
+      "name": "L_WRAP_HAND_REAR__AlignmentSocket2Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 51,
+      "name": "R_WRAP_HAND_FRONT__PalmOuterProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 53,
+      "name": "R_WRAP_HAND_FRONT__PalmCavityProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 56,
+      "name": "R_WRAP_HAND_FRONT__OuterFingerProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 58,
+      "name": "R_WRAP_HAND_FRONT__CentreFingerProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 63,
+      "name": "R_WRAP_HAND_FRONT__HornScrewAccessProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 65,
+      "name": "R_WRAP_HAND_FRONT__BridgeBolt1Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 67,
+      "name": "R_WRAP_HAND_FRONT__BridgeBolt2Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 69,
+      "name": "R_WRAP_HAND_FRONT__AlignmentSocket1Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 71,
+      "name": "R_WRAP_HAND_FRONT__AlignmentSocket2Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 75,
+      "name": "R_WRAP_HAND_REAR__PalmOuterProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 77,
+      "name": "R_WRAP_HAND_REAR__PalmCavityProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 80,
+      "name": "R_WRAP_HAND_REAR__OuterFingerProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 4,
+      "dof": 0,
+      "id": 82,
+      "name": "R_WRAP_HAND_REAR__CentreFingerProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 85,
+      "name": "R_WRAP_HAND_REAR__BearingBodySeatProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 87,
+      "name": "R_WRAP_HAND_REAR__BearingFlangeSeatProfile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 89,
+      "name": "R_WRAP_HAND_REAR__BridgeBolt1Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 91,
+      "name": "R_WRAP_HAND_REAR__BridgeBolt2Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 93,
+      "name": "R_WRAP_HAND_REAR__AlignmentSocket1Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    },
+    {
+      "curves": 1,
+      "dof": 0,
+      "id": 95,
+      "name": "R_WRAP_HAND_REAR__AlignmentSocket2Profile",
+      "profiles": 1,
+      "status": "solved",
+      "visible": false
+    }
+  ],
+  "timeline": [
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 1,
+      "ms": 1.7821,
+      "name": "L_WRAP_HAND_FRONT__DriveCap",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "CylinderFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 2,
+      "ms": 116.9246,
+      "name": "L_WRAP_HAND_FRONT__OuterBridge",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 3,
+      "ms": 0.3973,
+      "name": "L_WRAP_HAND_FRONT__PalmOuterProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 4,
+      "ms": 1.2944,
+      "name": "L_WRAP_HAND_FRONT__PalmOuter",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 5,
+      "ms": 0.15100000000000002,
+      "name": "L_WRAP_HAND_FRONT__PalmCavityProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 6,
+      "ms": 24.2759,
+      "name": "L_WRAP_HAND_FRONT__PalmCavity",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 7,
+      "ms": 368.33939999999996,
+      "name": "Combine1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "CombineFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 8,
+      "ms": 0.1928,
+      "name": "L_WRAP_HAND_FRONT__OuterFingerProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 9,
+      "ms": 904.3261,
+      "name": "L_WRAP_HAND_FRONT__OuterFinger",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 10,
+      "ms": 0.1923,
+      "name": "L_WRAP_HAND_FRONT__CentreFingerProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 11,
+      "ms": 211.51710000000003,
+      "name": "L_WRAP_HAND_FRONT__CentreFinger",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 12,
+      "ms": 43.0109,
+      "name": "L_WRAP_HAND_FRONT__DiffuserAperture",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 13,
+      "ms": 35.1148,
+      "name": "L_WRAP_HAND_FRONT__HornPocketHorizontal",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 14,
+      "ms": 34.7662,
+      "name": "L_WRAP_HAND_FRONT__HornPocketVertical",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 15,
+      "ms": 0.0881,
+      "name": "L_WRAP_HAND_FRONT__HornScrewAccessProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 16,
+      "ms": 61.4758,
+      "name": "L_WRAP_HAND_FRONT__HornScrewAccess",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 17,
+      "ms": 0.0881,
+      "name": "L_WRAP_HAND_FRONT__BridgeBolt1Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 18,
+      "ms": 96.3552,
+      "name": "L_WRAP_HAND_FRONT__BridgeBolt1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 19,
+      "ms": 0.09459999999999999,
+      "name": "L_WRAP_HAND_FRONT__BridgeBolt2Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 20,
+      "ms": 96.6918,
+      "name": "L_WRAP_HAND_FRONT__BridgeBolt2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 21,
+      "ms": 0.0869,
+      "name": "L_WRAP_HAND_FRONT__AlignmentSocket1Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 22,
+      "ms": 112.9457,
+      "name": "L_WRAP_HAND_FRONT__AlignmentSocket1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 23,
+      "ms": 0.10490000000000001,
+      "name": "L_WRAP_HAND_FRONT__AlignmentSocket2Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 24,
+      "ms": 169.01350000000002,
+      "name": "L_WRAP_HAND_FRONT__AlignmentSocket2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 25,
+      "ms": 2.4996,
+      "name": "L_WRAP_HAND_REAR__BearingCap",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "CylinderFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 26,
+      "ms": 130.7903,
+      "name": "L_WRAP_HAND_REAR__OuterBridge",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 27,
+      "ms": 0.2609,
+      "name": "L_WRAP_HAND_REAR__PalmOuterProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 28,
+      "ms": 1.8848,
+      "name": "L_WRAP_HAND_REAR__PalmOuter",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 29,
+      "ms": 0.19349999999999998,
+      "name": "L_WRAP_HAND_REAR__PalmCavityProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 30,
+      "ms": 25.8577,
+      "name": "L_WRAP_HAND_REAR__PalmCavity",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 31,
+      "ms": 459.4064,
+      "name": "Combine2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "CombineFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 32,
+      "ms": 0.26170000000000004,
+      "name": "L_WRAP_HAND_REAR__OuterFingerProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 33,
+      "ms": 798.2564,
+      "name": "L_WRAP_HAND_REAR__OuterFinger",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 34,
+      "ms": 0.27109999999999995,
+      "name": "L_WRAP_HAND_REAR__CentreFingerProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 35,
+      "ms": 175.9269,
+      "name": "L_WRAP_HAND_REAR__CentreFinger",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 36,
+      "ms": 38.6169,
+      "name": "L_WRAP_HAND_REAR__DiffuserAperture",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 37,
+      "ms": 0.1185,
+      "name": "L_WRAP_HAND_REAR__BearingBodySeatProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 38,
+      "ms": 69.44069999999999,
+      "name": "L_WRAP_HAND_REAR__BearingBodySeat",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 39,
+      "ms": 0.0784,
+      "name": "L_WRAP_HAND_REAR__BearingFlangeSeatProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 40,
+      "ms": 55.1709,
+      "name": "L_WRAP_HAND_REAR__BearingFlangeSeat",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 41,
+      "ms": 0.08789999999999999,
+      "name": "L_WRAP_HAND_REAR__BridgeBolt1Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 42,
+      "ms": 57.983,
+      "name": "L_WRAP_HAND_REAR__BridgeBolt1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 43,
+      "ms": 0.0666,
+      "name": "L_WRAP_HAND_REAR__BridgeBolt2Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 44,
+      "ms": 62.1176,
+      "name": "L_WRAP_HAND_REAR__BridgeBolt2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 45,
+      "ms": 0.0906,
+      "name": "L_WRAP_HAND_REAR__AlignmentSocket1Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 46,
+      "ms": 59.4281,
+      "name": "L_WRAP_HAND_REAR__AlignmentSocket1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 47,
+      "ms": 0.0684,
+      "name": "L_WRAP_HAND_REAR__AlignmentSocket2Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 48,
+      "ms": 68.596,
+      "name": "L_WRAP_HAND_REAR__AlignmentSocket2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 49,
+      "ms": 1.1811,
+      "name": "R_WRAP_HAND_FRONT__DriveCap",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "CylinderFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 50,
+      "ms": 100.0119,
+      "name": "R_WRAP_HAND_FRONT__OuterBridge",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 51,
+      "ms": 0.1726,
+      "name": "R_WRAP_HAND_FRONT__PalmOuterProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 52,
+      "ms": 1.6499,
+      "name": "R_WRAP_HAND_FRONT__PalmOuter",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 53,
+      "ms": 0.1379,
+      "name": "R_WRAP_HAND_FRONT__PalmCavityProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 54,
+      "ms": 24.4469,
+      "name": "R_WRAP_HAND_FRONT__PalmCavity",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 55,
+      "ms": 390.75320000000005,
+      "name": "Combine3",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "CombineFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 56,
+      "ms": 0.1678,
+      "name": "R_WRAP_HAND_FRONT__OuterFingerProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 57,
+      "ms": 1366.5987,
+      "name": "R_WRAP_HAND_FRONT__OuterFinger",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 58,
+      "ms": 0.1636,
+      "name": "R_WRAP_HAND_FRONT__CentreFingerProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 59,
+      "ms": 156.974,
+      "name": "R_WRAP_HAND_FRONT__CentreFinger",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 60,
+      "ms": 32.7955,
+      "name": "R_WRAP_HAND_FRONT__DiffuserAperture",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 61,
+      "ms": 29.3799,
+      "name": "R_WRAP_HAND_FRONT__HornPocketHorizontal",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 62,
+      "ms": 27.0568,
+      "name": "R_WRAP_HAND_FRONT__HornPocketVertical",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 63,
+      "ms": 0.0853,
+      "name": "R_WRAP_HAND_FRONT__HornScrewAccessProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 64,
+      "ms": 58.282199999999996,
+      "name": "R_WRAP_HAND_FRONT__HornScrewAccess",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 65,
+      "ms": 0.0829,
+      "name": "R_WRAP_HAND_FRONT__BridgeBolt1Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 66,
+      "ms": 64.6578,
+      "name": "R_WRAP_HAND_FRONT__BridgeBolt1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 67,
+      "ms": 0.0802,
+      "name": "R_WRAP_HAND_FRONT__BridgeBolt2Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 68,
+      "ms": 52.2541,
+      "name": "R_WRAP_HAND_FRONT__BridgeBolt2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 69,
+      "ms": 0.0736,
+      "name": "R_WRAP_HAND_FRONT__AlignmentSocket1Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 70,
+      "ms": 67.3594,
+      "name": "R_WRAP_HAND_FRONT__AlignmentSocket1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 71,
+      "ms": 0.07100000000000001,
+      "name": "R_WRAP_HAND_FRONT__AlignmentSocket2Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 72,
+      "ms": 70.5354,
+      "name": "R_WRAP_HAND_FRONT__AlignmentSocket2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 73,
+      "ms": 2.6998,
+      "name": "R_WRAP_HAND_REAR__BearingCap",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "CylinderFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 74,
+      "ms": 108.8233,
+      "name": "R_WRAP_HAND_REAR__OuterBridge",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 75,
+      "ms": 0.251,
+      "name": "R_WRAP_HAND_REAR__PalmOuterProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 76,
+      "ms": 2.7564,
+      "name": "R_WRAP_HAND_REAR__PalmOuter",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 77,
+      "ms": 0.13210000000000002,
+      "name": "R_WRAP_HAND_REAR__PalmCavityProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 78,
+      "ms": 30.8218,
+      "name": "R_WRAP_HAND_REAR__PalmCavity",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 79,
+      "ms": 385.0521,
+      "name": "Combine4",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "CombineFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 80,
+      "ms": 0.2514,
+      "name": "R_WRAP_HAND_REAR__OuterFingerProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 81,
+      "ms": 738.8242,
+      "name": "R_WRAP_HAND_REAR__OuterFinger",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 82,
+      "ms": 0.17149999999999999,
+      "name": "R_WRAP_HAND_REAR__CentreFingerProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 83,
+      "ms": 152.4034,
+      "name": "R_WRAP_HAND_REAR__CentreFinger",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 84,
+      "ms": 42.071799999999996,
+      "name": "R_WRAP_HAND_REAR__DiffuserAperture",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BoxFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 85,
+      "ms": 0.1143,
+      "name": "R_WRAP_HAND_REAR__BearingBodySeatProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 86,
+      "ms": 73.92020000000001,
+      "name": "R_WRAP_HAND_REAR__BearingBodySeat",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 87,
+      "ms": 0.1188,
+      "name": "R_WRAP_HAND_REAR__BearingFlangeSeatProfile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 88,
+      "ms": 40.8544,
+      "name": "R_WRAP_HAND_REAR__BearingFlangeSeat",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 89,
+      "ms": 0.0819,
+      "name": "R_WRAP_HAND_REAR__BridgeBolt1Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 90,
+      "ms": 60.166,
+      "name": "R_WRAP_HAND_REAR__BridgeBolt1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 91,
+      "ms": 0.1114,
+      "name": "R_WRAP_HAND_REAR__BridgeBolt2Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 92,
+      "ms": 65.88589999999999,
+      "name": "R_WRAP_HAND_REAR__BridgeBolt2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 93,
+      "ms": 0.0667,
+      "name": "R_WRAP_HAND_REAR__AlignmentSocket1Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 94,
+      "ms": 70.43140000000001,
+      "name": "R_WRAP_HAND_REAR__AlignmentSocket1",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 95,
+      "ms": 0.1152,
+      "name": "R_WRAP_HAND_REAR__AlignmentSocket2Profile",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "Sketch",
+      "warning": null
+    },
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 96,
+      "ms": 71.7813,
+      "name": "R_WRAP_HAND_REAR__AlignmentSocket2",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "ExtrudeFeature",
+      "warning": null
+    }
+  ],
+  "total": {
+    "area_mm2": 127617.97399440574,
+    "edges": 480,
+    "faces": 190,
+    "mass_g": 394.9828145559811,
+    "vertices": 336,
+    "volume_mm3": 306188.22833796986
+  }
+}

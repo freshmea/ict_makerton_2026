@@ -1,0 +1,117 @@
+[
+  {
+    "display_value": 4.0,
+    "name": "hand_dowel_d",
+    "unit": "mm",
+    "value": 4.0
+  },
+  {
+    "display_value": 6.0,
+    "name": "hand_dowel_l",
+    "unit": "mm",
+    "value": 6.0
+  },
+  {
+    "bodies": [
+      "HAND_DOWEL_4x6"
+    ],
+    "changed_bodies": [],
+    "created_bodies": [
+      "HAND_DOWEL_4x6"
+    ],
+    "feature": 1,
+    "ms": 2.5673,
+    "name": "HandDowel",
+    "removed_bodies": [],
+    "warning": null
+  },
+  {
+    "active_sketch": null,
+    "bodies": [
+      {
+        "area_mm2": 100.52589010592172,
+        "bbox": {
+          "max": [
+            1.9999691124264767,
+            1.9999462674812856,
+            6.000000000000003
+          ],
+          "min": [
+            -1.9999691124264767,
+            -1.9999462674812856,
+            0.0
+          ]
+        },
+        "center_of_mass": [
+          4.1111449455780184e-18,
+          3.446228611003096e-16,
+          2.9999999999999996
+        ],
+        "edges": 2,
+        "face_types": {
+          "cylinder": 1,
+          "plane": 2
+        },
+        "faces": 3,
+        "kernel": {
+          "edges": 6,
+          "faces": 4,
+          "shells": 1,
+          "vertices": 4
+        },
+        "name": "HAND_DOWEL_4x6",
+        "vertices": 2,
+        "visible": true,
+        "volume_mm3": 75.3895241213912
+      }
+    ],
+    "dirty": true,
+    "hidden_origin": [],
+    "marker": 1,
+    "metadata": {},
+    "name": "Untitled",
+    "params": [
+      {
+        "comment": "Loose alignment dowel; print 4 copies or use purchased smooth dowels. Trial 3.8 to 4.2 mm.",
+        "error": null,
+        "expression": "4 mm",
+        "model": false,
+        "name": "hand_dowel_d",
+        "unit": "mm",
+        "value": 4.0
+      },
+      {
+        "comment": "Nominal 6 mm pin in opposing 3.2 mm blind sockets; trial 5.8 to 6.2 mm.",
+        "error": null,
+        "expression": "6 mm",
+        "model": false,
+        "name": "hand_dowel_l",
+        "unit": "mm",
+        "value": 6.0
+      }
+    ],
+    "path": null,
+    "redo": 0,
+    "revision": 7,
+    "selection": [],
+    "sketches": [],
+    "timeline": [
+      {
+        "boolean_diagnostics": {
+          "events": [],
+          "truncated": false
+        },
+        "error": null,
+        "id": 1,
+        "ms": 2.5673,
+        "name": "HandDowel",
+        "rolled_back": false,
+        "suppressed": false,
+        "type": "CylinderFeature",
+        "warning": null
+      }
+    ],
+    "undo": 3,
+    "units": "mm"
+  }
+]

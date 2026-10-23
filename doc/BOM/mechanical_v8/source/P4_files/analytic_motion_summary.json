@@ -1,0 +1,17 @@
+{
+  "servo_count": 6,
+  "revolute_count": 6,
+  "drives": 18,
+  "com_comparisons": 108,
+  "max_com_error_mm": 9.035401117785113e-05,
+  "cad_limits_deg": [
+    -15,
+    15
+  ],
+  "test_angles_deg": [
+    -10,
+    0,
+    10
+  ],
+  "physical_limits_verified": false
+}

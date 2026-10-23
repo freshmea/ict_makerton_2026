@@ -1,0 +1,1447 @@
+{
+  "commands": [
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "splice_L",
+        "expression": "48 mm",
+        "comment": "mm; 44..52, bolt and locator pattern stays fixed"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "splice_W",
+        "expression": "44 mm",
+        "comment": "mm; 42..46, bolt and locator pattern stays fixed"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "splice_T",
+        "expression": "8 mm",
+        "comment": "mm; 7..9, verify selected screw length when changed"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "m3_clear",
+        "expression": "3.4 mm",
+        "comment": "mm; 3.2..3.6, trial fit before full print"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "square_nut",
+        "expression": "5.8 mm",
+        "comment": "mm; 5.7..6.0, M3 DIN562 square nut nominal 5.5"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "nut_depth",
+        "expression": "2.2 mm",
+        "comment": "mm; 2.0..2.5, M3 DIN562 nut nominal thickness 1.8"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "key_d",
+        "expression": "4 mm",
+        "comment": "mm; 3.8..4.1"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "key_socket_d",
+        "expression": "4.4 mm",
+        "comment": "mm; key_d + 0.3..0.6, diametral fit clearance"
+      }
+    },
+    {
+      "command": "solid.remove",
+      "params": {
+        "bodies": [
+          "SEAM_PLATE_1_part",
+          "SEAM_PLATE_2_part"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "splice_L",
+        "width": "splice_W",
+        "height": "splice_T",
+        "center": [
+          -106.6666667,
+          -62,
+          "4+splice_T/2"
+        ],
+        "operation": "new",
+        "body_name": "SEAM_SPLICE_1_FRONT",
+        "name": "SEAM_SPLICE_1_FRONT_Blank"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          -118.6666667,
+          -76,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_L_F_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          -118.6666667,
+          -76,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_L_F_SquareNut"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": 6,
+        "base": [
+          -118.6666667,
+          -76,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_1_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_L_F_FloorBolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          -121.8666667,
+          -79.2,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_1_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_L_F_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          -118.6666667,
+          -48,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_L_B_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          -118.6666667,
+          -48,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_L_B_SquareNut"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": 6,
+        "base": [
+          -118.6666667,
+          -48,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_1_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_L_B_FloorBolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          -121.8666667,
+          -51.2,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_1_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_L_B_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          -94.6666667,
+          -76,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_R_F_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          -94.6666667,
+          -76,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_R_F_SquareNut"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": 6,
+        "base": [
+          -94.6666667,
+          -76,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_R_F_FloorBolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          -97.8666667,
+          -79.2,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_R_F_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          -94.6666667,
+          -48,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_R_B_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          -94.6666667,
+          -48,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_R_B_SquareNut"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": 6,
+        "base": [
+          -94.6666667,
+          -48,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_R_B_FloorBolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          -97.8666667,
+          -51.2,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_R_B_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_d",
+        "height": 3,
+        "base": [
+          -114.6666667,
+          -62,
+          2
+        ],
+        "operation": "join",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_KeyL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_socket_d",
+        "height": 3.3,
+        "base": [
+          -114.6666667,
+          -62,
+          1.7
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_1_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_KeyL_Socket"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_d",
+        "height": 3,
+        "base": [
+          -98.6666667,
+          -62,
+          2
+        ],
+        "operation": "join",
+        "targets": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_KeyR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_socket_d",
+        "height": 3.3,
+        "base": [
+          -98.6666667,
+          -62,
+          1.7
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_1_FRONT_KeyR_Socket"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "SEAM_SPLICE_1_FRONT"
+        ],
+        "color": "#68724d"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "splice_L",
+        "width": "splice_W",
+        "height": "splice_T",
+        "center": [
+          -106.6666667,
+          62,
+          "4+splice_T/2"
+        ],
+        "operation": "new",
+        "body_name": "SEAM_SPLICE_1_REAR",
+        "name": "SEAM_SPLICE_1_REAR_Blank"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          -118.6666667,
+          48,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_L_F_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          -118.6666667,
+          48,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_L_F_SquareNut"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          -121.8666667,
+          44.8,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_1_part"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_L_F_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          -118.6666667,
+          76,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_L_B_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          -118.6666667,
+          76,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_L_B_SquareNut"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          -121.8666667,
+          72.8,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_1_part"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_L_B_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          -94.6666667,
+          48,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_R_F_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          -94.6666667,
+          48,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_R_F_SquareNut"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          -97.8666667,
+          44.8,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_R_F_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          -94.6666667,
+          76,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_R_B_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          -94.6666667,
+          76,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_R_B_SquareNut"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          -97.8666667,
+          72.8,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_R_B_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_d",
+        "height": 3,
+        "base": [
+          -114.6666667,
+          62,
+          2
+        ],
+        "operation": "join",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_KeyL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_socket_d",
+        "height": 3.3,
+        "base": [
+          -114.6666667,
+          62,
+          1.7
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_1_part"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_KeyL_Socket"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_d",
+        "height": 3,
+        "base": [
+          -98.6666667,
+          62,
+          2
+        ],
+        "operation": "join",
+        "targets": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_KeyR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_socket_d",
+        "height": 3.3,
+        "base": [
+          -98.6666667,
+          62,
+          1.7
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_1_REAR_KeyR_Socket"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "SEAM_SPLICE_1_REAR"
+        ],
+        "color": "#68724d"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "splice_L",
+        "width": "splice_W",
+        "height": "splice_T",
+        "center": [
+          106.6666667,
+          -62,
+          "4+splice_T/2"
+        ],
+        "operation": "new",
+        "body_name": "SEAM_SPLICE_2_FRONT",
+        "name": "SEAM_SPLICE_2_FRONT_Blank"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          94.6666667,
+          -76,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_L_F_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          94.6666667,
+          -76,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_L_F_SquareNut"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": 6,
+        "base": [
+          94.6666667,
+          -76,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_L_F_FloorBolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          91.46666669999999,
+          -79.2,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_L_F_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          94.6666667,
+          -48,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_L_B_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          94.6666667,
+          -48,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_L_B_SquareNut"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": 6,
+        "base": [
+          94.6666667,
+          -48,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_L_B_FloorBolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          91.46666669999999,
+          -51.2,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_L_B_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          118.6666667,
+          -76,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_R_F_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          118.6666667,
+          -76,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_R_F_SquareNut"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": 6,
+        "base": [
+          118.6666667,
+          -76,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_3_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_R_F_FloorBolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          115.46666669999999,
+          -79.2,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_3_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_R_F_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          118.6666667,
+          -48,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_R_B_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          118.6666667,
+          -48,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_R_B_SquareNut"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": 6,
+        "base": [
+          118.6666667,
+          -48,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_3_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_R_B_FloorBolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          115.46666669999999,
+          -51.2,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_3_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_R_B_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_d",
+        "height": 3,
+        "base": [
+          98.6666667,
+          -62,
+          2
+        ],
+        "operation": "join",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_KeyL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_socket_d",
+        "height": 3.3,
+        "base": [
+          98.6666667,
+          -62,
+          1.7
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_KeyL_Socket"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_d",
+        "height": 3,
+        "base": [
+          114.6666667,
+          -62,
+          2
+        ],
+        "operation": "join",
+        "targets": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_KeyR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_socket_d",
+        "height": 3.3,
+        "base": [
+          114.6666667,
+          -62,
+          1.7
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_3_part"
+        ],
+        "name": "SEAM_SPLICE_2_FRONT_KeyR_Socket"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "SEAM_SPLICE_2_FRONT"
+        ],
+        "color": "#68724d"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "splice_L",
+        "width": "splice_W",
+        "height": "splice_T",
+        "center": [
+          106.6666667,
+          62,
+          "4+splice_T/2"
+        ],
+        "operation": "new",
+        "body_name": "SEAM_SPLICE_2_REAR",
+        "name": "SEAM_SPLICE_2_REAR_Blank"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          94.6666667,
+          48,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_L_F_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          94.6666667,
+          48,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_L_F_SquareNut"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          91.46666669999999,
+          44.8,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_L_F_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          94.6666667,
+          76,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_L_B_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          94.6666667,
+          76,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_L_B_SquareNut"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          91.46666669999999,
+          72.8,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_L_B_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          118.6666667,
+          48,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_R_F_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          118.6666667,
+          48,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_R_F_SquareNut"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          115.46666669999999,
+          44.8,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_3_part"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_R_F_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "m3_clear",
+        "height": "splice_T+2",
+        "base": [
+          118.6666667,
+          76,
+          3
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_R_B_Bolt"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "square_nut",
+        "width": "square_nut",
+        "height": "nut_depth+1",
+        "center": [
+          118.6666667,
+          76,
+          "4+splice_T-nut_depth/2+0.5"
+        ],
+        "operation": "cut",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_R_B_SquareNut"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 6.4,
+        "height": 3.2,
+        "corner": [
+          115.46666669999999,
+          72.8,
+          -1
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_3_part"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_R_B_BottomHeadRecess"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_d",
+        "height": 3,
+        "base": [
+          98.6666667,
+          62,
+          2
+        ],
+        "operation": "join",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_KeyL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_socket_d",
+        "height": 3.3,
+        "base": [
+          98.6666667,
+          62,
+          1.7
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_2_part"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_KeyL_Socket"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_d",
+        "height": 3,
+        "base": [
+          114.6666667,
+          62,
+          2
+        ],
+        "operation": "join",
+        "targets": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_KeyR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "key_socket_d",
+        "height": 3.3,
+        "base": [
+          114.6666667,
+          62,
+          1.7
+        ],
+        "operation": "cut",
+        "targets": [
+          "PILL_BASE_TRAY_3_part"
+        ],
+        "name": "SEAM_SPLICE_2_REAR_KeyR_Socket"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "SEAM_SPLICE_2_REAR"
+        ],
+        "color": "#68724d"
+      }
+    },
+    {
+      "command": "solid.move",
+      "params": {
+        "bodies": [
+          "POWER_RESERVED_ZONE_part",
+          "BATTERY_RESERVED_ZONE_part"
+        ],
+        "translate": [
+          0,
+          0,
+          6
+        ]
+      }
+    }
+  ]
+}

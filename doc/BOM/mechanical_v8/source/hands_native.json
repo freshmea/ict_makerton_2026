@@ -1,0 +1,3504 @@
+{
+  "commands": [
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__hand",
+        "expression": "-1",
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "favorite": true,
+        "unit": ""
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__qx",
+        "expression": "-220",
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__zc",
+        "expression": "315",
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__pcx",
+        "expression": "L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*81",
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__cap_d",
+        "expression": "90",
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__palm_l",
+        "expression": "80",
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__palm_h",
+        "expression": "42",
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__wall",
+        "expression": "3.2",
+        "comment": "Palm L_WRAP_HAND_FRONT__wall, mm. Allowed 3.0 to 3.6.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__bolt_d",
+        "expression": "3.4",
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; L_WRAP_HAND_FRONT__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__dowel_d",
+        "expression": "4.0",
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; L_WRAP_HAND_FRONT__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_FRONT__fit",
+        "expression": "0.4",
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "L_WRAP_HAND_FRONT__cap_d",
+        "height": "6",
+        "base": [
+          "L_WRAP_HAND_FRONT__qx",
+          "6",
+          "L_WRAP_HAND_FRONT__zc"
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "name": "L_WRAP_HAND_FRONT__DriveCap",
+        "body_name": "L_WRAP_HAND_FRONT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 22,
+        "width": 29,
+        "height": 20,
+        "center": [
+          "L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*52",
+          25.5,
+          "L_WRAP_HAND_FRONT__zc"
+        ],
+        "operation": "join",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__OuterBridge"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13",
+        "name": "L_WRAP_HAND_FRONT__PalmOuterProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -179.0,
+            -315
+          ],
+          "p1": [
+            -99.0,
+            -315
+          ],
+          "width": 42
+        },
+        "dimensions": {
+          "length": "L_WRAP_HAND_FRONT__palm_l",
+          "width": "L_WRAP_HAND_FRONT__palm_h"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((L_WRAP_HAND_FRONT__pcx)+((L_WRAP_HAND_FRONT__palm_l)-(L_WRAP_HAND_FRONT__palm_h))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__PalmOuterProfile",
+        "distance": "27",
+        "operation": "new",
+        "name": "L_WRAP_HAND_FRONT__PalmOuter",
+        "body_name": "L_WRAP_HAND_FRONT_Palm"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13+L_WRAP_HAND_FRONT__wall",
+        "name": "L_WRAP_HAND_FRONT__PalmCavityProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -175.8,
+            -315
+          ],
+          "p1": [
+            -102.2,
+            -315
+          ],
+          "width": 35.6
+        },
+        "dimensions": {
+          "length": "L_WRAP_HAND_FRONT__palm_l-2*L_WRAP_HAND_FRONT__wall",
+          "width": "L_WRAP_HAND_FRONT__palm_h-2*L_WRAP_HAND_FRONT__wall"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((L_WRAP_HAND_FRONT__pcx)+((L_WRAP_HAND_FRONT__palm_l-2*L_WRAP_HAND_FRONT__wall)-(L_WRAP_HAND_FRONT__palm_h-2*L_WRAP_HAND_FRONT__wall))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__PalmCavityProfile",
+        "distance": "28-L_WRAP_HAND_FRONT__wall",
+        "operation": "cut",
+        "name": "L_WRAP_HAND_FRONT__PalmCavity",
+        "targets": [
+          "L_WRAP_HAND_FRONT_Palm"
+        ]
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_WRAP_HAND_FRONT",
+        "tools": [
+          "L_WRAP_HAND_FRONT_Palm"
+        ],
+        "operation": "join"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13",
+        "name": "L_WRAP_HAND_FRONT__OuterFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -117.0,
+            -316
+          ],
+          "p1": [
+            -93.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((L_WRAP_HAND_FRONT__pcx-L_WRAP_HAND_FRONT__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__OuterFingerProfile",
+        "distance": "18",
+        "operation": "join",
+        "name": "L_WRAP_HAND_FRONT__OuterFinger",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ]
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "31",
+        "name": "L_WRAP_HAND_FRONT__CentreFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -117.0,
+            -316
+          ],
+          "p1": [
+            -93.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((L_WRAP_HAND_FRONT__pcx-L_WRAP_HAND_FRONT__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__CentreFingerProfile",
+        "distance": "9",
+        "operation": "join",
+        "name": "L_WRAP_HAND_FRONT__CentreFinger",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 26,
+        "height": 16,
+        "center": [
+          "L_WRAP_HAND_FRONT__pcx",
+          40,
+          295
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__DiffuserAperture"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 30,
+        "width": 3.7,
+        "height": 6.4,
+        "center": [
+          "L_WRAP_HAND_FRONT__qx",
+          11.15,
+          "L_WRAP_HAND_FRONT__zc"
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__HornPocketHorizontal"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.7,
+        "height": 30,
+        "center": [
+          "L_WRAP_HAND_FRONT__qx",
+          11.15,
+          "L_WRAP_HAND_FRONT__zc"
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__HornPocketVertical"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "5",
+        "name": "L_WRAP_HAND_FRONT__HornScrewAccessProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -220,
+            -315
+          ],
+          "radius": 2.65
+        },
+        "dimensions": {
+          "diameter": "5.3"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_FRONT__qx)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__HornScrewAccessProfile",
+        "distance": "9",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__HornScrewAccess"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "10",
+        "name": "L_WRAP_HAND_FRONT__BridgeBolt1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -170,
+            -310
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "L_WRAP_HAND_FRONT__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc-5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__BridgeBolt1Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__BridgeBolt1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "10",
+        "name": "L_WRAP_HAND_FRONT__BridgeBolt2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -170,
+            -320
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "L_WRAP_HAND_FRONT__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc+5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__BridgeBolt2Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__BridgeBolt2"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "36.8",
+        "name": "L_WRAP_HAND_FRONT__AlignmentSocket1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -160,
+            -311
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "L_WRAP_HAND_FRONT__dowel_d+L_WRAP_HAND_FRONT__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc-4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__AlignmentSocket1Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__AlignmentSocket1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "36.8",
+        "name": "L_WRAP_HAND_FRONT__AlignmentSocket2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -160,
+            -319
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "L_WRAP_HAND_FRONT__dowel_d+L_WRAP_HAND_FRONT__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_FRONT__qx-L_WRAP_HAND_FRONT__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_FRONT__zc+4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_FRONT__AlignmentSocket2Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_FRONT"
+        ],
+        "name": "L_WRAP_HAND_FRONT__AlignmentSocket2"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__hand",
+        "expression": "-1",
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "favorite": true,
+        "unit": ""
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__qx",
+        "expression": "-220",
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__zc",
+        "expression": "315",
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__pcx",
+        "expression": "L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*81",
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__cap_d",
+        "expression": "90",
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__palm_l",
+        "expression": "80",
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__palm_h",
+        "expression": "42",
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__wall",
+        "expression": "3.2",
+        "comment": "Palm L_WRAP_HAND_REAR__wall, mm. Allowed 3.0 to 3.6.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__bolt_d",
+        "expression": "3.4",
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; L_WRAP_HAND_REAR__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__dowel_d",
+        "expression": "4.0",
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; L_WRAP_HAND_REAR__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "L_WRAP_HAND_REAR__fit",
+        "expression": "0.4",
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "L_WRAP_HAND_REAR__cap_d",
+        "height": "6",
+        "base": [
+          "L_WRAP_HAND_REAR__qx",
+          "68",
+          "L_WRAP_HAND_REAR__zc"
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "name": "L_WRAP_HAND_REAR__BearingCap",
+        "body_name": "L_WRAP_HAND_REAR"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 22,
+        "width": 29,
+        "height": 20,
+        "center": [
+          "L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*52",
+          54.5,
+          "L_WRAP_HAND_REAR__zc"
+        ],
+        "operation": "join",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ],
+        "name": "L_WRAP_HAND_REAR__OuterBridge"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "40",
+        "name": "L_WRAP_HAND_REAR__PalmOuterProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -179.0,
+            -315
+          ],
+          "p1": [
+            -99.0,
+            -315
+          ],
+          "width": 42
+        },
+        "dimensions": {
+          "length": "L_WRAP_HAND_REAR__palm_l",
+          "width": "L_WRAP_HAND_REAR__palm_h"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((L_WRAP_HAND_REAR__pcx)+((L_WRAP_HAND_REAR__palm_l)-(L_WRAP_HAND_REAR__palm_h))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__PalmOuterProfile",
+        "distance": "27",
+        "operation": "new",
+        "name": "L_WRAP_HAND_REAR__PalmOuter",
+        "body_name": "L_WRAP_HAND_REAR_Palm"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "L_WRAP_HAND_REAR__PalmCavityProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -175.8,
+            -315
+          ],
+          "p1": [
+            -102.2,
+            -315
+          ],
+          "width": 35.6
+        },
+        "dimensions": {
+          "length": "L_WRAP_HAND_REAR__palm_l-2*L_WRAP_HAND_REAR__wall",
+          "width": "L_WRAP_HAND_REAR__palm_h-2*L_WRAP_HAND_REAR__wall"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((L_WRAP_HAND_REAR__pcx)+((L_WRAP_HAND_REAR__palm_l-2*L_WRAP_HAND_REAR__wall)-(L_WRAP_HAND_REAR__palm_h-2*L_WRAP_HAND_REAR__wall))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__PalmCavityProfile",
+        "distance": "28-L_WRAP_HAND_REAR__wall",
+        "operation": "cut",
+        "name": "L_WRAP_HAND_REAR__PalmCavity",
+        "targets": [
+          "L_WRAP_HAND_REAR_Palm"
+        ]
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_WRAP_HAND_REAR",
+        "tools": [
+          "L_WRAP_HAND_REAR_Palm"
+        ],
+        "operation": "join"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "49",
+        "name": "L_WRAP_HAND_REAR__OuterFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -117.0,
+            -316
+          ],
+          "p1": [
+            -93.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((L_WRAP_HAND_REAR__pcx-L_WRAP_HAND_REAR__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__OuterFingerProfile",
+        "distance": "18",
+        "operation": "join",
+        "name": "L_WRAP_HAND_REAR__OuterFinger",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ]
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "40",
+        "name": "L_WRAP_HAND_REAR__CentreFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -117.0,
+            -316
+          ],
+          "p1": [
+            -93.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((L_WRAP_HAND_REAR__pcx-L_WRAP_HAND_REAR__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__CentreFingerProfile",
+        "distance": "9",
+        "operation": "join",
+        "name": "L_WRAP_HAND_REAR__CentreFinger",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 26,
+        "height": 16,
+        "center": [
+          "L_WRAP_HAND_REAR__pcx",
+          40,
+          295
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ],
+        "name": "L_WRAP_HAND_REAR__DiffuserAperture"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "67",
+        "name": "L_WRAP_HAND_REAR__BearingBodySeatProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -220,
+            -315
+          ],
+          "radius": 8.15
+        },
+        "dimensions": {
+          "diameter": "16.3"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_REAR__qx)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__BearingBodySeatProfile",
+        "distance": "8",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ],
+        "name": "L_WRAP_HAND_REAR__BearingBodySeat"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "73",
+        "name": "L_WRAP_HAND_REAR__BearingFlangeSeatProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -220,
+            -315
+          ],
+          "radius": 9.1
+        },
+        "dimensions": {
+          "diameter": "18.2"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_REAR__qx)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__BearingFlangeSeatProfile",
+        "distance": "2",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ],
+        "name": "L_WRAP_HAND_REAR__BearingFlangeSeat"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "L_WRAP_HAND_REAR__BridgeBolt1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -170,
+            -310
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "L_WRAP_HAND_REAR__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc-5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__BridgeBolt1Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ],
+        "name": "L_WRAP_HAND_REAR__BridgeBolt1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "L_WRAP_HAND_REAR__BridgeBolt2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -170,
+            -320
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "L_WRAP_HAND_REAR__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc+5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__BridgeBolt2Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ],
+        "name": "L_WRAP_HAND_REAR__BridgeBolt2"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "L_WRAP_HAND_REAR__AlignmentSocket1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -160,
+            -311
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "L_WRAP_HAND_REAR__dowel_d+L_WRAP_HAND_REAR__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc-4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__AlignmentSocket1Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ],
+        "name": "L_WRAP_HAND_REAR__AlignmentSocket1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "L_WRAP_HAND_REAR__AlignmentSocket2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -160,
+            -319
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "L_WRAP_HAND_REAR__dowel_d+L_WRAP_HAND_REAR__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(L_WRAP_HAND_REAR__qx-L_WRAP_HAND_REAR__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "L_WRAP_HAND_REAR__zc+4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_WRAP_HAND_REAR__AlignmentSocket2Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "L_WRAP_HAND_REAR"
+        ],
+        "name": "L_WRAP_HAND_REAR__AlignmentSocket2"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__hand",
+        "expression": "1",
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "favorite": true,
+        "unit": ""
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__qx",
+        "expression": "220",
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__zc",
+        "expression": "315",
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__pcx",
+        "expression": "R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*81",
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__cap_d",
+        "expression": "90",
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__palm_l",
+        "expression": "80",
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__palm_h",
+        "expression": "42",
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__wall",
+        "expression": "3.2",
+        "comment": "Palm R_WRAP_HAND_FRONT__wall, mm. Allowed 3.0 to 3.6.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__bolt_d",
+        "expression": "3.4",
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; R_WRAP_HAND_FRONT__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__dowel_d",
+        "expression": "4.0",
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; R_WRAP_HAND_FRONT__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_FRONT__fit",
+        "expression": "0.4",
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "R_WRAP_HAND_FRONT__cap_d",
+        "height": "6",
+        "base": [
+          "R_WRAP_HAND_FRONT__qx",
+          "6",
+          "R_WRAP_HAND_FRONT__zc"
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "name": "R_WRAP_HAND_FRONT__DriveCap",
+        "body_name": "R_WRAP_HAND_FRONT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 22,
+        "width": 29,
+        "height": 20,
+        "center": [
+          "R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*52",
+          25.5,
+          "R_WRAP_HAND_FRONT__zc"
+        ],
+        "operation": "join",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__OuterBridge"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13",
+        "name": "R_WRAP_HAND_FRONT__PalmOuterProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            99.0,
+            -315
+          ],
+          "p1": [
+            179.0,
+            -315
+          ],
+          "width": 42
+        },
+        "dimensions": {
+          "length": "R_WRAP_HAND_FRONT__palm_l",
+          "width": "R_WRAP_HAND_FRONT__palm_h"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((R_WRAP_HAND_FRONT__pcx)+((R_WRAP_HAND_FRONT__palm_l)-(R_WRAP_HAND_FRONT__palm_h))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__PalmOuterProfile",
+        "distance": "27",
+        "operation": "new",
+        "name": "R_WRAP_HAND_FRONT__PalmOuter",
+        "body_name": "R_WRAP_HAND_FRONT_Palm"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13+R_WRAP_HAND_FRONT__wall",
+        "name": "R_WRAP_HAND_FRONT__PalmCavityProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            102.2,
+            -315
+          ],
+          "p1": [
+            175.8,
+            -315
+          ],
+          "width": 35.6
+        },
+        "dimensions": {
+          "length": "R_WRAP_HAND_FRONT__palm_l-2*R_WRAP_HAND_FRONT__wall",
+          "width": "R_WRAP_HAND_FRONT__palm_h-2*R_WRAP_HAND_FRONT__wall"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((R_WRAP_HAND_FRONT__pcx)+((R_WRAP_HAND_FRONT__palm_l-2*R_WRAP_HAND_FRONT__wall)-(R_WRAP_HAND_FRONT__palm_h-2*R_WRAP_HAND_FRONT__wall))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__PalmCavityProfile",
+        "distance": "28-R_WRAP_HAND_FRONT__wall",
+        "operation": "cut",
+        "name": "R_WRAP_HAND_FRONT__PalmCavity",
+        "targets": [
+          "R_WRAP_HAND_FRONT_Palm"
+        ]
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_WRAP_HAND_FRONT",
+        "tools": [
+          "R_WRAP_HAND_FRONT_Palm"
+        ],
+        "operation": "join"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13",
+        "name": "R_WRAP_HAND_FRONT__OuterFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            93.0,
+            -316
+          ],
+          "p1": [
+            117.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((R_WRAP_HAND_FRONT__pcx-R_WRAP_HAND_FRONT__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__OuterFingerProfile",
+        "distance": "18",
+        "operation": "join",
+        "name": "R_WRAP_HAND_FRONT__OuterFinger",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ]
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "31",
+        "name": "R_WRAP_HAND_FRONT__CentreFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            93.0,
+            -316
+          ],
+          "p1": [
+            117.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((R_WRAP_HAND_FRONT__pcx-R_WRAP_HAND_FRONT__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__CentreFingerProfile",
+        "distance": "9",
+        "operation": "join",
+        "name": "R_WRAP_HAND_FRONT__CentreFinger",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 26,
+        "height": 16,
+        "center": [
+          "R_WRAP_HAND_FRONT__pcx",
+          40,
+          295
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__DiffuserAperture"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 30,
+        "width": 3.7,
+        "height": 6.4,
+        "center": [
+          "R_WRAP_HAND_FRONT__qx",
+          11.15,
+          "R_WRAP_HAND_FRONT__zc"
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__HornPocketHorizontal"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.7,
+        "height": 30,
+        "center": [
+          "R_WRAP_HAND_FRONT__qx",
+          11.15,
+          "R_WRAP_HAND_FRONT__zc"
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__HornPocketVertical"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "5",
+        "name": "R_WRAP_HAND_FRONT__HornScrewAccessProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            220,
+            -315
+          ],
+          "radius": 2.65
+        },
+        "dimensions": {
+          "diameter": "5.3"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_FRONT__qx)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__HornScrewAccessProfile",
+        "distance": "9",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__HornScrewAccess"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "10",
+        "name": "R_WRAP_HAND_FRONT__BridgeBolt1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            170,
+            -310
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "R_WRAP_HAND_FRONT__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc-5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__BridgeBolt1Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__BridgeBolt1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "10",
+        "name": "R_WRAP_HAND_FRONT__BridgeBolt2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            170,
+            -320
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "R_WRAP_HAND_FRONT__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc+5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__BridgeBolt2Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__BridgeBolt2"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "36.8",
+        "name": "R_WRAP_HAND_FRONT__AlignmentSocket1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            160,
+            -311
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "R_WRAP_HAND_FRONT__dowel_d+R_WRAP_HAND_FRONT__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc-4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__AlignmentSocket1Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__AlignmentSocket1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "36.8",
+        "name": "R_WRAP_HAND_FRONT__AlignmentSocket2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            160,
+            -319
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "R_WRAP_HAND_FRONT__dowel_d+R_WRAP_HAND_FRONT__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_FRONT__qx-R_WRAP_HAND_FRONT__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_FRONT__zc+4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_FRONT__AlignmentSocket2Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_FRONT"
+        ],
+        "name": "R_WRAP_HAND_FRONT__AlignmentSocket2"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__hand",
+        "expression": "1",
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "favorite": true,
+        "unit": ""
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__qx",
+        "expression": "220",
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__zc",
+        "expression": "315",
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__pcx",
+        "expression": "R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*81",
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__cap_d",
+        "expression": "90",
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__palm_l",
+        "expression": "80",
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__palm_h",
+        "expression": "42",
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__wall",
+        "expression": "3.2",
+        "comment": "Palm R_WRAP_HAND_REAR__wall, mm. Allowed 3.0 to 3.6.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__bolt_d",
+        "expression": "3.4",
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; R_WRAP_HAND_REAR__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__dowel_d",
+        "expression": "4.0",
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; R_WRAP_HAND_REAR__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "R_WRAP_HAND_REAR__fit",
+        "expression": "0.4",
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "R_WRAP_HAND_REAR__cap_d",
+        "height": "6",
+        "base": [
+          "R_WRAP_HAND_REAR__qx",
+          "68",
+          "R_WRAP_HAND_REAR__zc"
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "name": "R_WRAP_HAND_REAR__BearingCap",
+        "body_name": "R_WRAP_HAND_REAR"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 22,
+        "width": 29,
+        "height": 20,
+        "center": [
+          "R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*52",
+          54.5,
+          "R_WRAP_HAND_REAR__zc"
+        ],
+        "operation": "join",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ],
+        "name": "R_WRAP_HAND_REAR__OuterBridge"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "40",
+        "name": "R_WRAP_HAND_REAR__PalmOuterProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            99.0,
+            -315
+          ],
+          "p1": [
+            179.0,
+            -315
+          ],
+          "width": 42
+        },
+        "dimensions": {
+          "length": "R_WRAP_HAND_REAR__palm_l",
+          "width": "R_WRAP_HAND_REAR__palm_h"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((R_WRAP_HAND_REAR__pcx)+((R_WRAP_HAND_REAR__palm_l)-(R_WRAP_HAND_REAR__palm_h))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__PalmOuterProfile",
+        "distance": "27",
+        "operation": "new",
+        "name": "R_WRAP_HAND_REAR__PalmOuter",
+        "body_name": "R_WRAP_HAND_REAR_Palm"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "R_WRAP_HAND_REAR__PalmCavityProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            102.2,
+            -315
+          ],
+          "p1": [
+            175.8,
+            -315
+          ],
+          "width": 35.6
+        },
+        "dimensions": {
+          "length": "R_WRAP_HAND_REAR__palm_l-2*R_WRAP_HAND_REAR__wall",
+          "width": "R_WRAP_HAND_REAR__palm_h-2*R_WRAP_HAND_REAR__wall"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((R_WRAP_HAND_REAR__pcx)+((R_WRAP_HAND_REAR__palm_l-2*R_WRAP_HAND_REAR__wall)-(R_WRAP_HAND_REAR__palm_h-2*R_WRAP_HAND_REAR__wall))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__PalmCavityProfile",
+        "distance": "28-R_WRAP_HAND_REAR__wall",
+        "operation": "cut",
+        "name": "R_WRAP_HAND_REAR__PalmCavity",
+        "targets": [
+          "R_WRAP_HAND_REAR_Palm"
+        ]
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_WRAP_HAND_REAR",
+        "tools": [
+          "R_WRAP_HAND_REAR_Palm"
+        ],
+        "operation": "join"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "49",
+        "name": "R_WRAP_HAND_REAR__OuterFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            93.0,
+            -316
+          ],
+          "p1": [
+            117.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((R_WRAP_HAND_REAR__pcx-R_WRAP_HAND_REAR__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__OuterFingerProfile",
+        "distance": "18",
+        "operation": "join",
+        "name": "R_WRAP_HAND_REAR__OuterFinger",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ]
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "40",
+        "name": "R_WRAP_HAND_REAR__CentreFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            93.0,
+            -316
+          ],
+          "p1": [
+            117.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((R_WRAP_HAND_REAR__pcx-R_WRAP_HAND_REAR__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__CentreFingerProfile",
+        "distance": "9",
+        "operation": "join",
+        "name": "R_WRAP_HAND_REAR__CentreFinger",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 26,
+        "height": 16,
+        "center": [
+          "R_WRAP_HAND_REAR__pcx",
+          40,
+          295
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ],
+        "name": "R_WRAP_HAND_REAR__DiffuserAperture"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "67",
+        "name": "R_WRAP_HAND_REAR__BearingBodySeatProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            220,
+            -315
+          ],
+          "radius": 8.15
+        },
+        "dimensions": {
+          "diameter": "16.3"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_REAR__qx)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__BearingBodySeatProfile",
+        "distance": "8",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ],
+        "name": "R_WRAP_HAND_REAR__BearingBodySeat"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "73",
+        "name": "R_WRAP_HAND_REAR__BearingFlangeSeatProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            220,
+            -315
+          ],
+          "radius": 9.1
+        },
+        "dimensions": {
+          "diameter": "18.2"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_REAR__qx)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__BearingFlangeSeatProfile",
+        "distance": "2",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ],
+        "name": "R_WRAP_HAND_REAR__BearingFlangeSeat"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "R_WRAP_HAND_REAR__BridgeBolt1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            170,
+            -310
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "R_WRAP_HAND_REAR__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc-5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__BridgeBolt1Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ],
+        "name": "R_WRAP_HAND_REAR__BridgeBolt1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "R_WRAP_HAND_REAR__BridgeBolt2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            170,
+            -320
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "R_WRAP_HAND_REAR__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc+5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__BridgeBolt2Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ],
+        "name": "R_WRAP_HAND_REAR__BridgeBolt2"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "R_WRAP_HAND_REAR__AlignmentSocket1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            160,
+            -311
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "R_WRAP_HAND_REAR__dowel_d+R_WRAP_HAND_REAR__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc-4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__AlignmentSocket1Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ],
+        "name": "R_WRAP_HAND_REAR__AlignmentSocket1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "R_WRAP_HAND_REAR__AlignmentSocket2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            160,
+            -319
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "R_WRAP_HAND_REAR__dowel_d+R_WRAP_HAND_REAR__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(R_WRAP_HAND_REAR__qx-R_WRAP_HAND_REAR__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "R_WRAP_HAND_REAR__zc+4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_WRAP_HAND_REAR__AlignmentSocket2Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "R_WRAP_HAND_REAR"
+        ],
+        "name": "R_WRAP_HAND_REAR__AlignmentSocket2"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    }
+  ]
+}

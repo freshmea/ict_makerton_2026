@@ -1,0 +1,93 @@
+{
+  "fixed": [
+    "BATTERY_RESERVED_ZONE_part",
+    "BA_R9_ENVELOPE_part",
+    "CAMERA_LENS_TRIAL_part",
+    "CAPSULE_VISOR_TRIAL_part",
+    "EYE_1_DISPLAY_ONLY_part",
+    "EYE_2_DISPLAY_ONLY_part",
+    "JETSON_RESERVED_ZONE_part",
+    "L_ROUND_YAW_COLLAR_TRIAL_part",
+    "L_TOUCH_0_part",
+    "L_TOUCH_1_part",
+    "L_TOUCH_2_part",
+    "L_YAW_SERVO_INSIDE_BASE_part",
+    "PEBBLE_HEAD_FRONT_TRIAL_part",
+    "PEBBLE_HEAD_REAR_TRIAL_part",
+    "PILL_BASE_LID_1_part",
+    "PILL_BASE_LID_2_part",
+    "PILL_BASE_LID_3_part",
+    "PILL_BASE_TRAY_1_part",
+    "PILL_BASE_TRAY_2_part",
+    "PILL_BASE_TRAY_3_part",
+    "POWER_RESERVED_ZONE_part",
+    "ROUNDED_PHONE_CRADLE_TRIAL_part",
+    "R_ROUND_YAW_COLLAR_TRIAL_part",
+    "R_TOUCH_0_part",
+    "R_TOUCH_1_part",
+    "R_TOUCH_2_part",
+    "R_YAW_SERVO_INSIDE_BASE_part",
+    "SEAM_SPLICE_1_FRONT",
+    "SEAM_SPLICE_1_REAR",
+    "SEAM_SPLICE_2_FRONT",
+    "SEAM_SPLICE_2_REAR"
+  ],
+  "L_yaw_carrier": [
+    "L_SHOULDER_YAW_TURRET",
+    "L_SHOULDER_SERVO_TRIAL",
+    "L_SHOULDER_FIXED_STUB_TRIAL"
+  ],
+  "R_yaw_carrier": [
+    "R_SHOULDER_YAW_TURRET",
+    "R_SHOULDER_SERVO_TRIAL",
+    "R_SHOULDER_FIXED_STUB_TRIAL"
+  ],
+  "L_arm": [
+    "L_CURVED_ARM_CORE_FRONT_part",
+    "L_CURVED_ARM_CORE_REAR_part",
+    "L_PITCH_SERVO_EMBEDDED_part",
+    "L_FIXED_SUPPORT_STUB_TRIAL_part",
+    "L_SHOULDER_SHAFT_TRIAL",
+    "L_SHOULDER_HORN_TRIAL",
+    "L_SHOULDER_BEARING_TRIAL",
+    "L_RGB_0",
+    "L_RGB_1",
+    "L_RGB_2",
+    "L_RGB_3",
+    "L_RGB_4",
+    "L_RGB_5"
+  ],
+  "R_arm": [
+    "R_CURVED_ARM_CORE_FRONT_part",
+    "R_CURVED_ARM_CORE_REAR_part",
+    "R_PITCH_SERVO_EMBEDDED_part",
+    "R_FIXED_SUPPORT_STUB_TRIAL_part",
+    "R_SHOULDER_SHAFT_TRIAL",
+    "R_SHOULDER_HORN_TRIAL",
+    "R_SHOULDER_BEARING_TRIAL",
+    "R_RGB_0",
+    "R_RGB_1",
+    "R_RGB_2",
+    "R_RGB_3",
+    "R_RGB_4",
+    "R_RGB_5"
+  ],
+  "L_hand": [
+    "L_WRAP_HAND_FRONT",
+    "L_WRAP_HAND_REAR",
+    "L_HAND_DOWEL_1",
+    "L_HAND_DOWEL_2",
+    "L_SHORT_SERVO_SHAFT_TRIAL_part",
+    "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+    "L_F625ZZ_BEARING_part"
+  ],
+  "R_hand": [
+    "R_WRAP_HAND_FRONT",
+    "R_WRAP_HAND_REAR",
+    "R_HAND_DOWEL_1",
+    "R_HAND_DOWEL_2",
+    "R_SHORT_SERVO_SHAFT_TRIAL_part",
+    "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+    "R_F625ZZ_BEARING_part"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "scope": "Selected pairs sampled in independently re-imported neutral STEP parts; shoulder axis local +Y; no combined yaw/wrist sweep",
+  "samples_deg": [
+    -10,
+    0,
+    10
+  ],
+  "pairs": [
+    {
+      "fixed": "L_SHOULDER_YAW_TURRET",
+      "moving": "L_CURVED_ARM_CORE_FRONT",
+      "shoulder_pitch_deg": -10,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "L_SHOULDER_YAW_TURRET",
+      "moving": "L_CURVED_ARM_CORE_FRONT",
+      "shoulder_pitch_deg": 0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "L_SHOULDER_YAW_TURRET",
+      "moving": "L_CURVED_ARM_CORE_FRONT",
+      "shoulder_pitch_deg": 10,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "L_SHOULDER_YAW_TURRET",
+      "moving": "L_CURVED_ARM_CORE_REAR",
+      "shoulder_pitch_deg": -10,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "L_SHOULDER_YAW_TURRET",
+      "moving": "L_CURVED_ARM_CORE_REAR",
+      "shoulder_pitch_deg": 0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "L_SHOULDER_YAW_TURRET",
+      "moving": "L_CURVED_ARM_CORE_REAR",
+      "shoulder_pitch_deg": 10,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "R_SHOULDER_YAW_TURRET",
+      "moving": "R_CURVED_ARM_CORE_FRONT",
+      "shoulder_pitch_deg": -10,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "R_SHOULDER_YAW_TURRET",
+      "moving": "R_CURVED_ARM_CORE_FRONT",
+      "shoulder_pitch_deg": 0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "R_SHOULDER_YAW_TURRET",
+      "moving": "R_CURVED_ARM_CORE_FRONT",
+      "shoulder_pitch_deg": 10,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "R_SHOULDER_YAW_TURRET",
+      "moving": "R_CURVED_ARM_CORE_REAR",
+      "shoulder_pitch_deg": -10,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "R_SHOULDER_YAW_TURRET",
+      "moving": "R_CURVED_ARM_CORE_REAR",
+      "shoulder_pitch_deg": 0,
+      "intersection_mm3": 0.0
+    },
+    {
+      "fixed": "R_SHOULDER_YAW_TURRET",
+      "moving": "R_CURVED_ARM_CORE_REAR",
+      "shoulder_pitch_deg": 10,
+      "intersection_mm3": 0.0
+    }
+  ],
+  "max_intersection_mm3": 0.0,
+  "all_sampled_pairs_clear": true,
+  "continuous_motion_or_full_assembly_verified": false,
+  "hardware_verified": false
+}

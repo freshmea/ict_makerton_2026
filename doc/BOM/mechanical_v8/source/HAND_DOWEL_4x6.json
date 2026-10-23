@@ -1,0 +1,44 @@
+{
+  "commands": [
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "hand_dowel_d",
+        "expression": "4 mm",
+        "comment": "Loose alignment dowel; print 4 copies or use purchased smooth dowels. Trial 3.8 to 4.2 mm.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "hand_dowel_l",
+        "expression": "6 mm",
+        "comment": "Nominal 6 mm pin in opposing 3.2 mm blind sockets; trial 5.8 to 6.2 mm.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "hand_dowel_d",
+        "height": "hand_dowel_l",
+        "base": [
+          0,
+          0,
+          0
+        ],
+        "axis": "Z",
+        "operation": "new",
+        "name": "HandDowel",
+        "body_name": "HAND_DOWEL_4x6"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    }
+  ]
+}

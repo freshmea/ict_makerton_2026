@@ -1,0 +1,2 @@
+STATUS protocol=servo-bench-v1 state=disarmed servo=0 angle=0 address=0x41 i2c=unchecked min_us=1000 max_us=2000 reason=boot_disarmed oe_high=1
+SCAN DONE count=0

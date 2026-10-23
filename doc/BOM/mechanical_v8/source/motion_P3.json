@@ -1,0 +1,515 @@
+{
+  "commands": [
+    {
+      "command": "component.unlock",
+      "params": {
+        "component": 1
+      }
+    },
+    {
+      "command": "component.create",
+      "params": {
+        "name": "P3_L_HAND",
+        "parent": "root",
+        "activate": false
+      }
+    },
+    {
+      "command": "component.move_bodies",
+      "params": {
+        "bodies": [
+          "L_WRAP_HAND_FRONT",
+          "L_WRAP_HAND_REAR",
+          "L_HAND_DOWEL_1",
+          "L_HAND_DOWEL_2"
+        ],
+        "component": "P3_L_HAND"
+      }
+    },
+    {
+      "command": "component.create",
+      "params": {
+        "name": "P3_R_HAND",
+        "parent": "root",
+        "activate": false
+      }
+    },
+    {
+      "command": "component.move_bodies",
+      "params": {
+        "bodies": [
+          "R_WRAP_HAND_FRONT",
+          "R_WRAP_HAND_REAR",
+          "R_HAND_DOWEL_1",
+          "R_HAND_DOWEL_2"
+        ],
+        "component": "P3_R_HAND"
+      }
+    },
+    {
+      "command": "occurrence.ground",
+      "params": {
+        "occurrence": 2,
+        "grounded": true
+      }
+    },
+    {
+      "command": "joint.rigid_group",
+      "params": {
+        "occurrences": [
+          2,
+          8,
+          12,
+          16,
+          20,
+          24,
+          28,
+          40,
+          44,
+          48,
+          52,
+          56,
+          60,
+          64,
+          68,
+          72,
+          76,
+          80,
+          84,
+          116,
+          120,
+          124,
+          128,
+          132,
+          164,
+          168,
+          172,
+          176
+        ]
+      }
+    },
+    {
+      "command": "joint.rigid_group",
+      "params": {
+        "occurrences": [
+          88,
+          92,
+          96,
+          112
+        ]
+      }
+    },
+    {
+      "command": "joint.rigid_group",
+      "params": {
+        "occurrences": [
+          "P3_L_HAND:1",
+          100,
+          104,
+          108
+        ]
+      }
+    },
+    {
+      "command": "joint.rigid_group",
+      "params": {
+        "occurrences": [
+          136,
+          140,
+          144,
+          160
+        ]
+      }
+    },
+    {
+      "command": "joint.rigid_group",
+      "params": {
+        "occurrences": [
+          "P3_R_HAND:1",
+          148,
+          152,
+          156
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "L_J1_YAW",
+        "type": "revolute",
+        "a": "P1_closed_base:1",
+        "b": "L_CURVED_ARM_CORE_FRONT_part:1",
+        "at": {
+          "occurrence": "P1_closed_base:1",
+          "point": [
+            -275,
+            40,
+            130
+          ],
+          "z": [
+            0,
+            0,
+            1
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "L_J2_PITCH",
+        "type": "revolute",
+        "a": "L_CURVED_ARM_CORE_FRONT_part:1",
+        "b": "P3_L_HAND:1",
+        "at": {
+          "occurrence": "L_CURVED_ARM_CORE_FRONT_part:1",
+          "point": [
+            -220,
+            40,
+            315
+          ],
+          "z": [
+            0,
+            1,
+            0
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "R_J1_YAW",
+        "type": "revolute",
+        "a": "P1_closed_base:1",
+        "b": "R_CURVED_ARM_CORE_FRONT_part:1",
+        "at": {
+          "occurrence": "P1_closed_base:1",
+          "point": [
+            275,
+            40,
+            130
+          ],
+          "z": [
+            0,
+            0,
+            1
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "joint.as_built",
+      "params": {
+        "name": "R_J2_PITCH",
+        "type": "revolute",
+        "a": "R_CURVED_ARM_CORE_FRONT_part:1",
+        "b": "P3_R_HAND:1",
+        "at": {
+          "occurrence": "R_CURVED_ARM_CORE_FRONT_part:1",
+          "point": [
+            220,
+            40,
+            315
+          ],
+          "z": [
+            0,
+            1,
+            0
+          ]
+        },
+        "limits": [
+          [
+            -15,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "P3_FOUR_JOINT_DEMO",
+        "steps": 80,
+        "keys": [
+          {
+            "joint": "L_J1_YAW",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                80,
+                0
+              ]
+            ]
+          },
+          {
+            "joint": "L_J2_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                20,
+                0
+              ],
+              [
+                25,
+                10
+              ],
+              [
+                30,
+                -10
+              ],
+              [
+                35,
+                0
+              ],
+              [
+                80,
+                0
+              ]
+            ]
+          },
+          {
+            "joint": "R_J1_YAW",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                40,
+                0
+              ],
+              [
+                45,
+                10
+              ],
+              [
+                50,
+                -10
+              ],
+              [
+                55,
+                0
+              ],
+              [
+                80,
+                0
+              ]
+            ]
+          },
+          {
+            "joint": "R_J2_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                60,
+                0
+              ],
+              [
+                65,
+                10
+              ],
+              [
+                70,
+                -10
+              ],
+              [
+                75,
+                0
+              ],
+              [
+                80,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "L_J1_YAW_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "L_J1_YAW",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "L_J2_PITCH_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "L_J2_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "R_J1_YAW_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "R_J1_YAW",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "motion.study",
+      "params": {
+        "name": "R_J2_PITCH_DEMO",
+        "steps": 20,
+        "keys": [
+          {
+            "joint": "R_J2_PITCH",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                5,
+                10
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": "document.metadata.set",
+      "params": {
+        "values": {
+          "project": "Fold Wing Buddy v8 P3 motion",
+          "revision": "P3",
+          "description": "Four grounded-chain revolute joints: left/right J1 yaw and J2 pitch. Neutral pose saved. +/-15 degree provisional CAD demonstration limits; no measured hardware limits or collision-safe range claim."
+        }
+      }
+    }
+  ]
+}

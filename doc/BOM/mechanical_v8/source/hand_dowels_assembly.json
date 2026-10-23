@@ -1,0 +1,68 @@
+{
+  "commands": [
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 4,
+        "height": 6,
+        "base": [
+          -160,
+          37,
+          311
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "name": "L_HAND_DOWEL_1",
+        "body_name": "L_HAND_DOWEL_1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 4,
+        "height": 6,
+        "base": [
+          -160,
+          37,
+          319
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "name": "L_HAND_DOWEL_2",
+        "body_name": "L_HAND_DOWEL_2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 4,
+        "height": 6,
+        "base": [
+          160,
+          37,
+          311
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "name": "R_HAND_DOWEL_1",
+        "body_name": "R_HAND_DOWEL_1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 4,
+        "height": 6,
+        "base": [
+          160,
+          37,
+          319
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "name": "R_HAND_DOWEL_2",
+        "body_name": "R_HAND_DOWEL_2"
+      }
+    }
+  ]
+}

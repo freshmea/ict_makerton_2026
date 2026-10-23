@@ -1,0 +1,3384 @@
+{
+  "completed": 233,
+  "ok": true,
+  "results": [
+    {
+      "changed_bodies": [],
+      "created_bodies": [],
+      "feature": 547,
+      "ms": 0.0726,
+      "name": "Remove2",
+      "removed_bodies": [
+        "L_PITCH_SERVO_EMBEDDED_part",
+        "L_SHORT_SERVO_SHAFT_TRIAL_part",
+        "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+        "L_F625ZZ_BEARING_part",
+        "L_FIXED_SUPPORT_STUB_TRIAL_part",
+        "L_WRAP_HAND_FRONT",
+        "L_WRAP_HAND_REAR",
+        "L_RGB_0",
+        "L_RGB_1",
+        "L_RGB_2",
+        "L_RGB_3",
+        "L_RGB_4",
+        "L_RGB_5"
+      ],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 548,
+      "ms": 325.091,
+      "name": "P5_L_RemoveYWrist_FRONT",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "feature": 549,
+      "ms": 1.3931,
+      "name": "L_RollCoreTemp_FRONT",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 550,
+      "ms": 26.613999999999997,
+      "name": "L_RollCoreTemp_FRONT_Cavity",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 551,
+      "ms": 1239.6777000000002,
+      "name": "L_RollCoreTemp_FRONT_ServoRail1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 552,
+      "ms": 39.711999999999996,
+      "name": "L_RollCoreTemp_FRONT_ServoBolt1_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 553,
+      "ms": 21.6711,
+      "name": "L_RollCoreTemp_FRONT_ServoBolt1_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 554,
+      "ms": 167.7594,
+      "name": "L_RollCoreTemp_FRONT_ServoRail2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 555,
+      "ms": 25.4443,
+      "name": "L_RollCoreTemp_FRONT_ServoBolt2_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 556,
+      "ms": 24.8152,
+      "name": "L_RollCoreTemp_FRONT_ServoBolt2_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 557,
+      "ms": 27.9115,
+      "name": "L_RollCoreTemp_FRONT_DriveOpening",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 558,
+      "ms": 28.1662,
+      "name": "L_RollCoreTemp_FRONT_StubOpening",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 559,
+      "ms": 22.2202,
+      "name": "L_RollCoreTemp_FRONT_ServiceSplit",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 560,
+      "ms": 165.07330000000002,
+      "name": "L_RollCoreTemp_FRONT_LinkAdapter",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 561,
+      "ms": 428.5286,
+      "name": "L_RollCoreTemp_FRONT_CaseBoss_-15_-26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 562,
+      "ms": 1224.7497,
+      "name": "L_RollCoreTemp_FRONT_CaseBolt_-15_-26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 563,
+      "ms": 1300.4573,
+      "name": "L_RollCoreTemp_FRONT_CaseBoss_-15_26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 564,
+      "ms": 1874.1672,
+      "name": "L_RollCoreTemp_FRONT_CaseBolt_-15_26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 565,
+      "ms": 2023.4936,
+      "name": "L_RollCoreTemp_FRONT_CaseBoss_15_-26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 566,
+      "ms": 2544.8279,
+      "name": "L_RollCoreTemp_FRONT_CaseBolt_15_-26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 567,
+      "ms": 2688.5508,
+      "name": "L_RollCoreTemp_FRONT_CaseBoss_15_26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 568,
+      "ms": 3307.0432,
+      "name": "L_RollCoreTemp_FRONT_CaseBolt_15_26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "created_bodies": [],
+      "feature": 569,
+      "ms": 3244.075,
+      "name": "Combine9",
+      "removed_bodies": [
+        "L_RollCoreTemp_FRONT"
+      ],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 570,
+      "ms": 448.5237,
+      "name": "P5_L_RemoveYWrist_REAR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "feature": 571,
+      "ms": 1.6708,
+      "name": "L_RollCoreTemp_REAR",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 572,
+      "ms": 26.279400000000003,
+      "name": "L_RollCoreTemp_REAR_Cavity",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 573,
+      "ms": 1223.2201,
+      "name": "L_RollCoreTemp_REAR_ServoRail1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 574,
+      "ms": 38.0939,
+      "name": "L_RollCoreTemp_REAR_ServoBolt1_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 575,
+      "ms": 20.014,
+      "name": "L_RollCoreTemp_REAR_ServoBolt1_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 576,
+      "ms": 161.1065,
+      "name": "L_RollCoreTemp_REAR_ServoRail2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 577,
+      "ms": 25.961499999999997,
+      "name": "L_RollCoreTemp_REAR_ServoBolt2_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 578,
+      "ms": 25.514599999999998,
+      "name": "L_RollCoreTemp_REAR_ServoBolt2_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 579,
+      "ms": 28.2804,
+      "name": "L_RollCoreTemp_REAR_DriveOpening",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 580,
+      "ms": 29.8672,
+      "name": "L_RollCoreTemp_REAR_StubOpening",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 581,
+      "ms": 22.267200000000003,
+      "name": "L_RollCoreTemp_REAR_ServiceSplit",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 582,
+      "ms": 165.4223,
+      "name": "L_RollCoreTemp_REAR_LinkAdapter",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 583,
+      "ms": 338.0413,
+      "name": "L_RollCoreTemp_REAR_CaseBoss_-15_-26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 584,
+      "ms": 1138.042,
+      "name": "L_RollCoreTemp_REAR_CaseBolt_-15_-26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 585,
+      "ms": 1290.2845,
+      "name": "L_RollCoreTemp_REAR_CaseBoss_-15_26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 586,
+      "ms": 1807.7484,
+      "name": "L_RollCoreTemp_REAR_CaseBolt_-15_26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 587,
+      "ms": 2031.1512,
+      "name": "L_RollCoreTemp_REAR_CaseBoss_15_-26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 588,
+      "ms": 2531.9700000000003,
+      "name": "L_RollCoreTemp_REAR_CaseBolt_15_-26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 589,
+      "ms": 2582.9832,
+      "name": "L_RollCoreTemp_REAR_CaseBoss_15_26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 590,
+      "ms": 3230.8513,
+      "name": "L_RollCoreTemp_REAR_CaseBolt_15_26",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "created_bodies": [],
+      "feature": 591,
+      "ms": 3097.5355000000004,
+      "name": "Combine10",
+      "removed_bodies": [
+        "L_RollCoreTemp_REAR"
+      ],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_P5_WRIST_SERVO_CASE"
+      ],
+      "feature": 592,
+      "ms": 0.5670000000000001,
+      "name": "L_P5_WRIST_SERVO_CASE",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_P5_WRIST_FIXED_STUB"
+      ],
+      "feature": 593,
+      "ms": 1.1088,
+      "name": "L_P5_WRIST_FIXED_STUB",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_P5_WRIST_FIXED_STUB"
+      ],
+      "created_bodies": [],
+      "feature": 594,
+      "ms": 71.96329999999999,
+      "name": "L_P5_WRIST_FIXED_STUB_Shoulder",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "display_value": -1.0,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__hand",
+      "unit": "",
+      "value": -1.0
+    },
+    {
+      "display_value": -220.0,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__qx",
+      "unit": "mm",
+      "value": -220.0
+    },
+    {
+      "display_value": 315.0,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__zc",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "display_value": -139.0,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__pcx",
+      "unit": "mm",
+      "value": -139.0
+    },
+    {
+      "display_value": 90.0,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__cap_d",
+      "unit": "mm",
+      "value": 90.0
+    },
+    {
+      "display_value": 80.0,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__palm_l",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "display_value": 42.0,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__palm_h",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "display_value": 3.2,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__wall",
+      "unit": "mm",
+      "value": 3.2
+    },
+    {
+      "display_value": 3.4,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__bolt_d",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "display_value": 4.0,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__dowel_d",
+      "unit": "mm",
+      "value": 4.0
+    },
+    {
+      "display_value": 0.4,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__fit",
+      "unit": "mm",
+      "value": 0.4
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "feature": 595,
+      "ms": 0.6604,
+      "name": "L_ROLL_YOKE_PALM_FRONT_Neck",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__PalmOuterProfile",
+      "projected": null,
+      "sketch": 596
+    },
+    {
+      "created": {
+        "constraints": [
+          "k1",
+          "k2",
+          "k3",
+          "k4",
+          "k5"
+        ],
+        "curves": [
+          "l1",
+          "a1",
+          "l2",
+          "a2"
+        ],
+        "dimensions": [
+          "k6",
+          "k7"
+        ],
+        "points": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "a1.center",
+          "a2.center"
+        ]
+      },
+      "dimensions": {
+        "length": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k6"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_YOKE_PALM_FRONT__palm_l",
+          "measured": 80.0,
+          "param": "d801",
+          "sketch": {
+            "dof": 4,
+            "solved": true
+          },
+          "type": "LinearDimension",
+          "unit": "mm"
+        },
+        "width": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k7"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_YOKE_PALM_FRONT__palm_h",
+          "measured": 42.0,
+          "param": "d802",
+          "sketch": {
+            "dof": 3,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 5,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k8"
+        ],
+        "points": []
+      },
+      "expression": "abs((P5_L_ROLL_YOKE_PALM_FRONT__pcx)+((P5_L_ROLL_YOKE_PALM_FRONT__palm_l)-(P5_L_ROLL_YOKE_PALM_FRONT__palm_h))/2)",
+      "measured": 120.0,
+      "param": "d803",
+      "sketch": {
+        "dof": 2,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k9"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_YOKE_PALM_FRONT__zc",
+      "measured": 315.0,
+      "param": "d804",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k10"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_YOKE_PALM_FRONT__zc",
+      "measured": 315.0,
+      "param": "d805",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 596
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT_Palm"
+      ],
+      "feature": 597,
+      "ms": 1.6149,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__PalmOuter",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__PalmCavityProfile",
+      "projected": null,
+      "sketch": 598
+    },
+    {
+      "created": {
+        "constraints": [
+          "k1",
+          "k2",
+          "k3",
+          "k4",
+          "k5"
+        ],
+        "curves": [
+          "l1",
+          "a1",
+          "l2",
+          "a2"
+        ],
+        "dimensions": [
+          "k6",
+          "k7"
+        ],
+        "points": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "a1.center",
+          "a2.center"
+        ]
+      },
+      "dimensions": {
+        "length": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k6"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_YOKE_PALM_FRONT__palm_l-2*P5_L_ROLL_YOKE_PALM_FRONT__wall",
+          "measured": 73.6,
+          "param": "d808",
+          "sketch": {
+            "dof": 4,
+            "solved": true
+          },
+          "type": "LinearDimension",
+          "unit": "mm"
+        },
+        "width": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k7"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_YOKE_PALM_FRONT__palm_h-2*P5_L_ROLL_YOKE_PALM_FRONT__wall",
+          "measured": 35.6,
+          "param": "d809",
+          "sketch": {
+            "dof": 3,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 5,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k8"
+        ],
+        "points": []
+      },
+      "expression": "abs((P5_L_ROLL_YOKE_PALM_FRONT__pcx)+((P5_L_ROLL_YOKE_PALM_FRONT__palm_l-2*P5_L_ROLL_YOKE_PALM_FRONT__wall)-(P5_L_ROLL_YOKE_PALM_FRONT__palm_h-2*P5_L_ROLL_YOKE_PALM_FRONT__wall))/2)",
+      "measured": 120.0,
+      "param": "d810",
+      "sketch": {
+        "dof": 2,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k9"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_YOKE_PALM_FRONT__zc",
+      "measured": 315.0,
+      "param": "d811",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k10"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_YOKE_PALM_FRONT__zc",
+      "measured": 315.0,
+      "param": "d812",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 598
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT_Palm"
+      ],
+      "created_bodies": [],
+      "feature": 599,
+      "ms": 17.6173,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__PalmCavity",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 600,
+      "ms": 48.9786,
+      "name": "Combine11",
+      "removed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT_Palm"
+      ],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__OuterFingerProfile",
+      "projected": null,
+      "sketch": 601
+    },
+    {
+      "created": {
+        "constraints": [
+          "k1",
+          "k2",
+          "k3",
+          "k4",
+          "k5"
+        ],
+        "curves": [
+          "l1",
+          "a1",
+          "l2",
+          "a2"
+        ],
+        "dimensions": [
+          "k6",
+          "k7"
+        ],
+        "points": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "a1.center",
+          "a2.center"
+        ]
+      },
+      "dimensions": {
+        "length": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k6"
+            ],
+            "points": []
+          },
+          "expression": "24",
+          "measured": 24.0,
+          "param": "d815",
+          "sketch": {
+            "dof": 4,
+            "solved": true
+          },
+          "type": "LinearDimension",
+          "unit": "mm"
+        },
+        "width": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k7"
+            ],
+            "points": []
+          },
+          "expression": "18",
+          "measured": 18.0,
+          "param": "d816",
+          "sketch": {
+            "dof": 3,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 5,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k8"
+        ],
+        "points": []
+      },
+      "expression": "abs((P5_L_ROLL_YOKE_PALM_FRONT__pcx-P5_L_ROLL_YOKE_PALM_FRONT__hand*34)+((24)-(18))/2)",
+      "measured": 102.0,
+      "param": "d817",
+      "sketch": {
+        "dof": 2,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k9"
+        ],
+        "points": []
+      },
+      "expression": "316",
+      "measured": 316.0,
+      "param": "d818",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k10"
+        ],
+        "points": []
+      },
+      "expression": "316",
+      "measured": 316.0,
+      "param": "d819",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 601
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 602,
+      "ms": 526.1552,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__OuterFinger",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__CentreFingerProfile",
+      "projected": null,
+      "sketch": 603
+    },
+    {
+      "created": {
+        "constraints": [
+          "k1",
+          "k2",
+          "k3",
+          "k4",
+          "k5"
+        ],
+        "curves": [
+          "l1",
+          "a1",
+          "l2",
+          "a2"
+        ],
+        "dimensions": [
+          "k6",
+          "k7"
+        ],
+        "points": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "a1.center",
+          "a2.center"
+        ]
+      },
+      "dimensions": {
+        "length": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k6"
+            ],
+            "points": []
+          },
+          "expression": "24",
+          "measured": 24.0,
+          "param": "d822",
+          "sketch": {
+            "dof": 4,
+            "solved": true
+          },
+          "type": "LinearDimension",
+          "unit": "mm"
+        },
+        "width": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k7"
+            ],
+            "points": []
+          },
+          "expression": "18",
+          "measured": 18.0,
+          "param": "d823",
+          "sketch": {
+            "dof": 3,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 5,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k8"
+        ],
+        "points": []
+      },
+      "expression": "abs((P5_L_ROLL_YOKE_PALM_FRONT__pcx-P5_L_ROLL_YOKE_PALM_FRONT__hand*34)+((24)-(18))/2)",
+      "measured": 102.0,
+      "param": "d824",
+      "sketch": {
+        "dof": 2,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k9"
+        ],
+        "points": []
+      },
+      "expression": "316",
+      "measured": 316.0,
+      "param": "d825",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k10"
+        ],
+        "points": []
+      },
+      "expression": "316",
+      "measured": 316.0,
+      "param": "d826",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 603
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 604,
+      "ms": 96.9488,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__CentreFinger",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 605,
+      "ms": 18.5073,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__DiffuserAperture",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt1Profile",
+      "projected": null,
+      "sketch": 606
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "c1"
+        ],
+        "dimensions": [
+          "k1"
+        ],
+        "points": [
+          "c1.center"
+        ]
+      },
+      "dimensions": {
+        "diameter": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k1"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_YOKE_PALM_FRONT__bolt_d",
+          "measured": 3.4,
+          "param": "d832",
+          "sketch": {
+            "dof": 2,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 3,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k2"
+        ],
+        "points": []
+      },
+      "expression": "abs(P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*50)",
+      "measured": 170.0,
+      "param": "d833",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k3"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_YOKE_PALM_FRONT__zc-5",
+      "measured": 310.0,
+      "param": "d834",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 606
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 607,
+      "ms": 32.945,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt2Profile",
+      "projected": null,
+      "sketch": 608
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "c1"
+        ],
+        "dimensions": [
+          "k1"
+        ],
+        "points": [
+          "c1.center"
+        ]
+      },
+      "dimensions": {
+        "diameter": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k1"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_YOKE_PALM_FRONT__bolt_d",
+          "measured": 3.4,
+          "param": "d837",
+          "sketch": {
+            "dof": 2,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 3,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k2"
+        ],
+        "points": []
+      },
+      "expression": "abs(P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*50)",
+      "measured": 170.0,
+      "param": "d838",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k3"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_YOKE_PALM_FRONT__zc+5",
+      "measured": 320.0,
+      "param": "d839",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 608
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 609,
+      "ms": 38.6727,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket1Profile",
+      "projected": null,
+      "sketch": 610
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "c1"
+        ],
+        "dimensions": [
+          "k1"
+        ],
+        "points": [
+          "c1.center"
+        ]
+      },
+      "dimensions": {
+        "diameter": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k1"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_YOKE_PALM_FRONT__dowel_d+P5_L_ROLL_YOKE_PALM_FRONT__fit",
+          "measured": 4.4,
+          "param": "d842",
+          "sketch": {
+            "dof": 2,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 3,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k2"
+        ],
+        "points": []
+      },
+      "expression": "abs(P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*60)",
+      "measured": 160.0,
+      "param": "d843",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k3"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_YOKE_PALM_FRONT__zc-4",
+      "measured": 311.0,
+      "param": "d844",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 610
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 611,
+      "ms": 47.2614,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket2Profile",
+      "projected": null,
+      "sketch": 612
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "c1"
+        ],
+        "dimensions": [
+          "k1"
+        ],
+        "points": [
+          "c1.center"
+        ]
+      },
+      "dimensions": {
+        "diameter": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k1"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_YOKE_PALM_FRONT__dowel_d+P5_L_ROLL_YOKE_PALM_FRONT__fit",
+          "measured": 4.4,
+          "param": "d847",
+          "sketch": {
+            "dof": 2,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 3,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k2"
+        ],
+        "points": []
+      },
+      "expression": "abs(P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*60)",
+      "measured": 160.0,
+      "param": "d848",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k3"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_YOKE_PALM_FRONT__zc+4",
+      "measured": 319.0,
+      "param": "d849",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 612
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 613,
+      "ms": 43.8533,
+      "name": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "display_value": -1.0,
+      "name": "P5_L_ROLL_PALM_REAR__hand",
+      "unit": "",
+      "value": -1.0
+    },
+    {
+      "display_value": -220.0,
+      "name": "P5_L_ROLL_PALM_REAR__qx",
+      "unit": "mm",
+      "value": -220.0
+    },
+    {
+      "display_value": 315.0,
+      "name": "P5_L_ROLL_PALM_REAR__zc",
+      "unit": "mm",
+      "value": 315.0
+    },
+    {
+      "display_value": -139.0,
+      "name": "P5_L_ROLL_PALM_REAR__pcx",
+      "unit": "mm",
+      "value": -139.0
+    },
+    {
+      "display_value": 90.0,
+      "name": "P5_L_ROLL_PALM_REAR__cap_d",
+      "unit": "mm",
+      "value": 90.0
+    },
+    {
+      "display_value": 80.0,
+      "name": "P5_L_ROLL_PALM_REAR__palm_l",
+      "unit": "mm",
+      "value": 80.0
+    },
+    {
+      "display_value": 42.0,
+      "name": "P5_L_ROLL_PALM_REAR__palm_h",
+      "unit": "mm",
+      "value": 42.0
+    },
+    {
+      "display_value": 3.2,
+      "name": "P5_L_ROLL_PALM_REAR__wall",
+      "unit": "mm",
+      "value": 3.2
+    },
+    {
+      "display_value": 3.4,
+      "name": "P5_L_ROLL_PALM_REAR__bolt_d",
+      "unit": "mm",
+      "value": 3.4
+    },
+    {
+      "display_value": 4.0,
+      "name": "P5_L_ROLL_PALM_REAR__dowel_d",
+      "unit": "mm",
+      "value": 4.0
+    },
+    {
+      "display_value": 0.4,
+      "name": "P5_L_ROLL_PALM_REAR__fit",
+      "unit": "mm",
+      "value": 0.4
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "feature": 614,
+      "ms": 0.4453,
+      "name": "L_ROLL_PALM_REAR_Neck",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_PALM_REAR__PalmOuterProfile",
+      "projected": null,
+      "sketch": 615
+    },
+    {
+      "created": {
+        "constraints": [
+          "k1",
+          "k2",
+          "k3",
+          "k4",
+          "k5"
+        ],
+        "curves": [
+          "l1",
+          "a1",
+          "l2",
+          "a2"
+        ],
+        "dimensions": [
+          "k6",
+          "k7"
+        ],
+        "points": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "a1.center",
+          "a2.center"
+        ]
+      },
+      "dimensions": {
+        "length": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k6"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_PALM_REAR__palm_l",
+          "measured": 80.0,
+          "param": "d855",
+          "sketch": {
+            "dof": 4,
+            "solved": true
+          },
+          "type": "LinearDimension",
+          "unit": "mm"
+        },
+        "width": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k7"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_PALM_REAR__palm_h",
+          "measured": 42.0,
+          "param": "d856",
+          "sketch": {
+            "dof": 3,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 5,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k8"
+        ],
+        "points": []
+      },
+      "expression": "abs((P5_L_ROLL_PALM_REAR__pcx)+((P5_L_ROLL_PALM_REAR__palm_l)-(P5_L_ROLL_PALM_REAR__palm_h))/2)",
+      "measured": 120.0,
+      "param": "d857",
+      "sketch": {
+        "dof": 2,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k9"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_PALM_REAR__zc",
+      "measured": 315.0,
+      "param": "d858",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k10"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_PALM_REAR__zc",
+      "measured": 315.0,
+      "param": "d859",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 615
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_ROLL_PALM_REAR_Palm"
+      ],
+      "feature": 616,
+      "ms": 1.8745,
+      "name": "P5_L_ROLL_PALM_REAR__PalmOuter",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_PALM_REAR__PalmCavityProfile",
+      "projected": null,
+      "sketch": 617
+    },
+    {
+      "created": {
+        "constraints": [
+          "k1",
+          "k2",
+          "k3",
+          "k4",
+          "k5"
+        ],
+        "curves": [
+          "l1",
+          "a1",
+          "l2",
+          "a2"
+        ],
+        "dimensions": [
+          "k6",
+          "k7"
+        ],
+        "points": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "a1.center",
+          "a2.center"
+        ]
+      },
+      "dimensions": {
+        "length": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k6"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_PALM_REAR__palm_l-2*P5_L_ROLL_PALM_REAR__wall",
+          "measured": 73.6,
+          "param": "d862",
+          "sketch": {
+            "dof": 4,
+            "solved": true
+          },
+          "type": "LinearDimension",
+          "unit": "mm"
+        },
+        "width": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k7"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_PALM_REAR__palm_h-2*P5_L_ROLL_PALM_REAR__wall",
+          "measured": 35.6,
+          "param": "d863",
+          "sketch": {
+            "dof": 3,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 5,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k8"
+        ],
+        "points": []
+      },
+      "expression": "abs((P5_L_ROLL_PALM_REAR__pcx)+((P5_L_ROLL_PALM_REAR__palm_l-2*P5_L_ROLL_PALM_REAR__wall)-(P5_L_ROLL_PALM_REAR__palm_h-2*P5_L_ROLL_PALM_REAR__wall))/2)",
+      "measured": 120.0,
+      "param": "d864",
+      "sketch": {
+        "dof": 2,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k9"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_PALM_REAR__zc",
+      "measured": 315.0,
+      "param": "d865",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k10"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_PALM_REAR__zc",
+      "measured": 315.0,
+      "param": "d866",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 617
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR_Palm"
+      ],
+      "created_bodies": [],
+      "feature": 618,
+      "ms": 18.642599999999998,
+      "name": "P5_L_ROLL_PALM_REAR__PalmCavity",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 619,
+      "ms": 51.044,
+      "name": "Combine12",
+      "removed_bodies": [
+        "L_ROLL_PALM_REAR_Palm"
+      ],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_PALM_REAR__OuterFingerProfile",
+      "projected": null,
+      "sketch": 620
+    },
+    {
+      "created": {
+        "constraints": [
+          "k1",
+          "k2",
+          "k3",
+          "k4",
+          "k5"
+        ],
+        "curves": [
+          "l1",
+          "a1",
+          "l2",
+          "a2"
+        ],
+        "dimensions": [
+          "k6",
+          "k7"
+        ],
+        "points": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "a1.center",
+          "a2.center"
+        ]
+      },
+      "dimensions": {
+        "length": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k6"
+            ],
+            "points": []
+          },
+          "expression": "24",
+          "measured": 24.0,
+          "param": "d869",
+          "sketch": {
+            "dof": 4,
+            "solved": true
+          },
+          "type": "LinearDimension",
+          "unit": "mm"
+        },
+        "width": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k7"
+            ],
+            "points": []
+          },
+          "expression": "18",
+          "measured": 18.0,
+          "param": "d870",
+          "sketch": {
+            "dof": 3,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 5,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k8"
+        ],
+        "points": []
+      },
+      "expression": "abs((P5_L_ROLL_PALM_REAR__pcx-P5_L_ROLL_PALM_REAR__hand*34)+((24)-(18))/2)",
+      "measured": 102.0,
+      "param": "d871",
+      "sketch": {
+        "dof": 2,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k9"
+        ],
+        "points": []
+      },
+      "expression": "316",
+      "measured": 316.0,
+      "param": "d872",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k10"
+        ],
+        "points": []
+      },
+      "expression": "316",
+      "measured": 316.0,
+      "param": "d873",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 620
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 621,
+      "ms": 506.43800000000005,
+      "name": "P5_L_ROLL_PALM_REAR__OuterFinger",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_PALM_REAR__CentreFingerProfile",
+      "projected": null,
+      "sketch": 622
+    },
+    {
+      "created": {
+        "constraints": [
+          "k1",
+          "k2",
+          "k3",
+          "k4",
+          "k5"
+        ],
+        "curves": [
+          "l1",
+          "a1",
+          "l2",
+          "a2"
+        ],
+        "dimensions": [
+          "k6",
+          "k7"
+        ],
+        "points": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "a1.center",
+          "a2.center"
+        ]
+      },
+      "dimensions": {
+        "length": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k6"
+            ],
+            "points": []
+          },
+          "expression": "24",
+          "measured": 24.0,
+          "param": "d876",
+          "sketch": {
+            "dof": 4,
+            "solved": true
+          },
+          "type": "LinearDimension",
+          "unit": "mm"
+        },
+        "width": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k7"
+            ],
+            "points": []
+          },
+          "expression": "18",
+          "measured": 18.0,
+          "param": "d877",
+          "sketch": {
+            "dof": 3,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 5,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k8"
+        ],
+        "points": []
+      },
+      "expression": "abs((P5_L_ROLL_PALM_REAR__pcx-P5_L_ROLL_PALM_REAR__hand*34)+((24)-(18))/2)",
+      "measured": 102.0,
+      "param": "d878",
+      "sketch": {
+        "dof": 2,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k9"
+        ],
+        "points": []
+      },
+      "expression": "316",
+      "measured": 316.0,
+      "param": "d879",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k10"
+        ],
+        "points": []
+      },
+      "expression": "316",
+      "measured": 316.0,
+      "param": "d880",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 622
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 623,
+      "ms": 98.912,
+      "name": "P5_L_ROLL_PALM_REAR__CentreFinger",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 624,
+      "ms": 16.8107,
+      "name": "P5_L_ROLL_PALM_REAR__DiffuserAperture",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_PALM_REAR__BridgeBolt1Profile",
+      "projected": null,
+      "sketch": 625
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "c1"
+        ],
+        "dimensions": [
+          "k1"
+        ],
+        "points": [
+          "c1.center"
+        ]
+      },
+      "dimensions": {
+        "diameter": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k1"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_PALM_REAR__bolt_d",
+          "measured": 3.4,
+          "param": "d886",
+          "sketch": {
+            "dof": 2,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 3,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k2"
+        ],
+        "points": []
+      },
+      "expression": "abs(P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*50)",
+      "measured": 170.0,
+      "param": "d887",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k3"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_PALM_REAR__zc-5",
+      "measured": 310.0,
+      "param": "d888",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 625
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 626,
+      "ms": 31.5572,
+      "name": "P5_L_ROLL_PALM_REAR__BridgeBolt1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_PALM_REAR__BridgeBolt2Profile",
+      "projected": null,
+      "sketch": 627
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "c1"
+        ],
+        "dimensions": [
+          "k1"
+        ],
+        "points": [
+          "c1.center"
+        ]
+      },
+      "dimensions": {
+        "diameter": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k1"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_PALM_REAR__bolt_d",
+          "measured": 3.4,
+          "param": "d891",
+          "sketch": {
+            "dof": 2,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 3,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k2"
+        ],
+        "points": []
+      },
+      "expression": "abs(P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*50)",
+      "measured": 170.0,
+      "param": "d892",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k3"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_PALM_REAR__zc+5",
+      "measured": 320.0,
+      "param": "d893",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 627
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 628,
+      "ms": 37.3903,
+      "name": "P5_L_ROLL_PALM_REAR__BridgeBolt2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_PALM_REAR__AlignmentSocket1Profile",
+      "projected": null,
+      "sketch": 629
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "c1"
+        ],
+        "dimensions": [
+          "k1"
+        ],
+        "points": [
+          "c1.center"
+        ]
+      },
+      "dimensions": {
+        "diameter": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k1"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_PALM_REAR__dowel_d+P5_L_ROLL_PALM_REAR__fit",
+          "measured": 4.4,
+          "param": "d896",
+          "sketch": {
+            "dof": 2,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 3,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k2"
+        ],
+        "points": []
+      },
+      "expression": "abs(P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*60)",
+      "measured": 160.0,
+      "param": "d897",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k3"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_PALM_REAR__zc-4",
+      "measured": 311.0,
+      "param": "d898",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 629
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 630,
+      "ms": 40.9334,
+      "name": "P5_L_ROLL_PALM_REAR__AlignmentSocket1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "P5_L_ROLL_PALM_REAR__AlignmentSocket2Profile",
+      "projected": null,
+      "sketch": 631
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "c1"
+        ],
+        "dimensions": [
+          "k1"
+        ],
+        "points": [
+          "c1.center"
+        ]
+      },
+      "dimensions": {
+        "diameter": {
+          "created": {
+            "constraints": [],
+            "curves": [],
+            "dimensions": [
+              "k1"
+            ],
+            "points": []
+          },
+          "expression": "P5_L_ROLL_PALM_REAR__dowel_d+P5_L_ROLL_PALM_REAR__fit",
+          "measured": 4.4,
+          "param": "d901",
+          "sketch": {
+            "dof": 2,
+            "solved": true
+          },
+          "type": "DiameterDimension",
+          "unit": "mm"
+        }
+      },
+      "sketch": {
+        "dof": 3,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k2"
+        ],
+        "points": []
+      },
+      "expression": "abs(P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*60)",
+      "measured": 160.0,
+      "param": "d902",
+      "sketch": {
+        "dof": 1,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [
+          "k3"
+        ],
+        "points": []
+      },
+      "expression": "P5_L_ROLL_PALM_REAR__zc+4",
+      "measured": 319.0,
+      "param": "d903",
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      },
+      "type": "LinearDimension",
+      "unit": "mm"
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 631
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_PALM_REAR"
+      ],
+      "created_bodies": [],
+      "feature": 632,
+      "ms": 46.1872,
+      "name": "P5_L_ROLL_PALM_REAR__AlignmentSocket2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_P5_YokeTemp"
+      ],
+      "feature": 633,
+      "ms": 1.2394,
+      "name": "L_P5_YokeTemp",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_P5_YokeTemp"
+      ],
+      "created_bodies": [],
+      "feature": 634,
+      "ms": 58.5836,
+      "name": "L_P5_YokeTemp_RadialBridge",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 635,
+      "ms": 158.4141,
+      "name": "Combine13",
+      "removed_bodies": [
+        "L_P5_YokeTemp"
+      ],
+      "warning": null
+    },
+    {
+      "attachment": "fixed",
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "name": "L_P5_RollHornProfile",
+      "projected": null,
+      "sketch": 636
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [
+          "l1",
+          "l2",
+          "l3",
+          "l4",
+          "l5",
+          "l6",
+          "l7",
+          "l8",
+          "l9",
+          "l10",
+          "l11",
+          "l12"
+        ],
+        "dimensions": [],
+        "points": [
+          "l1.start",
+          "l1.end",
+          "l2.end",
+          "l3.end",
+          "l4.end",
+          "l5.end",
+          "l6.end",
+          "l7.end",
+          "l8.end",
+          "l9.end",
+          "l10.end",
+          "l11.end"
+        ]
+      },
+      "sketch": {
+        "dof": 24,
+        "solved": true
+      }
+    },
+    {
+      "created": {
+        "constraints": [],
+        "curves": [],
+        "dimensions": [],
+        "points": []
+      },
+      "result": {
+        "changed": 12,
+        "fixed": true
+      },
+      "sketch": {
+        "dof": 0,
+        "solved": true
+      }
+    },
+    {
+      "dof": 0,
+      "failing": [],
+      "profiles": 1,
+      "status": "solved"
+    },
+    {
+      "profiles": 1,
+      "sketch": 636
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 637,
+      "ms": 159.2021,
+      "name": "L_P5_RollHornPocket",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 638,
+      "ms": 226.1249,
+      "name": "L_P5_HornCentre",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_ROLL_BEARING_CAP"
+      ],
+      "feature": 639,
+      "ms": 1.3274000000000001,
+      "name": "L_ROLL_BEARING_CAP",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_BEARING_CAP"
+      ],
+      "created_bodies": [],
+      "feature": 640,
+      "ms": 40.6481,
+      "name": "L_ROLL_BEARING_CAP_Ear",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_BEARING_CAP"
+      ],
+      "created_bodies": [],
+      "feature": 641,
+      "ms": 13.136999999999999,
+      "name": "L_ROLL_BEARING_CAP_BearingSeat",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_BEARING_CAP"
+      ],
+      "created_bodies": [],
+      "feature": 642,
+      "ms": 15.4946,
+      "name": "L_ROLL_BEARING_CAP_FlangeSeat",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT",
+        "L_ROLL_BEARING_CAP"
+      ],
+      "created_bodies": [],
+      "feature": 643,
+      "ms": 289.1296,
+      "name": "L_P5_CapBolt_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 644,
+      "ms": 517.2291,
+      "name": "L_P5_CapNut_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_BEARING_CAP"
+      ],
+      "created_bodies": [],
+      "feature": 645,
+      "ms": 21.8103,
+      "name": "L_P5_CapHead_-5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT",
+        "L_ROLL_BEARING_CAP"
+      ],
+      "created_bodies": [],
+      "feature": 646,
+      "ms": 278.165,
+      "name": "L_P5_CapBolt_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_YOKE_PALM_FRONT"
+      ],
+      "created_bodies": [],
+      "feature": 647,
+      "ms": 520.6205,
+      "name": "L_P5_CapNut_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_ROLL_BEARING_CAP"
+      ],
+      "created_bodies": [],
+      "feature": 648,
+      "ms": 24.1845,
+      "name": "L_P5_CapHead_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_P5_WRIST_SHAFT"
+      ],
+      "feature": 649,
+      "ms": 1.0591000000000002,
+      "name": "L_P5_WRIST_SHAFT",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_P5_WRIST_HORN"
+      ],
+      "feature": 650,
+      "ms": 0.5545,
+      "name": "L_P5_WRIST_HORN",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_P5_WRIST_HORN"
+      ],
+      "created_bodies": [],
+      "feature": 651,
+      "ms": 6.069,
+      "name": "L_P5_WRIST_HORN_Cross",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_P5_WRIST_HORN"
+      ],
+      "created_bodies": [],
+      "feature": 652,
+      "ms": 9.6845,
+      "name": "L_P5_WRIST_HORN_Centre",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_P5_WRIST_BEARING"
+      ],
+      "feature": 653,
+      "ms": 1.2606,
+      "name": "L_P5_WRIST_BEARING",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_P5_WRIST_BEARING"
+      ],
+      "created_bodies": [],
+      "feature": 654,
+      "ms": 46.7724,
+      "name": "L_P5_WRIST_BEARING_Flange",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [
+        "L_P5_WRIST_BEARING"
+      ],
+      "created_bodies": [],
+      "feature": 655,
+      "ms": 16.34,
+      "name": "L_P5_WRIST_BEARING_Bore",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_0"
+      ],
+      "feature": 656,
+      "ms": 1.2406,
+      "name": "P5_L_RGB_0",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_1"
+      ],
+      "feature": 657,
+      "ms": 1.1857,
+      "name": "P5_L_RGB_1",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_2"
+      ],
+      "feature": 658,
+      "ms": 1.4375,
+      "name": "P5_L_RGB_2",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_3"
+      ],
+      "feature": 659,
+      "ms": 1.286,
+      "name": "P5_L_RGB_3",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_4"
+      ],
+      "feature": 660,
+      "ms": 1.2085,
+      "name": "P5_L_RGB_4",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "changed_bodies": [],
+      "created_bodies": [
+        "L_RGB_5"
+      ],
+      "feature": 661,
+      "ms": 1.4338,
+      "name": "P5_L_RGB_5",
+      "removed_bodies": [],
+      "warning": null
+    },
+    {
+      "appearance": {
+        "color": "#e8dbb7",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_ROLL_YOKE_PALM_FRONT",
+        "L_ROLL_PALM_REAR",
+        "L_ROLL_BEARING_CAP",
+        "L_CURVED_ARM_CORE_FRONT_part",
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "appearance": {
+        "color": "#303338",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_P5_WRIST_SERVO_CASE",
+        "L_P5_WRIST_SHAFT"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "appearance": {
+        "color": "#8d969b",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_P5_WRIST_HORN",
+        "L_P5_WRIST_BEARING",
+        "L_P5_WRIST_FIXED_STUB"
+      ],
+      "components": [],
+      "faces": []
+    },
+    {
+      "appearance": {
+        "color": "#e8a340",
+        "name": "Custom",
+        "opacity": 1.0
+      },
+      "bodies": [
+        "L_RGB_0",
+        "L_RGB_1",
+        "L_RGB_2",
+        "L_RGB_3",
+        "L_RGB_4",
+        "L_RGB_5"
+      ],
+      "components": [],
+      "faces": []
+    }
+  ]
+}

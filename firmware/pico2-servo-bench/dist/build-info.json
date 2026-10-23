@@ -1,0 +1,9 @@
+{
+  "target": "thumbv8m.main-none-eabihf",
+  "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+  "converter_revision": "f14bf2d981772cd9fbe5bac33b685719caac1add",
+  "family": "0xe48bff59",
+  "blocks": 156,
+  "bytes": 79872,
+  "sha256": "3BA62C47816255FB5A51FFDD972DF67A0506E3E04C3051E0BD13F5D26B73641C"
+}

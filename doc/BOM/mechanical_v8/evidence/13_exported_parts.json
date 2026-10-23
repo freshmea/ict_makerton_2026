@@ -1,0 +1,98 @@
+[
+  {
+    "name": "PILL_BASE_TRAY_1",
+    "body": "PILL_BASE_TRAY_1_part"
+  },
+  {
+    "name": "PILL_BASE_LID_1",
+    "body": "PILL_BASE_LID_1_part"
+  },
+  {
+    "name": "PILL_BASE_TRAY_2",
+    "body": "PILL_BASE_TRAY_2_part"
+  },
+  {
+    "name": "PILL_BASE_LID_2",
+    "body": "PILL_BASE_LID_2_part"
+  },
+  {
+    "name": "PILL_BASE_TRAY_3",
+    "body": "PILL_BASE_TRAY_3_part"
+  },
+  {
+    "name": "PILL_BASE_LID_3",
+    "body": "PILL_BASE_LID_3_part"
+  },
+  {
+    "name": "PEBBLE_HEAD_FRONT_TRIAL",
+    "body": "PEBBLE_HEAD_FRONT_TRIAL_part"
+  },
+  {
+    "name": "PEBBLE_HEAD_REAR_TRIAL",
+    "body": "PEBBLE_HEAD_REAR_TRIAL_part"
+  },
+  {
+    "name": "CAPSULE_VISOR_TRIAL",
+    "body": "CAPSULE_VISOR_TRIAL_part"
+  },
+  {
+    "name": "L_ROUND_YAW_COLLAR_TRIAL",
+    "body": "L_ROUND_YAW_COLLAR_TRIAL_part"
+  },
+  {
+    "name": "L_CURVED_ARM_CORE_FRONT",
+    "body": "L_CURVED_ARM_CORE_FRONT_part"
+  },
+  {
+    "name": "L_CURVED_ARM_CORE_REAR",
+    "body": "L_CURVED_ARM_CORE_REAR_part"
+  },
+  {
+    "name": "L_WRAP_HAND_FRONT",
+    "body": "L_WRAP_HAND_FRONT"
+  },
+  {
+    "name": "L_WRAP_HAND_REAR",
+    "body": "L_WRAP_HAND_REAR"
+  },
+  {
+    "name": "R_ROUND_YAW_COLLAR_TRIAL",
+    "body": "R_ROUND_YAW_COLLAR_TRIAL_part"
+  },
+  {
+    "name": "R_CURVED_ARM_CORE_FRONT",
+    "body": "R_CURVED_ARM_CORE_FRONT_part"
+  },
+  {
+    "name": "R_CURVED_ARM_CORE_REAR",
+    "body": "R_CURVED_ARM_CORE_REAR_part"
+  },
+  {
+    "name": "R_WRAP_HAND_FRONT",
+    "body": "R_WRAP_HAND_FRONT"
+  },
+  {
+    "name": "R_WRAP_HAND_REAR",
+    "body": "R_WRAP_HAND_REAR"
+  },
+  {
+    "name": "ROUNDED_PHONE_CRADLE_TRIAL",
+    "body": "ROUNDED_PHONE_CRADLE_TRIAL_part"
+  },
+  {
+    "name": "SEAM_SPLICE_1_FRONT",
+    "body": "SEAM_SPLICE_1_FRONT"
+  },
+  {
+    "name": "SEAM_SPLICE_1_REAR",
+    "body": "SEAM_SPLICE_1_REAR"
+  },
+  {
+    "name": "SEAM_SPLICE_2_FRONT",
+    "body": "SEAM_SPLICE_2_FRONT"
+  },
+  {
+    "name": "SEAM_SPLICE_2_REAR",
+    "body": "SEAM_SPLICE_2_REAR"
+  }
+]

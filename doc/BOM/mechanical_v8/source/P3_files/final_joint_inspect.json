@@ -1,0 +1,4461 @@
+{
+  "joints": [
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 7,
+        "component_name": "PILL_BASE_TRAY_1_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 8,
+        "occurrence_name": "PILL_BASE_TRAY_1_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/PILL_BASE_TRAY_1:1/PILL_BASE_TRAY_1_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 455,
+      "links": [],
+      "name": "Rigid Group 2:8",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 11,
+        "component_name": "PILL_BASE_LID_1_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 12,
+        "occurrence_name": "PILL_BASE_LID_1_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/PILL_BASE_LID_1:1/PILL_BASE_LID_1_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 456,
+      "links": [],
+      "name": "Rigid Group 2:12",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 15,
+        "component_name": "PILL_BASE_TRAY_2_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 16,
+        "occurrence_name": "PILL_BASE_TRAY_2_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/PILL_BASE_TRAY_2:1/PILL_BASE_TRAY_2_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 457,
+      "links": [],
+      "name": "Rigid Group 2:16",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 19,
+        "component_name": "PILL_BASE_LID_2_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 20,
+        "occurrence_name": "PILL_BASE_LID_2_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/PILL_BASE_LID_2:1/PILL_BASE_LID_2_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 458,
+      "links": [],
+      "name": "Rigid Group 2:20",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 23,
+        "component_name": "PILL_BASE_TRAY_3_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 24,
+        "occurrence_name": "PILL_BASE_TRAY_3_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/PILL_BASE_TRAY_3:1/PILL_BASE_TRAY_3_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 459,
+      "links": [],
+      "name": "Rigid Group 2:24",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 27,
+        "component_name": "PILL_BASE_LID_3_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 28,
+        "occurrence_name": "PILL_BASE_LID_3_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/PILL_BASE_LID_3:1/PILL_BASE_LID_3_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 460,
+      "links": [],
+      "name": "Rigid Group 2:28",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 39,
+        "component_name": "BA_R9_ENVELOPE_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 40,
+        "occurrence_name": "BA_R9_ENVELOPE_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/BA_R9_ENVELOPE:1/BA_R9_ENVELOPE_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 461,
+      "links": [],
+      "name": "Rigid Group 2:40",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 43,
+        "component_name": "PEBBLE_HEAD_FRONT_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 44,
+        "occurrence_name": "PEBBLE_HEAD_FRONT_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/PEBBLE_HEAD_FRONT_TRIAL:1/PEBBLE_HEAD_FRONT_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 462,
+      "links": [],
+      "name": "Rigid Group 2:44",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 47,
+        "component_name": "PEBBLE_HEAD_REAR_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 48,
+        "occurrence_name": "PEBBLE_HEAD_REAR_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/PEBBLE_HEAD_REAR_TRIAL:1/PEBBLE_HEAD_REAR_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 463,
+      "links": [],
+      "name": "Rigid Group 2:48",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 51,
+        "component_name": "CAPSULE_VISOR_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 52,
+        "occurrence_name": "CAPSULE_VISOR_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/CAPSULE_VISOR_TRIAL:1/CAPSULE_VISOR_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 464,
+      "links": [],
+      "name": "Rigid Group 2:52",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 55,
+        "component_name": "EYE_1_DISPLAY_ONLY_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 56,
+        "occurrence_name": "EYE_1_DISPLAY_ONLY_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/EYE_1_DISPLAY_ONLY:1/EYE_1_DISPLAY_ONLY_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 465,
+      "links": [],
+      "name": "Rigid Group 2:56",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 59,
+        "component_name": "EYE_2_DISPLAY_ONLY_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 60,
+        "occurrence_name": "EYE_2_DISPLAY_ONLY_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/EYE_2_DISPLAY_ONLY:1/EYE_2_DISPLAY_ONLY_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 466,
+      "links": [],
+      "name": "Rigid Group 2:60",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 63,
+        "component_name": "CAMERA_LENS_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 64,
+        "occurrence_name": "CAMERA_LENS_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/CAMERA_LENS_TRIAL:1/CAMERA_LENS_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 467,
+      "links": [],
+      "name": "Rigid Group 2:64",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 67,
+        "component_name": "JETSON_RESERVED_ZONE_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 68,
+        "occurrence_name": "JETSON_RESERVED_ZONE_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/JETSON_RESERVED_ZONE:1/JETSON_RESERVED_ZONE_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 468,
+      "links": [],
+      "name": "Rigid Group 2:68",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 71,
+        "component_name": "POWER_RESERVED_ZONE_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 72,
+        "occurrence_name": "POWER_RESERVED_ZONE_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/POWER_RESERVED_ZONE:1/POWER_RESERVED_ZONE_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 469,
+      "links": [],
+      "name": "Rigid Group 2:72",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 75,
+        "component_name": "BATTERY_RESERVED_ZONE_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 76,
+        "occurrence_name": "BATTERY_RESERVED_ZONE_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/BATTERY_RESERVED_ZONE:1/BATTERY_RESERVED_ZONE_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 470,
+      "links": [],
+      "name": "Rigid Group 2:76",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 79,
+        "component_name": "L_ROUND_YAW_COLLAR_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 80,
+        "occurrence_name": "L_ROUND_YAW_COLLAR_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_ROUND_YAW_COLLAR_TRIAL:1/L_ROUND_YAW_COLLAR_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 471,
+      "links": [],
+      "name": "Rigid Group 2:80",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 83,
+        "component_name": "L_YAW_SERVO_INSIDE_BASE_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 84,
+        "occurrence_name": "L_YAW_SERVO_INSIDE_BASE_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_YAW_SERVO_INSIDE_BASE:1/L_YAW_SERVO_INSIDE_BASE_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 472,
+      "links": [],
+      "name": "Rigid Group 2:84",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 115,
+        "component_name": "L_TOUCH_0_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 116,
+        "occurrence_name": "L_TOUCH_0_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_TOUCH_0:1/L_TOUCH_0_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 473,
+      "links": [],
+      "name": "Rigid Group 2:116",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 119,
+        "component_name": "L_TOUCH_1_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 120,
+        "occurrence_name": "L_TOUCH_1_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_TOUCH_1:1/L_TOUCH_1_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 474,
+      "links": [],
+      "name": "Rigid Group 2:120",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 123,
+        "component_name": "L_TOUCH_2_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 124,
+        "occurrence_name": "L_TOUCH_2_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_TOUCH_2:1/L_TOUCH_2_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 475,
+      "links": [],
+      "name": "Rigid Group 2:124",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 127,
+        "component_name": "R_ROUND_YAW_COLLAR_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 128,
+        "occurrence_name": "R_ROUND_YAW_COLLAR_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_ROUND_YAW_COLLAR_TRIAL:1/R_ROUND_YAW_COLLAR_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 476,
+      "links": [],
+      "name": "Rigid Group 2:128",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 131,
+        "component_name": "R_YAW_SERVO_INSIDE_BASE_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 132,
+        "occurrence_name": "R_YAW_SERVO_INSIDE_BASE_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_YAW_SERVO_INSIDE_BASE:1/R_YAW_SERVO_INSIDE_BASE_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 477,
+      "links": [],
+      "name": "Rigid Group 2:132",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 163,
+        "component_name": "R_TOUCH_0_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 164,
+        "occurrence_name": "R_TOUCH_0_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_TOUCH_0:1/R_TOUCH_0_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 478,
+      "links": [],
+      "name": "Rigid Group 2:164",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 167,
+        "component_name": "R_TOUCH_1_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 168,
+        "occurrence_name": "R_TOUCH_1_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_TOUCH_1:1/R_TOUCH_1_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 479,
+      "links": [],
+      "name": "Rigid Group 2:168",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 171,
+        "component_name": "R_TOUCH_2_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 172,
+        "occurrence_name": "R_TOUCH_2_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_TOUCH_2:1/R_TOUCH_2_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 480,
+      "links": [],
+      "name": "Rigid Group 2:172",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 175,
+        "component_name": "ROUNDED_PHONE_CRADLE_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 176,
+        "occurrence_name": "ROUNDED_PHONE_CRADLE_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/ROUNDED_PHONE_CRADLE_TRIAL:1/ROUNDED_PHONE_CRADLE_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 481,
+      "links": [],
+      "name": "Rigid Group 2:176",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 87,
+        "component_name": "L_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 88,
+        "occurrence_name": "L_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_CURVED_ARM_CORE_FRONT:1/L_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 91,
+        "component_name": "L_CURVED_ARM_CORE_REAR_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 92,
+        "occurrence_name": "L_CURVED_ARM_CORE_REAR_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_CURVED_ARM_CORE_REAR:1/L_CURVED_ARM_CORE_REAR_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 482,
+      "links": [],
+      "name": "Rigid Group 88:92",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 87,
+        "component_name": "L_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 88,
+        "occurrence_name": "L_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_CURVED_ARM_CORE_FRONT:1/L_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 95,
+        "component_name": "L_PITCH_SERVO_EMBEDDED_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 96,
+        "occurrence_name": "L_PITCH_SERVO_EMBEDDED_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_PITCH_SERVO_EMBEDDED:1/L_PITCH_SERVO_EMBEDDED_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 483,
+      "links": [],
+      "name": "Rigid Group 88:96",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 87,
+        "component_name": "L_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 88,
+        "occurrence_name": "L_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_CURVED_ARM_CORE_FRONT:1/L_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 111,
+        "component_name": "L_FIXED_SUPPORT_STUB_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 112,
+        "occurrence_name": "L_FIXED_SUPPORT_STUB_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_FIXED_SUPPORT_STUB_TRIAL:1/L_FIXED_SUPPORT_STUB_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 484,
+      "links": [],
+      "name": "Rigid Group 88:112",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 443,
+        "component_name": "P3_L_HAND",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 444,
+        "occurrence_name": "P3_L_HAND:1",
+        "path": "P3_L_HAND:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 99,
+        "component_name": "L_SHORT_SERVO_SHAFT_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 100,
+        "occurrence_name": "L_SHORT_SERVO_SHAFT_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_SHORT_SERVO_SHAFT_TRIAL:1/L_SHORT_SERVO_SHAFT_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 485,
+      "links": [],
+      "name": "Rigid Group 444:100",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 443,
+        "component_name": "P3_L_HAND",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 444,
+        "occurrence_name": "P3_L_HAND:1",
+        "path": "P3_L_HAND:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 103,
+        "component_name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 104,
+        "occurrence_name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_ACTUAL_CROSS_HORN_PLACEHOLDER:1/L_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 486,
+      "links": [],
+      "name": "Rigid Group 444:104",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 443,
+        "component_name": "P3_L_HAND",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 444,
+        "occurrence_name": "P3_L_HAND:1",
+        "path": "P3_L_HAND:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 107,
+        "component_name": "L_F625ZZ_BEARING_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 108,
+        "occurrence_name": "L_F625ZZ_BEARING_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_F625ZZ_BEARING:1/L_F625ZZ_BEARING_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 487,
+      "links": [],
+      "name": "Rigid Group 444:108",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 135,
+        "component_name": "R_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 136,
+        "occurrence_name": "R_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_CURVED_ARM_CORE_FRONT:1/R_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 139,
+        "component_name": "R_CURVED_ARM_CORE_REAR_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 140,
+        "occurrence_name": "R_CURVED_ARM_CORE_REAR_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_CURVED_ARM_CORE_REAR:1/R_CURVED_ARM_CORE_REAR_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 488,
+      "links": [],
+      "name": "Rigid Group 136:140",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 135,
+        "component_name": "R_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 136,
+        "occurrence_name": "R_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_CURVED_ARM_CORE_FRONT:1/R_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 143,
+        "component_name": "R_PITCH_SERVO_EMBEDDED_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 144,
+        "occurrence_name": "R_PITCH_SERVO_EMBEDDED_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_PITCH_SERVO_EMBEDDED:1/R_PITCH_SERVO_EMBEDDED_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 489,
+      "links": [],
+      "name": "Rigid Group 136:144",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 135,
+        "component_name": "R_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 136,
+        "occurrence_name": "R_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_CURVED_ARM_CORE_FRONT:1/R_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 159,
+        "component_name": "R_FIXED_SUPPORT_STUB_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 160,
+        "occurrence_name": "R_FIXED_SUPPORT_STUB_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_FIXED_SUPPORT_STUB_TRIAL:1/R_FIXED_SUPPORT_STUB_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 490,
+      "links": [],
+      "name": "Rigid Group 136:160",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 449,
+        "component_name": "P3_R_HAND",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 450,
+        "occurrence_name": "P3_R_HAND:1",
+        "path": "P3_R_HAND:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 147,
+        "component_name": "R_SHORT_SERVO_SHAFT_TRIAL_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 148,
+        "occurrence_name": "R_SHORT_SERVO_SHAFT_TRIAL_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_SHORT_SERVO_SHAFT_TRIAL:1/R_SHORT_SERVO_SHAFT_TRIAL_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 491,
+      "links": [],
+      "name": "Rigid Group 450:148",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 449,
+        "component_name": "P3_R_HAND",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 450,
+        "occurrence_name": "P3_R_HAND:1",
+        "path": "P3_R_HAND:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 151,
+        "component_name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 152,
+        "occurrence_name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_ACTUAL_CROSS_HORN_PLACEHOLDER:1/R_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 492,
+      "links": [],
+      "name": "Rigid Group 450:152",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 449,
+        "component_name": "P3_R_HAND",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 450,
+        "occurrence_name": "P3_R_HAND:1",
+        "path": "P3_R_HAND:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 155,
+        "component_name": "R_F625ZZ_BEARING_part",
+        "frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 156,
+        "occurrence_name": "R_F625ZZ_BEARING_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_F625ZZ_BEARING:1/R_F625ZZ_BEARING_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "type": "frame",
+          "x": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [],
+      "errors": [],
+      "flip": true,
+      "id": 493,
+      "links": [],
+      "name": "Rigid Group 450:156",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            -275.0,
+            40.0,
+            130.0
+          ],
+          "x": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "point": [
+            -275.0,
+            40.0,
+            130.0
+          ],
+          "type": "point",
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 87,
+        "component_name": "L_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            -275.0,
+            40.0,
+            130.0
+          ],
+          "x": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 88,
+        "occurrence_name": "L_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_CURVED_ARM_CORE_FRONT:1/L_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            -275.0,
+            40.0,
+            130.0
+          ],
+          "type": "frame",
+          "x": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [
+        "angle"
+      ],
+      "errors": [],
+      "flip": true,
+      "id": 494,
+      "links": [],
+      "name": "L_J1_YAW",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "revolute",
+      "values": [
+        {
+          "limits": [
+            -14.999999999999998,
+            14.999999999999998
+          ],
+          "name": "angle",
+          "unit": "deg",
+          "value": 0.0
+        }
+      ],
+      "visible": true
+    },
+    {
+      "a": {
+        "component": 87,
+        "component_name": "L_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            -220.0,
+            40.0,
+            315.0
+          ],
+          "x": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "z": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        "occurrence": 88,
+        "occurrence_name": "L_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/L_CURVED_ARM_CORE_FRONT:1/L_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "point": [
+            -220.0,
+            40.0,
+            315.0
+          ],
+          "type": "point",
+          "z": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 443,
+        "component_name": "P3_L_HAND",
+        "frame": {
+          "origin": [
+            -220.0,
+            40.0,
+            315.0
+          ],
+          "x": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "z": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        "occurrence": 444,
+        "occurrence_name": "P3_L_HAND:1",
+        "path": "P3_L_HAND:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            -220.0,
+            40.0,
+            315.0
+          ],
+          "type": "frame",
+          "x": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "z": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [
+        "angle"
+      ],
+      "errors": [],
+      "flip": true,
+      "id": 495,
+      "links": [],
+      "name": "L_J2_PITCH",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "revolute",
+      "values": [
+        {
+          "limits": [
+            -14.999999999999998,
+            14.999999999999998
+          ],
+          "name": "angle",
+          "unit": "deg",
+          "value": 0.0
+        }
+      ],
+      "visible": true
+    },
+    {
+      "a": {
+        "component": 1,
+        "component_name": "P1_closed_base",
+        "frame": {
+          "origin": [
+            275.0,
+            40.0,
+            130.0
+          ],
+          "x": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 2,
+        "occurrence_name": "P1_closed_base:1",
+        "path": "P1_closed_base:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "point": [
+            275.0,
+            40.0,
+            130.0
+          ],
+          "type": "point",
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 135,
+        "component_name": "R_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            275.0,
+            40.0,
+            130.0
+          ],
+          "x": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "occurrence": 136,
+        "occurrence_name": "R_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_CURVED_ARM_CORE_FRONT:1/R_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            275.0,
+            40.0,
+            130.0
+          ],
+          "type": "frame",
+          "x": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [
+        "angle"
+      ],
+      "errors": [],
+      "flip": true,
+      "id": 496,
+      "links": [],
+      "name": "R_J1_YAW",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "revolute",
+      "values": [
+        {
+          "limits": [
+            -14.999999999999998,
+            14.999999999999998
+          ],
+          "name": "angle",
+          "unit": "deg",
+          "value": 0.0
+        }
+      ],
+      "visible": true
+    },
+    {
+      "a": {
+        "component": 135,
+        "component_name": "R_CURVED_ARM_CORE_FRONT_part",
+        "frame": {
+          "origin": [
+            220.0,
+            40.0,
+            315.0
+          ],
+          "x": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "z": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        "occurrence": 136,
+        "occurrence_name": "R_CURVED_ARM_CORE_FRONT_part:1",
+        "path": "P1_closed_base:1/fold_wing_v7_P1_assembly:1/R_CURVED_ARM_CORE_FRONT:1/R_CURVED_ARM_CORE_FRONT_part:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "point": [
+            220.0,
+            40.0,
+            315.0
+          ],
+          "type": "point",
+          "z": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "angle": 0.0,
+      "b": {
+        "component": 449,
+        "component_name": "P3_R_HAND",
+        "frame": {
+          "origin": [
+            220.0,
+            40.0,
+            315.0
+          ],
+          "x": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "z": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        "occurrence": 450,
+        "occurrence_name": "P3_R_HAND:1",
+        "path": "P3_R_HAND:1",
+        "references": [],
+        "resolves": true,
+        "snap": {
+          "origin": [
+            220.0,
+            40.0,
+            315.0
+          ],
+          "type": "frame",
+          "x": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "z": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "conflicts": [],
+      "dofs": [
+        "angle"
+      ],
+      "errors": [],
+      "flip": true,
+      "id": 497,
+      "links": [],
+      "name": "R_J2_PITCH",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "revolute",
+      "values": [
+        {
+          "limits": [
+            -14.999999999999998,
+            14.999999999999998
+          ],
+          "name": "angle",
+          "unit": "deg",
+          "value": 0.0
+        }
+      ],
+      "visible": true
+    }
+  ]
+}

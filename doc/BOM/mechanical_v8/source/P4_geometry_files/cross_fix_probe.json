@@ -1,0 +1,543 @@
+{
+  "batch": {
+    "completed": 5,
+    "ok": true,
+    "results": [
+      {
+        "attachment": "fixed",
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [],
+          "points": []
+        },
+        "name": "L_ShoulderCrossProfile",
+        "projected": null,
+        "sketch": 1
+      },
+      {
+        "created": {
+          "constraints": [],
+          "curves": [
+            "l1",
+            "l2",
+            "l3",
+            "l4",
+            "l5",
+            "l6",
+            "l7",
+            "l8",
+            "l9",
+            "l10",
+            "l11",
+            "l12"
+          ],
+          "dimensions": [],
+          "points": [
+            "l1.start",
+            "l1.end",
+            "l2.end",
+            "l3.end",
+            "l4.end",
+            "l5.end",
+            "l6.end",
+            "l7.end",
+            "l8.end",
+            "l9.end",
+            "l10.end",
+            "l11.end"
+          ]
+        },
+        "sketch": {
+          "dof": 24,
+          "solved": true
+        }
+      },
+      {
+        "created": {
+          "constraints": [],
+          "curves": [],
+          "dimensions": [],
+          "points": []
+        },
+        "result": {
+          "changed": 12,
+          "fixed": true
+        },
+        "sketch": {
+          "dof": 0,
+          "solved": true
+        }
+      },
+      {
+        "dof": 0,
+        "failing": [],
+        "profiles": 1,
+        "status": "solved"
+      },
+      {
+        "profiles": 1,
+        "sketch": 1
+      }
+    ]
+  },
+  "sketches": [
+    {
+      "constraints": [],
+      "curves": [
+        {
+          "construction": false,
+          "end": "l1.end",
+          "end_at": [
+            -278.2,
+            -176.8
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l1",
+          "start": "l1.start",
+          "start_at": [
+            -290.0,
+            -176.8
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l2.end",
+          "end_at": [
+            -278.2,
+            -165.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l2",
+          "start": "l1.end",
+          "start_at": [
+            -278.2,
+            -176.8
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l3.end",
+          "end_at": [
+            -271.8,
+            -165.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l3",
+          "start": "l2.end",
+          "start_at": [
+            -278.2,
+            -165.0
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l4.end",
+          "end_at": [
+            -271.8,
+            -176.8
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l4",
+          "start": "l3.end",
+          "start_at": [
+            -271.8,
+            -165.0
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l5.end",
+          "end_at": [
+            -260.0,
+            -176.8
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l5",
+          "start": "l4.end",
+          "start_at": [
+            -271.8,
+            -176.8
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l6.end",
+          "end_at": [
+            -260.0,
+            -183.2
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l6",
+          "start": "l5.end",
+          "start_at": [
+            -260.0,
+            -176.8
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l7.end",
+          "end_at": [
+            -271.8,
+            -183.2
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l7",
+          "start": "l6.end",
+          "start_at": [
+            -260.0,
+            -183.2
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l8.end",
+          "end_at": [
+            -271.8,
+            -195.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l8",
+          "start": "l7.end",
+          "start_at": [
+            -271.8,
+            -183.2
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l9.end",
+          "end_at": [
+            -278.2,
+            -195.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l9",
+          "start": "l8.end",
+          "start_at": [
+            -271.8,
+            -195.0
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l10.end",
+          "end_at": [
+            -278.2,
+            -183.2
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l10",
+          "start": "l9.end",
+          "start_at": [
+            -278.2,
+            -195.0
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l11.end",
+          "end_at": [
+            -290.0,
+            -183.2
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l11",
+          "start": "l10.end",
+          "start_at": [
+            -278.2,
+            -183.2
+          ],
+          "type": "line"
+        },
+        {
+          "construction": false,
+          "end": "l1.start",
+          "end_at": [
+            -290.0,
+            -176.8
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l12",
+          "start": "l11.end",
+          "start_at": [
+            -290.0,
+            -183.2
+          ],
+          "type": "line"
+        }
+      ],
+      "dof": 0,
+      "failing": [],
+      "fully_constrained": true,
+      "id": 1,
+      "links": [],
+      "name": "L_ShoulderCrossProfile",
+      "plane": {
+        "origin": [
+          0.0,
+          9.3,
+          0.0
+        ],
+        "x_dir": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "y_dir": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "points": [
+        {
+          "at": [
+            0.0,
+            0.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "origin",
+          "link": null,
+          "world": [
+            0.0,
+            9.3,
+            0.0
+          ]
+        },
+        {
+          "at": [
+            -290.0,
+            -176.8
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l1.start",
+          "link": null,
+          "world": [
+            -290.0,
+            9.3,
+            176.8
+          ]
+        },
+        {
+          "at": [
+            -278.2,
+            -176.8
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l1.end",
+          "link": null,
+          "world": [
+            -278.2,
+            9.3,
+            176.8
+          ]
+        },
+        {
+          "at": [
+            -278.2,
+            -165.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l2.end",
+          "link": null,
+          "world": [
+            -278.2,
+            9.3,
+            165.0
+          ]
+        },
+        {
+          "at": [
+            -271.8,
+            -165.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l3.end",
+          "link": null,
+          "world": [
+            -271.8,
+            9.3,
+            165.0
+          ]
+        },
+        {
+          "at": [
+            -271.8,
+            -176.8
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l4.end",
+          "link": null,
+          "world": [
+            -271.8,
+            9.3,
+            176.8
+          ]
+        },
+        {
+          "at": [
+            -260.0,
+            -176.8
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l5.end",
+          "link": null,
+          "world": [
+            -260.0,
+            9.3,
+            176.8
+          ]
+        },
+        {
+          "at": [
+            -260.0,
+            -183.2
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l6.end",
+          "link": null,
+          "world": [
+            -260.0,
+            9.3,
+            183.2
+          ]
+        },
+        {
+          "at": [
+            -271.8,
+            -183.2
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l7.end",
+          "link": null,
+          "world": [
+            -271.8,
+            9.3,
+            183.2
+          ]
+        },
+        {
+          "at": [
+            -271.8,
+            -195.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l8.end",
+          "link": null,
+          "world": [
+            -271.8,
+            9.3,
+            195.0
+          ]
+        },
+        {
+          "at": [
+            -278.2,
+            -195.0
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l9.end",
+          "link": null,
+          "world": [
+            -278.2,
+            9.3,
+            195.0
+          ]
+        },
+        {
+          "at": [
+            -278.2,
+            -183.2
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l10.end",
+          "link": null,
+          "world": [
+            -278.2,
+            9.3,
+            183.2
+          ]
+        },
+        {
+          "at": [
+            -290.0,
+            -183.2
+          ],
+          "fixed": true,
+          "fully_constrained": true,
+          "id": "l11.end",
+          "link": null,
+          "world": [
+            -290.0,
+            9.3,
+            183.2
+          ]
+        }
+      ],
+      "profiles": [
+        {
+          "area_mm2": 343.0400000000009,
+          "centroid_sketch": [
+            -274.9999999999999,
+            -179.99999999999957
+          ],
+          "curves": [
+            "l1",
+            "l12",
+            "l11",
+            "l10",
+            "l9",
+            "l8",
+            "l7",
+            "l6",
+            "l5",
+            "l4",
+            "l3",
+            "l2"
+          ],
+          "holes": [],
+          "index": 0
+        }
+      ],
+      "status": "solved",
+      "visible": true,
+      "wires": []
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "source": "doc\\BOM\\mechanical_v8\\cad\\base_P2.step",
+  "source_sha256": "86654dc492f6db4c9cce0c236055631eea1179404d84027f6c25355b897219b6",
+  "method": "Independent OCCT import; BRep validity and adaptive volume integration eps=1e-9; Boolean comparisons to world-coordinate v7 assembly STEP with expected native cuts. Closedness checks each solid shell, since OCCT solid Closed flags are unset for both source and export.",
+  "solid_count": 45,
+  "all_solids_valid": true,
+  "all_solid_shells_closed": true,
+  "all_volumes_positive": true,
+  "trays": [
+    {
+      "name": "PILL_BASE_TRAY_1",
+      "valid": true,
+      "closed_shells": true,
+      "solids": 1,
+      "volume_mm3": 311783.8812864961,
+      "removed_mm3": 423.1290566256998,
+      "added_mm3": 0.0,
+      "difference_from_expected": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    },
+    {
+      "name": "PILL_BASE_TRAY_2",
+      "valid": true,
+      "closed_shells": true,
+      "solids": 1,
+      "volume_mm3": 239201.24051595878,
+      "removed_mm3": 846.2581132545416,
+      "added_mm3": 0.0,
+      "difference_from_expected": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    },
+    {
+      "name": "PILL_BASE_TRAY_3",
+      "valid": true,
+      "closed_shells": true,
+      "solids": 1,
+      "volume_mm3": 311783.88127367856,
+      "removed_mm3": 423.12905664238997,
+      "added_mm3": 0.0,
+      "difference_from_expected": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    }
+  ],
+  "lids": [
+    {
+      "name": "PILL_BASE_LID_1",
+      "difference_from_v7": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    },
+    {
+      "name": "PILL_BASE_LID_2",
+      "difference_from_v7": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    },
+    {
+      "name": "PILL_BASE_LID_3",
+      "difference_from_v7": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    }
+  ],
+  "splices": [
+    {
+      "name": "SEAM_SPLICE_1_FRONT",
+      "valid": true,
+      "closed_shells": true,
+      "solid_count": 1,
+      "bbox_mm": [
+        -130.6666668,
+        -84.00000010000001,
+        1.9999999000000008,
+        -82.66666660000001,
+        -39.99999990000001,
+        12.00000000000007
+      ],
+      "volume_mm3": 16439.595978219288,
+      "analytic_mm3": 16439.59597821955,
+      "analytic_error_mm3": -2.6193447411060333e-10,
+      "difference_from_expected": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    },
+    {
+      "name": "SEAM_SPLICE_1_REAR",
+      "valid": true,
+      "closed_shells": true,
+      "solid_count": 1,
+      "bbox_mm": [
+        -130.6666668,
+        39.9999999,
+        1.999999899999999,
+        -82.66666660000001,
+        84.0000001,
+        11.999999999999991
+      ],
+      "volume_mm3": 16439.59597821952,
+      "analytic_mm3": 16439.59597821955,
+      "analytic_error_mm3": -2.9103830456733704e-11,
+      "difference_from_expected": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    },
+    {
+      "name": "SEAM_SPLICE_2_FRONT",
+      "valid": true,
+      "closed_shells": true,
+      "solid_count": 1,
+      "bbox_mm": [
+        82.6666666,
+        -84.0000001,
+        1.999999899999999,
+        130.6666668,
+        -39.9999999,
+        11.999999999999991
+      ],
+      "volume_mm3": 16439.595978219313,
+      "analytic_mm3": 16439.59597821955,
+      "analytic_error_mm3": -2.3646862246096134e-10,
+      "difference_from_expected": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    },
+    {
+      "name": "SEAM_SPLICE_2_REAR",
+      "valid": true,
+      "closed_shells": true,
+      "solid_count": 1,
+      "bbox_mm": [
+        82.6666666,
+        39.9999999,
+        1.9999999,
+        130.6666668,
+        84.0000001,
+        11.999999999999995
+      ],
+      "volume_mm3": 16439.59597821951,
+      "analytic_mm3": 16439.59597821955,
+      "analytic_error_mm3": -4.001776687800884e-11,
+      "difference_from_expected": {
+        "a_minus_b_mm3": 0.0,
+        "b_minus_a_mm3": 0.0
+      }
+    }
+  ],
+  "interferences_mm3": [],
+  "native_container": {
+    "path": "doc\\BOM\\mechanical_v8\\cad\\base_P2.solidcraft",
+    "sha256": "bc4f0b84d8454e035cd0505bf8836c07748bca126a49e91c3008697ed2c41cda",
+    "zip_crc": "pass",
+    "format": {
+      "format": "solidcraft-container/1"
+    },
+    "feature_count": 79,
+    "parameters": [
+      {
+        "comment": "mm; 44..52, bolt and locator pattern stays fixed",
+        "expr": "48 mm",
+        "model": false,
+        "name": "splice_L",
+        "unit": "mm"
+      },
+      {
+        "comment": "mm; 42..46, bolt and locator pattern stays fixed",
+        "expr": "44 mm",
+        "model": false,
+        "name": "splice_W",
+        "unit": "mm"
+      },
+      {
+        "comment": "mm; 7..9, verify selected screw length when changed",
+        "expr": "8 mm",
+        "model": false,
+        "name": "splice_T",
+        "unit": "mm"
+      },
+      {
+        "comment": "mm; 3.2..3.6, trial fit before full print",
+        "expr": "3.4 mm",
+        "model": false,
+        "name": "m3_clear",
+        "unit": "mm"
+      },
+      {
+        "comment": "mm; 5.7..6.0, M3 DIN562 square nut nominal 5.5",
+        "expr": "5.8 mm",
+        "model": false,
+        "name": "square_nut",
+        "unit": "mm"
+      },
+      {
+        "comment": "mm; 2.0..2.5, M3 DIN562 nut nominal thickness 1.8",
+        "expr": "2.2 mm",
+        "model": false,
+        "name": "nut_depth",
+        "unit": "mm"
+      },
+      {
+        "comment": "mm; 3.8..4.1",
+        "expr": "4 mm",
+        "model": false,
+        "name": "key_d",
+        "unit": "mm"
+      },
+      {
+        "comment": "mm; key_d + 0.3..0.6, diametral fit clearance",
+        "expr": "4.4 mm",
+        "model": false,
+        "name": "key_socket_d",
+        "unit": "mm"
+      }
+    ],
+    "all_features_unsuppressed": true
+  },
+  "speaker_envelope_bounds_mm": [
+    -200.0,
+    -97.0,
+    16.0,
+    200.0,
+    -24.0,
+    84.0
+  ],
+  "splice_top_z_mm": 12,
+  "speaker_bottom_z_mm": 16,
+  "speaker_bottom_clearance_mm": 4,
+  "power_reserved_bounds_mm": [
+    -190.0,
+    13.0,
+    14.0,
+    -80.0,
+    83.0,
+    44.0
+  ],
+  "battery_reserved_bounds_mm": [
+    90.0,
+    35.0,
+    14.0,
+    230.0,
+    85.0,
+    44.0
+  ],
+  "power_reserved_bottom_clearance_mm": 2.0,
+  "battery_reserved_bottom_clearance_mm": 2.0,
+  "notes": [
+    "Indices 14 and 15 in base_P2 STEP are the POWER_RESERVED_ZONE and BATTERY_RESERVED_ZONE conceptual box placeholders, not printable geometry or verified hardware.",
+    "Power/battery reserved envelopes raised 6 mm from P1; bottom Z=14 leaves 2 mm above the rear splice Z=12. Actual hardware/support layout still needs physical fit review.",
+    "Checks prove CAD topology and geometric equivalence only, not physical screw engagement, material strength, slicer success or printed fit."
+  ]
+}

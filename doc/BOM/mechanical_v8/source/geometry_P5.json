@@ -1,0 +1,6186 @@
+{
+  "commands": [
+    {
+      "command": "solid.remove",
+      "params": {
+        "bodies": [
+          "L_PITCH_SERVO_EMBEDDED_part",
+          "L_SHORT_SERVO_SHAFT_TRIAL_part",
+          "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+          "L_F625ZZ_BEARING_part",
+          "L_FIXED_SUPPORT_STUB_TRIAL_part",
+          "L_WRAP_HAND_FRONT",
+          "L_WRAP_HAND_REAR",
+          "L_RGB_0",
+          "L_RGB_1",
+          "L_RGB_2",
+          "L_RGB_3",
+          "L_RGB_4",
+          "L_RGB_5"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 1000,
+        "width": 200,
+        "height": 200,
+        "corner": [
+          -500,
+          -60,
+          270
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "P5_L_RemoveYWrist_FRONT"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 80,
+        "height": 54,
+        "base": [
+          -193,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RollCoreTemp_FRONT",
+        "name": "L_RollCoreTemp_FRONT"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 74,
+        "height": 48,
+        "base": [
+          -196,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_Cavity"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 11,
+        "width": 6,
+        "height": 20,
+        "center": [
+          -201,
+          5.5,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_ServoRail1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          -190,
+          5.5,
+          310
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_ServoBolt1_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          -190,
+          5.5,
+          320
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_ServoBolt1_5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 11,
+        "width": 6,
+        "height": 20,
+        "center": [
+          -201,
+          55,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_ServoRail2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          -190,
+          55,
+          310
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_ServoBolt2_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          -190,
+          55,
+          320
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_ServoBolt2_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 9,
+        "height": 8,
+        "base": [
+          -190,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_DriveOpening"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 8,
+        "base": [
+          -241,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_StubOpening"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 200,
+        "width": 150,
+        "height": 200,
+        "corner": [
+          -320,
+          39.9,
+          220
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_ServiceSplit"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 32,
+        "width": 16.7,
+        "height": 16,
+        "center": [
+          -229,
+          31.45,
+          274
+        ],
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_LinkAdapter"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          -235,
+          14,
+          289
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_CaseBoss_-15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          -235,
+          5,
+          289
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_CaseBolt_-15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          -235,
+          14,
+          341
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_CaseBoss_-15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          -235,
+          5,
+          341
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_CaseBolt_-15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          -205,
+          14,
+          289
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_CaseBoss_15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          -205,
+          5,
+          289
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_CaseBolt_15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          -205,
+          14,
+          341
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_CaseBoss_15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          -205,
+          5,
+          341
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "name": "L_RollCoreTemp_FRONT_CaseBolt_15_26"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_CURVED_ARM_CORE_FRONT_part",
+        "tools": [
+          "L_RollCoreTemp_FRONT"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 1000,
+        "width": 200,
+        "height": 200,
+        "corner": [
+          -500,
+          -60,
+          270
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "P5_L_RemoveYWrist_REAR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 80,
+        "height": 54,
+        "base": [
+          -193,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RollCoreTemp_REAR",
+        "name": "L_RollCoreTemp_REAR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 74,
+        "height": 48,
+        "base": [
+          -196,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_Cavity"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 11,
+        "width": 6,
+        "height": 20,
+        "center": [
+          -201,
+          5.5,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_ServoRail1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          -190,
+          5.5,
+          310
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_ServoBolt1_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          -190,
+          5.5,
+          320
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_ServoBolt1_5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 11,
+        "width": 6,
+        "height": 20,
+        "center": [
+          -201,
+          55,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_ServoRail2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          -190,
+          55,
+          310
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_ServoBolt2_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          -190,
+          55,
+          320
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_ServoBolt2_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 9,
+        "height": 8,
+        "base": [
+          -190,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_DriveOpening"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 8,
+        "base": [
+          -241,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_StubOpening"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 200,
+        "width": 150.1,
+        "height": 200,
+        "corner": [
+          -320,
+          -110,
+          220
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_ServiceSplit"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 32,
+        "width": 16.7,
+        "height": 16,
+        "center": [
+          -229,
+          48.55,
+          274
+        ],
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_LinkAdapter"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          -235,
+          40.2,
+          289
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_CaseBoss_-15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          -235,
+          5,
+          289
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_CaseBolt_-15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          -235,
+          40.2,
+          341
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_CaseBoss_-15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          -235,
+          5,
+          341
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_CaseBolt_-15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          -205,
+          40.2,
+          289
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_CaseBoss_15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          -205,
+          5,
+          289
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_CaseBolt_15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          -205,
+          40.2,
+          341
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_CaseBoss_15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          -205,
+          5,
+          341
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "name": "L_RollCoreTemp_REAR_CaseBolt_15_26"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_CURVED_ARM_CORE_REAR_part",
+        "tools": [
+          "L_RollCoreTemp_REAR"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 40.5,
+        "height": 20.2,
+        "center": [
+          -220,
+          30.25,
+          315
+        ],
+        "operation": "new",
+        "body_name": "L_P5_WRIST_SERVO_CASE",
+        "name": "L_P5_WRIST_SERVO_CASE"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 4.9,
+        "height": 14,
+        "base": [
+          -243,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_P5_WRIST_FIXED_STUB",
+        "name": "L_P5_WRIST_FIXED_STUB"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 2,
+        "base": [
+          -242,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "join",
+        "targets": [
+          "L_P5_WRIST_FIXED_STUB"
+        ],
+        "name": "L_P5_WRIST_FIXED_STUB_Shoulder"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__hand",
+        "expression": "-1",
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "favorite": true,
+        "unit": ""
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__qx",
+        "expression": "-220",
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__zc",
+        "expression": "315",
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__pcx",
+        "expression": "P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*81",
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__cap_d",
+        "expression": "90",
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__palm_l",
+        "expression": "80",
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__palm_h",
+        "expression": "42",
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__wall",
+        "expression": "3.2",
+        "comment": "Palm P5_L_ROLL_YOKE_PALM_FRONT__wall, mm. Allowed 3.0 to 3.6.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__bolt_d",
+        "expression": "3.4",
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; P5_L_ROLL_YOKE_PALM_FRONT__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__dowel_d",
+        "expression": "4.0",
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; P5_L_ROLL_YOKE_PALM_FRONT__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__fit",
+        "expression": "0.4",
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 41,
+        "width": 29,
+        "height": 20,
+        "center": [
+          -170.5,
+          25.5,
+          315
+        ],
+        "operation": "new",
+        "body_name": "L_ROLL_YOKE_PALM_FRONT",
+        "name": "L_ROLL_YOKE_PALM_FRONT_Neck"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__PalmOuterProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -179.0,
+            -315
+          ],
+          "p1": [
+            -99.0,
+            -315
+          ],
+          "width": 42
+        },
+        "dimensions": {
+          "length": "P5_L_ROLL_YOKE_PALM_FRONT__palm_l",
+          "width": "P5_L_ROLL_YOKE_PALM_FRONT__palm_h"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_L_ROLL_YOKE_PALM_FRONT__pcx)+((P5_L_ROLL_YOKE_PALM_FRONT__palm_l)-(P5_L_ROLL_YOKE_PALM_FRONT__palm_h))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_YOKE_PALM_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_YOKE_PALM_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_YOKE_PALM_FRONT__PalmOuterProfile",
+        "distance": "27",
+        "operation": "new",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__PalmOuter",
+        "body_name": "L_ROLL_YOKE_PALM_FRONT_Palm"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13+P5_L_ROLL_YOKE_PALM_FRONT__wall",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__PalmCavityProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -175.8,
+            -315
+          ],
+          "p1": [
+            -102.2,
+            -315
+          ],
+          "width": 35.6
+        },
+        "dimensions": {
+          "length": "P5_L_ROLL_YOKE_PALM_FRONT__palm_l-2*P5_L_ROLL_YOKE_PALM_FRONT__wall",
+          "width": "P5_L_ROLL_YOKE_PALM_FRONT__palm_h-2*P5_L_ROLL_YOKE_PALM_FRONT__wall"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_L_ROLL_YOKE_PALM_FRONT__pcx)+((P5_L_ROLL_YOKE_PALM_FRONT__palm_l-2*P5_L_ROLL_YOKE_PALM_FRONT__wall)-(P5_L_ROLL_YOKE_PALM_FRONT__palm_h-2*P5_L_ROLL_YOKE_PALM_FRONT__wall))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_YOKE_PALM_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_YOKE_PALM_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_YOKE_PALM_FRONT__PalmCavityProfile",
+        "distance": "28-P5_L_ROLL_YOKE_PALM_FRONT__wall",
+        "operation": "cut",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__PalmCavity",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT_Palm"
+        ]
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_ROLL_YOKE_PALM_FRONT",
+        "tools": [
+          "L_ROLL_YOKE_PALM_FRONT_Palm"
+        ],
+        "operation": "join"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__OuterFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -117.0,
+            -316
+          ],
+          "p1": [
+            -93.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_L_ROLL_YOKE_PALM_FRONT__pcx-P5_L_ROLL_YOKE_PALM_FRONT__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_YOKE_PALM_FRONT__OuterFingerProfile",
+        "distance": "18",
+        "operation": "join",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__OuterFinger",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ]
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "31",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__CentreFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -117.0,
+            -316
+          ],
+          "p1": [
+            -93.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_L_ROLL_YOKE_PALM_FRONT__pcx-P5_L_ROLL_YOKE_PALM_FRONT__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_YOKE_PALM_FRONT__CentreFingerProfile",
+        "distance": "9",
+        "operation": "join",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__CentreFinger",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 26,
+        "height": 16,
+        "center": [
+          "P5_L_ROLL_YOKE_PALM_FRONT__pcx",
+          40,
+          295
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__DiffuserAperture"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "10",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -170,
+            -310
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_L_ROLL_YOKE_PALM_FRONT__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_YOKE_PALM_FRONT__zc-5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt1Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "10",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -170,
+            -320
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_L_ROLL_YOKE_PALM_FRONT__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_YOKE_PALM_FRONT__zc+5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt2Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__BridgeBolt2"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "36.8",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -160,
+            -311
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_L_ROLL_YOKE_PALM_FRONT__dowel_d+P5_L_ROLL_YOKE_PALM_FRONT__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_YOKE_PALM_FRONT__zc-4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket1Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "36.8",
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -160,
+            -319
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_L_ROLL_YOKE_PALM_FRONT__dowel_d+P5_L_ROLL_YOKE_PALM_FRONT__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_L_ROLL_YOKE_PALM_FRONT__qx-P5_L_ROLL_YOKE_PALM_FRONT__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_YOKE_PALM_FRONT__zc+4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket2Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_L_ROLL_YOKE_PALM_FRONT__AlignmentSocket2"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__hand",
+        "expression": "-1",
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "favorite": true,
+        "unit": ""
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__qx",
+        "expression": "-220",
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__zc",
+        "expression": "315",
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__pcx",
+        "expression": "P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*81",
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__cap_d",
+        "expression": "90",
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__palm_l",
+        "expression": "80",
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__palm_h",
+        "expression": "42",
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__wall",
+        "expression": "3.2",
+        "comment": "Palm P5_L_ROLL_PALM_REAR__wall, mm. Allowed 3.0 to 3.6.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__bolt_d",
+        "expression": "3.4",
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; P5_L_ROLL_PALM_REAR__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__dowel_d",
+        "expression": "4.0",
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; P5_L_ROLL_PALM_REAR__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_L_ROLL_PALM_REAR__fit",
+        "expression": "0.4",
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 36,
+        "width": 29,
+        "height": 20,
+        "center": [
+          -168.0,
+          54.5,
+          315
+        ],
+        "operation": "new",
+        "body_name": "L_ROLL_PALM_REAR",
+        "name": "L_ROLL_PALM_REAR_Neck"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "40",
+        "name": "P5_L_ROLL_PALM_REAR__PalmOuterProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -179.0,
+            -315
+          ],
+          "p1": [
+            -99.0,
+            -315
+          ],
+          "width": 42
+        },
+        "dimensions": {
+          "length": "P5_L_ROLL_PALM_REAR__palm_l",
+          "width": "P5_L_ROLL_PALM_REAR__palm_h"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_L_ROLL_PALM_REAR__pcx)+((P5_L_ROLL_PALM_REAR__palm_l)-(P5_L_ROLL_PALM_REAR__palm_h))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_PALM_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_PALM_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_PALM_REAR__PalmOuterProfile",
+        "distance": "27",
+        "operation": "new",
+        "name": "P5_L_ROLL_PALM_REAR__PalmOuter",
+        "body_name": "L_ROLL_PALM_REAR_Palm"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_L_ROLL_PALM_REAR__PalmCavityProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -175.8,
+            -315
+          ],
+          "p1": [
+            -102.2,
+            -315
+          ],
+          "width": 35.6
+        },
+        "dimensions": {
+          "length": "P5_L_ROLL_PALM_REAR__palm_l-2*P5_L_ROLL_PALM_REAR__wall",
+          "width": "P5_L_ROLL_PALM_REAR__palm_h-2*P5_L_ROLL_PALM_REAR__wall"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_L_ROLL_PALM_REAR__pcx)+((P5_L_ROLL_PALM_REAR__palm_l-2*P5_L_ROLL_PALM_REAR__wall)-(P5_L_ROLL_PALM_REAR__palm_h-2*P5_L_ROLL_PALM_REAR__wall))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_PALM_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_PALM_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_PALM_REAR__PalmCavityProfile",
+        "distance": "28-P5_L_ROLL_PALM_REAR__wall",
+        "operation": "cut",
+        "name": "P5_L_ROLL_PALM_REAR__PalmCavity",
+        "targets": [
+          "L_ROLL_PALM_REAR_Palm"
+        ]
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_ROLL_PALM_REAR",
+        "tools": [
+          "L_ROLL_PALM_REAR_Palm"
+        ],
+        "operation": "join"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "49",
+        "name": "P5_L_ROLL_PALM_REAR__OuterFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -117.0,
+            -316
+          ],
+          "p1": [
+            -93.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_L_ROLL_PALM_REAR__pcx-P5_L_ROLL_PALM_REAR__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_PALM_REAR__OuterFingerProfile",
+        "distance": "18",
+        "operation": "join",
+        "name": "P5_L_ROLL_PALM_REAR__OuterFinger",
+        "targets": [
+          "L_ROLL_PALM_REAR"
+        ]
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "40",
+        "name": "P5_L_ROLL_PALM_REAR__CentreFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            -117.0,
+            -316
+          ],
+          "p1": [
+            -93.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_L_ROLL_PALM_REAR__pcx-P5_L_ROLL_PALM_REAR__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_PALM_REAR__CentreFingerProfile",
+        "distance": "9",
+        "operation": "join",
+        "name": "P5_L_ROLL_PALM_REAR__CentreFinger",
+        "targets": [
+          "L_ROLL_PALM_REAR"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 26,
+        "height": 16,
+        "center": [
+          "P5_L_ROLL_PALM_REAR__pcx",
+          40,
+          295
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_PALM_REAR"
+        ],
+        "name": "P5_L_ROLL_PALM_REAR__DiffuserAperture"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_L_ROLL_PALM_REAR__BridgeBolt1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -170,
+            -310
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_L_ROLL_PALM_REAR__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_PALM_REAR__zc-5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_PALM_REAR__BridgeBolt1Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_PALM_REAR"
+        ],
+        "name": "P5_L_ROLL_PALM_REAR__BridgeBolt1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_L_ROLL_PALM_REAR__BridgeBolt2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -170,
+            -320
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_L_ROLL_PALM_REAR__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_PALM_REAR__zc+5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_PALM_REAR__BridgeBolt2Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_PALM_REAR"
+        ],
+        "name": "P5_L_ROLL_PALM_REAR__BridgeBolt2"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_L_ROLL_PALM_REAR__AlignmentSocket1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -160,
+            -311
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_L_ROLL_PALM_REAR__dowel_d+P5_L_ROLL_PALM_REAR__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_PALM_REAR__zc-4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_PALM_REAR__AlignmentSocket1Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_PALM_REAR"
+        ],
+        "name": "P5_L_ROLL_PALM_REAR__AlignmentSocket1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_L_ROLL_PALM_REAR__AlignmentSocket2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            -160,
+            -319
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_L_ROLL_PALM_REAR__dowel_d+P5_L_ROLL_PALM_REAR__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_L_ROLL_PALM_REAR__qx-P5_L_ROLL_PALM_REAR__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_L_ROLL_PALM_REAR__zc+4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_L_ROLL_PALM_REAR__AlignmentSocket2Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_PALM_REAR"
+        ],
+        "name": "P5_L_ROLL_PALM_REAR__AlignmentSocket2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 88,
+        "height": 6,
+        "base": [
+          -186,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_P5_YokeTemp",
+        "name": "L_P5_YokeTemp"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 58,
+        "width": 22,
+        "height": 20,
+        "center": [
+          -219,
+          92,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "L_P5_YokeTemp"
+        ],
+        "name": "L_P5_YokeTemp_RadialBridge"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_ROLL_YOKE_PALM_FRONT",
+        "tools": [
+          "L_P5_YokeTemp"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": {
+          "origin": [
+            -189.3,
+            40,
+            315
+          ],
+          "x_dir": [
+            0,
+            1,
+            0
+          ],
+          "y_dir": [
+            0,
+            0,
+            -1
+          ]
+        },
+        "name": "L_P5_RollHornProfile"
+      }
+    },
+    {
+      "command": "sketch.line",
+      "params": {
+        "points": [
+          [
+            -15,
+            -3.2
+          ],
+          [
+            -3.2,
+            -3.2
+          ],
+          [
+            -3.2,
+            -15
+          ],
+          [
+            3.2,
+            -15
+          ],
+          [
+            3.2,
+            -3.2
+          ],
+          [
+            15,
+            -3.2
+          ],
+          [
+            15,
+            3.2
+          ],
+          [
+            3.2,
+            3.2
+          ],
+          [
+            3.2,
+            15
+          ],
+          [
+            -3.2,
+            15
+          ],
+          [
+            -3.2,
+            3.2
+          ],
+          [
+            -15,
+            3.2
+          ]
+        ],
+        "closed": true,
+        "infer": false
+      }
+    },
+    {
+      "command": "sketch.constraint.fix",
+      "params": {
+        "entities": [
+          "l1",
+          "l2",
+          "l3",
+          "l4",
+          "l5",
+          "l6",
+          "l7",
+          "l8",
+          "l9",
+          "l10",
+          "l11",
+          "l12"
+        ],
+        "fixed": true
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_P5_RollHornProfile",
+        "distance": 3.7,
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "L_P5_RollHornPocket"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5.3,
+        "height": 10,
+        "base": [
+          -184,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "L_P5_HornCentre"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 88,
+        "height": 6,
+        "base": [
+          -248,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_ROLL_BEARING_CAP",
+        "name": "L_ROLL_BEARING_CAP"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6,
+        "width": 22,
+        "height": 20,
+        "center": [
+          -251,
+          92,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "L_ROLL_BEARING_CAP"
+        ],
+        "name": "L_ROLL_BEARING_CAP_Ear"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 16.3,
+        "height": 8,
+        "base": [
+          -247,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_BEARING_CAP"
+        ],
+        "name": "L_ROLL_BEARING_CAP_BearingSeat"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 18.2,
+        "height": 1.05,
+        "base": [
+          -253,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_BEARING_CAP"
+        ],
+        "name": "L_ROLL_BEARING_CAP_FlangeSeat"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 20,
+        "base": [
+          -238,
+          90,
+          310
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT",
+          "L_ROLL_BEARING_CAP"
+        ],
+        "name": "L_P5_CapBolt_-5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 2.2,
+        "width": 5.8,
+        "height": 5.8,
+        "center": [
+          -246.9,
+          90,
+          310
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "L_P5_CapNut_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6.4,
+        "height": 3.2,
+        "base": [
+          -251.8,
+          90,
+          310
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_BEARING_CAP"
+        ],
+        "name": "L_P5_CapHead_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 20,
+        "base": [
+          -238,
+          90,
+          320
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT",
+          "L_ROLL_BEARING_CAP"
+        ],
+        "name": "L_P5_CapBolt_5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 2.2,
+        "width": 5.8,
+        "height": 5.8,
+        "center": [
+          -246.9,
+          90,
+          320
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "L_P5_CapNut_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6.4,
+        "height": 3.2,
+        "base": [
+          -251.8,
+          90,
+          320
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_ROLL_BEARING_CAP"
+        ],
+        "name": "L_P5_CapHead_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 9.5,
+        "base": [
+          -190.5,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_P5_WRIST_SHAFT",
+        "name": "L_P5_WRIST_SHAFT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 2.2,
+        "width": 29.6,
+        "height": 6,
+        "center": [
+          -190.8,
+          40,
+          315
+        ],
+        "operation": "new",
+        "body_name": "L_P5_WRIST_HORN",
+        "name": "L_P5_WRIST_HORN"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 2.2,
+        "width": 6,
+        "height": 29.6,
+        "center": [
+          -190.8,
+          40,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "L_P5_WRIST_HORN"
+        ],
+        "name": "L_P5_WRIST_HORN_Cross"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 6,
+        "base": [
+          -188,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_P5_WRIST_HORN"
+        ],
+        "name": "L_P5_WRIST_HORN_Centre"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 16,
+        "height": 4,
+        "base": [
+          -249,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_P5_WRIST_BEARING",
+        "name": "L_P5_WRIST_BEARING"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 18,
+        "height": 1,
+        "base": [
+          -253,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "join",
+        "targets": [
+          "L_P5_WRIST_BEARING"
+        ],
+        "name": "L_P5_WRIST_BEARING_Flange"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 7,
+        "base": [
+          -247,
+          40,
+          315
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_P5_WRIST_BEARING"
+        ],
+        "name": "L_P5_WRIST_BEARING_Bore"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          -261.65801395547356,
+          22,
+          244.0
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_0",
+        "name": "P5_L_RGB_0"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          -259.70619515425244,
+          22,
+          248.4
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_1",
+        "name": "P5_L_RGB_1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          -257.64329329248335,
+          22,
+          252.8
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_2",
+        "name": "P5_L_RGB_2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          -255.47352036545678,
+          22,
+          257.2
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_3",
+        "name": "P5_L_RGB_3"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          -253.2016847438588,
+          22,
+          261.6
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_4",
+        "name": "P5_L_RGB_4"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          -250.8331643414948,
+          22,
+          266.0
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_5",
+        "name": "P5_L_RGB_5"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_ROLL_YOKE_PALM_FRONT",
+          "L_ROLL_PALM_REAR",
+          "L_ROLL_BEARING_CAP",
+          "L_CURVED_ARM_CORE_FRONT_part",
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "color": "#e8dbb7"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_P5_WRIST_SERVO_CASE",
+          "L_P5_WRIST_SHAFT"
+        ],
+        "color": "#303338"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_P5_WRIST_HORN",
+          "L_P5_WRIST_BEARING",
+          "L_P5_WRIST_FIXED_STUB"
+        ],
+        "color": "#8d969b"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_RGB_0",
+          "L_RGB_1",
+          "L_RGB_2",
+          "L_RGB_3",
+          "L_RGB_4",
+          "L_RGB_5"
+        ],
+        "color": "#e8a340"
+      }
+    },
+    {
+      "command": "solid.remove",
+      "params": {
+        "bodies": [
+          "R_PITCH_SERVO_EMBEDDED_part",
+          "R_SHORT_SERVO_SHAFT_TRIAL_part",
+          "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+          "R_F625ZZ_BEARING_part",
+          "R_FIXED_SUPPORT_STUB_TRIAL_part",
+          "R_WRAP_HAND_FRONT",
+          "R_WRAP_HAND_REAR",
+          "R_RGB_0",
+          "R_RGB_1",
+          "R_RGB_2",
+          "R_RGB_3",
+          "R_RGB_4",
+          "R_RGB_5"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 1000,
+        "width": 200,
+        "height": 200,
+        "corner": [
+          -500,
+          -60,
+          270
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "P5_R_RemoveYWrist_FRONT"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 80,
+        "height": 54,
+        "base": [
+          193,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RollCoreTemp_FRONT",
+        "name": "R_RollCoreTemp_FRONT"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 74,
+        "height": 48,
+        "base": [
+          196,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_Cavity"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 11,
+        "width": 6,
+        "height": 20,
+        "center": [
+          201,
+          5.5,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_ServoRail1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          190,
+          5.5,
+          310
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_ServoBolt1_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          190,
+          5.5,
+          320
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_ServoBolt1_5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 11,
+        "width": 6,
+        "height": 20,
+        "center": [
+          201,
+          55,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_ServoRail2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          190,
+          55,
+          310
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_ServoBolt2_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          190,
+          55,
+          320
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_ServoBolt2_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 9,
+        "height": 8,
+        "base": [
+          190,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_DriveOpening"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 8,
+        "base": [
+          241,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_StubOpening"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 200,
+        "width": 150,
+        "height": 200,
+        "corner": [
+          120,
+          39.9,
+          220
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_ServiceSplit"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 32,
+        "width": 16.7,
+        "height": 16,
+        "center": [
+          229,
+          31.45,
+          274
+        ],
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_LinkAdapter"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          205,
+          14,
+          289
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_CaseBoss_-15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          205,
+          5,
+          289
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_CaseBolt_-15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          205,
+          14,
+          341
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_CaseBoss_-15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          205,
+          5,
+          341
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_CaseBolt_-15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          235,
+          14,
+          289
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_CaseBoss_15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          235,
+          5,
+          289
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_CaseBolt_15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          235,
+          14,
+          341
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_CaseBoss_15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          235,
+          5,
+          341
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "name": "R_RollCoreTemp_FRONT_CaseBolt_15_26"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_CURVED_ARM_CORE_FRONT_part",
+        "tools": [
+          "R_RollCoreTemp_FRONT"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 1000,
+        "width": 200,
+        "height": 200,
+        "corner": [
+          -500,
+          -60,
+          270
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "P5_R_RemoveYWrist_REAR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 80,
+        "height": 54,
+        "base": [
+          193,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RollCoreTemp_REAR",
+        "name": "R_RollCoreTemp_REAR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 74,
+        "height": 48,
+        "base": [
+          196,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_Cavity"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 11,
+        "width": 6,
+        "height": 20,
+        "center": [
+          201,
+          5.5,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_ServoRail1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          190,
+          5.5,
+          310
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_ServoBolt1_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          190,
+          5.5,
+          320
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_ServoBolt1_5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 11,
+        "width": 6,
+        "height": 20,
+        "center": [
+          201,
+          55,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_ServoRail2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          190,
+          55,
+          310
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_ServoBolt2_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 18,
+        "base": [
+          190,
+          55,
+          320
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_ServoBolt2_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 9,
+        "height": 8,
+        "base": [
+          190,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_DriveOpening"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 8,
+        "base": [
+          241,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_StubOpening"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 200,
+        "width": 150.1,
+        "height": 200,
+        "corner": [
+          120,
+          -110,
+          220
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_ServiceSplit"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 32,
+        "width": 16.7,
+        "height": 16,
+        "center": [
+          229,
+          48.55,
+          274
+        ],
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_LinkAdapter"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          205,
+          40.2,
+          289
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_CaseBoss_-15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          205,
+          5,
+          289
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_CaseBolt_-15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          205,
+          40.2,
+          341
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_CaseBoss_-15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          205,
+          5,
+          341
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_CaseBolt_-15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          235,
+          40.2,
+          289
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_CaseBoss_15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          235,
+          5,
+          289
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_CaseBolt_15_-26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 25.8,
+        "base": [
+          235,
+          40.2,
+          341
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_CaseBoss_15_26"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 70,
+        "base": [
+          235,
+          5,
+          341
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "name": "R_RollCoreTemp_REAR_CaseBolt_15_26"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_CURVED_ARM_CORE_REAR_part",
+        "tools": [
+          "R_RollCoreTemp_REAR"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 40.5,
+        "height": 20.2,
+        "center": [
+          220,
+          30.25,
+          315
+        ],
+        "operation": "new",
+        "body_name": "R_P5_WRIST_SERVO_CASE",
+        "name": "R_P5_WRIST_SERVO_CASE"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 4.9,
+        "height": 14,
+        "base": [
+          243,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_P5_WRIST_FIXED_STUB",
+        "name": "R_P5_WRIST_FIXED_STUB"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 2,
+        "base": [
+          242,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "join",
+        "targets": [
+          "R_P5_WRIST_FIXED_STUB"
+        ],
+        "name": "R_P5_WRIST_FIXED_STUB_Shoulder"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__hand",
+        "expression": "1",
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "favorite": true,
+        "unit": ""
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__qx",
+        "expression": "220",
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__zc",
+        "expression": "315",
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__pcx",
+        "expression": "P5_R_ROLL_YOKE_PALM_FRONT__qx-P5_R_ROLL_YOKE_PALM_FRONT__hand*81",
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__cap_d",
+        "expression": "90",
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__palm_l",
+        "expression": "80",
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__palm_h",
+        "expression": "42",
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__wall",
+        "expression": "3.2",
+        "comment": "Palm P5_R_ROLL_YOKE_PALM_FRONT__wall, mm. Allowed 3.0 to 3.6.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__bolt_d",
+        "expression": "3.4",
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; P5_R_ROLL_YOKE_PALM_FRONT__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__dowel_d",
+        "expression": "4.0",
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; P5_R_ROLL_YOKE_PALM_FRONT__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__fit",
+        "expression": "0.4",
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 41,
+        "width": 29,
+        "height": 20,
+        "center": [
+          170.5,
+          25.5,
+          315
+        ],
+        "operation": "new",
+        "body_name": "R_ROLL_YOKE_PALM_FRONT",
+        "name": "R_ROLL_YOKE_PALM_FRONT_Neck"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__PalmOuterProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            99.0,
+            -315
+          ],
+          "p1": [
+            179.0,
+            -315
+          ],
+          "width": 42
+        },
+        "dimensions": {
+          "length": "P5_R_ROLL_YOKE_PALM_FRONT__palm_l",
+          "width": "P5_R_ROLL_YOKE_PALM_FRONT__palm_h"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_R_ROLL_YOKE_PALM_FRONT__pcx)+((P5_R_ROLL_YOKE_PALM_FRONT__palm_l)-(P5_R_ROLL_YOKE_PALM_FRONT__palm_h))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_YOKE_PALM_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_YOKE_PALM_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_YOKE_PALM_FRONT__PalmOuterProfile",
+        "distance": "27",
+        "operation": "new",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__PalmOuter",
+        "body_name": "R_ROLL_YOKE_PALM_FRONT_Palm"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13+P5_R_ROLL_YOKE_PALM_FRONT__wall",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__PalmCavityProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            102.2,
+            -315
+          ],
+          "p1": [
+            175.8,
+            -315
+          ],
+          "width": 35.6
+        },
+        "dimensions": {
+          "length": "P5_R_ROLL_YOKE_PALM_FRONT__palm_l-2*P5_R_ROLL_YOKE_PALM_FRONT__wall",
+          "width": "P5_R_ROLL_YOKE_PALM_FRONT__palm_h-2*P5_R_ROLL_YOKE_PALM_FRONT__wall"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_R_ROLL_YOKE_PALM_FRONT__pcx)+((P5_R_ROLL_YOKE_PALM_FRONT__palm_l-2*P5_R_ROLL_YOKE_PALM_FRONT__wall)-(P5_R_ROLL_YOKE_PALM_FRONT__palm_h-2*P5_R_ROLL_YOKE_PALM_FRONT__wall))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_YOKE_PALM_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_YOKE_PALM_FRONT__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_YOKE_PALM_FRONT__PalmCavityProfile",
+        "distance": "28-P5_R_ROLL_YOKE_PALM_FRONT__wall",
+        "operation": "cut",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__PalmCavity",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT_Palm"
+        ]
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_ROLL_YOKE_PALM_FRONT",
+        "tools": [
+          "R_ROLL_YOKE_PALM_FRONT_Palm"
+        ],
+        "operation": "join"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "13",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__OuterFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            93.0,
+            -316
+          ],
+          "p1": [
+            117.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_R_ROLL_YOKE_PALM_FRONT__pcx-P5_R_ROLL_YOKE_PALM_FRONT__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_YOKE_PALM_FRONT__OuterFingerProfile",
+        "distance": "18",
+        "operation": "join",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__OuterFinger",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ]
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "31",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__CentreFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            93.0,
+            -316
+          ],
+          "p1": [
+            117.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_R_ROLL_YOKE_PALM_FRONT__pcx-P5_R_ROLL_YOKE_PALM_FRONT__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_YOKE_PALM_FRONT__CentreFingerProfile",
+        "distance": "9",
+        "operation": "join",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__CentreFinger",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 26,
+        "height": 16,
+        "center": [
+          "P5_R_ROLL_YOKE_PALM_FRONT__pcx",
+          40,
+          295
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__DiffuserAperture"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "10",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            170,
+            -310
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_R_ROLL_YOKE_PALM_FRONT__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_R_ROLL_YOKE_PALM_FRONT__qx-P5_R_ROLL_YOKE_PALM_FRONT__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_YOKE_PALM_FRONT__zc-5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt1Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "10",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            170,
+            -320
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_R_ROLL_YOKE_PALM_FRONT__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_R_ROLL_YOKE_PALM_FRONT__qx-P5_R_ROLL_YOKE_PALM_FRONT__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_YOKE_PALM_FRONT__zc+5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt2Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__BridgeBolt2"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "36.8",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            160,
+            -311
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_R_ROLL_YOKE_PALM_FRONT__dowel_d+P5_R_ROLL_YOKE_PALM_FRONT__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_R_ROLL_YOKE_PALM_FRONT__qx-P5_R_ROLL_YOKE_PALM_FRONT__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_YOKE_PALM_FRONT__zc-4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket1Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "36.8",
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            160,
+            -319
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_R_ROLL_YOKE_PALM_FRONT__dowel_d+P5_R_ROLL_YOKE_PALM_FRONT__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_R_ROLL_YOKE_PALM_FRONT__qx-P5_R_ROLL_YOKE_PALM_FRONT__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_YOKE_PALM_FRONT__zc+4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket2Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "P5_R_ROLL_YOKE_PALM_FRONT__AlignmentSocket2"
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__hand",
+        "expression": "1",
+        "comment": "Handedness: fixed -1 left or +1 right; do not sweep through zero.",
+        "favorite": true,
+        "unit": ""
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__qx",
+        "expression": "220",
+        "comment": "World wrist centre X, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__zc",
+        "expression": "315",
+        "comment": "World wrist centre Z, mm. Fixed assembly datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__pcx",
+        "expression": "P5_R_ROLL_PALM_REAR__qx-P5_R_ROLL_PALM_REAR__hand*81",
+        "comment": "Palm centre, mm; derived from wrist datum.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__cap_d",
+        "expression": "90",
+        "comment": "Wrist cap diameter, mm. Allowed 89 to 92.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__palm_l",
+        "expression": "80",
+        "comment": "Rounded palm overall length, mm. Allowed 78 to 82.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__palm_h",
+        "expression": "42",
+        "comment": "Rounded palm overall height, mm. Allowed 40 to 44.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__wall",
+        "expression": "3.2",
+        "comment": "Palm P5_R_ROLL_PALM_REAR__wall, mm. Allowed 3.0 to 3.6.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__bolt_d",
+        "expression": "3.4",
+        "comment": "M3 through-bolt clearance, mm. Allowed 3.2 to 3.6; P5_R_ROLL_PALM_REAR__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__dowel_d",
+        "expression": "4.0",
+        "comment": "Loose dowel diameter, mm. Allowed 3.8 to 4.2; P5_R_ROLL_PALM_REAR__fit trial.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "P5_R_ROLL_PALM_REAR__fit",
+        "expression": "0.4",
+        "comment": "Alignment socket diametral clearance, mm. Allowed 0.3 to 0.5.",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 36,
+        "width": 29,
+        "height": 20,
+        "center": [
+          168.0,
+          54.5,
+          315
+        ],
+        "operation": "new",
+        "body_name": "R_ROLL_PALM_REAR",
+        "name": "R_ROLL_PALM_REAR_Neck"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "40",
+        "name": "P5_R_ROLL_PALM_REAR__PalmOuterProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            99.0,
+            -315
+          ],
+          "p1": [
+            179.0,
+            -315
+          ],
+          "width": 42
+        },
+        "dimensions": {
+          "length": "P5_R_ROLL_PALM_REAR__palm_l",
+          "width": "P5_R_ROLL_PALM_REAR__palm_h"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_R_ROLL_PALM_REAR__pcx)+((P5_R_ROLL_PALM_REAR__palm_l)-(P5_R_ROLL_PALM_REAR__palm_h))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_PALM_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_PALM_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_PALM_REAR__PalmOuterProfile",
+        "distance": "27",
+        "operation": "new",
+        "name": "P5_R_ROLL_PALM_REAR__PalmOuter",
+        "body_name": "R_ROLL_PALM_REAR_Palm"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_R_ROLL_PALM_REAR__PalmCavityProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            102.2,
+            -315
+          ],
+          "p1": [
+            175.8,
+            -315
+          ],
+          "width": 35.6
+        },
+        "dimensions": {
+          "length": "P5_R_ROLL_PALM_REAR__palm_l-2*P5_R_ROLL_PALM_REAR__wall",
+          "width": "P5_R_ROLL_PALM_REAR__palm_h-2*P5_R_ROLL_PALM_REAR__wall"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_R_ROLL_PALM_REAR__pcx)+((P5_R_ROLL_PALM_REAR__palm_l-2*P5_R_ROLL_PALM_REAR__wall)-(P5_R_ROLL_PALM_REAR__palm_h-2*P5_R_ROLL_PALM_REAR__wall))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_PALM_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_PALM_REAR__zc"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_PALM_REAR__PalmCavityProfile",
+        "distance": "28-P5_R_ROLL_PALM_REAR__wall",
+        "operation": "cut",
+        "name": "P5_R_ROLL_PALM_REAR__PalmCavity",
+        "targets": [
+          "R_ROLL_PALM_REAR_Palm"
+        ]
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_ROLL_PALM_REAR",
+        "tools": [
+          "R_ROLL_PALM_REAR_Palm"
+        ],
+        "operation": "join"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "49",
+        "name": "P5_R_ROLL_PALM_REAR__OuterFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            93.0,
+            -316
+          ],
+          "p1": [
+            117.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_R_ROLL_PALM_REAR__pcx-P5_R_ROLL_PALM_REAR__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_PALM_REAR__OuterFingerProfile",
+        "distance": "18",
+        "operation": "join",
+        "name": "P5_R_ROLL_PALM_REAR__OuterFinger",
+        "targets": [
+          "R_ROLL_PALM_REAR"
+        ]
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "40",
+        "name": "P5_R_ROLL_PALM_REAR__CentreFingerProfile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.slot.overall",
+        "params": {
+          "p0": [
+            93.0,
+            -316
+          ],
+          "p1": [
+            117.0,
+            -316
+          ],
+          "width": 18
+        },
+        "dimensions": {
+          "length": "24",
+          "width": "18"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs((P5_R_ROLL_PALM_REAR__pcx-P5_R_ROLL_PALM_REAR__hand*34)+((24)-(18))/2)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a1.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "a2.center"
+        ],
+        "type": "vertical",
+        "value": "316"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_PALM_REAR__CentreFingerProfile",
+        "distance": "9",
+        "operation": "join",
+        "name": "P5_R_ROLL_PALM_REAR__CentreFinger",
+        "targets": [
+          "R_ROLL_PALM_REAR"
+        ]
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 40,
+        "width": 26,
+        "height": 16,
+        "center": [
+          "P5_R_ROLL_PALM_REAR__pcx",
+          40,
+          295
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_PALM_REAR"
+        ],
+        "name": "P5_R_ROLL_PALM_REAR__DiffuserAperture"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_R_ROLL_PALM_REAR__BridgeBolt1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            170,
+            -310
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_R_ROLL_PALM_REAR__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_R_ROLL_PALM_REAR__qx-P5_R_ROLL_PALM_REAR__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_PALM_REAR__zc-5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_PALM_REAR__BridgeBolt1Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_PALM_REAR"
+        ],
+        "name": "P5_R_ROLL_PALM_REAR__BridgeBolt1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_R_ROLL_PALM_REAR__BridgeBolt2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            170,
+            -320
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_R_ROLL_PALM_REAR__bolt_d"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_R_ROLL_PALM_REAR__qx-P5_R_ROLL_PALM_REAR__hand*50)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_PALM_REAR__zc+5"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_PALM_REAR__BridgeBolt2Profile",
+        "distance": "31",
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_PALM_REAR"
+        ],
+        "name": "P5_R_ROLL_PALM_REAR__BridgeBolt2"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_R_ROLL_PALM_REAR__AlignmentSocket1Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            160,
+            -311
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_R_ROLL_PALM_REAR__dowel_d+P5_R_ROLL_PALM_REAR__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_R_ROLL_PALM_REAR__qx-P5_R_ROLL_PALM_REAR__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_PALM_REAR__zc-4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_PALM_REAR__AlignmentSocket1Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_PALM_REAR"
+        ],
+        "name": "P5_R_ROLL_PALM_REAR__AlignmentSocket1"
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "39",
+        "name": "P5_R_ROLL_PALM_REAR__AlignmentSocket2Profile"
+      }
+    },
+    {
+      "command": "sketch.draw.dimensioned",
+      "params": {
+        "command": "sketch.circle.center",
+        "params": {
+          "center": [
+            160,
+            -319
+          ],
+          "radius": 2
+        },
+        "dimensions": {
+          "diameter": "P5_R_ROLL_PALM_REAR__dowel_d+P5_R_ROLL_PALM_REAR__fit"
+        }
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "horizontal",
+        "value": "abs(P5_R_ROLL_PALM_REAR__qx-P5_R_ROLL_PALM_REAR__hand*60)"
+      }
+    },
+    {
+      "command": "sketch.dimension",
+      "params": {
+        "entities": [
+          "origin",
+          "c1.center"
+        ],
+        "type": "vertical",
+        "value": "P5_R_ROLL_PALM_REAR__zc+4"
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "P5_R_ROLL_PALM_REAR__AlignmentSocket2Profile",
+        "distance": "4.2",
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_PALM_REAR"
+        ],
+        "name": "P5_R_ROLL_PALM_REAR__AlignmentSocket2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 88,
+        "height": 6,
+        "base": [
+          186,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_P5_YokeTemp",
+        "name": "R_P5_YokeTemp"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 58,
+        "width": 22,
+        "height": 20,
+        "center": [
+          219,
+          92,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "R_P5_YokeTemp"
+        ],
+        "name": "R_P5_YokeTemp_RadialBridge"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_ROLL_YOKE_PALM_FRONT",
+        "tools": [
+          "R_P5_YokeTemp"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": {
+          "origin": [
+            189.3,
+            40,
+            315
+          ],
+          "x_dir": [
+            0,
+            1,
+            0
+          ],
+          "y_dir": [
+            0,
+            0,
+            1
+          ]
+        },
+        "name": "R_P5_RollHornProfile"
+      }
+    },
+    {
+      "command": "sketch.line",
+      "params": {
+        "points": [
+          [
+            -15,
+            -3.2
+          ],
+          [
+            -3.2,
+            -3.2
+          ],
+          [
+            -3.2,
+            -15
+          ],
+          [
+            3.2,
+            -15
+          ],
+          [
+            3.2,
+            -3.2
+          ],
+          [
+            15,
+            -3.2
+          ],
+          [
+            15,
+            3.2
+          ],
+          [
+            3.2,
+            3.2
+          ],
+          [
+            3.2,
+            15
+          ],
+          [
+            -3.2,
+            15
+          ],
+          [
+            -3.2,
+            3.2
+          ],
+          [
+            -15,
+            3.2
+          ]
+        ],
+        "closed": true,
+        "infer": false
+      }
+    },
+    {
+      "command": "sketch.constraint.fix",
+      "params": {
+        "entities": [
+          "l1",
+          "l2",
+          "l3",
+          "l4",
+          "l5",
+          "l6",
+          "l7",
+          "l8",
+          "l9",
+          "l10",
+          "l11",
+          "l12"
+        ],
+        "fixed": true
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_P5_RollHornProfile",
+        "distance": 3.7,
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "R_P5_RollHornPocket"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5.3,
+        "height": 10,
+        "base": [
+          184,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "R_P5_HornCentre"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 88,
+        "height": 6,
+        "base": [
+          248,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_ROLL_BEARING_CAP",
+        "name": "R_ROLL_BEARING_CAP"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6,
+        "width": 22,
+        "height": 20,
+        "center": [
+          251,
+          92,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "R_ROLL_BEARING_CAP"
+        ],
+        "name": "R_ROLL_BEARING_CAP_Ear"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 16.3,
+        "height": 8,
+        "base": [
+          247,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_BEARING_CAP"
+        ],
+        "name": "R_ROLL_BEARING_CAP_BearingSeat"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 18.2,
+        "height": 1.05,
+        "base": [
+          253,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_BEARING_CAP"
+        ],
+        "name": "R_ROLL_BEARING_CAP_FlangeSeat"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 20,
+        "base": [
+          238,
+          90,
+          310
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT",
+          "R_ROLL_BEARING_CAP"
+        ],
+        "name": "R_P5_CapBolt_-5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 2.2,
+        "width": 5.8,
+        "height": 5.8,
+        "center": [
+          246.9,
+          90,
+          310
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "R_P5_CapNut_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6.4,
+        "height": 3.2,
+        "base": [
+          251.8,
+          90,
+          310
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_BEARING_CAP"
+        ],
+        "name": "R_P5_CapHead_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 20,
+        "base": [
+          238,
+          90,
+          320
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT",
+          "R_ROLL_BEARING_CAP"
+        ],
+        "name": "R_P5_CapBolt_5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 2.2,
+        "width": 5.8,
+        "height": 5.8,
+        "center": [
+          246.9,
+          90,
+          320
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_YOKE_PALM_FRONT"
+        ],
+        "name": "R_P5_CapNut_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6.4,
+        "height": 3.2,
+        "base": [
+          251.8,
+          90,
+          320
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_ROLL_BEARING_CAP"
+        ],
+        "name": "R_P5_CapHead_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 9.5,
+        "base": [
+          190.5,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_P5_WRIST_SHAFT",
+        "name": "R_P5_WRIST_SHAFT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 2.2,
+        "width": 29.6,
+        "height": 6,
+        "center": [
+          190.8,
+          40,
+          315
+        ],
+        "operation": "new",
+        "body_name": "R_P5_WRIST_HORN",
+        "name": "R_P5_WRIST_HORN"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 2.2,
+        "width": 6,
+        "height": 29.6,
+        "center": [
+          190.8,
+          40,
+          315
+        ],
+        "operation": "join",
+        "targets": [
+          "R_P5_WRIST_HORN"
+        ],
+        "name": "R_P5_WRIST_HORN_Cross"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 6,
+        "base": [
+          188,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_P5_WRIST_HORN"
+        ],
+        "name": "R_P5_WRIST_HORN_Centre"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 16,
+        "height": 4,
+        "base": [
+          249,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_P5_WRIST_BEARING",
+        "name": "R_P5_WRIST_BEARING"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 18,
+        "height": 1,
+        "base": [
+          253,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "join",
+        "targets": [
+          "R_P5_WRIST_BEARING"
+        ],
+        "name": "R_P5_WRIST_BEARING_Flange"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 7,
+        "base": [
+          247,
+          40,
+          315
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_P5_WRIST_BEARING"
+        ],
+        "name": "R_P5_WRIST_BEARING_Bore"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          261.65801395547356,
+          22,
+          244.0
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_0",
+        "name": "P5_R_RGB_0"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          259.70619515425244,
+          22,
+          248.4
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_1",
+        "name": "P5_R_RGB_1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          257.64329329248335,
+          22,
+          252.8
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_2",
+        "name": "P5_R_RGB_2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          255.47352036545678,
+          22,
+          257.2
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_3",
+        "name": "P5_R_RGB_3"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          253.2016847438588,
+          22,
+          261.6
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_4",
+        "name": "P5_R_RGB_4"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 1.2,
+        "base": [
+          250.8331643414948,
+          22,
+          266.0
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_5",
+        "name": "P5_R_RGB_5"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_ROLL_YOKE_PALM_FRONT",
+          "R_ROLL_PALM_REAR",
+          "R_ROLL_BEARING_CAP",
+          "R_CURVED_ARM_CORE_FRONT_part",
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "color": "#e8dbb7"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_P5_WRIST_SERVO_CASE",
+          "R_P5_WRIST_SHAFT"
+        ],
+        "color": "#303338"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_P5_WRIST_HORN",
+          "R_P5_WRIST_BEARING",
+          "R_P5_WRIST_FIXED_STUB"
+        ],
+        "color": "#8d969b"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_RGB_0",
+          "R_RGB_1",
+          "R_RGB_2",
+          "R_RGB_3",
+          "R_RGB_4",
+          "R_RGB_5"
+        ],
+        "color": "#e8a340"
+      }
+    }
+  ]
+}

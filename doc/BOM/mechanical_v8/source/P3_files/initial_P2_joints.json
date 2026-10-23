@@ -1,0 +1,3503 @@
+{
+  "conflicts": [],
+  "dof": [
+    {
+      "dof": 0,
+      "occurrence": 0
+    },
+    {
+      "dof": 0,
+      "occurrence": 2
+    },
+    {
+      "dof": 0,
+      "occurrence": 4
+    },
+    {
+      "dof": 0,
+      "occurrence": 6
+    },
+    {
+      "dof": 0,
+      "occurrence": 8
+    },
+    {
+      "dof": 0,
+      "occurrence": 10
+    },
+    {
+      "dof": 0,
+      "occurrence": 12
+    },
+    {
+      "dof": 0,
+      "occurrence": 14
+    },
+    {
+      "dof": 0,
+      "occurrence": 16
+    },
+    {
+      "dof": 0,
+      "occurrence": 18
+    },
+    {
+      "dof": 0,
+      "occurrence": 20
+    },
+    {
+      "dof": 0,
+      "occurrence": 22
+    },
+    {
+      "dof": 0,
+      "occurrence": 24
+    },
+    {
+      "dof": 0,
+      "occurrence": 26
+    },
+    {
+      "dof": 0,
+      "occurrence": 28
+    },
+    {
+      "dof": 0,
+      "occurrence": 30
+    },
+    {
+      "dof": 0,
+      "occurrence": 32
+    },
+    {
+      "dof": 0,
+      "occurrence": 34
+    },
+    {
+      "dof": 0,
+      "occurrence": 36
+    },
+    {
+      "dof": 0,
+      "occurrence": 38
+    },
+    {
+      "dof": 0,
+      "occurrence": 40
+    },
+    {
+      "dof": 0,
+      "occurrence": 42
+    },
+    {
+      "dof": 0,
+      "occurrence": 44
+    },
+    {
+      "dof": 0,
+      "occurrence": 46
+    },
+    {
+      "dof": 0,
+      "occurrence": 48
+    },
+    {
+      "dof": 0,
+      "occurrence": 50
+    },
+    {
+      "dof": 0,
+      "occurrence": 52
+    },
+    {
+      "dof": 0,
+      "occurrence": 54
+    },
+    {
+      "dof": 0,
+      "occurrence": 56
+    },
+    {
+      "dof": 0,
+      "occurrence": 58
+    },
+    {
+      "dof": 0,
+      "occurrence": 60
+    },
+    {
+      "dof": 0,
+      "occurrence": 62
+    },
+    {
+      "dof": 0,
+      "occurrence": 64
+    },
+    {
+      "dof": 0,
+      "occurrence": 66
+    },
+    {
+      "dof": 0,
+      "occurrence": 68
+    },
+    {
+      "dof": 0,
+      "occurrence": 70
+    },
+    {
+      "dof": 0,
+      "occurrence": 72
+    },
+    {
+      "dof": 0,
+      "occurrence": 74
+    },
+    {
+      "dof": 0,
+      "occurrence": 76
+    },
+    {
+      "dof": 0,
+      "occurrence": 78
+    },
+    {
+      "dof": 0,
+      "occurrence": 80
+    },
+    {
+      "dof": 0,
+      "occurrence": 82
+    },
+    {
+      "dof": 0,
+      "occurrence": 84
+    },
+    {
+      "dof": 0,
+      "occurrence": 86
+    },
+    {
+      "dof": 0,
+      "occurrence": 88
+    },
+    {
+      "dof": 0,
+      "occurrence": 90
+    },
+    {
+      "dof": 0,
+      "occurrence": 92
+    },
+    {
+      "dof": 0,
+      "occurrence": 94
+    },
+    {
+      "dof": 0,
+      "occurrence": 96
+    },
+    {
+      "dof": 0,
+      "occurrence": 98
+    },
+    {
+      "dof": 0,
+      "occurrence": 100
+    },
+    {
+      "dof": 0,
+      "occurrence": 102
+    },
+    {
+      "dof": 0,
+      "occurrence": 104
+    },
+    {
+      "dof": 0,
+      "occurrence": 106
+    },
+    {
+      "dof": 0,
+      "occurrence": 108
+    },
+    {
+      "dof": 0,
+      "occurrence": 110
+    },
+    {
+      "dof": 0,
+      "occurrence": 112
+    },
+    {
+      "dof": 0,
+      "occurrence": 114
+    },
+    {
+      "dof": 0,
+      "occurrence": 116
+    },
+    {
+      "dof": 0,
+      "occurrence": 118
+    },
+    {
+      "dof": 0,
+      "occurrence": 120
+    },
+    {
+      "dof": 0,
+      "occurrence": 122
+    },
+    {
+      "dof": 0,
+      "occurrence": 124
+    },
+    {
+      "dof": 0,
+      "occurrence": 126
+    },
+    {
+      "dof": 0,
+      "occurrence": 128
+    },
+    {
+      "dof": 0,
+      "occurrence": 130
+    },
+    {
+      "dof": 0,
+      "occurrence": 132
+    },
+    {
+      "dof": 0,
+      "occurrence": 134
+    },
+    {
+      "dof": 0,
+      "occurrence": 136
+    },
+    {
+      "dof": 0,
+      "occurrence": 138
+    },
+    {
+      "dof": 0,
+      "occurrence": 140
+    },
+    {
+      "dof": 0,
+      "occurrence": 142
+    },
+    {
+      "dof": 0,
+      "occurrence": 144
+    },
+    {
+      "dof": 0,
+      "occurrence": 146
+    },
+    {
+      "dof": 0,
+      "occurrence": 148
+    },
+    {
+      "dof": 0,
+      "occurrence": 150
+    },
+    {
+      "dof": 0,
+      "occurrence": 152
+    },
+    {
+      "dof": 0,
+      "occurrence": 154
+    },
+    {
+      "dof": 0,
+      "occurrence": 156
+    },
+    {
+      "dof": 0,
+      "occurrence": 158
+    },
+    {
+      "dof": 0,
+      "occurrence": 160
+    },
+    {
+      "dof": 0,
+      "occurrence": 162
+    },
+    {
+      "dof": 0,
+      "occurrence": 164
+    },
+    {
+      "dof": 0,
+      "occurrence": 166
+    },
+    {
+      "dof": 0,
+      "occurrence": 168
+    },
+    {
+      "dof": 0,
+      "occurrence": 170
+    },
+    {
+      "dof": 0,
+      "occurrence": 172
+    },
+    {
+      "dof": 0,
+      "occurrence": 174
+    },
+    {
+      "dof": 0,
+      "occurrence": 176
+    }
+  ],
+  "errors": [],
+  "fixed": [
+    0,
+    2
+  ],
+  "floating": [],
+  "joints": [
+    {
+      "a": 2,
+      "b": 4,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 178,
+      "name": "Rigid Group 2:4",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 6,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 179,
+      "name": "Rigid Group 4:6",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 6,
+      "b": 8,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 180,
+      "name": "Rigid Group 6:8",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 10,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 181,
+      "name": "Rigid Group 4:10",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 10,
+      "b": 12,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 182,
+      "name": "Rigid Group 10:12",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 14,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 183,
+      "name": "Rigid Group 4:14",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 14,
+      "b": 16,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 184,
+      "name": "Rigid Group 14:16",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 18,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 185,
+      "name": "Rigid Group 4:18",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 18,
+      "b": 20,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 186,
+      "name": "Rigid Group 18:20",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 22,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 187,
+      "name": "Rigid Group 4:22",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 22,
+      "b": 24,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 188,
+      "name": "Rigid Group 22:24",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 26,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 189,
+      "name": "Rigid Group 4:26",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 26,
+      "b": 28,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 190,
+      "name": "Rigid Group 26:28",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 30,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 191,
+      "name": "Rigid Group 4:30",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 30,
+      "b": 32,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 192,
+      "name": "Rigid Group 30:32",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 34,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 193,
+      "name": "Rigid Group 4:34",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 34,
+      "b": 36,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 194,
+      "name": "Rigid Group 34:36",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 38,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 195,
+      "name": "Rigid Group 4:38",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 38,
+      "b": 40,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 196,
+      "name": "Rigid Group 38:40",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 42,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 197,
+      "name": "Rigid Group 4:42",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 42,
+      "b": 44,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 198,
+      "name": "Rigid Group 42:44",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 46,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 199,
+      "name": "Rigid Group 4:46",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 46,
+      "b": 48,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 200,
+      "name": "Rigid Group 46:48",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 50,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 201,
+      "name": "Rigid Group 4:50",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 50,
+      "b": 52,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 202,
+      "name": "Rigid Group 50:52",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 54,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 203,
+      "name": "Rigid Group 4:54",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 54,
+      "b": 56,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 204,
+      "name": "Rigid Group 54:56",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 58,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 205,
+      "name": "Rigid Group 4:58",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 58,
+      "b": 60,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 206,
+      "name": "Rigid Group 58:60",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 62,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 207,
+      "name": "Rigid Group 4:62",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 62,
+      "b": 64,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 208,
+      "name": "Rigid Group 62:64",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 66,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 209,
+      "name": "Rigid Group 4:66",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 66,
+      "b": 68,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 210,
+      "name": "Rigid Group 66:68",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 70,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 211,
+      "name": "Rigid Group 4:70",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 70,
+      "b": 72,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 212,
+      "name": "Rigid Group 70:72",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 74,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 213,
+      "name": "Rigid Group 4:74",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 74,
+      "b": 76,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 214,
+      "name": "Rigid Group 74:76",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 78,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 215,
+      "name": "Rigid Group 4:78",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 78,
+      "b": 80,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 216,
+      "name": "Rigid Group 78:80",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 82,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 217,
+      "name": "Rigid Group 4:82",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 82,
+      "b": 84,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 218,
+      "name": "Rigid Group 82:84",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 86,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 219,
+      "name": "Rigid Group 4:86",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 86,
+      "b": 88,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 220,
+      "name": "Rigid Group 86:88",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 90,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 221,
+      "name": "Rigid Group 4:90",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 90,
+      "b": 92,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 222,
+      "name": "Rigid Group 90:92",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 94,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 223,
+      "name": "Rigid Group 4:94",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 94,
+      "b": 96,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 224,
+      "name": "Rigid Group 94:96",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 98,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 225,
+      "name": "Rigid Group 4:98",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 98,
+      "b": 100,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 226,
+      "name": "Rigid Group 98:100",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 102,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 227,
+      "name": "Rigid Group 4:102",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 102,
+      "b": 104,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 228,
+      "name": "Rigid Group 102:104",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 106,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 229,
+      "name": "Rigid Group 4:106",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 106,
+      "b": 108,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 230,
+      "name": "Rigid Group 106:108",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 110,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 231,
+      "name": "Rigid Group 4:110",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 110,
+      "b": 112,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 232,
+      "name": "Rigid Group 110:112",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 114,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 233,
+      "name": "Rigid Group 4:114",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 114,
+      "b": 116,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 234,
+      "name": "Rigid Group 114:116",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 118,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 235,
+      "name": "Rigid Group 4:118",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 118,
+      "b": 120,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 236,
+      "name": "Rigid Group 118:120",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 122,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 237,
+      "name": "Rigid Group 4:122",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 122,
+      "b": 124,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 238,
+      "name": "Rigid Group 122:124",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 126,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 239,
+      "name": "Rigid Group 4:126",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 126,
+      "b": 128,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 240,
+      "name": "Rigid Group 126:128",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 130,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 241,
+      "name": "Rigid Group 4:130",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 130,
+      "b": 132,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 242,
+      "name": "Rigid Group 130:132",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 134,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 243,
+      "name": "Rigid Group 4:134",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 134,
+      "b": 136,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 244,
+      "name": "Rigid Group 134:136",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 138,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 245,
+      "name": "Rigid Group 4:138",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 138,
+      "b": 140,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 246,
+      "name": "Rigid Group 138:140",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 142,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 247,
+      "name": "Rigid Group 4:142",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 142,
+      "b": 144,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 248,
+      "name": "Rigid Group 142:144",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 146,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 249,
+      "name": "Rigid Group 4:146",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 146,
+      "b": 148,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 250,
+      "name": "Rigid Group 146:148",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 150,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 251,
+      "name": "Rigid Group 4:150",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 150,
+      "b": 152,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 252,
+      "name": "Rigid Group 150:152",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 154,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 253,
+      "name": "Rigid Group 4:154",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 154,
+      "b": 156,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 254,
+      "name": "Rigid Group 154:156",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 158,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 255,
+      "name": "Rigid Group 4:158",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 158,
+      "b": 160,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 256,
+      "name": "Rigid Group 158:160",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 162,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 257,
+      "name": "Rigid Group 4:162",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 162,
+      "b": 164,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 258,
+      "name": "Rigid Group 162:164",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 166,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 259,
+      "name": "Rigid Group 4:166",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 166,
+      "b": 168,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 260,
+      "name": "Rigid Group 166:168",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 170,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 261,
+      "name": "Rigid Group 4:170",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 170,
+      "b": 172,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 262,
+      "name": "Rigid Group 170:172",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 4,
+      "b": 174,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 263,
+      "name": "Rigid Group 4:174",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    },
+    {
+      "a": 174,
+      "b": 176,
+      "flip": true,
+      "frame_a": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "frame_b": {
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "id": 264,
+      "name": "Rigid Group 174:176",
+      "offset": 0.0,
+      "suppressed": false,
+      "type": "rigid",
+      "values": [],
+      "visible": false
+    }
+  ],
+  "links": [],
+  "origins": []
+}

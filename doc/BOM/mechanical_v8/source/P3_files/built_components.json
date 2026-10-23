@@ -1,0 +1,1870 @@
+{
+  "active": 0,
+  "components": [
+    {
+      "bodies": [],
+      "children": [
+        2,
+        444,
+        450
+      ],
+      "construction": 0,
+      "features": 62,
+      "id": 0,
+      "name": "P1_closed_base",
+      "occurrences": [],
+      "parent": null,
+      "sketches": 38
+    },
+    {
+      "bodies": [
+        "SEAM_SPLICE_1_FRONT",
+        "SEAM_SPLICE_1_REAR",
+        "SEAM_SPLICE_2_FRONT",
+        "SEAM_SPLICE_2_REAR"
+      ],
+      "children": [
+        4
+      ],
+      "construction": 0,
+      "features": 79,
+      "id": 1,
+      "name": "P1_closed_base",
+      "occurrences": [
+        {
+          "grounded": true,
+          "id": 2,
+          "name": "P1_closed_base:1",
+          "parent": 0
+        }
+      ],
+      "parent": 0,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30,
+        34,
+        38,
+        42,
+        46,
+        50,
+        54,
+        58,
+        62,
+        66,
+        70,
+        74,
+        78,
+        82,
+        86,
+        90,
+        94,
+        98,
+        102,
+        106,
+        110,
+        114,
+        118,
+        122,
+        126,
+        130,
+        134,
+        138,
+        142,
+        146,
+        150,
+        154,
+        158,
+        162,
+        166,
+        170,
+        174
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 3,
+      "name": "fold_wing_v7_P1_assembly",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 4,
+          "name": "fold_wing_v7_P1_assembly:1",
+          "parent": 1
+        }
+      ],
+      "parent": 1,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        8
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 5,
+      "name": "PILL_BASE_TRAY_1",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 6,
+          "name": "PILL_BASE_TRAY_1:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "PILL_BASE_TRAY_1_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 7,
+      "name": "PILL_BASE_TRAY_1_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 8,
+          "name": "PILL_BASE_TRAY_1_part:1",
+          "parent": 5
+        }
+      ],
+      "parent": 5,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        12
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 9,
+      "name": "PILL_BASE_LID_1",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 10,
+          "name": "PILL_BASE_LID_1:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "PILL_BASE_LID_1_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 11,
+      "name": "PILL_BASE_LID_1_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 12,
+          "name": "PILL_BASE_LID_1_part:1",
+          "parent": 9
+        }
+      ],
+      "parent": 9,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        16
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 13,
+      "name": "PILL_BASE_TRAY_2",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 14,
+          "name": "PILL_BASE_TRAY_2:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "PILL_BASE_TRAY_2_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 15,
+      "name": "PILL_BASE_TRAY_2_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 16,
+          "name": "PILL_BASE_TRAY_2_part:1",
+          "parent": 13
+        }
+      ],
+      "parent": 13,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        20
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 17,
+      "name": "PILL_BASE_LID_2",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 18,
+          "name": "PILL_BASE_LID_2:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "PILL_BASE_LID_2_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 19,
+      "name": "PILL_BASE_LID_2_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 20,
+          "name": "PILL_BASE_LID_2_part:1",
+          "parent": 17
+        }
+      ],
+      "parent": 17,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        24
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 21,
+      "name": "PILL_BASE_TRAY_3",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 22,
+          "name": "PILL_BASE_TRAY_3:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "PILL_BASE_TRAY_3_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 23,
+      "name": "PILL_BASE_TRAY_3_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 24,
+          "name": "PILL_BASE_TRAY_3_part:1",
+          "parent": 21
+        }
+      ],
+      "parent": 21,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        28
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 25,
+      "name": "PILL_BASE_LID_3",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 26,
+          "name": "PILL_BASE_LID_3:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "PILL_BASE_LID_3_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 27,
+      "name": "PILL_BASE_LID_3_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 28,
+          "name": "PILL_BASE_LID_3_part:1",
+          "parent": 25
+        }
+      ],
+      "parent": 25,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        32
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 29,
+      "name": "SEAM_PLATE_1",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 30,
+          "name": "SEAM_PLATE_1:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 31,
+      "name": "SEAM_PLATE_1_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 32,
+          "name": "SEAM_PLATE_1_part:1",
+          "parent": 29
+        }
+      ],
+      "parent": 29,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        36
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 33,
+      "name": "SEAM_PLATE_2",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 34,
+          "name": "SEAM_PLATE_2:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 35,
+      "name": "SEAM_PLATE_2_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 36,
+          "name": "SEAM_PLATE_2_part:1",
+          "parent": 33
+        }
+      ],
+      "parent": 33,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        40
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 37,
+      "name": "BA_R9_ENVELOPE",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 38,
+          "name": "BA_R9_ENVELOPE:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "BA_R9_ENVELOPE_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 39,
+      "name": "BA_R9_ENVELOPE_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 40,
+          "name": "BA_R9_ENVELOPE_part:1",
+          "parent": 37
+        }
+      ],
+      "parent": 37,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        44
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 41,
+      "name": "PEBBLE_HEAD_FRONT_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 42,
+          "name": "PEBBLE_HEAD_FRONT_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "PEBBLE_HEAD_FRONT_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 43,
+      "name": "PEBBLE_HEAD_FRONT_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 44,
+          "name": "PEBBLE_HEAD_FRONT_TRIAL_part:1",
+          "parent": 41
+        }
+      ],
+      "parent": 41,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        48
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 45,
+      "name": "PEBBLE_HEAD_REAR_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 46,
+          "name": "PEBBLE_HEAD_REAR_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "PEBBLE_HEAD_REAR_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 47,
+      "name": "PEBBLE_HEAD_REAR_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 48,
+          "name": "PEBBLE_HEAD_REAR_TRIAL_part:1",
+          "parent": 45
+        }
+      ],
+      "parent": 45,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        52
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 49,
+      "name": "CAPSULE_VISOR_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 50,
+          "name": "CAPSULE_VISOR_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "CAPSULE_VISOR_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 51,
+      "name": "CAPSULE_VISOR_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 52,
+          "name": "CAPSULE_VISOR_TRIAL_part:1",
+          "parent": 49
+        }
+      ],
+      "parent": 49,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        56
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 53,
+      "name": "EYE_1_DISPLAY_ONLY",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 54,
+          "name": "EYE_1_DISPLAY_ONLY:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "EYE_1_DISPLAY_ONLY_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 55,
+      "name": "EYE_1_DISPLAY_ONLY_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 56,
+          "name": "EYE_1_DISPLAY_ONLY_part:1",
+          "parent": 53
+        }
+      ],
+      "parent": 53,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        60
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 57,
+      "name": "EYE_2_DISPLAY_ONLY",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 58,
+          "name": "EYE_2_DISPLAY_ONLY:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "EYE_2_DISPLAY_ONLY_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 59,
+      "name": "EYE_2_DISPLAY_ONLY_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 60,
+          "name": "EYE_2_DISPLAY_ONLY_part:1",
+          "parent": 57
+        }
+      ],
+      "parent": 57,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        64
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 61,
+      "name": "CAMERA_LENS_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 62,
+          "name": "CAMERA_LENS_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "CAMERA_LENS_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 63,
+      "name": "CAMERA_LENS_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 64,
+          "name": "CAMERA_LENS_TRIAL_part:1",
+          "parent": 61
+        }
+      ],
+      "parent": 61,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        68
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 65,
+      "name": "JETSON_RESERVED_ZONE",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 66,
+          "name": "JETSON_RESERVED_ZONE:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "JETSON_RESERVED_ZONE_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 67,
+      "name": "JETSON_RESERVED_ZONE_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 68,
+          "name": "JETSON_RESERVED_ZONE_part:1",
+          "parent": 65
+        }
+      ],
+      "parent": 65,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        72
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 69,
+      "name": "POWER_RESERVED_ZONE",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 70,
+          "name": "POWER_RESERVED_ZONE:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "POWER_RESERVED_ZONE_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 71,
+      "name": "POWER_RESERVED_ZONE_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 72,
+          "name": "POWER_RESERVED_ZONE_part:1",
+          "parent": 69
+        }
+      ],
+      "parent": 69,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        76
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 73,
+      "name": "BATTERY_RESERVED_ZONE",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 74,
+          "name": "BATTERY_RESERVED_ZONE:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "BATTERY_RESERVED_ZONE_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 75,
+      "name": "BATTERY_RESERVED_ZONE_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 76,
+          "name": "BATTERY_RESERVED_ZONE_part:1",
+          "parent": 73
+        }
+      ],
+      "parent": 73,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        80
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 77,
+      "name": "L_ROUND_YAW_COLLAR_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 78,
+          "name": "L_ROUND_YAW_COLLAR_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_ROUND_YAW_COLLAR_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 79,
+      "name": "L_ROUND_YAW_COLLAR_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 80,
+          "name": "L_ROUND_YAW_COLLAR_TRIAL_part:1",
+          "parent": 77
+        }
+      ],
+      "parent": 77,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        84
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 81,
+      "name": "L_YAW_SERVO_INSIDE_BASE",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 82,
+          "name": "L_YAW_SERVO_INSIDE_BASE:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_YAW_SERVO_INSIDE_BASE_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 83,
+      "name": "L_YAW_SERVO_INSIDE_BASE_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 84,
+          "name": "L_YAW_SERVO_INSIDE_BASE_part:1",
+          "parent": 81
+        }
+      ],
+      "parent": 81,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        88
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 85,
+      "name": "L_CURVED_ARM_CORE_FRONT",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 86,
+          "name": "L_CURVED_ARM_CORE_FRONT:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 87,
+      "name": "L_CURVED_ARM_CORE_FRONT_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 88,
+          "name": "L_CURVED_ARM_CORE_FRONT_part:1",
+          "parent": 85
+        }
+      ],
+      "parent": 85,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        92
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 89,
+      "name": "L_CURVED_ARM_CORE_REAR",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 90,
+          "name": "L_CURVED_ARM_CORE_REAR:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_CURVED_ARM_CORE_REAR_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 91,
+      "name": "L_CURVED_ARM_CORE_REAR_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 92,
+          "name": "L_CURVED_ARM_CORE_REAR_part:1",
+          "parent": 89
+        }
+      ],
+      "parent": 89,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        96
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 93,
+      "name": "L_PITCH_SERVO_EMBEDDED",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 94,
+          "name": "L_PITCH_SERVO_EMBEDDED:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_PITCH_SERVO_EMBEDDED_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 95,
+      "name": "L_PITCH_SERVO_EMBEDDED_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 96,
+          "name": "L_PITCH_SERVO_EMBEDDED_part:1",
+          "parent": 93
+        }
+      ],
+      "parent": 93,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        100
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 97,
+      "name": "L_SHORT_SERVO_SHAFT_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 98,
+          "name": "L_SHORT_SERVO_SHAFT_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_SHORT_SERVO_SHAFT_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 99,
+      "name": "L_SHORT_SERVO_SHAFT_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 100,
+          "name": "L_SHORT_SERVO_SHAFT_TRIAL_part:1",
+          "parent": 97
+        }
+      ],
+      "parent": 97,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        104
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 101,
+      "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 102,
+          "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 103,
+      "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 104,
+          "name": "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+          "parent": 101
+        }
+      ],
+      "parent": 101,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        108
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 105,
+      "name": "L_F625ZZ_BEARING",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 106,
+          "name": "L_F625ZZ_BEARING:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_F625ZZ_BEARING_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 107,
+      "name": "L_F625ZZ_BEARING_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 108,
+          "name": "L_F625ZZ_BEARING_part:1",
+          "parent": 105
+        }
+      ],
+      "parent": 105,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        112
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 109,
+      "name": "L_FIXED_SUPPORT_STUB_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 110,
+          "name": "L_FIXED_SUPPORT_STUB_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_FIXED_SUPPORT_STUB_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 111,
+      "name": "L_FIXED_SUPPORT_STUB_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 112,
+          "name": "L_FIXED_SUPPORT_STUB_TRIAL_part:1",
+          "parent": 109
+        }
+      ],
+      "parent": 109,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        116
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 113,
+      "name": "L_TOUCH_0",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 114,
+          "name": "L_TOUCH_0:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_TOUCH_0_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 115,
+      "name": "L_TOUCH_0_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 116,
+          "name": "L_TOUCH_0_part:1",
+          "parent": 113
+        }
+      ],
+      "parent": 113,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        120
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 117,
+      "name": "L_TOUCH_1",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 118,
+          "name": "L_TOUCH_1:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_TOUCH_1_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 119,
+      "name": "L_TOUCH_1_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 120,
+          "name": "L_TOUCH_1_part:1",
+          "parent": 117
+        }
+      ],
+      "parent": 117,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        124
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 121,
+      "name": "L_TOUCH_2",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 122,
+          "name": "L_TOUCH_2:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_TOUCH_2_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 123,
+      "name": "L_TOUCH_2_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 124,
+          "name": "L_TOUCH_2_part:1",
+          "parent": 121
+        }
+      ],
+      "parent": 121,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        128
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 125,
+      "name": "R_ROUND_YAW_COLLAR_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 126,
+          "name": "R_ROUND_YAW_COLLAR_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_ROUND_YAW_COLLAR_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 127,
+      "name": "R_ROUND_YAW_COLLAR_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 128,
+          "name": "R_ROUND_YAW_COLLAR_TRIAL_part:1",
+          "parent": 125
+        }
+      ],
+      "parent": 125,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        132
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 129,
+      "name": "R_YAW_SERVO_INSIDE_BASE",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 130,
+          "name": "R_YAW_SERVO_INSIDE_BASE:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_YAW_SERVO_INSIDE_BASE_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 131,
+      "name": "R_YAW_SERVO_INSIDE_BASE_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 132,
+          "name": "R_YAW_SERVO_INSIDE_BASE_part:1",
+          "parent": 129
+        }
+      ],
+      "parent": 129,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        136
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 133,
+      "name": "R_CURVED_ARM_CORE_FRONT",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 134,
+          "name": "R_CURVED_ARM_CORE_FRONT:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_CURVED_ARM_CORE_FRONT_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 135,
+      "name": "R_CURVED_ARM_CORE_FRONT_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 136,
+          "name": "R_CURVED_ARM_CORE_FRONT_part:1",
+          "parent": 133
+        }
+      ],
+      "parent": 133,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        140
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 137,
+      "name": "R_CURVED_ARM_CORE_REAR",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 138,
+          "name": "R_CURVED_ARM_CORE_REAR:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_CURVED_ARM_CORE_REAR_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 139,
+      "name": "R_CURVED_ARM_CORE_REAR_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 140,
+          "name": "R_CURVED_ARM_CORE_REAR_part:1",
+          "parent": 137
+        }
+      ],
+      "parent": 137,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        144
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 141,
+      "name": "R_PITCH_SERVO_EMBEDDED",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 142,
+          "name": "R_PITCH_SERVO_EMBEDDED:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_PITCH_SERVO_EMBEDDED_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 143,
+      "name": "R_PITCH_SERVO_EMBEDDED_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 144,
+          "name": "R_PITCH_SERVO_EMBEDDED_part:1",
+          "parent": 141
+        }
+      ],
+      "parent": 141,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        148
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 145,
+      "name": "R_SHORT_SERVO_SHAFT_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 146,
+          "name": "R_SHORT_SERVO_SHAFT_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_SHORT_SERVO_SHAFT_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 147,
+      "name": "R_SHORT_SERVO_SHAFT_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 148,
+          "name": "R_SHORT_SERVO_SHAFT_TRIAL_part:1",
+          "parent": 145
+        }
+      ],
+      "parent": 145,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        152
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 149,
+      "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 150,
+          "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 151,
+      "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 152,
+          "name": "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part:1",
+          "parent": 149
+        }
+      ],
+      "parent": 149,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        156
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 153,
+      "name": "R_F625ZZ_BEARING",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 154,
+          "name": "R_F625ZZ_BEARING:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_F625ZZ_BEARING_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 155,
+      "name": "R_F625ZZ_BEARING_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 156,
+          "name": "R_F625ZZ_BEARING_part:1",
+          "parent": 153
+        }
+      ],
+      "parent": 153,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        160
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 157,
+      "name": "R_FIXED_SUPPORT_STUB_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 158,
+          "name": "R_FIXED_SUPPORT_STUB_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_FIXED_SUPPORT_STUB_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 159,
+      "name": "R_FIXED_SUPPORT_STUB_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 160,
+          "name": "R_FIXED_SUPPORT_STUB_TRIAL_part:1",
+          "parent": 157
+        }
+      ],
+      "parent": 157,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        164
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 161,
+      "name": "R_TOUCH_0",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 162,
+          "name": "R_TOUCH_0:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_TOUCH_0_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 163,
+      "name": "R_TOUCH_0_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 164,
+          "name": "R_TOUCH_0_part:1",
+          "parent": 161
+        }
+      ],
+      "parent": 161,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        168
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 165,
+      "name": "R_TOUCH_1",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 166,
+          "name": "R_TOUCH_1:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_TOUCH_1_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 167,
+      "name": "R_TOUCH_1_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 168,
+          "name": "R_TOUCH_1_part:1",
+          "parent": 165
+        }
+      ],
+      "parent": 165,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        172
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 169,
+      "name": "R_TOUCH_2",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 170,
+          "name": "R_TOUCH_2:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_TOUCH_2_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 171,
+      "name": "R_TOUCH_2_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 172,
+          "name": "R_TOUCH_2_part:1",
+          "parent": 169
+        }
+      ],
+      "parent": 169,
+      "sketches": 0
+    },
+    {
+      "bodies": [],
+      "children": [
+        176
+      ],
+      "construction": 0,
+      "features": 0,
+      "id": 173,
+      "name": "ROUNDED_PHONE_CRADLE_TRIAL",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 174,
+          "name": "ROUNDED_PHONE_CRADLE_TRIAL:1",
+          "parent": 3
+        }
+      ],
+      "parent": 3,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "ROUNDED_PHONE_CRADLE_TRIAL_part"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 0,
+      "id": 175,
+      "name": "ROUNDED_PHONE_CRADLE_TRIAL_part",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 176,
+          "name": "ROUNDED_PHONE_CRADLE_TRIAL_part:1",
+          "parent": 173
+        }
+      ],
+      "parent": 173,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "L_WRAP_HAND_FRONT",
+        "L_WRAP_HAND_REAR",
+        "L_HAND_DOWEL_1",
+        "L_HAND_DOWEL_2"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 4,
+      "id": 443,
+      "name": "P3_L_HAND",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 444,
+          "name": "P3_L_HAND:1",
+          "parent": 0
+        }
+      ],
+      "parent": 0,
+      "sketches": 0
+    },
+    {
+      "bodies": [
+        "R_WRAP_HAND_FRONT",
+        "R_WRAP_HAND_REAR",
+        "R_HAND_DOWEL_1",
+        "R_HAND_DOWEL_2"
+      ],
+      "children": [],
+      "construction": 0,
+      "features": 4,
+      "id": 449,
+      "name": "P3_R_HAND",
+      "occurrences": [
+        {
+          "grounded": false,
+          "id": 450,
+          "name": "P3_R_HAND:1",
+          "parent": 0
+        }
+      ],
+      "parent": 0,
+      "sketches": 0
+    }
+  ],
+  "pending_moves": []
+}

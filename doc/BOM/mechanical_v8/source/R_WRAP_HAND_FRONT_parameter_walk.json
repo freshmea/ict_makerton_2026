@@ -1,0 +1,277 @@
+{
+  "commands": [
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cap_d",
+        "expression": "89"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cap_d",
+        "expression": "92"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "cap_d",
+        "expression": "90"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "palm_l",
+        "expression": "78"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "palm_l",
+        "expression": "82"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "palm_l",
+        "expression": "80"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "palm_h",
+        "expression": "40"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "palm_h",
+        "expression": "44"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "palm_h",
+        "expression": "42"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "wall",
+        "expression": "3"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "wall",
+        "expression": "3.6"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "wall",
+        "expression": "3.2"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "bolt_d",
+        "expression": "3.2"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "bolt_d",
+        "expression": "3.6"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "bolt_d",
+        "expression": "3.4"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "dowel_d",
+        "expression": "3.8"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "dowel_d",
+        "expression": "4.2"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "dowel_d",
+        "expression": "4"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "fit",
+        "expression": "0.3"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "fit",
+        "expression": "0.5"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    },
+    {
+      "command": "parameters.change",
+      "params": {
+        "name": "fit",
+        "expression": "0.4"
+      }
+    },
+    {
+      "command": "document.inspect",
+      "params": {
+        "measure": true
+      }
+    }
+  ]
+}

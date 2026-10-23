@@ -1,0 +1,17 @@
+{
+  "id": 5,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "data": "[omitted; written by MCP to local PNG]",
+        "mimeType": "image/png",
+        "type": "image"
+      },
+      {
+        "text": "{\"bytes\":168666,\"height\":850,\"path\":\"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v7\\\\reference\\\\solidcraft\\\\P1_assembly_iso.png\",\"renderer\":\"gpu\",\"source\":\"model\",\"width\":1200}",
+        "type": "text"
+      }
+    ]
+  }
+}

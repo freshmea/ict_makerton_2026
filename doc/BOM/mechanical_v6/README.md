@@ -1,5 +1,7 @@
 # 폴드 윙 버디 v6 — 치수 기반 CAD·도면
 
+**현재 기구 기준은 [v7 P1](../mechanical_v7/README.md)이다.** 아래 전체 조립 CAD는 이전 P0 이력이다. 외부 서보로 그려졌던 관절 참고 PDF·PNG는 P1으로 교체했으며 [기존 도면과 생성기](history/P0_external_servo)를 보존했다. 현재 `dimensions/build_detail_sheets.py`는 새 P1 상세도를 재생성하는 호환 진입점이다.
+
 작성일: 2026-10-23. 단위: **mm**. 개정: **P0 — 배치·끼움 검토용**.
 
 부품 문헌 치수와 SpotMicro 원본 STL/STEP를 조사해 CAD를 새로 만들었다. **전면·측면·평면도는 동일한 CAD 솔리드에서 OpenCascade 정투상/은선 제거로 생성**했다. 사진이나 AI 이미지에서 길이를 역산하지 않았다. 외관 이미지는 이 CAD의 배치 참고용이며 제작 치수의 근거는 STEP와 치수 도면이다.

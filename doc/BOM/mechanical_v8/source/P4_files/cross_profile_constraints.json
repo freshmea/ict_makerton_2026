@@ -1,0 +1,62 @@
+[
+  {
+    "name": "L_ShoulderCrossProfile",
+    "sketch": 463
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "result": {
+      "changed": 12,
+      "fixed": true
+    },
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    }
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 463
+  },
+  {
+    "name": "R_ShoulderCrossProfile",
+    "sketch": 515
+  },
+  {
+    "created": {
+      "constraints": [],
+      "curves": [],
+      "dimensions": [],
+      "points": []
+    },
+    "result": {
+      "changed": 12,
+      "fixed": true
+    },
+    "sketch": {
+      "dof": 0,
+      "solved": true
+    }
+  },
+  {
+    "dof": 0,
+    "failing": [],
+    "profiles": 1,
+    "status": "solved"
+  },
+  {
+    "profiles": 1,
+    "sketch": 515
+  }
+]

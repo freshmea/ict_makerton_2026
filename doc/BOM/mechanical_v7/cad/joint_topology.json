@@ -1,0 +1,72 @@
+[
+  {
+    "side": "L",
+    "pivot": [
+      -220,
+      40,
+      315
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ],
+    "fixed_core_diameter": 80,
+    "fixed_core_y": [
+      13,
+      67
+    ],
+    "motor_bbox_inside_core": true,
+    "cross_recess_trial": [
+      30,
+      6.4,
+      2.7
+    ],
+    "bearing_bore": 16.3,
+    "flange_bore": 18.2,
+    "drive_cap_y": [
+      6,
+      12
+    ],
+    "rear_cap_y": [
+      68,
+      74
+    ],
+    "fixed_vs_moving_clearance_nominal": 1.0
+  },
+  {
+    "side": "R",
+    "pivot": [
+      220,
+      40,
+      315
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ],
+    "fixed_core_diameter": 80,
+    "fixed_core_y": [
+      13,
+      67
+    ],
+    "motor_bbox_inside_core": true,
+    "cross_recess_trial": [
+      30,
+      6.4,
+      2.7
+    ],
+    "bearing_bore": 16.3,
+    "flange_bore": 18.2,
+    "drive_cap_y": [
+      6,
+      12
+    ],
+    "rear_cap_y": [
+      68,
+      74
+    ],
+    "fixed_vs_moving_clearance_nominal": 1.0
+  }
+]

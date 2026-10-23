@@ -1,0 +1,10 @@
+{
+  "date_kst": "2026-10-23",
+  "executable_version_seen": "0.20.0",
+  "opened_file": "cad/fold_wing_v8_P3_motion.solidcraft",
+  "joint_selector": "L_J1_YAW (Revolute)",
+  "angle_value_observed_deg": -4.2,
+  "source": "Live user-driven preview observed after reopening saved P3; no assistant input or neutral reset after detected user input",
+  "revolute_axis_glyphs_visible": 4,
+  "screenshot": "P3_desktop_joint_drive.jpg"
+}

@@ -2,7 +2,11 @@
 
 사진 확인 및 수집일: **2026-10-23** (한국 시간).
 
-- [v6 치수 기반 CAD·3면도·관절 분석](mechanical_v6/README.md): 공식/판매처 치수, SpotMicro 원본 STEP/STL, SolidCraft MCP 분석, P0 도면·STEP·STL·끼움 시험편.
+- [v8 P5 — 6서보·Yaw / Pitch / Roll 개정 중](mechanical_v8/README.md): 최신 사용자 기준은 좌우 각 Yaw·Shoulder Pitch·Wrist Roll이다. 손 길이 방향 X동축 서보·하우징과6축 설정·출력 패키지를 P5로 개정 중이다. P4의 두 Pitch 구성과 P0~P3 자료는 이전 이력이며 P5 완료 근거로 사용하지 않는다.
+- [P5 조립·X동축 손목·6축 구동 상세](mechanical_v8/source/ASSEMBLY_JOINTS_P5.md): 서보6개 배정, 실제축과 부모 링크, 3분할 손·분리 베어링 캡의 조립 의도와 검사 진행 상태.
+- [이전 P4 두 Pitch 구성](mechanical_v8/source/ASSEMBLY_JOINTS_P4.md): Yaw·Shoulder Pitch·Wrist Pitch로 작성했던6서보 설계·검사 이력. 최신 P5 손목과 출력물을 혼용하지 않는다.
+- [v7 내장 서보·감싸는 관절·곡선 외형](mechanical_v7/README.md): 이전 P1 CAD·3면도·관절 상세·출력 부품 22개. 원본 혼 포켓 재분석 및 SolidCraft 가져오기 제한 기록.
+- [v6 치수 기반 CAD 이력](mechanical_v6/README.md): 이전 P0 배치와 치수 출처·끼움 시험편. 관절 참고 2페이지는 v7 P1으로 교체했다.
 - [재료 목록과 사용 전 확인 사항](재료%20목록.md): 사진 기반 식별, 최소 수량, 확정/미정 사양, 전원·카메라 호환성.
 - [마이크·스피커·네오픽셀 추가 자료](오디오_LED_추가부품.md): BA-R9 제조사 설명서, WS2812B 후보 데이터시트, 네오픽셀 가이드, 마이크·USB 어댑터 식별 상태.
 - [LED 매트릭스·터치 센서 추가 자료](매트릭스_터치_추가부품.md): MAX7219 모듈 1개, 터치 센서 6개, 제조사 데이터시트와 Jetson 신호 전압 검토.

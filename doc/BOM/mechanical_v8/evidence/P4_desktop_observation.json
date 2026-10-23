@@ -1,0 +1,16 @@
+{
+  "observed_date_kst": "2026-10-23",
+  "application": "SolidCraft 0.20.0 portable",
+  "opened_file": "cad/fold_wing_v8_P4_6servo.solidcraft",
+  "desktop_3D_model_visible": true,
+  "browser_body_count": 77,
+  "visible_revolute_axis_glyphs": 6,
+  "new_shoulder_housings_visible": true,
+  "assembly_drive_panel_opened": true,
+  "observed_joint_selector": "L_J1_YAW (Revolute)",
+  "gui_angle_motion_test_completed": false,
+  "computer_use_stopped_by_physical_Escape": true,
+  "additional_UI_actions_after_stop": false,
+  "native_save_command_issued_by_UI_automation": false,
+  "evidence_basis": "Direct Computer Use screenshot and accessibility observations; no saved screenshot artifact. Numerical six-axis motion verification is recorded separately by native MCP QA."
+}

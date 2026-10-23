@@ -1,0 +1,28 @@
+﻿part,quantity,print_x_mm,print_y_mm,print_z_mm,orientation,contact_area_mm2,exclusion_and_reserved_brim,sliced,3mf
+CAPSULE_VISOR_TRIAL,1,144.0,27.768,67.0,Rx 180; largest axial planar boundary face (automatic),299.973,PASS,False,P4/print/single_part_3mf/CAPSULE_VISOR_TRIAL.3mf
+HAND_DOWEL_4x6,4,3.999,4.0,6.0,R0; largest axial planar boundary face (automatic),12.561,PASS,False,P4/print/single_part_3mf/HAND_DOWEL_4x6.3mf
+L_CURVED_ARM_CORE_FRONT,1,138.992,218.999,34.0,Rx -90 deg; original max-Y split face down,1311.068,PASS,False,P4/print/single_part_3mf/L_CURVED_ARM_CORE_FRONT.3mf
+L_CURVED_ARM_CORE_REAR,1,138.992,218.999,34.0,Rx +90 deg; original min-Y split face down,1311.068,PASS,False,P4/print/single_part_3mf/L_CURVED_ARM_CORE_REAR.3mf
+L_ROUND_YAW_COLLAR_TRIAL,1,82.0,82.0,35.0,R0; original flat lower-Z face down,1095.188,PASS,False,P4/print/single_part_3mf/L_ROUND_YAW_COLLAR_TRIAL.3mf
+L_SHOULDER_YAW_TURRET,1,79.986,71.998,90.999,R0; largest axial planar boundary face (automatic),3726.626,PASS,False,P4/print/single_part_3mf/L_SHOULDER_YAW_TURRET.3mf
+L_WRAP_HAND_FRONT,1,171.978,89.997,34.0,Rx -90 deg; original max-Y split face down,1132.076,PASS,False,P4/print/single_part_3mf/L_WRAP_HAND_FRONT.3mf
+L_WRAP_HAND_REAR,1,171.978,89.997,34.0,Rx +90 deg; original min-Y split face down,1132.076,PASS,False,P4/print/single_part_3mf/L_WRAP_HAND_REAR.3mf
+PEBBLE_HEAD_FRONT_TRIAL,1,160.528,140.483,25.524,Rx -90 deg; original max-Y split face down,2032.667,PASS,False,P4/print/single_part_3mf/PEBBLE_HEAD_FRONT_TRIAL.3mf
+PEBBLE_HEAD_REAR_TRIAL,1,191.997,155.0,96.002,Rx +90 deg; original min-Y split face down,2036.208,PASS,False,P4/print/single_part_3mf/PEBBLE_HEAD_REAR_TRIAL.3mf
+PILL_BASE_LID_1,1,213.333,200.0,4.0,R0; original flat lower-Z face down,40240.342,PASS,False,P4/print/single_part_3mf/PILL_BASE_LID_1.3mf
+PILL_BASE_LID_2,1,213.333,200.0,4.0,R0; original flat lower-Z face down,41523.973,PASS,False,P4/print/single_part_3mf/PILL_BASE_LID_2.3mf
+PILL_BASE_LID_3,1,213.333,200.0,4.0,R0; original flat lower-Z face down,40240.342,PASS,False,P4/print/single_part_3mf/PILL_BASE_LID_3.3mf
+PILL_BASE_TRAY_1,1,213.333,200.0,96.0,R0; original flat lower-Z face down,41628.549,PASS,False,P4/print/single_part_3mf/PILL_BASE_TRAY_1.3mf
+PILL_BASE_TRAY_2,1,213.333,200.0,96.0,R0; original flat lower-Z face down,42338.986,PASS,False,P4/print/single_part_3mf/PILL_BASE_TRAY_2.3mf
+PILL_BASE_TRAY_3,1,213.333,200.0,96.0,R0; original flat lower-Z face down,41630.83,PASS,False,P4/print/single_part_3mf/PILL_BASE_TRAY_3.3mf
+R_CURVED_ARM_CORE_FRONT,1,138.998,218.999,34.0,Rx -90 deg; original max-Y split face down,1311.068,PASS,False,P4/print/single_part_3mf/R_CURVED_ARM_CORE_FRONT.3mf
+R_CURVED_ARM_CORE_REAR,1,138.998,218.999,34.0,Rx +90 deg; original min-Y split face down,1311.068,PASS,False,P4/print/single_part_3mf/R_CURVED_ARM_CORE_REAR.3mf
+R_ROUND_YAW_COLLAR_TRIAL,1,82.0,82.0,35.0,R0; original flat lower-Z face down,1095.188,PASS,False,P4/print/single_part_3mf/R_ROUND_YAW_COLLAR_TRIAL.3mf
+R_SHOULDER_YAW_TURRET,1,79.986,71.998,90.999,R0; largest axial planar boundary face (automatic),3726.626,PASS,False,P4/print/single_part_3mf/R_SHOULDER_YAW_TURRET.3mf
+R_WRAP_HAND_FRONT,1,171.978,89.997,34.0,Rx -90 deg; original max-Y split face down,1132.076,PASS,False,P4/print/single_part_3mf/R_WRAP_HAND_FRONT.3mf
+R_WRAP_HAND_REAR,1,171.978,89.997,34.0,Rx +90 deg; original min-Y split face down,1132.076,PASS,False,P4/print/single_part_3mf/R_WRAP_HAND_REAR.3mf
+ROUNDED_PHONE_CRADLE_TRIAL,1,82.0,60.538,53.509,R0; original flat lower-Z face down,4094.757,PASS,False,P4/print/single_part_3mf/ROUNDED_PHONE_CRADLE_TRIAL.3mf
+SEAM_SPLICE_1_FRONT,1,48.0,44.0,10.0,"Rx 180 deg; top nut-pocket face down, locator pegs up; pocket bridges need preview",1977.44,PASS,False,P4/print/single_part_3mf/SEAM_SPLICE_1_FRONT.3mf
+SEAM_SPLICE_1_REAR,1,48.0,44.0,10.0,"Rx 180 deg; top nut-pocket face down, locator pegs up; pocket bridges need preview",1977.44,PASS,False,P4/print/single_part_3mf/SEAM_SPLICE_1_REAR.3mf
+SEAM_SPLICE_2_FRONT,1,48.0,44.0,10.0,"Rx 180 deg; top nut-pocket face down, locator pegs up; pocket bridges need preview",1977.44,PASS,False,P4/print/single_part_3mf/SEAM_SPLICE_2_FRONT.3mf
+SEAM_SPLICE_2_REAR,1,48.0,44.0,10.0,"Rx 180 deg; top nut-pocket face down, locator pegs up; pocket bridges need preview",1977.44,PASS,False,P4/print/single_part_3mf/SEAM_SPLICE_2_REAR.3mf

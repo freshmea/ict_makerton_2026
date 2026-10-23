@@ -1,0 +1,2 @@
+STATUS protocol=servo-bench-v1 state=stopped servo=0 angle=180 address=0x41 i2c=ok min_us=1000 max_us=2000 reason=host_stop oe_high=1
+OK CONFIG min_us=500 max_us=2500

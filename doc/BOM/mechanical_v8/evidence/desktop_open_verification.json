@@ -1,0 +1,12 @@
+{
+  "date_kst": "2026-10-23",
+  "executable": "C:/Users/Administrator/Downloads/solidcraft-windows-x64-portable/solidcraft-0.20.0-windows-x64-portable/solidcraft.exe",
+  "version_seen": "0.20.0",
+  "opened_file": "cad/fold_wing_v8_P2.solidcraft",
+  "observed_body_count": 53,
+  "observed_3d_isometric": true,
+  "observed_timeline": true,
+  "screenshot": "SolidCraft_0.20_P2_open.jpg",
+  "native_sha256": "50a8104c4476c6d4fcc6cc2a4c2c0894296edb3b2ae210b1af1da1d5398e881f",
+  "note": "Internal document name P1_closed_base is inherited from the embedded import base; final saved filename and metadata revision are P2."
+}

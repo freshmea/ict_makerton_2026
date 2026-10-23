@@ -1,0 +1,13 @@
+[package]
+name = "pico-servo-bench"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+publish = false
+
+[dependencies]
+serialport = { version = "=4.8.1", default-features = false }
+ctrlc = "=3.4.7"
+
+[profile.release]
+strip = true

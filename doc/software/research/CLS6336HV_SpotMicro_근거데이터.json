@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "researched_on": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "model": "JX CLS6336HV",
+  "purpose": "SpotMicro reference evidence; not an automatically applied firmware configuration",
+  "manufacturer": {
+    "source_id": "jx_product",
+    "product_url": "https://hkjx-servo.com/product-detail.html?category=HOT%20SERVO&product=CLS6336HV",
+    "data_url": "https://hkjx-servo.com/product/HOT%20SERVO/CLS6336HV/text-data.js",
+    "retrieved_data_sha256": "883EFCB3B08CEF4C4ED13EF4E75DB15B756ED3A3AB499A86EEDAFE7664D829B7",
+    "center_us": 1520,
+    "listed_frequency_hz": 330,
+    "text_deadband_us": 2,
+    "deadband_discrepancy": "Product image and older seller material show 1 us; not reconciled",
+    "voltage_specific_values": [
+      {"voltage_v": 6.0, "speed_s_per_60_deg": 0.14, "stall_torque_kg_cm": 27.8},
+      {"voltage_v": 7.4, "speed_s_per_60_deg": 0.11, "stall_torque_kg_cm": 35.6}
+    ],
+    "dimensions_mm": [40.5, 20.5, 40],
+    "mass_g": 63,
+    "min_control_pulse_us": null,
+    "max_control_pulse_us": null,
+    "rated_total_travel_deg": null,
+    "unknown_reason": "Endpoints and total travel not specified in retrieved manufacturer text data"
+  },
+  "project_references": [
+    {
+      "source_id": "road_balance_fix",
+      "repository_url": "https://github.com/Road-Balance/SpotMicroJetson",
+      "commit": "2235c77a93e86d04dec2e03c6306ba2c06d454ce",
+      "source_url": "https://github.com/Road-Balance/SpotMicroJetson/blob/2235c77a93e86d04dec2e03c6306ba2c06d454ce/JetsonNano/servo_controller_fix.py#L30-L47",
+      "local_path_from_repository_root": "doc/BOM/SpotMicroJetson/repo/JetsonNano/servo_controller_fix.py",
+      "file_sha256": "B16BED88DAF9089EE9954D1C64B56A506D0D87ECCBD9E1D48D5316BCDB8E725C",
+      "verification": "Read preserved local source and matched snapshot manifest; fresh raw URL retrieval failed",
+      "evidence_kind": "source_configuration",
+      "frequency_hz": 60,
+      "min_pulse_us": 460,
+      "max_pulse_us": 2440,
+      "computed_midpoint_us": 1450,
+      "global_servo_mapping": [
+        {"indices": [0, 1, 2, 3, 4, 5], "address_hex": "0x40", "channels": [0, 1, 2, 3, 4, 5]},
+        {"indices": [6, 7, 8, 9, 10, 11], "address_hex": "0x41", "channels": [6, 7, 8, 9, 10, 11]}
+      ],
+      "reference_offsets_deg": [180, 90, 90, 1, 90, 90, 180, 90, 90, 1, 90, 90],
+      "hardware_measurement_available": false,
+      "applicability": "Reference only; channel mapping and offsets differ from present 6-servo bench"
+    },
+    {
+      "source_id": "road_balance_lessons",
+      "evidence_kind": "preserved_auto_generated_transcripts",
+      "model_specific_pulse_explanation_us": [500, 2500],
+      "transcript_manifest_path": "doc/BOM/SpotMicroJetson/transcripts/sources.json",
+      "segments": [
+        {"video_id": "StFKgFmMEK0", "start_s": 999, "end_s": 1074, "local_file": "doc/BOM/SpotMicroJetson/transcripts/15_servo_specs.txt", "lines": [216, 232], "finding": "CLS6336HV and 500..2500 us / 0..180 explanation"},
+        {"video_id": "Az8Ae3zJoPo", "start_s": 1386, "end_s": 1533, "local_file": "doc/BOM/SpotMicroJetson/transcripts/16_servo_control.txt", "lines": [336, 368], "finding": "Command angle and physical travel mismatch explanation"},
+        {"video_id": "pvS29mRDxEc", "start_s": 326, "end_s": 381, "local_file": "doc/BOM/SpotMicroJetson/transcripts/18_calibration.txt", "lines": [76, 90], "finding": "CLS pulse range explanation"},
+        {"video_id": "pvS29mRDxEc", "start_s": 627, "end_s": 707, "local_file": "doc/BOM/SpotMicroJetson/transcripts/18_calibration.txt", "lines": [148, 167], "finding": "Library default pulse range can reduce physical travel"},
+        {"video_id": "pvS29mRDxEc", "start_s": 905, "end_s": 1117, "local_file": "doc/BOM/SpotMicroJetson/transcripts/18_calibration.txt", "lines": [212, 258], "finding": "Author describes improved travel after pulse configuration"}
+      ],
+      "limitation": "Video pixels and measurement instruments not reviewed in this research; automatic captions can contain numeric errors"
+    },
+    {
+      "source_id": "spotmicro_issue_8",
+      "issue_url": "https://github.com/mike4192/spotMicro/issues/8",
+      "issue_created_at": "2020-09-09T04:16:00Z",
+      "author": "ohmbrew",
+      "evidence_kind": "first_person_community_report",
+      "reported_model": "CLS6336HV",
+      "reported_computer": "Raspberry Pi 3B",
+      "reported_os_framework": "ROS Melodic",
+      "reported_controller": "Pololu Maestro 18 channels",
+      "settings_comment_url": "https://github.com/mike4192/spotMicro/issues/8#issuecomment-689292127",
+      "reported_approximate_pulse_bounds_us": [500, 2500],
+      "reported_center_us": 1500,
+      "reported_servo_max_angle_deg": 82.5,
+      "angle_limit_semantics": "One-direction command limit relative to center; not measured total travel",
+      "reported_axis_range_field_min": 1650,
+      "reported_axis_range_field_max": 1943.3,
+      "range_field_semantics": "End-to-end span field in converted configuration; not endpoint pulse values",
+      "frequency_hz": null,
+      "measured_total_travel_deg": null,
+      "maintainer_calibration_reply_url": "https://github.com/mike4192/spotMicro/issues/8#issuecomment-691795038",
+      "finding": "Horn installation and neutral link angle must match the intended joint working range",
+      "limitation": "Different controller; some clipping questions remain; no oscilloscope or full-angle measurement evidence"
+    },
+    {
+      "source_id": "spotmicroai_credits",
+      "url": "https://spotmicroai.readthedocs.io/en/latest/credits/",
+      "evidence_kind": "project_documentation",
+      "finding": "CLS6336HV-compatible KDY frame exists, while this community team said it continued using MG996R",
+      "applicability": "Frame compatibility does not establish CLS6336HV electrical settings"
+    },
+    {
+      "source_id": "mike_original_calibration",
+      "readme_url": "https://github.com/mike4192/spotMicro/blob/master/README.md#hardware",
+      "readme_git_blob_sha": "b4f846d3e6fb4a27097977d01b41fb1cbdea8ca8",
+      "calibration_url": "https://github.com/mike4192/spotMicro/blob/master/docs/servo_calibration.md",
+      "calibration_git_blob_sha": "20e32921cb4db8c448def9aa093800e196bf029e",
+      "actual_author_servo_model": "PDI-HV5523MG",
+      "evidence_kind": "project_calibration_method",
+      "applicability": "Reuse calibration concepts; do not reuse example pulse counts or offsets as CLS6336HV specifications"
+    },
+    {
+      "source_id": "gonglini_ros",
+      "repository_url": "https://github.com/gonglini/Spotmicro-Quadruped-Project-with-ROS",
+      "commit": "d3c42cb10902605c81d2010ebb7c63796cd0d4db",
+      "declared_servo_model": "CLS6336HV",
+      "declared_servo_count": 12,
+      "controller_url": "https://github.com/gonglini/Spotmicro-Quadruped-Project-with-ROS/blob/d3c42cb10902605c81d2010ebb7c63796cd0d4db/ros-i2cpwmboard-master/src/i2cpwm_controller.cpp#L283",
+      "controller_git_blob_sha": "9e1c8d2b70c565a9912e0eeea5eaf1ee60de0bb2",
+      "controller_default_frequency_hz": 330,
+      "config_url": "https://github.com/gonglini/Spotmicro-Quadruped-Project-with-ROS/blob/d3c42cb10902605c81d2010ebb7c63796cd0d4db/spot_micro_motion_cmd/config/spot_micro_motion_cmd.yaml#L20-L34",
+      "config_git_blob_sha": "c7238c572a40d52f6bd3d41393134c93eec7d7a0",
+      "config_center_counts": 306,
+      "limitation": "Runtime overrides and physical test evidence not verified; default frequency and count configuration must be reconciled before reuse"
+    }
+  ],
+  "current_bench": {
+    "firmware_path": "firmware/pico2-servo-bench",
+    "uf2_sha256": "3BA62C47816255FB5A51FFDD972DF67A0506E3E04C3051E0BD13F5D26B73641C",
+    "pca_address_hex": "0x41",
+    "nominal_frequency_hz": 50,
+    "prescale": 121,
+    "assumed_oscillator_hz": 25000000,
+    "frequency_measured": false,
+    "boot_default_min_us": 1000,
+    "boot_default_max_us": 2000,
+    "tested_runtime_min_us": 500,
+    "tested_runtime_max_us": 2500,
+    "runtime_setting_survives_reset": false,
+    "accepted_command_min_bound_us": 500,
+    "accepted_command_max_bound_us": 2500,
+    "command_angle_labels_deg": [0, 180],
+    "computed_label_90_pulse_us": 1500,
+    "test_mode": "One unloaded sequential sweep; one servo active at a time",
+    "test_record_path": "doc/software/test-results/2026-10-23/RUN-20261023-02.md",
+    "raw_log_directory": "doc/software/test-results/2026-10-23/RUN-20261023-02",
+    "user_observation_ko": "회전폭이 커졌고 걸림·이상음 없음",
+    "observed_result": "Six sequential movements; wider travel reported; no binding or abnormal sound reported",
+    "physical_calibration": [
+      {"servo": 1, "pca_channel": 0, "measured_travel_deg": null, "calibrated_center_us": null, "mechanical_min_us": null, "mechanical_max_us": null},
+      {"servo": 2, "pca_channel": 1, "measured_travel_deg": null, "calibrated_center_us": null, "mechanical_min_us": null, "mechanical_max_us": null},
+      {"servo": 3, "pca_channel": 2, "measured_travel_deg": null, "calibrated_center_us": null, "mechanical_min_us": null, "mechanical_max_us": null},
+      {"servo": 4, "pca_channel": 3, "measured_travel_deg": null, "calibrated_center_us": null, "mechanical_min_us": null, "mechanical_max_us": null},
+      {"servo": 5, "pca_channel": 4, "measured_travel_deg": null, "calibrated_center_us": null, "mechanical_min_us": null, "mechanical_max_us": null},
+      {"servo": 6, "pca_channel": 5, "measured_travel_deg": null, "calibrated_center_us": null, "mechanical_min_us": null, "mechanical_max_us": null}
+    ],
+    "unmeasured": ["physical angle", "oscilloscope pulse width", "loaded supply voltage", "current", "temperature", "stop latency", "long-duration endurance"]
+  }
+}

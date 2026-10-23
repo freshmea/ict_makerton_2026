@@ -1,0 +1,13 @@
+{
+  "schema": "SolidCraft native hand rebuild manifest",
+  "cli": "C:\\Users\\Administrator\\Downloads\\solidcraft-windows-x64-portable\\solidcraft-0.20.0-windows-x64-portable\\solidcraft-cli.exe",
+  "units": "mm",
+  "world_coordinates": true,
+  "parts": {
+    "L_WRAP_HAND_FRONT": "L_WRAP_HAND_FRONT.json",
+    "L_WRAP_HAND_REAR": "L_WRAP_HAND_REAR.json",
+    "R_WRAP_HAND_FRONT": "R_WRAP_HAND_FRONT.json",
+    "R_WRAP_HAND_REAR": "R_WRAP_HAND_REAR.json"
+  },
+  "interface_revision": "v7 P1 preserved; palm/fingers natively redesigned; two blind dowel sockets and two M3 bridge holes added"
+}

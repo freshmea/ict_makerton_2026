@@ -1,0 +1,163 @@
+{
+  "native_sha256": "1651fa24acf1d24314a0442f74fb693c540d079cb72ede110eda1a93a4b01a45",
+  "saved_native_unchanged": true,
+  "reused_hashed_exports_from_second_fresh_motion_QA_reopen": true,
+  "independent_native_exports": [
+    {
+      "name": "L_SHOULDER_YAW_TURRET",
+      "step_sha256": "d3946fd2738f0d171dae180af2acf8eb9353ba32fabbb214d31f08dd31eeca95",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 98285.72567126168
+    },
+    {
+      "name": "L_SHOULDER_SERVO_TRIAL",
+      "step_sha256": "dc0da736bb4110aea8ec2265a5162e506d601cd8e5f9d145bf7a0a68564bafd6",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 32723.99999999998
+    },
+    {
+      "name": "L_CURVED_ARM_CORE_FRONT_part",
+      "step_sha256": "c99113d381b9c29968a25e6b75889975ca0450b7cbc1988238643a2e2cec7a57",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 113620.95913210683
+    },
+    {
+      "name": "L_CURVED_ARM_CORE_REAR_part",
+      "step_sha256": "0810e2065c8de450cb1d9c2c5cb1a674e5c03f67089336c6f68a192ccb583bf5",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 110232.8011137263
+    },
+    {
+      "name": "L_ROUND_YAW_COLLAR_TRIAL_part",
+      "step_sha256": "1d924049bd54f87422c4f874625c41de0c7269246fda53a1ee246a09b861a9cf",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 38347.06532788044
+    },
+    {
+      "name": "R_SHOULDER_YAW_TURRET",
+      "step_sha256": "a0f452a67fb3aca1ab52441ebebc7317653b7547a5393fe55d1e4d2903d1cf1a",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 98285.72566722082
+    },
+    {
+      "name": "R_SHOULDER_SERVO_TRIAL",
+      "step_sha256": "a65d6e4a002ed9503fc0689e339590e0177b6d5e04b90ca685ac6749cc300a79",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 32723.99999999998
+    },
+    {
+      "name": "R_CURVED_ARM_CORE_FRONT_part",
+      "step_sha256": "9078f14305904f4af76ae7b056e360d772f8c23e5c34c748100c226df13e1bfa",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 113620.89885304787
+    },
+    {
+      "name": "R_CURVED_ARM_CORE_REAR_part",
+      "step_sha256": "615d034090e0ef9dfc96905b7e806878439a92c20c1ae64b0dc4a267aac1a497",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 110232.60833633677
+    },
+    {
+      "name": "R_ROUND_YAW_COLLAR_TRIAL_part",
+      "step_sha256": "162390d612fc9c16ba698d491ba06c98d02bbc6f5c48ede7c154165caafbaf3b",
+      "valid": true,
+      "one_closed_solid": true,
+      "volume_mm3": 38347.06532788044
+    }
+  ],
+  "shoulders": [
+    {
+      "side": "L",
+      "servo_vs_turret_intersection_mm3": 0.0,
+      "turret_vs_yaw_collar_intersection_mm3": 0.0,
+      "yaw_collar_top_z_mm": 135.0000001,
+      "moving_halves": [
+        {
+          "half": "FRONT",
+          "fixed_turret_intersection_mm3": 0.0,
+          "servo_case_intersection_mm3": 0.0,
+          "yaw_collar_intersection_mm3": 0.0,
+          "moving_cap_bottom_z_mm": 135.9999998999999,
+          "cap_to_yaw_collar_vertical_gap_mm": 0.9999997999998982,
+          "bridge_band_y_range_mm": [
+            13,
+            67
+          ],
+          "reference_core_radius_mm": 40,
+          "bridge_vs_reference_core_intersection_mm3": 0.0,
+          "bridge_to_R40_core_gap_mm": 1.0,
+          "bridge_min_radial_distance_mm": 41.0
+        },
+        {
+          "half": "REAR",
+          "fixed_turret_intersection_mm3": 0.0,
+          "servo_case_intersection_mm3": 0.0,
+          "yaw_collar_intersection_mm3": 0.0,
+          "moving_cap_bottom_z_mm": 135.9999998999999,
+          "cap_to_yaw_collar_vertical_gap_mm": 0.9999997999998982,
+          "bridge_band_y_range_mm": [
+            13,
+            67
+          ],
+          "reference_core_radius_mm": 40,
+          "bridge_vs_reference_core_intersection_mm3": 0.0,
+          "bridge_to_R40_core_gap_mm": 1.0,
+          "bridge_min_radial_distance_mm": 41.0
+        }
+      ]
+    },
+    {
+      "side": "R",
+      "servo_vs_turret_intersection_mm3": 0.0,
+      "turret_vs_yaw_collar_intersection_mm3": 0.0,
+      "yaw_collar_top_z_mm": 135.0000001,
+      "moving_halves": [
+        {
+          "half": "FRONT",
+          "fixed_turret_intersection_mm3": 0.0,
+          "servo_case_intersection_mm3": 0.0,
+          "yaw_collar_intersection_mm3": 0.0,
+          "moving_cap_bottom_z_mm": 135.99999989999998,
+          "cap_to_yaw_collar_vertical_gap_mm": 0.9999997999999835,
+          "bridge_band_y_range_mm": [
+            13,
+            67
+          ],
+          "reference_core_radius_mm": 40,
+          "bridge_vs_reference_core_intersection_mm3": 0.0,
+          "bridge_to_R40_core_gap_mm": 1.0,
+          "bridge_min_radial_distance_mm": 41.0
+        },
+        {
+          "half": "REAR",
+          "fixed_turret_intersection_mm3": 0.0,
+          "servo_case_intersection_mm3": 0.0,
+          "yaw_collar_intersection_mm3": 0.0,
+          "moving_cap_bottom_z_mm": 135.99999989999998,
+          "cap_to_yaw_collar_vertical_gap_mm": 0.9999997999999835,
+          "bridge_band_y_range_mm": [
+            13,
+            67
+          ],
+          "reference_core_radius_mm": 40,
+          "bridge_vs_reference_core_intersection_mm3": 0.0,
+          "bridge_to_R40_core_gap_mm": 1.0,
+          "bridge_min_radial_distance_mm": 41.0
+        }
+      ]
+    }
+  ],
+  "accepted": true,
+  "limitations": [
+    "Neutral CAD pose only; nominal geometric gaps do not prove printed fit, fastener retention, collision-free motion, load capacity or physical assembly."
+  ]
+}

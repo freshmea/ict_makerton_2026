@@ -1,0 +1,12 @@
+{
+  "id": 2,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\n  \"bodies\": [\n    \"PILL_BASE_TRAY_1_part\",\n    \"PILL_BASE_LID_1_part\",\n    \"PILL_BASE_TRAY_2_part\",\n    \"PILL_BASE_LID_2_part\",\n    \"PILL_BASE_TRAY_3_part\",\n    \"PILL_BASE_LID_3_part\",\n    \"SEAM_PLATE_1_part\",\n    \"SEAM_PLATE_2_part\",\n    \"BA_R9_ENVELOPE_part\",\n    \"PEBBLE_HEAD_FRONT_TRIAL_part\",\n    \"PEBBLE_HEAD_REAR_TRIAL_part\",\n    \"CAPSULE_VISOR_TRIAL_part\",\n    \"EYE_1_DISPLAY_ONLY_part\",\n    \"EYE_2_DISPLAY_ONLY_part\",\n    \"CAMERA_LENS_TRIAL_part\",\n    \"JETSON_RESERVED_ZONE_part\",\n    \"POWER_RESERVED_ZONE_part\",\n    \"BATTERY_RESERVED_ZONE_part\",\n    \"L_ROUND_YAW_COLLAR_TRIAL_part\",\n    \"L_YAW_SERVO_INSIDE_BASE_part\",\n    \"L_CURVED_ARM_CORE_FRONT_part\",\n    \"L_CURVED_ARM_CORE_REAR_part\",\n    \"L_PITCH_SERVO_EMBEDDED_part\",\n    \"L_SHORT_SERVO_SHAFT_TRIAL_part\",\n    \"L_WRAP_HAND_FRONT_part\",\n    \"L_WRAP_HAND_REAR_part\",\n    \"L_ACTUAL_CROSS_HORN_PLACEHOLDER_part\",\n    \"L_F625ZZ_BEARING_part\",\n    \"L_FIXED_SUPPORT_STUB_TRIAL_part\",\n    \"L_TOUCH_0_part\",\n    \"L_TOUCH_1_part\",\n    \"L_TOUCH_2_part\",\n    \"R_ROUND_YAW_COLLAR_TRIAL_part\",\n    \"R_YAW_SERVO_INSIDE_BASE_part\",\n    \"R_CURVED_ARM_CORE_FRONT_part\",\n    \"R_CURVED_ARM_CORE_REAR_part\",\n    \"R_PITCH_SERVO_EMBEDDED_part\",\n    \"R_SHORT_SERVO_SHAFT_TRIAL_part\",\n    \"R_WRAP_HAND_FRONT_part\",\n    \"R_WRAP_HAND_REAR_part\",\n    \"R_ACTUAL_CROSS_HORN_PLACEHOLDER_part\",\n    \"R_F625ZZ_BEARING_part\",\n    \"R_FIXED_SUPPORT_STUB_TRIAL_part\",\n    \"R_TOUCH_0_part\",\n    \"R_TOUCH_1_part\",\n    \"R_TOUCH_2_part\",\n    \"ROUNDED_PHONE_CRADLE_TRIAL_part\"\n  ],\n  \"component\": 1,\n  \"component_name\": \"fold_wing_v7_P1_assembly\",\n  \"errors\": 0,\n  \"features\": 1,\n  \"occurrence\": 2,\n  \"path\": \"D:\\\\repository\\\\ict_makerton_2026\\\\doc\\\\BOM\\\\mechanical_v7\\\\cad\\\\fold_wing_v7_P1_assembly.step\",\n  \"rigid_joints\": 94,\n  \"subcomponents\": 94,\n  \"warnings\": [\n    \"solid #44729: imported as an open body (the shell is not closed)\",\n    \"solid #54231: imported as an open body (the shell is not closed)\",\n    \"solid #81662: imported as an open body (the shell is not closed)\",\n    \"solid #91214: imported as an open body (the shell is not closed)\"\n  ]\n}",
+        "type": "text"
+      }
+    ]
+  }
+}

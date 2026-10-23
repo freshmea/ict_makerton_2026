@@ -1,0 +1,268 @@
+{
+  "completed": 13,
+  "ok": true,
+  "results": [
+    {
+      "component": 1,
+      "joints": [
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264
+      ]
+    },
+    {
+      "component": 547,
+      "name": "P4_L_YAW_CARRIER",
+      "occurrence": 548,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "L_SHOULDER_YAW_TURRET",
+        "L_SHOULDER_SERVO_TRIAL",
+        "L_SHOULDER_FIXED_STUB_TRIAL"
+      ],
+      "component": 547,
+      "features": [
+        549,
+        550,
+        551
+      ]
+    },
+    {
+      "component": 552,
+      "name": "P4_L_ARM",
+      "occurrence": 553,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "L_CURVED_ARM_CORE_FRONT_part",
+        "L_CURVED_ARM_CORE_REAR_part",
+        "L_PITCH_SERVO_EMBEDDED_part",
+        "L_FIXED_SUPPORT_STUB_TRIAL_part",
+        "L_SHOULDER_SHAFT_TRIAL",
+        "L_SHOULDER_HORN_TRIAL",
+        "L_SHOULDER_BEARING_TRIAL",
+        "L_RGB_0",
+        "L_RGB_1",
+        "L_RGB_2",
+        "L_RGB_3",
+        "L_RGB_4",
+        "L_RGB_5"
+      ],
+      "component": 552,
+      "features": [
+        554,
+        555,
+        556,
+        557,
+        558,
+        559,
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566
+      ]
+    },
+    {
+      "component": 567,
+      "name": "P4_L_HAND",
+      "occurrence": 568,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "L_WRAP_HAND_FRONT",
+        "L_WRAP_HAND_REAR",
+        "L_HAND_DOWEL_1",
+        "L_HAND_DOWEL_2",
+        "L_SHORT_SERVO_SHAFT_TRIAL_part",
+        "L_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+        "L_F625ZZ_BEARING_part"
+      ],
+      "component": 567,
+      "features": [
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575
+      ]
+    },
+    {
+      "component": 576,
+      "name": "P4_R_YAW_CARRIER",
+      "occurrence": 577,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "R_SHOULDER_YAW_TURRET",
+        "R_SHOULDER_SERVO_TRIAL",
+        "R_SHOULDER_FIXED_STUB_TRIAL"
+      ],
+      "component": 576,
+      "features": [
+        578,
+        579,
+        580
+      ]
+    },
+    {
+      "component": 581,
+      "name": "P4_R_ARM",
+      "occurrence": 582,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "R_CURVED_ARM_CORE_FRONT_part",
+        "R_CURVED_ARM_CORE_REAR_part",
+        "R_PITCH_SERVO_EMBEDDED_part",
+        "R_FIXED_SUPPORT_STUB_TRIAL_part",
+        "R_SHOULDER_SHAFT_TRIAL",
+        "R_SHOULDER_HORN_TRIAL",
+        "R_SHOULDER_BEARING_TRIAL",
+        "R_RGB_0",
+        "R_RGB_1",
+        "R_RGB_2",
+        "R_RGB_3",
+        "R_RGB_4",
+        "R_RGB_5"
+      ],
+      "component": 581,
+      "features": [
+        583,
+        584,
+        585,
+        586,
+        587,
+        588,
+        589,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595
+      ]
+    },
+    {
+      "component": 596,
+      "name": "P4_R_HAND",
+      "occurrence": 597,
+      "parent": 0
+    },
+    {
+      "bodies": [
+        "R_WRAP_HAND_FRONT",
+        "R_WRAP_HAND_REAR",
+        "R_HAND_DOWEL_1",
+        "R_HAND_DOWEL_2",
+        "R_SHORT_SERVO_SHAFT_TRIAL_part",
+        "R_ACTUAL_CROSS_HORN_PLACEHOLDER_part",
+        "R_F625ZZ_BEARING_part"
+      ],
+      "component": 596,
+      "features": [
+        598,
+        599,
+        600,
+        601,
+        602,
+        603,
+        604
+      ]
+    }
+  ]
+}

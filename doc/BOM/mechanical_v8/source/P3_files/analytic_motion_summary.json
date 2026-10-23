@@ -1,0 +1,16 @@
+{
+  "joint_count": 4,
+  "drives": 12,
+  "all_drive_moved": true,
+  "analytic_com_checks": 48,
+  "max_error_mm": 9.078001380657952e-05,
+  "com_tolerance_mm": 0.0001,
+  "joint_frame_tolerance_mm": 1e-06,
+  "parent_yaw_carries_wrist_frames": true,
+  "saved_neutral": true,
+  "hardware_angle_limits_verified": false,
+  "cad_demonstration_limits_deg": [
+    -15,
+    15
+  ]
+}

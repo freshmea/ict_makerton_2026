@@ -1,0 +1,57 @@
+{
+  "revision": "P5",
+  "accepted": true,
+  "gif": {
+    "path": "renders/P5_six_joint_demo.gif",
+    "size_px": [
+      1000,
+      650
+    ],
+    "frames": 97,
+    "unique_RGB_frames": 49,
+    "duration_ms": 7760,
+    "first_last_frame_equal": true,
+    "renderer": "SolidCraft native GPU, saved P5 study"
+  },
+  "pdf": {
+    "path": "drawings/FWB_v8_P5_RPY_A3.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "size_pt": [
+          1190.551025390625,
+          841.8897705078125
+        ],
+        "render": "drawings/FWB_v8_P5_RPY_A3_page1.png",
+        "sha256": "95362c52171c7885ed7ce21ef17ab69d959c043a46c71d2355b59ccf7f02d6f6"
+      },
+      {
+        "page": 2,
+        "size_pt": [
+          1190.551025390625,
+          841.8897705078125
+        ],
+        "render": "drawings/FWB_v8_P5_RPY_A3_page2.png",
+        "sha256": "013fd18595c984d5b9e374e8b13b90340c8a49c87067dc94a2fd9c26bc12569e"
+      },
+      {
+        "page": 3,
+        "size_pt": [
+          1190.551025390625,
+          841.8897705078125
+        ],
+        "render": "drawings/FWB_v8_P5_RPY_A3_page3.png",
+        "sha256": "5a26bbb5eb820e40352506cb0a1e171999217ab5d1f69c70ba29e9b36ba572dd"
+      }
+    ],
+    "visual_inspection": "All three rendered pages reviewed: readable Korean, no clipped text or overlapping content."
+  },
+  "desktop_boundary": {
+    "P5_opened_in_desktop": false,
+    "P5_GUI_angle_change_tested": false,
+    "reason": "User stopped the earlier P4 desktop-control session with physical Escape. No further computer-use actions were performed."
+  },
+  "limitations": [
+    "Engine renders and static print placement are separate from desktop GUI interaction, slicing and physical hardware tests."
+  ]
+}

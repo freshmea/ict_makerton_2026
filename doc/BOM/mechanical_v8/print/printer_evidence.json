@@ -1,0 +1,47 @@
+{
+  "checked_date": "2026-10-23",
+  "printer": "Bambu Lab X1 Carbon 0.4 nozzle",
+  "official_nominal_build_mm": [
+    256,
+    256,
+    256
+  ],
+  "stock_profile_printable_height_mm": 250,
+  "stock_profile_excluded_polygon_xy_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      18,
+      28
+    ],
+    [
+      0,
+      28
+    ]
+  ],
+  "sources": [
+    {
+      "claim": "Nominal build volume 256 x 256 x 256 mm",
+      "url": "https://public-cdn.bambulab.com/store/bambulab-X1-carbon-tech-specs.pdf?v=20241019045941"
+    },
+    {
+      "claim": "X1 Carbon 0.4 nozzle bed_exclude_area overrides common profile: 0x0,18x0,18x28,0x28",
+      "url": "https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/machine/Bambu%20Lab%20X1%20Carbon%200.4%20nozzle.json"
+    },
+    {
+      "claim": "Inherited printable_area 0x0,256x0,256x256,0x256",
+      "url": "https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/machine/fdm_bbl_3dp_001_common.json"
+    },
+    {
+      "claim": "Inherited printable_height 250",
+      "url": "https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/machine/fdm_machine_common.json"
+    }
+  ],
+  "profile_note": "Official upstream source values; the installed Bambu Studio profile was not inspected."
+}

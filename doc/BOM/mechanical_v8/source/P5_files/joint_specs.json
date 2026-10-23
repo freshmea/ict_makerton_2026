@@ -1,0 +1,152 @@
+[
+  {
+    "name": "L_J1_YAW",
+    "type": "revolute",
+    "a": "P1_closed_base:1",
+    "b": "P5_L_YAW_CARRIER:1",
+    "at": {
+      "occurrence": "P1_closed_base:1",
+      "point": [
+        -275,
+        40,
+        130
+      ],
+      "z": [
+        0,
+        0,
+        1
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  },
+  {
+    "name": "L_J2_SHOULDER_PITCH",
+    "type": "revolute",
+    "a": "P5_L_YAW_CARRIER:1",
+    "b": "P5_L_ARM:1",
+    "at": {
+      "occurrence": "P5_L_YAW_CARRIER:1",
+      "point": [
+        -275,
+        40,
+        180
+      ],
+      "z": [
+        0,
+        1,
+        0
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  },
+  {
+    "name": "L_J3_WRIST_ROLL",
+    "type": "revolute",
+    "a": "P5_L_ARM:1",
+    "b": "P5_L_HAND:1",
+    "at": {
+      "occurrence": "P5_L_ARM:1",
+      "point": [
+        -220,
+        40,
+        315
+      ],
+      "z": [
+        1,
+        0,
+        0
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  },
+  {
+    "name": "R_J1_YAW",
+    "type": "revolute",
+    "a": "P1_closed_base:1",
+    "b": "P5_R_YAW_CARRIER:1",
+    "at": {
+      "occurrence": "P1_closed_base:1",
+      "point": [
+        275,
+        40,
+        130
+      ],
+      "z": [
+        0,
+        0,
+        1
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  },
+  {
+    "name": "R_J2_SHOULDER_PITCH",
+    "type": "revolute",
+    "a": "P5_R_YAW_CARRIER:1",
+    "b": "P5_R_ARM:1",
+    "at": {
+      "occurrence": "P5_R_YAW_CARRIER:1",
+      "point": [
+        275,
+        40,
+        180
+      ],
+      "z": [
+        0,
+        1,
+        0
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  },
+  {
+    "name": "R_J3_WRIST_ROLL",
+    "type": "revolute",
+    "a": "P5_R_ARM:1",
+    "b": "P5_R_HAND:1",
+    "at": {
+      "occurrence": "P5_R_ARM:1",
+      "point": [
+        220,
+        40,
+        315
+      ],
+      "z": [
+        -1,
+        0,
+        0
+      ]
+    },
+    "limits": [
+      [
+        -15,
+        15
+      ]
+    ]
+  }
+]

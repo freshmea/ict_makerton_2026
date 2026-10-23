@@ -1,0 +1,60 @@
+"""Generate the P4-only parts list from completed geometry and print manifests."""
+from pathlib import Path
+import hashlib,json
+
+ROOT=Path(__file__).resolve().parents[1]
+P4=ROOT/'P4'
+
+def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def desc(name):
+    if name=='HAND_DOWEL_4x6':return '손 전후 정렬용 느슨한 핀, 양손 각2개'
+    if 'SHOULDER_YAW_TURRET' in name:return 'P4 신설: J1 회전판·J2 고정 어깨 하우징'
+    if 'CURVED_ARM_CORE' in name:return 'P4 개정 팔: Z225 하부 절삭·Ø88 어깨 캡·브리지'
+    if 'WRAP_HAND' in name:return 'J3 손 전후 회전 외장'
+    if 'PILL_BASE_TRAY' in name:return '3분할 베이스 트레이'
+    if 'PILL_BASE_LID' in name:return '3분할 베이스 서비스 뚜껑'
+    if 'SEAM_SPLICE' in name:return '베이스 전후 접합판·정렬키·M3 좌석'
+    if 'ROUND_YAW_COLLAR' in name:return 'J1 베이스 칼라'
+    if 'PEBBLE_HEAD' in name:return '페블 머리 전후 외장'
+    if 'CAPSULE_VISOR' in name:return '얼굴 베젤'
+    if 'PHONE_CRADLE' in name:return '휴대폰 받침'
+    return 'P4 출력 부품'
+
+def main():
+    geometry=json.loads((ROOT/'source/geometry_P4_parts.json').read_text(encoding='utf-8'))
+    manifest=json.loads((P4/'print/manifest.json').read_text(encoding='utf-8'))
+    records=manifest['parts'];byname={p['part']:p for p in records}
+    expected={p['name'] for p in geometry}|{'HAND_DOWEL_4x6'}
+    assert set(byname)==expected and len(byname)==len(records)
+    assert manifest['input_dir'].replace('\\','/').endswith('P4/stl')
+    assert manifest['all_static_checks_pass'] and not manifest['slicing_performed'] and not manifest['physical_print_verified']
+    checks=[]
+    for row in records:
+        assert row['watertight'] and row['connected_components']==1
+        assert row['quantity']==(4 if row['part']=='HAND_DOWEL_4x6' else 1)
+        for field,key in [('source_stl','source_sha256'),('oriented_stl','oriented_stl_sha256'),('model_3mf','model_3mf_sha256')]:
+            path=ROOT/row[field]
+            assert path.is_file() and sha(path)==row[key],str(path)
+        assert (P4/'cad'/(row['part']+'.step')).is_file()
+        checks.append({'part':row['part'],'quantity':row['quantity'],'three_export_hashes_match':True})
+    qty=sum(p['quantity'] for p in records)
+    height=max(p['oriented_bbox_mm'][2] for p in records)
+    lines=['# P4 전용 출력 부품 목록','',f'2026-10-23 · mm · **{len(records)}종, 총 {qty}개 출력**. `HAND_DOWEL_4x6`만 4개, 나머지는 각 1개다.','',
+      '기준은 [P4 형상 부품 목록](../source/geometry_P4_parts.json)과 [출력 manifest](print/manifest.json)다. 두 목록의 부품 집합, 각 부품의 원형 STL·방향 STL·3MF 입력 해시, 단일 폐합 메시와 수량을 대조했다. 서보·혼·베어링·금속 지지축 표시 바디는 출력 수량에 포함하지 않는다.','',
+      '**P4 폴더의 파일만 사용한다.** 같은 이름의 상위 P2 팔은 형상이 다르다. 아래 치수는 방향 적용 STL의 경계상자 X×Y×Z이며, 조립 좌표의 부품 크기 표와 다를 수 있다. 각 파일이 실제 출력에 성공했거나 서포트·공정이 검증됐다는 뜻은 아니다.','',
+      '| 부품 | 수량 | 출력 경계상자 mm | 역할 | P4 파일 |','| --- | ---: | --- | --- | --- |']
+    order=[p['name'] for p in geometry]+['HAND_DOWEL_4x6']
+    for name in order:
+        row=byname[name];dims='×'.join(f'{v:.2f}' for v in row['oriented_bbox_mm'])
+        files=f'[STEP](cad/{name}.step) · [출력 STL](print/oriented_stl/{name}.stl) · [3MF](print/single_part_3mf/{name}.3mf)'
+        lines.append(f'| {name} | {row["quantity"]} | {dims} | {desc(name)} | {files} |')
+    lines += ['',f'정적 출력 배치의 최대 높이는 약 **{height:.2f} mm**다. X1 Carbon 기본 프로파일 높이 250 mm, 앞 왼쪽 18×28 mm 제외 영역, 가장자리 1 mm와 브림 5 mm 예약을 검사했다. [배치 그림](print/bed_overview.svg)과 [P4 전용 출력·조립 안내](PRINT_ASSEMBLY.md)를 함께 확인한다.','',
+      '새 어깨 터릿 두 개는 자동 방향 후보(`automatic_review_required`)다. 코어 내부·케이스 서비스 개구·레일의 서포트와 제거 경로는 슬라이서 미리보기로 재검토한다. `3MF`는 단일 부품 모델·좌표만 포함하며 재료/공정 프리셋·실제 브림·서포트·G-code는 없다.','',
+      '실제 슬라이싱, 서포트, 수축, 재료 강도, 끼움·체결·하중 시험은 미검증이다. CAD의 6축 구동 검사와 출력·하드웨어 동작 검증도 별개다.','']
+    (P4/'PARTS.md').write_text('\n'.join(lines),encoding='utf-8')
+    evidence={'print_designs':len(records),'print_quantity':qty,'largest_print_height_mm':height,'source_geometry_set_matches_manifest':True,'checks':checks,'static_manifest_pass':True,'slicing_performed':False,'physical_print_verified':False}
+    (ROOT/'source/P4_files').mkdir(exist_ok=True)
+    (ROOT/'source/P4_files/print_list_checks.json').write_text(json.dumps(evidence,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps({k:v for k,v in evidence.items() if k!='checks'}))
+
+if __name__=='__main__':main()

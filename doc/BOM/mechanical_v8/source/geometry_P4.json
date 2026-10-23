@@ -1,0 +1,2118 @@
+{
+  "commands": [
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "p4_shoulder_z",
+        "expression": "180 mm",
+        "comment": "Shoulder pitch world Z; CAD layout, mm",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "p4_core_d",
+        "expression": "80 mm",
+        "comment": "Shoulder fixed core OD; verify loaded bearing fit",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "p4_cap_d",
+        "expression": "88 mm",
+        "comment": "Moving shoulder cap OD; bottom Z136, 1 mm above yaw collar",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "p4_arm_cut_z",
+        "expression": "225 mm",
+        "comment": "Retained curved arm lower cut plane",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "p4_servo_offset",
+        "expression": "9.75 mm",
+        "comment": "Provisional servo output-axis offset; measure actual servo",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "p4_servo_l",
+        "expression": "40.5 mm",
+        "comment": "Provisional servo case X size",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "p4_servo_d",
+        "expression": "40 mm",
+        "comment": "Provisional servo case Y size",
+        "favorite": true
+      }
+    },
+    {
+      "command": "parameters.add",
+      "params": {
+        "name": "p4_servo_h",
+        "expression": "20.2 mm",
+        "comment": "Provisional servo case Z size",
+        "favorite": true
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 1000,
+        "width": 200,
+        "height": "p4_arm_cut_z+100",
+        "corner": [
+          -500,
+          -60,
+          -100
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "L_TrimArm_FRONT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 1000,
+        "width": 200,
+        "height": "p4_arm_cut_z+100",
+        "corner": [
+          -500,
+          -60,
+          -100
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "L_TrimArm_REAR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 72,
+        "height": 6,
+        "base": [
+          -275,
+          40,
+          129
+        ],
+        "axis": "Z",
+        "operation": "new",
+        "body_name": "L_SHOULDER_YAW_TURRET",
+        "name": "L_YawRotor"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 50,
+        "width": 34,
+        "height": 9,
+        "center": [
+          -275,
+          40,
+          137.5
+        ],
+        "operation": "join",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_YawShoulderPedestal"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "p4_core_d",
+        "height": 54,
+        "base": [
+          -275,
+          13,
+          "p4_shoulder_z"
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_FixedShoulderCore"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 74,
+        "height": 48,
+        "base": [
+          -275,
+          16,
+          "p4_shoulder_z"
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_ShoulderCoreCavity"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 41.3,
+        "width": 8,
+        "height": 21,
+        "center": [
+          -284.75,
+          16,
+          180
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_ServoServiceOpening"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6,
+        "width": 11,
+        "height": 20,
+        "center": [
+          -309.5,
+          20.5,
+          180
+        ],
+        "operation": "join",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_ServoRail_1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 16,
+        "base": [
+          -309.5,
+          12,
+          175
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_ServoFlangeHole_1_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 16,
+        "base": [
+          -309.5,
+          12,
+          185
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_ServoFlangeHole_1_5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6,
+        "width": 11,
+        "height": 20,
+        "center": [
+          -260.0,
+          20.5,
+          180
+        ],
+        "operation": "join",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_ServoRail_2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 16,
+        "base": [
+          -260.0,
+          12,
+          175
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_ServoFlangeHole_2_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 16,
+        "base": [
+          -260.0,
+          12,
+          185
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_ServoFlangeHole_2_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 8,
+        "base": [
+          -275,
+          61,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_FixedStubOpening"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 30,
+        "width": 6.4,
+        "height": 2.7,
+        "center": [
+          -275,
+          40,
+          130.35
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_YawCross_30"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 30,
+        "height": 2.7,
+        "center": [
+          -275,
+          40,
+          130.35
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_YawCross_6.4"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 10,
+        "base": [
+          -275,
+          40,
+          127
+        ],
+        "axis": "Z",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "name": "L_YawHornCentre"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "p4_cap_d",
+        "height": 6,
+        "base": [
+          -275,
+          6,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "L_ShoulderCapTemp_FRONT",
+        "name": "L_MovingShoulderCap_FRONT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 48,
+        "width": 28.9,
+        "height": 20,
+        "center": [
+          -275,
+          25.45,
+          231
+        ],
+        "operation": "join",
+        "targets": [
+          "L_ShoulderCapTemp_FRONT"
+        ],
+        "name": "L_ShoulderTopBridge_FRONT"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_CURVED_ARM_CORE_FRONT_part",
+        "tools": [
+          "L_ShoulderCapTemp_FRONT"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "9.3",
+        "name": "L_ShoulderCrossProfile"
+      }
+    },
+    {
+      "command": "sketch.line",
+      "params": {
+        "points": [
+          [
+            "-290",
+            "-176.8"
+          ],
+          [
+            "-278.2",
+            "-176.8"
+          ],
+          [
+            "-278.2",
+            "-165"
+          ],
+          [
+            "-271.8",
+            "-165"
+          ],
+          [
+            "-271.8",
+            "-176.8"
+          ],
+          [
+            "-260",
+            "-176.8"
+          ],
+          [
+            "-260",
+            "-183.2"
+          ],
+          [
+            "-271.8",
+            "-183.2"
+          ],
+          [
+            "-271.8",
+            "-195"
+          ],
+          [
+            "-278.2",
+            "-195"
+          ],
+          [
+            "-278.2",
+            "-183.2"
+          ],
+          [
+            "-290",
+            "-183.2"
+          ]
+        ],
+        "closed": true,
+        "infer": false
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "L_ShoulderCrossProfile",
+        "distance": "3.7",
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "L_ShoulderHornCrossPocket"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5.3,
+        "height": 10,
+        "base": [
+          -275,
+          4,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "L_ShoulderHornScrew"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 64,
+        "base": [
+          -289,
+          9,
+          232
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "L_ShoulderBridgeBolt_FRONT_-14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.2,
+        "height": 6.4,
+        "center": [
+          -289,
+          12.1,
+          232
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "L_BridgeFastenerSeat_FRONT_-14"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 64,
+        "base": [
+          -261,
+          9,
+          232
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "L_ShoulderBridgeBolt_FRONT_14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.2,
+        "height": 6.4,
+        "center": [
+          -261,
+          12.1,
+          232
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "L_BridgeFastenerSeat_FRONT_14"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "p4_cap_d",
+        "height": 6,
+        "base": [
+          -275,
+          68,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "L_ShoulderCapTemp_REAR",
+        "name": "L_MovingShoulderCap_REAR"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 48,
+        "width": 28.9,
+        "height": 20,
+        "center": [
+          -275,
+          54.55,
+          231
+        ],
+        "operation": "join",
+        "targets": [
+          "L_ShoulderCapTemp_REAR"
+        ],
+        "name": "L_ShoulderTopBridge_REAR"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "L_CURVED_ARM_CORE_REAR_part",
+        "tools": [
+          "L_ShoulderCapTemp_REAR"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 16.3,
+        "height": 8,
+        "base": [
+          -275,
+          67,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "L_ShoulderBearingSeat"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 18.2,
+        "height": 1.05,
+        "base": [
+          -275,
+          73,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "L_ShoulderBearingFlange"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 64,
+        "base": [
+          -289,
+          9,
+          232
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "L_ShoulderBridgeBolt_REAR_-14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.2,
+        "height": 6.4,
+        "center": [
+          -289,
+          67.9,
+          232
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "L_BridgeFastenerSeat_REAR_-14"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 64,
+        "base": [
+          -261,
+          9,
+          232
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "L_ShoulderBridgeBolt_REAR_14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.2,
+        "height": 6.4,
+        "center": [
+          -261,
+          67.9,
+          232
+        ],
+        "operation": "cut",
+        "targets": [
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "L_BridgeFastenerSeat_REAR_14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "p4_servo_l",
+        "width": "p4_servo_d",
+        "height": "p4_servo_h",
+        "center": [
+          -284.75,
+          40,
+          180
+        ],
+        "operation": "new",
+        "body_name": "L_SHOULDER_SERVO_TRIAL",
+        "name": "L_SHOULDER_SERVO_TRIAL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 9.5,
+        "base": [
+          -275,
+          10.5,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "L_SHOULDER_SHAFT_TRIAL",
+        "name": "L_SHOULDER_SHAFT_TRIAL"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 29.6,
+        "width": 2.2,
+        "height": 6,
+        "center": [
+          -275,
+          10.8,
+          180
+        ],
+        "operation": "new",
+        "body_name": "L_SHOULDER_HORN_TRIAL",
+        "name": "L_SHOULDER_HORN_TRIAL"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6,
+        "width": 2.2,
+        "height": 29.6,
+        "center": [
+          -275,
+          10.8,
+          180
+        ],
+        "operation": "join",
+        "targets": [
+          "L_SHOULDER_HORN_TRIAL"
+        ],
+        "name": "L_SHOULDER_HORN_TRIAL_Cross"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 6,
+        "base": [
+          -275,
+          8,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_HORN_TRIAL"
+        ],
+        "name": "L_SHOULDER_HORN_TRIAL_Centre"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 16,
+        "height": 4,
+        "base": [
+          -275,
+          69,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "L_SHOULDER_BEARING_TRIAL",
+        "name": "L_SHOULDER_BEARING_TRIAL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 18,
+        "height": 1,
+        "base": [
+          -275,
+          73,
+          180
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_SHOULDER_BEARING_TRIAL"
+        ],
+        "name": "L_SHOULDER_BEARING_TRIAL_Flange"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 7,
+        "base": [
+          -275,
+          67,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "L_SHOULDER_BEARING_TRIAL"
+        ],
+        "name": "L_SHOULDER_BEARING_TRIAL_Bore"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 4.9,
+        "height": 14,
+        "base": [
+          -275,
+          63,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "L_SHOULDER_FIXED_STUB_TRIAL",
+        "name": "L_SHOULDER_FIXED_STUB_TRIAL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 2,
+        "base": [
+          -275,
+          62,
+          180
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "L_SHOULDER_FIXED_STUB_TRIAL"
+        ],
+        "name": "L_SHOULDER_FIXED_STUB_TRIAL_Shoulder"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          -261.65801395547356,
+          22,
+          244
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_0",
+        "name": "L_RGB_0"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          -256.07561142535366,
+          22,
+          256
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_1",
+        "name": "L_RGB_1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          -249.72618368205246,
+          22,
+          268
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_2",
+        "name": "L_RGB_2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          -242.7248507004325,
+          22,
+          280
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_3",
+        "name": "L_RGB_3"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          -235.2137098409568,
+          22,
+          292
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_4",
+        "name": "L_RGB_4"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          -227.35595552374488,
+          22,
+          304
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "L_RGB_5",
+        "name": "L_RGB_5"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_SHOULDER_YAW_TURRET"
+        ],
+        "color": "#68724d"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_CURVED_ARM_CORE_FRONT_part",
+          "L_CURVED_ARM_CORE_REAR_part"
+        ],
+        "color": "#e8dbb7"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_SHOULDER_SERVO_TRIAL",
+          "L_SHOULDER_SHAFT_TRIAL"
+        ],
+        "color": "#303338"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_SHOULDER_HORN_TRIAL",
+          "L_SHOULDER_BEARING_TRIAL",
+          "L_SHOULDER_FIXED_STUB_TRIAL"
+        ],
+        "color": "#8d969b"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "L_RGB_0",
+          "L_RGB_1",
+          "L_RGB_2",
+          "L_RGB_3",
+          "L_RGB_4",
+          "L_RGB_5"
+        ],
+        "color": "#e8a340"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 1000,
+        "width": 200,
+        "height": "p4_arm_cut_z+100",
+        "corner": [
+          -500,
+          -60,
+          -100
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "R_TrimArm_FRONT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 1000,
+        "width": 200,
+        "height": "p4_arm_cut_z+100",
+        "corner": [
+          -500,
+          -60,
+          -100
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "R_TrimArm_REAR"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 72,
+        "height": 6,
+        "base": [
+          275,
+          40,
+          129
+        ],
+        "axis": "Z",
+        "operation": "new",
+        "body_name": "R_SHOULDER_YAW_TURRET",
+        "name": "R_YawRotor"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 50,
+        "width": 34,
+        "height": 9,
+        "center": [
+          275,
+          40,
+          137.5
+        ],
+        "operation": "join",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_YawShoulderPedestal"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "p4_core_d",
+        "height": 54,
+        "base": [
+          275,
+          13,
+          "p4_shoulder_z"
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_FixedShoulderCore"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 74,
+        "height": 48,
+        "base": [
+          275,
+          16,
+          "p4_shoulder_z"
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_ShoulderCoreCavity"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 41.3,
+        "width": 8,
+        "height": 21,
+        "center": [
+          284.75,
+          16,
+          180
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_ServoServiceOpening"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6,
+        "width": 11,
+        "height": 20,
+        "center": [
+          260.0,
+          20.5,
+          180
+        ],
+        "operation": "join",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_ServoRail_1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 16,
+        "base": [
+          260.0,
+          12,
+          175
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_ServoFlangeHole_1_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 16,
+        "base": [
+          260.0,
+          12,
+          185
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_ServoFlangeHole_1_5"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6,
+        "width": 11,
+        "height": 20,
+        "center": [
+          309.5,
+          20.5,
+          180
+        ],
+        "operation": "join",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_ServoRail_2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 16,
+        "base": [
+          309.5,
+          12,
+          175
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_ServoFlangeHole_2_-5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 16,
+        "base": [
+          309.5,
+          12,
+          185
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_ServoFlangeHole_2_5"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 8,
+        "base": [
+          275,
+          61,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_FixedStubOpening"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 30,
+        "width": 6.4,
+        "height": 2.7,
+        "center": [
+          275,
+          40,
+          130.35
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_YawCross_30"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 30,
+        "height": 2.7,
+        "center": [
+          275,
+          40,
+          130.35
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_YawCross_6.4"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 10,
+        "base": [
+          275,
+          40,
+          127
+        ],
+        "axis": "Z",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "name": "R_YawHornCentre"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "p4_cap_d",
+        "height": 6,
+        "base": [
+          275,
+          6,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "R_ShoulderCapTemp_FRONT",
+        "name": "R_MovingShoulderCap_FRONT"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 48,
+        "width": 28.9,
+        "height": 20,
+        "center": [
+          275,
+          25.45,
+          231
+        ],
+        "operation": "join",
+        "targets": [
+          "R_ShoulderCapTemp_FRONT"
+        ],
+        "name": "R_ShoulderTopBridge_FRONT"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_CURVED_ARM_CORE_FRONT_part",
+        "tools": [
+          "R_ShoulderCapTemp_FRONT"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "sketch.create",
+      "params": {
+        "plane": "XZ",
+        "offset": "9.3",
+        "name": "R_ShoulderCrossProfile"
+      }
+    },
+    {
+      "command": "sketch.line",
+      "params": {
+        "points": [
+          [
+            "260",
+            "-176.8"
+          ],
+          [
+            "271.8",
+            "-176.8"
+          ],
+          [
+            "271.8",
+            "-165"
+          ],
+          [
+            "278.2",
+            "-165"
+          ],
+          [
+            "278.2",
+            "-176.8"
+          ],
+          [
+            "290",
+            "-176.8"
+          ],
+          [
+            "290",
+            "-183.2"
+          ],
+          [
+            "278.2",
+            "-183.2"
+          ],
+          [
+            "278.2",
+            "-195"
+          ],
+          [
+            "271.8",
+            "-195"
+          ],
+          [
+            "271.8",
+            "-183.2"
+          ],
+          [
+            "260",
+            "-183.2"
+          ]
+        ],
+        "closed": true,
+        "infer": false
+      }
+    },
+    {
+      "command": "sketch.solve",
+      "params": {}
+    },
+    {
+      "command": "sketch.finish",
+      "params": {}
+    },
+    {
+      "command": "solid.extrude",
+      "params": {
+        "sketch": "R_ShoulderCrossProfile",
+        "distance": "3.7",
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "R_ShoulderHornCrossPocket"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5.3,
+        "height": 10,
+        "base": [
+          275,
+          4,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "R_ShoulderHornScrew"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 64,
+        "base": [
+          261,
+          9,
+          232
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "R_ShoulderBridgeBolt_FRONT_-14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.2,
+        "height": 6.4,
+        "center": [
+          261,
+          12.1,
+          232
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "R_BridgeFastenerSeat_FRONT_-14"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 64,
+        "base": [
+          289,
+          9,
+          232
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "R_ShoulderBridgeBolt_FRONT_14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.2,
+        "height": 6.4,
+        "center": [
+          289,
+          12.1,
+          232
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_FRONT_part"
+        ],
+        "name": "R_BridgeFastenerSeat_FRONT_14"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": "p4_cap_d",
+        "height": 6,
+        "base": [
+          275,
+          68,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "R_ShoulderCapTemp_REAR",
+        "name": "R_MovingShoulderCap_REAR"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 48,
+        "width": 28.9,
+        "height": 20,
+        "center": [
+          275,
+          54.55,
+          231
+        ],
+        "operation": "join",
+        "targets": [
+          "R_ShoulderCapTemp_REAR"
+        ],
+        "name": "R_ShoulderTopBridge_REAR"
+      }
+    },
+    {
+      "command": "solid.combine",
+      "params": {
+        "target": "R_CURVED_ARM_CORE_REAR_part",
+        "tools": [
+          "R_ShoulderCapTemp_REAR"
+        ],
+        "operation": "join",
+        "keep_tools": false
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 16.3,
+        "height": 8,
+        "base": [
+          275,
+          67,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "R_ShoulderBearingSeat"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 18.2,
+        "height": 1.05,
+        "base": [
+          275,
+          73,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "R_ShoulderBearingFlange"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 64,
+        "base": [
+          261,
+          9,
+          232
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "R_ShoulderBridgeBolt_REAR_-14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.2,
+        "height": 6.4,
+        "center": [
+          261,
+          67.9,
+          232
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "R_BridgeFastenerSeat_REAR_-14"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.4,
+        "height": 64,
+        "base": [
+          289,
+          9,
+          232
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "R_ShoulderBridgeBolt_REAR_14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6.4,
+        "width": 3.2,
+        "height": 6.4,
+        "center": [
+          289,
+          67.9,
+          232
+        ],
+        "operation": "cut",
+        "targets": [
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "name": "R_BridgeFastenerSeat_REAR_14"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": "p4_servo_l",
+        "width": "p4_servo_d",
+        "height": "p4_servo_h",
+        "center": [
+          284.75,
+          40,
+          180
+        ],
+        "operation": "new",
+        "body_name": "R_SHOULDER_SERVO_TRIAL",
+        "name": "R_SHOULDER_SERVO_TRIAL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 9.5,
+        "base": [
+          275,
+          10.5,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "R_SHOULDER_SHAFT_TRIAL",
+        "name": "R_SHOULDER_SHAFT_TRIAL"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 29.6,
+        "width": 2.2,
+        "height": 6,
+        "center": [
+          275,
+          10.8,
+          180
+        ],
+        "operation": "new",
+        "body_name": "R_SHOULDER_HORN_TRIAL",
+        "name": "R_SHOULDER_HORN_TRIAL"
+      }
+    },
+    {
+      "command": "solid.box",
+      "params": {
+        "length": 6,
+        "width": 2.2,
+        "height": 29.6,
+        "center": [
+          275,
+          10.8,
+          180
+        ],
+        "operation": "join",
+        "targets": [
+          "R_SHOULDER_HORN_TRIAL"
+        ],
+        "name": "R_SHOULDER_HORN_TRIAL_Cross"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 3.2,
+        "height": 6,
+        "base": [
+          275,
+          8,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_HORN_TRIAL"
+        ],
+        "name": "R_SHOULDER_HORN_TRIAL_Centre"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 16,
+        "height": 4,
+        "base": [
+          275,
+          69,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "R_SHOULDER_BEARING_TRIAL",
+        "name": "R_SHOULDER_BEARING_TRIAL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 18,
+        "height": 1,
+        "base": [
+          275,
+          73,
+          180
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_SHOULDER_BEARING_TRIAL"
+        ],
+        "name": "R_SHOULDER_BEARING_TRIAL_Flange"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 5,
+        "height": 7,
+        "base": [
+          275,
+          67,
+          180
+        ],
+        "axis": "Y",
+        "operation": "cut",
+        "targets": [
+          "R_SHOULDER_BEARING_TRIAL"
+        ],
+        "name": "R_SHOULDER_BEARING_TRIAL_Bore"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 4.9,
+        "height": 14,
+        "base": [
+          275,
+          63,
+          180
+        ],
+        "axis": "Y",
+        "operation": "new",
+        "body_name": "R_SHOULDER_FIXED_STUB_TRIAL",
+        "name": "R_SHOULDER_FIXED_STUB_TRIAL"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 8,
+        "height": 2,
+        "base": [
+          275,
+          62,
+          180
+        ],
+        "axis": "Y",
+        "operation": "join",
+        "targets": [
+          "R_SHOULDER_FIXED_STUB_TRIAL"
+        ],
+        "name": "R_SHOULDER_FIXED_STUB_TRIAL_Shoulder"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          261.65801395547356,
+          22,
+          244
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_0",
+        "name": "R_RGB_0"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          256.07561142535366,
+          22,
+          256
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_1",
+        "name": "R_RGB_1"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          249.72618368205246,
+          22,
+          268
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_2",
+        "name": "R_RGB_2"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          242.7248507004325,
+          22,
+          280
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_3",
+        "name": "R_RGB_3"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          235.2137098409568,
+          22,
+          292
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_4",
+        "name": "R_RGB_4"
+      }
+    },
+    {
+      "command": "solid.cylinder",
+      "params": {
+        "diameter": 6,
+        "height": 1.2,
+        "base": [
+          227.35595552374488,
+          22,
+          304
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ],
+        "operation": "new",
+        "body_name": "R_RGB_5",
+        "name": "R_RGB_5"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_SHOULDER_YAW_TURRET"
+        ],
+        "color": "#68724d"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_CURVED_ARM_CORE_FRONT_part",
+          "R_CURVED_ARM_CORE_REAR_part"
+        ],
+        "color": "#e8dbb7"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_SHOULDER_SERVO_TRIAL",
+          "R_SHOULDER_SHAFT_TRIAL"
+        ],
+        "color": "#303338"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_SHOULDER_HORN_TRIAL",
+          "R_SHOULDER_BEARING_TRIAL",
+          "R_SHOULDER_FIXED_STUB_TRIAL"
+        ],
+        "color": "#8d969b"
+      }
+    },
+    {
+      "command": "appearance.assign",
+      "params": {
+        "bodies": [
+          "R_RGB_0",
+          "R_RGB_1",
+          "R_RGB_2",
+          "R_RGB_3",
+          "R_RGB_4",
+          "R_RGB_5"
+        ],
+        "color": "#e8a340"
+      }
+    }
+  ]
+}
