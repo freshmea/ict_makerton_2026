@@ -1,9 +1,12 @@
 #![no_std]
-#[path = "../../shared/picotool_reset.rs"]
 pub mod picotool_reset;
 
-use pico_device_protocol::{AckCode, DeviceConfig, Module};
+use pico_device_protocol::{AckCode, DeviceConfig, Frame, Message, Module, VERSION};
 pub const CAPACITY: usize = 36;
+
+pub fn is_priority_stop(frame: &Frame) -> bool {
+    frame.version == VERSION && frame.body == Message::Stop
+}
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Admission { New, Duplicate(AckCode), Stale }
@@ -112,6 +115,7 @@ pub fn stage(selected: Module, index: usize) -> Option<Module> {
 #[derive(Clone, Copy)]
 pub struct MatrixFrame { pub left: [u8;8], pub right: [u8;8] }
 impl MatrixFrame { pub const BLANK: Self = Self { left:[0;8],right:[0;8] }; }
+pub fn matrix_packet(address:u8,left:u8,right:u8)->[u8;4] { [address,right,address,left] }
 pub fn matrix_frame(phase: u16) -> MatrixFrame {
     let mut frame = MatrixFrame::BLANK;
     match phase {
@@ -180,10 +184,58 @@ mod tests {
             assert!(f[18..].iter().all(|v| *v == [0;3]));
             assert!(f.iter().flatten().all(|v| *v <= 32));
         }
-        assert_eq!((0..4).map(|p| servo_angle(p,10)).collect::<heapless::Vec<u16,4>>().as_slice(), &[90,80,100,90]);
+        assert_eq!(core::array::from_fn::<_,4,_>(|p| servo_angle(p as u16,10)), [90,80,100,90]);
         assert_eq!(servo_ticks(&config,90),307);
         assert!(servo_ticks(&config,80) < servo_ticks(&config,100));
         assert_eq!(stage(Module::All,3),Some(Module::Servos));
         assert_eq!(stage(Module::All,4),None);
+    }
+    #[test]
+    fn stop_requires_protocol_version_but_not_session_or_sequence() {
+        let mut frame = Frame { version: VERSION, session: 99, seq: 0, body: Message::Stop };
+        assert!(is_priority_stop(&frame));
+        frame.version = VERSION + 1;
+        assert!(!is_priority_stop(&frame));
+        frame.version = VERSION; frame.body = Message::RunTest(Module::All);
+        assert!(!is_priority_stop(&frame));
+    }
+    #[test]
+    fn stop_during_pending_debounce_consumes_later_release() {
+        use pico_device_protocol::TouchEngine;
+        let config=DeviceConfig::default(); let bit=1<<5;
+        let mut engine=TouchEngine::new(config).unwrap();
+        let mut guard=ReleaseGuard::new(); let mut gesture=Gesture::new();
+        engine.sample(0,0); assert!(!guard.armed(false,0)); assert!(guard.armed(false,30));
+        engine.sample(bit,40); // Raw press, not yet a debounced edge.
+        guard.cancel(); gesture.clear(true); // Remote STOP at t=60, generation changes.
+        engine.sample(bit,70);
+        assert_eq!(engine.pressed_mask(),bit); assert!(!guard.armed(true,70));
+        engine.sample(0,100); assert!(!guard.armed(false,100));
+        engine.sample(0,130); assert!(guard.armed(false,130)); gesture.clear(false);
+        assert_eq!(gesture.sample(false,false,true,1,130,500),None);
+        // Only a fresh physical press after stable release can launch a test.
+        engine.sample(bit,140); engine.sample(bit,170);
+        assert_eq!(gesture.sample(engine.pressed_mask()&bit!=0,false,true,1,170,500),None);
+        engine.sample(0,200); engine.sample(0,230);
+        assert_eq!(gesture.sample(false,false,true,1,230,500),Some(GestureAction::Test(Module::Matrix)));
+    }
+    #[test]
+    fn matrix_wire_order_is_far_right_before_near_left() {
+        assert_eq!(matrix_packet(3,0x12,0x34),[3,0x34,3,0x12]);
+        let left=matrix_frame(0); let right=matrix_frame(1);
+        assert_ne!(left.left,[0;8]); assert_eq!(left.right,[0;8]);
+        assert_eq!(right.left,[0;8]); assert_ne!(right.right,[0;8]);
+    }
+    #[test]
+    fn corrupt_wire_never_reaches_stop_admission() {
+        use pico_device_protocol::{encode_frame,FrameDecoder,MAX_WIRE};
+        let frame=Frame{version:VERSION,session:5,seq:7,body:Message::Stop};
+        let mut wire=[0;MAX_WIRE]; let len=encode_frame(&frame,&mut wire).unwrap();
+        wire[len-2]^=0x80; // Corrupt CRC payload before the trailing delimiter.
+        let mut decoder=FrameDecoder::new(); let mut actions=0;
+        for &byte in &wire[..len]{
+            if let Some(Ok(decoded))=decoder.push(byte){if is_priority_stop(&decoded){actions+=1;}}
+        }
+        assert_eq!(actions,0);
     }
 }

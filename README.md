@@ -186,6 +186,10 @@ cd ict_makerton_2026
 | 개인참가 신청서 | [PPTX 열기](<doc/1. 배재대 스마트 ICT 메이커톤_개인참가_신청서.pptx>) |
 | 사전행사 안내 | [PDF 열기](<doc/2. (배포용)_2026_배재대_스마트ICT메이커톤_사전행사.pdf>) |
 | 메인 스케치 | [ict_makerton_2026.ino](ict_makerton_2026.ino) |
+| Jetson Nano 보드 실측 정보 | [2026-10-24 SSH 수집·환경 manifest](doc/software/Jetson_Nano_보드_정보.md) |
+| Nano 개발 환경·운영 모드 | [라이브러리 설치·GUI 복원·서비스/ROS 비활성화](doc/software/Jetson_Nano_개발환경_설치와_모드전환.md) |
+| Nano 디바이스·접근 권한 | [실제 오디오·Pico 점검, 서비스 계정·udev, IMX708 두 카메라 실패 근거](doc/software/Jetson_Nano_디바이스_권한과_실물점검.md) |
+| Nano Linux 펌웨어 업그레이드 | [Rust 크로스 빌드·BOOTSEL 권한·picotool 설치·flash 백업/검증](doc/software/Jetson_Nano_Linux_펌웨어_업데이트.md) |
 | 개인과제 C 언어 예제 | [ino_src/](ino_src/) |
 | 기획서 · 요구사항 | 작성 예정 |
 | 디자인 · 회로도 | 작성 예정 |

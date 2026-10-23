@@ -88,6 +88,23 @@ impl IpcRequest {
 
 pub fn parse_ipc(bytes: &[u8]) -> Result<IpcRequest> {
     if bytes.len() > MAX_DATAGRAM { return Err(failure("UDP datagram exceeds 8192 bytes")); }
+    let value: Value = serde_json::from_slice(bytes)?;
+    let object = value.as_object().ok_or_else(|| failure("UDP request must be a JSON object"))?;
+    let allowed: &[&str] = match object.get("cmd").and_then(Value::as_str) {
+        Some("status" | "stop") => &["cmd"],
+        Some("test") => &["cmd", "module"],
+        Some("configure") => &["cmd", "config"],
+        _ => return Err(failure("UDP cmd must be status, test, stop, or configure")),
+    };
+    if let Some(key) = object.keys().find(|key| !allowed.contains(&key.as_str())) {
+        return Err(failure(format!("Unknown UDP request field: {key}")));
+    }
+    if let Some(config) = value.get("config").and_then(Value::as_object) {
+        let known = serde_json::to_value(DeviceConfig::default())?;
+        for key in config.keys() {
+            if known.get(key).is_none() { return Err(failure(format!("Unknown UDP configuration field: {key}"))); }
+        }
+    }
     let request: IpcRequest = serde_json::from_slice(bytes)?;
     request.validate()?;
     Ok(request)
@@ -128,6 +145,15 @@ impl fmt::Display for DeviceRejection {
 }
 impl Error for DeviceRejection {}
 
+#[derive(Debug)]
+pub struct RequestPreempted { pub stop_request_seq: u32 }
+impl fmt::Display for RequestPreempted {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(formatter, "Request cancelled by priority UDP Stop {}", self.stop_request_seq)
+    }
+}
+impl Error for RequestPreempted {}
+
 #[derive(Clone, Copy)]
 pub struct Snapshot {
     pub status: DeviceStatus,
@@ -159,6 +185,7 @@ pub struct DeviceLink<S> {
     publish: bool,
     latest: Option<Snapshot>,
     started: Instant,
+    ipc_socket: Option<Arc<UdpSocket>>,
 }
 
 impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
@@ -168,13 +195,14 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
         Self { stream, decoder: FrameDecoder::new(), pending: VecDeque::new(),
             keepalive_sequences: VecDeque::new(), heartbeat, session, next_seq: 1,
             hello_verified: false, interrupted, shutdown_mode: false, publish,
-            latest: None, started: Instant::now() }
+            latest: None, started: Instant::now(), ipc_socket: None }
     }
     pub fn session(&self) -> u64 { self.session }
     pub fn latest(&self) -> Option<Snapshot> { self.latest }
     pub fn interrupted(&self) -> bool { self.interrupted.load(Ordering::SeqCst) }
     pub fn begin_shutdown(&mut self) { self.shutdown_mode = true; }
     pub fn snapshot_json(&self) -> Value { self.latest.map(Snapshot::json).unwrap_or(Value::Null) }
+    pub fn attach_ipc(&mut self, socket: Arc<UdpSocket>) { self.ipc_socket = Some(socket); }
 
     fn emit(&self, mut value: Value) {
         if !self.publish { return; }
@@ -242,9 +270,21 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
                 if self.process(frame) { return Ok(Input::Frame(frame)); }
             }
             tokio::select! {
+                biased;
                 _ = time::sleep_until(deadline) => return Err(failure("Timed out waiting for a valid device frame")),
                 _ = self.heartbeat.tick() => {
                     if self.hello_verified { self.send(Message::KeepAlive).await?; }
+                }
+                received = async {
+                    match socket {
+                        Some(socket) => socket.recv_from(&mut datagram).await,
+                        None => std::future::pending().await,
+                    }
+                } => {
+                    let (count, peer) = received?;
+                    if peer.ip().is_loopback() {
+                        return Ok(Input::Datagram { bytes: datagram[..count].to_vec(), peer });
+                    }
                 }
                 read = self.stream.read(&mut raw) => {
                     let count = read?;
@@ -258,29 +298,97 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
                         }
                     }
                 }
-                received = async {
-                    match socket {
-                        Some(socket) => socket.recv_from(&mut datagram).await,
-                        None => std::future::pending().await,
-                    }
-                } => {
-                    let (count, peer) = received?;
-                    if peer.ip().is_loopback() {
-                        return Ok(Input::Datagram { bytes: datagram[..count].to_vec(), peer });
+            }
+        }
+    }
+
+    pub async fn next_frame(&mut self, deadline: Instant) -> Result<Frame> {
+        let socket = self.ipc_socket.clone();
+        loop {
+            match self.next_input(socket.as_deref(), deadline).await? {
+                Input::Frame(frame) => return Ok(frame),
+                Input::Datagram { bytes, peer } => {
+                    let socket = socket.as_deref().unwrap();
+                    match parse_ipc(&bytes) {
+                        Ok(IpcRequest::Stop) => {
+                            let stop_request_seq = self.priority_stop(socket, peer).await?;
+                            return Err(Box::new(RequestPreempted { stop_request_seq }));
+                        }
+                        other => {
+                            let error = match other {
+                                Ok(_) => "USB request in progress; only stop can preempt it".to_owned(),
+                                Err(error) => error.to_string(),
+                            };
+                            let reply = json!({"ok":false,"error":error,"status":self.snapshot_json()});
+                            socket.send_to(&serde_json::to_vec(&reply)?, peer).await?;
+                        }
                     }
                 }
             }
         }
     }
 
-    pub async fn next_frame(&mut self, deadline: Instant) -> Result<Frame> {
-        match self.next_input(None, deadline).await? {
-            Input::Frame(frame) => Ok(frame), Input::Datagram { .. } => unreachable!(),
-        }
+    async fn boundary(&mut self) -> Result<()> {
+        time::timeout(Duration::from_millis(300), self.stream.write_all(&[0])).await
+            .map_err(|_| failure("Serial frame boundary resynchronization timed out"))??;
+        Ok(())
+    }
+
+    /// No nested request_ack/next_frame call is made here. UDP Stop remains
+    /// receivable even if the original RPC's ACK was lost while lease traffic
+    /// continues. Other commands are rejected rather than queued for replay.
+    async fn priority_stop(&mut self, socket: &UdpSocket, peer: SocketAddr) -> Result<u32> {
+        let mut peers = vec![peer];
+        self.boundary().await?;
+        let stop_seq = self.send(Message::Stop).await?;
+        let outcome: Result<()> = async {
+            let mut deadline = Instant::now() + REQUEST_TIMEOUT;
+            let mut query_seq = None;
+            let mut query_ack = false;
+            let mut query_status = false;
+            loop {
+                match self.next_input(Some(socket), deadline).await? {
+                    Input::Frame(frame) => {
+                        match frame.body {
+                            Message::Ack { request_seq, code } if request_seq == stop_seq && frame.seq == stop_seq && query_seq.is_none() => {
+                                if code != AckCode::Ok { return Err(Box::new(DeviceRejection { request_seq, code }) as DynError); }
+                                query_seq = Some(self.send(Message::GetStatus).await?);
+                                deadline = Instant::now() + REQUEST_TIMEOUT;
+                            }
+                            Message::Ack { request_seq, code } if query_seq == Some(request_seq) && frame.seq == request_seq => {
+                                if code != AckCode::Ok { return Err(Box::new(DeviceRejection { request_seq, code }) as DynError); }
+                                query_ack = true;
+                            }
+                            Message::Status(_) if query_seq == Some(frame.seq) => query_status = true,
+                            _ => (),
+                        }
+                        if query_ack && query_status { return Ok(()); }
+                    }
+                    Input::Datagram { bytes, peer } => {
+                        if matches!(parse_ipc(&bytes), Ok(IpcRequest::Stop)) && peers.len() < 8 {
+                            if !peers.contains(&peer) { peers.push(peer); }
+                        } else {
+                            let reply = json!({"ok":false,"error":"Priority Stop cleanup in progress; command was not queued","status":self.snapshot_json()});
+                            socket.send_to(&serde_json::to_vec(&reply)?, peer).await?;
+                        }
+                    }
+                }
+            }
+        }.await;
+        let reply = match &outcome {
+            Ok(()) => json!({"ok":true,"cmd":"stop","ack_request_seq":stop_seq,"ack_code":"Ok",
+                "session":format!("{:016X}",self.session),"status":self.snapshot_json()}),
+            Err(error) => json!({"ok":false,"cmd":"stop","error":error.to_string(),"status":self.snapshot_json()}),
+        };
+        let bytes = serde_json::to_vec(&reply)?;
+        for peer in peers { socket.send_to(&bytes, peer).await?; }
+        outcome?;
+        Ok(stop_seq)
     }
 
     pub async fn hello(&mut self) -> Result<u64> {
         self.emit(json!({"event":"session_open","security_token":false,"protocol":PROTOCOL_NAME}));
+        self.boundary().await?;
         let request_seq = self.send(Message::Hello).await?;
         let deadline = Instant::now() + REQUEST_TIMEOUT;
         loop {
@@ -336,7 +444,12 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
         self.request_ack(Message::Configure(config)).await
     }
 
-    pub async fn stop(&mut self) -> Result<u32> { self.request_ack(Message::Stop).await }
+    pub async fn stop(&mut self) -> Result<u32> {
+        // An empty delimiter is ignored by the protocol. It also closes a
+        // truncated previous write before the dominant STOP frame is sent.
+        self.boundary().await?;
+        self.request_ack(Message::Stop).await
+    }
 }
 
 /// Each request is sent once. A lost UDP reply is never retried automatically,
@@ -476,6 +589,46 @@ mod tests {
         });
         let reply = udp_roundtrip(address, &IpcRequest::Status).await.unwrap();
         assert_eq!(reply["ok"], true);
+        simulated.await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn udp_stop_preempts_a_lost_test_ack_without_waiting_for_rpc_timeout() {
+        let (host, mut device) = tokio::io::duplex(4096);
+        let socket = Arc::new(UdpSocket::bind("127.0.0.1:0").await.unwrap());
+        let address = socket.local_addr().unwrap();
+        let mut link = DeviceLink::new(host, 45, Arc::new(AtomicBool::new(false)), false);
+        link.hello_verified = true;
+        link.attach_ipc(socket);
+        let (started, ready) = tokio::sync::oneshot::channel();
+        let simulated = tokio::spawn(async move {
+            let test = read_frame(&mut device).await;
+            assert_eq!(test.body, Message::RunTest(Module::Servos));
+            started.send(()).unwrap();
+            // Deliberately never ACK the test. STOP must arrive promptly,
+            // rather than after the original 3-second request timeout.
+            let stop_deadline = Instant::now() + Duration::from_millis(500);
+            let stop = loop {
+                let frame = time::timeout_at(stop_deadline, read_frame(&mut device)).await.unwrap();
+                if !matches!(frame.body, Message::KeepAlive) { break frame; }
+            };
+            assert_eq!(stop.body, Message::Stop);
+            write_fragmented(&mut device, Frame { version: VERSION, session: 45, seq: stop.seq,
+                body: Message::Ack { request_seq: stop.seq, code: AckCode::Ok } }).await;
+            let query = read_frame(&mut device).await;
+            assert_eq!(query.body, Message::GetStatus);
+            write_fragmented(&mut device, Frame { version: VERSION, session: 45, seq: query.seq,
+                body: Message::Status(device_status()) }).await;
+            write_fragmented(&mut device, Frame { version: VERSION, session: 45, seq: query.seq,
+                body: Message::Ack { request_seq: query.seq, code: AckCode::Ok } }).await;
+        });
+        let client = tokio::spawn(async move {
+            ready.await.unwrap();
+            udp_roundtrip(address, &IpcRequest::Stop).await.unwrap()
+        });
+        let error = link.request_ack(Message::RunTest(Module::Servos)).await.unwrap_err();
+        assert!(error.downcast_ref::<RequestPreempted>().is_some());
+        assert_eq!(client.await.unwrap()["ok"], true);
         simulated.await.unwrap();
     }
 }

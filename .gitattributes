@@ -1,0 +1,6 @@
+# Linux setup files must remain sourceable after a Windows checkout/transfer.
+firmware/*.sh text eol=lf
+firmware/pico_linux.py text eol=lf
+firmware/test_pico_linux.py text eol=lf
+tools/jetson/*.sh text eol=lf
+tools/jetson/*.py text eol=lf

@@ -14,7 +14,7 @@ use embassy_usb::{class::cdc_acm::{CdcAcmClass,Receiver,Sender,State},UsbDevice}
 use pico_device_protocol::{AckCode,DeviceConfig,DeviceStatus,Frame as WireFrame,FrameDecoder,
     Message,Module,TouchEngine,TouchState,VERSION,MAX_WIRE};
 use pico2_device_bench::{picotool_reset,Admission,Gesture,GestureAction,MatrixFrame,
-    ReleaseGuard,SessionGate,CAPACITY,matrix_frame,neo_frame,servo_angle,servo_ticks,stage};
+    ReleaseGuard,SessionGate,CAPACITY,is_priority_stop,matrix_frame,matrix_packet,neo_frame,servo_angle,servo_ticks,stage};
 use smart_leds::RGB8;
 use static_cell::StaticCell;
 
@@ -137,11 +137,10 @@ async fn rx_task(mut rx:Receiver<'static,UsbDriver>){
             for &byte in &packet[..n]{
                 if let Some(result)=decoder.push(byte){match result{
                     Ok(frame)=>{
-                        // A CRC-valid, decoded STOP always gates OE first,
-                        // regardless of session or sequence admission.
-                        if frame.body==Message::Stop{STOP_ACK.signal(frame);request_stop(1);continue;}
                         if frame.version!=VERSION{ack(frame,AckCode::BadVersion);continue;}
-                        if frame.body==Message::Hello&&frame.session!=session(){request_stop(6);}
+                        // Version-valid STOP gates OE before session/sequence admission.
+                        if is_priority_stop(&frame){STOP_ACK.signal(frame);request_stop(1);continue;}
+                        if frame.body==Message::Hello&&frame.session!=0&&frame.session!=session(){request_stop(6);}
                         let envelope=Envelope{frame,generation:GENERATION.load(Ordering::SeqCst),busy:ACTIVE.load(Ordering::SeqCst)};
                         if COMMANDS.try_send(envelope).is_err(){ack(frame,AckCode::Busy);}
                     }
@@ -175,9 +174,14 @@ async fn touch_task(mut pins:[Flex<'static>;6],mut config:DeviceConfig){
     let mut engine=TouchEngine::new(config).unwrap();let mut gesture=Gesture::new();
     // Require an initial release: a held input at boot/configuration is not a new gesture.
     let mut release_guard=ReleaseGuard::new();let mut was_armed=false;
+    let mut observed_generation=GENERATION.load(Ordering::SeqCst);
     loop{
         let time=Instant::now().as_millis();
         if let Some(value)=TOUCH_CONFIG.try_take(){config=value;let _=engine.configure(value,time);gesture.clear(true);release_guard.cancel();was_armed=false;}
+        let generation=GENERATION.load(Ordering::SeqCst);
+        if generation!=observed_generation{
+            observed_generation=generation;release_guard.cancel();gesture.clear(true);was_armed=false;
+        }
         let mut raw=0;for(index,pin)in pins.iter().enumerate(){if pin.is_high(){raw|=1<<index;}}
         for value in engine.sample(raw,time){event(Message::Touch(value));}
         let pressed=engine.pressed_mask();
@@ -188,7 +192,7 @@ async fn touch_task(mut pins:[Flex<'static>;6],mut config:DeviceConfig){
         if armed&&!was_armed{gesture.clear(false);}
         was_armed=armed;
         if armed{if let Some(action)=gesture.sample(pressed&bit!=0,ACTIVE.load(Ordering::SeqCst),
-            config.local_tests_enabled&&bit!=0,GENERATION.load(Ordering::SeqCst),time,config.hold_interval_ms){
+            config.local_tests_enabled&&bit!=0,generation,time,config.hold_interval_ms){
             match action{
                 GestureAction::Stop=>request_stop(3),
                 GestureAction::Test(module)=>{let generation=GENERATION.load(Ordering::SeqCst);let _=LOCALS.try_send(LocalCommand{module,generation});}
@@ -214,7 +218,7 @@ impl Pca{
 }
 struct Matrix{spi:Spi<'static,SPI0,spi::Blocking>,cs:Output<'static>}
 impl Matrix{
-    fn reg(&mut self,address:u8,left:u8,right:u8)->Result<(),()>{self.cs.set_low();let result=self.spi.blocking_write(&[address,right,address,left]).map_err(|_|());self.cs.set_high();cortex_m::asm::delay(150);result}
+    fn reg(&mut self,address:u8,left:u8,right:u8)->Result<(),()>{self.cs.set_low();let result=self.spi.blocking_write(&matrix_packet(address,left,right)).map_err(|_|());self.cs.set_high();cortex_m::asm::delay(150);result}
     fn frame(&mut self,f:MatrixFrame)->Result<(),()>{for row in 0..8{self.reg(row as u8+1,f.left[row],f.right[row])?;}Ok(())}
     fn off(&mut self)->Result<(),()>{let mut ok=self.reg(0xf,0,0).is_ok();ok&=self.reg(0xc,0,0).is_ok();ok&=self.frame(MatrixFrame::BLANK).is_ok();if ok{Ok(())}else{Err(())}}
     fn init(&mut self)->Result<(),()>{self.off()?;self.reg(9,0,0)?;self.reg(0xb,7,7)?;self.reg(0xa,1,1)}
@@ -267,11 +271,17 @@ fn status(config:DeviceConfig,run:&Option<Run>,faults:u32,oe_high:bool)->DeviceS
         running:run.as_ref().map(|v|v.module),local_enabled:config.local_tests_enabled,oe_high,faults,
         dropped_events:DROPPED.load(Ordering::SeqCst),config}
 }
-async fn start_run(module:Module,devices:&mut Devices,config:&DeviceConfig)->Result<Run,()>{
+fn module_fault(module:Module)->u32{match module{Module::Servos=>PCA_FAULT,Module::Matrix=>MATRIX_FAULT,_=>0}}
+async fn start_run(module:Module,devices:&mut Devices,config:&DeviceConfig)->Result<Run,u32>{
+    let pressed=SNAPSHOT.lock(|v|v.borrow().map(|s|s.pressed).unwrap_or(0));
+    let bit=if config.test_switch==0{0}else{1<<(config.test_switch-1)};
+    if pressed&bit!=0{request_stop(3);return Err(0);}
     STOPPED.store(false,Ordering::SeqCst);ACTIVE.store(true,Ordering::SeqCst);
     let mut run=Run{selected:module,index:0,module:stage(module,0).unwrap(),phase:0,
         generation:GENERATION.load(Ordering::SeqCst),next:Instant::now()};
-    apply_phase(devices,&run,config).await?;
+    if apply_phase(devices,&run,config).await.is_err(){
+        return Err(if run_valid(run.generation){module_fault(run.module)}else{0});
+    }
     run.next=Instant::now()+Duration::from_millis(phase_delay(run.module,0));
     event(Message::TestEvent{module:run.module,phase:0,done:false,fault:false});Ok(run)
 }
@@ -284,13 +294,15 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
         match select3(STOP_WAKE.wait(),Timer::at(tick),select(COMMANDS.receive(),LOCALS.receive())).await{
             Either3::First(())=>{
                 let old=run.take();ACTIVE.store(false,Ordering::SeqCst);
-                faults|=devices.stop_all().await;
+                let cleanup_faults=devices.stop_all().await;faults|=cleanup_faults;
                 if let Some(value)=old{event(Message::TestEvent{module:value.selected,phase:value.phase,done:true,fault:true});}
                 if matches!(STOP_REASON.load(Ordering::SeqCst),2|4){gate.open(0);set_session(0);}
                 if let Some(frame)=STOP_ACK.try_take(){if frame.session==gate.session{gate.finish(frame.seq,AckCode::Ok);}ack(frame,AckCode::Ok);}
-                if BOOT_REQUESTED.load(Ordering::SeqCst){
-                    if let Some(frame)=BOOT_ACK.try_take(){ack(frame,if faults==0{AckCode::Ok}else{AckCode::Fault});}
-                    Timer::after_millis(150).await;embassy_rp::rom_data::reset_to_usb_boot(0,0);loop{cortex_m::asm::wfi();}
+                if BOOT_REQUESTED.swap(false,Ordering::SeqCst){
+                    if let Some(frame)=BOOT_ACK.try_take(){ack(frame,if cleanup_faults==0{AckCode::Ok}else{AckCode::Fault});}
+                    if cleanup_faults==0{
+                        Timer::after_millis(150).await;embassy_rp::rom_data::reset_to_usb_boot(0,0);loop{cortex_m::asm::wfi();}
+                    }
                 }
                 event(Message::Status(status(config,&run,faults,devices.oe.is_set_high())));
             }
@@ -320,7 +332,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
             Either3::Third(Either::Second(local))=>{
                 if local.generation!=GENERATION.load(Ordering::SeqCst)||run.is_some()||!config.local_tests_enabled{continue;}
                 if gate.session!=0&&!lease_valid(){continue;}
-                match start_run(local.module,&mut devices,&config).await{Ok(value)=>run=Some(value),Err(())=>request_stop(5)}
+                match start_run(local.module,&mut devices,&config).await{Ok(value)=>run=Some(value),Err(bits)=>{faults|=bits;request_stop(5);}}
             }
             Either3::Third(Either::First(envelope))=>{
                 let frame=envelope.frame;
@@ -328,7 +340,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                 if frame.body==Message::Hello{
                     if frame.session==0{ack(frame,AckCode::BadSession);continue;}
                     if frame.session!=gate.session{
-                        devices.oe.set_high();faults=devices.stop_all().await;run=None;ACTIVE.store(false,Ordering::SeqCst);
+                        devices.oe.set_high();faults|=devices.stop_all().await;run=None;ACTIVE.store(false,Ordering::SeqCst);
                         gate.open(frame.session);set_session(frame.session);
                     }
                     match gate.check(frame.seq){
@@ -351,7 +363,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                     }
                     Message::RunTest(module)=>{
                         if run.is_some()||envelope.busy{AckCode::Busy}else if !lease_valid(){AckCode::NoSession}
-                        else{match start_run(module,&mut devices,&config).await{Ok(value)=>{run=Some(value);AckCode::Ok},Err(())=>{request_stop(5);AckCode::Fault}}}
+                        else{match start_run(module,&mut devices,&config).await{Ok(value)=>{run=Some(value);AckCode::Ok},Err(bits)=>{faults|=bits;request_stop(5);AckCode::Fault}}}
                     }
                     Message::Bootloader=>{BOOT_ACK.signal(frame);request_bootloader();continue;}
                     _=>AckCode::Unsupported,
