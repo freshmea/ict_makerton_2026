@@ -1,0 +1,103 @@
+NVPM VERB: Config file: /etc/nvpmodel.conf
+NVPM VERB: parsing done for /etc/nvpmodel.conf
+NVPM WARN: fan mode is not set!
+NVPM VERB: Current mode: NV Power Mode: 5W
+1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_0: PATH /sys/devices/system/cpu/cpu0/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_1: PATH /sys/devices/system/cpu/cpu1/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_2: PATH /sys/devices/system/cpu/cpu2/online: REAL_VAL: 0 CONF_VAL: 0
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_3: PATH /sys/devices/system/cpu/cpu3/online: REAL_VAL: 0 CONF_VAL: 0
+NVPM VERB: PARAM CPU_A57: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq: REAL_VAL: 921600 CONF_VAL: 0
+NVPM VERB: PARAM CPU_A57: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: REAL_VAL: 921600 CONF_VAL: 918000
+NVPM VERB: PARAM GPU_POWER_CONTROL_ENABLE: ARG GPU_PWR_CNTL_EN: PATH /sys/devices/gpu.0/power/control: REAL_VAL: auto CONF_VAL: on
+NVPM VERB: PARAM GPU: ARG MIN_FREQ: PATH /sys/devices/gpu.0/devfreq/57000000.gpu/min_freq: REAL_VAL: 76800000 CONF_VAL: 0
+NVPM VERB: PARAM GPU: ARG MAX_FREQ: PATH /sys/devices/gpu.0/devfreq/57000000.gpu/max_freq: REAL_VAL: 614400000 CONF_VAL: 640000000
+NVPM VERB: PARAM GPU_POWER_CONTROL_DISABLE: ARG GPU_PWR_CNTL_DIS: PATH /sys/devices/gpu.0/power/control: REAL_VAL: auto CONF_VAL: auto
+NVPM VERB: PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_emc_cap/emc_iso_cap: REAL_VAL: 1600000000 CONF_VAL: 1600000000
+# /etc/systemd/system/nvpmodel.service
+#
+# Copyright (c) 2016-2019, NVIDIA CORPORATION.  All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#  * Neither the name of NVIDIA CORPORATION nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY
+# EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+# OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+[Unit]
+Description=nvpmodel service
+; Everything depends on the NVIDIA per-boot script
+After=nv.service
+Requires=nv.service
+; TPC power gating must be enabled before anything touching gpu
+Before=graphical.target
+Before=gdm3.service lightdm.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/nvpmodel -f /etc/nvpmodel.conf
+
+[Install]
+WantedBy=multi-user.target
+enabled
+FILE /var/lib/nvpmodel/status
+pmode:0001 fmode:fanNullFILE /etc/nvpmodel.conf
+# < POWER_MODEL ID=id_num NAME=mode_name >
+# This starts a section of POWER_MODEL configurations, followed by
+# This file must contain at least one POWER_MODEL section.
+# < PM_CONFIG DEFAULT=default_mode >
+< PARAM TYPE=FILE NAME=CPU_ONLINE >
+# POWER_MODEL DEFINITIONS #
+< POWER_MODEL ID=0 NAME=MAXN >
+CPU_ONLINE CORE_0 1
+CPU_ONLINE CORE_1 1
+CPU_ONLINE CORE_2 1
+CPU_ONLINE CORE_3 1
+CPU_A57 MAX_FREQ -1
+GPU MAX_FREQ -1
+< POWER_MODEL ID=1 NAME=5W >
+CPU_ONLINE CORE_0 1
+CPU_ONLINE CORE_1 1
+CPU_ONLINE CORE_2 0
+CPU_ONLINE CORE_3 0
+CPU_A57 MAX_FREQ 918000
+GPU MAX_FREQ 640000000
+< PM_CONFIG DEFAULT=0 >
+FILE /sys/devices/system/cpu/online
+0-1
+FILE /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+921600
+FILE /sys/devices/57000000.gpu/devfreq/57000000.gpu/max_freq
+614400000
+-- Logs begin at Fri 2026-10-23 21:30:57 CEST, end at Sat 2026-10-24 01:15:37 CEST. --
+-- No entries --
+/etc/systemd/system/nvpmodel.service:29:Description=nvpmodel service
+/etc/systemd/system/nvpmodel.service:39:ExecStart=/usr/sbin/nvpmodel -f /etc/nvpmodel.conf
+/etc/systemd/system/nvphs.service:32:After=nvpmodel.service
+/etc/systemd/system/nvzramconfig.service:10:After=nvpmodel.service
+/etc/systemd/system/nvgetty.service:10:After=nvpmodel.service
+/etc/systemd/system/nvargus-daemon.service:33:After=nvpmodel.service
+/etc/systemd/system/multi-user.target.wants/nvpmodel.service:29:Description=nvpmodel service
+/etc/systemd/system/multi-user.target.wants/nvpmodel.service:39:ExecStart=/usr/sbin/nvpmodel -f /etc/nvpmodel.conf
+/etc/systemd/system/multi-user.target.wants/nvphs.service:32:After=nvpmodel.service
+/etc/systemd/system/multi-user.target.wants/nvzramconfig.service:10:After=nvpmodel.service
+/etc/systemd/system/multi-user.target.wants/nvgetty.service:10:After=nvpmodel.service
+/etc/systemd/system/multi-user.target.wants/nvargus-daemon.service:33:After=nvpmodel.service

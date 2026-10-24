@@ -1,0 +1,15 @@
+[package]
+name = "nano-runtime"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.90"
+publish = false
+build = "build.rs"
+[dependencies]
+host-core = { path = "../../crates/host-core" }
+pico-device-bench = { path = "../../../tools/pico-device-bench" }
+pico-device-protocol = { path = "../../../crates/pico-device-protocol" }
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+libc.workspace = true

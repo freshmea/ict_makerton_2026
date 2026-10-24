@@ -1,0 +1,69 @@
+{
+  "real_acoustic_path": true,
+  "cloud_calls": 0,
+  "off": {
+    "aec": false,
+    "noise_rms": 13.616616516975514,
+    "late_playback_residual_rms": 16.237782036848213,
+    "capture_samples": 433920,
+    "state": {
+      "epoch": 1,
+      "fresh": true,
+      "generation": 14794778092220103509,
+      "lease_valid": true,
+      "monotonic_ms": 13461674,
+      "phase": "quiet",
+      "role": "audiod",
+      "state": {
+        "aec_acoustic_verified": false,
+        "aec_pipeline": true,
+        "capture_seq": 912,
+        "channels": 1,
+        "device_flushes": 0,
+        "pcm_accepted": 800,
+        "pcm_rejected": 0,
+        "rate": 48000,
+        "received_ms": 13461670,
+        "rms": 0.0003451798685243738
+      },
+      "turn_epoch": 0
+    },
+    "errors": []
+  },
+  "on": {
+    "aec": true,
+    "noise_rms": 12.153761230048788,
+    "late_playback_residual_rms": 9.971969270457686,
+    "capture_samples": 439200,
+    "state": {
+      "epoch": 1,
+      "fresh": true,
+      "generation": 17308255198078023357,
+      "lease_valid": true,
+      "monotonic_ms": 13471853,
+      "phase": "quiet",
+      "role": "audiod",
+      "state": {
+        "aec_acoustic_verified": false,
+        "aec_pipeline": true,
+        "capture_seq": 923,
+        "channels": 1,
+        "device_flushes": 0,
+        "pcm_accepted": 800,
+        "pcm_rejected": 0,
+        "rate": 48000,
+        "received_ms": 13471848,
+        "rms": 0.00027723166390248856
+      },
+      "turn_epoch": 0
+    },
+    "errors": []
+  },
+  "observed_attenuation_db": 4.234915519346684,
+  "sufficient_excitation": false,
+  "candidate_threshold_db": 6,
+  "candidate_pass": false,
+  "human_double_talk_verified": false,
+  "repetitions": 1,
+  "raw_audio_saved": false
+}

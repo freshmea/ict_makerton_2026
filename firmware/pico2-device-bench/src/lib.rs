@@ -3,6 +3,19 @@ pub mod picotool_reset;
 
 use pico_device_protocol::{AckCode, DeviceConfig, Frame, Message, Module, VERSION};
 pub const CAPACITY: usize = 36;
+pub fn interpolate_pose(start:[u16;6],target:[u16;6],elapsed:u64,duration:u64)->[u16;6]{
+    let duration=duration.max(1);let elapsed=elapsed.min(duration);
+    core::array::from_fn(|i|(start[i]as i64+(target[i]as i64-start[i]as i64)*elapsed as i64/duration as i64)as u16)
+}
+#[cfg(test)]
+mod motion_tests {
+    use super::*;
+    #[test]fn interpolation_is_bounded_and_reaches_target_without_overshoot(){
+        assert_eq!(interpolate_pose([8000;6],[10000;6],500,1000),[9000;6]);
+        assert_eq!(interpolate_pose([10000;6],[8000;6],500,1000),[9000;6]);
+        assert_eq!(interpolate_pose([8000;6],[10000;6],5000,1000),[10000;6]);
+    }
+}
 
 pub fn is_priority_stop(frame: &Frame) -> bool {
     frame.version == VERSION && frame.body == Message::Stop

@@ -1,6 +1,6 @@
-# Pico device diagnostic protocol v1
+# Pico device control protocol v2
 
-Pico 2와 Nano/PC가 공유하는 `no_std` 진단 프로토콜과 순수 터치 추적기다. GPIO·USB·모터를 직접 제어하지 않는다. 현재 시제품의 USB VID/PID는 `c0de:cafc`이며 wire version은 `1`이다. Nano 애플리케이션 전체의 최종 제어 명령까지 정의한 것은 아니다.
+Pico 2와 Nano/PC가 공유하는 `no_std` 제어·진단 프로토콜과 순수 터치 추적기다. GPIO·USB·모터를 직접 제어하지 않는다. USB VID/PID는 `c0de:cafc`, wire version은 `2`다. v1의 variant 순서는 유지하고 일반 보정·목표 구동을 추가했다. 버전이 다른 호스트/펌웨어를 함께 사용하지 않는다.
 
 ## API
 
@@ -28,14 +28,14 @@ COBS( Postcard(Frame) || CRC-32/ISO-HDLC little-endian ) || 0x00
 Frame { version: u8, session: u64, seq: u32, body: Message }
 ```
 
-- `VERSION` 및 `PROTOCOL_VERSION`: 1
+- `VERSION` 및 `PROTOCOL_VERSION`: 2
 - `MAX_DECODED`: Postcard와 CRC 4바이트를 합쳐 최대 512바이트
 - `MAX_WIRE`: delimiter까지 최대 520바이트
 - CRC: reflected polynomial `0xedb88320`, init/xorout `0xffffffff`. 표준 검사 문자열 `123456789`의 결과 `0xcbf43926`.
 - 빈 delimiter는 무시한다. 잘못된 COBS·CRC·payload는 오류로 반환한다. 프레임이 넘치면 다음 delimiter까지 버리고 이후 프레임부터 복구한다.
 - 역직렬화 후 남는 payload 바이트는 거부한다. 코덱은 version 값을 보존하며 수락 정책을 대신 결정하지 않는다.
 
-골든 `Hello` (`version=1, session=0, seq=0`)의 Postcard는 `01 00 00 00`, CRC LE는 `79 b8 f8 99`, 전체 wire는 `02 01 01 01 05 79 b8 f8 99 00`이다. CRC는 Python `zlib.crc32`로 독립 계산해 테스트에 고정했다.
+골든 `Hello` (`version=2, session=0, seq=0`)의 Postcard는 `02 00 00 00`, CRC LE는 `97 17 4d 8b`, 전체 wire는 `02 02 01 01 05 97 17 4d 8b 00`이다. CRC는 Python `zlib.crc32`로 독립 계산해 테스트에 고정했다.
 
 Postcard enum 태그는 **선언 순서**를 사용한다. 아래 순서·필드 순서를 변경하려면 wire version과 호환 정책을 함께 검토한다.
 
@@ -53,6 +53,16 @@ Postcard enum 태그는 **선언 순서**를 사용한다. 아래 순서·필드
 | 9 | `Touch(TouchEvent)` |
 | 10 | `TestEvent { module: Module, phase: u16, done: bool, fault: bool }` |
 | 11 | `Bootloader` |
+| 12 | `Arm(ActuatorConfig)` |
+| 13 | `SetPose { targets_cdeg: [u16;6], move_ms: u16 }` |
+| 14 | `SetLight { rgb: [u8;3], brightness: u8, period_ms: u16 }` |
+| 15 | `SetEyes { left: [u8;8], right: [u8;8], brightness: u8 }` |
+| 16 | `Outputs(OutputStatus)` |
+| 17 | `Applied { request_seq: u32, kind: u8 }` |
+
+`ActuatorConfig`는 calibration_id, 축별 min/max/neutral cdeg, min/max pulse µs, invert_mask, max_speed_cdeg_s, servo_enabled, matrix_installed 순서다. 기본 서보는 잠겨 있다. 절대 명령각0~18000cdeg 중 보정 범위만 허용하고 이동 시간100~10000ms·속도100~6000cdeg/s를 검사한다. LED 밝기는0~64, period=0은 고정/200~10000ms는 삼각파 효과다. 눈 밝기는0~15이며 미설치면 거부한다.
+
+`Applied.kind`는1=pose,2=light,3=eyes다. pose Applied는 보간 목표의 PWM 레지스터 반영 뒤 보낸다. 실제 관절 위치/빛/표시 피드백이 아니다. Outputs의 commanded_cdeg도 측정 각도가 아니며 unarmed의 기본0 배열을 실제0도 위치로 해석하지 않는다. Stop/세션 교체·lease 만료는 목표를 취소하고 새 Arm 전까지 차단한다. 운영 방법은 [전체 기능 문서](../../doc/software/전체기능_구현과_운영.md)를 따른다.
 
 `Module` 순서는 `Matrix, NeoLeft, NeoRight, Servos, All`이다. `AckCode` 순서는 `Ok, InvalidConfig, Busy, NoSession, Unsupported, Fault, BadVersion, BadSession, StaleSequence`다. `request_seq`는 응답 대상 요청의 `Frame.seq`이며 응답 자체의 sequence와 구분한다.
 

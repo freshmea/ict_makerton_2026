@@ -2,7 +2,7 @@
 
 use serde::{Deserialize, Serialize};
 
-pub const VERSION: u8 = 1;
+pub const VERSION: u8 = 2;
 pub const PROTOCOL_VERSION: u8 = VERSION;
 pub const USB_VID: u16 = 0xc0de;
 pub const USB_PID: u16 = 0xcafc;
@@ -132,7 +132,36 @@ pub enum Message {
     Touch(TouchEvent),
     TestEvent { module: Module, phase: u16, done: bool, fault: bool },
     Bootloader,
+    Arm(ActuatorConfig),
+    SetPose { targets_cdeg: [u16;6], move_ms: u16 },
+    SetLight { rgb: [u8;3], brightness: u8, period_ms: u16 },
+    SetEyes { left: [u8;8], right: [u8;8], brightness: u8 },
+    Outputs(OutputStatus),
+    Applied { request_seq: u32, kind: u8 },
 }
+
+#[derive(Clone,Copy,Debug,PartialEq,Eq,Serialize,Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct ActuatorConfig {
+    pub calibration_id:u32,
+    pub min_cdeg:[u16;6],
+    pub max_cdeg:[u16;6],
+    pub neutral_cdeg:[u16;6],
+    pub min_us:[u16;6],
+    pub max_us:[u16;6],
+    pub invert_mask:u8,
+    pub max_speed_cdeg_s:u16,
+    pub servo_enabled:bool,
+    pub matrix_installed:bool,
+}
+impl Default for ActuatorConfig {fn default()->Self{Self{calibration_id:1,min_cdeg:[8000;6],max_cdeg:[10000;6],neutral_cdeg:[9000;6],min_us:[1000;6],max_us:[2000;6],invert_mask:0,max_speed_cdeg_s:1000,servo_enabled:false,matrix_installed:false}}}
+impl ActuatorConfig {
+    pub fn validate(&self)->bool {self.calibration_id!=0&&self.invert_mask&!63==0&&(100..=6000).contains(&self.max_speed_cdeg_s)&&(0..6).all(|i|self.min_cdeg[i]<self.max_cdeg[i]&&self.max_cdeg[i]<=18000&&self.neutral_cdeg[i]>=self.min_cdeg[i]&&self.neutral_cdeg[i]<=self.max_cdeg[i]&&self.min_us[i]>=500&&self.max_us[i]<=2500&&self.min_us[i]<self.max_us[i])}
+    pub fn accepts(&self,target:&[u16;6],move_ms:u16)->bool{self.validate()&&self.servo_enabled&&(100..=10000).contains(&move_ms)&&(0..6).all(|i|(self.min_cdeg[i]..=self.max_cdeg[i]).contains(&target[i]))}
+    pub fn ticks(&self,i:usize,cdeg:u16)->u16{let angle=if self.invert_mask&(1<<i)!=0{18000-cdeg.min(18000)}else{cdeg.min(18000)};let us=self.min_us[i]as u32+(self.max_us[i]-self.min_us[i])as u32*angle as u32/18000;((us*4096+10000)/20000)as u16}
+}
+#[derive(Clone,Copy,Debug,Default,PartialEq,Eq,Serialize,Deserialize)]
+pub struct OutputStatus {pub armed:bool,pub calibration_id:u32,pub commanded_cdeg:[u16;6],pub pose_active:bool,pub light_active:bool,pub applied_seq:u32}
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Frame {

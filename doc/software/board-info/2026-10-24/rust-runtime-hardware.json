@@ -1,0 +1,607 @@
+{
+  "real_hardware": true,
+  "cloud_calls": 0,
+  "checks": [
+    "quiet startup has no controller motion lease",
+    "test before Help rejected",
+    "two real CSI -> tmpfs slots -> visiond",
+    "CUDA/CPU reference equality",
+    "real bounded PCM capture",
+    "SQLite bound goal roundtrip",
+    "SQLite delete",
+    "unconfigured provider is explicit error",
+    "expired IPC rejected",
+    "oversize frame connection closed",
+    "active Help cannot silently replace an epoch",
+    "controller renew keeps lease live",
+    "missing matrix blocked",
+    "current epoch PCM reaches native playback queue",
+    "Stop waits for device flush",
+    "stale PCM rejected after Stop",
+    "controller death stops despite USB KeepAlive",
+    "new controller starts quiet",
+    "old turn has not resumed"
+  ],
+  "pico_initial": {
+    "v": 1,
+    "id": 3774339249454,
+    "generation": 16221520160178999532,
+    "ok": true,
+    "data": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 16221520160178999532,
+      "lease_valid": false,
+      "monotonic_ms": 3774339,
+      "phase": "quiet",
+      "role": "picod",
+      "state": {
+        "received_ms": 3774303,
+        "telemetry": {
+          "event": "status",
+          "host_monotonic_ms": 98,
+          "host_unix_ms": 1792787380390,
+          "seq": 75579,
+          "session": "3A59CEB1A1163F49",
+          "status": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 30626,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": true,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": null,
+            "touches": [
+              {
+                "held_ms": 107505,
+                "interval_count": 215,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 107505,
+                "interval_count": 215,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 107505,
+                "interval_count": 215,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 107505,
+                "interval_count": 215,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 107505,
+                "interval_count": 215,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 3772653
+          },
+          "version": 1
+        }
+      },
+      "turn_epoch": 0
+    }
+  },
+  "audio": {
+    "v": 1,
+    "id": 3774446738979,
+    "generation": 5133841953566170344,
+    "ok": true,
+    "data": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 5133841953566170344,
+      "lease_valid": false,
+      "monotonic_ms": 3774447,
+      "phase": "quiet",
+      "role": "audiod",
+      "state": {
+        "aec_acoustic_verified": false,
+        "aec_pipeline": true,
+        "capture_seq": 1,
+        "channels": 1,
+        "device_flushes": 0,
+        "pcm_accepted": 0,
+        "pcm_rejected": 0,
+        "rate": 48000,
+        "received_ms": 3774439,
+        "rms": 0.0003246574077117397
+      },
+      "turn_epoch": 0
+    }
+  },
+  "cameras": {
+    "v": 1,
+    "id": 3775969331943,
+    "generation": 17147619101322303123,
+    "ok": true,
+    "data": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 17147619101322303123,
+      "lease_valid": false,
+      "monotonic_ms": 3775970,
+      "phase": "quiet",
+      "role": "camerad",
+      "state": {
+        "cameras": [
+          {
+            "format": "NV12",
+            "frame_id": 8,
+            "height": 240,
+            "received_ms": 3775955,
+            "shm_dropped": 0,
+            "width": 320
+          },
+          {
+            "format": "NV12",
+            "frame_id": 6,
+            "height": 240,
+            "received_ms": 3775957,
+            "shm_dropped": 0,
+            "width": 320
+          }
+        ],
+        "received_ms": 3775957
+      },
+      "turn_epoch": 0
+    }
+  },
+  "vision": {
+    "v": 1,
+    "id": 3776071751556,
+    "generation": 3591082601626972322,
+    "ok": true,
+    "data": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 3591082601626972322,
+      "lease_valid": false,
+      "monotonic_ms": 3776072,
+      "phase": "quiet",
+      "role": "visiond",
+      "state": {
+        "cameras": [
+          {
+            "backend": "cuda-sm53",
+            "camera": 0,
+            "frame_age_ms": 169,
+            "frame_id": 5,
+            "generation": 17147619101322303123,
+            "inference": "none",
+            "luma_mean": 21.319427083333334,
+            "luma_motion": null,
+            "presence": "unknown"
+          },
+          {
+            "backend": "cuda-sm53",
+            "camera": 1,
+            "frame_age_ms": 34,
+            "frame_id": 7,
+            "generation": 17147619101322303123,
+            "inference": "none",
+            "luma_mean": 22.289934895833333,
+            "luma_motion": null,
+            "presence": "unknown"
+          }
+        ],
+        "received_ms": 3776024
+      },
+      "turn_epoch": 0
+    }
+  },
+  "cuda_check": {
+    "backend": "cuda-sm53",
+    "cpu_match": true,
+    "mean": 124.9904296875,
+    "motion": 71.9205859375,
+    "pixels": 76800
+  },
+  "explicit_stop": {
+    "v": 1,
+    "id": 3777467198479,
+    "generation": 7952688722836996978,
+    "ok": true,
+    "data": {
+      "audio": {
+        "device_flushed": true
+      },
+      "pico": {
+        "ack_code": "Ok",
+        "ack_request_seq": 20,
+        "cmd": "stop",
+        "ok": true,
+        "session": "3A59CEB1A1163F49",
+        "status": {
+          "age_ms": 0,
+          "device": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 30626,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": true,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": null,
+            "touches": [
+              {
+                "held_ms": 2983,
+                "interval_count": 5,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 2983,
+                "interval_count": 5,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 2983,
+                "interval_count": 5,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 2983,
+                "interval_count": 5,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 2983,
+                "interval_count": 5,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 3775825
+          },
+          "received_unix_ms": 1792787383563
+        }
+      }
+    }
+  },
+  "pico_before_controller_death": {
+    "v": 1,
+    "id": 3777732943266,
+    "generation": 16221520160178999532,
+    "ok": true,
+    "data": {
+      "epoch": 3,
+      "fresh": true,
+      "generation": 16221520160178999532,
+      "lease_valid": true,
+      "monotonic_ms": 3777733,
+      "phase": "quiet",
+      "role": "picod",
+      "state": {
+        "received_ms": 3777732,
+        "telemetry": {
+          "event": "status",
+          "host_monotonic_ms": 3527,
+          "host_unix_ms": 1792787383818,
+          "seq": 24,
+          "session": "3A59CEB1A1163F49",
+          "status": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 30626,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": true,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": "NeoLeft",
+            "touches": [
+              {
+                "held_ms": 3239,
+                "interval_count": 6,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 3239,
+                "interval_count": 6,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 3239,
+                "interval_count": 6,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 3239,
+                "interval_count": 6,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 3239,
+                "interval_count": 6,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 3776081
+          },
+          "version": 1
+        }
+      },
+      "turn_epoch": 0
+    }
+  },
+  "controller_death_observed_ms": 821,
+  "pico_after_controller_death": {
+    "v": 1,
+    "id": 3778553174034,
+    "generation": 16221520160178999532,
+    "ok": true,
+    "data": {
+      "epoch": 3,
+      "fresh": true,
+      "generation": 16221520160178999532,
+      "lease_valid": false,
+      "monotonic_ms": 3778553,
+      "phase": "quiet",
+      "role": "picod",
+      "state": {
+        "received_ms": 3778503,
+        "telemetry": {
+          "event": "status",
+          "host_monotonic_ms": 4299,
+          "host_unix_ms": 1792787384590,
+          "seq": 75676,
+          "session": "3A59CEB1A1163F49",
+          "status": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 30626,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": true,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": null,
+            "touches": [
+              {
+                "held_ms": 4009,
+                "interval_count": 8,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 4009,
+                "interval_count": 8,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 4009,
+                "interval_count": 8,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 4009,
+                "interval_count": 8,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 4009,
+                "interval_count": 8,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 3776853
+          },
+          "version": 1
+        }
+      },
+      "turn_epoch": 0
+    }
+  },
+  "passed": true,
+  "process_returncodes": {
+    "picod": 0,
+    "camerad": 0,
+    "audiod": 0,
+    "visiond": 0,
+    "memoryd": 0,
+    "dialogued": 0,
+    "controllerd": 0
+  },
+  "logs": {
+    "picod": "picod: controller lease expired -> Stop\n",
+    "camerad": "GST_ARGUS: Creating output stream\nGST_ARGUS: Creating output stream\nCONSUMER: Waiting until producer is connected...\nGST_ARGUS: Available Sensor modes :\nGST_ARGUS: 3264 x 2464 FR = 21.000000 fps Duration = 47619048 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 3264 x 1848 FR = 28.000001 fps Duration = 35714284 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 1920 x 1080 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 1640 x 1232 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 1280 x 720 FR = 59.999999 fps Duration = 16666667 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 1280 x 720 FR = 120.000005 fps Duration = 8333333 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: Running with following settings:\n   Camera index = 0 \n   Camera mode  = 5 \n   Output Stream W = 1280 H = 720 \n   seconds to Run    = 0 \n   Frame Rate = 120.000005 \nGST_ARGUS: Setup Complete, Starting captures for 0 seconds\nGST_ARGUS: Starting repeat capture requests.\nCONSUMER: Waiting until producer is connected...\nGST_ARGUS: Available Sensor modes :\nCONSUMER: Producer has connected; continuing.\nGST_ARGUS: 3264 x 2464 FR = 21.000000 fps Duration = 47619048 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 3264 x 1848 FR = 28.000001 fps Duration = 35714284 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 1920 x 1080 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 1640 x 1232 FR = 29.999999 fps Duration = 33333334 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 1280 x 720 FR = 59.999999 fps Duration = 16666667 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: 1280 x 720 FR = 120.000005 fps Duration = 8333333 ; Analog Gain range min 1.000000, max 10.625000; Exposure Range min 13000, max 683709000;\n\nGST_ARGUS: Running with following settings:\n   Camera index = 1 \n   Camera mode  = 5 \n   Output Stream W = 1280 H = 720 \n   seconds to Run    = 0 \n   Frame Rate = 120.000005 \nGST_ARGUS: Setup Complete, Starting captures for 0 seconds\nGST_ARGUS: Starting repeat capture requests.\nCONSUMER: Producer has connected; continuing.\nGST_ARGUS: Cleaning up\nCONSUMER: Done Success\nGST_ARGUS: Done Success\nGST_ARGUS: Cleaning up\nCONSUMER: Done Success\nGST_ARGUS: Done Success\n",
+    "audiod": "audiod: controller lease expired -> Stop\n",
+    "visiond": "",
+    "memoryd": "",
+    "dialogued": "",
+    "controllerd": "controllerd RPC: invalid frame length\n"
+  }
+}

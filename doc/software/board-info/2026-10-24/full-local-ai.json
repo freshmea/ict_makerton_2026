@@ -1,0 +1,51 @@
+{
+  "component_execution_pass": true,
+  "synthetic_input": true,
+  "human_speech_accuracy_verified": false,
+  "cloud_calls": 0,
+  "raw_audio_saved": false,
+  "checks": [
+    {
+      "op": "ocr",
+      "wall_ms": 5727,
+      "result": {
+        "text": "수학 공부 문 제 의 조 건 을 먼저 찾 아 보자. 3+4=?",
+        "confidence": 0.9090909090909091,
+        "confirmed": false,
+        "needs_confirmation": true,
+        "backend": "tesseract-kor-eng-cpu",
+        "quality": {
+          "laplacian": 532.0960980902778,
+          "luma": 252.5132888454861
+        },
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ],
+        "rotation": 0
+      }
+    },
+    {
+      "op": "tts",
+      "wall_ms": 243,
+      "result": {
+        "backend": "espeak-ko-cpu",
+        "rate": 48000,
+        "samples": 174276,
+        "disclosure": "합성 음성"
+      }
+    },
+    {
+      "op": "prepare_wav",
+      "wall_ms": 204,
+      "result": {
+        "backend": "typecast-ko-cpu",
+        "rate": 48000,
+        "samples": 174276,
+        "disclosure": "합성 음성"
+      }
+    }
+  ]
+}

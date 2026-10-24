@@ -1,0 +1,5 @@
+[Unit]
+Description=300 Seconds Rust device runtime (manual start)
+Wants=300seconds-runtime@picod.service 300seconds-runtime@camerad.service 300seconds-runtime@audiod.service 300seconds-runtime@visiond.service 300seconds-runtime@memoryd.service 300seconds-runtime@dialogued.service 300seconds-runtime@controllerd.service
+After=300seconds-runtime@picod.service 300seconds-runtime@audiod.service
+Conflicts=300seconds-dashboard.service

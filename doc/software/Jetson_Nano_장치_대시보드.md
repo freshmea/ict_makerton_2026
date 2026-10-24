@@ -1,5 +1,7 @@
 # Jetson Nano FastAPI 장치 대시보드
 
+최신 운영 변경(2026-10-24): 사용자 요청으로 이 모니터는 **disabled/inactive**다. 아래 자동 시작·화면 결과는 이전 구현 검증 이력이며, 이후 [Rust runtime 전환](Rust_마이크로아키텍처_실행과_검증.md)을 따른다.
+
 2026-10-24 KST, 실제 `192.168.219.127` Nano와 USB Pico 2 W에서 구현·배포·점검했다. 소스는 [apps/device-dashboard](../../apps/device-dashboard/README.md)에 있다.
 
 ## 접속과 최종 배포 상태

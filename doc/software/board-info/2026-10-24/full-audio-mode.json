@@ -1,0 +1,32 @@
+{
+  "audio_baseline_file_count": 4,
+  "original_user_audio_units": [
+    {
+      "uid": 1000,
+      "active": [
+        "pulseaudio.socket",
+        "pulseaudio.service"
+      ]
+    }
+  ],
+  "files_restored_exactly": true,
+  "restored_active": {
+    "1000": [
+      "pulseaudio.socket",
+      "pulseaudio.service"
+    ]
+  },
+  "project_active": {
+    "1000": []
+  },
+  "passed": true,
+  "explicit_activation_while_project": [
+    {
+      "uid": 1000,
+      "states": {
+        "pulseaudio.socket": "ActiveState=inactive\nConditionResult=no",
+        "pulseaudio.service": "ActiveState=inactive\nConditionResult=no"
+      }
+    }
+  ]
+}

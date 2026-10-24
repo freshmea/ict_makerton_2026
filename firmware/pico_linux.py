@@ -192,7 +192,7 @@ def status(port, log):
     pairs = [word.split('=', 1) for word in lines[0].split()[1:] if '=' in word]
     values = dict(pairs)
     if len(values) != len(pairs) or any(values.get(k) != v for k, v in
-            {'protocol': 'pico-device-v1', 'oe_high': '1', 'bootloader': 'picotool-v1'}.items()):
+            {'protocol': 'pico-device-v2', 'oe_high': '1', 'bootloader': 'picotool-v1'}.items()):
         raise RuntimeError('Protocol, stopped OE HIGH or bootloader capability not verified: ' + lines[0])
     return values
 

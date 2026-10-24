@@ -1,0 +1,37 @@
+[Unit]
+Description=300 Seconds Rust %i
+After=network.target nvargus-daemon.service sound.target
+Conflicts=300seconds-dashboard.service
+PartOf=300seconds-runtime.target
+
+[Service]
+Type=simple
+User=boarddash
+Group=boarddash
+SupplementaryGroups=audio video render robot-device dialout
+RuntimeDirectory=300seconds
+RuntimeDirectoryMode=0750
+RuntimeDirectoryPreserve=yes
+StateDirectory=300seconds-runtime
+StateDirectoryMode=0750
+Environment=NANO_RUN=/run/300seconds
+Environment=NANO_DB=/var/lib/300seconds-runtime/runtime.sqlite3
+Environment=NANO_CONFIG=/opt/300seconds/runtime/pico-config.json
+Environment=NANO_BRIDGE=/opt/300seconds/runtime/pico-device-bench
+Environment=NANO_CUDA=0
+Environment=GST_REGISTRY=/var/lib/300seconds-runtime/gst-registry.bin
+Environment=XDG_CACHE_HOME=/var/lib/300seconds-runtime/cache
+Environment=XDG_CONFIG_HOME=/var/lib/300seconds-runtime/config
+ExecStart=/opt/300seconds/runtime/nano-runtime serve %i
+KillSignal=SIGINT
+KillMode=mixed
+TimeoutStopSec=8
+Restart=no
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=false
+PrivateDevices=false
+UMask=0007
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+

@@ -1,0 +1,4 @@
+uid=996(boarddash) gid=989(boarddash) groups=989(boarddash),20(dialout),29(audio),44(video),134(render),993(robot-device)
+Installed. No runtime auto-start. Start explicitly: sudo systemctl start 300seconds-runtime.target
+all seven installed units active
+both cameras actual sensor ~30fps and analysis ~10fps

@@ -1,0 +1,32 @@
+   Compiling nano-runtime v0.1.0 (/home/jetson/ict_makerton_2026/software/services/nano-runtime)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.18s
+     Running unittests src/lib.rs (software/target/debug/deps/host_core-a3ad7db4dbbd219f)
+
+running 8 tests
+test decision::tests::model_never_overrides_stop_quiet_or_epoch ... ok
+test decision::tests::uncertainty_is_not_an_action_permission ... ok
+test shm::tests::restart_and_old_frame_are_invalid ... ok
+test shm::tests::busy_slots_drop_without_truncation_and_stale_frames_fail ... ok
+test tests::lease_stop_and_expiry_cannot_be_renewed_or_replayed ... ok
+test tests::pcm_is_bounded_and_versioned ... ok
+test tests::fragmented_frames_and_oversize ... ok
+test tests::unknown_commands_and_future_deadlines_fail ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (software/target/debug/deps/nano_runtime-7a53ab5c98f792c9)
+
+running 2 tests
+test native::tests::luma_cpu_contract_is_exact ... ok
+test native::tests::sqlite_is_parameter_bound_and_recoverable ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+   Doc-tests host_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Compiling nano-runtime v0.1.0 (/home/jetson/ict_makerton_2026/software/services/nano-runtime)
+    Finished `release` profile [optimized] target(s) in 52.53s

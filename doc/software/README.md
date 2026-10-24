@@ -1,9 +1,13 @@
 # Pico 2 · Jetson Nano 소프트웨어 개발 문서
 
+최신 운영 기준: [전체 기능 구현과 운영](전체기능_구현과_운영.md). Rust 대화·한국어 음성·경량 TensorRT 관찰·OCR·학습 기억·Pico v2 일반 구동과 무료 API 사용량 정책을 기록한다.
+
 양쪽 보드 모두 Rust를 우선한다. Pico 2는 Embassy, 구형 Nano는 Tokio 기반 프로세스로 구현한다.
 
 | 문서 | 용도 |
 | --- | --- |
+| [Rust micro-architecture 실행·검증](Rust_마이크로아키텍처_실행과_검증.md) | 모니터 중지 후 Rust 7개 프로세스·lease·IPC·카메라/PCM·CUDA·SQLite |
+| [외부 AI·로컬 처리 구현 계획](외부AI_로컬추론_구현계획.md) | Jev·OpenAI Decisions·Gemini 역할 비교, MediaPipe/경량 TensorRT 관찰·평가 계획 |
 | [2026-10-24 작업 종합 기록](Jetson_Nano_작업_종합기록_2026-10-24.md) | 보드 설정·ROS 비활성화·권한·실제 flash·장치 대시보드·HDMI와 남은 검증 범위 |
 | [개발 단계 및 점검표](개발_단계_및_점검표.md) | 실제 작업 순서·A/B 병렬 진행·진입/완료 조건·진행 현황 관리 |
 | [시험 기록 양식](시험_기록_양식.md) | 개별 시험의 실제 구성·절차·측정·실패·증거 기록 |

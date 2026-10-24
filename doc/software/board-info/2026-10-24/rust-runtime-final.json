@@ -1,0 +1,48 @@
+{
+  "checked_at_utc": "2026-10-23T20:31:30.348466+00:00",
+  "source_sha256": {
+    "software/install.sh": "c12c4c89fc36dd37639bd9c68566bb388713b35a2ac1470c41c2caf4c54a9730",
+    "software/README.md": "9a1b1fda80976f4c85d978a15b824184622f77d269cf48f3107e11a8372edb1c",
+    "software/Cargo.lock": "f07a9a88413558d420b57b98edc7d86f4d55d098802db4539d9761bb38777027",
+    "software/Cargo.toml": "bc692ad303d94c4cb4e98bdcb89c078c102e4a91a6a52ece05ecaaf622e7999f",
+    "software/deploy/300seconds-runtime.target": "d1ff0dd82a1ef31f2e73c47f715e1943daab6a9562c5c88494a9390f4bb6d3ba",
+    "software/deploy/300seconds-runtime@.service": "df2d288d106c82b7ccd16e0d5a60fae1d641fed5357f757adbb8ab1d4a6e9c12",
+    "software/tests/verify_runtime.py": "76b61a71f7e50c348c7d08ef958666fdc8ba740e524cd826cd7ab443a5cf5f62",
+    "software/native/vision.cu": "44431d964b60da1f2330e7084114d296a3cd0a799b3a4b3dbcdce60fea7cbab9",
+    "software/native/media.c": "fddf1aa11f8f8956624c42306690839420bc5b0c0058fca7c648f71189564e17",
+    "software/services/nano-runtime/build.rs": "d0b587f32be40dfb20b1e9fc381ab6abee1789fd2f8a2efcb4adb8107ce606a1",
+    "software/services/nano-runtime/Cargo.toml": "57abf593bd50315f670d9dfd55a040047e4bf72cbb28f99f152ae9f6a2362dad",
+    "software/services/nano-runtime/src/policy.rs": "7304e0ffbeea36247a984328e3e9dfe0fa374bbef13a0d3f4281261c254efc9a",
+    "software/services/nano-runtime/src/media.rs": "539651477b3627e26026ee14dee24010fcd4fd93f619bade76d9d3aacda41bd1",
+    "software/services/nano-runtime/src/native.rs": "d9baad3f6304b23463c725a6213dc9123ba976cb3377b0d781fea802315e895e",
+    "software/services/nano-runtime/src/main.rs": "0dd2f0f75ec636b2b3b6df9f480e23a74e46cc92256bca2d54c5a9fd16b0fdc5",
+    "software/crates/host-core/Cargo.toml": "6159602016751d412b5a8bac6ae9136610bade7964af87ec4d996b303d02a36f",
+    "software/crates/host-core/src/shm.rs": "b261bcb4c5256899be0ea22102515d133ea2cf32ff8488c1f954255de7acf690",
+    "software/crates/host-core/src/decision.rs": "17aac2b25cb0c14cf4c6d131413e50e9c7bcec73ae383388423b46da993476ec",
+    "software/crates/host-core/src/lib.rs": "296fcc6c3e32193adcb4bad92f2a49b3931509e267e800006835c76cbff49f79"
+  },
+  "binary_sha256": {
+    "software/target/release/nano-runtime": "5ab9bce25d24e75f0c8137559d83966c323e2585139237de783bd5594b478bae",
+    "/opt/300seconds/runtime/nano-runtime": "5ab9bce25d24e75f0c8137559d83966c323e2585139237de783bd5594b478bae"
+  },
+  "dashboard": {
+    "exit_code": 0,
+    "output": "ActiveState=inactive\nUnitFileState=disabled"
+  },
+  "runtime": {
+    "exit_code": 0,
+    "output": "ActiveState=inactive\nUnitFileState=static"
+  },
+  "core_units": {
+    "exit_code": 0,
+    "output": "UNIT LOAD ACTIVE SUB DESCRIPTION\n0 loaded units listed.\nTo show all installed unit files use 'systemctl list-unit-files'."
+  },
+  "hdmi_getty": {
+    "exit_code": 0,
+    "output": "active"
+  },
+  "leftover_processes": {
+    "exit_code": 1,
+    "output": ""
+  }
+}

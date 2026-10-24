@@ -1,0 +1,18 @@
+{
+  "local_asr": {
+    "input": "수학 문제 힌트 알려줘",
+    "recognized": "수학 문제 힌트 알려줘",
+    "exact_match_this_single_utterance": true,
+    "cloud_calls": 0,
+    "backend": "vosk-small-ko-0.22-cpu",
+    "confidence_not_calibrated": true,
+    "raw_audio_saved": false
+  },
+  "tts": {
+    "espeak": "user heard voice but found Korean hard to understand",
+    "typecast_ssfm_v30_seoyeon": "user confirmed natural and understandable",
+    "microphone_uploaded_to_typecast": false
+  },
+  "general_servo_pose_physical_observation": false,
+  "human_double_talk_verified": false
+}

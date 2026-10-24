@@ -1,0 +1,45 @@
+{
+  "plan": "free",
+  "credits": {
+    "plan_credits": 15000,
+    "used_credits": 34
+  },
+  "limits": {
+    "concurrency_limit": 2,
+    "custom_voice_slot": 0,
+    "professional_voice_slot": 0
+  },
+  "checked_utc": "2026-10-23T23:25:41.036956+00:00",
+  "operation": "subscription GET only, no synthesis",
+  "local_tts": {
+    "attempts": [
+      [
+        1792796600,
+        34
+      ]
+    ],
+    "cooldown_until": 0,
+    "last_http_status": 200
+  },
+  "local_ai": {
+    "attempts": [
+      1792793848,
+      1792794049,
+      1792796599
+    ],
+    "cooldown_until": 0,
+    "last_http_status": 200,
+    "last_usage": {
+      "candidatesTokenCount": 53,
+      "promptTokenCount": 300,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 300
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 353
+    }
+  }
+}

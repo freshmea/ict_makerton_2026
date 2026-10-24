@@ -1,0 +1,55 @@
+NVPM WARN: fan mode is not set!
+NV Power Mode: 5W
+1
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage0_input 4736
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage1_input 4736
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage2_input 4736
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current0_input 544
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current0_trigger_input 536
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current1_input 0
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current1_trigger_input 0
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current2_input 144
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current2_trigger_input 144
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current_sum_input 0 ma
+/sys/class/thermal/thermal_zone0/temp 47500
+/sys/class/thermal/thermal_zone1/temp 39000
+/sys/class/thermal/thermal_zone2/temp 40000
+/sys/class/thermal/thermal_zone3/temp 38000
+/sys/class/thermal/thermal_zone4/temp 50000
+/sys/class/thermal/thermal_zone5/temp 38500
+Oct 24 01:12:40 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:41 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:43 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:44 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:46 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:47 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:49 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:50 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:51 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:52 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:55 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:12:56 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:00 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:01 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:02 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:04 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:05 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:06 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:07 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:09 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:11 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:13 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:15 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:17 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:18 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:19 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:22 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:24 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:26 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:27 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:28 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:30 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:31 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:32 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 01:13:34 nano kernel: soctherm: OC ALARM 0x00000001
+{"epoch":0,"fresh":true,"generation":16625604949649402214,"lease_valid":false,"monotonic_ms":13609559,"phase":"quiet","role":"camerad","state":{"cameras":[{"format":"NV12","frame_id":1109,"height":240,"received_ms":13609481,"sensor_mode":4,"shm_dropped":0,"source_frame_id":3235,"width":320},{"format":"NV12","frame_id":1109,"height":240,"received_ms":13609479,"sensor_mode":4,"shm_dropped":0,"source_frame_id":3234,"width":320}],"received_ms":13609481},"turn_epoch":0}

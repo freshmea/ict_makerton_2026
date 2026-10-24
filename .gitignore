@@ -9,3 +9,9 @@ doc/BOM/mechanical_v8/videos/P5_section_side30_to_front_audit
 /.playwright-cli/
 /output/playwright/
 /firmware/pico2-device-bench/dist/linux/
+/firmware/pico2-device-bench/dist/
+/software/config/ai.env
+/software/config/runtime.env
+**/__pycache__/
+/software/models/*.onnx
+/software/models/*.engine

@@ -1,0 +1,517 @@
+{
+  "passed": true,
+  "uid": "boarddash",
+  "analysis_fps": [
+    9.992220179602835,
+    9.992220179602835
+  ],
+  "elapsed_seconds": 10.30801945400026,
+  "host_network_namespace": "net:[4026531936]",
+  "pico_network_namespace": "net:[4026533010]",
+  "host_udp_backend_unreachable": true,
+  "camera_restart_generation_changed": true,
+  "vision_stale_after_camera_stop": true,
+  "initial": {
+    "controllerd": {
+      "epoch": 0,
+      "fresh": false,
+      "generation": 3641068387440429077,
+      "lease_valid": false,
+      "monotonic_ms": 3794314,
+      "phase": "quiet",
+      "role": "controllerd",
+      "state": {},
+      "turn_epoch": 0
+    },
+    "picod": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 1975497318789037879,
+      "lease_valid": false,
+      "monotonic_ms": 3794361,
+      "phase": "quiet",
+      "role": "picod",
+      "state": {
+        "received_ms": 3794312,
+        "telemetry": {
+          "event": "status",
+          "host_monotonic_ms": 6444,
+          "host_unix_ms": 1792787400400,
+          "seq": 76003,
+          "session": "F3F4673AEB5967E6",
+          "status": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 30788,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": true,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": null,
+            "touches": [
+              {
+                "held_ms": 6150,
+                "interval_count": 12,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 6150,
+                "interval_count": 12,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 6150,
+                "interval_count": 12,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 6150,
+                "interval_count": 12,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 6150,
+                "interval_count": 12,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 3792659
+          },
+          "version": 1
+        }
+      },
+      "turn_epoch": 0
+    },
+    "camerad": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 6631263533952472094,
+      "lease_valid": false,
+      "monotonic_ms": 3794406,
+      "phase": "quiet",
+      "role": "camerad",
+      "state": {
+        "cameras": [
+          {
+            "format": "NV12",
+            "frame_id": 13,
+            "height": 240,
+            "received_ms": 3794353,
+            "shm_dropped": 0,
+            "width": 320
+          },
+          {
+            "format": "NV12",
+            "frame_id": 13,
+            "height": 240,
+            "received_ms": 3794367,
+            "shm_dropped": 0,
+            "width": 320
+          }
+        ],
+        "received_ms": 3794367
+      },
+      "turn_epoch": 0
+    },
+    "visiond": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 10914434560048232180,
+      "lease_valid": false,
+      "monotonic_ms": 3794460,
+      "phase": "quiet",
+      "role": "visiond",
+      "state": {
+        "cameras": [
+          {
+            "backend": "cuda-sm53",
+            "camera": 0,
+            "frame_age_ms": 58,
+            "frame_id": 13,
+            "generation": 6631263533952472094,
+            "inference": "none",
+            "luma_mean": 54.95649739583333,
+            "luma_motion": 33.61794270833333,
+            "presence": "unknown"
+          },
+          {
+            "backend": "cuda-sm53",
+            "camera": 1,
+            "frame_age_ms": 55,
+            "frame_id": 13,
+            "generation": 6631263533952472094,
+            "inference": "none",
+            "luma_mean": 40.51385416666667,
+            "luma_motion": 16.6128515625,
+            "presence": "unknown"
+          }
+        ],
+        "received_ms": 3794422
+      },
+      "turn_epoch": 0
+    },
+    "audiod": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 17630398500132081615,
+      "lease_valid": false,
+      "monotonic_ms": 3794510,
+      "phase": "quiet",
+      "role": "audiod",
+      "state": {
+        "aec_acoustic_verified": false,
+        "aec_pipeline": true,
+        "capture_seq": 211,
+        "channels": 1,
+        "device_flushes": 0,
+        "pcm_accepted": 0,
+        "pcm_rejected": 0,
+        "rate": 48000,
+        "received_ms": 3794509,
+        "rms": 0.0008409805606661537
+      },
+      "turn_epoch": 0
+    },
+    "memoryd": {
+      "epoch": 0,
+      "fresh": false,
+      "generation": 1182912988591321711,
+      "lease_valid": false,
+      "monotonic_ms": 3794562,
+      "phase": "quiet",
+      "role": "memoryd",
+      "state": {},
+      "turn_epoch": 0
+    },
+    "dialogued": {
+      "epoch": 0,
+      "fresh": false,
+      "generation": 197000403562794611,
+      "lease_valid": false,
+      "monotonic_ms": 3794610,
+      "phase": "quiet",
+      "role": "dialogued",
+      "state": {
+        "generated_response": false,
+        "network_calls": 0,
+        "provider": "unconfigured"
+      },
+      "turn_epoch": 0
+    }
+  },
+  "final": {
+    "controllerd": {
+      "epoch": 0,
+      "fresh": false,
+      "generation": 3641068387440429077,
+      "lease_valid": false,
+      "monotonic_ms": 3804659,
+      "phase": "quiet",
+      "role": "controllerd",
+      "state": {},
+      "turn_epoch": 0
+    },
+    "picod": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 1975497318789037879,
+      "lease_valid": false,
+      "monotonic_ms": 3804695,
+      "phase": "quiet",
+      "role": "picod",
+      "state": {
+        "received_ms": 3804611,
+        "telemetry": {
+          "event": "status",
+          "host_monotonic_ms": 16743,
+          "host_unix_ms": 1792787410699,
+          "seq": 76206,
+          "session": "F3F4673AEB5967E6",
+          "status": {
+            "config": {
+              "hold_interval_ms": 500,
+              "left_segments": [
+                4,
+                4,
+                10
+              ],
+              "local_tests_enabled": false,
+              "press_window_ms": 2000,
+              "right_segments": [
+                4,
+                4,
+                10
+              ],
+              "servo_max_us": 2000,
+              "servo_min_us": 1000,
+              "test_span_degrees": 10,
+              "test_switch": 0,
+              "touch_active_low_mask": 0
+            },
+            "dropped_events": 30788,
+            "faults": 0,
+            "local_enabled": false,
+            "oe_high": true,
+            "pressed_mask": 55,
+            "raw_mask": 55,
+            "running": null,
+            "touches": [
+              {
+                "held_ms": 16453,
+                "interval_count": 32,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 16453,
+                "interval_count": 32,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 16453,
+                "interval_count": 32,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 0,
+                "interval_count": 0,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": false,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 16453,
+                "interval_count": 32,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              },
+              {
+                "held_ms": 16453,
+                "interval_count": 32,
+                "last_duration_ms": 0,
+                "last_interval_count": 0,
+                "press_count": 0,
+                "pressed": true,
+                "window_remaining_ms": 0
+              }
+            ],
+            "uptime_ms": 3802962
+          },
+          "version": 1
+        }
+      },
+      "turn_epoch": 0
+    },
+    "camerad": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 6631263533952472094,
+      "lease_valid": false,
+      "monotonic_ms": 3804739,
+      "phase": "quiet",
+      "role": "camerad",
+      "state": {
+        "cameras": [
+          {
+            "format": "NV12",
+            "frame_id": 116,
+            "height": 240,
+            "received_ms": 3804688,
+            "shm_dropped": 0,
+            "width": 320
+          },
+          {
+            "format": "NV12",
+            "frame_id": 116,
+            "height": 240,
+            "received_ms": 3804663,
+            "shm_dropped": 0,
+            "width": 320
+          }
+        ],
+        "received_ms": 3804688
+      },
+      "turn_epoch": 0
+    },
+    "visiond": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 10914434560048232180,
+      "lease_valid": false,
+      "monotonic_ms": 3804778,
+      "phase": "quiet",
+      "role": "visiond",
+      "state": {
+        "cameras": [
+          {
+            "backend": "cuda-sm53",
+            "camera": 0,
+            "frame_age_ms": 48,
+            "frame_id": 115,
+            "generation": 6631263533952472094,
+            "inference": "none",
+            "luma_mean": 107.7951171875,
+            "luma_motion": 3.258450520833333,
+            "presence": "unknown"
+          },
+          {
+            "backend": "cuda-sm53",
+            "camera": 1,
+            "frame_age_ms": 74,
+            "frame_id": 115,
+            "generation": 6631263533952472094,
+            "inference": "none",
+            "luma_mean": 93.59819010416666,
+            "luma_motion": 3.650078125,
+            "presence": "unknown"
+          }
+        ],
+        "received_ms": 3804631
+      },
+      "turn_epoch": 0
+    },
+    "audiod": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 17630398500132081615,
+      "lease_valid": false,
+      "monotonic_ms": 3804822,
+      "phase": "quiet",
+      "role": "audiod",
+      "state": {
+        "aec_acoustic_verified": false,
+        "aec_pipeline": true,
+        "capture_seq": 1242,
+        "channels": 1,
+        "device_flushes": 0,
+        "pcm_accepted": 0,
+        "pcm_rejected": 0,
+        "rate": 48000,
+        "received_ms": 3804814,
+        "rms": 0.0003189962896475815
+      },
+      "turn_epoch": 0
+    },
+    "memoryd": {
+      "epoch": 0,
+      "fresh": false,
+      "generation": 1182912988591321711,
+      "lease_valid": false,
+      "monotonic_ms": 3804860,
+      "phase": "quiet",
+      "role": "memoryd",
+      "state": {},
+      "turn_epoch": 0
+    },
+    "dialogued": {
+      "epoch": 0,
+      "fresh": false,
+      "generation": 197000403562794611,
+      "lease_valid": false,
+      "monotonic_ms": 3804917,
+      "phase": "quiet",
+      "role": "dialogued",
+      "state": {
+        "generated_response": false,
+        "network_calls": 0,
+        "provider": "unconfigured"
+      },
+      "turn_epoch": 0
+    },
+    "camerad_after_restart": {
+      "epoch": 0,
+      "fresh": true,
+      "generation": 6215929884341019499,
+      "lease_valid": false,
+      "monotonic_ms": 3812779,
+      "phase": "quiet",
+      "role": "camerad",
+      "state": {
+        "cameras": [
+          {
+            "format": "NV12",
+            "frame_id": 4,
+            "height": 240,
+            "received_ms": 3812757,
+            "shm_dropped": 0,
+            "width": 320
+          },
+          {
+            "format": "NV12",
+            "frame_id": 6,
+            "height": 240,
+            "received_ms": 3812748,
+            "shm_dropped": 0,
+            "width": 320
+          }
+        ],
+        "received_ms": 3812757
+      },
+      "turn_epoch": 0
+    }
+  }
+}

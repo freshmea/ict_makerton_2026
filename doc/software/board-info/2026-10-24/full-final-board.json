@@ -1,0 +1,235 @@
+{
+  "at_utc": "2026-10-23T23:42:22.170556+00:00",
+  "source_hash_convention": "SHA256 after CRLF to LF normalization",
+  "source_sha256": {
+    "crates/pico-device-protocol/Cargo.lock": "b42ef9404d2bfcb40e8cd3a220392cfadb92bb2d4ac6b32fb497bb57ca6bc3d7",
+    "crates/pico-device-protocol/Cargo.toml": "0955b50577747b844d45ee518c1009cf3c99aeca0d256a145415cde3ffc461d6",
+    "crates/pico-device-protocol/README.md": "ff7580de2fa2238c838dc0284646cb306a8db9132b67b3dd784ca4a464fdea0a",
+    "crates/pico-device-protocol/src/lib.rs": "fc84136a2737797d018e17fa050fc73ff8cc928f8b9244977fc17860f6bd636f",
+    "crates/pico-device-protocol/tests/invariants.rs": "cf06ba76435cff44e441e9f93e327b30aca3c5e39c71da36f604c8178a2239f6",
+    "crates/pico-device-protocol/validation/2026-10-23.txt": "1bd748b4f663467065cd88700debd2479094c960edc1dd770aa823d9ab1aacbf",
+    "firmware/pico2-device-bench/.cargo/config.toml": "f3591d029f55429aa462e9a61c5b1b637bd3cc6c86ac55695c4d2df7d41c00be",
+    "firmware/pico2-device-bench/build.rs": "74fbfc498c904689039120d722ceb8360ec0e0c4eda8d799d8caf95f313e406d",
+    "firmware/pico2-device-bench/Cargo.lock": "54b6d26c470c2657b8426b930af58e70cc6c5729a43a4c66bca581e51765ea3d",
+    "firmware/pico2-device-bench/Cargo.toml": "a13cb3c042d5b0c8a66d1393d1cb2329503ac6071812a3437bc6225bdd2d9977",
+    "firmware/pico2-device-bench/logs/unit-test.txt": "64faad01a1b077d06d68541b9fd047eabb61e1a5254f693e1377dd7c28fff436",
+    "firmware/pico2-device-bench/memory.x": "9c493a7dcaa96535a529b5afecf048d12468b7e7ce6edf26fb022f81b3fe865c",
+    "firmware/pico2-device-bench/README.md": "d3a48e41a1fd2a8b25a721e528655569d9fe45cc1b5542ade03a547aae476072",
+    "firmware/pico2-device-bench/rust-toolchain.toml": "5e00b847648befea0f328093dee0298c31913f1a3b6f5021f3df43e5ac7c7761",
+    "firmware/pico2-device-bench/src/application.rs": "cdd59680df9dfa2ea8fd135e1078506da5b464d45253f121b336016cd29ed124",
+    "firmware/pico2-device-bench/src/lib.rs": "6c6f0c4c202b885e336bf196e3f3a29b3c404741390be4ce652fc975de5cf375",
+    "firmware/pico2-device-bench/src/main.rs": "a1ea2da49c65a268fe984e7966583a16f40ad2b7f1079a15708f68d736f46efd",
+    "firmware/pico2-device-bench/src/picotool_reset.rs": "cea22c71542735530df078f9756d475c57eca219ada1084c2df1763337b62b12",
+    "firmware/pico_linux.py": "9cd9bf3ae0423e23c820ff9a94951bd4c344b2ca28e0e2eac9544419f4d195b4",
+    "firmware/test_pico_linux.py": "48cf8e104d9c7bd749f0a5c80d457134b7f7d89abad7591e999ff71fef516a9a",
+    "software/Cargo.lock": "a16d66e69a580e91626944645540ae53e2073346a797577f19b2f4f1ee85f8fd",
+    "software/Cargo.toml": "bc692ad303d94c4cb4e98bdcb89c078c102e4a91a6a52ece05ecaaf622e7999f",
+    "software/config/actuators.json": "1bea084f0372d8b90dc3bbb659773b7960ce848909a7178ae3af56c984453e6c",
+    "software/config/ai.env.example": "00d603e4ee078ffb92f78bdcb8747afd4765b8ba96ce09cbfafb2607c406bbc4",
+    "software/crates/host-core/Cargo.toml": "6159602016751d412b5a8bac6ae9136610bade7964af87ec4d996b303d02a36f",
+    "software/crates/host-core/src/decision.rs": "93125d00cc28677c7bb09dec537348cf4bde872467f1c5ee961cf0f36929c7e5",
+    "software/crates/host-core/src/lib.rs": "7fa3f2cd17259d47befdbc79e95dabd576e35a1787dff4f8ed4430f2b50ac932",
+    "software/crates/host-core/src/shm.rs": "b261bcb4c5256899be0ea22102515d133ea2cf32ff8488c1f954255de7acf690",
+    "software/crates/host-core/src/speech.rs": "04653d5bc0067007fb397ffa4cfc2e0432181f3babfd893c79e0ad23dd1761fa",
+    "software/deploy/300seconds-runtime.target": "d1ff0dd82a1ef31f2e73c47f715e1943daab6a9562c5c88494a9390f4bb6d3ba",
+    "software/deploy/300seconds-runtime@.service": "1bec0f1b7a69e7368da7b6c9a100a3e2c18e537005fb42282e9ceeba0bdc096b",
+    "software/install.sh": "ae0c59bc0ae5298b721e6f2fa4231477af1ba53ac5a49caab127c33c6c6903cc",
+    "software/models/engine.manifest.json": "06a029798fcde05ab2d811b93be0da4f39e26eb49fba16313b27504a402bfd47",
+    "software/models/supertonic.manifest.json": "789ee34319082812869a6d3f2a12639a1da4582a79ba6c13ffa24193c51c163b",
+    "software/models/yolox.manifest.json": "a3533febf0a2d9d241d1e1ecd237b914be542a70d1ce302311e830096b3a7d8b",
+    "software/models/yunet.manifest.json": "0c0f79e1c00c664c5530d9abed625dd443d896796cd3caa3aeb1f3bb6287f903",
+    "software/native/detector.cpp": "5f672d046e7940130cb3fcd8ac8e260edba19d0251265daa0cd512b2642e18a2",
+    "software/native/media.c": "6d215c31a183f46a5a9d9d7689cf86b2276f73c74f6e2530b5e50d4d212771ed",
+    "software/native/vision.cu": "6705043663ea7fdeea1c9e61f61dec48d34fd6a01ff6c58fd8113ad8f3ce8f01",
+    "software/README.md": "d5b439e19153815e19a9e93fd081dd8bd53dde07173deda14739aca242a15ae3",
+    "software/services/nano-runtime/build.rs": "b9960160335d55c567360540a7ba43018bd98f1b663e1257e6d2455d32928016",
+    "software/services/nano-runtime/Cargo.toml": "e9c9fa3ed4a116e3855417ba4998a4303b3b6e922631d42329c253c7f336f38c",
+    "software/services/nano-runtime/src/budget.rs": "db1437a4c52b8ca009983791394a2300aea1d5e995362840d60d54ae725b52ff",
+    "software/services/nano-runtime/src/learning.rs": "b4376ab1e4e8839ef762af2b51dfb702ae2f0f352580d3fc77780c82f7619628",
+    "software/services/nano-runtime/src/local_ai.rs": "2788bcbc2054ced37b143447a965bf4fe09211b5a894fad973bae7abb92e04a2",
+    "software/services/nano-runtime/src/main.rs": "8634f37d08bf7cefa5415fce23a00ce2eb80b1bc1cf6f3113cc7c9b97af3f2ee",
+    "software/services/nano-runtime/src/media.rs": "2a6ec5f34ce751be4382ef9507b035d2f97169ed9f7f393a666c8420440be031",
+    "software/services/nano-runtime/src/native.rs": "c6f9cd4ed190cec924df5469d594a15c59be3413a9b92cb87af5f28f1795ee20",
+    "software/services/nano-runtime/src/policy.rs": "e3ecfb69c5eea159ef35e33855736a0c709d8b7a69e24d27d44308ecf0a8b3be",
+    "software/services/nano-runtime/src/providers.rs": "d8ddad4cd5ab91b6cb970c536a5c935445866f680f67248b854dbcdbc0fbcba7",
+    "software/services/nano-runtime/src/turns.rs": "85d83c41008133042c9f3ab2a37153cea0a3db0906e38ef83a2433d13c4ed230",
+    "software/services/nano-runtime/src/typecast.rs": "3d78b3a179f7cb77840a14e4be6584816dd91205c150320bbf117ab6a9d2e4dd",
+    "software/setup-local-ai.sh": "6bdfd4f87ace4b90bdf2f3499d59f3e5228d4385ff7fe2f5c1346ed6afc80e35",
+    "software/setup-neural-tts.sh": "5cc205ead34fcb0c8f841346aa7cdb1a6e32a210691e8e1de5e1e5bf5005f5c3",
+    "software/setup-vision.sh": "e3d889175d52ac28844bdef30ce85d07b5d8d492330e55ea24c47a71dde8e0ab",
+    "software/tests/decision-candidates.jsonl": "0ed823bbd3b5ed0d2a0832bc69198562eb14ce5f01d942e1cc2014847800f210",
+    "software/tests/make_eval_cases.py": "3aec73c5f7c481068e2bd102de11403eaa68a958ccafbc2ee6549ced7ca19eb5",
+    "software/tests/verify_acoustics.py": "15d3771b08d584e0e79b6b15608f696babfd394117f3509f00e61bb8a932301e",
+    "software/tests/verify_features.py": "044b816256948f1afca750317dfa61bc9e701b0c698ca13bc5a91d1207b3d446",
+    "software/tests/verify_installed.py": "7b6b4cd64aa75f10e7d572c019ee6f7d242ebf60821749d658682abdd423df95",
+    "software/tests/verify_local_ai.py": "c7646392ef8bb926341fedc66a2d4c623dabdab6094278df8aea8e00a84bd1fb",
+    "software/tests/verify_runtime.py": "8e5f8d9478440e8ec748fa754beaa4d9a2388902c6a373860e116f3854db4078",
+    "software/tools/calibrate.py": "affe5c0e9b2584e800072e34520a55e2d0dc3c9fbe7ba233b21f20bbc7cc679f",
+    "software/tools/study.py": "fb5cab7b8a50f0436915c35215c08481097f5573a5e6cf1b1fc3ff9effc91df4",
+    "software/workers/local_ai.py": "875849bd8b27387cbbb8618aec4c445dfd2b8910da1e8f23fe24eee6263c67dc",
+    "tools/jetson/jetson_mode.py": "19a88df39b604c452bc1166eb1bb1c6002221762c76ea972f63581b1715ef295",
+    "tools/pico-device-bench/Cargo.lock": "05ee34f0655ed3da851be8bbce1283ba22b98c5b1c071a9fa4c2b5cf9dc0bd4d",
+    "tools/pico-device-bench/Cargo.toml": "67b2405e0436bb046e7d68e8d0aff2fec8bf90a44053a7bc9ea00ad2228fd844",
+    "tools/pico-device-bench/README.md": "168ac629b29dd69657d6e3ed64d75e5eb32ca6da07015b4da824bb18e61cec4f",
+    "tools/pico-device-bench/src/lib.rs": "f140bf4466ffb26837ff24c49756d2178080ed2e630268b3ded92925e26ea71d",
+    "tools/pico-device-bench/src/main.rs": "65013f083e9b6cf91b48cd49416dcdfd0591b5a643d86276afac20a6c6cab625"
+  },
+  "source_mismatches": [],
+  "binary_installed_match": {
+    "nano-runtime": {
+      "build_sha256": "a770f57416322f6804977ac7d11d8b1013e05366e81354dd80c377e5aeea526b",
+      "installed_sha256": "a770f57416322f6804977ac7d11d8b1013e05366e81354dd80c377e5aeea526b",
+      "match": true
+    },
+    "pico-device-bench": {
+      "build_sha256": "8817f901292034a625d2e2f3d544c1b053d99a100f761af717e1109401f7e092",
+      "installed_sha256": "8817f901292034a625d2e2f3d544c1b053d99a100f761af717e1109401f7e092",
+      "match": true
+    }
+  },
+  "credential_mode": "0o600",
+  "credential_owner_uid": 0,
+  "credential_present": {
+    "GEMINI_API_KEY": true,
+    "OPENAI_API_KEY": true,
+    "TYPESAFE_API_KEY": false,
+    "TYPECAST_API_KEY": true
+  },
+  "source_contains_actual_credentials": [],
+  "effective_nonsecret_ai_config": {
+    "NANO_ALLOW_OPENAI_INFERENCE": null,
+    "NANO_AI_MAX_RPM": "1",
+    "NANO_AI_MAX_24H": "10",
+    "NANO_TTS_BACKEND": "typecast",
+    "NANO_TYPECAST_MODEL": "ssfm-v30",
+    "NANO_TYPECAST_VOICE_ID": "tc_637cbfeef7f00f21e8a1c6c8",
+    "NANO_TYPECAST_ALLOW_PAID": "0",
+    "NANO_TTS_MAX_24H_CHARS": "500",
+    "NANO_TTS_MAX_30D_CHARS": "12000",
+    "NANO_BARGE_IN": null,
+    "NANO_AEC_VERIFIED": null
+  },
+  "nvpmodel": "NVPM WARN: fan mode is not set!\nNV Power Mode: 5W\n1",
+  "saved_power_mode": "pmode:0001 fmode:fanNull",
+  "cpu_online": "0-1",
+  "default_target": "multi-user.target",
+  "dashboard_state": "ActiveState=inactive\nUnitFileState=disabled",
+  "runtime_units": {
+    "picod": "ActiveState=inactive\nUnitFileState=static",
+    "audiod": "ActiveState=inactive\nUnitFileState=static",
+    "camerad": "ActiveState=inactive\nUnitFileState=static",
+    "visiond": "ActiveState=inactive\nUnitFileState=static",
+    "memoryd": "ActiveState=inactive\nUnitFileState=static",
+    "dialogued": "ActiveState=inactive\nUnitFileState=static",
+    "controllerd": "ActiveState=inactive\nUnitFileState=static"
+  },
+  "actuators": {
+    "calibration_id": 1,
+    "min_cdeg": [
+      8000,
+      8000,
+      8000,
+      8000,
+      8000,
+      8000
+    ],
+    "max_cdeg": [
+      10000,
+      10000,
+      10000,
+      10000,
+      10000,
+      10000
+    ],
+    "neutral_cdeg": [
+      9000,
+      9000,
+      9000,
+      9000,
+      9000,
+      9000
+    ],
+    "min_us": [
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000
+    ],
+    "max_us": [
+      2000,
+      2000,
+      2000,
+      2000,
+      2000,
+      2000
+    ],
+    "invert_mask": 0,
+    "max_speed_cdeg_s": 1000,
+    "servo_enabled": false,
+    "matrix_installed": false
+  },
+  "usage_local": {
+    "ai-usage.json": {
+      "attempts": [
+        1792793848,
+        1792794049,
+        1792796599
+      ],
+      "cooldown_until": 0,
+      "last_http_status": 200,
+      "last_usage": {
+        "candidatesTokenCount": 53,
+        "promptTokenCount": 300,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 300
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 353
+      }
+    },
+    "tts-usage.json": {
+      "attempts": [
+        [
+          1792796600,
+          34
+        ]
+      ],
+      "cooldown_until": 0,
+      "last_http_status": 200
+    }
+  },
+  "installed_scripts_and_unit": [
+    {
+      "source": "software/workers/local_ai.py",
+      "installed": "/opt/300seconds/runtime/local_ai.py",
+      "sha256": "875849bd8b27387cbbb8618aec4c445dfd2b8910da1e8f23fe24eee6263c67dc",
+      "match": true
+    },
+    {
+      "source": "software/tools/study.py",
+      "installed": "/opt/300seconds/runtime/study.py",
+      "sha256": "fb5cab7b8a50f0436915c35215c08481097f5573a5e6cf1b1fc3ff9effc91df4",
+      "match": true
+    },
+    {
+      "source": "software/tools/calibrate.py",
+      "installed": "/opt/300seconds/runtime/calibrate.py",
+      "sha256": "affe5c0e9b2584e800072e34520a55e2d0dc3c9fbe7ba233b21f20bbc7cc679f",
+      "match": true
+    },
+    {
+      "source": "software/deploy/300seconds-runtime@.service",
+      "installed": "/etc/systemd/system/300seconds-runtime@.service",
+      "sha256": "1bec0f1b7a69e7368da7b6c9a100a3e2c18e537005fb42282e9ceeba0bdc096b",
+      "match": true
+    }
+  ],
+  "post_verification_at_utc": "2026-10-23T23:43:38.324025+00:00",
+  "getty_tty1": "ActiveState=active\nUnitFileState=enabled",
+  "project_pulse_marker": true
+}

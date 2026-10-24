@@ -1,0 +1,12 @@
+{
+  "calibration_id": 1,
+  "min_cdeg": [8000, 8000, 8000, 8000, 8000, 8000],
+  "max_cdeg": [10000, 10000, 10000, 10000, 10000, 10000],
+  "neutral_cdeg": [9000, 9000, 9000, 9000, 9000, 9000],
+  "min_us": [1000, 1000, 1000, 1000, 1000, 1000],
+  "max_us": [2000, 2000, 2000, 2000, 2000, 2000],
+  "invert_mask": 0,
+  "max_speed_cdeg_s": 1000,
+  "servo_enabled": false,
+  "matrix_installed": false
+}

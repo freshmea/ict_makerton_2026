@@ -1,0 +1,13 @@
+{
+  "artifact": "sherpa-onnx-supertonic-3-tts-int8-2026-05-11.tar.bz2",
+  "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/sherpa-onnx-supertonic-3-tts-int8-2026-05-11.tar.bz2",
+  "sha256": "82fa96f91c4ef8abaae3a14a3f4153facf88bed821d1f7331cec2700f432c427",
+  "bytes": 128774318,
+  "upstream": "https://huggingface.co/Supertone/supertonic-3",
+  "license": "OpenRAIL-M",
+  "license_url": "https://huggingface.co/Supertone/supertonic-3/blob/main/LICENSE",
+  "runtime": "sherpa-onnx==2.0.0",
+  "provider": "cpu",
+  "language": "ko",
+  "speaker": "preset sid 0; synthetic voice"
+}

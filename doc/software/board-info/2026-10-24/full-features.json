@@ -1,0 +1,104 @@
+{
+  "real_pico_and_audio": true,
+  "cloud_calls": 0,
+  "provider_evidence": "synthetic loopback contract checks, not provider accuracy/latency",
+  "checks": [
+    "quiet rejects light without explicit Help",
+    "local Wait avoids model and speech",
+    "missing consent fails quiet without network",
+    "gemini adapter -> policy -> one hint",
+    "gemini returns to quiet",
+    "decisions adapter -> policy -> one hint",
+    "decisions returns to quiet",
+    "jev adapter -> policy -> one hint",
+    "jev returns to quiet",
+    "observed incorrect numeric hint replaced before speech",
+    "real Korean local TTS -> PCM ACK -> ALSA -> quiet",
+    "Typecast contract -> bounded WAV -> resample -> PCM -> ALSA",
+    "temporary Typecast audio removed after completed turn",
+    "Typecast credits_empty fails quiet without fallback",
+    "Typecast tts_402 fails quiet without fallback",
+    "Typecast tts_badwav fails quiet without fallback",
+    "Stop cancels Typecast and late WAV never plays",
+    "429 fails quiet and never retries",
+    "malformed fails quiet and never retries",
+    "refusal fails quiet and never retries",
+    "Stop cancels in-flight provider independent of reply",
+    "late provider reply never resumes speech",
+    "correction cancels old job and starts a fresh epoch",
+    "memory opt-in required",
+    "confirmed memory survives owner restart",
+    "explicit memory correction preserves note ID and confirmation time after restart",
+    "memory delete revokes consent and clears notes",
+    "general bounded light reaches Pico outputs",
+    "uncalibrated operational servos blocked",
+    "MCU-only Stop revokes turn and flushes Nano audio",
+    "bench neutral command reports register Applied",
+    "Pico rejects out-of-calibration pose",
+    "Stop cancels interpolation and gates OE high",
+    "missing matrix rejected by Pico capability"
+  ],
+  "physical_servo_motion_confirmed": false,
+  "tts_result": {
+    "confirmed_problem": "",
+    "epoch": 13,
+    "phase": "done",
+    "result": {
+      "dialogue": {
+        "action": "offer_hint",
+        "classification": {
+          "provider": "gemini",
+          "requested_model": "fixture",
+          "returned_model": "fixture-gemini",
+          "transport": "fixture_loopback",
+          "usage": {
+            "candidatesTokenCount": 1,
+            "promptTokenCount": 1
+          },
+          "wall_ms": 1062
+        },
+        "confidence": 0.99,
+        "generation": {
+          "same_request_as_classification": true
+        },
+        "hint": "문제에 주어진 조건을 먼저 하나 찾아볼까?",
+        "numeric_hint_replaced": false,
+        "raw_media_uploaded": false,
+        "semantic_correctness": "not guaranteed; conceptual hint only",
+        "tts": {
+          "backend": "espeak"
+        }
+      },
+      "next": "quiet; explicit next request required",
+      "provenance": [
+        {
+          "tts": {
+            "backend": "espeak-ko-cpu",
+            "disclosure": "합성 음성",
+            "rate": 48000,
+            "samples": 182734
+          }
+        }
+      ],
+      "spoken": true
+    }
+  },
+  "stop_during_provider_ms": 224,
+  "mcu_stop_to_controller_observed_ms": 59,
+  "passed": true,
+  "fixture_requests": 23,
+  "process_returncodes": {
+    "picod": 0,
+    "audiod": 0,
+    "memoryd": 0,
+    "dialogued": 0,
+    "controllerd": 0
+  },
+  "logs": {
+    "picod": "MCU disarmed/fault -> revoke host turn and flush audio\n",
+    "audiod": "",
+    "memoryd": "",
+    "dialogued": "dialogued RPC: unexpected end of file\n",
+    "controllerd": ""
+  }
+}

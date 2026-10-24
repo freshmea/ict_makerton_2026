@@ -1,5 +1,7 @@
 # Pico 2 통합 장치 진단 펌웨어
 
+현재 확장은 **wire v2**의 보정 Arm·6축 목표 보간·고정/주기 조명·표정·Applied와 독립 safety/hardware watchdog을 포함한다. 기존 순차 진단도 유지한다. 기본 서보는 잠그고 현재 미연결 matrix는 거부한다. [전체 기능·운영](../../doc/software/전체기능_구현과_운영.md)과 [실제 계약](../../crates/pico-device-protocol/README.md)을 따른다.
+
 Rust 1.90 / Embassy RP 0.10 / RP2350 Arm secure 대상의 통합 벤치 이미지다. 부팅 시 서보 OE를 HIGH로 두고 양손 NeoPixel을 검게 지우며 MAX7219를 blank/shutdown 한다. 부팅이나 USB 재연결만으로 검사를 시작하지 않는다. 기존 개별 벤치 이미지와 달리 USB CDC 데이터는 **바이너리 전용**이며, `tools/pico-device-bench` 호스트를 사용한다.
 
 ## 핀과 기본 배치

@@ -1,5 +1,7 @@
 # Pico 통합 장치 시험·Nano USB 브리지
 
+2026-10-24 확장: 현재 호스트는 **protocol v2**와 Arm/Pose/Light/Eyes를 지원한다. 운영 제어는 [Rust runtime](../../software/README.md)의 Unix/lease 경로로 수행하며 진단 대시보드는 비활성이다. [전체 기능·구동 보정](../../doc/software/전체기능_구현과_운영.md)을 먼저 읽는다. 아래 초기 실물 기록과 현재 v2 검증을 구분한다.
+
 Rust Tokio와 tokio-serial로 Pico의 단일 USB 연결을 소유하고, Nano의 다른 프로세스에 loopback UDP JSON IPC를 제공하는 임시 시험 도구다. 왼손·오른손 NeoPixel 기본 구간은 각각 `[4,4,10]`, 손당18개·총36개다. 매트릭스·각 손 NeoPixel·서보의 유한 시험과6개 터치의 상태·누른 시간·500ms 간격 횟수·2초 창 누름 횟수를 전달한다. 최종 Nano 영상·음성 앱 전체를 구현한 것은 아니다.
 
 **2026-10-24 Nano에서 native 빌드·통합 `c0de:cafc` USB 왕복·양손 LED와 서보 시험 완료 및 사용자 실물 점등/움직임 확인을 확보했다.** [대시보드 검증](../../doc/software/Jetson_Nano_장치_대시보드.md)을 따른다. 현재 스위치·매트릭스는 미연결이며 전원 부하·축 보정·체계적인 실물 장애 회귀는 남아 있다. Windows 빌드·가짜 직렬 스트림/UDP 검사와 aarch64 정적 검사의 결과는 실제 Pico/Nano 시험과 구분해 [후속 native 검사 원본](../../doc/software/board-info/2026-10-24/dashboard-rust-tests-build.log)에 기록한다.
@@ -8,7 +10,7 @@ Rust Tokio와 tokio-serial로 Pico의 단일 USB 연결을 소유하고, Nano의
 
 ## 통신과 하나의 USB 소유자
 
-- 장치 CDC는 ASCII 로그 없이 `COBS(Postcard(Frame) + CRC32_LE) + 0x00` 프레임만 전송한다. 버전1·디코딩512바이트·전송520바이트 상한은 [공통 프로토콜](../../crates/pico-device-protocol/README.md)을 따른다.
+- 장치 CDC는 ASCII 로그 없이 `COBS(Postcard(Frame) + CRC32_LE) + 0x00` 프레임만 전송한다. 버전2·디코딩512바이트·전송520바이트 상한은 [공통 프로토콜](../../crates/pico-device-protocol/README.md)을 따른다.
 - 연결마다 새 무작위64비트 session과 증가하는 seq를 사용한다. session은 인증 토큰이 아니다. HelloReply의 버전·session·seq를 확인하며 Ack는 프레임 seq와 `request_seq`를 모두 대조한다.
 - **새 Hello는 이전 세션과 진행 중인 로컬 시험도 정지시킨다.** 단독 `status`도 새로 USB를 열고 Hello를 보내므로 단순 무영향 조회가 아니다. 브리지 실행 중에는 별도 USB CLI를 열지 않고 `ctl status`나 UDP IPC를 사용한다.
 - 브리지는200ms마다 KeepAlive를 보내고 장치의 약100ms Status push와 Touch/TestEvent를 수신한다. USB 오류나 종료 시 Stop Ack를 시도하고 자동 재접속·과거 Test 재전송은 하지 않는다. 재시작은 수동이며 새 Hello·Configure 이후에도 Test를 자동 실행하지 않는다.
@@ -41,7 +43,7 @@ cargo build --release --locked --offline --manifest-path tools/pico-device-bench
 
 `test servos`와 `test all`도 지원하며 실제 서보를 움직이므로 해당 명령을 직접 선택했을 때만 요청한다. 기본 시험 폭은 중심90도 주변±10도의 명목 목표값이며 물리 각도를 보정한 결과가 아니다. 개별 테스트는 해당 Module의 `done=true/fault=false`, All은 마지막 **Module All**의 완료를 기다린다. 중간 단계 완료만으로 All 성공을 판정하지 않는다. `fault=true`는 중도 정지·취소도 포함하므로 반드시 부품 고장을 뜻하지 않는다. 최대180초 뒤에는 실패로 종료하고 Stop을 시도한다.
 
-직접 `status`에는 업로더 호환용 `STATUS protocol=pico-device-v1 bootloader=picotool-v1 oe_high=...` 한 줄도 출력한다. `bootloader`는 Stop의 실제 장치 Ack·OE HIGH Status 뒤 Bootloader 요청 Ack를 받은 경우에만 `OK BOOTLOADER`를 추가 출력한다. **이 ASCII는 호스트 stdout에만 있으며 CDC로 보내지 않는다.** ROM 식별·쓰기 성공은 별도 업로드 절차에서 확인한다.
+직접 `status`에는 업로더 호환용 `STATUS protocol=pico-device-v2 bootloader=picotool-v1 oe_high=...` 한 줄도 출력한다. `bootloader`는 Stop의 실제 장치 Ack·OE HIGH Status 뒤 Bootloader 요청 Ack를 받은 경우에만 `OK BOOTLOADER`를 추가 출력한다. **이 ASCII는 호스트 stdout에만 있으며 CDC로 보내지 않는다.** ROM 식별·쓰기 성공은 별도 업로드 절차에서 확인한다.
 
 ## Nano에서 브리지와 다른 프로세스 사용
 

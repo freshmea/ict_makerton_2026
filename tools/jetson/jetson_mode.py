@@ -9,6 +9,7 @@ import datetime
 import fcntl
 import json
 import os
+import pwd
 from pathlib import Path
 import stat
 import subprocess
@@ -21,6 +22,13 @@ OVERRIDE = '90-300seconds-project.conf'
 MODULE_POLICY = Path('/etc/modprobe.d/90-300seconds-project.conf')
 PRINTER_LOAD = Path('/etc/modules-load.d/cups-filters.conf')
 PACKAGEKIT_HOOK = Path('/etc/apt/apt.conf.d/20packagekit')
+PULSE_CLIENT = Path('/etc/pulse/client.conf.d/90-300seconds-project.conf')
+# User managers cannot traverse the private baseline directory. Keep this
+# non-secret condition marker in PulseAudio's world-readable config directory.
+PULSE_FLAG = Path('/etc/pulse/300seconds-project.enabled')
+PULSE_UNITS = ['pulseaudio.socket', 'pulseaudio.service']
+PULSE_GUARDS = [Path('/etc/systemd/user') / (name + '.d') / OVERRIDE for name in PULSE_UNITS]
+PULSE_FILES = [PULSE_CLIENT, PULSE_FLAG] + PULSE_GUARDS
 COMMON_UNITS = [
     'cups.socket', 'cups.path', 'avahi-daemon.socket', 'gpsd.socket',
     'cups-browsed.service', 'cups.service', 'avahi-daemon.service',
@@ -99,6 +107,48 @@ def restore_file(item):
         temporary.replace(path)
 
 
+def user_audio_managers():
+    return sorted(int(p.parent.name) for p in Path('/run/user').glob('[0-9]*/bus')
+                  if p.parent.name.isdigit() and int(p.parent.name) != 0)
+
+
+def user_audio_ctl(uid, *args):
+    user = pwd.getpwuid(uid).pw_name
+    return run('runuser', '-u', user, '--', 'env',
+               'XDG_RUNTIME_DIR=/run/user/{}'.format(uid),
+               'DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/{}/bus'.format(uid),
+               'systemctl', '--user', *args)
+
+
+def audio_baseline():
+    return [{'uid': uid, 'active': [name for name in PULSE_UNITS
+             if user_audio_ctl(uid, 'show', name, '-p', 'ActiveState', '--value').stdout.strip() == 'active']}
+            for uid in user_audio_managers()]
+
+
+def project_audio():
+    PULSE_CLIENT.parent.mkdir(parents=True, exist_ok=True)
+    PULSE_CLIENT.write_text('# Native audiod owns ALSA in project mode.\nautospawn = no\n', encoding='ascii')
+    PULSE_FLAG.write_text(now() + '\n', encoding='ascii')
+    PULSE_FLAG.chmod(0o644)
+    for p in PULSE_GUARDS:
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text('[Unit]\nConditionPathExists=!{}\n'.format(PULSE_FLAG), encoding='ascii')
+    for uid in user_audio_managers():
+        user_audio_ctl(uid, 'daemon-reload')
+        user_audio_ctl(uid, 'stop', *PULSE_UNITS)
+    print('PulseAudio socket/service/autospawn guarded for native ALSA.', flush=True)
+
+
+def restore_audio(snapshot):
+    managers = user_audio_managers()
+    for uid in managers:
+        user_audio_ctl(uid, 'daemon-reload')
+    for item in snapshot.get('user_audio_units', []):
+        if item['uid'] in managers and item['active']:
+            user_audio_ctl(item['uid'], 'start', *item['active'])
+
+
 def selected_links(units):
     fragments = {str(Path(u['FragmentPath']).resolve()) for u in units}
     links = []
@@ -141,7 +191,7 @@ def make_baseline():
             continue
         seen.add(info['Id'])
         units.append(info)
-    configs = [MODULE_POLICY, PRINTER_LOAD, PACKAGEKIT_HOOK]
+    configs = [MODULE_POLICY, PRINTER_LOAD, PACKAGEKIT_HOOK] + PULSE_FILES
     configs += [Path('/etc/systemd/system') / (u['Id'] + '.d') / OVERRIDE for u in units]
     snapshot = {
         'schema_version': 1, 'created_at_utc': now(),
@@ -150,6 +200,7 @@ def make_baseline():
         'default_target': run('systemctl', 'get-default').stdout.strip(),
         'units': units, 'links': selected_links(units),
         'files': [file_snapshot(p) for p in configs],
+        'user_audio_units': audio_baseline(),
         'bnep_loaded': Path('/sys/module/bnep').exists(),
         'decisions': decisions,
         'memory_before': run('free', '-b').stdout,
@@ -172,6 +223,10 @@ def check_new_workloads(snapshot):
 
 def restore(snapshot):
     errors = []
+    # Release native ALSA before restoring the desktop sound server. These
+    # units belong to this project; an older image may not have them installed.
+    run('systemctl', 'stop', '300seconds-runtime.target',
+        '300seconds-runtime@*.service', check=False)
     # Restore only these named files, never the complete systemd directory.
     for item in snapshot['files']:
         restore_file(item)
@@ -187,6 +242,7 @@ def restore(snapshot):
         path.symlink_to(link['target'])
     run('systemctl', 'daemon-reload')
     run('systemctl', 'set-default', snapshot['default_target'])
+    restore_audio(snapshot)
     if snapshot['bnep_loaded'] and not Path('/sys/module/bnep').exists():
         p = run('modprobe', 'bnep', check=False)
         if p.returncode:
@@ -208,10 +264,12 @@ def restore(snapshot):
 
 def project(snapshot):
     if FLAG.exists():
-        print('Project mode already active; baseline unchanged.')
+        project_audio()
+        print('Project mode already active; existing baseline retained.')
         return
     check_new_workloads(snapshot)
     FLAG.write_text(now() + '\n', encoding='ascii')
+    project_audio()
     for unit in snapshot['units']:
         dropin = Path('/etc/systemd/system') / (unit['Id'] + '.d') / OVERRIDE
         dropin.parent.mkdir(parents=True, exist_ok=True)
@@ -283,6 +341,13 @@ def main():
             return
         else:
             raise SystemExit('No baseline exists. Nothing has been changed by this tool.')
+        if command == 'project':
+            captured = {f['path'] for f in snapshot['files']}
+            if any(str(p) not in captured for p in PULSE_FILES):
+                snapshot['files'].extend(file_snapshot(p) for p in PULSE_FILES if str(p) not in captured)
+                snapshot['user_audio_units'] = audio_baseline()
+                snapshot['audio_baseline_added_utc'] = now()
+                save_json(BASELINE, snapshot)
         if command == 'project':
             try:
                 project(snapshot)

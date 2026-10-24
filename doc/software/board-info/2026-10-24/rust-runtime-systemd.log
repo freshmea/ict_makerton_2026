@@ -1,0 +1,17 @@
+uid=996(boarddash) gid=989(boarddash) groups=989(boarddash),20(dialout),29(audio),44(video),134(render),993(robot-device)
+Installed. No runtime auto-start. Start explicitly: sudo systemctl start 300seconds-runtime.target
+[0;1;38;5;185m/lib/systemd/system/snapd.service:23: Unknown key name 'RestartMode' in section 'Service', ignoring.[0m
+snap-core22-867.mount: Unit is bound to inactive unit dev-loop6.device. Stopping, too.
+snap-core20-2019.mount: Unit is bound to inactive unit dev-loop4.device. Stopping, too.
+snap-snapd-20102.mount: Unit is bound to inactive unit dev-loop13.device. Stopping, too.
+snap-gtk\x2dcommon\x2dthemes-1515.mount: Unit is bound to inactive unit dev-loop12.device. Stopping, too.
+snap-bare-5.mount: Unit is bound to inactive unit dev-loop0.device. Stopping, too.
+snap-core20-1585.mount: Unit is bound to inactive unit dev-loop3.device. Stopping, too.
+{"passed": true, "uid": "boarddash", "analysis_fps": [9.992220179602835, 9.992220179602835], "elapsed_seconds": 10.30801945400026, "host_network_namespace": "net:[4026531936]", "pico_network_namespace": "net:[4026533010]", "host_udp_backend_unreachable": true, "camera_restart_generation_changed": true, "vision_stale_after_camera_stop": true}
+ActiveState=inactive
+UnitFileState=disabled
+inactive
+26834 /opt/300seconds/runtime/nano-runtime serve audiod
+26846 /opt/300seconds/runtime/nano-runtime serve picod
+26872 /opt/300seconds/runtime/nano-runtime serve controllerd
+27546 /opt/300seconds/runtime/nano-runtime serve camerad

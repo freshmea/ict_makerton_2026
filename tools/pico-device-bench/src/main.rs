@@ -169,6 +169,10 @@ async fn apply_ipc<S: AsyncRead + AsyncWrite + Unpin>(link: &mut DeviceLink<S>, 
         IpcRequest::Test { module } => Some(link.request_ack(Message::RunTest(module.wire())).await?),
         IpcRequest::Stop => Some(link.stop().await?),
         IpcRequest::Configure { config } => Some(link.configure(*config).await?),
+        IpcRequest::Arm{config}=>Some(link.request_ack(Message::Arm(*config)).await?),
+        IpcRequest::Pose{targets_cdeg,move_ms}=>Some(link.request_ack(Message::SetPose{targets_cdeg:*targets_cdeg,move_ms:*move_ms}).await?),
+        IpcRequest::Light{rgb,brightness,period_ms}=>Some(link.request_ack(Message::SetLight{rgb:*rgb,brightness:*brightness,period_ms:*period_ms}).await?),
+        IpcRequest::Eyes{left,right,brightness}=>Some(link.request_ack(Message::SetEyes{left:*left,right:*right,brightness:*brightness}).await?),
     };
     // A freshly correlated query follows the command ACK. This is a reported
     // device snapshot, not position feedback or electrical verification.

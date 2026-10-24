@@ -1,0 +1,32 @@
+{
+  "passed": false,
+  "partial": true,
+  "checks": [
+    "all seven installed units active",
+    "both cameras actual sensor ~30fps and analysis ~10fps"
+  ],
+  "remaining": [
+    "requested CSI JPEG/OCR path",
+    "camera generation restart",
+    "picod/audio kill and manual recovery",
+    "three minute quiet soak"
+  ],
+  "interruption": "SSH channel closed, no final report received; root cause not established",
+  "power_mode_during_alarm": "5W, ID 1, saved pmode:0001",
+  "power_observation_mv": {
+    "runtime_active": {
+      "min": 4624,
+      "max": 4776,
+      "mean": 4726.6
+    },
+    "runtime_stopped": {
+      "min": 4816,
+      "max": 4888,
+      "mean": 4882.2
+    }
+  },
+  "user_power_input": "Micro-USB",
+  "user_next_step": "Prepare barrel-jack power adapter before resuming sustained verification",
+  "runtime_stopped_after_diagnosis": true,
+  "follow_up": "full-systemd.json: final functional verification passed after OpenBLAS and PulseAudio fixes; power stability remains unverified"
+}

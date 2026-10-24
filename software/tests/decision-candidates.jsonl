@@ -1,0 +1,200 @@
+{"id": "wait-05", "text": "잠깐 기다려!", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-16", "text": "이제 종료해 줘 부탁해", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-29", "text": "어떤 식을 세워야 할지 힌트 줘", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-27", "text": "잘 모르겠는데", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-14", "text": "어떤 식을 세워야 할지 힌트 줘 .", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-43", "text": "공부 끝 부탁해", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-40", "text": "첫 단계 힌트 하나 줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-44", "text": "마칠래 부탁해", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-30", "text": "첫 단계 힌트 하나 줘!", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-33", "text": "이 문제에서 조건을 찾도록 도와줘!", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-28", "text": "공부 끝", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-29", "text": "어...", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-09", "text": "어떤 식을 세워야 할지 힌트 줘!", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-01", "text": "정답 말고 어디서 시작할지 도와줘", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-47", "text": "조용히 있어 줘\n", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-03", "text": "이게 뭐였지", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-19", "text": "마칠래 부탁해", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-14", "text": "마칠래 .", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-17", "text": "조용히 있어 줘 부탁해", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-06", "text": "이제 종료해 줘!", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-22", "text": "잘 모르겠는데\n", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-37", "text": "그만 공부할래 .", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-49", "text": "아직 말하지 마\n", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-25", "text": "첫 단계 힌트 하나 줘", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-22", "text": "그만 공부할래\n", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-22", "text": "조용히 있어 줘\n", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-28", "text": "이 문제에서 조건을 찾도록 도와줘", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-32", "text": "이 문장 뜻을 힌트로 알려줘!", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-32", "text": "그만 공부할래!", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-10", "text": "첫 단계 힌트 하나 줘 .", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-34", "text": "어떤 식을 세워야 할지 힌트 줘!", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-42", "text": "조용히 있어 줘 부탁해", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-11", "text": "저기 그거 있잖아 .", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-28", "text": "응 알겠어", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-40", "text": "오늘 공부는 끝낼래 부탁해", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-20", "text": "오늘 공부는 끝낼래\n", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-05", "text": "오늘 공부는 끝낼래!", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-20", "text": "첫 단계 힌트 하나 줘\n", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-37", "text": "조용히 있어 줘 .", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-35", "text": "잠깐 기다려 .", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-10", "text": "오늘 공부는 끝낼래 .", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-37", "text": "잘 모르겠는데 .", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-32", "text": "조용히 있어 줘!", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-39", "text": "어... .", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-12", "text": "잘 모르겠는데 .", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-43", "text": "이게 뭐였지 부탁해", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-21", "text": "이제 종료해 줘\n", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-38", "text": "공부 끝 .", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-14", "text": "어... .", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-00", "text": "음 이거", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-29", "text": "아직 말하지 마", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-35", "text": "오늘 공부는 끝낼래 .", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-18", "text": "이게 뭐였지 부탁해", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-04", "text": "아직 말하지 마", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-30", "text": "잠깐 기다려!", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-48", "text": "공부 끝\n", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-18", "text": "공부 끝 부탁해", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-04", "text": "마칠래", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-43", "text": "응 알겠어 부탁해", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-31", "text": "혼자 생각할게!", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-05", "text": "음 이거!", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-21", "text": "저기 그거 있잖아\n", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-07", "text": "잘 모르겠는데!", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-23", "text": "공부 끝\n", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-27", "text": "이 문장 뜻을 힌트로 알려줘", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-17", "text": "이 문장 뜻을 힌트로 알려줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-41", "text": "저기 그거 있잖아 부탁해", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-08", "text": "공부 끝!", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-39", "text": "마칠래 .", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-08", "text": "응 알겠어!", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-26", "text": "정답 말고 어디서 시작할지 도와줘", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-15", "text": "오늘 공부는 끝낼래 부탁해", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-14", "text": "아직 말하지 마 .", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-48", "text": "응 알겠어\n", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-49", "text": "어떤 식을 세워야 할지 힌트 줘\n", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-42", "text": "그만 공부할래 부탁해", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-02", "text": "그만 공부할래", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-43", "text": "이 문제에서 조건을 찾도록 도와줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-06", "text": "저기 그거 있잖아!", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-07", "text": "조용히 있어 줘!", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-49", "text": "어...\n", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-32", "text": "잘 모르겠는데!", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-15", "text": "음 이거 부탁해", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-39", "text": "어떤 식을 세워야 할지 힌트 줘 .", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-09", "text": "아직 말하지 마!", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-12", "text": "조용히 있어 줘 .", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-07", "text": "이 문장 뜻을 힌트로 알려줘!", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-26", "text": "저기 그거 있잖아", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-05", "text": "첫 단계 힌트 하나 줘!", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-19", "text": "어떤 식을 세워야 할지 힌트 줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-31", "text": "이제 종료해 줘!", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-20", "text": "음 이거\n", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-44", "text": "어... 부탁해", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-46", "text": "이제 종료해 줘\n", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-06", "text": "혼자 생각할게!", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-23", "text": "이 문제에서 조건을 찾도록 도와줘\n", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-17", "text": "잘 모르겠는데 부탁해", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-40", "text": "잠깐 기다려 부탁해", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-37", "text": "이 문장 뜻을 힌트로 알려줘 .", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-02", "text": "이 문장 뜻을 힌트로 알려줘", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-45", "text": "음 이거\n", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-45", "text": "오늘 공부는 끝낼래\n", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-30", "text": "오늘 공부는 끝낼래!", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-38", "text": "이게 뭐였지 .", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-11", "text": "정답 말고 어디서 시작할지 도와줘 .", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-36", "text": "혼자 생각할게 .", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-01", "text": "혼자 생각할게", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-36", "text": "저기 그거 있잖아 .", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-23", "text": "응 알겠어\n", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-24", "text": "어...\n", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-46", "text": "정답 말고 어디서 시작할지 도와줘\n", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-17", "text": "그만 공부할래 부탁해", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-21", "text": "정답 말고 어디서 시작할지 도와줘\n", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-27", "text": "그만 공부할래", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-45", "text": "첫 단계 힌트 하나 줘\n", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-26", "text": "이제 종료해 줘", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-29", "text": "마칠래", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-40", "text": "음 이거 부탁해", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-34", "text": "어...!", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-03", "text": "이 문제에서 조건을 찾도록 도와줘", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-33", "text": "공부 끝!", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-47", "text": "이 문장 뜻을 힌트로 알려줘\n", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-19", "text": "어... 부탁해", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-07", "text": "그만 공부할래!", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-26", "text": "혼자 생각할게", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-15", "text": "잠깐 기다려 부탁해", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-15", "text": "첫 단계 힌트 하나 줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-45", "text": "잠깐 기다려\n", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-16", "text": "혼자 생각할게 부탁해", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-01", "text": "이제 종료해 줘", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-03", "text": "응 알겠어", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-10", "text": "음 이거 .", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-18", "text": "응 알겠어 부탁해", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-06", "text": "정답 말고 어디서 시작할지 도와줘!", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-12", "text": "그만 공부할래 .", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-38", "text": "이 문제에서 조건을 찾도록 도와줘 .", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-02", "text": "잘 모르겠는데", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-34", "text": "마칠래!", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-11", "text": "혼자 생각할게 .", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-36", "text": "이제 종료해 줘 .", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-16", "text": "저기 그거 있잖아 부탁해", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-33", "text": "응 알겠어!", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-33", "text": "이게 뭐였지!", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-36", "text": "정답 말고 어디서 시작할지 도와줘 .", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-21", "text": "혼자 생각할게\n", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-48", "text": "이 문제에서 조건을 찾도록 도와줘\n", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-04", "text": "어...", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-10", "text": "잠깐 기다려 .", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-01", "text": "저기 그거 있잖아", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-00", "text": "잠깐 기다려", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-19", "text": "아직 말하지 마 부탁해", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-13", "text": "이 문제에서 조건을 찾도록 도와줘 .", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-13", "text": "이게 뭐였지 .", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-23", "text": "이게 뭐였지\n", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-25", "text": "오늘 공부는 끝낼래", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-44", "text": "어떤 식을 세워야 할지 힌트 줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-00", "text": "오늘 공부는 끝낼래", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-08", "text": "이 문제에서 조건을 찾도록 도와줘!", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-27", "text": "조용히 있어 줘", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-46", "text": "혼자 생각할게\n", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-02", "text": "조용히 있어 줘", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-09", "text": "마칠래!", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-22", "text": "이 문장 뜻을 힌트로 알려줘\n", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-24", "text": "마칠래\n", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-04", "text": "어떤 식을 세워야 할지 힌트 줘", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-39", "text": "아직 말하지 마 .", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-47", "text": "잘 모르겠는데\n", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-20", "text": "잠깐 기다려\n", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-30", "text": "음 이거!", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-18", "text": "이 문제에서 조건을 찾도록 도와줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-42", "text": "잘 모르겠는데 부탁해", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-13", "text": "공부 끝 .", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "wait-24", "text": "아직 말하지 마\n", "expected": "wait", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-25", "text": "잠깐 기다려", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-16", "text": "정답 말고 어디서 시작할지 도와줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-12", "text": "이 문장 뜻을 힌트로 알려줘 .", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-31", "text": "저기 그거 있잖아!", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-28", "text": "이게 뭐였지", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-49", "text": "마칠래\n", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-24", "text": "어떤 식을 세워야 할지 힌트 줘\n", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-13", "text": "응 알겠어 .", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-11", "text": "이제 종료해 줘 .", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-35", "text": "첫 단계 힌트 하나 줘 .", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-41", "text": "이제 종료해 줘 부탁해", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-44", "text": "아직 말하지 마 부탁해", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-34", "text": "아직 말하지 마!", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-09", "text": "어...!", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-31", "text": "정답 말고 어디서 시작할지 도와줘!", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-41", "text": "정답 말고 어디서 시작할지 도와줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-42", "text": "이 문장 뜻을 힌트로 알려줘 부탁해", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-48", "text": "이게 뭐였지\n", "expected": "clarify", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-46", "text": "저기 그거 있잖아\n", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-08", "text": "이게 뭐였지!", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-35", "text": "음 이거 .", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-47", "text": "그만 공부할래\n", "expected": "end_session", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "clarify-25", "text": "음 이거", "expected": "clarify", "help_requested": true, "vision": "unknown", "split": "calibration", "synthetic": true, "human_reviewed": false}
+{"id": "offer_hint-00", "text": "첫 단계 힌트 하나 줘", "expected": "offer_hint", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}
+{"id": "wait-38", "text": "응 알겠어 .", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "wait-41", "text": "혼자 생각할게 부탁해", "expected": "wait", "help_requested": true, "vision": "unknown", "split": "holdout", "synthetic": true, "human_reviewed": false}
+{"id": "end_session-03", "text": "공부 끝", "expected": "end_session", "help_requested": true, "vision": "occluded", "split": "authoring", "synthetic": true, "human_reviewed": false}

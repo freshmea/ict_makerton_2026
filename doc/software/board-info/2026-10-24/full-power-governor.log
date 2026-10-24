@@ -1,0 +1,12 @@
+schedutil
+102000 204000 307200 403200 518400 614400 710400 825600 921600 1036800 1132800 1224000 1326000 1428000 1479000 
+SOC family:tegra210  Machine:NVIDIA Jetson Nano Developer Kit
+Online CPUs: 0-1
+cpu0: Online=1 Governor=schedutil MinFreq=921600 MaxFreq=921600 CurrentFreq=921600 IdleStates: WFI=0 c7=0 
+cpu1: Online=1 Governor=schedutil MinFreq=921600 MaxFreq=921600 CurrentFreq=921600 IdleStates: WFI=0 c7=0 
+cpu2: Online=0 Governor=schedutil MinFreq=921600 MaxFreq=921600 CurrentFreq=921600 IdleStates: WFI=0 c7=0 
+cpu3: Online=0 Governor=schedutil MinFreq=921600 MaxFreq=921600 CurrentFreq=921600 IdleStates: WFI=0 c7=0 
+GPU MinFreq=76800000 MaxFreq=614400000 CurrentFreq=76800000
+EMC MinFreq=204000000 MaxFreq=1600000000 CurrentFreq=1600000000 FreqOverride=1
+Fan: PWM=225
+NV Power Mode: 5W

@@ -1,0 +1,27 @@
+{
+  "image": {
+    "target": "thumbv8m.main-none-eabihf",
+    "family": "0xe48bff59",
+    "blocks": 304,
+    "bytes": 155648,
+    "sha256": "a5548f1b3c63f1e6f7cebd7123f023252d971d09c06f616c7de79068edd5f8d3"
+  },
+  "flash_verified": true,
+  "application_status_verified": true,
+  "completed": true,
+  "status": {
+    "protocol": "pico-device-v2",
+    "bootloader": "picotool-v1",
+    "oe_high": "1",
+    "version": "2",
+    "session": "057F94F5C98048F3",
+    "left_pixels": "18",
+    "right_pixels": "18",
+    "running": "None",
+    "faults": "0",
+    "dropped_events": "23"
+  },
+  "finished_utc": "2026-10-23T22:30:14.986870+00:00",
+  "backup_stored_on_board_only": true,
+  "backup_in_repo": false
+}

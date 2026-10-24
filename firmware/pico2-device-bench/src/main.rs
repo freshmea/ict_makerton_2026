@@ -17,6 +17,7 @@ use pico2_device_bench::{picotool_reset,Admission,Gesture,GestureAction,MatrixFr
     ReleaseGuard,SessionGate,CAPACITY,is_priority_stop,matrix_frame,matrix_packet,neo_frame,servo_angle,servo_ticks,stage};
 use smart_leds::RGB8;
 use static_cell::StaticCell;
+mod application;
 
 type UsbDriver=Driver<'static,USB>;
 type Bus=I2c<'static,I2C0,i2c::Async>;
@@ -44,6 +45,8 @@ static STOP_REASON:AtomicU32=AtomicU32::new(0);
 static BOOT_REQUESTED:AtomicBool=AtomicBool::new(false);
 static EVENT_SEQUENCE:AtomicU32=AtomicU32::new(0);
 static DROPPED:AtomicU32=AtomicU32::new(0);
+static DEVICE_TICK:AtomicU32=AtomicU32::new(0);
+static BOOTING:AtomicBool=AtomicBool::new(false);
 
 #[derive(Clone,Copy)]
 struct Envelope{frame:WireFrame,generation:u32,busy:bool}
@@ -123,7 +126,18 @@ async fn main(spawner:Spawner){
     let class=CdcAcmClass::new(&mut builder,CDC.init(State::new()),64);let(sender,receiver)=class.split();
     picotool_reset::register(&mut builder,RESET.init(picotool_reset::State::new()),request_bootloader);
     spawner.spawn(usb_task(builder.build()).unwrap());spawner.spawn(rx_task(receiver).unwrap());spawner.spawn(tx_task(sender).unwrap());
+    spawner.spawn(safety_task(embassy_rp::watchdog::Watchdog::new(p.WATCHDOG)).unwrap());
     device_task(devices,config,chipid,faults).await;
+}
+#[embassy_executor::task]
+async fn safety_task(mut watchdog:embassy_rp::watchdog::Watchdog){
+    watchdog.start(Duration::from_millis(1000));
+    loop{
+        if BOOTING.load(Ordering::SeqCst){watchdog.stop();}
+        else if now().wrapping_sub(DEVICE_TICK.load(Ordering::SeqCst))<250{watchdog.feed(Duration::from_millis(1000));}
+        else{request_stop(8);}
+        if session()!=0&&!lease_valid()&&!STOPPED.load(Ordering::SeqCst){request_stop(4);}Timer::after_millis(5).await;
+    }
 }
 #[embassy_executor::task]
 async fn usb_task(mut usb:UsbDevice<'static,UsbDriver>)->!{usb.run().await}
@@ -288,11 +302,14 @@ async fn start_run(module:Module,devices:&mut Devices,config:&DeviceConfig)->Res
 
 async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut faults:u32)->!{
     let mut gate=SessionGate::new();let mut run:Option<Run>=None;
+    let mut app:Option<application::Application>=None;
     let mut tick=Instant::now()+Duration::from_millis(20);let mut next_status=Instant::now();
     loop{
+        DEVICE_TICK.store(now(),Ordering::SeqCst);
         if gate.session!=0&&!lease_valid(){gate.open(0);set_session(0);request_stop(4);}
         match select3(STOP_WAKE.wait(),Timer::at(tick),select(COMMANDS.receive(),LOCALS.receive())).await{
             Either3::First(())=>{
+                app=None;
                 let old=run.take();ACTIVE.store(false,Ordering::SeqCst);
                 let cleanup_faults=devices.stop_all().await;faults|=cleanup_faults;
                 if let Some(value)=old{event(Message::TestEvent{module:value.selected,phase:value.phase,done:true,fault:true});}
@@ -301,6 +318,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                 if BOOT_REQUESTED.swap(false,Ordering::SeqCst){
                     if let Some(frame)=BOOT_ACK.try_take(){ack(frame,if cleanup_faults==0{AckCode::Ok}else{AckCode::Fault});}
                     if cleanup_faults==0{
+                        BOOTING.store(true,Ordering::SeqCst);
                         Timer::after_millis(150).await;embassy_rp::rom_data::reset_to_usb_boot(0,0);loop{cortex_m::asm::wfi();}
                     }
                 }
@@ -308,7 +326,8 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
             }
             Either3::Second(())=>{
                 tick=Instant::now()+Duration::from_millis(20);
-                if Instant::now()>=next_status{next_status=Instant::now()+Duration::from_millis(100);event(Message::Status(status(config,&run,faults,devices.oe.is_set_high())));}
+                if Instant::now()>=next_status{next_status=Instant::now()+Duration::from_millis(100);event(Message::Status(status(config,&run,faults,devices.oe.is_set_high())));event(Message::Outputs(app.as_ref().map(|a|a.status()).unwrap_or_default()));}
+                if let Some(a)=app.as_mut(){if let Err(bits)=a.tick(&mut devices,&config).await{faults|=bits;request_stop(5);continue;}}
                 if let Some(value)=run.as_mut(){
                     if !run_valid(value.generation){request_stop(5);continue;}
                     if Instant::now()<value.next{continue;}
@@ -340,7 +359,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                 if frame.body==Message::Hello{
                     if frame.session==0{ack(frame,AckCode::BadSession);continue;}
                     if frame.session!=gate.session{
-                        devices.oe.set_high();faults|=devices.stop_all().await;run=None;ACTIVE.store(false,Ordering::SeqCst);
+                        devices.oe.set_high();faults|=devices.stop_all().await;run=None;app=None;ACTIVE.store(false,Ordering::SeqCst);
                         gate.open(frame.session);set_session(frame.session);
                     }
                     match gate.check(frame.seq){
@@ -356,14 +375,28 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                 match gate.check(frame.seq){Admission::Duplicate(code)=>{ack(frame,code);continue;},Admission::Stale=>{ack(frame,AckCode::StaleSequence);continue;},Admission::New=>()}
                 let code=match frame.body{
                     Message::KeepAlive=>{LAST_PING.store(now(),Ordering::SeqCst);AckCode::Ok}
-                    Message::GetStatus=>{reply(frame,Message::Status(status(config,&run,faults,devices.oe.is_set_high())));AckCode::Ok}
+                    Message::GetStatus=>{reply(frame,Message::Outputs(app.as_ref().map(|a|a.status()).unwrap_or_default()));reply(frame,Message::Status(status(config,&run,faults,devices.oe.is_set_high())));AckCode::Ok}
+                    Message::Arm(value)=>{
+                        if run.is_some()||envelope.busy{AckCode::Busy}else if !value.validate(){AckCode::InvalidConfig}else if !lease_valid(){AckCode::NoSession}else if faults&PCA_FAULT!=0&&value.servo_enabled{AckCode::Fault}else{
+                            app=Some(application::Application::new(value));STOPPED.store(false,Ordering::SeqCst);AckCode::Ok
+                        }
+                    }
+                    Message::SetPose{targets_cdeg,move_ms}=>{
+                        if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}else if let Some(a)=app.as_mut(){if a.pose(targets_cdeg,move_ms,frame.seq){ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}else{AckCode::InvalidConfig}}else{AckCode::NoSession}
+                    }
+                    Message::SetLight{rgb,brightness,period_ms}=>{
+                        if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}else if let Some(a)=app.as_mut(){if a.light(rgb,brightness,period_ms,frame.seq){ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}else{AckCode::InvalidConfig}}else{AckCode::NoSession}
+                    }
+                    Message::SetEyes{left,right,brightness}=>{
+                        if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}else if let Some(a)=app.as_mut(){if a.eyes(left,right,brightness,frame.seq){ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}else{AckCode::Unsupported}}else{AckCode::NoSession}
+                    }
                     Message::Configure(value)=>{
                         if run.is_some()||envelope.busy{AckCode::Busy}else if value.validate().is_err(){AckCode::InvalidConfig}
                         else{config=value;GENERATION.fetch_add(1,Ordering::SeqCst);TOUCH_CONFIG.signal(value);AckCode::Ok}
                     }
                     Message::RunTest(module)=>{
                         if run.is_some()||envelope.busy{AckCode::Busy}else if !lease_valid(){AckCode::NoSession}
-                        else{match start_run(module,&mut devices,&config).await{Ok(value)=>{run=Some(value);AckCode::Ok},Err(bits)=>{faults|=bits;request_stop(5);AckCode::Fault}}}
+                        else{app=None;match start_run(module,&mut devices,&config).await{Ok(value)=>{run=Some(value);AckCode::Ok},Err(bits)=>{faults|=bits;request_stop(5);AckCode::Fault}}}
                     }
                     Message::Bootloader=>{BOOT_ACK.signal(frame);request_bootloader();continue;}
                     _=>AckCode::Unsupported,

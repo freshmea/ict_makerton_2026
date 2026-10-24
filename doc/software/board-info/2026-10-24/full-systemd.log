@@ -1,0 +1,15 @@
+all seven installed units active
+both cameras actual sensor ~30fps and analysis ~10fps
+camera 0 requested JPEG is 1280x720
+camera 1 requested JPEG is 1280x720
+actual CSI problem crop reaches OCR adapter as unconfirmed candidate
+camera owner loss reports unknown
+camera restart uses new frame generation
+picod kill revokes controller and audio
+Pico manually recovers stopped and gated
+fresh Help works after manual Pico recovery
+audio owner kill stops Pico outputs
+audio manually recovers without replay
+three minute quiet soak has stable PIDs and fresh media
+controller remains quiet after verification
+{"passed": true, "checks": 14}

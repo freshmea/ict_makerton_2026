@@ -11,3 +11,5 @@ apps/device-dashboard/*.service text eol=lf
 # Preserve diagnostic command output and upstream license whitespace verbatim.
 doc/software/board-info/**/*.log -text -whitespace
 apps/device-dashboard/static/fonts/LICENSE.txt -whitespace
+
+software/** text=auto eol=lf

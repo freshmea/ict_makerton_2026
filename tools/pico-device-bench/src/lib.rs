@@ -1,6 +1,6 @@
 use pico_device_protocol::{
     encode_frame, AckCode, DeviceConfig, DeviceStatus, Frame, FrameDecoder, Message, Module,
-    MAX_WIRE, VERSION,
+    MAX_WIRE, VERSION, ActuatorConfig, OutputStatus,
 };
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
@@ -22,7 +22,7 @@ pub const MAX_DATAGRAM: usize = 8192;
 pub const KEEPALIVE_INTERVAL: Duration = Duration::from_millis(200);
 pub const REQUEST_TIMEOUT: Duration = Duration::from_secs(3);
 pub const TEST_TIMEOUT: Duration = Duration::from_secs(180);
-pub const PROTOCOL_NAME: &str = "pico-device-v1";
+pub const PROTOCOL_NAME: &str = "pico-device-v2";
 
 pub fn failure(message: impl Into<String>) -> DynError {
     Box::new(io::Error::other(message.into()))
@@ -74,14 +74,25 @@ pub enum IpcRequest {
     Test { module: TestModule },
     Stop,
     Configure { config: DeviceConfig },
+    Arm { config: ActuatorConfig },
+    Pose { targets_cdeg:[u16;6], move_ms:u16 },
+    Light { rgb:[u8;3],brightness:u8,period_ms:u16 },
+    Eyes {left:[u8;8],right:[u8;8],brightness:u8},
 }
 
 impl IpcRequest {
     pub fn name(&self) -> &'static str {
-        match self { Self::Status => "status", Self::Test { .. } => "test", Self::Stop => "stop", Self::Configure { .. } => "configure" }
+        match self { Self::Status => "status", Self::Test { .. } => "test", Self::Stop => "stop", Self::Configure { .. } => "configure",Self::Arm{..}=>"arm",Self::Pose{..}=>"pose",Self::Light{..}=>"light",Self::Eyes{..}=>"eyes" }
     }
     pub fn validate(&self) -> Result<()> {
         if let Self::Configure { config } = self { validate_config(config)?; }
+        match self {
+            Self::Arm{config} if !config.validate()=>return Err(failure("invalid actuator calibration")),
+            Self::Pose{targets_cdeg,move_ms} if targets_cdeg.iter().any(|x|*x>18000)||!(100..=10000).contains(move_ms)=>return Err(failure("invalid pose bounds")),
+            Self::Light{brightness,period_ms,..} if *brightness>64||(*period_ms!=0&&!(200..=10000).contains(period_ms))=>return Err(failure("invalid LED bounds")),
+            Self::Eyes{brightness,..} if *brightness>15=>return Err(failure("invalid matrix brightness")),
+            _=>(),
+        }
         Ok(())
     }
 }
@@ -94,17 +105,21 @@ pub fn parse_ipc(bytes: &[u8]) -> Result<IpcRequest> {
         Some("status" | "stop") => &["cmd"],
         Some("test") => &["cmd", "module"],
         Some("configure") => &["cmd", "config"],
+        Some("arm")=> &["cmd","config"],
+        Some("pose")=> &["cmd","targets_cdeg","move_ms"],
+        Some("light")=> &["cmd","rgb","brightness","period_ms"],
+        Some("eyes")=> &["cmd","left","right","brightness"],
         _ => return Err(failure("UDP cmd must be status, test, stop, or configure")),
     };
     if let Some(key) = object.keys().find(|key| !allowed.contains(&key.as_str())) {
         return Err(failure(format!("Unknown UDP request field: {key}")));
     }
-    if let Some(config) = value.get("config").and_then(Value::as_object) {
+    if value["cmd"]=="configure" {if let Some(config) = value.get("config").and_then(Value::as_object) {
         let known = serde_json::to_value(DeviceConfig::default())?;
         for key in config.keys() {
             if known.get(key).is_none() { return Err(failure(format!("Unknown UDP configuration field: {key}"))); }
         }
-    }
+    }}
     let request: IpcRequest = serde_json::from_slice(bytes)?;
     request.validate()?;
     Ok(request)
@@ -184,6 +199,7 @@ pub struct DeviceLink<S> {
     shutdown_mode: bool,
     publish: bool,
     latest: Option<Snapshot>,
+    outputs: Option<OutputStatus>,
     started: Instant,
     ipc_socket: Option<Arc<UdpSocket>>,
 }
@@ -195,13 +211,13 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
         Self { stream, decoder: FrameDecoder::new(), pending: VecDeque::new(),
             keepalive_sequences: VecDeque::new(), heartbeat, session, next_seq: 1,
             hello_verified: false, interrupted, shutdown_mode: false, publish,
-            latest: None, started: Instant::now(), ipc_socket: None }
+            latest: None, outputs:None, started: Instant::now(), ipc_socket: None }
     }
     pub fn session(&self) -> u64 { self.session }
     pub fn latest(&self) -> Option<Snapshot> { self.latest }
     pub fn interrupted(&self) -> bool { self.interrupted.load(Ordering::SeqCst) }
     pub fn begin_shutdown(&mut self) { self.shutdown_mode = true; }
-    pub fn snapshot_json(&self) -> Value { self.latest.map(Snapshot::json).unwrap_or(Value::Null) }
+    pub fn snapshot_json(&self) -> Value {let mut v=self.latest.map(Snapshot::json).unwrap_or(Value::Null);if v.is_object(){v["outputs"]=json!(self.outputs);}v }
     pub fn attach_ipc(&mut self, socket: Arc<UdpSocket>) { self.ipc_socket = Some(socket); }
 
     fn emit(&self, mut value: Value) {
@@ -240,8 +256,10 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
         match frame.body {
             Message::Status(status) => {
                 self.latest = Some(Snapshot { status, received_unix_ms: unix_ms(), received_at: Instant::now() });
-                self.emit(json!({"event":"status","seq":frame.seq,"status":status}));
+                self.emit(json!({"event":"status","seq":frame.seq,"status":status,"outputs":self.outputs}));
             }
+            Message::Outputs(v)=>{self.outputs=Some(v);self.emit(json!({"event":"outputs","seq":frame.seq,"outputs":v}));},
+            Message::Applied{request_seq,kind}=>self.emit(json!({"event":"applied","request_seq":request_seq,"kind":kind})),
             Message::Touch(event) => self.emit(json!({"event":"touch","seq":frame.seq,"touch":event})),
             Message::TestEvent { module, phase, done, fault } => self.emit(json!({"event":"test_event","seq":frame.seq,
                 "module":module,"phase":phase,"done":done,"fault":fault})),

@@ -15,10 +15,18 @@ fn decode(bytes: &[u8]) -> Vec<Result<Frame, CodecError>> {
 fn crc_standard_check_and_external_golden_hello() {
     assert_eq!(crc32(b"123456789"), 0xcbf4_3926);
     assert_eq!(crc32(b""), 0);
-    // Independently computed with Python zlib.crc32 over Postcard [1,0,0,0].
-    let golden = [2, 1, 1, 1, 5, 0x79, 0xb8, 0xf8, 0x99, 0];
+    // Independently computed with Python zlib.crc32 over Postcard [2,0,0,0].
+    let golden = [2, 2, 1, 1, 5, 0x97, 0x17, 0x4d, 0x8b, 0];
     assert_eq!(wire(&hello()), golden);
     assert_eq!(decode(&golden), vec![Ok(hello())]);
+}
+#[test]
+fn actuator_configuration_bounds_and_new_frames(){
+    let mut c=ActuatorConfig::default();assert!(c.validate());assert!(!c.accepts(&[9000;6],500));
+    c.servo_enabled=true;assert!(c.accepts(&[9000;6],500));assert!(!c.accepts(&[11000;6],500));
+    assert_eq!(c.ticks(0,9000),307);c.invert_mask=1;assert_eq!(c.ticks(0,0),410);
+    let f=Frame{version:VERSION,session:u64::MAX,seq:u32::MAX,body:Message::Arm(c)};assert_eq!(decode(&wire(&f)),vec![Ok(f)]);
+    c.min_cdeg[0]=18001;assert!(!c.validate());
 }
 
 #[test]

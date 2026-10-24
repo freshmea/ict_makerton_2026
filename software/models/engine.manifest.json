@@ -1,0 +1,13 @@
+{
+  "artifact": "yolox_nano.engine",
+  "sha256": "521a5ff8c2fa3da0fd1a898cf5411864bdd3f1b0acd1f57f791c379faa1a67a8",
+  "bytes": 10159498,
+  "target": "Jetson Nano sm53",
+  "cuda": "10.2",
+  "tensorrt": "8.0.1",
+  "precision": "FP16 with FP32 fallback",
+  "workspace_mib": 128,
+  "build_wall_seconds": 952.843,
+  "source_model_manifest": "yolox.manifest.json",
+  "portable_engine": false
+}

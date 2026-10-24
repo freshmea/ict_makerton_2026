@@ -1,0 +1,155 @@
+{
+  "account_remaining": "unknown; consult provider dashboard",
+  "automatic_retry": false,
+  "cooldown_until_unix": 0,
+  "last_http_status": 200,
+  "last_usage": {
+    "candidatesTokenCount": 60,
+    "promptTokenCount": 743,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 743
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 803
+  },
+  "local_only": true,
+  "max_24h": 10,
+  "max_rpm": 1,
+  "rolling_24h_attempts": 2,
+  "tts": {
+    "account": {
+      "checked_unix": 1792796598,
+      "plan": "free",
+      "plan_credits": 15000,
+      "provider": "typecast",
+      "remaining_plan_credits": 15000,
+      "source": "GET /v1/users/me/subscription",
+      "used_credits": 0
+    },
+    "local": {
+      "automatic_retry": false,
+      "cooldown_until_unix": 0,
+      "last_http_status": 200,
+      "local_only": true,
+      "max_24h_characters": 500,
+      "max_30d_characters": 12000,
+      "max_rpm": 2,
+      "rolling_24h_characters": 0,
+      "rolling_30d_characters": 0
+    }
+  }
+}
+{
+  "confirmed_problem": "",
+  "epoch": 1,
+  "phase": "done",
+  "result": {
+    "dialogue": {
+      "action": "offer_hint",
+      "classification": {
+        "provider": "gemini",
+        "requested_model": "gemini-3.5-flash-lite",
+        "returned_model": "gemini-3.5-flash-lite",
+        "transport": "official_https",
+        "usage": {
+          "candidatesTokenCount": 53,
+          "promptTokenCount": 300,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 300
+            }
+          ],
+          "serviceTier": "standard",
+          "totalTokenCount": 353
+        },
+        "wall_ms": 1378
+      },
+      "confidence": 1.0,
+      "generation": {
+        "same_request_as_classification": true
+      },
+      "hint": "3이 3개씩 또는 4가 3개 있는 묶음으로 그림을 그려보세요.",
+      "raw_media_uploaded": false,
+      "tts": {
+        "account_before": {
+          "checked_unix": 1792796600,
+          "plan": "free",
+          "plan_credits": 15000,
+          "provider": "typecast",
+          "remaining_plan_credits": 15000,
+          "source": "GET /v1/users/me/subscription",
+          "used_credits": 0
+        },
+        "disclosure": "Typecast AI 합성 음성",
+        "microphone_uploaded": false,
+        "model": "ssfm-v30",
+        "path": "/run/300seconds/turn-1644123775590663777-1-12990600253605659642/typecast.wav",
+        "provider": "typecast",
+        "requested_characters": 34,
+        "voice_id": "tc_637cbfeef7f00f21e8a1c6c8",
+        "wall_ms": 987
+      }
+    },
+    "next": "quiet; explicit next request required",
+    "provenance": [
+      {
+        "tts": {
+          "backend": "typecast-ko-cpu",
+          "disclosure": "합성 음성",
+          "rate": 48000,
+          "samples": 213599
+        }
+      }
+    ],
+    "spoken": true
+  }
+}
+{
+  "account_remaining": "unknown; consult provider dashboard",
+  "automatic_retry": false,
+  "cooldown_until_unix": 0,
+  "last_http_status": 200,
+  "last_usage": {
+    "candidatesTokenCount": 53,
+    "promptTokenCount": 300,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 300
+      }
+    ],
+    "serviceTier": "standard",
+    "totalTokenCount": 353
+  },
+  "local_only": true,
+  "max_24h": 10,
+  "max_rpm": 1,
+  "rolling_24h_attempts": 3,
+  "tts": {
+    "account": {
+      "checked_unix": 1792796608,
+      "plan": "free",
+      "plan_credits": 15000,
+      "provider": "typecast",
+      "remaining_plan_credits": 15000,
+      "source": "GET /v1/users/me/subscription",
+      "used_credits": 0
+    },
+    "local": {
+      "automatic_retry": false,
+      "cooldown_until_unix": 0,
+      "last_http_status": 200,
+      "local_only": true,
+      "max_24h_characters": 500,
+      "max_30d_characters": 12000,
+      "max_rpm": 2,
+      "rolling_24h_characters": 34,
+      "rolling_30d_characters": 34
+    }
+  }
+}
+{"epoch":0,"fresh":false,"generation":8523466056140928217,"lease_valid":false,"monotonic_ms":13002937,"phase":"quiet","role":"controllerd","state":{},"turn_epoch":2}
