@@ -1,0 +1,39 @@
+   Compiling pico-device-protocol v0.1.0 (/home/jetson/ict_makerton_2026/crates/pico-device-protocol)
+   Compiling pico-device-bench v0.1.0 (/home/jetson/ict_makerton_2026/tools/pico-device-bench)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 25.95s
+     Running unittests src/lib.rs (tools/pico-device-bench/target/debug/deps/pico_device_bench-1cb2d683cc0167dd)
+
+running 7 tests
+test tests::hello_retries_a_lost_identity_reply_without_replaying_actuators ... ok
+test tests::json_requests_allow_only_typed_loopback_commands_and_valid_config ... ok
+test tests::udp_client_sends_one_typed_command_and_receives_ack_snapshot ... ok
+test tests::fragmented_codec_session_and_ack_matching_over_fake_serial ... ok
+test tests::keepalive_runs_while_waiting_without_replaying_test ... ok
+test tests::get_status_requires_both_correlated_snapshot_and_ack ... ok
+test tests::udp_stop_preempts_a_lost_test_ack_without_waiting_for_rpc_timeout ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running unittests src/main.rs (tools/pico-device-bench/target/debug/deps/pico_device_bench-9fc166e9ee9bc431)
+
+running 2 tests
+test tests::one_usb_owner_and_four_typed_ipc_commands_are_enforced ... ok
+test tests::canonical_alias_matching_and_usb_identity_are_explicit ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/servo_extension.rs (tools/pico-device-bench/target/debug/deps/servo_extension-8f5856460e304b4b)
+
+running 3 tests
+test old_firmware_has_no_servo_capability_until_explicit_device_report ... ok
+test servo_ipc_rejects_other_channels_ranges_and_unknown_fields ... ok
+test servo_driver_diagnostics_survive_the_native_bridge_snapshot ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pico_device_bench
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -2,6 +2,8 @@
 
 추가 구현·Nano 배포: **두 카메라 10초 간격 연속 관찰·SQLite 저장·기간/키워드 조회·CSV/JSONL 내보내기·검토 라벨**, **SW1/대시보드 GPT Live 10분 대화** 검증실. [설계·API·실연결 검증·운영 비용](../../doc/software/연속_관찰_DB와_GPT_Live.md). 실제 연속 저장, 한국어 Live 인사 음성 PCM·자막·정상 종료를 확인했다. GPT‑4.1 mini와 GPT Live 모두 유료 API다.
 
+후속 적용: 기존 대화의 교육 프롬프트와 최근 DB 관찰·학습 대화를 Live 시작 때 전달한다. 화면에서 **현재 세션 API 적용 확인**, 참조 건수, 지침·참조 조회 링크를 볼 수 있다. 프런트·백엔드·시작 참조의 실제 API 일치와 151개 검사를 확인했다. [교육 프롬프트·DB 참조 검증](../../doc/software/dashboard-check/2026-10-24/live-context/README.md).
+
 최신 운영 변경(2026-10-24): 새 공유기에서 사용자 요청으로 모니터를 다시 **enabled/active**로 전환하고 `DASHBOARD_BIND=192.168.184.76`을 적용했다. 웹과 상태 API에서 Pico·카메라 두 대·마이크 연결을 확인했다. 이전 [Rust runtime 전환](../../doc/software/Rust_마이크로아키텍처_실행과_검증.md)의 모니터 중지는 당시 기록이다. 저장소 루트의 [enable-dashboard.sh](../../enable-dashboard.sh)·[disable-dashboard.sh](../../disable-dashboard.sh)로 현재 IP 반영과 실행·부팅 자동 시작을 함께 켜거나 끈다.
 
 Nano의 실제 장치를 FastAPI로 읽고, 하나의 Rust 브리지를 통해 Pico를 제어한다. ROS는 사용하지 않는다.

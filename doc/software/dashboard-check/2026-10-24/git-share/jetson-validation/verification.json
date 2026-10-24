@@ -1,0 +1,63 @@
+{
+  "time_kst": "2026-10-24T23:53:45.974474+09:00",
+  "head": "c216f8ba170da3452ebb6b066541f1c7a6c3702c",
+  "suites": [
+    {
+      "suite": "dashboard",
+      "exit_code": 0,
+      "passed": 79,
+      "log": "dashboard.log"
+    },
+    {
+      "suite": "observer",
+      "exit_code": 0,
+      "passed": 72,
+      "log": "observer.log"
+    },
+    {
+      "suite": "uploader",
+      "exit_code": 0,
+      "passed": 11,
+      "log": "uploader.log"
+    },
+    {
+      "suite": "protocol",
+      "exit_code": 0,
+      "passed": 12,
+      "log": "protocol.log"
+    },
+    {
+      "suite": "bridge",
+      "exit_code": 0,
+      "passed": 12,
+      "log": "bridge.log"
+    },
+    {
+      "suite": "firmware",
+      "exit_code": 0,
+      "passed": 16,
+      "log": "firmware.log"
+    },
+    {
+      "suite": "runtime",
+      "exit_code": 0,
+      "passed": 19,
+      "log": "runtime.log"
+    }
+  ],
+  "total_passed": 221,
+  "shell_syntax_files": 24,
+  "services": {
+    "300seconds-dashboard": "active",
+    "300seconds-observer": "active",
+    "300seconds-tts": "active"
+  },
+  "health": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  },
+  "device_actuation": false,
+  "paid_api_calls": false
+}

@@ -1,0 +1,42 @@
+   Compiling host-core v0.1.0 (/home/jetson/ict_makerton_2026/software/crates/host-core)
+   Compiling pico-device-protocol v0.1.0 (/home/jetson/ict_makerton_2026/crates/pico-device-protocol)
+   Compiling nano-runtime v0.1.0 (/home/jetson/ict_makerton_2026/software/services/nano-runtime)
+   Compiling pico-device-bench v0.1.0 (/home/jetson/ict_makerton_2026/tools/pico-device-bench)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 54.70s
+     Running unittests src/lib.rs (software/target/debug/deps/host_core-a3ad7db4dbbd219f)
+
+running 10 tests
+test decision::tests::model_never_overrides_stop_quiet_or_epoch ... ok
+test shm::tests::restart_and_old_frame_are_invalid ... ok
+test shm::tests::busy_slots_drop_without_truncation_and_stale_frames_fail ... ok
+test tests::fragmented_frames_and_oversize ... ok
+test tests::lease_stop_and_expiry_cannot_be_renewed_or_replayed ... ok
+test decision::tests::uncertainty_is_not_an_action_permission ... ok
+test tests::pcm_is_bounded_and_versioned ... ok
+test tests::unknown_commands_and_future_deadlines_fail ... ok
+test decision::tests::synthetic_200_candidates_never_bypass_local_stop_epoch_or_consent ... ok
+test speech::tests::vad_silence_noise_and_bounded_utterance ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running unittests src/main.rs (software/target/debug/deps/nano_runtime-5455a69f4b5a543a)
+
+running 9 tests
+test native::tests::luma_cpu_contract_is_exact ... ok
+test budget::tests::local_attempts_persist_and_429_blocks_further_calls ... ok
+test providers::tests::numeric_assertions_are_replaced_by_a_conceptual_question ... ok
+test providers::tests::response_refusal_truncation_unknown_action ... ok
+test native::tests::sqlite_is_parameter_bound_and_recoverable ... ok
+test typecast::tests::transport_errors_keep_actionable_codes_without_credentials ... ok
+test typecast::tests::consecutive_requests_and_transient_errors_do_not_add_local_waits ... ok
+test learning::tests::consent_confirm_search_delete_and_reopen ... ok
+test learning::tests::update_requires_confirmation_and_preserves_id_after_reopen ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.27s
+
+   Doc-tests host_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

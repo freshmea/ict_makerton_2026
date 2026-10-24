@@ -12,7 +12,7 @@
 - 한 장으로 지속 시간·내적 집중력·의도·감정·사람의 신원을 추론하지 않는다. 휴대전화 사용이 관찰됐다는 결과와 학습 이탈이라는 판단을 구분한다. 서로 다른 카메라에서 같은 사람이 관찰될 수 있으므로 두 카메라 합계를 사람 수로 해석하지 않는다.
 - 캡처와 API 요청은 별도 task다. 대기열은 최대 두 묶음이며 초과는 `dropped`로 기록한다. 지연을 따라잡으려고 몰아서 촬영하지 않는다. 대시보드 탭을 닫아도 서버 수집은 계속한다.
 - 중지를 누르면 미전송 대기 자료는 `cancelled`로 기록한다. 이미 전송한 요청은 완료 후 DB에 저장할 수 있다. 같은 실패 요청은 재전송하지 않는다. 일반 오류 뒤에는 새 전송을 60초 보류하며 인증·429 오류는 수집을 중지한다. 디스크 여유가 100 MiB 미만이면 수집을 중지한다.
-- 기본 DB: `/var/lib/300seconds-dashboard/learning.sqlite3`. `DASHBOARD_LEARNING_DB`로 변경한다. SQLite WAL, 외래키, 스키마 버전 1을 사용하며 재시작 시 미완료 관찰·Live 세션을 `interrupted`로 표시한다.
+- 기본 DB: `/var/lib/300seconds-dashboard/learning.sqlite3`. `DASHBOARD_LEARNING_DB`로 변경한다. SQLite WAL, 외래키, 현재 스키마 버전 2를 사용하며 재시작 시 미완료 관찰·Live 세션을 `interrupted`로 표시한다. 기존 버전 1 데이터에 참조 스냅샷 테이블을 추가하는 이행이다.
 - 원본 JPEG·음성·API 키는 DB에 저장하지 않는다. 사진 SHA-256, 파일 시각, 세대 정보는 저장하지만 원본이 없으므로 나중에 동일 사진을 다시 분석할 수는 없다. 결과 텍스트는 누적 보존하고 자동 삭제하지 않는다.
 - 수집 켜기·끄기는 DB에 저장하며 재시작 후 복원한다. 최초 설치는 `LEARNING_AUTOSTART=1`로 켜지도록 구성했다. 이후 사용자가 중지한 상태는 자동으로 켜지지 않는다.
 
@@ -25,6 +25,7 @@
 | `annotations` | 사람이 검토한 라벨과 메모. 모델 결과를 덮어쓰지 않음 |
 | `live_sessions` | 모드·시작/종료·SW1/대시보드 시작 경로·종료 사유·최종 사용량 확정 여부 |
 | `live_events` | 사용자/AI 발화 조각·세션 기준 시작/종료 ms·수신 시각·백엔드 사용량 이벤트 |
+| `live_contexts` | 시작 시점 DB 참조·해시·기록 ID·교육 버전과 API 설정 일치 확인 |
 | `settings` | 재시작 후 복원할 수집 상태 |
 
 화면에서 기간, 카메라, 정확한 키워드 또는 행동 코드로 검색한다. 행동·키워드 빈도, 카메라별 성공·누락 수와 확인된 사용 토큰을 표시한다. 요약 API는 UTC 시간대별 집계도 제공한다. 한 요청의 사용량은 카메라 두 개 결과가 있어도 한 번만 합산한다. 네트워크 오류·거부·응답 검증 실패 시 실제 청구와 사용량이 확인되지 않을 수 있으므로 이 값은 계정 청구 총액이 아니다.
@@ -44,6 +45,8 @@ GROUP BY date_kst, o.camera;
 운영 DB를 백업할 때 WAL 파일을 무시하고 본체 파일만 복사하지 않는다. Python `sqlite3.Connection.backup()`이나 SQLite `.backup`으로 일관된 스냅샷을 만든다. 장기 보존은 정기 스냅샷과 CSV/JSONL 보관을 권장하며, 보관기간 변경·삭제 정책은 별도로 정한다.
 
 ## GPT Live
+
+후속 점검에서 **「GPT Live 학습 프롬프트 작성」 대화의 상세 교육 지침과 DB 참조가 초기 구현에 빠진 것**을 확인해 수정·배포했다. 현재는 해당 지침을 음성 모델과 QnA 백엔드 양쪽에 적용하며, 최근 30분의 관찰·빈도와 최근 24시간 학습 대화 일부를 시작 시 참고 자료로 전달한다. 실제 API가 돌려준 설정과 비교하고 참조 스냅샷을 보존한다. [원문·시간 정책 조정·151개 검사·실기 확인](dashboard-check/2026-10-24/live-context/README.md).
 
 - 요청한 **`gpt-live-1`**을 `/v1/live/sessions` primary WebSocket으로 연결한다. 기존 Realtime API 이벤트를 혼용하지 않는다. `session.start` → `session.started` 후 24 kHz mono PCM16 음성을 양방향 전송한다.
 - 한국어 `noeul` 음성, 자유 대화/학습 QnA 모드를 제공한다. 복잡한 질문은 Responses 위임 백엔드 `gpt-6-luna`로 처리한다. 백엔드 모델은 `LEARNING_BACKEND_MODEL`로 변경한다. 외부 도구는 부여하지 않는다.
@@ -70,6 +73,8 @@ OpenAI 키는 기존 전용 `300seconds-observer.service`만 소유한다. 새 w
 | `POST /api/learning/live/start` | `{"mode":"study"}` 또는 `chat` |
 | `POST /api/learning/live/stop` | 대화 종료 |
 | `GET /api/learning/live/history` | 최근 세션·자막, `session_id`, 이벤트 `before` |
+| `GET /api/learning/live/policy` | 현재 교육 프롬프트·출처·버전·해시 |
+| `GET /api/learning/live/context` | 다음 세션 DB 참조, `session_id` 지정 시 해당 세션의 고정 참조·API 확인 기록 |
 | `GET /api/learning/live/export?session_id=...` | 세션 메타데이터와 원 발화 조각 JSONL |
 
 ## 검증·배포

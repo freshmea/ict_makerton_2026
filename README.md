@@ -206,6 +206,7 @@ Nano/Pico 후속 작업에서는 통합 펌웨어의 실제 flash, USB 제어, �
 | 메인 스케치 | [ict_makerton_2026.ino](ict_makerton_2026.ino) |
 | Nano·Pico 작업 종합 기록 | [설정·펌웨어·실물 검증·대시보드·HDMI·남은 항목](doc/software/Jetson_Nano_작업_종합기록_2026-10-24.md) |
 | Windows·Jetson GitHub 공유 | [최신 작업 정리·검증·양쪽 동기화 상태·충돌 방지 절차](doc/software/Windows_Jetson_GitHub_공유와_작업정리_2026-10-24.md) |
+| 3D 프린트 출력 현황 | [완료·진행 중·상태 미기재 부품과 STL 링크](<doc/3D 프린트 출력상황.md>) |
 | Rust runtime·AI 기능 | [전체 기능 구현·운영](doc/software/전체기능_구현과_운영.md) / [기초 실행·검증](doc/software/Rust_마이크로아키텍처_실행과_검증.md) / [AI 선정 계획](doc/software/외부AI_로컬추론_구현계획.md) |
 | Jetson Nano 보드 실측 정보 | [2026-10-24 SSH 수집·환경 manifest](doc/software/Jetson_Nano_보드_정보.md) |
 | Nano 개발 환경·운영 모드 | [라이브러리 설치·GUI 복원·서비스/ROS 비활성화](doc/software/Jetson_Nano_개발환경_설치와_모드전환.md) |

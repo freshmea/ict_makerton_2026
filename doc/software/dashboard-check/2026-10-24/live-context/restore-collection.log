@@ -1,0 +1,1 @@
+{"enabled": true, "interval_seconds": 10.0, "cameras": [0, 1], "queued_batches": 0, "last_capture": null, "next_capture": null, "error": null, "backoff_until": 0, "live": {"phase": "idle", "max_seconds": 600, "switch": 1, "remaining_seconds": 0}, "schema_version": 2, "raw_images_saved": false}

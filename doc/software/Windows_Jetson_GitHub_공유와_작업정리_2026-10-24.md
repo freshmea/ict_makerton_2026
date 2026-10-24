@@ -12,12 +12,15 @@
 | 시작 시 Windows·원격 기준 | `8cc1550fe2bcf638904927bd934cd32114f20e65` |
 | Windows 수집 | 최초 수정·신규 파일 237개, 약 5MB. 문서·검사 근거 등을 포함해 **248개 파일**을 커밋 |
 | Windows GitHub 게시 | **완료**. 작업 스냅샷 [`9c3146016f0772fe34467d069a896f2bbaaaea33`](https://github.com/freshmea/ict_makerton_2026/commit/9c3146016f0772fe34467d069a896f2bbaaaea33)를 기존 `main`에 일반 push. 로컬·원격 해시 일치 확인 |
-| Jetson 수집 | SSH 인증 대기. 키 인증이 거부되어 보드의 현재 Git 변경은 아직 수집하지 못함 |
-| 통합 완료 판정 | Windows·Jetson `HEAD`와 원격 `main` 해시 일치, 양쪽 작업 트리 청결 확인 후 완료로 기록 |
+| Jetson 수집 | 인증 후 **219개 파일** 원본 해시 수집·비교 완료. 로컬 백업 사본 14개는 원본 stash에 보존 |
+| Jetson 기준 정렬 | 기존 `3d4b198`에서 GitHub `main`의 `c216f8b`까지 fast-forward 완료. 실행 서비스 3개 active 유지 |
+| 통합 완료 판정 | 최종 문서 게시 후 Windows·Jetson `HEAD`와 원격 `main` 해시 일치, 양쪽 작업 트리 청결을 다시 확인 |
 
-공유 중 같은 Windows 저장소의 「카메라 분석과 GPT Live 대시보드 구현」 채팅에서 교육 프롬프트·DB 참조 기능을 계속 편집 중인 것을 확인했다. 이번 게시 대상은 스테이징 시점의 스냅샷이며 이후 편집을 덮어쓰지 않는다. 해당 후속 작업의 완료·배포와 Jetson의 변경 수집까지 자동으로 완료됐다는 뜻은 아니다.
+첫 게시 시 같은 Windows 저장소의 「카메라 분석과 GPT Live 대시보드 구현」 채팅에서 교육 프롬프트·DB 참조 기능을 계속 편집 중이었다. 해당 작업의 완료를 확인한 뒤 후속 문서와 `dashboard-check/2026-10-24/live-context/` 실기 자료 13개도 이번 통합에 포함했다.
 
-스냅샷 게시 후 해당 작업이 만든 `dashboard-check/2026-10-24/live-context/` 실기 자료가 추가로 나타났다. 진행 중인 자료는 이 커밋에 섞지 않고 보존했다. Jetson 연결 복구 시 보드 변경과 이 후속 자료를 함께 검토한 뒤 별도 커밋으로 통합한다. 이번 문서의 게시 상태 기록은 작업 스냅샷 다음의 문서 커밋으로 추가한다.
+사용자가 접속 정보를 제공한 뒤 Jetson 원본을 비교했다. **207개 파일은 내용 동일**, **4개는 기존 공유 커밋과 같은 이전 내용**, **5개는 개별 검토**, **3개는 보드에만 있던 새 메모**였다. 개별 검토한 5개 중 4개는 Windows의 후속 검증 설명을 유지했고, `pico-config.json`은 파싱한 JSON 값이 같아 Windows 형식을 유지했다. 보드에만 있던 메모는 모두 가져왔다. [파일별 비교·결정·원본 해시](dashboard-check/2026-10-24/git-share/jetson-comparison.json).
+
+보드의 원본 tracked/untracked 작업은 stash `d739252344d84d3239a632814d2fe3af3c3d3519`와 `refs/backups/jetson-before-github-sync-20261024`에 보존했다. root 소유 프롬프트 디렉터리는 stash 내용과 일치함을 확인한 뒤 `tmp/git-share-20261024/preserved-prompts`에도 보관했다. 기존 stash와 운영 환경파일·모델·DB·실행본은 유지했다. Git 정리 중 서비스를 재시작하거나 Pico를 flash하지 않았다.
 
 ## 지금까지 수행한 작업
 
@@ -31,6 +34,7 @@
 | 오디오·TTS | BA-R9 실제 청취·음량 설정, Typecast 문장 입력·별도 worker·연속 요청, 마이크 기본 +12dB·0~30dB·-1dBFS 피크 보호·WAV/RMS 표시 | [BA-R9](dashboard-check/2026-10-24/ba-r9/README.md), [TTS 입력](dashboard-check/2026-10-24/tts-input/README.md), [연속 TTS](dashboard-check/2026-10-24/tts-continuous/README.md), [증폭](dashboard-check/2026-10-24/microphone-gain/README.md) |
 | 단발·연속 사진 분석 | GPT/JEV 단발 관찰, 10프레임·15종 행동 분석, 두 카메라 동시 관찰·SQLite 저장·검색·집계·CSV/JSONL·검토 라벨 | [10프레임 분석](10프레임_학습행동_분석과_대시보드.md), [관찰 DB와 Live](연속_관찰_DB와_GPT_Live.md) |
 | GPT Live | 자유 대화/학습 QnA, 한국어 PCM·자막·사용량 저장, SW1 트리거 로직, 600초 제한·정상 종료·스피커 잠금 공유 | [실제 10초 세션·사진 분석·배포 결과](연속_관찰_DB와_GPT_Live.md). 현재 보드 경로는 반이중 |
+| 교육 지침·대화 문맥 | 기존 교육 프롬프트를 음성 모델·QnA 백엔드에 적용, 최근 관찰·학습 대화를 제한된 참고 JSON으로 전달, 실제 API 설정 대조·DB 스냅샷 보존 | [후속 실기 확인](dashboard-check/2026-10-24/live-context/README.md). 관찰 2건·이전 대화 1건, API 설정 일치·9초 세션·정상 종료 확인 |
 | Pico 공통 코드 | protocol 확장, Rust/Embassy 펌웨어, USB 브리지·capability·PCA 진단 상태 전달, Linux 빌드·flash 백업·읽기 검증 | [펌웨어](../../firmware/pico2-device-bench/README.md), [브리지](../../tools/pico-device-bench/README.md), [Linux 업데이트](Jetson_Nano_Linux_펌웨어_업데이트.md) |
 | 영상·전원 진단 | LAN/로컬 MJPEG 비교, Argus 충돌·전압·OC·CPU·네트워크 상태 기록 | [지연 현장 진단](Jetson_Nano_카메라_지연_현장진단_2026-10-24.md), [단절·저전압 진단](Jetson_Nano_카메라_단절과_저전압_진단_2026-10-24.md) |
 | 제작·제출·발표 | P5 출력 플레이트 안내와 배치 JSON/SVG, 3MF 수정, 제출 자료·발표 구성·기술 보강·PDF | [P5 출력 플레이트](../BOM/mechanical_v8/P5/PRINT_PLATES.md), [제출 자료](../제출자료.md), [발표안](../presentation/발표_가안_2026-10-24.md), [기술 보강](../presentation/기술보강_2026-10-24.md) |
@@ -44,12 +48,17 @@
 | Pico protocol | 저장소 로컬 Rust 1.90, `--features std` | **12개 통과** |
 | USB 브리지 | 저장소 로컬 Rust 1.90, locked/offline | **12개 통과** |
 | Pico 펌웨어 로직 | 저장소 로컬 Rust 1.90, Windows host target | **16개 통과** |
-| Linux 업로더·셸 검사 | Jetson | SSH 인증 후 실행 예정 |
+| Linux 업로더·셸 검사 | Jetson | 인증 후 실행 결과는 아래 Jetson 검증과 원본 로그에 기록 |
+| 대시보드·관찰 Python 재검사 | Jetson 실제 venv | **79 + 72 = 151개 통과** |
+| Linux 업로더 방어 검사 | Jetson Python 3.8 | **11개 통과**, 실제 flash 없음 |
+| Rust protocol·브리지·펌웨어 로직·runtime | Jetson Rust 1.90, locked/offline | **12 + 12 + 16 + 19 = 59개 통과** |
+| Linux 셸 구문 | Jetson `bash -n` | **24개 파일 통과** |
+| 서비스·API | Jetson 실기 | 대시보드·관찰·TTS 모두 active, `/api/health` 정상 응답 |
 | 인증 정보·파일 크기 점검 | Windows 수정·신규 파일 전체 | 실제 키·비밀번호 미검출. 탐지 항목은 테스트용 값·Bearer 환경변수 참조. 최대 파일 약 2MB |
 
 Windows 전역 Python의 Pydantic 버전은 프로젝트 요구 버전과 달라 해당 환경에서 오류가 났다. 프로젝트 가상환경의 지정 의존성으로 다시 실행해 통과했다. 전역 Rust도 Cargo lock v4를 지원하지 않아 저장소 로컬 Rust 1.90을 사용했다. Linux 업로더의 `fcntl`은 Windows에 없으므로 보드에서 검사해야 한다.
 
-Windows 최초 검사 181개에 이어, 게시 대상 Python 소스·자산 76개를 Git index에서 별도 폴더로 내보내 재검사했다. 최종 스냅샷 기준 총 **191개 검사**가 통과했다. [이번 검사 요약](dashboard-check/2026-10-24/git-share/verification.json)과 [개별 로그](dashboard-check/2026-10-24/git-share/)를 함께 보관한다. Linux 전용 Rust runtime과 업로더의 이번 재검사는 Jetson 인증 후 수행할 항목이다.
+Windows 최초 검사 181개에 이어, 게시 대상 Python 소스·자산 76개를 Git index에서 별도 폴더로 내보내 재검사했다. 최종 스냅샷 기준 Windows **191개**, Jetson **221개** 검사가 통과했다. [Windows 검사 요약](dashboard-check/2026-10-24/git-share/verification.json), [Jetson 검사 요약·상태](dashboard-check/2026-10-24/git-share/jetson-validation/verification.json), [Jetson 개별 로그](dashboard-check/2026-10-24/git-share/jetson-validation/)를 함께 보관한다. 두 운영체제에서 같은 계약을 반복 확인한 수를 포함하며 독립 기능 412개가 구현됐다는 뜻은 아니다.
 
 이번 공유 작업의 테스트는 외부 AI API를 호출하거나 모터를 구동하지 않는다. 이전의 실제 배포·유료 API 사용·청취 결과는 각 상세 문서의 당시 기록을 따른다.
 
@@ -90,6 +99,18 @@ git push -u origin HEAD
 `reset --hard`, `clean -fd`, 강제 push로 다른 쪽 작업을 제거하지 않는다. GitHub를 교환 기준으로 사용하고 저장소 전체를 파일 복사로 덮어쓰지 않는다. 이 절차는 향후 동시 편집의 충돌 가능성을 줄이며 모든 미래 충돌을 자동으로 없애는 보장은 아니다.
 
 ## 남은 실기 확인
+
+추가된 [3D 프린트 출력 메모](<../3D 프린트 출력상황.md>)도 함께 공유한다. 원본의 완료·진행 중·상태 미기재 구분을 보존하고 실제 STL로 연결했다. 상태 미기재를 대기·미완료로 추정하지 않았다.
+
+### Jetson에서 가져온 원본 요구사항 메모
+
+| 원본 메모 | 현재 반영·남은 범위 |
+| --- | --- |
+| [GPT Live 시작 때 학습 문맥이 부족함](<gpt-live 해결 해야할 문제.md>) | 후속 교육 지침·최근 카메라 관찰·이전 학습 대화 참조를 구현하고 전달·API 설정 일치를 검증했다. 장기 학습 효과·모든 상황의 답변 품질을 입증한 것은 아님 |
+| [태블릿 학습 화면·키워드 자동 연동](<구현 되면 좋을 듯한 기능.md>) | 향후 제안으로 보존. 태블릿 연결·화면 캡처·앱 사용 분석은 이번 구현 범위에 없음 |
+| [화장실·휴식·대화 터치 버튼 역할](<터치 센서 버튼의 작동 방식.md>) | 원본 역할 제안으로 보존. 현재 SW1 Live 트리거와 다르므로 실제 배선·버튼 매핑과 혼동하지 않는다. 전체 역할 적용은 후속 설계 대상 |
+
+### 추가 실기 검증 대상
 
 - Nano 입력 저전압·반복 OC 경고와 카메라 Argus 충돌의 장시간 안정성. 과거 약 4.50~4.56V 관측과 PCA 통신 복구를 구분한다.
 - PCA는 후속 점검에서 0x41 응답·초기화·fault 0이 확인됐지만 최초 무응답 원인은 미확정이다. 축별 기구 결합·끝점·하중·전원 시험은 별도다.

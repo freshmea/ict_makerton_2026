@@ -1,0 +1,1603 @@
+{
+  "base_commit": "3d4b198ec58a801a8a80a01f535b49ba2eb426e5",
+  "remote_commit": "c216f8ba170da3452ebb6b066541f1c7a6c3702c",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "9622cca5efea140872cabb468a16e0fbdd72f77b03d50e104c2fe1775049b217",
+      "bytes": 581,
+      "decision": "windows_newer_than_shared_snapshot",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "177fbd6eda600cb73091fb4d70d7a85274941946f4b61e32b2be64f42e17f1ff",
+      "bytes": 450,
+      "decision": "windows_newer_than_shared_snapshot",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b71263438cba708034b33246b92476b0dd007abc2b4eff8fb0639753ac28b511",
+      "bytes": 12406,
+      "decision": "windows_newer_than_shared_snapshot",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/300seconds-tts.service",
+      "sha256": "dba17e042059cbf86d96a18d1576667e8c30101420cb1f35e65f7a4b7ec4e72c",
+      "bytes": 688,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/README.md",
+      "sha256": "975c769f13fd3b0bf88d5d0bb4a4beccd0404497b67c7d49b6af7c8d1d0d6b5d",
+      "bytes": 24455,
+      "decision": "review_both_changed",
+      "resolution": "keep_windows_document_with_newer_followup_evidence"
+    },
+    {
+      "path": "apps/device-dashboard/app.py",
+      "sha256": "b61c19be93917c2e70410d752da0f1c22ebb6dbaaff59f186f7dd2052a0aef13",
+      "bytes": 14175,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/dashboard.env.example",
+      "sha256": "eb2b81d6f49336a222f4c15f17328d0a582351c3cb03a7d2dbc6149fb0e512d6",
+      "bytes": 382,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/eye_expressions.py",
+      "sha256": "42751a3d85864e9d463ade3119e8f968d6a16e104933e4bfa854be9e905eaf3b",
+      "bytes": 18195,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/hardware.py",
+      "sha256": "745e6c3419f638f53f84c51c8221619e5929660941ff048145bd9246daf56a8c",
+      "bytes": 24203,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/install-tts.sh",
+      "sha256": "9bb78023a7323bbf8143556f96ed41cfae52bb7152746deb29a9fab7f678ab77",
+      "bytes": 2352,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/install.sh",
+      "sha256": "59b7a884610b3057cdffa7b4db8b0194eece020133c411d45c2c060e028095b3",
+      "bytes": 2663,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/installation.json",
+      "sha256": "4e7865d93ba59c6ba9735ef9211402487f5eee1f6ac38905409f0e7375cc3089",
+      "bytes": 228,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/learning.py",
+      "sha256": "57ed38e2078062689c01b12e84018f859be1dc1f4eae4924d185f6aa588b72f1",
+      "bytes": 18037,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/learning_client.py",
+      "sha256": "57bcd20712cfc80d14421a85747fcf0b9e6621a8abf000687591363991a6d9a9",
+      "bytes": 874,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/learning_routes.py",
+      "sha256": "41b48b2723d6ab1260bb6ada83dd7aa36407d0bc0cc65014607d63db2c91d93e",
+      "bytes": 7133,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/learning_store.py",
+      "sha256": "b6888715bf1344790fb5a9549c39fd7a44904d017bff6b0c02fd243b8e68a23e",
+      "bytes": 18710,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/observer_client.py",
+      "sha256": "f1496fade5d54ce2a020d2e3373c12dc965e1039e81a45b3a13dcd77399daf0b",
+      "bytes": 718,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/pico-config.json",
+      "sha256": "9b6ade94fa4bf23d30602815906bcf5eeb0c08f4befc9029d5727f37e268a10b",
+      "bytes": 308,
+      "decision": "review_both_changed",
+      "resolution": "keep_windows_semantically_equal_json"
+    },
+    {
+      "path": "apps/device-dashboard/servo_controls.py",
+      "sha256": "2c7bc177aab74417ffc4326bccb4c851a162315dc0ce3bc9949bb219242ca098",
+      "bytes": 9806,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/static/app.js",
+      "sha256": "1d7b9d0791c5fe931906cc8bfdb429039dbb52d9cdaf9cb0d199b80fc9eef3a7",
+      "bytes": 28499,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/static/index.html",
+      "sha256": "c07a251c9136bc10581516c1fa1fc25a40393ed5c51268036250d3638f81aaf7",
+      "bytes": 28086,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/static/learning.css",
+      "sha256": "5d5fd3678e99cf9fe0089c7bd96d178490e2fc0146e0ed7bab7efa763c226f03",
+      "bytes": 5693,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/static/learning.js",
+      "sha256": "35af87ea5341ee7bec28af388f2b5339d373d4fb31b318e457b5e06e8e77221b",
+      "bytes": 15927,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/static/study.js",
+      "sha256": "1fe49ddb6901cfcd1f70cd5ff71c7a9442588bd0386ac5809eba4d94b212e3fe",
+      "bytes": 8983,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/static/styles.css",
+      "sha256": "f71c6e1a682c35639b08cfd2a990765f3ff8c28f87a0661b993f2fa9c59de8e0",
+      "bytes": 31485,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/test_audio.py",
+      "sha256": "24274f0be00990dd413186c1f99c40b397ced7705a35a35fc5dd1a3366d15bde",
+      "bytes": 9920,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/test_eye_expressions.py",
+      "sha256": "affe26a9f71dbcc43a9958cc4dfade5c08718a04f219e3987a3a850b7b5d6b86",
+      "bytes": 7143,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/test_hardware.py",
+      "sha256": "dd0738832218aa8433d40e98443485f28fde8e6aed9fad897fe26fc9788b96ff",
+      "bytes": 4710,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/test_learning.py",
+      "sha256": "23ba87aaac6ef39d2dff609631f825677f0611d1228e28191e3138389041e02a",
+      "bytes": 19717,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/test_observer_api.py",
+      "sha256": "c4f34204035e656d93b85cad181c40ba8f1e0deeb9590d002014e0d277cc5b7c",
+      "bytes": 3156,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/test_servo_controls.py",
+      "sha256": "e9519b895a0bc9079457ff3e36119b0d8b32b206dcbea4b2f0093219a4fdc97f",
+      "bytes": 7003,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/test_tts_worker.py",
+      "sha256": "5dcd357b3fde202da7e3eda20b29fbe3c3d00c8b15f6a2222615397bde2d37a4",
+      "bytes": 2641,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/tts_client.py",
+      "sha256": "bf94a81b701d61a1a07a312fac768facbd0df4f0f76863ac20ecd23a9d4a047e",
+      "bytes": 901,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/tts_worker.py",
+      "sha256": "b244e1a270a79c3715f9abd020c6f3d2e09567a07c66296845d04d71ea6436f7",
+      "bytes": 5842,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "apps/device-dashboard/verify_expressions.py",
+      "sha256": "81376c72211f95fc400bba4e466daf032fef96f2ab417df996972088efc539c4",
+      "bytes": 6395,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "crates/pico-device-protocol/README.md",
+      "sha256": "ff7580de2fa2238c838dc0284646cb306a8db9132b67b3dd784ca4a464fdea0a",
+      "bytes": 12081,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "crates/pico-device-protocol/src/lib.rs",
+      "sha256": "ed57f83c030a28f5913031a7963ad6e68a37ade8a3d794a796061d8b73db4647",
+      "bytes": 18922,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "crates/pico-device-protocol/tests/invariants.rs",
+      "sha256": "cf06ba76435cff44e441e9f93e327b30aca3c5e39c71da36f604c8178a2239f6",
+      "bytes": 9355,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "crates/pico-device-protocol/tests/servo_extension.rs",
+      "sha256": "43f3e4498498482c0355940e98372c0dba4e7c65fdaf0c85567f42542ea6026c",
+      "bytes": 818,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "disable-dashboard.sh",
+      "sha256": "a7b82e010080cb1555a8ed66d5420c14cec2b16a8bd85462dcc32dcaab179ab1",
+      "bytes": 682,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/A_스위치6개_MAX7219_양쪽눈_배선.md",
+      "sha256": "61b37921f6e5b5382cdf130d1ec3ca455242d4a138aca2132d2df0246a446c01",
+      "bytes": 11010,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/Jetson_Nano_작업_종합기록_2026-10-24.md",
+      "sha256": "200cb280261b3df85157b14d842b7aacb19e1d8fe68e04973a41e3cd95bdc59d",
+      "bytes": 11257,
+      "decision": "review_both_changed",
+      "resolution": "keep_windows_document_with_newer_followup_evidence"
+    },
+    {
+      "path": "doc/software/Jetson_Nano_장치_대시보드.md",
+      "sha256": "9e0710523df0f78379d9d240d7dbfacf623816008f84cfdfa9a2f7995d735ead",
+      "bytes": 25039,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/OpenAI_Decisions_카메라_테스트와_예산.md",
+      "sha256": "7531baed4449911d39565a24ca0ddb2ec7efec06285861e2e5b4491f85ce87eb",
+      "bytes": 11137,
+      "decision": "review_both_changed",
+      "resolution": "keep_windows_document_with_newer_followup_evidence"
+    },
+    {
+      "path": "doc/software/OpenCode_Jev_카메라_관찰_설정과_테스트.md",
+      "sha256": "f74c89c3bf21493e9684790394cc9874ab2fc2b78138e264450ef3effff4d4ba",
+      "bytes": 11734,
+      "decision": "review_both_changed",
+      "resolution": "keep_windows_document_with_newer_followup_evidence"
+    },
+    {
+      "path": "doc/software/Pico2_핀배정_및_전원.md",
+      "sha256": "1f42153db39c9a8cca237223552ff11c0821dc016504eb5c8a6eb84bf5754fea",
+      "bytes": 11000,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/Pico_Nano_USB_통합_진단.md",
+      "sha256": "55ef122af443bfc80fe42d131021fa7b73f93c0a53179783af60193eec43c017",
+      "bytes": 10781,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/README.md",
+      "sha256": "4121f577b9eb19bd688d1e77f2b4a94068cfb7f7b1ad967dc3f306d9e686700d",
+      "bytes": 8769,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/Rust_마이크로아키텍처_실행과_검증.md",
+      "sha256": "944bd5188d24f1b7ab4354af0440d9f0e87aeef623bd9731b609a186fbceac74",
+      "bytes": 9770,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-acoustics.json",
+      "sha256": "0f9cb739aff946c14917910699e714e60d828bfb458c7edd6f8ea3a9c762b16a",
+      "bytes": 1737,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-ai-live.log",
+      "sha256": "9849093d857b82718bf796f64c0a594edc0251d8f0163f44c18800dc45c2e4aa",
+      "bytes": 4279,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-audio-mode.json",
+      "sha256": "77ab315f496abe3aac191bb8f9e03932963884acec874d2f451e80154d6278b4",
+      "bytes": 634,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-features.json",
+      "sha256": "741a7d760af3ab8924907ecfe55965ea8c6b1083fa4c0d9737674aecf4b5d5aa",
+      "bytes": 3570,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-final-board.json",
+      "sha256": "6240c02e0037c0a8ce6f61eddf2c0d14025ef2fa70ad499c3fe54843de9b95cb",
+      "bytes": 12436,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-final.json",
+      "sha256": "2ae85f9ef82ba65ca7803fd356c40745aa9770ff0ff59be6a94580e0fe3a3c8e",
+      "bytes": 3788,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-human-checks.json",
+      "sha256": "844e8260fc3f12ec0cfcc88c3ce087c103897efacbb9ff4f5831a69a0060986d",
+      "bytes": 618,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-local-ai.json",
+      "sha256": "f16bdb35e1fb75202a9e5e0b37e63bded12090e07194018b03de06e90c84384a",
+      "bytes": 1125,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-media.log",
+      "sha256": "1769fb1c620c253e39d3a147026262123a875a3e7f1d94b084febfa31f5f66b1",
+      "bytes": 2294,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-new-power-boot.log",
+      "sha256": "f059349decbd75d96e932e1e52c6ad2062013dad669004ba5af149f338096388",
+      "bytes": 535,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-ocr-full-frame-failure.json",
+      "sha256": "f5b35205fa7d649cb47d42b845a9bc54c0180228d71b6270c3c0c38a4f1eb6f7",
+      "bytes": 32003,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-openblas-diagnosis.log",
+      "sha256": "8dacc6f4a23d81c5e6d0665259bce4796c5ffb4b8f923e154704aa39edda360b",
+      "bytes": 9624,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-pico-flash.json",
+      "sha256": "7cd509b063bcbfc37161eb082407f0b2dcd90078e034cb114ec7b8f8847b7f2b",
+      "bytes": 725,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-power-debug.log",
+      "sha256": "30d5ef58901cbeab10e136732bfbabf63fb1f37c7b3a058bc070ca04af9edfcf",
+      "bytes": 3643,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-power-governor.log",
+      "sha256": "d5a10316b698a93e71521b9714c089be366e0048c148a428c968e8af0695690c",
+      "bytes": 811,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-power-persistence.log",
+      "sha256": "2303c7ec34ce881aba173ef3d513ecc51101006e2e060edf7d2528c8dfdc43f9",
+      "bytes": 5491,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-runtime-build.log",
+      "sha256": "b5c7c92649dcdab3cbe1c1319613553cbfe35a3edb8f3932dc5697598fd421bc",
+      "bytes": 2330,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-runtime-hardware.json",
+      "sha256": "34a96c536f53ff6e8629e86834aa73c2ff719c6815a9f5fddc6eeb002a6bf981",
+      "bytes": 22744,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-systemd-partial.json",
+      "sha256": "899d7f822ccc0e0366643892099b6ede337c7a09b2af918567f1417d296091d6",
+      "bytes": 1042,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-systemd-partial.log",
+      "sha256": "09d84988e843fef38eef2c381f52663f0ba72447c7ce48f6d03b1963e7dfcd0d",
+      "bytes": 312,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-systemd.json",
+      "sha256": "18690ff87629cdcf288b7eaf3205508e652173dd850a8326091ea00106478e20",
+      "bytes": 126497,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-systemd.log",
+      "sha256": "5ee29532ed764644b4c35594994fd5264c8b09a82f346774b876d3cc10813ec8",
+      "bytes": 634,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/full-usage.json",
+      "sha256": "63868d6a83e70d0a2888009634da884eebd10b5ae7cbb09aec06db0ab29bf385",
+      "bytes": 876,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/rust-audio-channel-probe.log",
+      "sha256": "41688b1ac706b35bc4a9e1fd07c55dcf29eaf5af76b4bd4420a0977d1f504dba",
+      "bytes": 457,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/rust-runtime-build.log",
+      "sha256": "a34b30639cd56e30825b083532b1ba82cd640031e6a8ea692d58bcfb8dd749d1",
+      "bytes": 1541,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/rust-runtime-final.json",
+      "sha256": "aa7824e26db3e0edfa8391a6d6f0fe6da5ee3586f7580714110f35b8abe4f521",
+      "bytes": 2936,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/rust-runtime-hardware.json",
+      "sha256": "2efb1415c41316cf3af3a204330db8555fbeafe53256b405adba33898986ffde",
+      "bytes": 19892,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/rust-runtime-systemd.json",
+      "sha256": "6971a1c1ed99e2a555108f7af5757a0226f6a0fa1f7da30c3ceb7257946f4b2d",
+      "bytes": 13817,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/board-info/2026-10-24/rust-runtime-systemd.log",
+      "sha256": "dc3c9659e8c79781191f70c209e1ea6455ff6111d478f247bfd5d733c377d6e9",
+      "bytes": 1525,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/connection-browser-qa.json",
+      "sha256": "d28f6c5978a879e658b1def23d65d047cb237a3afac64a8151fe551324fe8388",
+      "bytes": 580,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/connection-final.json",
+      "sha256": "587a6ae95b547d6d4f8fae8747d16889f08a2370e33a72cfabf72cfacefbe18c",
+      "bytes": 5225,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/connection-regression.log",
+      "sha256": "f3fd0e329c507644ab87b74b281d137162cb62f2ee8b942498b6f83f72d242b7",
+      "bytes": 367,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/api-validation.json",
+      "sha256": "a967b9f0a8520421f3d9840520b5b813a904e2bd16948d45705c63f36d764bc3",
+      "bytes": 251,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/browser-qa.json",
+      "sha256": "5215991e6149113a358a7d2c26172c8b85898699c7b55df38d2aacac805c9e6c",
+      "bytes": 872,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/deploy-manifest.json",
+      "sha256": "9d59e00636c7f33e902828b6902c2e81cd6c2e4937a37d60d6e463bbb274432f",
+      "bytes": 1994,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/deployment.json",
+      "sha256": "c1ae81ff972da4e617cfaa86f3446e04802b2bbea5a70d125810af13f40ea28b",
+      "bytes": 3478,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/eye-expressions-desktop-final.png",
+      "sha256": "8f6ab8bf9188a138461ff9ebc0e7306eb13fb03f91cc327775a4f2d66bb3e2cd",
+      "bytes": 25985,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/eye-expressions-mobile-final.png",
+      "sha256": "61abae5d001a331bf6c7ef71e68fa1585e33bacfdcb438f48f2838fa515e2757",
+      "bytes": 25353,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/final-runtime-hashes.json",
+      "sha256": "c3c4fd8d378897be2f14ebc72fe342c64fa39e898c592501ddf3739401ac2490",
+      "bytes": 2361,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/final-validation.json",
+      "sha256": "bdd14937b1f54861646c0eca54db386c0ea1df76463376a997e66378a56e6ae3",
+      "bytes": 643,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/live-verification-before-eye-side-correction.json",
+      "sha256": "e683de00df00b231adbc59cee6b2871d4387f8fc32c03a21552325f476c8464c",
+      "bytes": 53166,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/live-verification-before-fix.json",
+      "sha256": "c96f1ca176b9f3510907aa24248003856a4e36f10a2a8c300f5632412a28371e",
+      "bytes": 3317,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/live-verification.json",
+      "sha256": "2adad4a32f1877db6f16c9bcd53b0930b50794863daa25a04bbb4952b39dece6",
+      "bytes": 53339,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/live-verification.log",
+      "sha256": "a804aab82d0d0b7ee246ba36148c8b4954c30bdba02867583bac7777f2ec84e0",
+      "bytes": 2844,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-expressions/nano-unit-tests.log",
+      "sha256": "71baaa9bf836f70e2e19a7824cd1107a07b75318a383459b5097f559534c60b2",
+      "bytes": 1586,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/build-info.json",
+      "sha256": "c5e1e6035dfc8b231f6df2cc7c26d1f82cf8474dba1f64cdb11327b7c4920b84",
+      "bytes": 2459,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/connection-final.json",
+      "sha256": "dcf1084224f11833dd2c30a8285d3a5a9a2a5d9d228bd93d2c9ea7541b4e33b2",
+      "bytes": 3577,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/flash-final-bootsel.log",
+      "sha256": "fbc244e86624c1d8aa8ae1a163af2444c3260a0bc5b49ff7992da5d69bcd7326",
+      "bytes": 389,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/flash-result-before-observed-wiring.json",
+      "sha256": "f94adb6cfa399da18eda68a8f6ea45bb731bcd96c67a1600f2daeb6aa5725bd2",
+      "bytes": 5079,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/flash-result.json",
+      "sha256": "2a0723bac2876496c1de09d86e465e8375fcef7d3cb5374072ec3fb3ee664716",
+      "bytes": 5245,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/flash-update-after-reconnect.log",
+      "sha256": "24c7078b70eb9cbb0bb6973c476c4226c86337647f9eb2744e03cdbae63f6dac",
+      "bytes": 4693,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/flash-update-bootsel.log",
+      "sha256": "99a852f91faf7978292491b845446bc5bb524c2098d19f49f8a1e7175ed234ca",
+      "bytes": 148,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/flash-update-observed.log",
+      "sha256": "c72ae6a1915780da3dcc4a39a74728aae0cac20e6ffcd4f5ca40abced4d197c2",
+      "bytes": 6427,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/flash-update.log",
+      "sha256": "e6489e82a18fb709602c0904da5beed2d43dea2c7c4437375a5fc4304df305c8",
+      "bytes": 477,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/nano-build.log",
+      "sha256": "0502902bad9beecef352cc46b563ac11264d061aa0e111920e1d84c1ecd8af2d",
+      "bytes": 3461,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/nano-dashboard-tests.log",
+      "sha256": "d8f27d35d5cb1c96a038e43904bfd02645a7ba515b82ea0cf4aa803b555c7f8d",
+      "bytes": 1689,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/source-manifest.json",
+      "sha256": "91d57d9ac533b6f1847b0dd585eb941b912886d24eee1a77cec97ddd1b9124c0",
+      "bytes": 1619,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/user-physical-confirmation.json",
+      "sha256": "fc0ba337ea304bef4b7d99fb75e12e5db19a8993e0976eb5a7a22fd4254257bc",
+      "bytes": 756,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/wink-verification-before-observed-wiring.json",
+      "sha256": "8e85cf8db224c1534ceb765f5cb0a5bf67e24b1985f6bc8298981c83824e539e",
+      "bytes": 15305,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/eye-side-correction/wink-verification.json",
+      "sha256": "3194c44664751b16ee1948ad8295aa9c08ccfb84e92d9ebb55eb0366b0e550b0",
+      "bytes": 15165,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/left-matrix-rotation/build-info.json",
+      "sha256": "e7a124c389a511ed9e52f837b8cb921527d3991bf2f6b4c8c8a9c1e964f32fc5",
+      "bytes": 2459,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/left-matrix-rotation/flash-result.json",
+      "sha256": "8f87eaa34d535aec4a2a35321b351a8b843497dbfdea3d7670e183c10e041bff",
+      "bytes": 4986,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/left-matrix-rotation/flash-update.log",
+      "sha256": "253b75475f4d362617ea1bd6fe77fc7a4a9a1abb917cba6f0350eb9441f58ee3",
+      "bytes": 587,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/left-matrix-rotation/matrix-after-flash.json",
+      "sha256": "9951009fb700ea824b6deaa4351547a6c88ecbfbe3e564e4f420b1699f44123c",
+      "bytes": 20304,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/left-matrix-rotation/nano-release-build.log",
+      "sha256": "f38add6664aa69b3b2a9d9b255b48dc06596c45d94eb7313ccb90b209c705a5d",
+      "bytes": 3764,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/left-matrix-rotation/source-manifest.json",
+      "sha256": "3d7bfeedc275b4f2fc36d7d4756c77befa70f05b38c8a8c6e6fffd305234e166",
+      "bytes": 599,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/left-matrix-rotation/validation.json",
+      "sha256": "ddfab32db0a4878fd0817a0bc5263b5827984d5eb0e65daa8440391ea4b02a7a",
+      "bytes": 1157,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/matrix-connection-check.json",
+      "sha256": "6f4766c22a61401af38180718b667411b3e0ef1551f55ae353fcf1b83a00149a",
+      "bytes": 16423,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/matrix-connection-retest.json",
+      "sha256": "5bd3b4252bc8cca7f7f89e4d1df505306c53f27390c15b62d77ea6fa00b1c325",
+      "bytes": 57186,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/README.md",
+      "sha256": "d5d9a99825d94f036110f4272b3bbc3b8ecae6eaedf4f9b5763c3dbd07668a63",
+      "bytes": 5723,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/build-info.json",
+      "sha256": "8903ab5d648c5a9002a1f70b16991d30b6eeaaeeab76c4d895a97d14c9663196",
+      "bytes": 2457,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/build-tests.log",
+      "sha256": "bf219957992ddd5f6c74a50edbdef754b1725635647820131d7fda29a1b86a8f",
+      "bytes": 12758,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/deploy.log",
+      "sha256": "8a803271cba6d865480e6c621cddf0e66dedf669954114c1142780056aa62171",
+      "bytes": 1493,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/deployment-verification.json",
+      "sha256": "a922293dd447fcb0d2a3ece3d1a9be01f834e6ac781d9c0ab1df024c0934883c",
+      "bytes": 382,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/final-health.json",
+      "sha256": "56496f62ec1a442e680c1dedc49af144edf7aefdd36d56ade9446a4ec80aa2ea",
+      "bytes": 540,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/flash-result.json",
+      "sha256": "3859cc773dfefefd3dc16a2e77cfd8f1e7b1b886ddb503dea445e17af6b1aceb",
+      "bytes": 1215,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/live-diagnostics.json",
+      "sha256": "a0be210ac04fc0c9a6ef5d91ff66116d055021a2595cf089f5530168712b5b46",
+      "bytes": 8556,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/recovery-power-log.txt",
+      "sha256": "00fc25f35e4bbf367dd2cb6678e6a6351a699b0438189c4ef827ba30f1b244c7",
+      "bytes": 1663,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/recovery-power-samples.json",
+      "sha256": "cd60eae9dc74a5114828c90056c2cb891826f6561df485f714d294e6e8424294",
+      "bytes": 383,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/recovery-system-log.txt",
+      "sha256": "b85f9af4832e28f42416bb46cba5700a5983bb77503f5fb1a58c370f5b299a82",
+      "bytes": 1778,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/status-before.json",
+      "sha256": "5767a1d3a2705432ce02d80e2284ccbbe7e360577fab2a31f25c22d77652f912",
+      "bytes": 23650,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/vcc-confirmed-status.json",
+      "sha256": "253eca0711f7c076367bad12c4bda8ea805c1355cfe90daefdc30fd9a914cc76",
+      "bytes": 1080,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-i2c/vcc-recovery.json",
+      "sha256": "eb30c392b0c6486020b2536d1d46313061fd405c3c54560af027c6df99a29432",
+      "bytes": 14628,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-pwm-range/README.md",
+      "sha256": "21ce07ed381c0fa1d5b0278a2aea905c591de3a89cef9b0ecf8a31c76e50a19d",
+      "bytes": 2332,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-pwm-range/before.json",
+      "sha256": "999217427901bfa48d9c0752b70b6b82a87c758d2164a9ce2e7e50b20ed8b038",
+      "bytes": 19488,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-pwm-range/deployment.json",
+      "sha256": "ac9fe4cc8f7a31abbe636f99640663d20b1ec68f4e537d6c064231ff8e505851",
+      "bytes": 845,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-pwm-range/live-verification.json",
+      "sha256": "1d3b0ea8625cd69f6e051cd09dcce6f028b397b233b0fa638b830f6223cc7695",
+      "bytes": 1580,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-pwm-range/servo-tests.log",
+      "sha256": "7a99c0eb48029541987561a4a9ba8624640b4f3aa780f99950641e57c2f8b10e",
+      "bytes": 2368,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/servo-pwm-range/stopped.json",
+      "sha256": "bf35200df59339542bd3bc13f90a84990caf8c0f69ca600b80fbca8848cab34a",
+      "bytes": 3865,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-24/switch-connection-check.json",
+      "sha256": "81da8527506f165e2f5909b1b755857060e3e7d72acba29e6ecf18e97bfdb181",
+      "bytes": 25889,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/gpt-live 해결 해야할 문제.md",
+      "sha256": "4065c405c86890548327e80d9b1db27eb4cbcd0ddee3b37bfda62ab35101140e",
+      "bytes": 146,
+      "decision": "jetson_only_addition",
+      "resolution": "import_original_jetson_note_normalize_terminal_blank_lines"
+    },
+    {
+      "path": "doc/software/개발_단계_및_점검표.md",
+      "sha256": "bc243377cfc3c001f26188fea334871c302b99b3cdc27fde69a8c61c3edddd31",
+      "bytes": 34362,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/구현 되면 좋을 듯한 기능.md",
+      "sha256": "c7e8e8fd1b95843807a95ad16de070f1ab64c3a296b55750abf746acdef5031a",
+      "bytes": 226,
+      "decision": "jetson_only_addition",
+      "resolution": "import_original_jetson_note_normalize_terminal_blank_lines"
+    },
+    {
+      "path": "doc/software/소프트웨어_아키텍처_계획.md",
+      "sha256": "14db13e93c8b59d75239dc598499d8c457e665b3dad7db0bcd550d28db5074d4",
+      "bytes": 45365,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/외부AI_로컬추론_구현계획.md",
+      "sha256": "4c1cdba5725cb9127ddd7d3c68b1bd6ba518ba1e36a2329c8b5b9fd9871c3a6e",
+      "bytes": 16461,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/전체기능_구현과_운영.md",
+      "sha256": "65f599c59dfa307401bf214074d587398abc66c55477ed7c694aaa004f8b321c",
+      "bytes": 26822,
+      "decision": "windows_newer_than_shared_snapshot",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "doc/software/터치 센서 버튼의 작동 방식.md",
+      "sha256": "ac0961edf543751e7797830367abb1d1275d7d7e355619362f9665b8e8b18cf9",
+      "bytes": 251,
+      "decision": "jetson_only_addition",
+      "resolution": "import_original_jetson_note_normalize_terminal_blank_lines"
+    },
+    {
+      "path": "enable-dashboard.sh",
+      "sha256": "4315e723706223eddff3e038e9f48d7811259ae43ff4e77d0a7ad21b5409ccdd",
+      "bytes": 4521,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "firmware/pico2-device-bench/README.md",
+      "sha256": "166304886e5f8f66059659bcf4b013fc65c1427cef9b860092270eb2c224499d",
+      "bytes": 13865,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "firmware/pico2-device-bench/dist/linux/pico2-device-bench.uf2",
+      "sha256": "11729a7049684e93818a391cae592f06308fcd9df96dab7e1e5574987352b141",
+      "bytes": 164864,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "firmware/pico2-device-bench/src/application.rs",
+      "sha256": "2869a32a34a3fdd168ab3e3eef6e71664c7b53de3e1106c9545e957513e38da3",
+      "bytes": 4926,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "firmware/pico2-device-bench/src/lib.rs",
+      "sha256": "336ccf562335b5f77ee82bd02b8e6c5a408b6aac127e27a6a4f513a391315238",
+      "bytes": 16112,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "firmware/pico2-device-bench/src/main.rs",
+      "sha256": "7adcca86ada95e3eeab7030fee7b6db5e2b14065db42ad9fc41e94cd5487302b",
+      "bytes": 31100,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "firmware/pico_linux.py",
+      "sha256": "9cd9bf3ae0423e23c820ff9a94951bd4c344b2ca28e0e2eac9544419f4d195b4",
+      "bytes": 17088,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/Cargo.lock",
+      "sha256": "a16d66e69a580e91626944645540ae53e2073346a797577f19b2f4f1ee85f8fd",
+      "bytes": 16758,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/Cargo.toml",
+      "sha256": "bc692ad303d94c4cb4e98bdcb89c078c102e4a91a6a52ece05ecaaf622e7999f",
+      "bytes": 374,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/README.md",
+      "sha256": "d5b439e19153815e19a9e93fd081dd8bd53dde07173deda14739aca242a15ae3",
+      "bytes": 7087,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/config/actuators.json",
+      "sha256": "1bea084f0372d8b90dc3bbb659773b7960ce848909a7178ae3af56c984453e6c",
+      "bytes": 395,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/config/ai.env.example",
+      "sha256": "00d603e4ee078ffb92f78bdcb8747afd4765b8ba96ce09cbfafb2607c406bbc4",
+      "bytes": 949,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/config/jev-observer.env.example",
+      "sha256": "cef5e384f7f7811dd55f322c40f65d9a6378ae692e1016e6548616a7c5ca091c",
+      "bytes": 599,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/crates/host-core/Cargo.toml",
+      "sha256": "6159602016751d412b5a8bac6ae9136610bade7964af87ec4d996b303d02a36f",
+      "bytes": 213,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/crates/host-core/src/decision.rs",
+      "sha256": "93125d00cc28677c7bb09dec537348cf4bde872467f1c5ee961cf0f36929c7e5",
+      "bytes": 2979,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/crates/host-core/src/lib.rs",
+      "sha256": "7fa3f2cd17259d47befdbc79e95dabd576e35a1787dff4f8ed4430f2b50ac932",
+      "bytes": 10196,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/crates/host-core/src/shm.rs",
+      "sha256": "b261bcb4c5256899be0ea22102515d133ea2cf32ff8488c1f954255de7acf690",
+      "bytes": 5334,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/crates/host-core/src/speech.rs",
+      "sha256": "04653d5bc0067007fb397ffa4cfc2e0432181f3babfd893c79e0ad23dd1761fa",
+      "bytes": 4319,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/deploy/300seconds-runtime.target",
+      "sha256": "d1ff0dd82a1ef31f2e73c47f715e1943daab6a9562c5c88494a9390f4bb6d3ba",
+      "bytes": 432,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/deploy/300seconds-runtime@.service",
+      "sha256": "1bec0f1b7a69e7368da7b6c9a100a3e2c18e537005fb42282e9ceeba0bdc096b",
+      "bytes": 1146,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/install.sh",
+      "sha256": "ae0c59bc0ae5298b721e6f2fa4231477af1ba53ac5a49caab127c33c6c6903cc",
+      "bytes": 2769,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/models/engine.manifest.json",
+      "sha256": "06a029798fcde05ab2d811b93be0da4f39e26eb49fba16313b27504a402bfd47",
+      "bytes": 388,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/models/supertonic.manifest.json",
+      "sha256": "789ee34319082812869a6d3f2a12639a1da4582a79ba6c13ffa24193c51c163b",
+      "bytes": 606,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/models/yolox.manifest.json",
+      "sha256": "a3533febf0a2d9d241d1e1ecd237b914be542a70d1ce302311e830096b3a7d8b",
+      "bytes": 262,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/models/yunet.manifest.json",
+      "sha256": "0c0f79e1c00c664c5530d9abed625dd443d896796cd3caa3aeb1f3bb6287f903",
+      "bytes": 357,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/native/detector.cpp",
+      "sha256": "5f672d046e7940130cb3fcd8ac8e260edba19d0251265daa0cd512b2642e18a2",
+      "bytes": 5361,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/native/media.c",
+      "sha256": "6d215c31a183f46a5a9d9d7689cf86b2276f73c74f6e2530b5e50d4d212771ed",
+      "bytes": 6180,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/native/vision.cu",
+      "sha256": "6705043663ea7fdeea1c9e61f61dec48d34fd6a01ff6c58fd8113ad8f3ce8f01",
+      "bytes": 2066,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/Cargo.toml",
+      "sha256": "e9c9fa3ed4a116e3855417ba4998a4303b3b6e922631d42329c253c7f336f38c",
+      "bytes": 422,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/build.rs",
+      "sha256": "b9960160335d55c567360540a7ba43018bd98f1b663e1257e6d2455d32928016",
+      "bytes": 3800,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/budget.rs",
+      "sha256": "db1437a4c52b8ca009983791394a2300aea1d5e995362840d60d54ae725b52ff",
+      "bytes": 4470,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/learning.rs",
+      "sha256": "b4376ab1e4e8839ef762af2b51dfb702ae2f0f352580d3fc77780c82f7619628",
+      "bytes": 11681,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/local_ai.rs",
+      "sha256": "2788bcbc2054ced37b143447a965bf4fe09211b5a894fad973bae7abb92e04a2",
+      "bytes": 8069,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/main.rs",
+      "sha256": "28b24de06851a7159c506ce3b2fa6c1870484b107aa6d1d1fb5b781e8e950c26",
+      "bytes": 14666,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/media.rs",
+      "sha256": "2a6ec5f34ce751be4382ef9507b035d2f97169ed9f7f393a666c8420440be031",
+      "bytes": 18742,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/native.rs",
+      "sha256": "c6f9cd4ed190cec924df5469d594a15c59be3413a9b92cb87af5f28f1795ee20",
+      "bytes": 6846,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/policy.rs",
+      "sha256": "e3ecfb69c5eea159ef35e33855736a0c709d8b7a69e24d27d44308ecf0a8b3be",
+      "bytes": 22745,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/providers.rs",
+      "sha256": "d8ddad4cd5ab91b6cb970c536a5c935445866f680f67248b854dbcdbc0fbcba7",
+      "bytes": 19612,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/turns.rs",
+      "sha256": "85d83c41008133042c9f3ab2a37153cea0a3db0906e38ef83a2433d13c4ed230",
+      "bytes": 12921,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/services/nano-runtime/src/typecast.rs",
+      "sha256": "2de2a8a9960557d5cc93008c576e4769b74a3c1794f48c68959d4ffdf59b350d",
+      "bytes": 11367,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/setup-local-ai.sh",
+      "sha256": "6bdfd4f87ace4b90bdf2f3499d59f3e5228d4385ff7fe2f5c1346ed6afc80e35",
+      "bytes": 1480,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/setup-neural-tts.sh",
+      "sha256": "5cc205ead34fcb0c8f841346aa7cdb1a6e32a210691e8e1de5e1e5bf5005f5c3",
+      "bytes": 2107,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/setup-vision.sh",
+      "sha256": "e3d889175d52ac28844bdef30ce85d07b5d8d492330e55ea24c47a71dde8e0ab",
+      "bytes": 1653,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tests/decision-candidates.jsonl",
+      "sha256": "0ed823bbd3b5ed0d2a0832bc69198562eb14ce5f01d942e1cc2014847800f210",
+      "bytes": 38916,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tests/make_eval_cases.py",
+      "sha256": "3aec73c5f7c481068e2bd102de11403eaa68a958ccafbc2ee6549ced7ca19eb5",
+      "bytes": 1424,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tests/verify_acoustics.py",
+      "sha256": "15d3771b08d584e0e79b6b15608f696babfd394117f3509f00e61bb8a932301e",
+      "bytes": 4357,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tests/verify_features.py",
+      "sha256": "044b816256948f1afca750317dfa61bc9e701b0c698ca13bc5a91d1207b3d446",
+      "bytes": 15507,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tests/verify_installed.py",
+      "sha256": "7b6b4cd64aa75f10e7d572c019ee6f7d242ebf60821749d658682abdd423df95",
+      "bytes": 8707,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tests/verify_local_ai.py",
+      "sha256": "c7646392ef8bb926341fedc66a2d4c623dabdab6094278df8aea8e00a84bd1fb",
+      "bytes": 2304,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tests/verify_runtime.py",
+      "sha256": "8e5f8d9478440e8ec748fa754beaa4d9a2388902c6a373860e116f3854db4078",
+      "bytes": 8959,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tools/calibrate.py",
+      "sha256": "affe5c0e9b2584e800072e34520a55e2d0dc3c9fbe7ba233b21f20bbc7cc679f",
+      "bytes": 2771,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/tools/study.py",
+      "sha256": "fb5cab7b8a50f0436915c35215c08481097f5573a5e6cf1b1fc3ff9effc91df4",
+      "bytes": 3840,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "software/workers/local_ai.py",
+      "sha256": "875849bd8b27387cbbb8618aec4c445dfd2b8910da1e8f23fe24eee6263c67dc",
+      "bytes": 6989,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/300seconds-observer.service",
+      "sha256": "b37fad35a1cec99974512685eb6573dcb98966d225050d8d1b444f567f8bb13b",
+      "bytes": 819,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/install-study-observer.sh",
+      "sha256": "a8c1b6bf647cd2df6507b8483adc95b092e4a68636695943220d7b0362dfa6f6",
+      "bytes": 3481,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/jetson_mode.py",
+      "sha256": "19a88df39b604c452bc1166eb1bb1c6002221762c76ea972f63581b1715ef295",
+      "bytes": 16499,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/jev-study-observer.py",
+      "sha256": "d2b4925764c56d720ded71fff5ad525125dca38887534d305dea6ab76ed5861f",
+      "bytes": 20327,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/learning_provider.py",
+      "sha256": "1acf25ee7a35c81c5f830419bd6c14cff151878791d6b7e3af9e7da7d02466ff",
+      "bytes": 15473,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/live_education.py",
+      "sha256": "58b21bff05f8a0ea32b0f30f6badd5f5575e45687f6b3c9e1098b0d3153138e3",
+      "bytes": 2758,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/openai-study-observer.py",
+      "sha256": "6187e0305bc1c9143626cde452dc13a11197726b95e056a088e3335e97324854",
+      "bytes": 15482,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/prompts/mentor-education.txt",
+      "sha256": "f7a2c88453086cab6130e082c56bce7d6297a00294a03c81a31dd8930c97906d",
+      "bytes": 5459,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/prompts/mentor-manifest.json",
+      "sha256": "d3d4e4beee12e2ed32880b91cfee82ffeb53ec3fd2ad1e7a041494b24168265e",
+      "bytes": 452,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/prompts/mentor-original-20261024.txt",
+      "sha256": "03153cd7a70b3a9352fd4023200f4206d9cf751e5474f9c025e857eaa18be1c4",
+      "bytes": 5228,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/study_observer_service.py",
+      "sha256": "29fc546d6c4a2d2e16f50bed1b43056c72928b1bf4b7201fc5ed7b0c580f5386",
+      "bytes": 10064,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/study_window.py",
+      "sha256": "e7d88b72bc8580b47d3cbc55ba3f65602b29664737e60c1c2da78ad6c9e71c97",
+      "bytes": 17994,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/test_jev_study_observer.py",
+      "sha256": "19538c7f1209922ac5b1138cb4b4672217eab5168d662dae54172b660ca4146b",
+      "bytes": 10443,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/test_learning_provider.py",
+      "sha256": "356c051393dd2435f547ec556c82188bc6c9577390ac689c1ea7c394d2d07af8",
+      "bytes": 7625,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/test_openai_study_observer.py",
+      "sha256": "ad2854f71ab5796e4e7abb13a5744611f045c296775c2bcc6e8e1ab69c2f1134",
+      "bytes": 7478,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/jetson/test_study_window.py",
+      "sha256": "b80a81cff7884bf476f6f7c71587bf2440e31e95c85815c01688042e604e95d6",
+      "bytes": 16198,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/pico-device-bench/README.md",
+      "sha256": "5a86d3f163edcbf4712c906eb42d3132001d0293b456eefb70fa195a6cb76a79",
+      "bytes": 13336,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/pico-device-bench/src/lib.rs",
+      "sha256": "1b3706e4789c727603f46609e1ed8d65d6ee463832280277f09dbde5173b20c9",
+      "bytes": 35078,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/pico-device-bench/src/main.rs",
+      "sha256": "6aaa71eb9245a9e2363aa7ec8ef2170470d0d425df55373543ec863bf8f4c2a4",
+      "bytes": 20723,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    },
+    {
+      "path": "tools/pico-device-bench/tests/servo_extension.rs",
+      "sha256": "b15891568693a605162ff1ba53da5eacef6edbf543cc6831e07eb74210453564",
+      "bytes": 2316,
+      "decision": "same",
+      "resolution": "keep_shared_or_newer_windows_content"
+    }
+  ],
+  "excluded": [
+    {
+      "path": "apps/device-dashboard/app.py.bak-study-20261024T045922640206Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "apps/device-dashboard/install.sh.bak-study-20261024T045923553606Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "apps/device-dashboard/installation.json.bak-20261024T024145Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "apps/device-dashboard/static/styles.css.bak-study-20261024T045923177595Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "doc/software/OpenAI_Decisions_카메라_테스트와_예산.md.bak-20261024T043311025286Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "doc/software/OpenCode_Jev_카메라_관찰_설정과_테스트.md.bak-20261024T043311269272Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "software/config/jev-observer.env.example.bak-20261024T042046865002Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "tools/jetson/jev-study-observer.py.bak-20261024T042046401758Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "tools/jetson/jev-study-observer.py.bak-20261024T043310419066Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "tools/jetson/openai-study-observer.py.bak-study-20261024T045921718589Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "tools/jetson/test_jev_study_observer.py.bak-20261024T042046737154Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "tools/jetson/test_jev_study_observer.py.bak-20261024T043310641804Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "tools/jetson/test_openai_study_observer.py.bak-20261024T043310822144Z",
+      "reason": "local_backup"
+    },
+    {
+      "path": "tools/jetson/test_openai_study_observer.py.bak-study-20261024T045922499703Z",
+      "reason": "local_backup"
+    }
+  ],
+  "secret_pattern_findings": [],
+  "deleted": [],
+  "preserved_stash": "d739252344d84d3239a632814d2fe3af3c3d3519",
+  "preserved_ref": "refs/backups/jetson-before-github-sync-20261024",
+  "preserved_prompt_directory": "tmp/git-share-20261024/preserved-prompts",
+  "deployed_services_reinstalled": false
+}
