@@ -89,8 +89,8 @@ def main():
     RULE.write_text(RULE_TEXT, encoding='ascii')
     RULE.chmod(0o644)
     ALSA.parent.mkdir(parents=True, exist_ok=True)
-    # Explicit named PCMs bypass the desktop PulseAudio default; one audiod owns
-    # the USB device. CARD name survives ALSA card-number changes.
+    # Explicit named PCMs bypass desktop PulseAudio. Same-user dmix lets cached
+    # button feedback coexist with Live/TTS; CARD name survives number changes.
     ALSA.write_text('''# 300seconds USB audio; global/default PCM is unchanged.
 pcm.robot_capture {
     type plug
@@ -98,7 +98,21 @@ pcm.robot_capture {
 }
 pcm.robot_playback {
     type plug
-    slave { pcm "hw:CARD=%s,DEV=0" format S16_LE rate 48000 channels 2 }
+    slave.pcm "robot_dmix"
+}
+pcm.robot_dmix {
+    type dmix
+    ipc_key 300521
+    ipc_key_add_uid true
+    ipc_perm 0600
+    slave {
+        pcm "hw:CARD=%s,DEV=0"
+        format S16_LE
+        rate 48000
+        channels 2
+        period_size 480
+        buffer_size 1920
+    }
 }
 ctl.robot_usb { type hw card "%s" }
 ''' % (card['alsa_id'], card['alsa_id'], card['alsa_id']), encoding='ascii')

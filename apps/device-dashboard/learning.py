@@ -11,35 +11,17 @@ import time
 import uuid
 
 from learning_client import rpc, open_stream
-from learning_store import Store, SCHEMA_VERSION
+from learning_store import Store, SCHEMA_VERSION, HISTORY_LIMIT
 
 INTERVAL = 10.0
 MAX_LIVE_SECONDS = 600
 
 
-class SwitchTrigger:
-    """Seed on every USB session. Counters also catch presses between polls."""
-    def __init__(self, switch=1):
-        self.index = switch - 1
-        self.previous = None
-
-    def update(self, state):
-        if not state.get('connected'):
-            self.previous = None
-            return False
-        device = state.get('device') or {}
-        touches = device.get('touches') or []
-        count = (touches[self.index].get('press_count', 0) if len(touches) > self.index else
-                 (device.get('touch_press_counts') or [0] * 6)[self.index])
-        current = (state.get('session'), count, bool((device.get('pressed_mask') or 0) & (1 << self.index)))
-        previous, self.previous = self.previous, current
-        return bool(previous and previous[0] == current[0] and
-                    (current[1] > previous[1] or current[2] and not previous[2]))
-
-
 class Live:
-    def __init__(self, audio, store, events):
+    def __init__(self, audio, store, events, end_cue=None):
         self.audio, self.store, self.events = audio, store, events
+        self.end_cue = end_cue
+        self.start_guard = None
         self.task = None
         self.state = {'phase': 'idle', 'max_seconds': 600, 'switch': 1}
         self.stop_event = None
@@ -54,32 +36,45 @@ class Live:
     def active(self):
         return self.task is not None and not self.task.done()
 
-    async def start(self, mode='study', source='dashboard'):
-        if self.active:
+    async def start(self, mode='study', source='dashboard', before_start=None):
+        if self.start_guard:self.start_guard()
+        if self.active or self.state['phase'] == 'preparing':
             raise RuntimeError('이미 Live 대화가 진행 중입니다.')
         if not self.audio.snapshot().get('connected'):
             raise RuntimeError('보드 마이크가 준비되지 않았습니다.')
-        reference = self.store.live_reference()
         if not self.audio.play_lock.acquire(blocking=False):
             raise RuntimeError('스피커가 이미 사용 중입니다.')
         identifier = uuid.uuid4().hex
+        self.stop_event = asyncio.Event()
+        created = False
         try:
+            if before_start is not None:
+                self.state = {'phase': 'preparing', 'max_seconds': 600, 'switch': 1,
+                              'switch_hold_count': 4, 'source': source}
+                await asyncio.get_running_loop().run_in_executor(None, before_start)
+                if self.stop_event.is_set():
+                    self.state['phase'] = 'idle'
+                    self.audio.play_lock.release()
+                    return self.snapshot()
+            reference = self.store.live_reference()
             self.store.live_start(identifier, mode, source)
+            created = True
             metadata = self.store.save_live_reference(identifier, reference)
         except BaseException:
             self.audio.play_lock.release()
-            self.store.live_end(identifier, 'reference_preparation_failed', 'failed')
+            self.state['phase'] = 'failed'
+            if created:
+                self.store.live_end(identifier, 'reference_preparation_failed', 'failed')
             raise
-        self.stop_event = asyncio.Event()
         self.state = {'id': identifier, 'phase': 'connecting', 'mode': mode, 'source': source,
                       'started': time.time(), 'max_seconds': 600, 'switch': 1, 'error': None,
-                      'reference': metadata}
+                      'reference': metadata, 'switch_hold_count': 4}
         self.audio.speaker = {'state': 'live', 'kind': 'gpt-live', 'last_result': None}
         self.task = asyncio.create_task(self.run(identifier, mode, reference))
         return self.snapshot()
 
     def stop(self):
-        if self.active:
+        if self.active or self.state['phase'] == 'preparing':
             self.state['phase'] = 'closing'
             self.stop_event.set()
         return self.snapshot()
@@ -91,6 +86,27 @@ class Live:
         finalized, reason, failure = False, 'user_stop', False
         output_until = 0
         bytes_in = bytes_out = 0
+        end_announced = False
+
+        async def stop_player():
+            nonlocal player
+            if player and player.returncode is None:
+                player.terminate()
+                try:
+                    await asyncio.wait_for(player.wait(), 2)
+                except asyncio.TimeoutError:
+                    player.kill()
+                    await player.wait()
+            player = None
+
+        async def announce_end():
+            nonlocal end_announced
+            if self.end_cue is not None and not end_announced:
+                end_announced = True
+                try:
+                    await asyncio.get_running_loop().run_in_executor(None, self.end_cue)
+                except Exception:
+                    self.events.add('learning', 'Live 종료 안내 음성 재생 실패', 'warning')
         try:
             reader, writer = await open_stream({'op': 'live', 'mode': mode, 'reference': reference})
             # A stop during handshake must not open a microphone or leave a session running.
@@ -119,7 +135,7 @@ class Live:
                 while not self.stop_event.is_set():
                     raw = await asyncio.wait_for(pcm.get(), 2)
                     # Half duplex on this board until acoustic echo cancellation is validated.
-                    if time.monotonic() < output_until + .25:
+                    if time.monotonic() < output_until + .25 or self.audio.feedback_active():
                         raw = bytes(len(raw))
                     raw, _ = self.audio.process_pcm(raw, self.audio.gain_db)
                     raw, converter = audioop.ratecv(raw, 2, 1, 48000, 24000, converter)
@@ -146,6 +162,8 @@ class Live:
                         if output_until - time.monotonic() > 4:
                             raise RuntimeError('live_audio_backpressure')
                         bytes_out += len(data)
+                        if self.audio.feedback_active():
+                            data = audioop.mul(data, 2, .25)
                         player.stdin.write(data)
                         await asyncio.wait_for(player.stdin.drain(), 2)
                     elif kind == 'error':
@@ -169,9 +187,14 @@ class Live:
             self.state['phase'] = 'closing'
             sender.cancel()
             await asyncio.gather(sender, return_exceptions=True)
+            remove()
+            remove = lambda: None
+            await stop_player()
             if not finalized:
                 writer.write(b'{"type":"session.close"}\n')
                 await asyncio.wait_for(writer.drain(), 2)
+            await announce_end()
+            if not finalized:
                 await asyncio.wait_for(receiver, 6)
         except asyncio.CancelledError:
             failure, reason = True, 'service_shutdown'
@@ -191,43 +214,43 @@ class Live:
                     await asyncio.wait_for(writer.wait_closed(), 2)
                 except Exception:
                     pass
-            if player and player.returncode is None:
-                player.terminate()
-                try:
-                    await asyncio.wait_for(player.wait(), 2)
-                except asyncio.TimeoutError:
-                    player.kill()
-                    await player.wait()
+            await stop_player()
             phase = 'failed' if failure else 'completed'
-            self.state.update(phase=phase, finalized=finalized, reason=reason,
-                              input_pcm_bytes=bytes_in, output_pcm_bytes=bytes_out)
-            self.audio.speaker = {'state': 'idle', 'kind': 'gpt-live', 'last_result': {'ok': not failure}}
-            self.audio.play_lock.release()
-            self.store.live_end(identifier, reason, phase)
-            self.events.add('learning', 'GPT Live 종료 · ' + reason)
+            try:
+                await announce_end()
+            finally:
+                self.state.update(phase=phase, finalized=finalized, reason=reason,
+                                  input_pcm_bytes=bytes_in, output_pcm_bytes=bytes_out)
+                self.audio.speaker = {'state': 'idle', 'kind': 'gpt-live', 'last_result': {'ok': not failure}}
+                self.audio.play_lock.release()
+                self.store.live_end(identifier, reason, phase)
+                self.events.add('learning', 'GPT Live 종료 · ' + reason)
 
     async def close(self):
         self.stop()
         if self.active:
             try:
-                await asyncio.wait_for(asyncio.shield(self.task), 9)
+                await asyncio.wait_for(asyncio.shield(self.task), 16 if self.end_cue else 9)
             except asyncio.TimeoutError:
                 self.task.cancel()
                 await self.task
 
 
 class Learning:
-    def __init__(self, cameras, audio, pico, events, path=None):
+    def __init__(self, cameras, audio, pico, events, path=None, button_audio=None):
         self.cameras, self.pico, self.events = cameras, pico, events
+        self.button_audio = button_audio
         self.store = Store(path or os.environ.get('DASHBOARD_LEARNING_DB', '/var/lib/300seconds-dashboard/learning.sqlite3'))
         self.enabled = self.store.setting('collection_enabled', os.environ.get('LEARNING_AUTOSTART', '0') == '1')
-        self.live = Live(audio, self.store, events)
+        self.live = Live(audio, self.store, events,
+                         end_cue=(lambda: button_audio.announce_live('end')) if button_audio else None)
         self.queue = asyncio.Queue(maxsize=2)
         self.tasks = []
         self.running = True
         self.previous = {}
         self.last_error, self.last_capture, self.next_capture = None, None, None
         self.backoff_until = 0
+        self.last_analysis = None
         self.wake = asyncio.Event()
 
     def start(self):
@@ -239,7 +262,8 @@ class Learning:
                 'queued_batches': self.queue.qsize(), 'last_capture': self.last_capture,
                 'next_capture': self.next_capture, 'error': self.last_error,
                 'backoff_until': self.backoff_until, 'live': self.live.snapshot(),
-                'schema_version': SCHEMA_VERSION, 'raw_images_saved': False}
+                'schema_version': SCHEMA_VERSION, 'raw_images_saved': False,
+                'history_limit': HISTORY_LIMIT, 'last_analysis': self.last_analysis}
 
     def set_enabled(self, enabled):
         self.store.set_setting('collection_enabled', enabled)
@@ -329,8 +353,9 @@ class Learning:
                 elif time.time() < self.backoff_until:
                     self.store.finish(batch, error='provider_backoff', status='skipped')
                 else:
-                    result = await rpc({'op': 'describe', 'frames': frames})
-                    self.store.finish(batch, result=result)
+                    history = self.store.observation_history(batch)
+                    result = await rpc({'op': 'describe', 'frames': frames, 'history': history})
+                    self.last_analysis = self.store.finish(batch, result=result, history=history)
                     self.last_error = None
             except asyncio.CancelledError:
                 self.store.finish(batch, error='service_shutdown', status='interrupted')
@@ -349,15 +374,18 @@ class Learning:
                 frames.clear()
 
     async def switch_loop(self):
-        trigger = SwitchTrigger()
         while self.running:
             try:
-                state = self.pico.snapshot()
-                if trigger.update(state):
+                request = self.button_audio.take_live_request() if self.button_audio else None
+                if request is not None:
                     if self.live.active:
                         self.live.stop()
                     else:
-                        await self.live.start('study', 'SW1')
+                        def cue():
+                            self.button_audio.announce_live('start')
+                            if not self.button_audio.live_request_valid(request):
+                                raise RuntimeError('Pico 연결이 변경되어 Live 시작을 취소했습니다.')
+                        await self.live.start('study', 'SW1-hold4', before_start=cue)
             except Exception:
                 self.events.add('learning', 'SW1 Live 시작 실패 · 마이크·스피커·API 연결을 확인하세요.', 'warning')
             await asyncio.sleep(.1)

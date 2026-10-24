@@ -17,10 +17,15 @@ from pydantic import BaseModel, confloat, conint, constr, validator
 
 from hardware import Audio, Cameras, EventLog, Metrics, Pico, PROFILES, ROOT, INSTALLATION
 from eye_expressions import BY_ID, CATALOG, EyePlayer
+from automatic_eyes import AutomaticEyes
 from observer_client import rpc as observer_rpc
 from servo_controls import ServoControls
 from learning import Learning
+from study_reaction import StudyReaction
+from button_audio import ButtonAudio
 from learning_routes import router as learning_router
+from log_analytics import Analytics
+from analytics_routes import router as analytics_router
 
 
 async def threaded(function, *args):
@@ -41,12 +46,28 @@ async def lifespan(app):
     app.state.reconnect_lock = asyncio.Lock()
     app.state.pico.start()
     app.state.audio.start()
+    app.state.button_audio = ButtonAudio(app.state.pico, app.state.audio, app.state.events)
+    app.state.button_audio.start()
     app.state.cameras.start()
-    app.state.learning = Learning(app.state.cameras, app.state.audio, app.state.pico, app.state.events)
+    app.state.learning = Learning(app.state.cameras, app.state.audio, app.state.pico, app.state.events,
+                                  button_audio=app.state.button_audio)
     app.state.learning.start()
+    app.state.study_reaction = StudyReaction(app.state.pico,app.state.audio,app.state.eyes,
+        app.state.servos,app.state.learning.live,app.state.button_audio,app.state.events)
+    app.state.learning.live.start_guard = app.state.study_reaction.guard_live
+    app.state.study_reaction.start_switch()
+    app.state.analytics = Analytics(app.state.learning.store)
+    app.state.analytics.start()
+    app.state.automatic_eyes = AutomaticEyes(app.state.eyes, app.state.pico, app.state.servos,
+        app.state.learning, app.state.audio, app.state.events, installed=INSTALLATION['matrix_connected'])
+    app.state.automatic_eyes.start()
     app.state.events.add('system', '300 Seconds 장치 대시보드 시작')
     yield
+    await app.state.study_reaction.close()
+    await app.state.analytics.close()
+    await app.state.automatic_eyes.close()
     await app.state.learning.close()
+    await threaded(app.state.button_audio.close)
     app.state.metrics.running = False
     await app.state.servos.close()
     await app.state.eyes.close()
@@ -59,6 +80,7 @@ app = FastAPI(title='300 Seconds · Device Observatory', version='1.0.0', lifesp
               docs_url=None, redoc_url=None)
 app.mount('/static', StaticFiles(directory=str(ROOT / 'static')), name='static')
 app.include_router(learning_router)
+app.include_router(analytics_router)
 
 
 @app.middleware('http')
@@ -89,12 +111,18 @@ def snapshot():
             'cameras': app.state.cameras.snapshot(), 'audio': app.state.audio.snapshot(),
             'system': app.state.metrics.state, 'events': app.state.events.snapshot(),
             'eye_expression': app.state.eyes.snapshot(),
-            'servo_control': app.state.servos.snapshot()}
+            'servo_control': app.state.servos.snapshot(),
+            'button_audio': app.state.button_audio.snapshot()}
 
 
 @app.get('/')
 def index():
     return FileResponse(ROOT / 'static/index.html')
+
+
+@app.get('/analytics')
+def analytics_page():
+    return FileResponse(ROOT / 'static/analytics.html')
 
 
 @app.get('/api/session')
@@ -139,8 +167,9 @@ def require_sensor(sensor):
 def camera_snapshot(sensor: int):
     require_sensor(sensor)
     state = app.state.cameras.snapshot()
-    if not state.get('ready'):
-        raise HTTPException(503, state.get('error') or '카메라를 준비하고 있습니다.')
+    if not Cameras.can_preview(state, sensor):
+        camera = next((c for c in state.get('cameras', []) if c.get('sensor_id') == sensor), {})
+        raise HTTPException(503, camera.get('error') or state.get('error') or '카메라를 준비하고 있습니다.')
     try:
         return Response(app.state.cameras.image_path(sensor).read_bytes(), media_type='image/jpeg')
     except OSError:
@@ -154,7 +183,7 @@ async def camera_stream(sensor: int, request: Request):
         previous = None
         while not await request.is_disconnected():
             state = app.state.cameras.snapshot()
-            if state.get('ready'):
+            if Cameras.can_preview(state, sensor):
                 path = app.state.cameras.image_path(sensor)
                 try:
                     stamp = path.stat().st_mtime_ns
@@ -174,7 +203,7 @@ class ProfileRequest(BaseModel):
 
 
 class StudyRequest(BaseModel):
-    provider: Literal['openai', 'jev']
+    provider: Literal['openai', 'jev', 'decisions']
     # GPT: selected camera. JEV: face camera; the other sensor is the study area.
     camera: Literal[0, 1] = 1
 
@@ -185,7 +214,10 @@ class StudyRequest(BaseModel):
 @app.get('/api/study')
 async def study_status():
     try:
-        return await observer_rpc({'op': 'status'})
+        value = await observer_rpc({'op': 'status'})
+        controller = getattr(app.state,'study_reaction',None)
+        if controller:value['reaction']=controller.snapshot()
+        return value
     except (OSError, RuntimeError, ValueError, asyncio.TimeoutError):
         return {'online': False, 'error': '분석 서비스를 준비하고 있습니다.', 'job': {'phase': 'offline'}, 'providers': {}}
 
@@ -195,9 +227,15 @@ async def study_analyze(value: StudyRequest):
     if not app.state.cameras.snapshot().get('ready'):
         raise HTTPException(409, '카메라가 준비되지 않았습니다.')
     try:
+        controller = getattr(app.state,'study_reaction',None)
+        if value.provider == 'decisions':
+            if not controller:raise RuntimeError('기기 반응 서비스를 준비하고 있습니다.')
+            return await controller.start(value.camera)
+        if controller and controller.busy:raise RuntimeError('Decisions 분석·반응이 진행 중입니다.')
         return await observer_rpc({'op': 'start', 'provider': value.provider, 'camera': value.camera})
     except RuntimeError as exc:
-        message = '다른 분석이 진행 중입니다.' if 'busy' in str(exc) else 'API 키·사용 한도·테스트 예산을 확인해 주세요.'
+        message = (str(exc) if value.provider == 'decisions' else
+                   '다른 분석이 진행 중입니다.' if 'busy' in str(exc) else 'API 키·사용 한도·테스트 예산을 확인해 주세요.')
         raise HTTPException(409, message)
     except (OSError, ValueError, asyncio.TimeoutError):
         raise HTTPException(503, '분석 서비스에 연결하지 못했습니다.')
@@ -205,6 +243,10 @@ async def study_analyze(value: StudyRequest):
 
 @app.post('/api/study/cancel')
 async def study_cancel():
+    controller = getattr(app.state,'study_reaction',None)
+    if controller and controller.busy:
+        await controller.abort()
+        return await study_status()
     try:
         return await observer_rpc({'op': 'cancel'})
     except RuntimeError:
@@ -242,6 +284,25 @@ def eye_presets():
     return {'count': len(CATALOG), 'presets': CATALOG}
 
 
+class AutomaticEyeRequest(BaseModel):
+    enabled: bool
+
+    class Config:
+        extra = 'forbid'
+
+
+@app.post('/api/pico/expressions/automatic')
+async def automatic_eyes(value: AutomaticEyeRequest):
+    try:
+        owner = app.state.automatic_eyes
+        owner.set_enabled(value.enabled)
+        if not value.enabled and app.state.eyes.active and app.state.eyes.active.get('mode') == 'automatic':
+            await app.state.eyes.stop()
+        return owner.snapshot()
+    except (RuntimeError, OSError, ValueError) as error:
+        raise HTTPException(409, str(error))
+
+
 @app.post('/api/pico/expression')
 async def show_expression(value: EyeRequest):
     if not INSTALLATION['matrix_connected']:
@@ -249,6 +310,8 @@ async def show_expression(value: EyeRequest):
     if value.preset_id not in BY_ID:
         raise HTTPException(404, '등록되지 않은 표정입니다.')
     try:
+        study = getattr(app.state,'study_reaction',None)
+        if study and study.busy:await study.abort()
         servos = getattr(app.state, 'servos', None)
         if servos and servos.active: await servos.stop()
         return await app.state.eyes.start(value.preset_id, value.seconds)
@@ -266,6 +329,11 @@ async def pico_command(value: PicoRequest):
     if value.cmd == 'test':
         command['module'] = value.module
     try:
+        automatic = getattr(app.state, 'automatic_eyes', None)
+        if value.cmd == 'stop' and automatic:
+            automatic.set_enabled(False)
+        study = getattr(app.state,'study_reaction',None)
+        if study and study.busy and value.cmd in ('stop','test'):await study.abort()
         servos = getattr(app.state, 'servos', None)
         if servos and value.cmd == 'stop':
             result = await servos.stop()
@@ -284,11 +352,18 @@ async def reconnect_pico():
     if app.state.reconnect_lock.locked():
         raise HTTPException(409, 'USB 연결 요청을 처리 중입니다.')
     async with app.state.reconnect_lock:
-        servos = getattr(app.state, 'servos', None)
-        if servos: await servos.close()
-        await app.state.eyes.close()
-        await threaded(app.state.pico.start)
-        return app.state.pico.snapshot()
+        automatic = getattr(app.state, 'automatic_eyes', None)
+        if automatic: automatic.reconnecting = True
+        try:
+            servos = getattr(app.state, 'servos', None)
+            if servos: await servos.close()
+            await app.state.eyes.close()
+            await threaded(app.state.pico.start)
+            return app.state.pico.snapshot()
+        finally:
+            if automatic:
+                automatic.next_selection = 0
+                automatic.reconnecting = False
 
 
 class ServoSessionRequest(BaseModel):
@@ -316,6 +391,8 @@ def servo_status():
 @app.post('/api/pico/servos/session')
 async def servo_session(value: ServoSessionRequest):
     try:
+        study = getattr(app.state,'study_reaction',None)
+        if study and study.busy:await study.abort()
         owner = app.state.servos
         if value.action == 'enable': return await owner.enable()
         if value.action == 'keepalive': return owner.keepalive(value.control_id)

@@ -19,6 +19,8 @@ gi.require_version('GstRtspServer', '1.0')
 from gi.repository import Gst, GstRtspServer, GLib
 
 PROFILES = json.loads(Path(__file__).with_name('profiles.json').read_text())
+# Camera 1 is mounted upside down in the assembled enclosure.
+CAMERA_ROTATIONS = {0: 180, 1: 0}
 
 
 def atomic_write(path, data):
@@ -46,6 +48,7 @@ class CameraWorker:
         p = self.profile
         branches = []
         for sensor in (0, 1):
+            flip = 2 if CAMERA_ROTATIONS[sensor] == 180 else 0
             if self.args.encoder == 'omxh264enc':
                 encoder = ('omxh264enc name=encoder%d bitrate=%d control-rate=2 '
                            'preset-level=0 iframeinterval=%d insert-sps-pps=true' %
@@ -59,16 +62,16 @@ class CameraWorker:
                 'video/x-raw(memory:NVMM),format=NV12,width={cw},height={ch},framerate={fps}/1 ! '
                 'tee name=t{0} '
                 't{0}. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! '
-                'nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width={w},height={h} ! '
+                'nvvidconv name=rotate_h264{0} flip-method={flip} ! video/x-raw(memory:NVMM),format=NV12,width={w},height={h} ! '
                 '{encoder} ! '
                 'h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! '
                 'appsink name=h264{0} emit-signals=true max-buffers=2 drop=true sync=false '
                 't{0}. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! '
-                'nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! '
+                'nvvidconv name=rotate_jpeg{0} flip-method={flip} ! video/x-raw,format=I420,width=640,height=360 ! '
                 'videorate drop-only=true ! video/x-raw,framerate=15/1 ! '
                 'jpegenc quality=72 ! appsink name=jpeg{0} emit-signals=true max-buffers=1 drop=true sync=false'
                 .format(sensor, mode=p['sensor_mode'], cw=p['capture_width'], ch=p['capture_height'],
-                        fps=p['fps'], w=p['width'], h=p['height'], encoder=encoder))
+                        fps=p['fps'], w=p['width'], h=p['height'], encoder=encoder, flip=flip))
         return ' '.join(branches)
 
     def source_probe(self, pad, info, sensor):
@@ -187,6 +190,7 @@ class CameraWorker:
                 preview_age = round((stamp - state['last_preview']) * 1000) if state['last_preview'] else None
                 encoded_age = round((stamp - state['encoded_points'][-1][0]) * 1000) if state['encoded_points'] else None
                 cameras.append({'sensor_id': sensor, 'node': '/dev/video%d' % sensor,
+                                'rotation_degrees': CAMERA_ROTATIONS[sensor],
                                 'ready': all(a is not None and a < 2000 for a in (age, preview_age, encoded_age)),
                                 'frames': state['frames'], 'encoded_frames': state['encoded_frames'],
                                 'preview_frames': state['preview_frames'], 'fps': fps,

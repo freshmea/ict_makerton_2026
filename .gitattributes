@@ -13,6 +13,7 @@ apps/device-dashboard/*.service text eol=lf
 doc/software/board-info/**/*.log -text -whitespace
 doc/software/board-info/**/*.txt -text -whitespace
 doc/software/dashboard-check/**/*.log -text -whitespace
+doc/software/dashboard-check/**/*.diff -text -whitespace
 apps/device-dashboard/static/fonts/LICENSE.txt -whitespace
 
 software/** text=auto eol=lf

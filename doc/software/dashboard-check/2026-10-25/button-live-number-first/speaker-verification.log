@@ -1,0 +1,79 @@
+{
+  "short_hold_no_session": true,
+  "start_after_voice_and_long_beep": true,
+  "continued_hold_does_not_toggle": true,
+  "second_hold4_stops": true,
+  "end_announcement_once": true,
+  "four_distinct_beeps_complete_before_start": true,
+  "first_number_start_latency_ms": 0.8,
+  "feedback_sequence": [
+    "number",
+    "count_beep",
+    "count_beep",
+    "count_beep",
+    "number",
+    "count_beep",
+    "count_beep",
+    "count_beep",
+    "count_beep",
+    "start_voice",
+    "start_signal",
+    "number",
+    "count_beep",
+    "count_beep",
+    "count_beep",
+    "count_beep",
+    "end_voice",
+    "end_signal"
+  ],
+  "external_live_api_calls": 0,
+  "isolated_connection_calls": 1,
+  "button_audio": {
+    "press_events": 3,
+    "count_events": 14,
+    "labels_played": 3,
+    "beeps_played": 11,
+    "dropped": 0,
+    "rejected": 0,
+    "live_hold_requests": 2,
+    "running": true,
+    "ready": true,
+    "cached_buttons": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "last": {
+      "kind": "beep",
+      "index": 1,
+      "count": 4,
+      "time": 1792865610.9982898,
+      "pitch_hz": 479.82
+    },
+    "error": null,
+    "queued": {
+      "label": 0,
+      "beep": 0
+    },
+    "base_hz": 440,
+    "max_hz": 1318.51,
+    "beep_ms": 80,
+    "live_hold_count": 4,
+    "live_hold_ms": 3200,
+    "announcing": null,
+    "sw1_beeps_played": 4,
+    "source": "firmware Touch events / Jetson systemd / cached MP3"
+  },
+  "production_live_records_before": 6,
+  "production_live_records_after": 6,
+  "announcement_texts": [
+    "일번",
+    "라이브 대화 시작",
+    "라이브 대화 끝"
+  ],
+  "deployed_hold_ms": 800,
+  "deployed_threshold": 4
+}

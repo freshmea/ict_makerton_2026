@@ -1,0 +1,9 @@
+{
+  "stage": "/tmp/observation-priority-20261024T185020Z",
+  "before_sha256": "1cff504f8ead3027488c76f8f7922aeb698a759301d1e3b7be886865bdd9a020",
+  "was_enabled": true,
+  "backup": "/var/lib/300seconds-dashboard/backups/observation-priority-20261024T185020Z",
+  "prompt_version": "dual-observation-v5-presence-face-focus",
+  "prompt_sha256": "9db4f0e8b1b714c7ef11cbdd756a56a1c3b94f3a2944e1cac99c17468617610d",
+  "model": "gpt-4.1-mini"
+}

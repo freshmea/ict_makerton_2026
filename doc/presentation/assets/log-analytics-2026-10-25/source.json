@@ -1,0 +1,26 @@
+{
+  "source": "doc/software/dashboard-check/2026-10-25/log-analytics/desktop.png",
+  "sourceType": "배포된 실제 UI에 DEMO 가상 기록을 표시한 화면",
+  "date": "2026-10-25",
+  "crops": {
+    "overview": [
+      88,
+      400,
+      1352,
+      1080
+    ],
+    "trend": [
+      112,
+      2095,
+      1328,
+      2365
+    ],
+    "cues": [
+      88,
+      1604,
+      1352,
+      1875
+    ]
+  },
+  "note": "비율을 유지한 영역 발췌. 추세선·감정 단서 범례는 Google Slides 네이티브 텍스트로 크게 반복."
+}

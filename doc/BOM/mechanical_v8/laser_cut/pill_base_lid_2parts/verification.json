@@ -1,0 +1,192 @@
+{
+  "created_date": "2026-10-25",
+  "units": "mm",
+  "scale": 1,
+  "sheet_thickness_mm": 4,
+  "kerf_compensation_mm": 0,
+  "split_assembly_x_mm": 0,
+  "sources": [
+    {
+      "step": "doc\\BOM\\mechanical_v8\\cad\\PILL_BASE_LID_1.step",
+      "step_sha256": "89b5335f7f216d37ec22f6911cf57e507e0a85c1cd53a8b3253f11aa791ea84a",
+      "oriented_stl": "doc\\BOM\\mechanical_v8\\print\\oriented_stl\\PILL_BASE_LID_1.stl",
+      "stl_sha256": "0b05e1ebeac660af417d4b5c74dc71f79c15f34da15650b7e74dfb927ce595c8"
+    },
+    {
+      "step": "doc\\BOM\\mechanical_v8\\cad\\PILL_BASE_LID_2.step",
+      "step_sha256": "47d678e69322bcbe54ffe03b198b6a553f8fca8369f352ded5c9ae0c2e6ff424",
+      "oriented_stl": "doc\\BOM\\mechanical_v8\\print\\oriented_stl\\PILL_BASE_LID_2.stl",
+      "stl_sha256": "7e8274bc9a542fc7350e3fb46195ecbfd5b52a2643ca9b805ef23bd56b5b6c92"
+    },
+    {
+      "step": "doc\\BOM\\mechanical_v8\\cad\\PILL_BASE_LID_3.step",
+      "step_sha256": "105b76a8bcc7d0935fb8a6abc8778b5509ca8c61c4baa3e9acc73511346a783d",
+      "oriented_stl": "doc\\BOM\\mechanical_v8\\print\\oriented_stl\\PILL_BASE_LID_3.stl",
+      "stl_sha256": "c48db8f9c72b2e9c81b5ad31e6dca4cea09ce9d9ed84373dc18b30f7802462eb"
+    }
+  ],
+  "files": [
+    {
+      "file": "PILL_BASE_LID_LEFT_320x200.dxf",
+      "sha256": "4c2d95c1cb328f1cb6be22fd489f407d446f196800b1321df6f9cc6f34f97b46",
+      "units": "mm",
+      "bbox_mm": [
+        [
+          -7.105427357601002e-15,
+          -7.105427357601002e-15,
+          0.0
+        ],
+        [
+          320.0,
+          200.0,
+          0.0
+        ]
+      ],
+      "entity_counts": {
+        "LWPOLYLINE": 2,
+        "CIRCLE": 3,
+        "SPLINE": 0,
+        "TEXT": 0
+      },
+      "all_contours_closed": true,
+      "dxf_audit": "pass"
+    },
+    {
+      "file": "PILL_BASE_LID_RIGHT_320x200.dxf",
+      "sha256": "39036810a49b81196a3209222c8b64440f5c21d9539578947285eb51964509a4",
+      "units": "mm",
+      "bbox_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          320.0,
+          200.0,
+          0.0
+        ]
+      ],
+      "entity_counts": {
+        "LWPOLYLINE": 3,
+        "CIRCLE": 3,
+        "SPLINE": 0,
+        "TEXT": 0
+      },
+      "all_contours_closed": true,
+      "dxf_audit": "pass"
+    },
+    {
+      "file": "PILL_BASE_LID_BOTH_320x410.dxf",
+      "sha256": "17e9061ad2bcd7e49089403dec8cc29c4c113bcf9a149c3146841fad3dce7af4",
+      "units": "mm",
+      "bbox_mm": [
+        [
+          -7.105427357601002e-15,
+          -7.105427357601002e-15,
+          0.0
+        ],
+        [
+          320.0,
+          410.0,
+          0.0
+        ]
+      ],
+      "entity_counts": {
+        "LWPOLYLINE": 5,
+        "CIRCLE": 6,
+        "SPLINE": 0,
+        "TEXT": 0
+      },
+      "all_contours_closed": true,
+      "dxf_audit": "pass"
+    },
+    {
+      "file": "reference/PILL_BASE_LID_MERGED_640x200.dxf",
+      "sha256": "766b07e40b0e2fc0b399c42722737fef698ba3c24b41c92e8114c357ec896eb5",
+      "units": "mm",
+      "bbox_mm": [
+        [
+          -7.105427357601002e-15,
+          -7.105427357601002e-15,
+          0.0
+        ],
+        [
+          640.0,
+          200.0,
+          0.0
+        ]
+      ],
+      "entity_counts": {
+        "LWPOLYLINE": 4,
+        "CIRCLE": 6,
+        "SPLINE": 0,
+        "TEXT": 0
+      },
+      "all_contours_closed": true,
+      "dxf_audit": "pass"
+    }
+  ],
+  "circle_fit_max_radial_error_mm": 3.915578972168987e-11,
+  "source_step_sampled_boundary_hausdorff_mm": 2.0001321997370704e-06,
+  "source_stl_boundary_hausdorff_mm": 0.05650192582220248,
+  "assembled_vs_merged_symmetric_difference_mm2": 2.467567659823072e-12,
+  "original_seams_removed_x_mm": [
+    -106.66666666666667,
+    106.66666666666667
+  ],
+  "holes_assembly_xy_mm": [
+    [
+      -290,
+      -72
+    ],
+    [
+      -290,
+      78
+    ],
+    [
+      -94,
+      78
+    ],
+    [
+      94,
+      78
+    ],
+    [
+      290,
+      -72
+    ],
+    [
+      290,
+      78
+    ]
+  ],
+  "hole_diameter_mm": 3.4,
+  "rectangles_assembly_xyxy_mm": [
+    [
+      -307,
+      28,
+      -243,
+      52
+    ],
+    [
+      2.5,
+      -7.5,
+      47.5,
+      17.5
+    ],
+    [
+      243,
+      28,
+      307,
+      52
+    ]
+  ],
+  "outer_corner_radius_mm": 45,
+  "holes_total": 6,
+  "rectangular_openings_total": 3,
+  "central_rect_to_new_seam_mm": 2.5,
+  "physical_cut_tested": false,
+  "machine_work_area_verified": false,
+  "validation": "PASS; circle recovery checked against STEP; DXF read-back, closedness, units, extents, topology, union and STL comparison checked"
+}

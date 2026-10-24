@@ -1,0 +1,19 @@
+test_all_six_presses_then_each_count_use_firmware_events (test_button_audio.ButtonTests) ... ok
+test_loader_checks_mp3_and_decoded_cache_hashes (test_button_audio.ButtonTests) ... ok
+test_queues_bounded_and_expired_feedback_dropped (test_button_audio.ButtonTests) ... ok
+test_reconnect_clears_pending_and_does_not_sound_an_existing_hold (test_button_audio.ButtonTests) ... ok
+test_release_and_fresh_press_reset_pitch (test_button_audio.ButtonTests) ... ok
+test_repeated_counts_and_duplicate_packets_never_replay (test_button_audio.ButtonTests) ... ok
+test_stale_buffer_disconnected_and_other_session_are_rejected (test_button_audio.ButtonTests) ... ok
+test_uint32_event_sequence_wrap (test_button_audio.ButtonTests) ... ok
+test_usb_reader_delivers_every_touch_without_snapshot_polling_loss (test_button_audio.ButtonTests) ... ok
+test_worker_subscribes_without_browser_and_unsubscribes_on_close (test_button_audio.ButtonTests) ... ok
+test_cached_feedback_works_while_live_holds_speaker_lock (test_button_audio.ToneTests) ... ok
+test_pitch_rises_gently_then_caps_and_wave_fades_without_clipping (test_button_audio.ToneTests) ... ok
+test_simultaneous_beeps_stay_at_same_gentle_peak (test_button_audio.ToneTests) ... ok
+test_speech_trims_silence_and_normalizes_without_microphone_gain (test_button_audio.ToneTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.198s
+
+OK

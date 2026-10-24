@@ -4,7 +4,7 @@
   "touch_active_low_mask": 0,
   "local_tests_enabled": false,
   "test_switch": 0,
-  "hold_interval_ms": 500,
+  "hold_interval_ms": 800,
   "press_window_ms": 2000,
   "servo_min_us": 500,
   "servo_max_us": 2500,

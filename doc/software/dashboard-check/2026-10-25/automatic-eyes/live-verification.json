@@ -1,0 +1,167 @@
+{
+  "test": "real_pico_automatic_eyes",
+  "servo_moves": 0,
+  "extra_ai_requests": 0,
+  "initial": {
+    "eye_expression": {
+      "active": true,
+      "stopping": false,
+      "preset_id": "look-down",
+      "name": "아래 보기",
+      "frame_index": 1,
+      "persistent": true,
+      "mode": "automatic",
+      "remaining_ms": 0,
+      "automatic": {
+        "enabled": true,
+        "interval_seconds": 20.0,
+        "preset_id": "look-down",
+        "name": "아래 보기",
+        "reason": "관찰 키워드 · 책",
+        "observation_ids": [
+          3625,
+          3482
+        ],
+        "selections": 4,
+        "selected_at": 1792866041.0609791,
+        "next_selection_ms": 5529,
+        "waiting": null,
+        "error": null,
+        "extra_ai_requests": 0
+      },
+      "last": null,
+      "error": null
+    },
+    "connected": true,
+    "oe_high": true,
+    "outputs": {
+      "applied_seq": 545,
+      "armed": true,
+      "calibration_id": 1,
+      "commanded_cdeg": [
+        9000,
+        9000,
+        9000,
+        9000,
+        9000,
+        9000
+      ],
+      "light_active": false,
+      "pose_active": false
+    },
+    "last_applied": {
+      "event": "applied",
+      "host_monotonic_ms": 76299,
+      "host_unix_ms": 1792866055475,
+      "kind": 3,
+      "request_seq": 545,
+      "session": "E448D211190DC065",
+      "version": 2
+    },
+    "servo_control_active": false
+  },
+  "selections": [
+    {
+      "selections": 4,
+      "selected_at": 1792866041.0609791,
+      "preset_id": "look-down",
+      "reason": "관찰 키워드 · 책",
+      "observation_ids": [
+        3625,
+        3482
+      ]
+    },
+    {
+      "selections": 5,
+      "selected_at": 1792866061.7091508,
+      "preset_id": "look-down",
+      "reason": "관찰 키워드 · 책",
+      "observation_ids": [
+        3625,
+        3482
+      ]
+    },
+    {
+      "selections": 6,
+      "selected_at": 1792866081.890411,
+      "preset_id": "look-down",
+      "reason": "관찰 키워드 · 책",
+      "observation_ids": [
+        3625,
+        3482
+      ]
+    }
+  ],
+  "selection_intervals_seconds": [
+    20.648,
+    20.181
+  ],
+  "manual_then_restore": {
+    "manual": "happy",
+    "restored": "look-down"
+  },
+  "stop_latched": true,
+  "status": "ok",
+  "final": {
+    "eye_expression": {
+      "active": true,
+      "stopping": false,
+      "preset_id": "look-down",
+      "name": "아래 보기",
+      "frame_index": 0,
+      "persistent": true,
+      "mode": "automatic",
+      "remaining_ms": 0,
+      "automatic": {
+        "enabled": true,
+        "interval_seconds": 20.0,
+        "preset_id": "look-down",
+        "name": "아래 보기",
+        "reason": "관찰 키워드 · 책",
+        "observation_ids": [
+          3625,
+          3482
+        ],
+        "selections": 8,
+        "selected_at": 1792866104.747432,
+        "next_selection_ms": 19361,
+        "waiting": null,
+        "error": null,
+        "extra_ai_requests": 0
+      },
+      "last": {
+        "id": "look-down",
+        "name": "아래 보기",
+        "result": "stopped"
+      },
+      "error": null
+    },
+    "connected": true,
+    "oe_high": true,
+    "outputs": {
+      "applied_seq": 901,
+      "armed": true,
+      "calibration_id": 1,
+      "commanded_cdeg": [
+        9000,
+        9000,
+        9000,
+        9000,
+        9000,
+        9000
+      ],
+      "light_active": false,
+      "pose_active": false
+    },
+    "last_applied": {
+      "event": "applied",
+      "host_monotonic_ms": 125557,
+      "host_unix_ms": 1792866104734,
+      "kind": 3,
+      "request_seq": 901,
+      "session": "E448D211190DC065",
+      "version": 2
+    },
+    "servo_control_active": false
+  }
+}

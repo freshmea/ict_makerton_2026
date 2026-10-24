@@ -1,0 +1,187 @@
+{
+  "status": "ok",
+  "schema_version": 3,
+  "prompt_version": "dual-observation-v4-history10",
+  "batches": [
+    {
+      "batch_id": "c2c0e82a673d414e91bcdd5ed028732c",
+      "history_ids": [
+        3036,
+        3038,
+        3037,
+        3039,
+        3040,
+        3041,
+        3042,
+        3043,
+        3044,
+        3050
+      ],
+      "observations": [
+        {
+          "id": 3051,
+          "camera": 0,
+          "status": "duplicate",
+          "duplicate_of": 3043
+        },
+        {
+          "id": 3052,
+          "camera": 1,
+          "status": "success",
+          "duplicate_of": null
+        }
+      ],
+      "usage": {
+        "input_tokens": 3055,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 281,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3336
+      }
+    },
+    {
+      "batch_id": "7a717340ab7d48e497074592d3bfe3cf",
+      "history_ids": [
+        3035,
+        3036,
+        3038,
+        3037,
+        3039,
+        3040,
+        3041,
+        3042,
+        3043,
+        3044
+      ],
+      "observations": [
+        {
+          "id": 3049,
+          "camera": 0,
+          "status": "duplicate",
+          "duplicate_of": 3043
+        },
+        {
+          "id": 3050,
+          "camera": 1,
+          "status": "success",
+          "duplicate_of": null
+        }
+      ],
+      "usage": {
+        "input_tokens": 3046,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 278,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3324
+      }
+    }
+  ],
+  "duplicate_content_absent": true,
+  "extra_analysis_requests": 0,
+  "collection": {
+    "enabled": true,
+    "history_limit": 10,
+    "last_analysis": {
+      "saved": 1,
+      "duplicates": 1
+    },
+    "error": null,
+    "schema_version": 3
+  },
+  "summary": {
+    "counts": [
+      {
+        "camera": 0,
+        "status": "camera_error",
+        "count": 6
+      },
+      {
+        "camera": 0,
+        "status": "dropped",
+        "count": 6
+      },
+      {
+        "camera": 0,
+        "status": "duplicate",
+        "count": 2
+      },
+      {
+        "camera": 0,
+        "status": "interrupted",
+        "count": 1
+      },
+      {
+        "camera": 0,
+        "status": "pending",
+        "count": 1
+      },
+      {
+        "camera": 0,
+        "status": "provider_error",
+        "count": 7
+      },
+      {
+        "camera": 0,
+        "status": "skipped",
+        "count": 49
+      },
+      {
+        "camera": 0,
+        "status": "success",
+        "count": 1455
+      },
+      {
+        "camera": 1,
+        "status": "camera_error",
+        "count": 6
+      },
+      {
+        "camera": 1,
+        "status": "dropped",
+        "count": 6
+      },
+      {
+        "camera": 1,
+        "status": "interrupted",
+        "count": 1
+      },
+      {
+        "camera": 1,
+        "status": "pending",
+        "count": 1
+      },
+      {
+        "camera": 1,
+        "status": "provider_error",
+        "count": 7
+      },
+      {
+        "camera": 1,
+        "status": "skipped",
+        "count": 49
+      },
+      {
+        "camera": 1,
+        "status": "success",
+        "count": 1457
+      }
+    ],
+    "duplicate_count": 2,
+    "usage": {
+      "input_tokens": 1737397,
+      "output_tokens": 341458,
+      "total_tokens": 2078855
+    },
+    "schema_version": 3
+  }
+}

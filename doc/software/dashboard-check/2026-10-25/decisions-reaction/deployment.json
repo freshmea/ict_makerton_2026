@@ -1,0 +1,16 @@
+{
+  "stage": "/tmp/decisions-reaction-20261024T193006Z",
+  "baseline": {
+    "/opt/300seconds/dashboard/app/app.py": "baf4f8a8db6e803d2a9eec841e717306c0563f6a4e3c9915834e2bfac1a0457f",
+    "/opt/300seconds/dashboard/app/learning.py": "8fcc7cfde9d851731818f34827e3e473355b6f53d94457837ea270ed7c2fb356",
+    "/opt/300seconds/dashboard/app/button_audio.py": "b62095e7b2493229c7f2978b7f6efe89ed808e2614aa85c0f28f4126c094c2f7",
+    "/opt/300seconds/dashboard/app/study_reaction.py": null,
+    "/opt/300seconds/dashboard/app/static/index.html": "813c8493a45af8a18594daab4b520973a0138406a070851d5bcc948f411c34b3",
+    "/opt/300seconds/dashboard/app/static/study.js": "1fe49ddb6901cfcd1f70cd5ff71c7a9442588bd0386ac5809eba4d94b212e3fe",
+    "/opt/300seconds/jetson/openai-study-observer.py": "6187e0305bc1c9143626cde452dc13a11197726b95e056a088e3335e97324854",
+    "/opt/300seconds/jetson/study_window.py": "e7d88b72bc8580b47d3cbc55ba3f65602b29664737e60c1c2da78ad6c9e71c97",
+    "/opt/300seconds/jetson/study_observer_service.py": "eb4eadf02b45244081879b2776135d0301be157c506c2d6c16b3801168176c2c"
+  },
+  "was_enabled": true,
+  "backup": "/var/lib/300seconds-dashboard/backups/decisions-reaction-20261024T193006Z"
+}

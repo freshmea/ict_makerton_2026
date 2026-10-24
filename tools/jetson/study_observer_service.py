@@ -39,6 +39,7 @@ class Manager:
     def __init__(self, keys, state=STATE, runtime=CAMERA_RUNTIME, budget=None):
         self.keys, self.state, self.runtime = keys, state, runtime
         self.budget = budget or window.openai.Budget()
+        self.decisions_budget = window.openai.DailyBudget(state)
         self.task, self.cancel_event = None, threading.Event()
         self.job = {'phase': 'idle', 'captured': 0, 'total': 20, 'result': None}
         self.quota_path = state / 'provider-state.json'
@@ -50,9 +51,16 @@ class Manager:
         try:
             budget = self.budget.status()
             openai_ready = budget['attempts'] < budget['max_attempts'] and budget['cooldown_until_unix'] <= now
-        except window.Error:
+        except (window.Error, window.openai.Error):
             budget, openai_ready = {'error': 'budget_unavailable'}, False
+        try:
+            decisions = self.decisions_budget.status()
+        except (window.Error, window.openai.Error):
+            decisions = {'available': False, 'error': 'budget_unavailable'}
         return {
+            'decisions': {'configured': bool(self.keys.get('OPENAI_API_KEY')),
+                          'available': bool(self.keys.get('OPENAI_API_KEY')) and decisions.get('available', False),
+                          'budget': decisions, 'frame_count': window.FRAME_COUNT * 2, 'camera_count': 2},
             'openai': {'configured': bool(self.keys.get('OPENAI_API_KEY')), 'available': bool(self.keys.get('OPENAI_API_KEY')) and openai_ready, 'budget': budget,
                        'frame_count': window.FRAME_COUNT, 'camera_count': 1},
             'jev': {'configured': bool(self.keys.get('OPENCODE_API_KEY')), 'available': bool(self.keys.get('OPENCODE_API_KEY')) and self.quotas.get('jev_blocked_until', 0) <= now,
@@ -66,7 +74,7 @@ class Manager:
                 'interval_seconds': window.INTERVAL}
 
     async def start(self, provider, camera_id):
-        if provider not in ('jev', 'openai') or type(camera_id) is not int or camera_id not in (0, 1):
+        if provider not in ('jev', 'openai', 'decisions') or type(camera_id) is not int or camera_id not in (0, 1):
             raise window.Error('request_invalid')
         if self.task and not self.task.done():
             raise window.Error('observer_busy')
@@ -90,13 +98,14 @@ class Manager:
         images = []
         try:
             progress = lambda count: self.loop.call_soon_threadsafe(self.progress, job_id, count)
-            images, generation = await self.loop.run_in_executor(None, window.capture, self.runtime, camera_id, cancelled, progress, provider == 'jev')
+            images, generation = await self.loop.run_in_executor(None, window.capture, self.runtime, camera_id, cancelled, progress, provider in ('jev', 'decisions'))
             if cancelled.is_set():
                 raise window.Cancelled('capture_cancelled')
             if len(images) != self.job['total']:
                 raise window.Error('camera_window_incomplete')
             self.job['phase'] = 'analyzing'
-            result = await self.loop.run_in_executor(None, window.analyze, provider, images, self.keys, self.budget)
+            budget = self.decisions_budget if provider == 'decisions' else self.budget
+            result = await self.loop.run_in_executor(None, window.analyze, provider, images, self.keys, budget)
             result.update(camera=camera_id, generation=generation,
                           cameras=window.camera_roles(provider, camera_id),
                           frames_per_camera=window.FRAME_COUNT,
@@ -104,7 +113,7 @@ class Manager:
             self.job.update(phase='completed', captured=len(images), result=result, completed_at_utc=window.jev.now())
         except window.Cancelled:
             self.job.update(phase='cancelled', result=None, error=None)
-        except window.Error as exc:
+        except (window.Error, window.openai.Error) as exc:
             code = str(exc)[:240]
             if provider == 'jev' and 'http_429' in code:
                 match = re.search(r'retry_after_seconds=(\d+)', code)
@@ -142,7 +151,7 @@ async def serve():
             if struct.unpack('3i', peer)[1] not in allowed:
                 raise window.Error('peer_not_allowed')
             line = await asyncio.wait_for(reader.readline(), 5)
-            if len(line) > 280000:
+            if len(line) > 350000:
                 raise window.Error('request_too_large')
             command = json.loads(line)
             op = command.get('op')
@@ -151,8 +160,8 @@ async def serve():
                           'live_model': 'gpt-live-1', 'live_busy': learning.live_busy, 'education': policy()}
             elif op == 'learning_policy' and set(command) == {'op'}:
                 result = policy(include_text=True)
-            elif op == 'describe' and set(command) == {'op', 'frames'}:
-                result = await learning.description(command['frames'])
+            elif op == 'describe' and set(command) in ({'op', 'frames'}, {'op', 'frames', 'history'}):
+                result = await learning.description(command['frames'], command.get('history'))
             elif op == 'live' and set(command) in ({'op', 'mode'}, {'op', 'mode', 'reference'}):
                 try:
                     await learning.live(reader, writer, command['mode'], command.get('reference'))
@@ -188,7 +197,7 @@ async def serve():
     SOCKET.parent.mkdir(parents=True, exist_ok=True)
     if SOCKET.exists():
         SOCKET.unlink()
-    server = await asyncio.start_unix_server(handle, str(SOCKET), limit=280001)
+    server = await asyncio.start_unix_server(handle, str(SOCKET), limit=350001)
     SOCKET.chmod(0o660)
     stop = asyncio.Event()
     loop = asyncio.get_running_loop()

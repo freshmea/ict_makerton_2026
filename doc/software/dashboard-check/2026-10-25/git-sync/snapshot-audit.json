@@ -1,0 +1,56 @@
+{
+  "file_count": 199,
+  "total_bytes": 3829660,
+  "largest": [
+    {
+      "path": "output/pdf/폴드윙버디_발표자료_로그분석_2026-10-25.pdf",
+      "bytes": 1093113
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-25/log-analytics/desktop.png",
+      "bytes": 387978
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-25/log-analytics/mobile.png",
+      "bytes": 274784
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/live-start.wav",
+      "bytes": 111204
+    },
+    {
+      "path": "doc/BOM/mechanical_v8/laser_cut/pill_base_lid_2parts/preview.png",
+      "bytes": 104138
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/live-end.wav",
+      "bytes": 101932
+    },
+    {
+      "path": "doc/presentation/assets/log-analytics-2026-10-25/overview.png",
+      "bytes": 82248
+    },
+    {
+      "path": "doc/software/dashboard-check/2026-10-25/decisions-reaction/dashboard-completed.png",
+      "bytes": 66978
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-6.wav",
+      "bytes": 61438
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-3.wav",
+      "bytes": 61028
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-4.wav",
+      "bytes": 57530
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-1.wav",
+      "bytes": 57230
+    }
+  ],
+  "secret_candidates": [],
+  "private_evidence_candidates": []
+}

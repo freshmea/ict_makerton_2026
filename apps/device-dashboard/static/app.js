@@ -53,11 +53,12 @@ function chart(id, values, max, color) {
 }
 function previews() {
   for (let i = 0; i < 2; i++) {
-    const image = $(`camera-image-${i}`), ready = lastState?.cameras?.ready;
+    const image = $(`camera-image-${i}`), camera = lastState?.cameras?.cameras?.find(c => c.sensor_id === i), ready = camera?.ready;
     if (!document.hidden && !paused && ready) {
       if (!image.hasAttribute('src')) image.src = `/api/cameras/${i}/stream.mjpg`;
     } else image.removeAttribute('src');
-    text(`video-state-${i}`, document.hidden || paused ? '미리보기 정지' : ready ? 'LIVE / MJPEG' : '연결 대기');
+    const label = document.hidden || paused ? '미리보기 정지' : ready ? 'LIVE / MJPEG' : camera?.error ? '영상 없음 · 연결 확인' : '연결 대기';
+    if ($(`video-state-${i}`).textContent !== label) text(`video-state-${i}`, label);
   }
 }
 function disconnected() {
@@ -105,7 +106,7 @@ function render(s) {
     const event = p.module_tests?.[module];
     if (p.connected && event) text(id, event.fault ? '시험 중단/거부 · 이벤트 확인' : event.done ? (module === 'Servos' ? '명령 시험 완료 · 외부 전원 별도 필요' : '명령 시험 완료 · 발광 피드백 없음') : `시험 진행 · 단계 ${event.phase}`);
   }
-  document.querySelectorAll('.module-test').forEach(b => { const absent = b.dataset.module === 'matrix' && installed.matrix_connected === false; b.disabled = absent || !p.connected || stopHeld || eyeRequestPending || s.eye_expression?.active || s.eye_expression?.stopping || (running !== 'None' && running !== 'Idle' && running !== null); b.title = absent ? '도트매트릭스 미연결' : stopHeld ? `SW${switchIndex} 입력을 먼저 해제하세요.` : ''; });
+    document.querySelectorAll('.module-test').forEach(b => { const absent = b.dataset.module === 'matrix' && installed.matrix_connected === false; b.disabled = absent || !p.connected || stopHeld || eyeRequestPending || (s.eye_expression?.active && s.eye_expression?.mode !== 'automatic') || s.eye_expression?.stopping || (running !== 'None' && running !== 'Idle' && running !== null); b.title = absent ? '도트매트릭스 미연결' : stopHeld ? `SW${switchIndex} 입력을 먼저 해제하세요.` : ''; });
   expressionControls(s);
   renderServos(s.servo_control);
   const cams = c.cameras || []; text('camera-count', cams.filter(x => x.ready).length);
@@ -113,9 +114,10 @@ function render(s) {
     document.querySelectorAll('[name="profile"]').forEach(input => input.checked = input.value === c.profile);
     displayedProfile = c.profile;
   }
-  text('camera-detail', c.error || `${c.profile} · ${c.encoder || 'H.264'} / NVMM`);
+  const cameraDetail = c.error || c.warning || `${c.profile} · ${c.encoder || 'H.264'} / NVMM`;
+  if ($('camera-detail').textContent !== cameraDetail) text('camera-detail', cameraDetail);
   cams.forEach(cam => { const i = cam.sensor_id; text(`fps-${i}`, cam.ready ? cam.fps.toFixed(1) : '—');
-    text(`camera-specs-${i}`, `${c.settings.width}×${c.settings.height} · H.264 ${cam.encoded_fps} fps / ${cam.encoded_mbps} Mbps · Preview ${cam.preview_delivery_fps ?? cam.preview_fps} fps`); });
+    text(`camera-specs-${i}`, cam.error || `${c.settings.width}×${c.settings.height} · H.264 ${cam.encoded_fps} fps / ${cam.encoded_mbps} Mbps · Preview ${cam.preview_delivery_fps ?? cam.preview_fps} fps`); });
   previews();
   renderAudio(a);
   const speaker = a.speaker; text('speaker-state', speaker.state === 'synthesizing' ? 'TTS 음성 합성 중' : speaker.state === 'playing' ? '스피커 재생 중' : speaker.last_result ? `스피커 PCM ${speaker.last_result.ok ? '재생 성공' : '재생 실패'}` : '스피커 대기 · 시험 버튼으로 확인');
@@ -300,15 +302,23 @@ function chooseEye(id) {
 }
 function expressionControls(s) {
   const p = s?.pico, state = s?.eye_expression, d = p?.device || {}, running = d.running;
+    const automatic = state?.automatic;
   const online = Boolean(p?.connected), absent = p?.installation?.matrix_connected === false;
   const busy = Boolean(running && running !== 'None' && running !== 'Idle');
   const testSwitch = Number(d.config?.test_switch || 0), held = testSwitch > 0 && Boolean((d.pressed_mask || 0) & (1 << (testSwitch - 1)));
   $('expression-play').disabled = !selectedEye || !online || absent || busy || held || eyeRequestPending || Boolean(state?.stopping);
   $('expression-stop').disabled = !online || (!state?.active && !eyeRequestPending) || Boolean(state?.stopping);
+    $('expression-automatic').disabled = absent || eyeRequestPending;
+    $('expression-automatic').setAttribute('aria-pressed', String(Boolean(automatic?.enabled)));
+    text('expression-automatic', automatic?.enabled ? '자동 표정 끄기' : '자동 표정 켜기');
+    const actionNames = {writing:'필기', reading:'읽기', typing:'키보드 입력', phone_use:'휴대전화 사용', eating_drinking:'음식·음료', handling_objects:'물건 다루기', looking_away:'시선 이동'};
+    const automaticReason = (automatic?.reason || '기본 눈').replace(/^관찰 행동 · ([a-z_]+)$/, (_, action) => '관찰 행동 · ' + (actionNames[action] || '주변 활동'));
+    const automaticMessage = automatic?.enabled ? `20초마다 선택 · ${automaticReason}${automatic.waiting ? ' · ' + automatic.waiting : ''}` : '자동 표정이 중지되어 있습니다. 켜면 기본 눈을 계속 표시합니다.';
+    if ($('expression-automatic-state').textContent !== automaticMessage) text('expression-automatic-state', automaticMessage);
   const error = eyeNotice || state?.error;
   $('expression-state').classList.toggle('is-error', Boolean(error));
-  let message = error || (!online ? '미리보기 가능 · Pico 연결을 기다리는 중' : absent ? '도트매트릭스 연결 설정을 확인해 주세요.' : state?.stopping ? '표정을 끄고 있습니다.' : state?.active ? `${state.name} 표시 중 · ${Math.ceil(state.remaining_ms / 1000)}초 뒤 자동 소등` : busy ? '다른 장치 시험이 끝나면 표정을 표시할 수 있어요.' : state?.last?.result === 'completed' ? `${state.last.name} · 표시 완료, 소등됨` : state?.last?.result === 'stopped' ? '표정을 껐습니다. 새 시험을 선택해 주세요.' : '선택하면 미리보기 · 시험을 누르면 양쪽 눈에 표시');
-  text('expression-state', message);
+    let message = error || (!online ? '미리보기 가능 · Pico 연결을 기다리는 중' : absent ? '도트매트릭스 연결 설정을 확인해 주세요.' : state?.stopping ? '표정을 끄고 있습니다.' : state?.active ? state.persistent ? `${state.name} · 계속 표시 중` : `${state.name} 표시 중 · ${Math.ceil(state.remaining_ms / 1000)}초 뒤 ${automatic?.enabled ? '자동 표정으로 복귀' : '자동 소등'}` : busy ? '다른 장치 시험이 끝나면 표정을 표시할 수 있어요.' : state?.last?.result === 'completed' ? `${state.last.name} · 표시 완료` : state?.last?.result === 'stopped' ? '표정을 껐습니다. 자동 표정 켜기로 다시 시작할 수 있어요.' : '선택하면 미리보기 · 시험을 누르면 양쪽 눈에 표시');
+    if ($('expression-state').textContent !== message) text('expression-state', message);
   if (online && state?.active) text('matrix-status', `${state.name} · 표정 표시 중`);
   previewEyes();
 }
@@ -342,6 +352,12 @@ $('expression-stop').onclick = async () => {
   catch (error) { eyeNotice = error.message; }
   finally { eyeRequestPending = false; expressionControls(lastState); }
 };
+  $('expression-automatic').onclick = async () => {
+    eyeRequestPending = true; eyeNotice = ''; expressionControls(lastState);
+    try { await post('/api/pico/expressions/automatic', {enabled: !lastState?.eye_expression?.automatic?.enabled}); }
+    catch (error) { eyeNotice = error.message; }
+    finally { eyeRequestPending = false; expressionControls(lastState); }
+  };
 setInterval(previewEyes, 100);
 loadEyes();
 connect();

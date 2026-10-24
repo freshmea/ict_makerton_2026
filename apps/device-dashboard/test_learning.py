@@ -1,7 +1,9 @@
 """Persistence, capture gaps, switch edges, finite Live lifecycle and route guards."""
 import asyncio
+import base64
 import json
 import os
+import sqlite3
 from pathlib import Path
 import tempfile
 import threading
@@ -10,7 +12,7 @@ import unittest
 from urllib.parse import urlsplit
 from unittest.mock import AsyncMock, Mock, patch
 
-from learning import Learning, Live, SwitchTrigger
+from learning import Learning, Live
 from learning_store import Store
 
 
@@ -57,6 +59,93 @@ class StoreTests(unittest.TestCase):
         self.store.finish(self.batch(), error='timeout')
         self.assertEqual(self.store.summary(until=200)['actions'], [])
         self.assertEqual(self.store.summary(until=200)['usage']['total_tokens'], 0)
+
+    def test_history_is_latest_ten_saved_records_before_capture_across_both_cameras(self):
+        for at in range(100, 180, 10):self.store.finish(self.batch(at), result=result())
+        self.store.finish(self.batch(180), error='timeout')
+        self.store.finish(self.batch(5000), result=result())
+        batch = self.batch(200)
+        history = self.store.observation_history(batch)
+        self.assertEqual([row['id'] for row in history], list(range(7, 17)))
+        self.assertEqual([row['camera'] for row in history], [0, 1] * 5)
+        self.assertNotIn('sha256', history[0])
+        self.assertEqual(len(history), 10)
+
+    def test_semantic_duplicates_do_not_repeat_content_but_usage_is_preserved(self):
+        self.store.finish(self.batch(100), result=result())
+        batch = self.batch(110); history = self.store.observation_history(batch)
+        data = result()
+        for item, previous in zip(data['cameras'], history):
+            item.update(description='손으로 책에 글씨를 쓰고 있다.', duplicate_of=previous['id'])
+        self.assertEqual(self.store.finish(batch, result=data, history=history), {'saved':0,'duplicates':2})
+        self.assertEqual(len(self.store.records(until=200)['records']), 2)
+        summary = self.store.summary(until=200)
+        self.assertEqual(summary['duplicate_count'], 2)
+        self.assertEqual(summary['usage']['total_tokens'], 30)
+        self.assertEqual(summary['actions'], [{'value':'writing','count':2}])
+        with self.store.connect() as db:
+            rows = db.execute('SELECT * FROM observations WHERE batch_id=?', (batch,)).fetchall()
+            self.assertEqual([r['status'] for r in rows], ['duplicate','duplicate'])
+            self.assertTrue(all(r['description'] is None and r['actions_json'] is None for r in rows))
+            raw = db.execute('SELECT result_json FROM batches WHERE id=?', (batch,)).fetchone()[0]
+        self.assertNotIn('손으로', raw)
+        self.assertEqual(json.loads(raw)['cameras'], [{'camera':0,'duplicate_of':1},{'camera':1,'duplicate_of':2}])
+        self.assertEqual(len(self.store.observation_history(self.batch(120))), 2)
+
+    def test_exact_repeat_is_suppressed_even_if_model_returns_null(self):
+        self.store.finish(self.batch(), result=result())
+        batch = self.batch(110)
+        data = result(); data['cameras'][0]['confidence'] = .4
+        data['cameras'][0]['description'] = '  책에   필기하는 손이 보인다.  '
+        stats = self.store.finish(batch, result=data, history=self.store.observation_history(batch))
+        self.assertEqual(stats, {'saved':0,'duplicates':2})
+
+    def test_new_content_and_return_after_intervening_action_remain_new(self):
+        self.store.finish(self.batch(), result=result())
+        batch = self.batch(110); data = result()
+        for item in data['cameras']:item.update(description='책을 읽는 손이 보인다.', actions=['reading'])
+        self.assertEqual(self.store.finish(batch, result=data, history=self.store.observation_history(batch))['saved'], 2)
+        batch = self.batch(120)
+        self.assertEqual(self.store.finish(batch, result=result(), history=self.store.observation_history(batch))['saved'], 2)
+        self.assertEqual(len(self.store.records(until=200)['records']), 6)
+
+    def test_same_action_with_new_description_is_preserved_when_not_marked_duplicate(self):
+        self.store.finish(self.batch(), result=result())
+        batch = self.batch(110); data = result()
+        for item in data['cameras']:item['description'] = '새 공책에 필기하는 손과 계산기가 보인다.'
+        self.assertEqual(self.store.finish(batch, result=data, history=self.store.observation_history(batch))['saved'], 2)
+
+    def test_wrong_camera_or_old_reference_rolls_back_without_losing_pending_rows(self):
+        self.store.finish(self.batch(), result=result())
+        self.store.finish(self.batch(110), result=result())
+        for duplicate in (1, 4, True, 999):
+            batch = self.batch(120); data = result()
+            data['cameras'][0]['duplicate_of'] = duplicate
+            with self.assertRaisesRegex(ValueError, 'duplicate_reference_invalid'):
+                self.store.finish(batch, result=data, history=self.store.observation_history(batch))
+            with self.store.connect() as db:
+                self.assertEqual([r[0] for r in db.execute('SELECT status FROM observations WHERE batch_id=?',(batch,))], ['pending','pending'])
+
+    def test_duplicate_samples_keep_live_reference_fresh_without_extra_behavior_counts(self):
+        self.store.finish(self.batch(100), result=result())
+        batch = self.batch(2000)
+        self.store.finish(batch, result=result(), history=self.store.observation_history(batch))
+        reference = self.store.live_reference(now=2005)
+        self.assertEqual([r['id'] for r in reference['observations']], [1,2])
+        self.assertEqual([r['age_seconds'] for r in reference['observations']], [5,5])
+        self.assertTrue(all(r['description'] for r in reference['observations']))
+        self.assertEqual(reference['frequent_actions'], [])
+
+    def test_eye_context_uses_recent_duplicate_sample_and_excludes_stale_and_failed_rows(self):
+        self.store.finish(self.batch(100),result=result())
+        batch=self.batch(2000)
+        self.store.finish(batch,result=result(),history=self.store.observation_history(batch))
+        self.store.finish(self.batch(2001),error='timeout')
+        rows=self.store.eye_observations(now=2005)
+        self.assertEqual([r['id'] for r in rows],[1,2])
+        self.assertEqual([r['captured'] for r in rows],[2000,2000])
+        self.assertTrue(all(r['actions']==['writing'] for r in rows))
+        self.assertEqual(self.store.eye_observations(now=2121),[])
 
     def test_time_keyword_cursor_and_annotation_survive_roundtrip(self):
         for at in (100, 110, 120):
@@ -124,31 +213,49 @@ class StoreTests(unittest.TestCase):
         restored = Store(self.path)
         self.assertEqual(len(restored.records(until=200)['records']), 2)
         with restored.connect() as db:
-            self.assertEqual(db.execute('PRAGMA user_version').fetchone()[0], 2)
+            self.assertEqual(db.execute('PRAGMA user_version').fetchone()[0], 3)
             self.assertEqual(db.execute('SELECT count(*) FROM live_contexts').fetchone()[0], 0)
 
+    def test_v2_database_adds_duplicate_reference_without_changing_existing_content(self):
+        path = self.path.with_name('legacy.db')
+        with sqlite3.connect(str(path)) as db:
+            db.executescript('''CREATE TABLE batches(id TEXT PRIMARY KEY,created REAL,model TEXT,
+                prompt_version TEXT,request_id TEXT,usage_json TEXT,result_json TEXT,error TEXT);
+                CREATE TABLE observations(id INTEGER PRIMARY KEY AUTOINCREMENT,batch_id TEXT,camera INTEGER,
+                captured REAL,status TEXT,generation TEXT,sha256 TEXT,frame_stamp_ns INTEGER,bytes INTEGER,
+                description TEXT,keywords_json TEXT,actions_json TEXT,confidence REAL,uncertainty TEXT,error TEXT,live_id TEXT);
+                INSERT INTO batches(id,created) VALUES ('legacy',100);
+                PRAGMA user_version=2;''')
+            db.execute("INSERT INTO observations(batch_id,camera,captured,status,description) VALUES ('legacy',0,100,'success',?)", ('기존 관찰 내용',))
+        restored = Store(path)
+        row = restored.records(until=200)['records'][0]
+        self.assertEqual(row['description'], '기존 관찰 내용')
+        self.assertIsNone(row['duplicate_of'])
+        with restored.connect() as db:self.assertEqual(db.execute('PRAGMA user_version').fetchone()[0], 3)
 
-class SwitchTests(unittest.TestCase):
-    def state(self, count, mask=0, session='a', connected=True):
-        return {'connected': connected, 'session': session, 'device': {'pressed_mask': mask,
-                'touches': [{'press_count': count}]}}
 
-    def test_seed_hold_release_and_usb_reconnect_do_not_start(self):
-        trigger = SwitchTrigger()
-        self.assertFalse(trigger.update(self.state(3, 1)))
-        self.assertFalse(trigger.update(self.state(3, 1)))
-        self.assertFalse(trigger.update(self.state(3, 0)))
-        self.assertTrue(trigger.update(self.state(4, 1)))
-        self.assertFalse(trigger.update(self.state(4, 1)))
-        self.assertFalse(trigger.update(self.state(0, 1, 'b')))
-        self.assertFalse(trigger.update(self.state(1, 0, connected=False)))
-        self.assertFalse(trigger.update(self.state(2, 0)))
-
-    def test_short_press_detected_by_counter_between_polls(self):
-        trigger = SwitchTrigger()
-        trigger.update(self.state(0))
-        self.assertTrue(trigger.update(self.state(1)))
-        self.assertFalse(trigger.update(self.state(1)))
+class AnalysisTests(unittest.IsolatedAsyncioTestCase):
+    async def test_each_request_uses_history_after_previous_batch_was_committed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {'LEARNING_AUTOSTART':'0'}):
+                manager = Learning(Mock(), Mock(), Mock(), Mock(), Path(directory)/'db')
+            manager.enabled = True
+            def capture(at):return manager.store.capture([{'camera':c,'captured':at} for c in (0,1)])
+            manager.store.finish(capture(100), result=result())
+            for at in (110,120):
+                manager.queue.put_nowait((capture(at), [{'camera':0,'jpeg':'fixture'},{'camera':1,'jpeg':'fixture'}]))
+            calls = []
+            async def describe(command):
+                calls.append(json.loads(json.dumps(command)))
+                data = result()
+                for item in data['cameras']:item.update(description='책을 읽는다.',actions=['reading'])
+                if len(calls) == 2:manager.running = False
+                return data
+            with patch('learning.rpc', new=describe):await manager.analysis_loop()
+            self.assertEqual([r['id'] for r in calls[0]['history']], [1,2])
+            self.assertEqual([r['id'] for r in calls[1]['history']], [1,2,3,4])
+            self.assertEqual(manager.last_analysis, {'saved':0,'duplicates':2})
+            self.assertEqual(len(manager.store.records(until=200)['records']), 4)
 
 
 class CaptureTests(unittest.TestCase):
@@ -206,6 +313,7 @@ class LiveTests(unittest.IsolatedAsyncioTestCase):
         self.store = Store(Path(self.tmp.name) / 'db')
         self.audio = Mock(play_lock=threading.Lock(), snapshot=lambda: {'connected': True})
         self.audio.subscribe_pcm.return_value = Mock()
+        self.audio.feedback_active.return_value = False
         self.live = Live(self.audio, self.store, Mock())
         self.reader = asyncio.StreamReader()
         self.reader.feed_data(b'{"type":"session.started","session":{"id":"live-test"}}\n')
@@ -246,6 +354,87 @@ class LiveTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(self.live.state['phase'], 'failed')
         self.assertNotIn('secret', json.dumps(self.store.live_history()))
         self.assertFalse(self.audio.play_lock.locked())
+
+    async def test_button_feedback_mutes_microphone_and_ducks_live_output(self):
+        self.audio.feedback_active.return_value = True
+        self.audio.gain_db = 0
+        self.audio.process_pcm.side_effect = lambda data, gain: (data, {})
+        def subscribe(loop, queue):
+            queue.put_nowait(b'\x01\x00' * 4800)
+            return Mock()
+        self.audio.subscribe_pcm.side_effect = subscribe
+        outgoing = []
+        def write(data):
+            value = json.loads(data)
+            if value.get('type') == 'session.input_audio.append':
+                outgoing.append(base64.b64decode(value['audio']))
+                self.reader.feed_data(b'{"type":"session.closed","usage":{"seconds":1}}\n')
+        self.writer.write.side_effect = write
+        raw = b'\x40\x1f' * 2400  # sample 8000 -> 2000 when ducked
+        self.reader.feed_data(json.dumps({'type': 'session.output_audio.delta',
+                                         'delta': base64.b64encode(raw).decode()}).encode() + b'\n')
+        with patch('learning.open_stream', AsyncMock(return_value=(self.reader, self.writer))), \
+                patch('asyncio.create_subprocess_exec', AsyncMock(return_value=self.player)):
+            await self.live.start()
+            await self.live.task
+        self.assertTrue(outgoing)
+        self.assertEqual(set(outgoing[0]), {0})
+        self.assertEqual(self.player.stdin.write.call_args.args[0], b'\xd0\x07' * 2400)
+
+    async def test_announcement_finishes_before_database_or_api_and_end_cue_runs_once(self):
+        order = []
+        def cue():
+            self.assertTrue(self.audio.play_lock.locked())
+            self.assertFalse(self.store.live_history()['sessions'])
+            order.extend(['start_voice', 'long_beep'])
+        async def connect(*args):
+            order.append('api')
+            return self.reader, self.writer
+        def end():
+            self.audio.subscribe_pcm.return_value.assert_called_once()
+            self.assertTrue(self.audio.play_lock.locked())
+            order.append('end_voice')
+        self.live.end_cue = end
+        self.reader.feed_data(b'{"type":"session.closed","usage":{"seconds":1}}\n')
+        with patch('learning.open_stream', side_effect=connect), \
+                patch('asyncio.create_subprocess_exec', AsyncMock(return_value=self.player)):
+            await self.live.start(source='SW1-hold4', before_start=cue)
+            await self.live.task
+        self.assertEqual(order, ['start_voice', 'long_beep', 'api', 'end_voice'])
+        self.assertFalse(self.audio.play_lock.locked())
+
+    async def test_failed_announcement_never_creates_a_session_or_calls_api(self):
+        def fail(): raise RuntimeError('speaker unavailable')
+        with patch('learning.open_stream') as api:
+            with self.assertRaisesRegex(RuntimeError, 'speaker unavailable'):
+                await self.live.start(before_start=fail)
+            api.assert_not_called()
+        self.assertFalse(self.store.live_history()['sessions'])
+        self.assertFalse(self.audio.play_lock.locked())
+
+    async def test_stop_during_announcement_cancels_without_creating_a_session(self):
+        entered, release = threading.Event(), threading.Event()
+        def cue(): entered.set(); release.wait(2)
+        with patch('learning.open_stream') as api:
+            task = asyncio.create_task(self.live.start(before_start=cue))
+            self.assertTrue(await asyncio.get_running_loop().run_in_executor(None, entered.wait, 1))
+            self.live.stop()
+            release.set()
+            await task
+            api.assert_not_called()
+        self.assertFalse(self.store.live_history()['sessions'])
+        self.assertFalse(self.audio.play_lock.locked())
+
+    async def test_end_cue_failure_still_releases_audio_and_finalizes_database(self):
+        self.live.end_cue = Mock(side_effect=RuntimeError('speaker unavailable'))
+        self.reader.feed_data(b'{"type":"session.closed","usage":{"seconds":1}}\n')
+        with patch('learning.open_stream', AsyncMock(return_value=(self.reader, self.writer))), \
+                patch('asyncio.create_subprocess_exec', AsyncMock(return_value=self.player)):
+            await self.live.start()
+            await self.live.task
+        self.live.end_cue.assert_called_once()
+        self.assertFalse(self.audio.play_lock.locked())
+        self.assertEqual(self.store.live_history()['sessions'][0]['finalized'], 1)
 
 
 class RouteTests(unittest.TestCase):

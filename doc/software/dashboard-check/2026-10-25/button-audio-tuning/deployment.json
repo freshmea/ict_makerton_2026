@@ -1,0 +1,14 @@
+{
+  "stage": "/tmp/button-audio-tuning-20261024T170236Z",
+  "assets": "/var/lib/300seconds-dashboard/button-audio-tuning-20261024T170236Z",
+  "was_enabled": true,
+  "backup": "/var/lib/300seconds-dashboard/backups/button-audio-tuning-20261024T170236Z",
+  "labels": [
+    "일번",
+    "이번",
+    "삼번",
+    "사번",
+    "오번",
+    "육번"
+  ]
+}

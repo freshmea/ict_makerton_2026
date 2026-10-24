@@ -3,7 +3,7 @@
   const $ = id => document.getElementById(id);
   const labels = {reading: '읽기', writing: '필기', typing: '키보드 입력', phone_use: '휴대전화 사용', looking_away: '시선 이동', eating_drinking: '음식·음료', handling_objects: '물건 다루기', person_present: '사람 관찰', seat_empty: '빈 자리 관찰', unknown: '판단 불가'};
   const statuses = {pending: '분석 대기', success: '분석 완료', camera_error: '카메라 오류', provider_error: 'API 오류', dropped: '대기열 초과', skipped: '전송 보류', cancelled: '수집 중지', interrupted: '재시작 중단'};
-  const phases = {idle: '대화 준비', connecting: 'GPT Live 연결 중', active: '대화 중', closing: '연결 종료 중', completed: '대화 종료', failed: '연결 실패'};
+  const phases = {idle: '대화 준비', preparing: '시작 안내·비프음 재생 중', connecting: 'GPT Live 연결 중', active: '대화 중', closing: '연결 종료 중', completed: '대화 종료', failed: '연결 실패'};
   let state, busy = false, pollTimer, polling = false, recordsBefore = null, expanded = false;
   let query = new URLSearchParams(), liveBefore = null, selectedSession = '', clockUntil = 0, queryVersion = 0;
   let lastRecords = 0, autoSession = true, historyExpanded = false;
@@ -28,7 +28,7 @@
   function render(value) {
     state = value;
     const provider = value.provider || {}, live = value.live || {};
-    const active = ['connecting', 'active', 'closing'].includes(live.phase);
+    const active = ['preparing', 'connecting', 'active', 'closing'].includes(live.phase);
     $('collection-start').disabled = busy || value.enabled || !provider.configured;
     $('collection-stop').disabled = busy || !value.enabled;
     $('live-start').disabled = busy || active || !provider.configured;
@@ -37,9 +37,9 @@
     put('collection-badge', value.enabled ? '수집 중' : '중지');
     put('collection-queue', value.queued_batches ?? '—');
     put('collection-state', value.error ? `최근 오류: ${value.error}` : value.enabled ? `두 카메라 · 10초 간격${value.last_capture ? ' · 최근 수집 ' + time(value.last_capture) : ''}` : '수집이 중지되어 있습니다. 이미 전송한 요청은 완료 후 저장됩니다.');
-    put('collection-provider', `${provider.vision_model || '분석 모델 확인 필요'} · 사진은 OpenAI로 전송 · 원본 사진 DB 저장 없음 · 창을 닫아도 수집 계속`);
+    put('collection-provider', `${provider.vision_model || '분석 모델 확인 필요'} · 최근 ${value.history_limit || 10}개 기록을 함께 비교 · 중복 내용 생략 · 사진은 OpenAI로 전송 · 원본 사진 DB 저장 없음 · 창을 닫아도 수집 계속`);
     put('live-phase', phases[live.phase] || '상태 확인');
-    put('live-state', live.error || (live.phase === 'active' ? '보드 마이크·스피커 사용 중 · SW1로도 종료할 수 있습니다.' : active ? phases[live.phase] : provider.configured ? 'gpt-live-1 · 보드 SW1 또는 대화 시작 버튼을 누르세요.' : 'OpenAI 분석 서비스 연결이 필요합니다.'));
+    put('live-state', live.error || (live.phase === 'active' ? '보드 마이크·스피커 사용 중 · 1번을 4카운트(약 3.2초) 길게 누르면 종료합니다.' : active ? phases[live.phase] : provider.configured ? '1번을 4카운트(약 3.2초) 길게 누르세요. 시작 안내와 비프음 뒤 연결합니다.' : 'OpenAI 분석 서비스 연결이 필요합니다.'));
     const education = live.education || provider.education;
     put('live-education', education ? `교육 지침 ${education.version} · SHA ${education.sha256.slice(0, 12)} · ${live.server_confirmed && Object.values(live.server_confirmed).every(Boolean) ? '현재 세션 API 적용 확인' : '다음 세션에 적용'}` : '교육 프롬프트 상태를 확인할 수 없습니다.');
     put('live-reference', live.reference ? `이번 대화 DB 참조 · 관찰 ${live.reference.observation_ids.length}건 · 이전 학습 대화 ${live.reference.previous_session_ids.length}건 · 시작 시점의 자료` : '시작할 때 최근 30분 관찰과 최근 24시간의 학습 대화를 참조합니다.');
@@ -98,10 +98,11 @@
     if (append) expanded = true;
     if (summary) {
       const success = summary.counts.filter(c => c.status === 'success').reduce((n, c) => n + c.count, 0);
-      const errors = summary.counts.filter(c => !['success', 'pending'].includes(c.status)).reduce((n, c) => n + c.count, 0);
+      const errors = summary.counts.filter(c => !['success', 'pending', 'duplicate'].includes(c.status)).reduce((n, c) => n + c.count, 0);
+      const duplicates = summary.duplicate_count || 0;
       put('collection-success', success.toLocaleString()); put('collection-errors', errors.toLocaleString());
       tags('learning-actions', summary.actions, true); tags('learning-keywords', summary.keywords, false);
-      put('learning-query-state', `조회 범위 · 분석 ${success}건 · 실패·누락 ${errors}건 · 확인된 사용 토큰 ${(summary.usage.total_tokens || 0).toLocaleString()} (묶음별 집계)`);
+      put('learning-query-state', `조회 범위 · 저장 ${success}건 · 중복 ${duplicates}건 생략 · 실패·누락 ${errors}건 · 확인된 사용 토큰 ${(summary.usage.total_tokens || 0).toLocaleString()} (묶음별 집계)`);
       for (const sensor of [0, 1]) {
         const record = page.records.find(r => r.camera === sensor);
         put(`collection-camera-${sensor}`, record ? `${time(record.captured)} · ${record.description || record.error || statuses[record.status]}` : '조회 범위 내 관찰 자료 없음');

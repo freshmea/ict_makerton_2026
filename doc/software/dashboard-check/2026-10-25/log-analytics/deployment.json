@@ -1,0 +1,46 @@
+{
+  "backup": "/var/lib/300seconds-dashboard/backups/log-analytics-egcb__yj",
+  "collection_before": true,
+  "automatic_eyes_before": true,
+  "files": [
+    {
+      "path": "/opt/300seconds/dashboard/app/app.py",
+      "sha256": "baf4f8a8db6e803d2a9eec841e717306c0563f6a4e3c9915834e2bfac1a0457f"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/log_analytics.py",
+      "sha256": "cec2f9ac77c3672d40412608ac7dd7d3c2eecfba386579b30b1500454e57e7be"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/analytics_routes.py",
+      "sha256": "74a0ead010faab92e67134aaecd8252010064f14d60870d1a95fc56f22fc5e72"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/index.html",
+      "sha256": "813c8493a45af8a18594daab4b520973a0138406a070851d5bcc948f411c34b3"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/styles.css",
+      "sha256": "e735410045954f8aa51c6d8ff84ff98dd4fcd967d7735e91b8ca8c52d3fbe0df"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/analytics.html",
+      "sha256": "7b9d369d05bdc0725055f2c6c0ea8a7ffade92e5270a4f694db4d8d5b5b25b4b"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/analytics.css",
+      "sha256": "246f4c60d82d773b631d6a074f2114afa5fcaeb128c40effd21cfd42343bd3a1"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/analytics.js",
+      "sha256": "1d6ba98bb560b8e9ba3a3fad0a156553633bee1d997ed2f626c408281da2358b"
+    }
+  ],
+  "status": "ok",
+  "collection_restored": true,
+  "automatic_eyes_preserved": true,
+  "real_observations_preserved": 4380,
+  "demo_isolated": true,
+  "demo_days": 359,
+  "real_observed_samples": 1471
+}

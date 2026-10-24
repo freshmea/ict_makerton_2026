@@ -1,0 +1,14 @@
+{
+  "stage": "/tmp/button-live-hold4-20261024T172014Z",
+  "assets": "/var/lib/300seconds-dashboard/button-live-hold4-20261024T172014Z",
+  "was_enabled": true,
+  "backup": "/var/lib/300seconds-dashboard/backups/button-live-hold4-20261024T172014Z",
+  "labels": [
+    "라이브 대화 시작",
+    "이번",
+    "삼번",
+    "사번",
+    "오번",
+    "육번"
+  ]
+}

@@ -1,0 +1,2 @@
+All four profiles and both encoder branches: camera1=180, camera2=0
+<stdin>:3: PyGIWarning: Gst was imported without specifying a version first. Use gi.require_version('Gst', '1.0') before import to ensure that the right version gets loaded.

@@ -1,0 +1,36 @@
+{
+  "source_matches": {
+    "/opt/300seconds/dashboard/app/app.py": true,
+    "/opt/300seconds/dashboard/app/learning.py": true,
+    "/opt/300seconds/dashboard/app/button_audio.py": true,
+    "/opt/300seconds/dashboard/app/study_reaction.py": true,
+    "/opt/300seconds/dashboard/app/static/index.html": true,
+    "/opt/300seconds/dashboard/app/static/study.js": true,
+    "/opt/300seconds/jetson/openai-study-observer.py": true,
+    "/opt/300seconds/jetson/study_window.py": true,
+    "/opt/300seconds/jetson/study_observer_service.py": true
+  },
+  "services": {
+    "300seconds-dashboard": "active",
+    "300seconds-observer": "active",
+    "300seconds-tts": "active"
+  },
+  "persistent_results": [
+    {
+      "file": "/var/lib/300seconds-dashboard/study-reactions/3184d231ff944d699ede0a000d9506f1.json",
+      "phase": "completed",
+      "speech": "played",
+      "servos": 4
+    },
+    {
+      "file": "/var/lib/300seconds-dashboard/study-reactions/4d6219ee27094e7db8b8b43c4668d311.json",
+      "phase": "completed",
+      "speech": "played",
+      "servos": 4
+    }
+  ],
+  "learning_enabled": true,
+  "live_phase": "idle",
+  "faults": 0,
+  "decisions_attempts": 2
+}

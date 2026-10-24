@@ -86,5 +86,31 @@ class TelemetryTests(unittest.TestCase):
             (root / 'camera-state.json').write_text(json.dumps(payload))
             self.assertTrue(cameras.snapshot()['ready'])
 
+    def test_one_missing_camera_does_not_block_healthy_preview_or_enable_dual_analysis(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            with patch.dict(os.environ,DASHBOARD_SETTINGS=str(root/'settings.json')):
+                cameras=Cameras(root,EventLog())
+            cameras.run_id='current';cameras.process=Mock();cameras.process.poll.return_value=None
+            payload={'run_id':'current','uptime_seconds':30,'updated_monotonic':time.monotonic(),
+                     'cameras':[{'sensor_id':0,'ready':True,'preview_age_ms':20},
+                                {'sensor_id':1,'ready':False,'preview_age_ms':None}]}
+            (root/'camera-state.json').write_text(json.dumps(payload))
+            state=cameras.snapshot()
+            self.assertFalse(state['ready'])
+            self.assertTrue(Cameras.can_preview(state,0))
+            self.assertFalse(Cameras.can_preview(state,1))
+            self.assertIn('영상',state['cameras'][1]['error'])
+            import app
+            (root/'cam0.jpg').write_bytes(b'fresh-frame-fixture')
+            with patch.object(app.app.state,'cameras',cameras,create=True):
+                self.assertEqual(app.camera_snapshot(0).body,b'fresh-frame-fixture')
+                from fastapi import HTTPException
+                with self.assertRaises(HTTPException) as caught:app.camera_snapshot(1)
+                self.assertEqual(caught.exception.status_code,503)
+            payload['updated_monotonic']=time.monotonic()-3
+            (root/'camera-state.json').write_text(json.dumps(payload))
+            self.assertFalse(Cameras.can_preview(cameras.snapshot(),0))
+
 
 if __name__ == '__main__': unittest.main()

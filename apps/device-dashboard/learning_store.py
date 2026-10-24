@@ -1,6 +1,7 @@
 """Versioned SQLite evidence store. JPEG/audio bytes and credentials never enter it."""
 from collections import Counter
 from contextlib import contextmanager
+import copy
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -8,8 +9,10 @@ from pathlib import Path
 import sqlite3
 import time
 import uuid
+import unicodedata
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
+HISTORY_LIMIT = 10
 REFERENCE_MAX_BYTES = 6500
 
 
@@ -21,13 +24,20 @@ def encode(value):
     return json.dumps(value, ensure_ascii=False, allow_nan=False, separators=(',', ':'))
 
 
+def observation_key(item):
+    def text(value):
+        return ' '.join(unicodedata.normalize('NFKC', value or '').casefold().split())
+    return (text(item['description']), tuple(sorted({text(k) for k in item['keywords']})),
+            tuple(sorted(set(item['actions']))), text(item['uncertainty']))
+
+
 class Store:
     def __init__(self, path):
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         with self.connect() as db:
             version = db.execute('PRAGMA user_version').fetchone()[0]
-            if version not in (0, 1, 2):
+            if version not in (0, 1, 2, 3):
                 raise RuntimeError('Unsupported learning database schema')
             db.executescript('''
                 PRAGMA journal_mode=WAL;
@@ -41,6 +51,7 @@ class Store:
                     status TEXT NOT NULL,generation TEXT,sha256 TEXT,frame_stamp_ns INTEGER,
                     bytes INTEGER,description TEXT,keywords_json TEXT,actions_json TEXT,
                     confidence REAL,uncertainty TEXT,error TEXT,live_id TEXT,
+                    duplicate_of INTEGER REFERENCES observations(id),
                     UNIQUE(batch_id,camera));
                 CREATE INDEX IF NOT EXISTS observations_time ON observations(captured,camera);
                 CREATE TABLE IF NOT EXISTS annotations(
@@ -60,8 +71,11 @@ class Store:
                     session_id TEXT PRIMARY KEY REFERENCES live_sessions(id),created REAL NOT NULL,
                     reference_json TEXT NOT NULL,metadata_json TEXT NOT NULL,
                     education_json TEXT,confirmation_json TEXT);
-                PRAGMA user_version=2;
             ''')
+            if 'duplicate_of' not in {r['name'] for r in db.execute('PRAGMA table_info(observations)')}:
+                db.execute('ALTER TABLE observations ADD COLUMN duplicate_of INTEGER REFERENCES observations(id)')
+            db.execute('CREATE INDEX IF NOT EXISTS observations_status_time ON observations(status,captured,id)')
+            db.execute('PRAGMA user_version=3')
             db.execute("UPDATE observations SET status='interrupted',error='service_restart' WHERE status='pending'")
             db.execute("UPDATE live_sessions SET status='interrupted',ended=?,reason='service_restart' WHERE ended IS NULL", (time.time(),))
 
@@ -98,7 +112,21 @@ class Store:
                      frame.get('bytes'), frame.get('error'), live_id))
         return batch
 
-    def finish(self, batch, result=None, error=None, status='provider_error'):
+    def observation_history(self, batch):
+        """Latest ten saved observations before this capture, in chronological order."""
+        with self.connect() as db:
+            current = db.execute("SELECT min(captured),min(id) FROM observations WHERE batch_id=? AND status='pending'", (batch,)).fetchone()
+            if current[0] is None:
+                return []
+            rows = db.execute('''SELECT id,camera,captured,description,keywords_json,actions_json,uncertainty
+                FROM observations WHERE status='success' AND captured<=? AND id<?
+                ORDER BY captured DESC,id DESC LIMIT ?''', (current[0], current[1], HISTORY_LIMIT)).fetchall()
+        return [{'id': row['id'], 'camera': row['camera'], 'captured_at_utc': utc(row['captured']),
+                 'description': row['description'], 'keywords': json.loads(row['keywords_json'] or '[]'),
+                 'actions': json.loads(row['actions_json'] or '[]'), 'uncertainty': row['uncertainty'] or ''}
+                for row in reversed(rows)]
+
+    def finish(self, batch, result=None, error=None, status='provider_error', history=None):
         with self.connect() as db:
             if result is None:
                 db.execute('UPDATE batches SET error=? WHERE id=?', (error, batch))
@@ -108,15 +136,43 @@ class Store:
             expected = [r[0] for r in db.execute("SELECT camera FROM observations WHERE batch_id=? AND status='pending'", (batch,))]
             if sorted(expected) != sorted(item['camera'] for item in result['cameras']):
                 raise ValueError('camera_result_mismatch')
-            db.execute('UPDATE batches SET model=?,prompt_version=?,request_id=?,usage_json=?,result_json=? WHERE id=?',
-                       (result['model'], result['prompt_version'], result.get('request_id'),
-                        encode(result.get('usage', {})), encode(result), batch))
-            for item in result['cameras']:
+            # Keep only a reference for unchanged content, while retaining frame/usage accounting.
+            stored = copy.deepcopy(result)
+            latest = {item['camera']: item for item in history or []}
+            saved = duplicates = 0
+            for index, item in enumerate(stored['cameras']):
+                previous = latest.get(item['camera'])
+                duplicate = item.get('duplicate_of')
+                if duplicate is not None and (type(duplicate) is not int or previous is None or duplicate != previous['id']):
+                    raise ValueError('duplicate_reference_invalid')
+                if previous is not None:
+                    original = db.execute("SELECT camera,status FROM observations WHERE id=?", (previous['id'],)).fetchone()
+                    if original is None or original['camera'] != item['camera'] or original['status'] != 'success':
+                        raise ValueError('duplicate_reference_invalid')
+                    same_actions = set(item['actions']) == set(previous['actions'])
+                    unchanged = same_actions and (duplicate is not None or observation_key(item) == observation_key(previous))
+                else:
+                    unchanged = False
+                if unchanged:
+                    db.execute('''UPDATE observations SET status='duplicate',duplicate_of=?,
+                        description=NULL,keywords_json=NULL,actions_json=NULL,confidence=NULL,uncertainty=NULL
+                        WHERE batch_id=? AND camera=? AND status='pending' ''', (previous['id'], batch, item['camera']))
+                    stored['cameras'][index] = {'camera': item['camera'], 'duplicate_of': previous['id']}
+                    duplicates += 1
+                    continue
+                item['duplicate_of'] = None
                 db.execute('''UPDATE observations SET status='success',description=?,keywords_json=?,
-                    actions_json=?,confidence=?,uncertainty=? WHERE batch_id=? AND camera=?''',
+                    actions_json=?,confidence=?,uncertainty=?,duplicate_of=NULL WHERE batch_id=? AND camera=? AND status='pending' ''',
                     (item['description'], encode(list(dict.fromkeys(item['keywords']))),
                      encode(list(dict.fromkeys(item['actions']))), item['confidence'],
                      item['uncertainty'], batch, item['camera']))
+                saved += 1
+            if history is not None:
+                stored['history_ids'] = [item['id'] for item in history]
+            db.execute('UPDATE batches SET model=?,prompt_version=?,request_id=?,usage_json=?,result_json=? WHERE id=?',
+                       (result['model'], result['prompt_version'], result.get('request_id'),
+                        encode(result.get('usage', {})), encode(stored), batch))
+            return {'saved': saved, 'duplicates': duplicates}
 
     @staticmethod
     def filters(since=0, until=None, camera=None, keyword='', **ignored):
@@ -124,13 +180,16 @@ class Store:
         if camera is not None:
             where.append('o.camera=?'); args.append(camera)
         if keyword:
-            where.append('''(EXISTS (SELECT 1 FROM json_each(o.keywords_json) WHERE value=?)
-                OR EXISTS (SELECT 1 FROM json_each(o.actions_json) WHERE value=?))''')
+            where.append('''(EXISTS (SELECT 1 FROM json_each(COALESCE(o.keywords_json,
+                (SELECT keywords_json FROM observations WHERE id=o.duplicate_of))) WHERE value=?)
+                OR EXISTS (SELECT 1 FROM json_each(COALESCE(o.actions_json,
+                (SELECT actions_json FROM observations WHERE id=o.duplicate_of))) WHERE value=?))''')
             args.extend([keyword, keyword])
         return ' AND '.join(where), args
 
     def records(self, limit=50, before=None, **filters):
         where, args = self.filters(**filters)
+        where += " AND o.status!='duplicate'"
         if before is not None:
             where += ' AND o.id<?'; args.append(before)
         with self.connect() as db:
@@ -167,6 +226,7 @@ class Store:
                 for key in ('input_tokens', 'output_tokens', 'total_tokens'):
                     usage[key] += data.get(key, 0) or 0
         return {'counts': counts, 'actions': actions, 'keywords': keywords,
+                'duplicate_count': sum(row['count'] for row in counts if row['status'] == 'duplicate'),
                 'hourly': hourly, 'usage': dict(usage), 'schema_version': SCHEMA_VERSION,
                 'measure': 'sample_count; one still cannot establish behavior duration'}
 
@@ -182,6 +242,25 @@ class Store:
             db.execute('INSERT INTO live_sessions(id,started,mode,source,status) VALUES (?,?,?,?,?)',
                        (identifier, time.time(), mode, source, 'connecting'))
 
+    def eye_observations(self, now=None):
+        """Recent samples, including fresh unchanged samples linked to their saved content."""
+        now = time.time() if now is None else now
+        result = []
+        with self.connect() as db:
+            for camera in (0,1):
+                row = db.execute('''SELECT COALESCE(o.duplicate_of,o.id) AS id,o.camera,o.captured,
+                    COALESCE(o.keywords_json,d.keywords_json) AS keywords_json,
+                    COALESCE(o.actions_json,d.actions_json) AS actions_json,
+                    COALESCE(o.confidence,d.confidence) AS confidence
+                    FROM observations o LEFT JOIN observations d ON d.id=o.duplicate_of
+                    WHERE o.camera=? AND o.status IN ('success','duplicate') AND o.captured>=? AND o.captured<=?
+                    ORDER BY o.captured DESC,o.id DESC LIMIT 1''',(camera,now-120,now)).fetchone()
+                if row:
+                    result.append({'id':row['id'],'camera':camera,'captured':row['captured'],
+                        'keywords':json.loads(row['keywords_json'] or '[]'),
+                        'actions':json.loads(row['actions_json'] or '[]'),'confidence':row['confidence']})
+        return result
+
     def live_reference(self, now=None):
         """Small deterministic DB reference, not an extra LLM call or a learner diagnosis."""
         now = time.time() if now is None else now
@@ -189,10 +268,15 @@ class Store:
         observations, previous = [], []
         with self.connect() as db:
             for camera in (0, 1):
-                row = db.execute('''SELECT o.id,o.camera,o.captured,o.description,o.keywords_json,
-                    o.actions_json,o.confidence,o.uncertainty,a.label FROM observations o
-                    LEFT JOIN annotations a ON a.observation_id=o.id
-                    WHERE o.camera=? AND o.status='success' AND o.captured>=? AND o.captured<=?
+                row = db.execute('''SELECT COALESCE(o.duplicate_of,o.id) AS id,o.camera,o.captured,
+                    COALESCE(o.description,d.description) AS description,
+                    COALESCE(o.keywords_json,d.keywords_json) AS keywords_json,
+                    COALESCE(o.actions_json,d.actions_json) AS actions_json,
+                    COALESCE(o.confidence,d.confidence) AS confidence,
+                    COALESCE(o.uncertainty,d.uncertainty) AS uncertainty,a.label FROM observations o
+                    LEFT JOIN observations d ON d.id=o.duplicate_of
+                    LEFT JOIN annotations a ON a.observation_id=COALESCE(o.duplicate_of,o.id)
+                    WHERE o.camera=? AND o.status IN ('success','duplicate') AND o.captured>=? AND o.captured<=?
                     ORDER BY o.captured DESC,o.id DESC LIMIT 1''', (camera, since, now)).fetchone()
                 if row:
                     observations.append({'id': row['id'], 'camera': row['camera'],

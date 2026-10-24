@@ -1,0 +1,141 @@
+{
+  "personal_source_data": "excluded; originals retained locally",
+  "runs": [
+    {
+      "job_id": "4d6219ee27094e7db8b8b43c4668d311",
+      "phase": "completed",
+      "source": "dashboard",
+      "frame_count": 20,
+      "api_wall_ms": 4126.6,
+      "usage": {
+        "input_tokens": 7115,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7115
+      },
+      "cost_estimate_usd": "0.0007115",
+      "reaction": {
+        "kind": "unknown",
+        "rgb": [
+          230,
+          155,
+          25
+        ],
+        "speech": "played",
+        "led": "applied",
+        "servos": [
+          {
+            "servo": 1,
+            "from": 90,
+            "to": 94,
+            "returned": 90,
+            "acknowledged": true
+          },
+          {
+            "servo": 2,
+            "from": 90,
+            "to": 94,
+            "returned": 90,
+            "acknowledged": true
+          },
+          {
+            "servo": 3,
+            "from": 90,
+            "to": 94,
+            "returned": 90,
+            "acknowledged": true
+          },
+          {
+            "servo": 4,
+            "from": 90,
+            "to": 94,
+            "returned": 90,
+            "acknowledged": true
+          }
+        ],
+        "errors": []
+      },
+      "guard_http_status": {
+        "duplicate": 409,
+        "live": 409
+      },
+      "faults_after": 0,
+      "manual_servo_active_after": false,
+      "continuous_collection_enabled": true
+    },
+    {
+      "job_id": "3184d231ff944d699ede0a000d9506f1",
+      "phase": "completed",
+      "source": "dashboard",
+      "frame_count": 20,
+      "api_wall_ms": 777.3,
+      "usage": {
+        "input_tokens": 7115,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7115
+      },
+      "cost_estimate_usd": "0.0007115",
+      "reaction": {
+        "kind": "unknown",
+        "rgb": [
+          230,
+          155,
+          25
+        ],
+        "speech": "played",
+        "led": "applied",
+        "servos": [
+          {
+            "servo": 1,
+            "from": 90,
+            "to": 94,
+            "returned": 90,
+            "acknowledged": true
+          },
+          {
+            "servo": 2,
+            "from": 90,
+            "to": 94,
+            "returned": 90,
+            "acknowledged": true
+          },
+          {
+            "servo": 3,
+            "from": 90,
+            "to": 94,
+            "returned": 90,
+            "acknowledged": true
+          },
+          {
+            "servo": 4,
+            "from": 90,
+            "to": 94,
+            "returned": 90,
+            "acknowledged": true
+          }
+        ],
+        "errors": []
+      },
+      "guard_http_status": {
+        "duplicate": 409,
+        "live": 409
+      },
+      "faults_after": 0,
+      "manual_servo_active_after": false,
+      "continuous_collection_enabled": true
+    }
+  ]
+}

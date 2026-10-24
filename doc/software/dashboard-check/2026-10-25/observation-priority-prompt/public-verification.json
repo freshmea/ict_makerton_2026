@@ -1,0 +1,29 @@
+{
+  "prompt_version": "dual-observation-v5.1-presence-face-focus",
+  "prompt_sha256": "8f46fc1049a6e3d50e4362728ee8bdc8046bbb6d5afcda76f07b6a1a077e4e8e",
+  "collection_enabled": true,
+  "live_phase": "idle",
+  "source_labels": [
+    "자리:",
+    "얼굴:",
+    "표정·감정 단서:",
+    "집중 단서:"
+  ],
+  "camera_results": [
+    {
+      "camera": 0,
+      "status": "success",
+      "prompt_version": "dual-observation-v5.1-presence-face-focus",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "four_labels_present": true
+    },
+    {
+      "camera": 1,
+      "status": "success",
+      "prompt_version": "dual-observation-v5.1-presence-face-focus",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "four_labels_present": true
+    }
+  ],
+  "personal_source_data": "descriptions, uncertainty and keywords excluded; originals retained locally"
+}

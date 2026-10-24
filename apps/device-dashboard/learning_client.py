@@ -7,7 +7,7 @@ from observer_client import SOCKET
 async def open_stream(command):
     reader, writer = await asyncio.wait_for(asyncio.open_unix_connection(SOCKET, limit=1048577), 2)
     try:
-        writer.write(json.dumps(command).encode() + b'\n')
+        writer.write(json.dumps(command, ensure_ascii=False, allow_nan=False).encode() + b'\n')
         await asyncio.wait_for(writer.drain(), 3)
         return reader, writer
     except BaseException:

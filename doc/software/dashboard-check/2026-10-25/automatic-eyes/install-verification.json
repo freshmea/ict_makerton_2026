@@ -1,0 +1,34 @@
+{
+  "backup": "/var/lib/300seconds-dashboard/backups/automatic-eyes-6dlh97n7",
+  "collection_before": true,
+  "files": [
+    {
+      "path": "/opt/300seconds/dashboard/app/eye_expressions.py",
+      "sha256": "965f3c0e9d3aba758f89f0b0f6cff9f19aeb6b907dfb122d055ff6fa8f45259c"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/app.py",
+      "sha256": "bacfe411cd4a757e6082ec3a5c5dcd63da0f644f3e01bee63028d5e989d764af"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/learning_store.py",
+      "sha256": "12f0cfd377a39f7303b8456eca8666508f837d0020ac669859c0dcac7fca6035"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/app.js",
+      "sha256": "20e62f7a9988b28905fb650747cf980355d6e08fdd6e5222c63532b88d67f11b"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/index.html",
+      "sha256": "6cf9a543108a19664eaa300cc3f9f4240991e0419bf3dfc0289e4aa0b05f52f6"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/automatic_eyes.py",
+      "sha256": "7798800252d2cd06db67a0971a3c6fb3a5be7654933a40d017c8bc94c017c0d9"
+    }
+  ],
+  "status": "ok",
+  "collection_restored": true,
+  "automatic_enabled": true,
+  "interval_seconds": 20
+}

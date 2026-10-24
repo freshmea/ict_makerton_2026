@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f2f2ed"><title>로그 분석 · 300 Seconds</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/analytics.css?v=20261025-2">
+  <script src="/static/analytics.js?v=20261025-2" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="/"><span class="brand-mark">300<span>″</span></span><span>SECONDS<small>LEARNING ALMANAC</small></span></a>
+    <nav aria-label="주 메뉴"><a href="/">장치 모니터 ↗</a><a href="/#learning">관찰 자료</a><a href="/analytics" aria-current="page">로그 분석</a></nav>
+    <span class="source-pill" id="source-pill">DEMO</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div><p class="eyebrow">OBSERVATION → REFLECTION</p><h1 id="title">기록으로 살펴보는<br>학습의 흐름<span>.</span></h1><p class="intro-copy">한 시간의 장면부터, 하루하루 쌓인 변화까지.<br>보이는 행동과 감정 단서를 함께 돌아봅니다.</p></div>
+      <div class="edition"><span id="edition-month">LEARNING LOG</span><strong id="edition-day">—</strong><span id="edition-meta">시간 · 하루 · 한 달</span></div>
+    </section>
+
+    <section class="toolbar" aria-label="분석 조건">
+      <div class="source-switch" aria-label="데이터 선택"><button id="source-real" type="button" aria-pressed="false">실제 기록</button><button id="source-demo" type="button" aria-pressed="true">데모 보기</button></div>
+      <div class="period-switch" aria-label="분석 단위"><button type="button" data-period="hour" aria-pressed="false">시간별</button><button type="button" data-period="day" aria-pressed="true">하루</button><button type="button" data-period="month" aria-pressed="false">한 달</button></div>
+      <div class="date-controls"><button id="previous" type="button" aria-label="이전 기간">←</button><label><span>기준 날짜</span><input type="date" id="date" required></label><label id="hour-control" hidden><span>시간</span><select id="hour"></select></label><button id="next" type="button" aria-label="다음 기간">→</button><button id="today" type="button">오늘</button></div>
+      <button class="refresh" id="refresh" type="button">새로고침 ↻</button>
+    </section>
+    <div class="mode-notice" id="mode-notice"><strong>DEMO · 가상 기록</strong><span>지난 12개월의 예시로 화면을 체험합니다. 실제 학습 기록과 섞이지 않습니다.</span></div>
+    <p id="load-state" class="load-state" role="status" aria-live="polite">분석 자료를 불러오고 있습니다.</p>
+
+    <div id="report-body" aria-busy="true">
+      <div class="range-heading"><h2 id="range-title">하루의 기록</h2><span id="range-meta">Asia/Seoul · 10초 표본</span></div>
+      <section class="metrics" aria-label="주요 지표">
+        <article><span>학습 행동이 보인 비율</span><strong id="study-value">—</strong><small id="study-change">재석 표본 중 · 읽기·필기·키보드 입력</small></article>
+        <article><span>자리비움 비율</span><strong id="away-value">—</strong><small id="away-change">관측된 표본 중 · 미수집 제외</small></article>
+        <article><span>긍정·차분 단서</span><strong id="emotion-value">—</strong><small id="emotion-change">감정 단서가 있는 표본 중</small></article>
+        <article><span>데이터 커버리지</span><strong id="coverage-value">—</strong><small id="coverage-note">기간 내 관측 구간의 비율</small></article>
+      </section>
+
+      <section class="review" aria-labelledby="review-title">
+        <div class="review-label"><span class="eyebrow">PERIOD REVIEW</span><span class="data-origin">DEMO</span><span id="review-period">하루 총평</span><span class="review-rule" aria-hidden="true"></span><span id="review-status">자동 작성</span></div>
+        <div class="review-content"><h2 id="review-title">기록을 정리하고 있습니다.</h2><div id="review-paragraphs"></div><ul id="review-highlights"></ul><p class="comparison-note" id="comparison-note"></p></div>
+      </section>
+
+      <div class="chart-grid">
+        <section class="panel flow-panel" aria-labelledby="flow-title">
+          <div class="panel-heading"><div><p class="eyebrow">RHYTHM OF LEARNING</p><h2 id="flow-title">하루 속 학습 흐름</h2></div><span class="data-origin">DEMO</span></div>
+          <div class="chart-key"><span><i class="key-study"></i>학습 행동 / 재석 표본</span><span><i class="key-away"></i>자리비움 / 관측 표본</span></div>
+          <div class="chart-viewport" tabindex="0" role="region" aria-labelledby="flow-title"><div id="flow-chart" class="line-chart"></div></div>
+          <p class="chart-note" id="flow-note">기록 없는 구간은 선으로 연결하지 않습니다.</p>
+          <details class="chart-data"><summary>그래프 수치 보기</summary><div id="flow-data" class="table-wrap" tabindex="0" role="region" aria-label="학습 흐름 수치"></div></details>
+        </section>
+        <section class="panel presence-panel" aria-labelledby="presence-title">
+          <div class="panel-heading"><div><p class="eyebrow">HERE & AWAY</p><h2 id="presence-title">자리 상태의 비율</h2></div><span class="data-origin">DEMO</span></div>
+          <div class="donut" id="presence-chart"></div><ul class="distribution" id="presence-legend"></ul>
+          <p class="chart-note" id="presence-note">관측된 표본 기준. 판단 불가를 자리비움으로 바꾸지 않습니다.</p>
+        </section>
+      </div>
+
+      <section class="panel emotion-panel" aria-labelledby="emotion-title">
+        <div class="emotion-intro"><p class="eyebrow">EMOTIONAL CUES</p><h2 id="emotion-title">감정 단서의 분포</h2><span class="data-origin">DEMO</span><p>관찰 문구와 키워드에서 찾은 단서를 묶었습니다. 실제 감정을 확정하는 값은 아닙니다.</p><p class="cue-coverage" id="cue-coverage">재석 표본에서 단서를 확인합니다.</p></div>
+        <div class="emotion-content"><div id="emotion-chart"></div><ul class="emotion-list" id="emotion-legend"></ul></div>
+      </section>
+
+      <section class="panel history-panel" aria-labelledby="history-title">
+        <div class="panel-heading"><div><p class="eyebrow">A LITTLE CHANGE, EVERY DAY</p><h2 id="history-title">하루하루, 한 달 한 달</h2></div><span class="data-origin">DEMO</span></div>
+        <div class="history-switch" aria-label="비교 기록 단위"><button id="history-day" type="button" aria-pressed="true">하루하루 비교 · 14일</button><button id="history-month" type="button" aria-pressed="false">한 달 한 달 · 12개월</button></div>
+        <div class="chart-key"><span><i class="key-study"></i>학습 행동 비율</span><span><i class="key-away"></i>자리비움 비율</span><span><svg width="13" height="3" aria-hidden="true"><path d="M0 1.5H13" stroke="#7b9a9b" stroke-width="3"/></svg>긍정·차분 / 감정 단서 있는 표본</span><span>단위: % · 증감: %p</span></div>
+        <div class="chart-viewport" tabindex="0" role="region" aria-labelledby="history-title"><div id="history-chart" class="line-chart"></div></div>
+        <div class="table-wrap history-table" tabindex="0" role="region" aria-label="기간별 총평과 이전 기간 비교"><table><caption id="history-caption">기간별 총평과 비교</caption><thead><tr><th scope="col">기간</th><th scope="col">학습 행동</th><th scope="col">이전 대비</th><th scope="col">긍정·차분 단서</th><th scope="col">커버리지</th><th scope="col">자동 총평</th><th scope="col">상세</th></tr></thead><tbody id="history-rows"></tbody></table></div>
+      </section>
+
+      <section class="panel hourly-panel" aria-labelledby="hourly-title">
+        <div class="panel-heading"><div><p class="eyebrow">ONE HOUR AT A TIME</p><h2 id="hourly-title">한 시간씩 돌아보기</h2></div><span class="data-origin">DEMO</span></div>
+        <p class="section-copy">시간별 총평을 선택하면 해당 시간의 상태와 바로 전 시간과의 비교를 볼 수 있습니다.</p>
+        <div class="hourly-list" id="hourly-list"></div><button class="more-button" id="hourly-more" type="button" aria-expanded="false">하루 24시간 모두 보기 ↓</button>
+      </section>
+
+      <details class="methodology"><summary>이 분석을 읽는 방법</summary><div><p>카메라 두 대의 기록을 하나의 10초 구간으로 합칩니다. 같은 사람이 두 번 계산되지 않으며, 중복으로 생략된 기록도 원래 내용과 최신 촬영 시각을 연결합니다.</p><p>학습 행동 비율은 재석 표본에서 읽기·필기·키보드 입력이 보인 비율입니다. 자리비움은 관측된 표본 기준이며, 미수집·판단 불가는 별도로 표시합니다.</p><p>감정은 관찰 문구·키워드의 추정 단서입니다. 직접 측정한 감정이나 로봇 눈 표정의 비율이 아닙니다. 서로 다른 단서가 함께 나오면 복합 단서로 분류합니다.</p><p>예를 들어 미소·웃음은 긍정, 차분·평온은 차분, 긴장·초조는 어려움, 하품·피곤은 피로 단서입니다. 읽기·필기만으로 차분한 감정을 가정하지 않으며, 부정 표현은 단서에서 제외합니다.</p><p>시간·하루·월 총평은 지표에서 자동 작성합니다. 진행 중인 기간은 이전 기간의 같은 경과 구간과 비교하고, 비교 자료가 없으면 평가를 보류합니다. 추가 AI 요청은 없습니다.</p></div></details>
+    </div>
+    <footer><span>300 SECONDS / LEARNING ALMANAC</span><span id="generated-at">관찰에서 시작하는 작은 회고 · KST</span><a href="/">장치 모니터로 돌아가기 ↗</a></footer>
+  </main>
+</body>
+</html>

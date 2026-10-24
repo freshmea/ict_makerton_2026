@@ -29,6 +29,18 @@ def text_body():
 
 
 class DecisionsTests(unittest.TestCase):
+    def test_daily_operational_ledger_is_separate_and_settles_known_cost(self):
+        with tempfile.TemporaryDirectory() as directory:
+            daily=observer.DailyBudget(Path(directory))
+            for _ in range(8):
+                identifier=daily.reserve({})
+                daily.finish(identifier,200,usage={'input_tokens':1000})
+            self.assertEqual(daily.status()['attempts'],8)
+            self.assertTrue(daily.status()['available'])
+            self.assertEqual(daily.status()['known_standard_cost_usd'],'0.0008')
+            self.assertEqual(daily.max_images,20)
+            self.assertFalse((Path(directory)/'openai-budget.json').exists())
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.budget = observer.Budget(Path(self.temp.name) / 'budget.json')

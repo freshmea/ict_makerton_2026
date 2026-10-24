@@ -1,0 +1,78 @@
+{
+  "status": "ok",
+  "test": "live_status_and_recent_history",
+  "eye_expression": {
+    "active": true,
+    "stopping": false,
+    "preset_id": "relaxed",
+    "name": "여유로움",
+    "frame_index": 2,
+    "persistent": true,
+    "mode": "automatic",
+    "remaining_ms": 0,
+    "automatic": {
+      "enabled": true,
+      "interval_seconds": 20.0,
+      "preset_id": "relaxed",
+      "name": "여유로움",
+      "reason": "관찰 행동 · eating_drinking",
+      "observation_ids": [
+        4655,
+        4640
+      ],
+      "selections": 15,
+      "selected_at": 1792871255.4572659,
+      "next_selection_ms": 7320,
+      "waiting": null,
+      "error": null,
+      "extra_ai_requests": 0
+    },
+    "last": {
+      "id": "look-right",
+      "name": "오른쪽 보기",
+      "result": "stopped"
+    },
+    "error": null
+  },
+  "recent_automatic_events": [
+    {
+      "time": 1792871255.4575016,
+      "message": "자동 표정 · 여유로움 · 관찰 행동 · eating_drinking"
+    },
+    {
+      "time": 1792871235.107595,
+      "message": "자동 표정 · 여유로움 · 관찰 행동 · eating_drinking"
+    },
+    {
+      "time": 1792871214.999673,
+      "message": "자동 표정 · 여유로움 · 관찰 행동 · eating_drinking"
+    },
+    {
+      "time": 1792871194.5785022,
+      "message": "자동 표정 · 여유로움 · 관찰 행동 · eating_drinking"
+    }
+  ],
+  "connected": true,
+  "outputs": {
+    "applied_seq": 2260,
+    "armed": true,
+    "calibration_id": 1,
+    "commanded_cdeg": [
+      9000,
+      9000,
+      9000,
+      9000,
+      9000,
+      9000
+    ],
+    "light_active": false,
+    "pose_active": false
+  },
+  "oe_high": true,
+  "collection_enabled": true,
+  "module_sha256": "ab88e86ff486601773302fd8c5cd5baed7d32083f0be89d16c75b18d3d4337e3",
+  "continuous_check_completed": false,
+  "continuous_check_limitation": "Service restart and HTTP connection interruptions during bounded checks.",
+  "device_posts_by_check": 0,
+  "extra_ai_requests_by_check": 0
+}

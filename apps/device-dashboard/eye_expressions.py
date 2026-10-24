@@ -1,4 +1,4 @@
-"""Upright 8x8 eye artwork and finite playback through the existing USB owner."""
+"""Upright 8x8 eye artwork and playback through the existing USB owner."""
 import asyncio
 import time
 
@@ -148,7 +148,7 @@ def eyes_only_arm():
 
 
 class EyePlayer:
-    """One finite job; Stop invalidates pending work before priority USB cleanup."""
+    """One persistent or finite eye job; Stop fences pending USB work."""
     def __init__(self, pico, events):
         self.pico, self.events = pico, events
         self.gate = asyncio.Lock()
@@ -159,6 +159,11 @@ class EyePlayer:
         self.last = None
         self.error = None
         self.tasks = set()
+        self.default_on = False
+        self.default_preset = 'neutral'
+        self.auto_allowed = None
+        self.automatic_status = None
+        self.external_until = 0
 
     async def send(self, command):
         result = await asyncio.get_running_loop().run_in_executor(None, self.pico.command, command)
@@ -172,23 +177,41 @@ class EyePlayer:
                 'preset_id': active['preset']['id'] if active else None,
                 'name': active['preset']['name'] if active else None,
                 'frame_index': active['frame'] if active else 0,
-                'remaining_ms': max(0, int((active['until']-time.monotonic())*1000)) if active else 0,
+                'persistent': bool(active and active['until'] is None),
+                'mode': active.get('mode', 'manual') if active else None,
+                'remaining_ms': max(0, int((active['until']-time.monotonic())*1000)) if active and active['until'] is not None else 0,
+                'automatic': self.automatic_status() if self.automatic_status else None,
                 'last': self.last, 'error': self.error}
 
     async def start(self, preset_id, seconds):
         if preset_id not in BY_ID or seconds not in (3, 5, 10):
             raise ValueError('지원하지 않는 표정 또는 표시 시간입니다.')
+        return await self._start(preset_id, seconds)
+
+    async def hold(self, preset_id):
+        if preset_id not in BY_ID:
+            raise ValueError('등록되지 않은 자동 표정입니다.')
+        return await self._start(preset_id, None)
+
+    async def _start(self, preset_id, seconds):
+        automatic = seconds is None
         if self.stopping:
             raise RuntimeError('정지 중입니다. 완료 후 다시 선택해 주세요.')
         requested = self.epoch
         async with self.gate:
             if self.stopping or requested != self.epoch:
                 raise RuntimeError('정지로 취소된 요청입니다. 다시 선택해 주세요.')
+            if automatic and (not self.default_on or self.auto_allowed and not self.auto_allowed()):
+                raise RuntimeError('자동 표정이 일시 정지되었습니다.')
             status = self.pico.snapshot()
             if not status['connected']:
                 raise RuntimeError('Pico 연결을 확인해 주세요.')
             if (status.get('device') or {}).get('running') not in (None, 'None', 'Idle'):
                 raise RuntimeError('다른 장치 시험이 진행 중입니다.')
+            previous = self.active
+            replace = bool(previous and previous['session'] == status.get('session') and (automatic or self.default_on))
+            if replace and automatic and previous['preset']['id'] == preset_id and previous['until'] is None:
+                return {'ok': True, 'playback': self.snapshot()}
             self.epoch += 1
             token = self.epoch
             self.active = None
@@ -197,12 +220,13 @@ class EyePlayer:
             try:
                 # Firmware keeps ACTIVE latched after SetEyes; a fresh Arm needs
                 # acknowledged Stop cleanup, including when replacing a preset.
-                await self.send({'cmd': 'stop'})
-                if token != self.epoch:
-                    raise RuntimeError('표정 시험이 정지로 취소됐습니다.')
-                await self.send(eyes_only_arm())
-                if token != self.epoch:
-                    raise RuntimeError('표정 시험이 정지로 취소됐습니다.')
+                if not replace:
+                    await self.send({'cmd': 'stop'})
+                    if token != self.epoch or automatic and not self.default_on:
+                        raise RuntimeError('표정 시험이 정지로 취소됐습니다.')
+                    await self.send(eyes_only_arm())
+                    if token != self.epoch or automatic and not self.default_on:
+                        raise RuntimeError('표정 시험이 정지로 취소됐습니다.')
                 result = await self.send(eyes_command(item['frames'][0]))
                 if token != self.epoch:
                     raise RuntimeError('표정 시험이 정지로 취소됐습니다.')
@@ -214,12 +238,13 @@ class EyePlayer:
                         self.error = str(cleanup)
                 raise
             now = time.monotonic()
-            self.active = {'preset': item, 'since': now, 'until': now+seconds,
+            self.active = {'preset': item, 'since': now, 'until': None if automatic else now+seconds,
+                           'mode': 'automatic' if automatic else 'manual',
                            'frame': 0, 'session': status.get('session')}
             task = asyncio.create_task(self.play(token))
             self.tasks.add(task)
             task.add_done_callback(self.tasks.discard)
-            self.events.add('eyes', '{} · {}초 표시 시작'.format(item['name'], seconds))
+            self.events.add('eyes', '{} · {}'.format(item['name'], '자동 상시 표시' if automatic else '{}초 표시 시작'.format(seconds)))
             return {'ok': True, 'ack_code': result.get('ack_code'), 'playback': self.snapshot()}
 
     async def play(self, token):
@@ -233,16 +258,24 @@ class EyePlayer:
                 status = self.pico.snapshot()
                 if not status['connected'] or status.get('session') != active['session']:
                     raise RuntimeError('USB 연결 또는 세션 변경으로 표정 시험을 종료했습니다.')
-                if time.monotonic() >= active['until']:
+                if active['until'] is not None and time.monotonic() >= active['until']:
                     async with self.gate:
                         if token != self.epoch:
                             return
-                        await self.send({'cmd': 'stop'})
+                        restore = self.default_on and (self.auto_allowed is None or self.auto_allowed())
+                        if restore:
+                            item = BY_ID[self.default_preset]
+                            await self.send(eyes_command(item['frames'][0]))
+                        else:
+                            await self.send({'cmd': 'stop'})
                         if token != self.epoch:
                             return
                         self.last = {'id': active['preset']['id'], 'name': active['preset']['name'], 'result': 'completed'}
-                        self.active = None
-                        self.events.add('eyes', '{} · 표시 완료, 소등'.format(active['preset']['name']))
+                        self.active = {'preset': item, 'since': time.monotonic(), 'until': None,
+                                       'mode': 'automatic', 'frame': 0, 'session': active['session']} if restore else None
+                        self.events.add('eyes', '{} · {}'.format(active['preset']['name'], '자동 표정 복귀' if restore else '표시 완료, 소등'))
+                    if restore:
+                        continue
                     return
                 index = frame_at(active['preset']['frames'], int((time.monotonic()-active['since'])*1000))
                 if index != active['frame']:
@@ -299,6 +332,8 @@ class EyePlayer:
             return await self.stop()
         if command['cmd'] == 'test' and (self.active or self.gate.locked()):
             await self.stop()
+        if command['cmd'] == 'test':
+            self.external_until = time.monotonic() + 1
         requested = self.epoch
         async with self.gate:
             if self.stopping or requested != self.epoch:

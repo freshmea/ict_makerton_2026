@@ -1,0 +1,40 @@
+{
+  "backup": "/var/lib/300seconds-dashboard/backups/learning-history10-0jehmvbt",
+  "previous_collection_enabled": true,
+  "files": [
+    {
+      "path": "/opt/300seconds/jetson/learning_provider.py",
+      "sha256": "1cff504f8ead3027488c76f8f7922aeb698a759301d1e3b7be886865bdd9a020"
+    },
+    {
+      "path": "/opt/300seconds/jetson/study_observer_service.py",
+      "sha256": "eb4eadf02b45244081879b2776135d0301be157c506c2d6c16b3801168176c2c"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/learning.py",
+      "sha256": "8fcc7cfde9d851731818f34827e3e473355b6f53d94457837ea270ed7c2fb356"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/learning_store.py",
+      "sha256": "af03e5ed0ef32d67f841fac26ccd9a2366ca2a15f7313e0e55a3891667784f5c"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/learning_client.py",
+      "sha256": "b0b576b71dac0d7091ca9a523422dcdef338e68bc60167f9a11c10910be99675"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/learning.js",
+      "sha256": "262b6b5452d6c50727b7b1e6c51814a6e5f1a65b15749a724ccbbffa9a5ea4db"
+    },
+    {
+      "path": "/opt/300seconds/dashboard/app/static/index.html",
+      "sha256": "8a4b81474563b8fd10e6e6d9e7a663b910216d74ea4d5382ba2e6fa0825578a0"
+    }
+  ],
+  "live_interrupted": false,
+  "status": "ok",
+  "schema_version": 3,
+  "history_limit": 10,
+  "vision_model": "gpt-4.1-mini",
+  "collection_restored": true
+}

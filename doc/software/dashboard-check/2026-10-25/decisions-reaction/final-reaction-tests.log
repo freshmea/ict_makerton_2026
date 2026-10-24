@@ -1,0 +1,20 @@
+test_unknown_policy_does_not_say_person_definitely_left (test_study_reaction.ClassificationTests) ... ok
+test_cancel_during_motion_stops_and_prevents_later_moves (test_study_reaction.ReactionTests) ... ok
+test_changed_usb_session_blocks_reaction (test_study_reaction.ReactionTests) ... ok
+test_four_servos_return_and_led_speech_are_applied (test_study_reaction.ReactionTests) ... ok
+test_live_and_duplicate_start_are_rejected_before_api (test_study_reaction.ReactionTests) ... ok
+test_manual_control_is_never_stopped_or_rearmed (test_study_reaction.ReactionTests) ... ok
+test_one_rpc_start_then_one_reaction_report (test_study_reaction.ReactionTests) ... ok
+test_rejected_led_command_is_not_reported_as_applied_and_stops_motors (test_study_reaction.ReactionTests) ... ok
+test_busy_worker_rejects_another_start (test_observer_api.ObserverApiTests) ... ok
+test_cannot_cancel_an_already_sent_provider_request (test_observer_api.ObserverApiTests) ... ok
+test_jev_face_camera_can_be_either_sensor (test_observer_api.ObserverApiTests) ... ok
+test_missing_worker_does_not_break_other_dashboard_routes (test_observer_api.ObserverApiTests) ... ok
+test_offline_camera_does_not_start_worker (test_observer_api.ObserverApiTests) ... ok
+test_only_registered_provider_camera_and_fields_are_accepted (test_observer_api.ObserverApiTests) ... ok
+test_start_sends_only_provider_and_camera_to_worker (test_observer_api.ObserverApiTests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.679s
+
+OK

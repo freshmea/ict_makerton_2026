@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "provider": "typecast",
+  "created_utc": "2026-10-24T18:10:35.024863+00:00",
+  "playback": "decoded MP3 / mono S16_LE 48000 Hz",
+  "buttons": {
+    "1": {
+      "text": "일번",
+      "mp3_sha256": "bd5273f05b2c053083d19f409b6422da93df403204f7c52904a45692fe8520c0",
+      "wav_sha256": "24bf6ad68fd868a5dc1b622ce44e0e3cc5447cdd7455f8da59fe623e1e71ac59",
+      "seconds": 0.595
+    },
+    "2": {
+      "text": "이번",
+      "mp3_sha256": "0a8f3b9e1d6837e46e81e32eeade6457db5c112bd55a56a78fbc1b7481e5c3f2",
+      "wav_sha256": "3bae92cce5352ec63a352b7230d911e734f14188cebf16be6afa4ade4a866f36",
+      "seconds": 0.502
+    },
+    "3": {
+      "text": "삼번",
+      "mp3_sha256": "5a7914d30c4ac6f13899546e938f3c496d54f565c4a516a6d405d41d9b3c0cec",
+      "wav_sha256": "a2d9a0366ce52dc7c940d7f5a61059aee1ea82304569db294ec59648f9bc7d4b",
+      "seconds": 0.635
+    },
+    "4": {
+      "text": "사번",
+      "mp3_sha256": "0128b20021a08c63978702cf9f247e4722a38660d62e990791ecd983a83c59e8",
+      "wav_sha256": "6d06add5490875da9c13a6744069fef86dacf9069dfff81a285967704c8ec279",
+      "seconds": 0.598
+    },
+    "5": {
+      "text": "오번",
+      "mp3_sha256": "f1c248df4b51c5d500d5408593d4c2649e1c79398e0008291aa9cbd0ad72861f",
+      "wav_sha256": "f067232ee6180dccf5cf55b7f92f169c179bcb2bdf3b4a0de06e93c42922709b",
+      "seconds": 0.574
+    },
+    "6": {
+      "text": "육번",
+      "mp3_sha256": "2b45936dfb587775d8549742f538896424965fcd979b3a8ba316167cc64bed26",
+      "wav_sha256": "62c5e4a4ed095a9df405378e43c35392c96e49757d8fd1f66f87d5e5b5d79a1f",
+      "seconds": 0.639
+    }
+  },
+  "extras": {
+    "live-start": {
+      "text": "라이브 대화 시작",
+      "mp3_sha256": "8ac18ac35cb6ed66b678eb728dc9a228f977100197aede31f3c29f98d5ea9e09",
+      "wav_sha256": "00b1ced649afd5c5f267b730cd4f669144949b07f527eea23b03bc0c5577dca6",
+      "seconds": 1.158
+    },
+    "live-end": {
+      "text": "라이브 대화 끝",
+      "mp3_sha256": "1b38fc01182e8d5a818d5ce14c725635e35dedae6fa4f739a9839089b836c70e",
+      "wav_sha256": "621f2f9d39a7ec1e2eee389ff9f700716d0d9717df10c09f0c144bcc05ac7815",
+      "seconds": 1.061
+    }
+  }
+}

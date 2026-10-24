@@ -1,0 +1,23 @@
+test_live_confirms_echo_and_queues_the_same_db_reference_to_backend (test_learning_provider.LiveProviderTests) ... Executing <Task pending name='Task-1' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:102> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fb50cc5e0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.311 seconds
+ok
+test_mismatched_provider_prompt_is_not_claimed_applied (test_learning_provider.LiveProviderTests) ... ok
+test_actual_gpt_live_protocol_and_korean_voice (test_learning_provider.ProviderTests) ... ok
+test_bad_frame_and_missing_key_never_reach_network (test_learning_provider.ProviderTests) ... ok
+test_changed_actions_are_new_even_if_model_marks_duplicate (test_learning_provider.ProviderTests) ... ok
+test_changed_priority_keyword_survives_unchanged_action_and_duplicate_claim (test_learning_provider.ProviderTests) ... ok
+test_db_reference_is_user_data_not_instructions_and_is_size_bounded (test_learning_provider.ProviderTests) ... ok
+test_first_capture_allows_only_null_duplicate_ids (test_learning_provider.ProviderTests) ... ok
+test_http_error_never_echoes_provider_body_or_key (test_learning_provider.ProviderTests) ... ok
+test_invalid_history_is_rejected_before_network (test_learning_provider.ProviderTests) ... ok
+test_legacy_history_cannot_suppress_first_priority_observations (test_learning_provider.ProviderTests) ... ok
+test_prompt_prioritizes_presence_face_expression_and_attention_with_uncertainty (test_learning_provider.ProviderTests) ... ok
+test_recent_ten_records_are_quoted_input_and_duplicate_ids_are_camera_specific (test_learning_provider.ProviderTests) ... ok
+test_recovered_education_prompt_is_applied_to_both_models_with_current_time_policy (test_learning_provider.ProviderTests) ... ok
+test_schema_mismatch_and_incomplete_generation_are_rejected (test_learning_provider.ProviderTests) ... ok
+test_semantic_duplicate_must_reference_latest_record_from_same_camera (test_learning_provider.ProviderTests) ... ok
+test_single_pair_one_structured_request_no_provider_storage (test_learning_provider.ProviderTests) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.801s
+
+OK

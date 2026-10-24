@@ -1,0 +1,24 @@
+{
+  "basis": "Read-only status snapshots observed during verification. See tool outputs for original snapshots.",
+  "observed_selections": [
+    {
+      "preset_id": "googly",
+      "selections": 3,
+      "selected_at": 1792871001.1145651,
+      "reason": "handling_objects"
+    },
+    {
+      "preset_id": "look-right",
+      "selections": 4,
+      "selected_at": 1792871021.8816097,
+      "reason": "handling_objects"
+    }
+  ],
+  "observed_variety_interval_seconds": 20.767,
+  "recent_three_exclusion": "Verified by local and Nano unit/runtime tests; no complete uninterrupted 83-second hardware check.",
+  "final_event_intervals_seconds": [
+    20.421,
+    20.108,
+    20.35
+  ]
+}

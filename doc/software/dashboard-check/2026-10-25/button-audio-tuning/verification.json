@@ -1,0 +1,52 @@
+{
+  "labels": [
+    "일번",
+    "이번",
+    "삼번",
+    "사번",
+    "오번",
+    "육번"
+  ],
+  "playback": [
+    {
+      "index": 1,
+      "text": "일번",
+      "ok": true,
+      "mp3_sha256": "3eb04294683ec6610547ce2f7a1574aff999032710347f26a5f1ba768a5e3b4f"
+    },
+    {
+      "index": 2,
+      "text": "이번",
+      "ok": true,
+      "mp3_sha256": "0a8f3b9e1d6837e46e81e32eeade6457db5c112bd55a56a78fbc1b7481e5c3f2"
+    },
+    {
+      "index": 3,
+      "text": "삼번",
+      "ok": true,
+      "mp3_sha256": "5a7914d30c4ac6f13899546e938f3c496d54f565c4a516a6d405d41d9b3c0cec"
+    },
+    {
+      "index": 4,
+      "text": "사번",
+      "ok": true,
+      "mp3_sha256": "0128b20021a08c63978702cf9f247e4722a38660d62e990791ecd983a83c59e8"
+    },
+    {
+      "index": 5,
+      "text": "오번",
+      "ok": true,
+      "mp3_sha256": "f1c248df4b51c5d500d5408593d4c2649e1c79398e0008291aa9cbd0ad72861f"
+    },
+    {
+      "index": 6,
+      "text": "육번",
+      "ok": true,
+      "mp3_sha256": "2b45936dfb587775d8549742f538896424965fcd979b3a8ba316167cc64bed26"
+    }
+  ],
+  "hold_interval_ms": 800,
+  "pico_connected": true,
+  "button_audio_ready": true,
+  "collection_enabled": true
+}

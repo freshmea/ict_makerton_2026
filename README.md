@@ -19,6 +19,8 @@
 
 ## 프로젝트 소개
 
+**2026-10-25 구현 현황:** 두 카메라 연속 관찰·SQLite, DB 문맥을 참고하는 GPT Live, SW1·SW2 길게 누르기, GPT Decisions 기반 빛·TTS·서보 반응, 로그 총평과 추세, 카메라 장착 보정을 Nano에 적용했습니다. 제작·발표 변경과 남은 실기 확인은 [진행 작업 종합 정리·Git 동기화](doc/software/진행작업_종합정리와_Git동기화_2026-10-25.md)를 기준으로 확인합니다. 아래 팀 기획표와 과거 Arduino 검증표는 원래 계획·당시 기록을 보존합니다.
+
 배재대에서 진행하는 스마트 ICT 메이커톤 **300 Seconds** 팀의 공동 작업 저장소입니다. 아이디어, 설계, 코드, 실험 결과와 발표 자료를 이곳에서 함께 관리합니다.
 
 > **작성 안내:** `작성 예정` 항목은 팀 논의 후 채웁니다. 진행 상태는 `예정 / 진행 중 / 검토 중 / 완료 / 보류`로 통일하고, 완료한 작업에는 Issue·PR·산출물 링크를 남깁니다.
@@ -204,6 +206,7 @@ Nano/Pico 후속 작업에서는 통합 펌웨어의 실제 flash, USB 제어, �
 | 개인참가 신청서 | [PPTX 열기](<doc/1. 배재대 스마트 ICT 메이커톤_개인참가_신청서.pptx>) |
 | 사전행사 안내 | [PDF 열기](<doc/2. (배포용)_2026_배재대_스마트ICT메이커톤_사전행사.pdf>) |
 | 메인 스케치 | [ict_makerton_2026.ino](ict_makerton_2026.ino) |
+| 최신 진행 작업·Git 동기화 | [2026-10-25 구현·배포·검증·사용법·남은 항목](doc/software/진행작업_종합정리와_Git동기화_2026-10-25.md) |
 | Nano·Pico 작업 종합 기록 | [설정·펌웨어·실물 검증·대시보드·HDMI·남은 항목](doc/software/Jetson_Nano_작업_종합기록_2026-10-24.md) |
 | Windows·Jetson GitHub 공유 | [최신 작업 정리·검증·양쪽 동기화 상태·충돌 방지 절차](doc/software/Windows_Jetson_GitHub_공유와_작업정리_2026-10-24.md) |
 | 3D 프린트 출력 현황 | [완료·진행 중·상태 미기재 부품과 STL 링크](<doc/3D 프린트 출력상황.md>) |
@@ -217,7 +220,7 @@ Nano/Pico 후속 작업에서는 통합 펌웨어의 실제 flash, USB 제어, �
 | 개인과제 C 언어 예제 | [ino_src/](ino_src/) |
 | 기획서 · 요구사항 | 작성 예정 |
 | 디자인 · 회로도 | 작성 예정 |
-| 발표 자료 | [Google 프레젠테이션](https://docs.google.com/presentation/d/16-7NiQcdMrxext3BRB5LvivOQ9ZsSl5vnv3RDpJneLw/edit) / [PDF](output/pdf/폴드윙버디_발표자료_기술보강_2026-10-24.pdf) / [제품 구성·발표자 메모·이미지 출처](doc/presentation/발표_가안_2026-10-24.md) / [Rust·Embassy·SBC MA·통신·구현 근거](doc/presentation/기술보강_2026-10-24.md) · 제품 14장 + 기술 11장 + 부록 3장 |
+| 발표 자료 | [Google 프레젠테이션](https://docs.google.com/presentation/d/16-7NiQcdMrxext3BRB5LvivOQ9ZsSl5vnv3RDpJneLw/edit) / [최신 PDF](output/pdf/폴드윙버디_발표자료_로그분석_2026-10-25.pdf) / [로그 분석 3장·발표자 메모·출처](doc/presentation/로그분석_발표보강_2026-10-25.md) / [이전 제품 원고](doc/presentation/발표_가안_2026-10-24.md) / [이전 Rust·Embassy·SBC MA·통신 근거](doc/presentation/기술보강_2026-10-24.md) · 현재 18장, 9장 뒤 로그 분석 3장 추가 |
 | 시연 영상 · 결과 사진 | 작성 예정 |
 
 변경함!!

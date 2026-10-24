@@ -1,0 +1,45 @@
+   Compiling pico-device-protocol v0.1.0 (D:\repository\ict_makerton_2026\crates\pico-device-protocol)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.89s
+     Running unittests src\lib.rs (crates\pico-device-protocol\target\debug\deps\pico_device_protocol-31b65d8b59f321f4.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\button_audio_contract.rs (crates\pico-device-protocol\target\debug\deps\button_audio_contract-59fcd57f7e029af0.exe)
+
+running 1 test
+test all_six_buttons_emit_one_press_then_rising_counts_and_release ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\invariants.rs (crates\pico-device-protocol\target\debug\deps\invariants-38a3ca34c6af995a.exe)
+
+running 11 tests
+test caller_output_capacity_is_enforced ... ok
+test configuration_limits_cover_topology_and_runtime_bounds ... ok
+test actuator_configuration_bounds_and_new_frames ... ok
+test corrupted_crc_bad_cobs_and_overlong_stream_resynchronize ... ok
+test crc_standard_check_and_external_golden_hello ... ok
+test fixed_first_press_window_counts_edges_not_hold_intervals ... ok
+test maximum_integer_status_fits_decoded_and_wire_limits ... ok
+test fragments_concatenated_frames_and_empty_delimiters ... ok
+test long_hold_does_not_wrap_at_original_uint8_limit ... ok
+test debounce_requires_thirty_ms_and_release_preserves_final_duration ... ok
+test six_active_low_inputs_and_reconfiguration_remain_bounded ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\servo_extension.rs (crates\pico-device-protocol\target\debug\deps\servo_extension-fe7b958265151fd4.exe)
+
+running 1 test
+test appended_servo_messages_round_trip_without_changing_hello_wire_tag ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pico_device_protocol
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

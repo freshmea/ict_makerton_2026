@@ -1,0 +1,98 @@
+--- nano/hardware.py
++++ local/hardware.py
+@@ -250,14 +250,29 @@
+             fresh = time.monotonic() - value['updated_monotonic'] < 2
+             alive = self.process is not None and self.process.poll() is None
+             value['worker_alive'] = alive
+-            value['ready'] = alive and fresh and not value.get('error') and all(c['ready'] for c in value['cameras'])
+-            if not fresh or not alive:
++            value['ready'] = alive and fresh and not value.get('error') and len(value['cameras']) == 2 and all(c['ready'] for c in value['cameras'])
++            if not fresh or not alive or value.get('error'):
+                 for camera in value['cameras']:
+                     camera['ready'] = False
++            unavailable = []
++            for camera in value['cameras']:
++                if not camera['ready'] and value.get('uptime_seconds', 0) >= 15:
++                    camera['error'] = '영상 수신 없음 · 카메라 연결·전원을 확인하세요.'
++                    unavailable.append(str(camera['sensor_id'] + 1))
++            value['warning'] = ('카메라 %s 영상 없음 · 연결·전원 확인 필요' % ', '.join(unavailable)) if unavailable else None
+             return value
+         except (OSError, ValueError, KeyError):
+             return {'profile': self.profile, 'ready': False, 'cameras': [],
+                     'error': '카메라 스트림 준비 중', 'settings': PROFILES[self.profile]}
++
++    @staticmethod
++    def can_preview(state, sensor):
++        # Aggregate ready remains strict for two-camera analysis. A healthy
++        # preview must not wait for the other sensor to recover.
++        return state.get('worker_alive') is True and not state.get('error') and any(
++            c.get('sensor_id') == sensor and c.get('ready') is True and
++            isinstance(c.get('preview_age_ms'), (int, float)) and 0 <= c['preview_age_ms'] < 2000
++            for c in state.get('cameras', []))
+ 
+     def image_path(self, sensor):
+         return self.runtime / ('cam%d.jpg' % sensor)
+--- nano/app.py
++++ local/app.py
+@@ -167,8 +167,9 @@
+ def camera_snapshot(sensor: int):
+     require_sensor(sensor)
+     state = app.state.cameras.snapshot()
+-    if not state.get('ready'):
+-        raise HTTPException(503, state.get('error') or '카메라를 준비하고 있습니다.')
++    if not Cameras.can_preview(state, sensor):
++        camera = next((c for c in state.get('cameras', []) if c.get('sensor_id') == sensor), {})
++        raise HTTPException(503, camera.get('error') or state.get('error') or '카메라를 준비하고 있습니다.')
+     try:
+         return Response(app.state.cameras.image_path(sensor).read_bytes(), media_type='image/jpeg')
+     except OSError:
+@@ -182,7 +183,7 @@
+         previous = None
+         while not await request.is_disconnected():
+             state = app.state.cameras.snapshot()
+-            if state.get('ready'):
++            if Cameras.can_preview(state, sensor):
+                 path = app.state.cameras.image_path(sensor)
+                 try:
+                     stamp = path.stat().st_mtime_ns
+--- nano/static/app.js
++++ local/static/app.js
+@@ -53,11 +53,12 @@
+ }
+ function previews() {
+   for (let i = 0; i < 2; i++) {
+-    const image = $(`camera-image-${i}`), ready = lastState?.cameras?.ready;
++    const image = $(`camera-image-${i}`), camera = lastState?.cameras?.cameras?.find(c => c.sensor_id === i), ready = camera?.ready;
+     if (!document.hidden && !paused && ready) {
+       if (!image.hasAttribute('src')) image.src = `/api/cameras/${i}/stream.mjpg`;
+     } else image.removeAttribute('src');
+-    text(`video-state-${i}`, document.hidden || paused ? '미리보기 정지' : ready ? 'LIVE / MJPEG' : '연결 대기');
++    const label = document.hidden || paused ? '미리보기 정지' : ready ? 'LIVE / MJPEG' : camera?.error ? '영상 없음 · 연결 확인' : '연결 대기';
++    if ($(`video-state-${i}`).textContent !== label) text(`video-state-${i}`, label);
+   }
+ }
+ function disconnected() {
+@@ -113,9 +114,10 @@
+     document.querySelectorAll('[name="profile"]').forEach(input => input.checked = input.value === c.profile);
+     displayedProfile = c.profile;
+   }
+-  text('camera-detail', c.error || `${c.profile} · ${c.encoder || 'H.264'} / NVMM`);
++  const cameraDetail = c.error || c.warning || `${c.profile} · ${c.encoder || 'H.264'} / NVMM`;
++  if ($('camera-detail').textContent !== cameraDetail) text('camera-detail', cameraDetail);
+   cams.forEach(cam => { const i = cam.sensor_id; text(`fps-${i}`, cam.ready ? cam.fps.toFixed(1) : '—');
+-    text(`camera-specs-${i}`, `${c.settings.width}×${c.settings.height} · H.264 ${cam.encoded_fps} fps / ${cam.encoded_mbps} Mbps · Preview ${cam.preview_delivery_fps ?? cam.preview_fps} fps`); });
++    text(`camera-specs-${i}`, cam.error || `${c.settings.width}×${c.settings.height} · H.264 ${cam.encoded_fps} fps / ${cam.encoded_mbps} Mbps · Preview ${cam.preview_delivery_fps ?? cam.preview_fps} fps`); });
+   previews();
+   renderAudio(a);
+   const speaker = a.speaker; text('speaker-state', speaker.state === 'synthesizing' ? 'TTS 음성 합성 중' : speaker.state === 'playing' ? '스피커 재생 중' : speaker.last_result ? `스피커 PCM ${speaker.last_result.ok ? '재생 성공' : '재생 실패'}` : '스피커 대기 · 시험 버튼으로 확인');
+--- nano/static/index.html
++++ local/static/index.html
+@@ -7,7 +7,7 @@
+   <title>300 Seconds · 디바이스 모니터</title>
+   <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+   <link rel="stylesheet" href="/static/styles.css?v=20261024-servos1">
+-  <script src="/static/app.js?v=20261025-autoeyes20" defer></script>
++  <script src="/static/app.js?v=20261025-partial-camera1" defer></script>
+   <script src="/static/study.js?v=20261025-decisions" defer></script>
+   <link rel="stylesheet" href="/static/learning.css?v=20261024-learning1">
+   <script src="/static/learning.js?v=20261025-history10" defer></script>

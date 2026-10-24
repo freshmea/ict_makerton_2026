@@ -1,0 +1,59 @@
+{
+  "status": "ok",
+  "date_kst": "2026-10-25",
+  "local_tests": {
+    "count": 96,
+    "passed": 96,
+    "suites": [
+      "test_log_analytics",
+      "test_learning",
+      "test_automatic_eyes",
+      "test_eye_expressions",
+      "test_servo_controls",
+      "test_observer_api"
+    ]
+  },
+  "nano_tests": {
+    "count": 66,
+    "passed": 66,
+    "suites": [
+      "test_log_analytics",
+      "test_learning",
+      "test_automatic_eyes"
+    ]
+  },
+  "deployed_browser": {
+    "source_switch": true,
+    "period_navigation": true,
+    "hourly_reviews": 24,
+    "daily_reviews": 14,
+    "monthly_reviews": 12,
+    "history_ratio_lines": 3,
+    "main_dashboard_entries": true,
+    "widths_px": [
+      1440,
+      800,
+      390
+    ],
+    "horizontal_overflow": false,
+    "page_errors": [],
+    "real_observed_samples_at_ui_check": 1517,
+    "device_command_posts_by_qa": 0
+  },
+  "deployment_report_note": "deployment.json covers the initial install. HTML and JS subsequently gained a third history trend (emotion cues) and passed deployed browser QA.",
+  "deployed_analytics_sources_match_local": true,
+  "final_local_source_sha256": {
+    "analytics_routes.py": "74a0ead010faab92e67134aaecd8252010064f14d60870d1a95fc56f22fc5e72",
+    "log_analytics.py": "cec2f9ac77c3672d40412608ac7dd7d3c2eecfba386579b30b1500454e57e7be",
+    "static/analytics.html": "b0d496564b737273fc5259e835a779b247bc8c3a824abfcf465fdc7a5411cfae",
+    "static/analytics.css": "246f4c60d82d773b631d6a074f2114afa5fcaeb128c40effd21cfd42343bd3a1",
+    "static/analytics.js": "5726e42c39d9ad8224921c69e8b9415fb4bd3d2d97e7c0aeed09c430566d1e1d",
+    "static/styles.css": "e735410045954f8aa51c6d8ff84ff98dd4fcd967d7735e91b8ca8c52d3fbe0df"
+  },
+  "evidence": [
+    "deployment.json",
+    "live-check.json",
+    "desktop.png",
+    "mobile.png"
+  ]
+}

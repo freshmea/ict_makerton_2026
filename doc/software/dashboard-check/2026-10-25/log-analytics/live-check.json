@@ -1,0 +1,256 @@
+{
+  "status": "ok",
+  "test": "deployed_log_analytics",
+  "real_latency_ms": 4006.5,
+  "demo_latency_ms": 1282.7,
+  "real_metrics": {
+    "expected_samples": 1612,
+    "observed_samples": 1503,
+    "present_samples": 1058,
+    "study_samples": 0,
+    "study_ratio": 0.0,
+    "away_ratio": 2.3,
+    "coverage": 93.2,
+    "positive_calm_ratio": 100.0,
+    "emotion_cue_coverage": 0.9,
+    "presence": [
+      {
+        "id": "present",
+        "label": "재석",
+        "count": 1058,
+        "ratio": 65.6
+      },
+      {
+        "id": "away",
+        "label": "자리비움",
+        "count": 35,
+        "ratio": 2.2
+      },
+      {
+        "id": "unknown",
+        "label": "판단 불가",
+        "count": 410,
+        "ratio": 25.4
+      },
+      {
+        "id": "missing",
+        "label": "미수집·누락",
+        "count": 109,
+        "ratio": 6.8
+      }
+    ],
+    "emotions": [
+      {
+        "id": "positive",
+        "label": "긍정·활력 단서",
+        "count": 10,
+        "ratio": 0.9
+      },
+      {
+        "id": "calm",
+        "label": "차분·안정 단서",
+        "count": 0,
+        "ratio": 0.0
+      },
+      {
+        "id": "strained",
+        "label": "긴장·어려움 단서",
+        "count": 0,
+        "ratio": 0.0
+      },
+      {
+        "id": "tired",
+        "label": "피로·휴식 단서",
+        "count": 0,
+        "ratio": 0.0
+      },
+      {
+        "id": "mixed",
+        "label": "복합 단서",
+        "count": 0,
+        "ratio": 0.0
+      },
+      {
+        "id": "unknown",
+        "label": "감정 단서 없음",
+        "count": 1048,
+        "ratio": 99.1
+      }
+    ],
+    "keywords": [
+      {
+        "word": "실내",
+        "count": 1229
+      },
+      {
+        "word": "조명",
+        "count": 998
+      },
+      {
+        "word": "책상",
+        "count": 881
+      },
+      {
+        "word": "천장",
+        "count": 801
+      },
+      {
+        "word": "케이블",
+        "count": 692
+      },
+      {
+        "word": "전선",
+        "count": 628
+      },
+      {
+        "word": "벽",
+        "count": 505
+      },
+      {
+        "word": "전자기기",
+        "count": 434
+      },
+      {
+        "word": "안경",
+        "count": 356
+      },
+      {
+        "word": "천장 조명",
+        "count": 350
+      },
+      {
+        "word": "검은 옷",
+        "count": 313
+      },
+      {
+        "word": "회색 기둥",
+        "count": 237
+      }
+    ],
+    "raw_camera_rows": 3180,
+    "duplicate_camera_rows": 903
+  },
+  "real_partial": true,
+  "real_comparison": {
+    "start": "2026-10-24T00:00:00+09:00",
+    "through": "2026-10-24T04:28:39.034096+09:00",
+    "label": "이전 기간의 같은 경과 구간",
+    "estimated_partial_hour": false,
+    "study_delta_pp": null,
+    "away_delta_pp": null,
+    "emotion_delta_pp": null
+  },
+  "demo_metrics": {
+    "expected_samples": 8640,
+    "observed_samples": 8387,
+    "present_samples": 2017,
+    "study_samples": 1529,
+    "study_ratio": 75.8,
+    "away_ratio": 75.4,
+    "coverage": 97.1,
+    "positive_calm_ratio": 73.2,
+    "emotion_cue_coverage": 87.1,
+    "presence": [
+      {
+        "id": "present",
+        "label": "재석",
+        "count": 2017,
+        "ratio": 23.3
+      },
+      {
+        "id": "away",
+        "label": "자리비움",
+        "count": 6325,
+        "ratio": 73.2
+      },
+      {
+        "id": "unknown",
+        "label": "판단 불가",
+        "count": 45,
+        "ratio": 0.5
+      },
+      {
+        "id": "missing",
+        "label": "미수집·누락",
+        "count": 253,
+        "ratio": 2.9
+      }
+    ],
+    "emotions": [
+      {
+        "id": "positive",
+        "label": "긍정·활력 단서",
+        "count": 526,
+        "ratio": 26.1
+      },
+      {
+        "id": "calm",
+        "label": "차분·안정 단서",
+        "count": 759,
+        "ratio": 37.6
+      },
+      {
+        "id": "strained",
+        "label": "긴장·어려움 단서",
+        "count": 205,
+        "ratio": 10.2
+      },
+      {
+        "id": "tired",
+        "label": "피로·휴식 단서",
+        "count": 165,
+        "ratio": 8.2
+      },
+      {
+        "id": "mixed",
+        "label": "복합 단서",
+        "count": 101,
+        "ratio": 5.0
+      },
+      {
+        "id": "unknown",
+        "label": "감정 단서 없음",
+        "count": 261,
+        "ratio": 12.9
+      }
+    ],
+    "keywords": [
+      {
+        "word": "책",
+        "count": 761
+      },
+      {
+        "word": "필기",
+        "count": 504
+      },
+      {
+        "word": "문제 풀이",
+        "count": 377
+      },
+      {
+        "word": "휴식",
+        "count": 240
+      },
+      {
+        "word": "음료",
+        "count": 117
+      }
+    ],
+    "raw_camera_rows": 16774,
+    "duplicate_camera_rows": 6878
+  },
+  "demo_days": 359,
+  "report_counts": {
+    "day": 2,
+    "hour": 7,
+    "month": 1
+  },
+  "cached_hours": 7,
+  "sample_ratios_consistent": true,
+  "source_isolated": true,
+  "timezone": "Asia/Seoul",
+  "collection_enabled": true,
+  "automatic_eyes_enabled": true,
+  "eyes_persistent": true,
+  "extra_ai_requests": 0
+}

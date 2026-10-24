@@ -40,8 +40,13 @@ def timestamp():
 
 class Budget:
     """Persistent local test-session cap, not an account-wide billing meter."""
-    def __init__(self, path=BUDGET_PATH):
+    def __init__(self, path=BUDGET_PATH, max_attempts=MAX_ATTEMPTS, cap=SESSION_CAP, settle_known=False):
         self.path = path
+        self.max_attempts, self.cap, self.settle_known = max_attempts, cap, settle_known
+
+    def exposure(self, data):
+        return sum((Decimal(a['estimated_standard_cost_usd']) if self.settle_known and a.get('estimated_standard_cost_usd') is not None
+                    else Decimal(a.get('reserved_usd', str(RESERVATION))) for a in data['attempts']), Decimal(0))
 
     @contextmanager
     def locked(self):
@@ -60,7 +65,7 @@ class Budget:
     def read(self):
         if not self.path.exists():
             return {'created_at_utc': timestamp(), 'attempts': [], 'cooldown_until': 0}
-        if self.path.is_symlink() or self.path.stat().st_size > 65536:
+        if self.path.is_symlink() or self.path.stat().st_size > (1048576 if self.settle_known else 65536):
             raise Error('invalid_budget_file')
         try:
             data = json.loads(self.path.read_text(encoding='utf-8'))
@@ -83,8 +88,10 @@ class Budget:
             data = self.read()
         attempts = data['attempts']
         known = [Decimal(a['estimated_standard_cost_usd']) for a in attempts if a.get('estimated_standard_cost_usd') is not None]
-        return {'local_only': True, 'attempts': len(attempts), 'max_attempts': MAX_ATTEMPTS,
-                'session_cap_usd': str(SESSION_CAP),
+        return {'local_only': True, 'attempts': len(attempts), 'max_attempts': self.max_attempts,
+                'session_cap_usd': str(self.cap),
+                'exposure_usd': str(self.exposure(data)),
+                'available': len(attempts) < self.max_attempts and self.exposure(data) + RESERVATION <= self.cap and data.get('cooldown_until',0) <= time.time(),
                 'reserved_usd': str(RESERVATION * len(attempts)),
                 'known_standard_cost_usd': str(sum(known, Decimal(0))),
                 'unknown_cost_attempts': sum(a.get('estimated_standard_cost_usd') is None for a in attempts),
@@ -97,7 +104,7 @@ class Budget:
             if data.get('cooldown_until', 0) > time.time():
                 raise Error('provider_cooldown: no request sent')
             count = len(data['attempts'])
-            if count >= MAX_ATTEMPTS or RESERVATION * (count + 1) > SESSION_CAP:
+            if count >= self.max_attempts or self.exposure(data) + RESERVATION > self.cap:
                 raise Error('local_budget_exhausted: no request sent')
             identifier = uuid.uuid4().hex
             data['attempts'].append({'id': identifier, 'at_utc': timestamp(), 'state': 'pending',
@@ -132,7 +139,40 @@ class Budget:
             self.write(data)
 
 
-def bounded_summary(body, name):
+class DailyBudget:
+    """Manual operational calls; daily ledgers retain the original five-call test ledger."""
+    max_images = 20
+
+    def __init__(self, directory=None):
+        self.directory = Path(directory or BUDGET_PATH.parent)
+        self.reservations = {}
+
+    def current(self):
+        date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+        return Budget(self.directory / ('decisions-' + date + '.json'), max_attempts=200,
+                      cap=Decimal('1.00'), settle_known=True)
+
+    def status(self):
+        return dict(self.current().status(), period='UTC day', manual_only=True)
+
+    def reserve(self, summary):
+        budget = self.current()
+        identifier = budget.reserve(summary)
+        self.reservations[identifier] = budget
+        return identifier
+
+    def finish(self, identifier, status, **kwargs):
+        budget = self.reservations.pop(identifier)
+        budget.finish(identifier, status, **kwargs)
+        if status == 0:
+            # An explicitly repeated button action may retry later; never retry automatically.
+            with budget.locked():
+                data = budget.read()
+                data['cooldown_until'] = time.time() + 60
+                budget.write(data)
+
+
+def bounded_summary(body, name, max_images=10):
     if body.get('model') != MODEL:
         raise Error('only_gpt_6_luna_allowed')
     if body.get('prompt_cache_options') != {'mode': 'explicit'}:
@@ -160,7 +200,7 @@ def bounded_summary(body, name):
             else:
                 raise Error('unsupported_test_content')
     text_bytes += len(json.dumps(questions, ensure_ascii=False).encode())
-    if images > 10 or text_bytes > 20000:
+    if images > max_images or text_bytes > 20000:
         raise Error('test_payload_limit')
     return {'name': name, 'model': MODEL, 'images': images, 'text_bytes': text_bytes,
             'questions': len(questions), 'detail': 'low', 'cache': 'disabled',
@@ -168,7 +208,7 @@ def bounded_summary(body, name):
 
 
 def call(body, key, budget, name):
-    summary = bounded_summary(body, name)
+    summary = bounded_summary(body, name, getattr(budget, 'max_images', 10))
     if not key or not key.isascii() or any(c.isspace() for c in key):
         raise Error('credential_missing_or_invalid: OPENAI_API_KEY')
     identifier = budget.reserve(summary)

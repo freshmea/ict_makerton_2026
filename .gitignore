@@ -26,3 +26,15 @@ doc/BOM/mechanical_v8/videos/P5_section_side30_to_front_audit
 *.sqlite3
 *.sqlite3-wal
 *.sqlite3-shm
+
+# Keep original camera frames and personal observation/session evidence local.
+/doc/software/dashboard-check/2026-10-25/camera1-rotation/camera*-*.jpg
+/doc/software/dashboard-check/2026-10-25/camera-boot/dashboard-partial-camera.png
+/doc/software/dashboard-check/2026-10-25/button-live-hold4/dashboard.png
+/doc/software/dashboard-check/2026-10-25/decisions-reaction/end-to-end.json
+/doc/software/dashboard-check/2026-10-25/decisions-reaction/end-to-end.log
+/doc/software/dashboard-check/2026-10-25/decisions-reaction/first-end-to-end.json
+/doc/software/dashboard-check/2026-10-25/decisions-reaction/first-end-to-end.log
+/doc/software/dashboard-check/2026-10-25/observation-priority-prompt/initial-v5-observations.json
+/doc/software/dashboard-check/2026-10-25/observation-priority-prompt/verification.json
+/doc/software/dashboard-check/2026-10-25/observation-priority-prompt/verification.log

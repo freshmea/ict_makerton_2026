@@ -1,0 +1,29 @@
+{
+  "status": "ok",
+  "local_tests": {
+    "passed": 77,
+    "suites": [
+      "test_automatic_eyes",
+      "test_eye_expressions",
+      "test_learning",
+      "test_servo_controls"
+    ]
+  },
+  "nano_tests": {
+    "passed": 28,
+    "suites": [
+      "test_automatic_eyes",
+      "test_eye_expressions"
+    ]
+  },
+  "random_groups": {
+    "idle_presets": 9,
+    "curiosity_presets": 6,
+    "excluded_recent_selections": 3
+  },
+  "interval_seconds": 20,
+  "sources_sha256": {
+    "automatic_eyes.py": "ab88e86ff486601773302fd8c5cd5baed7d32083f0be89d16c75b18d3d4337e3",
+    "test_automatic_eyes.py": "294b437f1eb683ec18b1ec7ae0c7d128f97fb5875c9a3e29e4a66d4028e227f6"
+  }
+}

@@ -11,7 +11,7 @@ for group in audio video render robot-device dialout; do getent group "$group" >
 id boarddash >/dev/null 2>&1 || useradd --system --user-group --home-dir /nonexistent --shell /usr/sbin/nologin boarddash
 usermod -aG audio,video,render,robot-device,dialout boarddash
 export DEBIAN_FRONTEND=noninteractive
-apt-get install -y python3.8-venv python3-gi python3-numpy python3-psutil python3-click python3-certifi gir1.2-gst-rtsp-server-1.0
+apt-get install -y ffmpeg python3.8-venv python3-gi python3-numpy python3-psutil python3-click python3-certifi gir1.2-gst-rtsp-server-1.0
 install -d -m 0755 "$prefix/app" /etc/300seconds
 python3.8 -m venv "$prefix/venv"
 # Expose three distro packages, excluding unrelated global Python dependencies.

@@ -1,0 +1,170 @@
+test_full_scale_and_negative_int16_extreme_remain_safe (test_audio.AudioTests) ... ok
+test_invalid_gain_is_rejected (test_audio.AudioTests) ... ok
+test_loud_voice_is_linearly_limited_without_wrap_or_flat_tops (test_audio.AudioTests) ... ok
+test_quiet_voice_gets_requested_gain_in_the_actual_pcm (test_audio.AudioTests) ... ok
+test_settings_api_rejects_invalid_values_and_passes_valid_gain (test_audio.AudioTests) ... ok
+test_settings_survive_restart_and_failed_save_keeps_previous_gain (test_audio.AudioTests) ... ok
+test_silence_and_empty_buffer_are_finite_and_not_normalized_to_noise (test_audio.AudioTests) ... ok
+test_stale_audio_cannot_be_exported (test_audio.AudioTests) ... ok
+test_tts_and_test_tone_cannot_overlap_or_spend_credits_while_busy (test_audio.AudioTests) ... ok
+test_tts_api_maps_service_errors_and_uses_validated_text (test_audio.AudioTests) ... ok
+test_tts_boosts_the_played_pcm_and_preserves_microphone_gain (test_audio.AudioTests) ... ok
+test_tts_error_releases_lock_and_reports_failure (test_audio.AudioTests) ... ok
+test_tts_validation_rejects_empty_long_extra_fields_and_control_characters (test_audio.AudioTests) ... ok
+test_wav_meter_and_replay_use_processed_pcm_once (test_audio.AudioTests) ... ok
+test_zero_gain_preserves_unlimited_pcm (test_audio.AudioTests) ... ok
+test_idle_and_broad_curiosity_exclude_three_recent_expressions (test_automatic_eyes.PolicyTests) ... ok
+test_live_and_button_activity_take_priority (test_automatic_eyes.PolicyTests) ... ok
+test_stale_future_or_unclear_evidence_uses_default (test_automatic_eyes.PolicyTests) ... ok
+test_study_actions_and_keywords_select_catalog_expressions (test_automatic_eyes.PolicyTests) ... ok
+test_text_cannot_inject_a_preset_or_hardware_command (test_automatic_eyes.PolicyTests) ... ok
+test_variation_preserves_explicit_button_live_and_study_feedback (test_automatic_eyes.PolicyTests) ... ok
+test_user_global_stop_disables_automatic_restart (test_automatic_eyes.RouteTests) ... ok
+test_button_event_is_fresh_session_bound_and_consumed_once (test_automatic_eyes.RuntimeTests) ... ok
+test_default_stays_lit_and_selection_runs_at_twenty_second_intervals (test_automatic_eyes.RuntimeTests) ... ok
+test_disabled_auto_fences_a_pending_arm (test_automatic_eyes.RuntimeTests) ... ok
+test_explicit_stop_does_not_relight_until_enabled (test_automatic_eyes.RuntimeTests) ... ok
+test_manual_expression_finishes_into_default_instead_of_off (test_automatic_eyes.RuntimeTests) ... ok
+test_new_context_changes_eyes_without_stop_or_new_arm (test_automatic_eyes.RuntimeTests) ... ok
+test_new_usb_session_uses_a_fresh_selection (test_automatic_eyes.RuntimeTests) ... ok
+test_repeated_object_observations_vary_without_stop_or_servo_arm (test_automatic_eyes.RuntimeTests) ... ok
+test_servo_and_diagnostic_owners_are_not_rearmed_or_interrupted (test_automatic_eyes.RuntimeTests) ... ok
+test_short_device_activity_is_remembered_until_next_selection_once (test_automatic_eyes.RuntimeTests) ... ok
+test_all_six_presses_then_each_count_use_firmware_events (test_button_audio.ButtonTests) ... ok
+test_live_announcement_finishes_voice_then_long_beep (test_button_audio.ButtonTests) ... ok
+test_loader_checks_mp3_and_decoded_cache_hashes (test_button_audio.ButtonTests) ... ok
+test_queues_bounded_and_expired_feedback_dropped (test_button_audio.ButtonTests) ... ok
+test_reconnect_clears_pending_and_does_not_sound_an_existing_hold (test_button_audio.ButtonTests) ... ok
+test_release_and_fresh_press_reset_pitch (test_button_audio.ButtonTests) ... ok
+test_repeated_counts_and_duplicate_packets_never_replay (test_button_audio.ButtonTests) ... ok
+test_stale_buffer_disconnected_and_other_session_are_rejected (test_button_audio.ButtonTests) ... ok
+test_sw1_existing_hold_or_disconnected_request_cannot_start (test_button_audio.ButtonTests) ... ok
+test_sw1_missing_tick_or_failed_beep_does_not_request_live (test_button_audio.ButtonTests) ... ok
+test_sw1_number_is_immediate_and_fourth_beep_finishes_before_live_request (test_button_audio.ButtonTests) ... ok
+test_sw1_short_press_queues_number_but_does_not_request_live (test_button_audio.ButtonTests) ... ok
+test_sw2_number_then_four_beeps_requests_study_independently_of_live (test_button_audio.ButtonTests) ... ok
+test_uint32_event_sequence_wrap (test_button_audio.ButtonTests) ... ok
+test_usb_reader_delivers_every_touch_without_snapshot_polling_loss (test_button_audio.ButtonTests) ... ok
+test_worker_subscribes_without_browser_and_unsubscribes_on_close (test_button_audio.ButtonTests) ... ok
+test_cached_feedback_works_while_live_holds_speaker_lock (test_button_audio.ToneTests) ... ok
+test_pitch_rises_gently_then_caps_and_wave_fades_without_clipping (test_button_audio.ToneTests) ... ok
+test_simultaneous_beeps_stay_at_same_gentle_peak (test_button_audio.ToneTests) ... ok
+test_speech_trims_silence_and_normalizes_without_microphone_gain (test_button_audio.ToneTests) ... ok
+test_all_animation_frames_fit_two_upright_eight_by_eight_matrices (test_eye_expressions.ArtworkTests) ... ok
+test_exactly_fifty_distinct_presets_with_ten_groups (test_eye_expressions.ArtworkTests) ... ok
+test_winks_use_robot_eye_names_and_cross_eyes_converge_in_front_view (test_eye_expressions.ArtworkTests) ... ok
+test_diagnostic_stops_expression_before_starting (test_eye_expressions.PlaybackTests) ... ok
+test_invalid_preset_or_busy_diagnostic_never_arms (test_eye_expressions.PlaybackTests) ... ok
+test_loading_catalog_and_constructing_player_never_arms_outputs (test_eye_expressions.PlaybackTests) ... ok
+test_new_usb_session_never_receives_old_animation_or_cleanup (test_eye_expressions.PlaybackTests) ... ok
+test_playback_arms_only_eyes_and_turns_off_at_deadline (test_eye_expressions.PlaybackTests) ... ok
+test_replacing_a_preset_clears_firmware_active_before_new_arm (test_eye_expressions.PlaybackTests) ... ok
+test_stop_preempts_late_arm_and_fences_it_without_sending_eyes (test_eye_expressions.PlaybackTests) ... ok
+test_stop_prevents_any_later_animation_frame (test_eye_expressions.PlaybackTests) ... ok
+test_camera_previous_generation_is_never_live (test_hardware.TelemetryTests) ... ok
+test_expression_api_uses_catalog_id_and_bounded_duration (test_hardware.TelemetryTests) ... ok
+test_expression_rejects_absent_matrix_and_unknown_preset_before_usb (test_hardware.TelemetryTests) ... ok
+test_missing_matrix_is_rejected_before_usb_command (test_hardware.TelemetryTests) ... ok
+test_one_missing_camera_does_not_block_healthy_preview_or_enable_dual_analysis (test_hardware.TelemetryTests) ... ok
+test_pico_old_sample_is_never_connected (test_hardware.TelemetryTests) ... ok
+test_servo_diagnostics_are_forwarded_without_starting_outputs (test_hardware.TelemetryTests) ... ok
+test_each_request_uses_history_after_previous_batch_was_committed (test_learning.AnalysisTests) ... Executing <Task pending name='Task-90' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:96> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f87484310>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.304 seconds
+ok
+test_both_cameras_share_batch_and_stale_frames_are_not_sent_twice (test_learning.CaptureTests) ... ok
+test_one_failed_camera_does_not_hide_the_other (test_learning.CaptureTests) ... ok
+test_queue_is_bounded_and_drops_are_persisted (test_learning.CaptureTests) ... ok
+test_stop_drains_unsent_frames (test_learning.CaptureTests) ... ok
+test_csrf_and_wrong_origin_never_enable_collection (test_learning.HttpTests) ... ok
+test_live_context_endpoint_builds_reference_and_exposes_frozen_audit (test_learning.HttpTests) ... ok
+test_live_policy_endpoint_reports_worker_configuration_and_no_credentials (test_learning.HttpTests) ... ok
+test_successful_query_annotation_and_exports (test_learning.HttpTests) ... ok
+test_validation_and_unavailable_provider (test_learning.HttpTests) ... ok
+test_announcement_finishes_before_database_or_api_and_end_cue_runs_once (test_learning.LiveTests) ... ok
+test_button_feedback_mutes_microphone_and_ducks_live_output (test_learning.LiveTests) ... Executing <Task pending name='Task-185' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:96> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f872cfa60>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.119 seconds
+ok
+test_connection_failure_is_recorded_without_credential_body (test_learning.LiveTests) ... Executing <Task pending name='Task-198' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:96> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f87282fd0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.116 seconds
+ok
+test_end_cue_failure_still_releases_audio_and_finalizes_database (test_learning.LiveTests) ... Executing <Task pending name='Task-201' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:96> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f87299ac0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.126 seconds
+ok
+test_failed_announcement_never_creates_a_session_or_calls_api (test_learning.LiveTests) ... Executing <Task pending name='Task-212' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:96> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f872aa760>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.148 seconds
+ok
+test_provider_closed_persists_transcript_usage_and_releases_speaker (test_learning.LiveTests) ... ok
+test_server_timer_closes_session_and_no_duplicate_start (test_learning.LiveTests) ... ok
+test_stop_during_announcement_cancels_without_creating_a_session (test_learning.LiveTests) ... Executing <Task pending name='Task-237' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:96> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f872028e0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.102 seconds
+ok
+test_invalid_period_and_csv_formula_protection (test_learning.RouteTests) ... ok
+test_duplicate_samples_keep_live_reference_fresh_without_extra_behavior_counts (test_learning.StoreTests) ... ok
+test_errors_do_not_inflate_behavior_counts (test_learning.StoreTests) ... ok
+test_exact_repeat_is_suppressed_even_if_model_returns_null (test_learning.StoreTests) ... ok
+test_eye_context_uses_recent_duplicate_sample_and_excludes_stale_and_failed_rows (test_learning.StoreTests) ... ok
+test_history_is_latest_ten_saved_records_before_capture_across_both_cameras (test_learning.StoreTests) ... ok
+test_live_reference_includes_only_learning_dialogue_with_user_speech (test_learning.StoreTests) ... ok
+test_live_reference_is_frozen_bounded_and_keeps_untrusted_text_as_data (test_learning.StoreTests) ... ok
+test_live_reference_uses_fresh_success_per_camera_not_failed_or_future_rows (test_learning.StoreTests) ... ok
+test_mismatched_camera_reply_is_not_committed (test_learning.StoreTests) ... ok
+test_new_content_and_return_after_intervening_action_remain_new (test_learning.StoreTests) ... ok
+test_pair_usage_is_counted_once_and_cameras_remain_separate (test_learning.StoreTests) ... ok
+test_restart_preserves_results_marks_incomplete_and_keeps_settings (test_learning.StoreTests) ... ok
+test_same_action_with_new_description_is_preserved_when_not_marked_duplicate (test_learning.StoreTests) ... ok
+test_semantic_duplicates_do_not_repeat_content_but_usage_is_preserved (test_learning.StoreTests) ... ok
+test_time_keyword_cursor_and_annotation_survive_roundtrip (test_learning.StoreTests) ... ok
+test_v1_database_migrates_additively_to_context_schema (test_learning.StoreTests) ... ok
+test_v2_database_adds_duplicate_reference_without_changing_existing_content (test_learning.StoreTests) ... ok
+test_wrong_camera_or_old_reference_rolls_back_without_losing_pending_rows (test_learning.StoreTests) ... ok
+test_batch_spanning_ten_second_boundary_still_counts_once (test_log_analytics.AnalyticsTests) ... ok
+test_demo_is_repeatable_twelve_months_and_never_writes_fake_rows_or_reports (test_log_analytics.AnalyticsTests) ... ok
+test_duplicates_count_fresh_samples_without_adding_people_or_emotion (test_log_analytics.AnalyticsTests) ... ok
+test_invalid_date_and_future_date_are_rejected (test_log_analytics.AnalyticsTests) ... ok
+test_no_baseline_or_few_samples_does_not_make_a_comparative_evaluation (test_log_analytics.AnalyticsTests) ... ok
+test_partial_comparison_uses_exact_previous_samples_not_full_hour_average (test_log_analytics.AnalyticsTests) ... ok
+test_real_refresh_persists_hour_day_month_reports_without_losing_existing_records (test_log_analytics.AnalyticsTests) ... ok
+test_recent_closed_hour_is_recomputed_after_pending_results_finish (test_log_analytics.AnalyticsTests) ... ok
+test_two_cameras_are_one_sample_and_presence_wins_over_other_view_empty_seat (test_log_analytics.AnalyticsTests) ... ok
+test_unreliable_results_are_unknown_and_capture_errors_are_missing_not_absent (test_log_analytics.AnalyticsTests) ... ok
+test_emotion_requires_keywords_and_handles_negation_and_multiple_cues (test_log_analytics.CalendarTests) ... ok
+test_kst_hour_day_and_previous_calendar_period (test_log_analytics.CalendarTests) ... ok
+test_months_and_leap_years_use_calendar_boundaries (test_log_analytics.CalendarTests) ... ok
+test_bad_source_period_hour_and_date_get_validation_errors (test_log_analytics.RouteTests) ... ok
+test_demo_and_empty_real_response_are_distinct (test_log_analytics.RouteTests) ... ok
+test_busy_worker_rejects_another_start (test_observer_api.ObserverApiTests) ... ok
+test_cannot_cancel_an_already_sent_provider_request (test_observer_api.ObserverApiTests) ... ok
+test_jev_face_camera_can_be_either_sensor (test_observer_api.ObserverApiTests) ... ok
+test_missing_worker_does_not_break_other_dashboard_routes (test_observer_api.ObserverApiTests) ... ok
+test_offline_camera_does_not_start_worker (test_observer_api.ObserverApiTests) ... ok
+test_only_registered_provider_camera_and_fields_are_accepted (test_observer_api.ObserverApiTests) ... ok
+test_start_sends_only_provider_and_camera_to_worker (test_observer_api.ObserverApiTests) ... ok
+test_api_validation_and_single_selected_servo (test_servo_controls.ServoTests) ... ok
+test_changed_usb_session_cannot_receive_old_owner_commands (test_servo_controls.ServoTests) ... ok
+test_driver_diagnostics_distinguish_nack_timeout_and_ambiguous_addresses (test_servo_controls.ServoTests) ... ok
+test_enable_does_not_move_and_move_targets_only_selected_channel (test_servo_controls.ServoTests) ... ok
+test_expired_browser_lease_stops_and_revokes_owner (test_servo_controls.ServoTests) ... ok
+test_failed_probe_explains_driver_connection_and_stays_disabled (test_servo_controls.ServoTests) ... ok
+test_fault_and_old_firmware_reject_before_any_arm (test_servo_controls.ServoTests) ... ok
+test_idle_diagnostics_do_not_claim_that_a_test_is_running (test_servo_controls.ServoTests) ... ok
+test_probe_only_initializes_driver_with_outputs_stopped (test_servo_controls.ServoTests) ... ok
+test_stale_telemetry_revokes_live_bridge_instead_of_leaving_pwm_held (test_servo_controls.ServoTests) ... ok
+test_stop_during_arm_prevents_late_servo_motion (test_servo_controls.ServoTests) ... ok
+test_unconfirmed_stop_revokes_bridge_keepalive (test_servo_controls.ServoTests) ... ok
+test_unknown_policy_does_not_say_person_definitely_left (test_study_reaction.ClassificationTests) ... ok
+test_cancel_during_motion_stops_and_prevents_later_moves (test_study_reaction.ReactionTests) ... ok
+test_changed_usb_session_blocks_reaction (test_study_reaction.ReactionTests) ... ok
+test_four_servos_return_and_led_speech_are_applied (test_study_reaction.ReactionTests) ... ok
+test_live_and_duplicate_start_are_rejected_before_api (test_study_reaction.ReactionTests) ... ok
+test_manual_control_is_never_stopped_or_rearmed (test_study_reaction.ReactionTests) ... ok
+test_one_rpc_start_then_one_reaction_report (test_study_reaction.ReactionTests) ... ok
+test_rejected_led_command_is_not_reported_as_applied_and_stops_motors (test_study_reaction.ReactionTests) ... ok
+test_stopped_zero_telemetry_uses_last_acknowledged_target_or_neutral (test_study_reaction.ReactionTests) ... ok
+test_invalid_text_is_rejected_before_provider_start (test_tts_worker.WorkerTests) ... ok
+test_network_failures_show_the_stage_and_no_fixed_cooldown (test_tts_worker.WorkerTests) ... WARNING:root:tts_provider_transport_failure category=dns
+WARNING:root:tts_provider_transport_failure category=connect
+WARNING:root:tts_provider_transport_failure category=timeout
+WARNING:root:tts_provider_transport_failure category=tls
+WARNING:root:tts_provider_transport_failure category=connection_lost
+ok
+test_provider_failure_is_sanitized_and_files_are_removed (test_tts_worker.WorkerTests) ... ok
+test_timeout_kills_provider_and_removes_private_temp_files (test_tts_worker.WorkerTests) ... ok
+
+----------------------------------------------------------------------
+Ran 154 tests in 36.358s
+
+OK

@@ -1,0 +1,38 @@
+{
+  "local_tests": {
+    "total": 81,
+    "passed": true
+  },
+  "nano_tests": {
+    "automatic_eyes": 14,
+    "eye_expressions": 11,
+    "learning": 37,
+    "servo_controls": 12,
+    "total": 74,
+    "passed": true
+  },
+  "real_pico": {
+    "continuous_observation_seconds": 42,
+    "selection_intervals_seconds": [
+      20.648,
+      20.181
+    ],
+    "manual_return": true,
+    "stop_latched": true,
+    "final_automatic_enabled": true,
+    "servo_moves": 0,
+    "extra_ai_requests": 0,
+    "physical_button_press_tested": false
+  },
+  "browser": {
+    "persistent": true,
+    "reason_action": "handling_objects",
+    "automatic_aria_pressed": true,
+    "manual_diagnostic_enabled": true,
+    "mobile_width": 390,
+    "horizontal_overflow": false,
+    "page_errors": [],
+    "hardware_posts": 0
+  },
+  "final_static_app_js_sha256": "d4ae902ef6c9decacd67249b04df4ec4991b9e898e32e9fe8dc5f93a72840daa"
+}

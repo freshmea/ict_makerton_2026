@@ -1,0 +1,176 @@
+{
+  "backup": "/var/lib/300seconds-dashboard/backups/camera-partial-20261024T205942Z",
+  "before": {
+    "cameras": {
+      "run_id": "5b9f18a9c0b448ce8947bc932d314aee",
+      "profile": "720p30",
+      "settings": {
+        "label": "1280×720 · 30 fps",
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "sensor_mode": 4,
+        "capture_width": 1280,
+        "capture_height": 720,
+        "bitrate": 2500000
+      },
+      "preview": {
+        "width": 640,
+        "height": 360,
+        "fps": 15,
+        "quality": 72
+      },
+      "encoder": "omxh264enc",
+      "preview_encoder": "jpegenc",
+      "uptime_seconds": 285.3,
+      "updated_monotonic": 311.534402694,
+      "error": null,
+      "cameras": [
+        {
+          "sensor_id": 0,
+          "node": "/dev/video0",
+          "ready": true,
+          "frames": 8367,
+          "encoded_frames": 8337,
+          "preview_frames": 4193,
+          "fps": 30.04,
+          "encoded_fps": 30.04,
+          "preview_fps": 14.85,
+          "capture_delivery_fps": 30.06,
+          "encoded_delivery_fps": 30.05,
+          "preview_delivery_fps": 14.86,
+          "encoder_pts_lag_ms": 0.0,
+          "encoded_mbps": 2.45,
+          "age_ms": 31,
+          "jpeg_bytes": 11184,
+          "preview_age_ms": 57,
+          "encoded_age_ms": 28,
+          "rtsp_feeds": 0
+        },
+        {
+          "sensor_id": 1,
+          "node": "/dev/video1",
+          "ready": false,
+          "frames": 0,
+          "encoded_frames": 0,
+          "preview_frames": 0,
+          "fps": 0.0,
+          "encoded_fps": 0.0,
+          "preview_fps": 0.0,
+          "capture_delivery_fps": 0.0,
+          "encoded_delivery_fps": 0.0,
+          "preview_delivery_fps": 0.0,
+          "encoder_pts_lag_ms": null,
+          "encoded_mbps": 0.0,
+          "age_ms": null,
+          "jpeg_bytes": 0,
+          "preview_age_ms": null,
+          "encoded_age_ms": null,
+          "rtsp_feeds": 0
+        }
+      ],
+      "pipeline": "nvarguscamerasrc name=source0 sensor-id=0 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t0 t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder0 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2640 emit-signals=true max-buffers=2 drop=true sync=false t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg0 emit-signals=true max-buffers=1 drop=true sync=false nvarguscamerasrc name=source1 sensor-id=1 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t1 t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder1 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2641 emit-signals=true max-buffers=2 drop=true sync=false t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg1 emit-signals=true max-buffers=1 drop=true sync=false",
+      "uid": 996,
+      "rtsp_port": 8554,
+      "worker_alive": true,
+      "ready": false
+    },
+    "boot_id": "cb84c3ac-62f2-47db-b665-f41987fca5ab",
+    "uptime": "311.69 909.85"
+  },
+  "after_cameras": {
+    "run_id": "88ea28f7661c49e2a2fedef4f816960e",
+    "profile": "720p30",
+    "settings": {
+      "label": "1280×720 · 30 fps",
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "sensor_mode": 4,
+      "capture_width": 1280,
+      "capture_height": 720,
+      "bitrate": 2500000
+    },
+    "preview": {
+      "width": 640,
+      "height": 360,
+      "fps": 15,
+      "quality": 72
+    },
+    "encoder": "omxh264enc",
+    "preview_encoder": "jpegenc",
+    "uptime_seconds": 15.2,
+    "updated_monotonic": 331.869573694,
+    "error": null,
+    "cameras": [
+      {
+        "sensor_id": 0,
+        "node": "/dev/video0",
+        "ready": true,
+        "frames": 364,
+        "encoded_frames": 334,
+        "preview_frames": 188,
+        "fps": 30.01,
+        "encoded_fps": 30.01,
+        "preview_fps": 15.0,
+        "capture_delivery_fps": 30.01,
+        "encoded_delivery_fps": 30.0,
+        "preview_delivery_fps": 15.0,
+        "encoder_pts_lag_ms": 0.0,
+        "encoded_mbps": 2.52,
+        "age_ms": 33,
+        "jpeg_bytes": 16042,
+        "preview_age_ms": 26,
+        "encoded_age_ms": 30,
+        "rtsp_feeds": 0
+      },
+      {
+        "sensor_id": 1,
+        "node": "/dev/video1",
+        "ready": false,
+        "frames": 0,
+        "encoded_frames": 0,
+        "preview_frames": 0,
+        "fps": 0.0,
+        "encoded_fps": 0.0,
+        "preview_fps": 0.0,
+        "capture_delivery_fps": 0.0,
+        "encoded_delivery_fps": 0.0,
+        "preview_delivery_fps": 0.0,
+        "encoder_pts_lag_ms": null,
+        "encoded_mbps": 0.0,
+        "age_ms": null,
+        "jpeg_bytes": 0,
+        "preview_age_ms": null,
+        "encoded_age_ms": null,
+        "rtsp_feeds": 0,
+        "error": "영상 수신 없음 · 카메라 연결·전원을 확인하세요."
+      }
+    ],
+    "pipeline": "nvarguscamerasrc name=source0 sensor-id=0 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t0 t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder0 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2640 emit-signals=true max-buffers=2 drop=true sync=false t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg0 emit-signals=true max-buffers=1 drop=true sync=false nvarguscamerasrc name=source1 sensor-id=1 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t1 t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder1 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2641 emit-signals=true max-buffers=2 drop=true sync=false t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg1 emit-signals=true max-buffers=1 drop=true sync=false",
+    "uid": 996,
+    "rtsp_port": 8554,
+    "worker_alive": true,
+    "ready": false,
+    "warning": "카메라 2 영상 없음 · 연결·전원 확인 필요"
+  },
+  "images": {
+    "0": {
+      "status": 200,
+      "bytes": 15700
+    },
+    "1": {
+      "status": 503,
+      "detail": {
+        "detail": "카메라를 준비하고 있습니다."
+      }
+    }
+  },
+  "power": {
+    "in_voltage0_input": "4512",
+    "rail_name_0": "POM_5V_IN"
+  },
+  "kernel": "[    1.764582] imx219 7-0010: tegracam sensor driver:imx219_v2.0.6\n[    1.787927] tegra-vii2c 546c0000.i2c: no acknowledge from address 0x10\n[    1.788023] imx219 7-0010: imx219_board_setup: error during i2c read probe (-121)\n[    1.795690] imx219 7-0010: board setup failed\n[    1.800150] imx219: probe of 7-0010 failed with error -121\n[    1.800749] imx219 8-0010: tegracam sensor driver:imx219_v2.0.6\n[    1.853598] soctherm: OC ALARM 0x00000001\n[    1.986347] vi 54080000.vi: subdev imx219 8-0010 bound\n[    3.966725] soctherm: OC ALARM 0x00000001\n[    6.085798] soctherm: OC ALARM 0x00000001\n[    7.098480] soctherm: OC ALARM 0x00000001\n[    8.100168] soctherm: OC ALARM 0x00000001\n[    9.103378] soctherm: OC ALARM 0x00000001\n[   10.107480] soctherm: OC ALARM 0x00000001\n[   11.111653] soctherm: OC ALARM 0x00000001\n[   12.115343] soctherm: OC ALARM 0x00000001\n[   13.119507] soctherm: OC ALARM 0x00000001\n[   14.123894] soctherm: OC ALARM 0x00000001\n[   15.858858] soctherm: OC ALARM 0x00000001\n[   16.859463] soctherm: OC ALARM 0x00000001\n[   17.901074] soctherm: OC ALARM 0x00000001\n[   18.906518] soctherm: OC ALARM 0x00000001\n[   21.256979] soctherm: OC ALARM 0x00000001\n[   24.277190] soctherm: OC ALARM 0x00000001\n[   25.279495] soctherm: OC ALARM 0x00000001\n[   26.349322] soctherm: OC ALARM 0x00000001\n[   27.983606] soctherm: OC ALARM 0x00000001\n[   29.680969] soctherm: OC ALARM 0x00000001\n[   30.715101] soctherm: OC ALARM 0x00000001\n[   31.744518] soctherm: OC ALARM 0x00000001\n[   32.755885] soctherm: OC ALARM 0x00000001\n[   33.759884] soctherm: OC ALARM 0x00000001\n[   34.778293] soctherm: OC ALARM 0x00000001\n[   35.815247] soctherm: OC ALARM 0x00000001\n[   36.827058] soctherm: OC ALARM 0x00000001\n[   37.841825] soctherm: OC ALARM 0x00000001\n[   38.844318] soctherm: OC ALARM 0x00000001\n[   39.877228] soctherm: OC ALARM 0x00000001\n[   40.882323] soctherm: OC ALARM 0x00000001\n[   41.890007] soctherm: OC ALARM 0x00000001\n[   42.904815] soctherm: OC ALARM 0x00000001\n[   43.909733] soctherm: OC ALARM 0x00000001\n[   44.911719] soctherm: OC ALARM 0x00000001\n[   45.943273] soctherm: OC ALARM 0x00000001\n[   46.957065] soctherm: OC ALARM 0x00000001\n[   47.977483] soctherm: OC ALARM 0x00000001\n[   49.010999] soctherm: OC ALARM 0x00000001\n[   50.037316] soctherm: OC ALARM 0x00000001\n[   51.075040] soctherm: OC ALARM 0x00000001\n[   52.108571] soctherm: OC ALARM 0x00000001\n[   53.143141] soctherm: OC ALARM 0x00000001\n[   54.149990] soctherm: OC ALARM 0x00000001\n[   55.174364] soctherm: OC ALARM 0x00000001\n[   56.237033] soctherm: OC ALARM 0x00000001\n[   57.240411] soctherm: OC ALARM 0x00000001\n[   58.273568] soctherm: OC ALARM 0x00000001\n[   59.306633] soctherm: OC ALARM 0x00000001\n[   60.373048] soctherm: OC ALARM 0x00000001\n[   61.401987] soctherm: OC ALARM 0x00000001\n[   62.406062] soctherm: OC ALARM 0x00000001\n[   63.438948] soctherm: OC ALARM 0x00000001\n[   64.505589] soctherm: OC ALARM 0x00000001\n[   65.572290] soctherm: OC ALARM 0x00000001\n[   66.638052] soctherm: OC ALARM 0x00000001\n[   67.641379] soctherm: OC ALARM 0x00000001\n[   68.704436] soctherm: OC ALARM 0x00000001\n[   69.737618] soctherm: OC ALARM 0x00000001\n[   70.771351] soctherm: OC ALARM 0x00000001\n[   71.804840] soctherm: OC ALARM 0x00000001\n[   72.807802] soctherm: OC ALARM 0x00000001\n[   73.836132] soctherm: OC ALARM 0x00000001\n[   74.896854] soctherm: OC ALARM 0x00000001\n[   75.903168] soctherm: OC ALARM 0x00000001\n[   76.969043] soctherm: OC ALARM 0x00000001\n[   78.002655] soctherm: OC ALARM 0x00000001\n[   79.069185] soctherm: OC ALARM 0x00000001\n[   80.129716] soctherm: OC ALARM 0x00000001\n[   81.135386] soctherm: OC ALARM 0x00000001\n[   82.166206] soctherm: OC ALARM 0x00000001\n[   83.234893] soctherm: OC ALARM 0x00000001\n[   84.268025] soctherm: OC ALARM 0x00000001\n[   85.301083] soctherm: OC ALARM 0x00000001\n[   86.314027] soctherm: OC ALARM 0x00000001\n[   87.319129] soctherm: OC ALARM 0x00000001\n[   88.367188] soctherm: OC ALARM 0x00000001\n[   89.433691] soctherm: OC ALARM 0x00000001\n[   90.490709] soctherm: OC ALARM 0x00000001\n[   91.493712] soctherm: OC ALARM 0x00000001\n[   92.500254] soctherm: OC ALARM 0x00000001\n[   93.527077] soctherm: OC ALARM 0x00000001\n[   94.532482] soctherm: OC ALARM 0x00000001\n[   95.537002] soctherm: OC ALARM 0x00000001\n[   96.565446] soctherm: OC ALARM 0x00000001\n[   97.613410] soctherm: OC ALARM 0x00000001\n[   98.664807] soctherm: OC ALARM 0x00000001\n[   99.692259] soctherm: OC ALARM 0x00000001\n[  100.731342] soctherm: OC ALARM 0x00000001\n[  101.766674] soctherm: OC ALARM 0x00000001\n[  102.777174] soctherm: OC ALARM 0x00000001\n[  103.798944] soctherm: OC ALARM 0x00000001\n[  104.863853] soctherm: OC ALARM 0x00000001\n[  105.930209] soctherm: OC ALARM 0x00000001\n[  106.963756] soctherm: OC ALARM 0x00000001\n[  107.965258] soctherm: OC ALARM 0x00000001\n[  108.996138] soctherm: OC ALARM 0x00000001\n[  110.029015] soctherm: OC ALARM 0x00000001\n[  111.062731] soctherm: OC ALARM 0x00000001\n[  112.095768] soctherm: OC ALARM 0x00000001\n[  113.128768] soctherm: OC ALARM 0x00000001\n[  114.194997] soctherm: OC ALARM 0x00000001\n[  115.227843] soctherm: OC ALARM 0x00000001\n[  116.257729] soctherm: OC ALARM 0x00000001\n[  117.322357] soctherm: OC ALARM 0x00000001\n[  118.327910] soctherm: OC ALARM 0x00000001\n[  119.328917] soctherm: OC ALARM 0x00000001\n[  120.333917] soctherm: OC ALARM 0x00000001\n[  121.337947] soctherm: OC ALARM 0x00000001\n[  122.360179] soctherm: OC ALARM 0x00000001\n[  123.426237] soctherm: OC ALARM 0x00000001\n[  124.493206] soctherm: OC ALARM 0x00000001\n[  125.559677] soctherm: OC ALARM 0x00000001\n[  126.588452] soctherm: OC ALARM 0x00000001\n[  127.592601] soctherm: OC ALARM 0x00000001\n[  128.625520] soctherm: OC ALARM 0x00000001\n[  129.658569] soctherm: OC ALARM 0x00000001\n[  130.671476] soctherm: OC ALARM 0x00000001\n[  131.673982] soctherm: OC ALARM 0x00000001\n[  132.323194] tegra-i2c 7000c000.i2c: no acknowledge from address 0x50\n[  132.336256] tegra-i2c 7000c400.i2c: no acknowledge from address 0x50\n[  132.684953] soctherm: OC ALARM 0x00000001\n[  133.691090] soctherm: OC ALARM 0x00000001\n[  134.694491] soctherm: OC ALARM 0x00000001\n[  135.757059] soctherm: OC ALARM 0x00000001\n[  136.784523] soctherm: OC ALARM 0x00000001\n[  137.785089] soctherm: OC ALARM 0x00000001\n[  138.790085] soctherm: OC ALARM 0x00000001\n[  139.856205] soctherm: OC ALARM 0x00000001\n[  140.922897] soctherm: OC ALARM 0x00000001\n[  141.956097] soctherm: OC ALARM 0x00000001\n[  142.989315] soctherm: OC ALARM 0x00000001\n[  144.022207] soctherm: OC ALARM 0x00000001\n[  145.089018] soctherm: OC ALARM 0x00000001\n[  146.155098] soctherm: OC ALARM 0x00000001\n[  147.215221] soctherm: OC ALARM 0x00000001\n[  148.218816] soctherm: OC ALARM 0x00000001\n[  149.287808] soctherm: OC ALARM 0x00000001\n[  150.320944] soctherm: OC ALARM 0x00000001\n[  151.354123] soctherm: OC ALARM 0x00000001\n[  152.387014] soctherm: OC ALARM 0x00000001\n[  153.453827] soctherm: OC ALARM 0x00000001\n[  154.520122] soctherm: OC ALARM 0x00000001\n[  155.586441] soctherm: OC ALARM 0x00000001\n[  156.619826] soctherm: OC ALARM 0x00000001\n[  157.632314] soctherm: OC ALARM 0x00000001\n[  158.686253] soctherm: OC ALARM 0x00000001\n[  159.752411] soctherm: OC ALARM 0x00000001\n[  160.782870] soctherm: OC ALARM 0x00000001\n[  161.785250] soctherm: OC ALARM 0x00000001\n[  162.818015] soctherm: OC ALARM 0x00000001\n[  163.851514] soctherm: OC ALARM 0x00000001\n[  164.884483] soctherm: OC ALARM 0x00000001\n[  165.917619] soctherm: OC ALARM 0x00000001\n[  166.921402] soctherm: OC ALARM 0x00000001\n[  167.945182] soctherm: OC ALARM 0x00000001\n[  168.949032] soctherm: OC ALARM 0x00000001\n[  169.983413] soctherm: OC ALARM 0x00000001\n[  171.019901] soctherm: OC ALARM 0x00000001\n[  172.049600] soctherm: OC ALARM 0x00000001\n[  173.083134] soctherm: OC ALARM 0x00000001\n[  174.084614] soctherm: OC ALARM 0x00000001\n[  175.148955] soctherm: OC ALARM 0x00000001\n[  176.215438] soctherm: OC ALARM 0x00000001\n[  177.248765] soctherm: OC ALARM 0x00000001\n[  178.315080] soctherm: OC ALARM 0x00000001\n[  179.348512] soctherm: OC ALARM 0x00000001\n[  180.381480] soctherm: OC ALARM 0x00000001\n[  181.447527] soctherm: OC ALARM 0x00000001\n[  182.509244] soctherm: OC ALARM 0x00000001\n[  183.528576] soctherm: OC ALARM 0x00000001\n[  184.580392] soctherm: OC ALARM 0x00000001\n[  185.613724] soctherm: OC ALARM 0x00000001\n[  186.680078] soctherm: OC ALARM 0x00000001\n[  187.692795] soctherm: OC ALARM 0x00000001\n[  188.694383] soctherm: OC ALARM 0x00000001\n[  189.711929] soctherm: OC ALARM 0x00000001\n[  190.745744] soctherm: OC ALARM 0x00000001\n[  191.812398] soctherm: OC ALARM 0x00000001\n[  192.813669] soctherm: OC ALARM 0x00000001\n[  193.845343] soctherm: OC ALARM 0x00000001\n[  194.911652] soctherm: OC ALARM 0x00000001\n[  195.913951] soctherm: OC ALARM 0x00000001\n[  196.932684] soctherm: OC ALARM 0x00000001\n[  197.940518] soctherm: OC ALARM 0x00000001\n[  198.973520] soctherm: OC ALARM 0x00000001\n[  199.978372] soctherm: OC ALARM 0x00000001\n[  201.043665] soctherm: OC ALARM 0x00000001\n[  202.056864] soctherm: OC ALARM 0x00000001\n[  203.110180] soctherm: OC ALARM 0x00000001\n[  204.176430] soctherm: OC ALARM 0x00000001\n[  205.213886] soctherm: OC ALARM 0x00000001\n[  206.240287] soctherm: OC ALARM 0x00000001\n[  207.275620] soctherm: OC ALARM 0x00000001\n[  208.342239] soctherm: OC ALARM 0x00000001\n[  209.346660] soctherm: OC ALARM 0x00000001\n[  210.368898] soctherm: OC ALARM 0x00000001\n[  211.370749] soctherm: OC ALARM 0x00000001\n[  212.375055] soctherm: OC ALARM 0x00000001\n[  213.441121] soctherm: OC ALARM 0x00000001\n[  214.501922] soctherm: OC ALARM 0x00000001\n[  215.505863] soctherm: OC ALARM 0x00000001\n[  216.511638] soctherm: OC ALARM 0x00000001\n[  217.540304] soctherm: OC ALARM 0x00000001\n[  218.573338] soctherm: OC ALARM 0x00000001\n[  219.639945] soctherm: OC ALARM 0x00000001\n[  220.705997] soctherm: OC ALARM 0x00000001\n[  221.718800] soctherm: OC ALARM 0x00000001\n[  222.753925] soctherm: OC ALARM 0x00000001\n[  223.835891] soctherm: OC ALARM 0x00000001\n[  224.838742] soctherm: OC ALARM 0x00000001\n[  225.872107] soctherm: OC ALARM 0x00000001\n[  226.886354] soctherm: OC ALARM 0x00000001\n[  227.901727] soctherm: OC ALARM 0x00000001\n[  228.903615] soctherm: OC ALARM 0x00000001\n[  229.933934] soctherm: OC ALARM 0x00000001\n[  230.939082] soctherm: OC ALARM 0x00000001\n[  231.942321] soctherm: OC ALARM 0x00000001\n[  232.963387] soctherm: OC ALARM 0x00000001\n[  233.973567] soctherm: OC ALARM 0x00000001\n[  235.036453] soctherm: OC ALARM 0x00000001\n[  236.048902] soctherm: OC ALARM 0x00000001\n[  237.080214] soctherm: OC ALARM 0x00000001\n[  238.135921] soctherm: OC ALARM 0x00000001\n[  239.163752] soctherm: OC ALARM 0x00000001\n[  240.202365] soctherm: OC ALARM 0x00000001\n[  241.268820] soctherm: OC ALARM 0x00000001\n[  242.282536] soctherm: OC ALARM 0x00000001\n[  243.335053] soctherm: OC ALARM 0x00000001\n[  244.368105] soctherm: OC ALARM 0x00000001\n[  245.402711] soctherm: OC ALARM 0x00000001\n[  246.407622] soctherm: OC ALARM 0x00000001\n[  247.446913] soctherm: OC ALARM 0x00000001\n[  248.493475] soctherm: OC ALARM 0x00000001\n[  249.497966] soctherm: OC ALARM 0x00000001\n[  250.533252] soctherm: OC ALARM 0x00000001\n[  251.566478] soctherm: OC ALARM 0x00000001\n[  252.599806] soctherm: OC ALARM 0x00000001\n[  253.665895] soctherm: OC ALARM 0x00000001\n[  254.699023] soctherm: OC ALARM 0x00000001\n[  255.713581] soctherm: OC ALARM 0x00000001\n[  256.765322] soctherm: OC ALARM 0x00000001\n[  257.798374] soctherm: OC ALARM 0x00000001\n[  258.831658] soctherm: OC ALARM 0x00000001\n[  259.864896] soctherm: OC ALARM 0x00000001\n[  260.931117] soctherm: OC ALARM 0x00000001\n[  261.964119] soctherm: OC ALARM 0x00000001\n[  262.997617] soctherm: OC ALARM 0x00000001\n[  264.030440] soctherm: OC ALARM 0x00000001\n[  265.063621] soctherm: OC ALARM 0x00000001\n[  266.071253] soctherm: OC ALARM 0x00000001\n[  267.096591] soctherm: OC ALARM 0x00000001\n[  268.129829] soctherm: OC ALARM 0x00000001\n[  269.162549] soctherm: OC ALARM 0x00000001\n[  270.167542] soctherm: OC ALARM 0x00000001\n[  271.229246] soctherm: OC ALARM 0x00000001\n[  272.261835] soctherm: OC ALARM 0x00000001\n[  273.328655] soctherm: OC ALARM 0x00000001\n[  274.361716] soctherm: OC ALARM 0x00000001\n[  275.428115] soctherm: OC ALARM 0x00000001\n[  276.494604] soctherm: OC ALARM 0x00000001\n[  277.551168] soctherm: OC ALARM 0x00000001\n[  278.593905] soctherm: OC ALARM 0x00000001\n[  279.627172] soctherm: OC ALARM 0x00000001\n[  280.693916] soctherm: OC ALARM 0x00000001\n[  281.727013] soctherm: OC ALARM 0x00000001\n[  282.747584] soctherm: OC ALARM 0x00000001\n[  283.759774] soctherm: OC ALARM 0x00000001\n[  284.859562] soctherm: OC ALARM 0x00000001\n[  285.892640] soctherm: OC ALARM 0x00000001\n[  286.925462] soctherm: OC ALARM 0x00000001\n[  287.992047] soctherm: OC ALARM 0x00000001\n[  289.025496] soctherm: OC ALARM 0x00000001\n[  290.058544] soctherm: OC ALARM 0x00000001\n[  291.091627] soctherm: OC ALARM 0x00000001\n[  292.158074] soctherm: OC ALARM 0x00000001\n[  293.191042] soctherm: OC ALARM 0x00000001\n[  294.257614] soctherm: OC ALARM 0x00000001\n[  295.260196] soctherm: OC ALARM 0x00000001\n[  296.263571] soctherm: OC ALARM 0x00000001\n[  297.323538] soctherm: OC ALARM 0x00000001\n[  298.328541] soctherm: OC ALARM 0x00000001\n[  299.387325] soctherm: OC ALARM 0x00000001\n[  300.395882] soctherm: OC ALARM 0x00000001\n[  301.400630] soctherm: OC ALARM 0x00000001\n[  302.406493] soctherm: OC ALARM 0x00000001\n[  303.408801] soctherm: OC ALARM 0x00000001\n[  304.411992] soctherm: OC ALARM 0x00000001\n[  305.416688] soctherm: OC ALARM 0x00000001\n[  306.419723] soctherm: OC ALARM 0x00000001\n[  307.423721] soctherm: OC ALARM 0x00000001\n[  308.428926] soctherm: OC ALARM 0x00000001\n[  309.432097] soctherm: OC ALARM 0x00000001\n[  310.436282] soctherm: OC ALARM 0x00000001\n[  311.453324] soctherm: OC ALARM 0x00000001\n[  312.456240] soctherm: OC ALARM 0x00000001\n[  314.333229] soctherm: OC ALARM 0x00000001\n[  315.336685] soctherm: OC ALARM 0x00000001\n[  316.340252] soctherm: OC ALARM 0x00000001\n[  317.373051] soctherm: OC ALARM 0x00000001\n[  319.084945] soctherm: OC ALARM 0x00000001\n[  320.088491] soctherm: OC ALARM 0x00000001\n[  321.093096] soctherm: OC ALARM 0x00000001\n[  322.124767] soctherm: OC ALARM 0x00000001\n[  323.152426] soctherm: OC ALARM 0x00000001\n[  324.159567] soctherm: OC ALARM 0x00000001\n[  325.190389] soctherm: OC ALARM 0x00000001\n[  326.223655] soctherm: OC ALARM 0x00000001\n[  327.290218] soctherm: OC ALARM 0x00000001\n[  328.356566] soctherm: OC ALARM 0x00000001\n[  329.422910] soctherm: OC ALARM 0x00000001\n[  330.453293] soctherm: OC ALARM 0x00000001\n[  331.489618] soctherm: OC ALARM 0x00000001",
+  "learning_enabled": true,
+  "live_phase": "idle"
+}

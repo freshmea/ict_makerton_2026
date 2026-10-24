@@ -1,0 +1,7 @@
+test_decisions_provider_error_remains_a_visible_error (test_decisions_service.OperationalTests) ... ok
+test_decisions_twenty_frames_are_available_when_old_five_tests_are_exhausted (test_decisions_service.OperationalTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.199s
+
+OK

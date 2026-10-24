@@ -1,0 +1,11 @@
+{
+  "backup": "/var/lib/300seconds-dashboard/backups/idle-eyes-variety-wqqe7frt",
+  "collection_before": true,
+  "automatic_before": true,
+  "before_sha256": "7798800252d2cd06db67a0971a3c6fb3a5be7654933a40d017c8bc94c017c0d9",
+  "after_sha256": "ab88e86ff486601773302fd8c5cd5baed7d32083f0be89d16c75b18d3d4337e3",
+  "status": "ok",
+  "collection_restored": true,
+  "automatic_preserved": true,
+  "interval_seconds": 20.0
+}

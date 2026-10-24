@@ -1,0 +1,117 @@
+{
+  "verification": "synthetic firmware events through production ButtonAudio; physical GPIO presses not simulated",
+  "mp3s": [
+    {
+      "index": 1,
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 1,
+      "seconds": 0.624
+    },
+    {
+      "index": 2,
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 1,
+      "seconds": 0.576
+    },
+    {
+      "index": 3,
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 1,
+      "seconds": 0.672
+    },
+    {
+      "index": 4,
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 1,
+      "seconds": 0.672
+    },
+    {
+      "index": 5,
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 1,
+      "seconds": 0.792
+    },
+    {
+      "index": 6,
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 1,
+      "seconds": 0.768
+    }
+  ],
+  "concurrent_24khz_primary_plus_48khz_feedback": true,
+  "main_speaker_lock_preserved": true,
+  "event_to_speaker": {
+    "press_events": 6,
+    "count_events": 18,
+    "labels_played": 6,
+    "beeps_played": 18,
+    "dropped": 0,
+    "rejected": 0,
+    "running": true,
+    "ready": true,
+    "cached_buttons": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "last": {
+      "kind": "beep",
+      "index": 6,
+      "count": 3,
+      "time": 1792856593.5270698,
+      "pitch_hz": 466.16
+    },
+    "error": null,
+    "queued": {
+      "label": 0,
+      "beep": 0
+    },
+    "base_hz": 440,
+    "max_hz": 1318.51,
+    "beep_ms": 80,
+    "source": "firmware Touch events / Jetson systemd / cached MP3"
+  },
+  "deployed": {
+    "button_audio": {
+      "press_events": 0,
+      "count_events": 0,
+      "labels_played": 0,
+      "beeps_played": 0,
+      "dropped": 0,
+      "rejected": 0,
+      "running": true,
+      "ready": true,
+      "cached_buttons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "last": null,
+      "error": null,
+      "queued": {
+        "label": 0,
+        "beep": 0
+      },
+      "base_hz": 440,
+      "max_hz": 1318.51,
+      "beep_ms": 80,
+      "source": "firmware Touch events / Jetson systemd / cached MP3"
+    },
+    "pico_connected": true,
+    "microphone_connected": true,
+    "collection_enabled": true,
+    "live_phase": "idle"
+  }
+}

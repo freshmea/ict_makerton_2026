@@ -115,7 +115,7 @@ def read_state(runtime, camera_id, expected=None):
 
 
 def camera_roles(provider, camera_id):
-    if provider == 'jev':
+    if provider in ('jev', 'decisions'):
         return [{'sensor_id': camera_id, 'role': 'face'},
                 {'sensor_id': 1 - camera_id, 'role': 'study_area'}]
     return [{'sensor_id': camera_id, 'role': 'combined'}]
@@ -164,10 +164,11 @@ def capture(runtime, camera_id, cancel, progress, dual_camera=False):
 
 
 def content(images):
-    result = [{'type': 'input_text', 'text': CONTEXT}]
+    dual = len({i['sensor_id'] for i in images}) == 2
+    result = [{'type': 'input_text', 'text': JEV_CONTEXT if dual else CONTEXT}]
     for image in images:
-        result.extend([{'type': 'input_text', 'text': 'Frame %d, elapsed %.3fs, camera %d' %
-                        (image['sample'] + 1, image['offset_seconds'], image['sensor_id'])},
+        result.extend([{'type': 'input_text', 'text': 'Frame %d, elapsed %.3fs, camera %d, role %s' %
+                        (image['sample'] + 1, image['offset_seconds'], image['sensor_id'], image.get('role', 'combined'))},
                        {'type': 'input_image', 'detail': 'low',
                         'image_url': 'data:image/jpeg;base64,' + base64.b64encode(image['data']).decode()}])
     return result
@@ -246,7 +247,7 @@ def normalize(answers, frame_count=FRAME_COUNT):
     return result
 
 
-def translate_openai(data):
+def translate_openai(data, frame_count=FRAME_COUNT):
     values, refused = {}, []
     raw = data.get('answers')
     if not isinstance(raw, list) or len(raw) != len(questions()):
@@ -267,15 +268,15 @@ def translate_openai(data):
             values[name] = {'type': 'noul', 'noul': item.get('probability')}
         else:
             values[name] = item
-    result = normalize(values)
+    result = normalize(values, frame_count=frame_count)
     result['refused_questions'] = refused
     return result
 
 
 def analyze(provider, images, keys, budget):
-    if provider == 'openai':
+    if provider in ('openai', 'decisions'):
         data, meta = openai.call(openai_body(images), keys.get('OPENAI_API_KEY', ''), budget, 'desk_10_frame_window')
-        return dict(meta, **translate_openai(data), model=data['model'], provider=provider)
+        return dict(meta, **translate_openai(data, frame_count=len(images)), model=data['model'], provider=provider)
     if provider != 'jev':
         raise Error('provider_invalid')
     key = keys.get('OPENCODE_API_KEY', '')

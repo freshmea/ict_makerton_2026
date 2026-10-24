@@ -57,6 +57,7 @@ class Pico:
         self.last_test = None
         self.module_tests = {}
         self.last_touch = None
+        self.touch_listeners = set()
         self.outputs = None
         self.last_applied = None
         self.capabilities = {}
@@ -123,11 +124,25 @@ class Pico:
                     self.last_touch = value
                 elif event in ('error', 'cleanup_unconfirmed'):
                     self.error = value.get('error', event)
+                listeners = list(self.touch_listeners) if event == 'touch' else []
+            for callback in listeners:
+                try:
+                    callback(value)
+                except Exception:
+                    self.events.add('pico', '버튼 이벤트 수신기 오류', 'warning')
             if event in ('touch', 'test_event', 'error', 'bridge_ready', 'cleanup_unconfirmed'):
                 self.events.add('pico', json.dumps(value, ensure_ascii=False),
                                 'warning' if event in ('error', 'cleanup_unconfirmed') else 'info')
         process.wait()
         self.events.add('pico', 'USB 브리지 종료. 연결 재시도는 수동으로 실행합니다.', 'warning')
+
+    def subscribe_touch(self, callback):
+        with self.lock:
+            self.touch_listeners.add(callback)
+        def remove():
+            with self.lock:
+                self.touch_listeners.discard(callback)
+        return remove
 
     def snapshot(self):
         with self.lock:
@@ -235,14 +250,29 @@ class Cameras:
             fresh = time.monotonic() - value['updated_monotonic'] < 2
             alive = self.process is not None and self.process.poll() is None
             value['worker_alive'] = alive
-            value['ready'] = alive and fresh and not value.get('error') and all(c['ready'] for c in value['cameras'])
-            if not fresh or not alive:
+            value['ready'] = alive and fresh and not value.get('error') and len(value['cameras']) == 2 and all(c['ready'] for c in value['cameras'])
+            if not fresh or not alive or value.get('error'):
                 for camera in value['cameras']:
                     camera['ready'] = False
+            unavailable = []
+            for camera in value['cameras']:
+                if not camera['ready'] and value.get('uptime_seconds', 0) >= 15:
+                    camera['error'] = '영상 수신 없음 · 카메라 연결·전원을 확인하세요.'
+                    unavailable.append(str(camera['sensor_id'] + 1))
+            value['warning'] = ('카메라 %s 영상 없음 · 연결·전원 확인 필요' % ', '.join(unavailable)) if unavailable else None
             return value
         except (OSError, ValueError, KeyError):
             return {'profile': self.profile, 'ready': False, 'cameras': [],
                     'error': '카메라 스트림 준비 중', 'settings': PROFILES[self.profile]}
+
+    @staticmethod
+    def can_preview(state, sensor):
+        # Aggregate ready remains strict for two-camera analysis. A healthy
+        # preview must not wait for the other sensor to recover.
+        return state.get('worker_alive') is True and not state.get('error') and any(
+            c.get('sensor_id') == sensor and c.get('ready') is True and
+            isinstance(c.get('preview_age_ms'), (int, float)) and 0 <= c['preview_age_ms'] < 2000
+            for c in state.get('cameras', []))
 
     def image_path(self, sensor):
         return self.runtime / ('cam%d.jpg' % sensor)
@@ -271,6 +301,7 @@ class Audio:
         self.events = events
         self.lock = threading.Lock()
         self.play_lock = threading.Lock()
+        self.feedback_until = 0.0
         self.ring = deque(maxlen=60)
         self.process = None
         self.last_pcm = None
@@ -458,6 +489,22 @@ class Audio:
         if result.returncode:
             raise RuntimeError(result.stdout.decode(errors='replace')[:500])
         return self.speaker
+
+    def feedback_active(self):
+        with self.lock:
+            return time.monotonic() < self.feedback_until
+
+    def play_feedback(self, data):
+        """Cached button audio shares ALSA dmix, including while Live owns play_lock."""
+        with wave.open(io.BytesIO(data), 'rb') as reader:
+            duration = reader.getnframes() / reader.getframerate()
+        with self.lock:
+            self.feedback_until = max(self.feedback_until, time.monotonic() + duration + .25)
+        result = subprocess.run(['aplay', '-q', '-D', 'robot_playback', '-t', 'wav', '-'],
+                                input=data, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                timeout=max(3, duration + 2))
+        if result.returncode:
+            raise RuntimeError(result.stdout.decode(errors='replace')[:300])
 
     def tts(self, text):
         if not self.play_lock.acquire(blocking=False):

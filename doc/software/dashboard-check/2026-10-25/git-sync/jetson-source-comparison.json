@@ -1,0 +1,329 @@
+{
+  "head": "a4b85f3223877fb9bb327f84a723d1e09e06cd40",
+  "files": [
+    {
+      "path": "apps/device-dashboard/README.md",
+      "sha256": "11ba18c494c50e76f4d2c1aeafbfb14c80f37d50b1a6d9c2ae817ab13eee8042",
+      "bytes": 27946,
+      "local_state": "different"
+    },
+    {
+      "path": "apps/device-dashboard/analytics_routes.py",
+      "sha256": "74a0ead010faab92e67134aaecd8252010064f14d60870d1a95fc56f22fc5e72",
+      "bytes": 650,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/app.py",
+      "sha256": "15d803bf66ce39852d7f0717cf0b9c2dc089400261bd92cbd176813ec8a75cad",
+      "bytes": 17891,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-1.mp3",
+      "sha256": "bd5273f05b2c053083d19f409b6422da93df403204f7c52904a45692fe8520c0",
+      "bytes": 7821,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-1.wav",
+      "sha256": "24bf6ad68fd868a5dc1b622ce44e0e3cc5447cdd7455f8da59fe623e1e71ac59",
+      "bytes": 57230,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-2.mp3",
+      "sha256": "0a8f3b9e1d6837e46e81e32eeade6457db5c112bd55a56a78fbc1b7481e5c3f2",
+      "bytes": 6669,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-2.wav",
+      "sha256": "3bae92cce5352ec63a352b7230d911e734f14188cebf16be6afa4ade4a866f36",
+      "bytes": 48318,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-3.mp3",
+      "sha256": "5a7914d30c4ac6f13899546e938f3c496d54f565c4a516a6d405d41d9b3c0cec",
+      "bytes": 8397,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-3.wav",
+      "sha256": "a2d9a0366ce52dc7c940d7f5a61059aee1ea82304569db294ec59648f9bc7d4b",
+      "bytes": 61028,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-4.mp3",
+      "sha256": "0128b20021a08c63978702cf9f247e4722a38660d62e990791ecd983a83c59e8",
+      "bytes": 7821,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-4.wav",
+      "sha256": "6d06add5490875da9c13a6744069fef86dacf9069dfff81a285967704c8ec279",
+      "bytes": 57530,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-5.mp3",
+      "sha256": "f1c248df4b51c5d500d5408593d4c2649e1c79398e0008291aa9cbd0ad72861f",
+      "bytes": 7533,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-5.wav",
+      "sha256": "f067232ee6180dccf5cf55b7f92f169c179bcb2bdf3b4a0de06e93c42922709b",
+      "bytes": 55144,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-6.mp3",
+      "sha256": "2b45936dfb587775d8549742f538896424965fcd979b3a8ba316167cc64bed26",
+      "bytes": 8397,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/button-6.wav",
+      "sha256": "62c5e4a4ed095a9df405378e43c35392c96e49757d8fd1f66f87d5e5b5d79a1f",
+      "bytes": 61438,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/live-end.mp3",
+      "sha256": "1b38fc01182e8d5a818d5ce14c725635e35dedae6fa4f739a9839089b836c70e",
+      "bytes": 13581,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/live-end.wav",
+      "sha256": "621f2f9d39a7ec1e2eee389ff9f700716d0d9717df10c09f0c144bcc05ac7815",
+      "bytes": 101932,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/live-start.mp3",
+      "sha256": "8ac18ac35cb6ed66b678eb728dc9a228f977100197aede31f3c29f98d5ea9e09",
+      "bytes": 14733,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/live-start.wav",
+      "sha256": "00b1ced649afd5c5f267b730cd4f669144949b07f527eea23b03bc0c5577dca6",
+      "bytes": 111204,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/assets/button-audio/manifest.json",
+      "sha256": "981752993bf895f69a020a4aac36499c01f1dcebc465cd29447993b4a686759d",
+      "bytes": 2161,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/automatic_eyes.py",
+      "sha256": "ab88e86ff486601773302fd8c5cd5baed7d32083f0be89d16c75b18d3d4337e3",
+      "bytes": 11533,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/build_button_audio.py",
+      "sha256": "dd4215ee3cf8b2e0609c7e5600b7cf1f0896eeb630842c386bd4eda17dd9473e",
+      "bytes": 6214,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/button_audio.py",
+      "sha256": "aae7fd3fac030a74954209ce788cdab6c5c582635cec0b9b943896c280286470",
+      "bytes": 14857,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/eye_expressions.py",
+      "sha256": "965f3c0e9d3aba758f89f0b0f6cff9f19aeb6b907dfb122d055ff6fa8f45259c",
+      "bytes": 20479,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/hardware.py",
+      "sha256": "806111bd2ab35fe941df145684f864f7424f408714bcdd84a6df3e73c0505ef4",
+      "bytes": 26682,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/install.sh",
+      "sha256": "ae83221e7e657db03888c72f15aacc319a1abc1a9ee6c0577578148d0acaafb5",
+      "bytes": 2670,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/learning.py",
+      "sha256": "93cc4c00952741ab780402cfa807b17503ea8ac742f3dace5328e99a35b5e3ab",
+      "bytes": 19737,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/learning_client.py",
+      "sha256": "b0b576b71dac0d7091ca9a523422dcdef338e68bc60167f9a11c10910be99675",
+      "bytes": 911,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/learning_store.py",
+      "sha256": "12f0cfd377a39f7303b8456eca8666508f837d0020ac669859c0dcac7fca6035",
+      "bytes": 24509,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/log_analytics.py",
+      "sha256": "cec2f9ac77c3672d40412608ac7dd7d3c2eecfba386579b30b1500454e57e7be",
+      "bytes": 22602,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/media_worker.py",
+      "sha256": "7f993692158eba9fd18eb6f2e2400fa8a25dd067dde3bdc344364819a1bb937a",
+      "bytes": 13011,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/pico-config.json",
+      "sha256": "76a71d04914f6d8d4918dd232efd0aa3cbde8a141cc0e19cf2e6a2b29cdb2d22",
+      "bytes": 276,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/static/analytics.css",
+      "sha256": "246f4c60d82d773b631d6a074f2114afa5fcaeb128c40effd21cfd42343bd3a1",
+      "bytes": 16400,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/static/analytics.html",
+      "sha256": "b0d496564b737273fc5259e835a779b247bc8c3a824abfcf465fdc7a5411cfae",
+      "bytes": 10067,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/static/analytics.js",
+      "sha256": "5726e42c39d9ad8224921c69e8b9415fb4bd3d2d97e7c0aeed09c430566d1e1d",
+      "bytes": 17867,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/static/app.js",
+      "sha256": "530d6b7714ca8f2d49d39dddbad2cc5b1dc4d9694bf908eb2835d1c2bdb8d337",
+      "bytes": 30484,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/static/index.html",
+      "sha256": "d7e838427014e1a8bf2d541c58d5b1af3da912503b1f4e454db685e47d6d9b30",
+      "bytes": 30234,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/static/learning.js",
+      "sha256": "262b6b5452d6c50727b7b1e6c51814a6e5f1a65b15749a724ccbbffa9a5ea4db",
+      "bytes": 16239,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/static/study.js",
+      "sha256": "2ee5f2ea5ef068ff985721f38d29c1b5c43524bbe5f8c9dd0e7d895d342924e1",
+      "bytes": 10258,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/static/styles.css",
+      "sha256": "e735410045954f8aa51c6d8ff84ff98dd4fcd967d7735e91b8ca8c52d3fbe0df",
+      "bytes": 32834,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/study_reaction.py",
+      "sha256": "3ccce11a955296d61fa87f17bd48690d09ae2f95563860a746c6b062b884556c",
+      "bytes": 14831,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/test_automatic_eyes.py",
+      "sha256": "294b437f1eb683ec18b1ec7ae0c7d128f97fb5875c9a3e29e4a66d4028e227f6",
+      "bytes": 11221,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/test_button_audio.py",
+      "sha256": "b616fb2dcd5a3732a1f5b987ffac542f0b3114c518c21a0cea0923157482b1c0",
+      "bytes": 14816,
+      "local_state": "different"
+    },
+    {
+      "path": "apps/device-dashboard/test_learning.py",
+      "sha256": "254b1ad7a0c35baf0b72e607d5c071427ef7bda0644995f58895a22fa9bf86f6",
+      "bytes": 31657,
+      "local_state": "same"
+    },
+    {
+      "path": "apps/device-dashboard/test_log_analytics.py",
+      "sha256": "2523167ce2ee308132e67795593bebb17aa590732e9d7d5d9a50bd133824f62f",
+      "bytes": 9873,
+      "local_state": "same"
+    },
+    {
+      "path": "crates/pico-device-protocol/tests/button_audio_contract.rs",
+      "sha256": "a54742e825755374c814c24d6e0660a4b35d601c8c04ce8a0c49eb2b7e38d9e4",
+      "bytes": 1689,
+      "local_state": "same"
+    },
+    {
+      "path": "doc/software/버튼_음성_피드백.md",
+      "sha256": "0f98d70737b52845b6508dd7fbe4857412f86ec81aacb218f1a0845e269c0865",
+      "bytes": 9120,
+      "local_state": "different"
+    },
+    {
+      "path": "doc/software/연속_관찰_DB와_GPT_Live.md",
+      "sha256": "045ddc4c0b89380b3ca2288bec9da57647acc31d1e71b476c432a42dccc9c5f3",
+      "bytes": 21290,
+      "local_state": "same"
+    },
+    {
+      "path": "tools/jetson/device_access.py",
+      "sha256": "99372115e0d992d09b7d9b36aab4ea564a4cd07e047ee58b98bf8d6c0697e45c",
+      "bytes": 6957,
+      "local_state": "same"
+    },
+    {
+      "path": "tools/jetson/learning_provider.py",
+      "sha256": "fb18d810da06bf8f92738536bbafc7e0c6f5c3fe83e09ad767d04dc3cb56325e",
+      "bytes": 23451,
+      "local_state": "same"
+    },
+    {
+      "path": "tools/jetson/openai-study-observer.py",
+      "sha256": "731c3da362f9b562dfdf9709a91d50d419ec07a204f6b36f931c585cc5ef42bc",
+      "bytes": 17476,
+      "local_state": "same"
+    },
+    {
+      "path": "tools/jetson/study_observer_service.py",
+      "sha256": "c06315d1b4a70df720842fdb90fa8ce88e794f42d4a3b83909fd6081a7dc2acc",
+      "bytes": 10837,
+      "local_state": "same"
+    },
+    {
+      "path": "tools/jetson/study_window.py",
+      "sha256": "5499a0226a10e1149d29a31c21b8d0062984d514c2e26d8d3844c2817eb68934",
+      "bytes": 18218,
+      "local_state": "same"
+    },
+    {
+      "path": "tools/jetson/test_learning_provider.py",
+      "sha256": "35df74dc865c14c789ad109548c9d725a30745af4d3368cf5825ea61d819519b",
+      "bytes": 14960,
+      "local_state": "same"
+    }
+  ]
+}
