@@ -34,7 +34,7 @@
   "total_passed": 191,
   "network_api_calls": false,
   "device_actuation": false,
-  "jetson_status": "source_aligned_tests_passed_final_publication_pending",
+  "jetson_status": "synchronized",
   "limitations": [
     "Global Python had incompatible Pydantic; project venv passed.",
     "Global Cargo too old for lock v4; local Rust 1.90 passed."
@@ -50,5 +50,7 @@
   "concurrent_followup_evidence": "doc/software/dashboard-check/2026-10-24/live-context/",
   "jetson_total_passed": 221,
   "jetson_shell_syntax_files": 24,
-  "concurrent_followup_evidence_integrated": true
+  "concurrent_followup_evidence_integrated": true,
+  "verified_content_commit": "e7387428fe372e1029bc507cb4d1e51c6fb1cd94",
+  "windows_and_jetson_clean_at_content_verification": true
 }

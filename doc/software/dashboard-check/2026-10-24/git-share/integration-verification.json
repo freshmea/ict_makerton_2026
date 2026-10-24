@@ -1,0 +1,26 @@
+{
+  "verified_content_commit": "e7387428fe372e1029bc507cb4d1e51c6fb1cd94",
+  "origin_main": "e7387428fe372e1029bc507cb4d1e51c6fb1cd94",
+  "jetson_worktree_clean": true,
+  "services": {
+    "300seconds-dashboard": "active",
+    "300seconds-observer": "active",
+    "300seconds-tts": "active"
+  },
+  "health": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  },
+  "preserved_original_ref": "refs/backups/jetson-before-github-sync-20261024",
+  "preserved_original_stash": "d739252344d84d3239a632814d2fe3af3c3d3519",
+  "time_kst": "2026-10-24T23:57:09.893215+09:00",
+  "sync_method": "stash original work, preserve prompt directory, fast-forward from origin/main",
+  "forced_push": false,
+  "service_restart_during_git_sync": false,
+  "metadata_only_followup_possible": true,
+  "windows_head_at_content_verification": "e7387428fe372e1029bc507cb4d1e51c6fb1cd94",
+  "windows_worktree_clean_at_content_verification": true,
+  "followup_commit_scope": "This evidence and final status documentation only; both repositories are fast-forwarded again afterward."
+}

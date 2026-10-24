@@ -13,8 +13,10 @@
 | Windows 수집 | 최초 수정·신규 파일 237개, 약 5MB. 문서·검사 근거 등을 포함해 **248개 파일**을 커밋 |
 | Windows GitHub 게시 | **완료**. 작업 스냅샷 [`9c3146016f0772fe34467d069a896f2bbaaaea33`](https://github.com/freshmea/ict_makerton_2026/commit/9c3146016f0772fe34467d069a896f2bbaaaea33)를 기존 `main`에 일반 push. 로컬·원격 해시 일치 확인 |
 | Jetson 수집 | 인증 후 **219개 파일** 원본 해시 수집·비교 완료. 로컬 백업 사본 14개는 원본 stash에 보존 |
-| Jetson 기준 정렬 | 기존 `3d4b198`에서 GitHub `main`의 `c216f8b`까지 fast-forward 완료. 실행 서비스 3개 active 유지 |
-| 통합 완료 판정 | 최종 문서 게시 후 Windows·Jetson `HEAD`와 원격 `main` 해시 일치, 양쪽 작업 트리 청결을 다시 확인 |
+| Jetson 기준 정렬 | 기존 `3d4b198`에서 GitHub `main`으로 fast-forward 완료. 실행 서비스 3개 active 유지 |
+| 통합 완료 판정 | **완료**. Windows·Jetson·GitHub `main` 내용 검증 커밋 [`e738742`](https://github.com/freshmea/ict_makerton_2026/commit/e7387428fe372e1029bc507cb4d1e51c6fb1cd94) 일치, 양쪽 작업 트리 청결 확인 |
+
+2026-10-24 **23:57 KST**, 두 저장소의 같은 통합 커밋과 청결 상태, 보드 서비스 3개 active, API·Pico·카메라·마이크 정상 응답을 확인했다. [최종 통합 확인 원본](dashboard-check/2026-10-24/git-share/integration-verification.json). 이 완료 기록과 원본 JSON만 후속 문서 커밋으로 게시하고 양쪽 `main`에 다시 fast-forward한다. 따라서 최종 브랜치 끝은 위 내용 검증 커밋 다음의 문서 커밋이며, 정확한 최신 SHA는 `git rev-parse HEAD`와 `git rev-parse origin/main`으로 확인한다.
 
 첫 게시 시 같은 Windows 저장소의 「카메라 분석과 GPT Live 대시보드 구현」 채팅에서 교육 프롬프트·DB 참조 기능을 계속 편집 중이었다. 해당 작업의 완료를 확인한 뒤 후속 문서와 `dashboard-check/2026-10-24/live-context/` 실기 자료 13개도 이번 통합에 포함했다.
 
