@@ -34,7 +34,7 @@
   "total_passed": 191,
   "network_api_calls": false,
   "device_actuation": false,
-  "jetson_status": "pending_ssh_authentication",
+  "jetson_status": "blocked_on_ssh_authentication",
   "limitations": [
     "Global Python had incompatible Pydantic; project venv passed.",
     "Global Cargo too old for lock v4; local Rust 1.90 passed.",
@@ -42,5 +42,11 @@
   ],
   "uf2_sha256": "11729a7049684e93818a391cae592f06308fcd9df96dab7e1e5574987352b141",
   "initial_total_passed": 181,
-  "source_note": "Final Python suites were run from exported Git index content; concurrent working-tree edits are outside this snapshot."
+  "source_note": "Final Python suites were run from exported Git index content; concurrent working-tree edits are outside this snapshot.",
+  "windows_published_commit": "9c3146016f0772fe34467d069a896f2bbaaaea33",
+  "remote": "https://github.com/freshmea/ict_makerton_2026.git",
+  "branch": "main",
+  "remote_commit_verified": true,
+  "committed_python_manifest_matches": true,
+  "concurrent_followup_evidence": "doc/software/dashboard-check/2026-10-24/live-context/"
 }
