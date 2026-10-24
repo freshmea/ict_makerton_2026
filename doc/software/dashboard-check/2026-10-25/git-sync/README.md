@@ -12,4 +12,8 @@
 
 ## 최종 동기화 기록
 
-작업 커밋을 일반 push한 뒤 Nano 원본을 보존하고 GitHub main을 fast-forward한다. 실제 커밋·stash·청결 상태와 실행 서비스 조회 결과는 후속 `sync-verification.json`에 기록한다. 정확한 최신 문서 커밋은 양쪽 `git rev-parse HEAD`와 `origin/main`으로 확인한다. 기존 stash는 삭제하지 않는다.
+작업 커밋 `da7f58536792baaa8613bee0f9a586d6e77b1eea`를 일반 push한 뒤 Nano 원본54개를 tar·stash·보호 참조에 보존하고 GitHub main을 fast-forward했다. [sync-verification.json](sync-verification.json)에 Windows·Jetson·origin 커밋 일치, Jetson 작업 트리 청결, 서비스3개 active·PID 동일, 카메라 두 대·Pico·수집 정상 상태를 기록했다. `nano-git-sync.log`는 보드 측 같은 검증 결과다.
+
+보존 tar는 Nano `/home/jetson/ict_makerton_git_backups/20261024T232343Z/uncommitted-sources.tar.gz`, stash는 `b961188a1c23e893ec9fd044cedc909ce3377db9`, 보호 참조는 `refs/backups/jetson-pre-sync-20261024T232343Z`다. 기존 stash는 삭제하지 않았다. Git source의 root 소유 음원 디렉터리2개만 jetson 소유로 정리해 원본 stash·checkout을 가능하게 했으며 운영 설치본은 건드리지 않았다.
+
+이 검증 문서·JSON을 후속 문서 커밋으로 게시한 뒤 양쪽을 다시 fast-forward한다. 검증 JSON의 SHA는 기능 작업 커밋을 가리킨다. 정확한 최신 문서 커밋은 양쪽 `git rev-parse HEAD`와 `origin/main`으로 확인한다.
