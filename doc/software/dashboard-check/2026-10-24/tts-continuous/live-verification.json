@@ -1,0 +1,137 @@
+{
+  "at_kst": "2026-10-24T17:17:36.131575+09:00",
+  "requests": [
+    {
+      "text": "하나.",
+      "started_after_first_seconds": 0.0,
+      "gap_after_previous_seconds": 0.0,
+      "duration_seconds": 3.823,
+      "http_status": 200,
+      "result": {
+        "speaker": {
+          "state": "idle",
+          "last_result": {
+            "ok": true,
+            "time": 1792829859.94465,
+            "output": ""
+          },
+          "kind": "tts"
+        },
+        "tts": {
+          "account_before": {
+            "checked_unix": 1792829858,
+            "plan": "free",
+            "plan_credits": 15000,
+            "provider": "typecast",
+            "remaining_plan_credits": 14826,
+            "source": "GET /v1/users/me/subscription",
+            "used_credits": 174
+          },
+          "disclosure": "Typecast AI 합성 음성",
+          "microphone_uploaded": false,
+          "model": "ssfm-v30",
+          "provider": "typecast",
+          "requested_characters": 3,
+          "voice_id": "tc_637cbfeef7f00f21e8a1c6c8",
+          "wall_ms": 946
+        },
+        "gain_db": 6,
+        "applied_gain_db": 5.5,
+        "limiter_active": true
+      }
+    },
+    {
+      "text": "둘.",
+      "started_after_first_seconds": 3.823,
+      "gap_after_previous_seconds": 0.0,
+      "duration_seconds": 4.536,
+      "http_status": 200,
+      "result": {
+        "speaker": {
+          "state": "idle",
+          "last_result": {
+            "ok": true,
+            "time": 1792829864.4860373,
+            "output": ""
+          },
+          "kind": "tts"
+        },
+        "tts": {
+          "account_before": {
+            "checked_unix": 1792829862,
+            "plan": "free",
+            "plan_credits": 15000,
+            "provider": "typecast",
+            "remaining_plan_credits": 14826,
+            "source": "GET /v1/users/me/subscription",
+            "used_credits": 174
+          },
+          "disclosure": "Typecast AI 합성 음성",
+          "microphone_uploaded": false,
+          "model": "ssfm-v30",
+          "provider": "typecast",
+          "requested_characters": 2,
+          "voice_id": "tc_637cbfeef7f00f21e8a1c6c8",
+          "wall_ms": 1016
+        },
+        "gain_db": 6,
+        "applied_gain_db": 6.0,
+        "limiter_active": false
+      }
+    },
+    {
+      "text": "셋.",
+      "started_after_first_seconds": 8.36,
+      "gap_after_previous_seconds": 0.0,
+      "duration_seconds": 2.687,
+      "http_status": 200,
+      "result": {
+        "speaker": {
+          "state": "idle",
+          "last_result": {
+            "ok": true,
+            "time": 1792829867.1665213,
+            "output": ""
+          },
+          "kind": "tts"
+        },
+        "tts": {
+          "account_before": {
+            "checked_unix": 1792829865,
+            "plan": "free",
+            "plan_credits": 15000,
+            "provider": "typecast",
+            "remaining_plan_credits": 14826,
+            "source": "GET /v1/users/me/subscription",
+            "used_credits": 174
+          },
+          "disclosure": "Typecast AI 합성 음성",
+          "microphone_uploaded": false,
+          "model": "ssfm-v30",
+          "provider": "typecast",
+          "requested_characters": 2,
+          "voice_id": "tc_637cbfeef7f00f21e8a1c6c8",
+          "wall_ms": 1053
+        },
+        "gain_db": 6,
+        "applied_gain_db": 6.0,
+        "limiter_active": false
+      }
+    }
+  ],
+  "sleep_between_requests": false,
+  "ledger_after": {
+    "characters": 181,
+    "cooldown_until": 0,
+    "last_http_status": 200
+  },
+  "three_successes_under_one_minute": true,
+  "elapsed_total_seconds": 11.048,
+  "temporary_files_left": [],
+  "health": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  }
+}

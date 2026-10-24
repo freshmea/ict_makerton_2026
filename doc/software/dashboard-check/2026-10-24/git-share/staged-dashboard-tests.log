@@ -1,0 +1,10 @@
+............................................................................WARNING:root:tts_provider_transport_failure category=dns
+WARNING:root:tts_provider_transport_failure category=connect
+WARNING:root:tts_provider_transport_failure category=timeout
+WARNING:root:tts_provider_transport_failure category=tls
+WARNING:root:tts_provider_transport_failure category=connection_lost
+...
+----------------------------------------------------------------------
+Ran 79 tests in 4.072s
+
+OK

@@ -1,0 +1,4 @@
+Verified user-selected BOOTSEL board: E679675A69C4039B
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+AssertionError

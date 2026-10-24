@@ -1,0 +1,35 @@
+{
+  "wall_ms": 1148.4,
+  "request_id": "req_7f1a382da2e64234ada2f7a827d01886",
+  "usage": {
+    "input_tokens": 159,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 159
+  },
+  "standard_input_cost_estimate_usd": "0.0000159",
+  "pricing": "standard uncached input $0.10/1M; output free; cache disabled; invoice authoritative",
+  "local_budget": {
+    "local_only": true,
+    "attempts": 1,
+    "max_attempts": 3,
+    "session_cap_usd": "0.10",
+    "reserved_usd": "0.02",
+    "known_standard_cost_usd": "0.0000159",
+    "unknown_cost_attempts": 0,
+    "cooldown_until_unix": 0,
+    "account_balance": "not queried; see OpenAI billing",
+    "automatic_retry": false
+  },
+  "status": "ok",
+  "test": "live_decisions_text",
+  "model": "gpt-6-luna",
+  "lamp_on_probability": 1.0,
+  "at_utc": "2026-10-24T04:25:58.178603+00:00"
+}

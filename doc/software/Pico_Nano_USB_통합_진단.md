@@ -23,7 +23,7 @@ Nano USB host ── USB 데이터 케이블 ── Pico 2 W USB CDC device
 | PCA9685 SDA/SCL/OE | GP4/6번, GP5/7번, GP12/16번 | 주소0x41, 서보 CH0~CH5, 초기 OE HIGH |
 | 왼손 NeoPixel DIN | GP16 /21번 | PIO0 SM0 / DMA0 |
 | 오른손 NeoPixel DIN | GP17 /22번 | PIO0 SM1 / DMA1 |
-| MAX7219 CLK/DIN/CS | GP18/24번, GP19/25번, GP20/26번 | 가까운 왼쪽→먼 오른쪽, 모듈2개 |
+| MAX7219 CLK/DIN/CS | GP18/24번, GP19/25번, GP20/26번 | 실물 확인: 기기 기준 가까운 왼쪽 눈→먼 오른쪽 눈, 모듈2개 |
 | 터치 SW1~SW6 | GP6~GP11 /9,10,11,12,14,15번 | IO/VCC/GND 모듈6개 |
 | 진단 스위치 기본값 | **SW6 / GP11 /15번** | 눌렀다 놓은 시간으로 검사 선택 |
 

@@ -1,0 +1,160 @@
+{
+  "wall_ms": 414.5,
+  "request_id": "req_4771997327594eaa8209c0062fdbf38b",
+  "usage": {
+    "input_tokens": 1454,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 1454
+  },
+  "standard_input_cost_estimate_usd": "0.0001454",
+  "pricing": "standard uncached input $0.10/1M; output free; cache disabled; invoice authoritative",
+  "local_budget": {
+    "local_only": true,
+    "attempts": 3,
+    "max_attempts": 3,
+    "session_cap_usd": "0.10",
+    "reserved_usd": "0.06",
+    "known_standard_cost_usd": "0.0003067",
+    "unknown_cost_attempts": 0,
+    "cooldown_until_unix": 0,
+    "account_balance": "not queried; see OpenAI billing",
+    "automatic_retry": false
+  },
+  "status": "unknown",
+  "focus_score": null,
+  "study_gaze_score": null,
+  "is_away": null,
+  "valid": {
+    "focus_score": false,
+    "study_gaze_score": false,
+    "is_away": false
+  },
+  "probabilities": {
+    "seat_observable": 0.03,
+    "person_present": 1.0,
+    "behavior_observable": 0.01,
+    "gaze_observable": 0.0
+  },
+  "score_confidence": {
+    "focus_score": 0.79,
+    "study_gaze_score": 0.91
+  },
+  "reasons": [
+    "seat_not_observable"
+  ],
+  "score_basis": "visible_study_behavior_proxy_not_mental_state",
+  "gaze_basis": "coarse_visual_direction_not_calibrated_eye_tracking",
+  "refused_questions": [],
+  "test": "live_decisions_camera",
+  "model": "gpt-6-luna",
+  "camera_generation": "5f7004aaea21480a868d80e2c32ece87",
+  "images": [
+    {
+      "ref": "7e25ce66-af65-47d1-a76f-dd3942d9abbd",
+      "sensor_id": 1,
+      "sample": 0,
+      "received_at_utc": "2026-10-24T04:30:52.604563+00:00",
+      "width": 640,
+      "height": 360,
+      "bytes": 19150,
+      "sha256": "7aae46f4f6d8989753f5657ea0e029309dfc758e1df9c1f433b6aca84a971684",
+      "fetch_ms": 29.1
+    }
+  ],
+  "raw_answers": [
+    {
+      "type": "predicate",
+      "name": "seat_observable",
+      "probability": 0.03
+    },
+    {
+      "type": "predicate",
+      "name": "person_present",
+      "probability": 1.0
+    },
+    {
+      "type": "predicate",
+      "name": "behavior_observable",
+      "probability": 0.01
+    },
+    {
+      "type": "predicate",
+      "name": "gaze_observable",
+      "probability": 0.0
+    },
+    {
+      "type": "score",
+      "name": "focus_score",
+      "score": 0.25,
+      "probabilities": [
+        {
+          "value": 0,
+          "label": "0",
+          "probability": 0.82
+        },
+        {
+          "value": 1,
+          "label": "1",
+          "probability": 0.14
+        },
+        {
+          "value": 2,
+          "label": "2",
+          "probability": 0.02
+        },
+        {
+          "value": 3,
+          "label": "3",
+          "probability": 0.01
+        },
+        {
+          "value": 4,
+          "label": "4",
+          "probability": 0.01
+        }
+      ],
+      "confidence": 0.79
+    },
+    {
+      "type": "score",
+      "name": "study_gaze_score",
+      "score": 0.11,
+      "probabilities": [
+        {
+          "value": 0,
+          "label": "0",
+          "probability": 0.91
+        },
+        {
+          "value": 1,
+          "label": "1",
+          "probability": 0.07
+        },
+        {
+          "value": 2,
+          "label": "2",
+          "probability": 0.02
+        },
+        {
+          "value": 3,
+          "label": "3",
+          "probability": 0.0
+        },
+        {
+          "value": 4,
+          "label": "4",
+          "probability": 0.0
+        }
+      ],
+      "confidence": 0.91
+    }
+  ],
+  "at_utc": "2026-10-24T04:30:53.085675+00:00"
+}

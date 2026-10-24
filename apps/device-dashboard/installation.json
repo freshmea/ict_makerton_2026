@@ -1,5 +1,5 @@
 {
-  "touch_inputs_connected": false,
-  "matrix_connected": false,
-  "note": "사용자 확인: 현재 스위치와 도트매트릭스는 연결하지 않음"
+  "touch_inputs_connected": true,
+  "matrix_connected": true,
+  "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
 }

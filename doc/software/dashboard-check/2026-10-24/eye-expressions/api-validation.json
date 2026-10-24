@@ -1,0 +1,18 @@
+[
+  {
+    "case": "missing_csrf",
+    "status": 403
+  },
+  {
+    "case": "unknown_preset",
+    "status": 404
+  },
+  {
+    "case": "unbounded_duration",
+    "status": 422
+  },
+  {
+    "case": "arbitrary_rows",
+    "status": 422
+  }
+]

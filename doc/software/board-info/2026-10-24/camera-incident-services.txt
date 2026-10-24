@@ -1,0 +1,223 @@
+2026-10-24T05:38:55+00:00
+2026-10-24 03:23:32
+15323.49 15670.62
+NRestarts=0
+ExecMainStartTimestamp=Sat 2026-10-24 07:35:23 CEST
+Id=300seconds-dashboard.service
+ActiveState=active
+ActiveEnterTimestamp=Sat 2026-10-24 07:35:23 CEST
+
+NRestarts=6
+ExecMainStartTimestamp=Sat 2026-10-24 07:07:48 CEST
+Id=nvargus-daemon.service
+ActiveState=active
+ActiveEnterTimestamp=Sat 2026-10-24 07:07:48 CEST
+
+NRestarts=0
+ExecMainStartTimestamp=Sat 2026-10-24 07:07:14 CEST
+Id=300seconds-observer.service
+ActiveState=active
+ActiveEnterTimestamp=Sat 2026-10-24 07:07:14 CEST
+ 0 cb01cd76a1de48fca7fb2c534f6f5e89 Sat 2026-10-24 06:35:19 CEST—Sat 2026-10-24 07:38:55 CEST
+-- Logs begin at Sat 2026-10-24 06:35:19 CEST, end at Sat 2026-10-24 07:38:55 CEST. --
+2026-10-24T06:59:05+0200 nano systemd[1]: Started 300 Seconds FastAPI device dashboard.
+2026-10-24T06:59:07+0200 nano python[29414]: INFO:     Started server process [29414]
+2026-10-24T06:59:07+0200 nano python[29414]: INFO:     Waiting for application startup.
+2026-10-24T06:59:07+0200 nano python[29414]: INFO:     Application startup complete.
+2026-10-24T06:59:07+0200 nano python[29414]: INFO:     Uvicorn running on http://192.168.184.76:8000 (Press CTRL+C to quit)
+2026-10-24T06:59:09+0200 nano nvargus-daemon[28877]: === NVIDIA Libargus Camera Service (0.98.3)=== Listening for connections...=== gst-plugin-scanner[29449]: Connection established (7F96DEB1B0)OFParserListModules: module list: /proc/device-tree/tegra-camera-platform/modules/module0
+2026-10-24T06:59:09+0200 nano nvargus-daemon[28877]: OFParserListModules: module list: /proc/device-tree/tegra-camera-platform/modules/module1
+2026-10-24T06:59:10+0200 nano python[29414]: INFO:     ('192.168.184.82', 54933) - "WebSocket /ws/status" [accepted]
+2026-10-24T06:59:10+0200 nano python[29414]: INFO:     connection open
+2026-10-24T06:59:10+0200 nano python[29414]: INFO:     ('192.168.184.82', 8963) - "WebSocket /ws/status" [accepted]
+2026-10-24T06:59:10+0200 nano python[29414]: INFO:     connection open
+2026-10-24T06:59:10+0200 nano nvargus-daemon[28877]: OFParserGetVirtualDevice: NVIDIA Camera virtual enumerator not found in proc device-tree
+2026-10-24T06:59:10+0200 nano nvargus-daemon[28877]: ---- imager: No override file found. ----
+2026-10-24T06:59:10+0200 nano nvargus-daemon[28877]: LSC: LSC surface is not based on full res!
+2026-10-24T06:59:10+0200 nano nvargus-daemon[28877]: ---- imager: No override file found. ----
+2026-10-24T06:59:10+0200 nano nvargus-daemon[28877]: LSC: LSC surface is not based on full res!
+2026-10-24T06:59:11+0200 nano nvargus-daemon[28877]: === gst-plugin-scanner[29449]: CameraProvider initialized (0x7f909b4930)=== gst-plugin-scanner[29449]: CameraProvider destroyed (0x7f909b4930)=== gst-plugin-scanner[29449]: Connection closed (7F96DEB1B0)=== gst-plugin-scanner[29449]: Connection cleaned up (7F96DEB1B0)=== python[29445]: Connection established (7F96DEB1B0)OFParserListModules: module list: /proc/device-tree/tegra-camera-platform/modules/module0
+2026-10-24T06:59:11+0200 nano nvargus-daemon[28877]: OFParserListModules: module list: /proc/device-tree/tegra-camera-platform/modules/module1
+2026-10-24T06:59:11+0200 nano nvargus-daemon[28877]: OFParserGetVirtualDevice: NVIDIA Camera virtual enumerator not found in proc device-tree
+2026-10-24T06:59:11+0200 nano nvargus-daemon[28877]: ---- imager: No override file found. ----
+2026-10-24T06:59:11+0200 nano nvargus-daemon[28877]: LSC: LSC surface is not based on full res!
+2026-10-24T06:59:11+0200 nano nvargus-daemon[28877]: ---- imager: No override file found. ----
+2026-10-24T06:59:12+0200 nano nvargus-daemon[28877]: LSC: LSC surface is not based on full res!
+2026-10-24T06:59:12+0200 nano nvargus-daemon[28877]: === python[29445]: CameraProvider initialized (0x7f91cc4220)LSC: LSC surface is not based on full res!
+2026-10-24T06:59:12+0200 nano nvargus-daemon[28877]: LSC: LSC surface is not based on full res!
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: Error: waitCsiFrameStart timeout guid 1
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: ************VI/CSI Debug Registers**********
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: VI_CFG_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: VI_CFG_INTERRUPT_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: VI_CSI_0_ERROR_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: VI_CSI_0_ERROR_INT_MASK_0 = 0x0000001f
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: VI_CSI_1_ERROR_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: VI_CSI_1_ERROR_INT_MASK_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_PIXEL_PARSER_A_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_PIXEL_PARSER_A_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_PIXEL_PARSER_B_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_PIXEL_PARSER_B_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_CIL_A_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_CIL_A_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_CILA_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_CIL_B_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_CIL_B_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_CILB_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_CSI_READONLY_STATUS_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_DEBUG_CONTROL_0 = 0x67330d00
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_DEBUG_COUNTER_0_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_DEBUG_COUNTER_1_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: CSI_DEBUG_COUNTER_2_0 = 0x00000000
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: *****************************************
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: SCF: Error Timeout: ISP port 0 timed out! (in src/services/capture/NvIspHw.cpp, function waitIspFrameEnd(), line 478)
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: SCF: Error Timeout:  (propagating from src/services/capture/NvIspHw.cpp, function waitIspFrameEnd(), line 524)
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: SCF: Error Timeout:  (propagating from src/common/Utils.cpp, function workerThread(), line 116)
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: SCF: Error Timeout: Worker thread IspHw frameComplete failed (in src/common/Utils.cpp, function workerThread(), line 133)
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: SCF: Error Timeout: Sending critical error event (in src/api/Session.cpp, function sendErrorEvent(), line 997)
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: Error: waitCsiFrameStart timeout guid 1
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: ************VI/CSI Debug Registers**********
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: VI_CFG_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: VI_CFG_INTERRUPT_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: VI_CSI_0_ERROR_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: VI_CSI_0_ERROR_INT_MASK_0 = 0x0000001f
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: VI_CSI_1_ERROR_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: VI_CSI_1_ERROR_INT_MASK_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_PIXEL_PARSER_A_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_PIXEL_PARSER_A_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_PIXEL_PARSER_B_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_PIXEL_PARSER_B_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_CIL_A_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_CIL_A_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_CILA_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_CIL_B_INTERRUPT_MASK_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_CIL_B_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_CILB_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_CSI_READONLY_STATUS_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_DEBUG_CONTROL_0 = 0x67330d00
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_DEBUG_COUNTER_0_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_DEBUG_COUNTER_1_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: CSI_DEBUG_COUNTER_2_0 = 0x00000000
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: *****************************************
+2026-10-24T06:59:29+0200 nano nvargus-daemon[28877]: SCF: Error Timeout:  (propagating from src/services/capture/CaptureServiceDeviceIsp.cpp, function waitCompletion(), line 423)
+2026-10-24T06:59:29+0200 nano nvargus-daemon[28877]: SCF: Error Timeout:  (propagating from src/services/capture/CaptureServiceDevice.cpp, function pause(), line 949)
+2026-10-24T06:59:29+0200 nano nvargus-daemon[28877]: SCF: Error Timeout: During capture abort, syncpoint wait timeout waiting for current frame to finish (in src/services/capture/CaptureServiceDevice.cpp, function handleCancelSourceRequests(), line 1032)
+2026-10-24T06:59:29+0200 nano nvargus-daemon[28877]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T06:59:29+0200 nano nvargus-daemon[28877]: PowerServiceCore:handleRequests: timePassed = 1490
+2026-10-24T06:59:30+0200 nano systemd[1]: nvargus-daemon.service: Main process exited, code=killed, status=11/SEGV
+2026-10-24T06:59:30+0200 nano systemd[1]: nvargus-daemon.service: Failed with result 'signal'.
+2026-10-24T06:59:31+0200 nano systemd[1]: nvargus-daemon.service: Scheduled restart job, restart counter is at 3.
+2026-10-24T06:59:31+0200 nano systemd[1]: Stopped Argus daemon.
+2026-10-24T06:59:31+0200 nano systemd[1]: Started Argus daemon.
+2026-10-24T06:59:46+0200 nano systemd[1]: Stopping 300 Seconds FastAPI device dashboard...
+2026-10-24T06:59:46+0200 nano python[29414]: INFO:     Shutting down
+2026-10-24T06:59:46+0200 nano python[29414]: INFO:     connection closed
+2026-10-24T06:59:46+0200 nano python[29414]: INFO:     connection closed
+2026-10-24T06:59:46+0200 nano python[29414]: INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+2026-10-24T06:59:47+0200 nano python[29414]: INFO:     Waiting for application shutdown.
+2026-10-24T06:59:47+0200 nano python[29414]: INFO:     Application shutdown complete.
+2026-10-24T06:59:47+0200 nano python[29414]: INFO:     Finished server process [29414]
+2026-10-24T06:59:47+0200 nano systemd[1]: 300seconds-dashboard.service: Succeeded.
+2026-10-24T06:59:47+0200 nano systemd[1]: Stopped 300 Seconds FastAPI device dashboard.
+2026-10-24T07:00:16+0200 nano systemd[1]: Started 300 Seconds FastAPI device dashboard.
+2026-10-24T07:00:19+0200 nano python[30116]: INFO:     Started server process [30116]
+2026-10-24T07:00:19+0200 nano python[30116]: INFO:     Waiting for application startup.
+2026-10-24T07:00:19+0200 nano python[30116]: INFO:     Application startup complete.
+2026-10-24T07:00:19+0200 nano python[30116]: INFO:     Uvicorn running on http://192.168.184.76:8000 (Press CTRL+C to quit)
+2026-10-24T07:00:20+0200 nano python[30116]: INFO:     ('192.168.184.82', 57211) - "WebSocket /ws/status" [accepted]
+2026-10-24T07:00:20+0200 nano python[30116]: INFO:     connection open
+2026-10-24T07:00:20+0200 nano python[30116]: INFO:     ('192.168.184.82', 51237) - "WebSocket /ws/status" [accepted]
+2026-10-24T07:00:20+0200 nano python[30116]: INFO:     connection open
+2026-10-24T07:00:21+0200 nano python[30116]: INFO:     ('192.168.184.82', 49775) - "WebSocket /ws/status" [accepted]
+2026-10-24T07:00:21+0200 nano python[30116]: INFO:     connection open
+Oct 24 07:37:51 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:37:52 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:37:53 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:37:54 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:37:55 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:37:56 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:37:57 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:37:58 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:37:59 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:00 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:01 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:02 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:03 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:04 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:05 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:06 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:07 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:08 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:09 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:10 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:11 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:12 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:13 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:14 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:15 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:16 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:17 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:18 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:19 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:20 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:21 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:22 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:23 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:24 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:25 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:26 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:27 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:28 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:29 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:30 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:31 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:32 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:33 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:34 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:35 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:36 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:37 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:38 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:39 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:40 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:41 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:42 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:43 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:44 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:45 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:46 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:47 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:48 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:49 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:51 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:51 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:53 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:54 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:55 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 07:38:56 nano kernel: soctherm: OC ALARM 0x00000001
+    PID    PPID ELAPSED %CPU %MEM COMMAND
+  34822   34767     211 51.4  1.9 python
+  34767       1     213 22.3  1.3 python
+  19302    7214    5346  6.6 19.5 node
+  32529       1    1868  6.6  6.2 nvargus-daemon
+  35814    5239       3  2.3  0.2 sshd
+  35899   35895       1  2.0  0.1 sudo
+    838       2   15324  1.4  0.0 irq/69-host_syn
+  35835    3929       2  1.0  0.1 systemd-udevd
+  19314    7214    5345  0.9  2.4 node
+   5870    5869   15311  0.6  0.0 nvphsd
+  34815   34767     211  0.6  0.0 pico-device-ben
+  35393       2     205  0.6  0.0 kworker/u8:4
+  35836    3929       2  0.5  0.1 systemd-udevd
+   7214    7209   14574  0.4  3.2 node
+default via 192.168.184.1 dev wlan0 proto dhcp metric 600 
+State   Recv-Q    Send-Q        Local Address:Port         Peer Address:Port    Process                                                                         
+ESTAB   0         0            192.168.184.76:8000       192.168.184.82:13636   
+	 cubic wscale:8,7 rto:220 rtt:16.737/7.424 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:25 ssthresh:16 bytes_acked:23964261 bytes_received:787 segs_out:17289 segs_in:3961 data_segs_out:17288 data_segs_in:2 send 17446376bps lastsnd:116 lastrcv:156604 lastack:104 pacing_rate 20935336bps delivery_rate 8204160bps app_limited retrans:0/74 rcv_space:29200 rcv_ssthresh:31344 minrtt:0.01
+ESTAB   0         0            192.168.184.76:8000       192.168.184.82:55347   
+	 cubic wscale:8,7 rto:1836 rtt:6.277/3.138 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:10 ssthresh:31 bytes_received:157 segs_out:1 segs_in:3 data_segs_in:1 send 18607615bps lastsnd:200 lastrcv:200 lastack:200 pacing_rate 37215224bps rcv_space:29200 rcv_ssthresh:30272 minrtt:6.277
+ESTAB   0         0            192.168.184.76:8000       192.168.184.82:33110   
+	 cubic wscale:8,7 rto:260 rtt:56.698/5.312 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:10 ssthresh:7 bytes_acked:361765 bytes_received:606 segs_out:331 segs_in:298 data_segs_out:323 data_segs_in:8 send 2060037bps lastsnd:644 lastrcv:16508 lastack:588 pacing_rate 2472016bps delivery_rate 3964024bps app_limited retrans:0/3 rcv_space:29200 rcv_ssthresh:30272 minrtt:5.302
+ESTAB   0         0            192.168.184.76:8000       192.168.184.82:8929    
+	 cubic wscale:8,7 rto:212 rtt:11.417/5.201 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:14 ssthresh:10 bytes_acked:15915716 bytes_received:436 segs_out:11443 segs_in:3119 data_segs_out:11442 data_segs_in:1 send 14322502bps lastsnd:112 lastrcv:156600 lastack:100 pacing_rate 17187000bps delivery_rate 12262464bps app_limited retrans:0/112 rcv_space:29200 rcv_ssthresh:30272 minrtt:0.009
+

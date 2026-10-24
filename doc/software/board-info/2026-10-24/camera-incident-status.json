@@ -1,0 +1,818 @@
+{
+  "server_time": 1792820313.4973936,
+  "pico": {
+    "connected": true,
+    "age_ms": 36,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 1863,
+      "faults": 1,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 417,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 839,
+          "last_interval_count": 1,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 2183487
+    },
+    "session": "48B61914C3F14419",
+    "error": null,
+    "last_test": null,
+    "last_touch": {
+      "event": "touch",
+      "host_monotonic_ms": 153343,
+      "host_unix_ms": 1792820278997,
+      "seq": 43240,
+      "session": "48B61914C3F14419",
+      "touch": {
+        "duration_ms": 417,
+        "event_seq": 97,
+        "index": 4,
+        "interval_count": 0,
+        "kind": "Released",
+        "press_count": 0,
+        "pressed": false,
+        "uptime_ms": 2149024
+      },
+      "version": 2
+    },
+    "module_tests": {},
+    "bridge_pid": 34815,
+    "outputs": {
+      "applied_seq": 0,
+      "armed": false,
+      "calibration_id": 0,
+      "commanded_cdeg": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "light_active": false,
+      "pose_active": false
+    },
+    "last_applied": null,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v2",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "cameras": {
+    "run_id": "3d8b9e091f5d42c8bee3c25f3f5bcf33",
+    "profile": "720p30",
+    "settings": {
+      "label": "1280×720 · 30 fps",
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "sensor_mode": 4,
+      "capture_width": 1280,
+      "capture_height": 720,
+      "bitrate": 2500000
+    },
+    "preview": {
+      "width": 640,
+      "height": 360,
+      "fps": 15,
+      "quality": 72
+    },
+    "encoder": "omxh264enc",
+    "preview_encoder": "jpegenc",
+    "uptime_seconds": 187.4,
+    "updated_monotonic": 15301.340705766,
+    "error": null,
+    "cameras": [
+      {
+        "sensor_id": 0,
+        "node": "/dev/video0",
+        "ready": true,
+        "frames": 5405,
+        "encoded_frames": 5374,
+        "preview_frames": 2742,
+        "fps": 30.0,
+        "encoded_fps": 30.0,
+        "preview_fps": 15.01,
+        "capture_delivery_fps": 30.0,
+        "encoded_delivery_fps": 29.99,
+        "preview_delivery_fps": 15.05,
+        "encoder_pts_lag_ms": 0.0,
+        "encoded_mbps": 2.506,
+        "age_ms": 14,
+        "jpeg_bytes": 12680,
+        "preview_age_ms": 73,
+        "encoded_age_ms": 6,
+        "rtsp_feeds": 0
+      },
+      {
+        "sensor_id": 1,
+        "node": "/dev/video1",
+        "ready": true,
+        "frames": 5416,
+        "encoded_frames": 5379,
+        "preview_frames": 2742,
+        "fps": 30.07,
+        "encoded_fps": 30.11,
+        "preview_fps": 15.03,
+        "capture_delivery_fps": 29.96,
+        "encoded_delivery_fps": 30.09,
+        "preview_delivery_fps": 15.03,
+        "encoder_pts_lag_ms": 36.6,
+        "encoded_mbps": 2.503,
+        "age_ms": 1,
+        "jpeg_bytes": 7944,
+        "preview_age_ms": 56,
+        "encoded_age_ms": 26,
+        "rtsp_feeds": 0
+      }
+    ],
+    "pipeline": "nvarguscamerasrc name=source0 sensor-id=0 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t0 t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder0 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2640 emit-signals=true max-buffers=2 drop=true sync=false t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg0 emit-signals=true max-buffers=1 drop=true sync=false nvarguscamerasrc name=source1 sensor-id=1 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t1 t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder1 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2641 emit-signals=true max-buffers=2 drop=true sync=false t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg1 emit-signals=true max-buffers=1 drop=true sync=false",
+    "uid": 996,
+    "rtsp_port": 8554,
+    "worker_alive": true,
+    "ready": true
+  },
+  "audio": {
+    "rms_dbfs": -23.3,
+    "peak_dbfs": -5.4,
+    "raw_rms_dbfs": -35.3,
+    "raw_peak_dbfs": -17.4,
+    "gain_db": 12.0,
+    "applied_gain_db": 12.0,
+    "limiter_active": false,
+    "peak_ceiling_dbfs": -1.0,
+    "meter_seconds": 3.0,
+    "waveform": [
+      0.12700000405311584,
+      0.02889999933540821,
+      -0.03669999912381172,
+      -0.027799999341368675,
+      -0.09839999675750732,
+      0.002300000051036477,
+      -0.14489999413490295,
+      -0.023099999874830246,
+      0.07329999655485153,
+      -0.01119999960064888,
+      -0.025499999523162842,
+      -0.08990000188350677,
+      0.1160999983549118,
+      0.1655000001192093,
+      0.025299999862909317,
+      -0.05260000005364418,
+      -0.07280000299215317,
+      -0.01360000018030405,
+      -0.12219999730587006,
+      -0.05460000038146973,
+      0.08730000257492065,
+      0.030400000512599945,
+      0.04280000180006027,
+      0.11010000109672546,
+      0.009200000204145908,
+      -0.04430000111460686,
+      0.024000000208616257,
+      -0.0348999984562397,
+      -0.10279999673366547,
+      -0.03220000118017197,
+      0.11720000207424164,
+      -0.03579999879002571,
+      -0.05700000002980232,
+      -0.053300000727176666,
+      -0.07180000096559525,
+      0.07810000330209732,
+      0.0860000029206276,
+      0.1136000007390976,
+      0.07670000195503235,
+      0.04050000011920929,
+      -0.016300000250339508,
+      -0.13529999554157257,
+      -0.08730000257492065,
+      0.051500000059604645,
+      0.07959999889135361,
+      -0.02019999921321869,
+      0.050700001418590546,
+      0.09000000357627869,
+      -0.06279999762773514,
+      -0.1379999965429306,
+      -0.013500000350177288,
+      0.0714000016450882,
+      0.05920000001788139,
+      -0.02500000037252903,
+      0.053300000727176666,
+      -0.04809999838471413,
+      -0.0892999991774559,
+      -0.10019999742507935,
+      0.023399999365210533,
+      -0.008500000461935997,
+      0.006599999964237213,
+      0.07819999754428864,
+      -0.008799999952316284,
+      -0.052400000393390656,
+      0.0544000007212162,
+      0.08479999750852585,
+      0.06449999660253525,
+      -0.10289999842643738,
+      -0.03550000116229057,
+      -0.000699999975040555,
+      -0.10329999774694443,
+      0.013100000098347664,
+      0.035599999129772186,
+      -0.05559999868273735,
+      -0.0430000014603138,
+      0.10239999741315842,
+      0.08460000157356262,
+      0.034299999475479126,
+      -0.017899999395012856,
+      -0.07779999822378159,
+      -0.21699999272823334,
+      -0.0038999998942017555,
+      0.07190000265836716,
+      -0.024900000542402267,
+      0.0575999990105629,
+      0.07320000231266022,
+      -0.0142000000923872,
+      -0.065700002014637,
+      0.005499999970197678,
+      0.03849999979138374,
+      -0.008999999612569809,
+      0.00839999970048666,
+      -0.017500000074505806,
+      -0.18479999899864197,
+      -0.005200000014156103,
+      0.01590000092983246,
+      0.11180000007152557,
+      0.10909999907016754,
+      -0.013100000098347664,
+      0.03180000185966492,
+      -0.12269999831914902,
+      -0.1151999980211258,
+      -0.07670000195503235,
+      0.01590000092983246,
+      0.04259999841451645,
+      0.13109999895095825,
+      0.07270000129938126,
+      0.08330000191926956,
+      -0.02070000022649765,
+      -0.02449999935925007,
+      -0.05350000038743019,
+      -0.04650000110268593,
+      0.05860000103712082,
+      0.014299999922513962,
+      0.059700001031160355,
+      0.03220000118017197,
+      0.07329999655485153,
+      -0.029100000858306885,
+      0.004100000020116568,
+      0.02800000086426735,
+      -0.03220000118017197,
+      -0.004600000102072954,
+      -0.1670999974012375,
+      -0.03909999877214432,
+      -0.041200000792741776,
+      0.09369999915361404,
+      0.10819999873638153,
+      0.0820000022649765
+    ],
+    "connected": true,
+    "age_ms": 37,
+    "error": null,
+    "rate": 48000,
+    "channels": 1,
+    "buffered_seconds": 6.0,
+    "speaker": {
+      "state": "idle",
+      "last_result": null
+    }
+  },
+  "system": {
+    "cpu_percent": 69.6,
+    "gpu_percent": 0.0,
+    "memory_used_mib": 1793,
+    "memory_total_mib": 3956,
+    "memory_percent": 48.7,
+    "temperature_c": 50.0,
+    "uptime_seconds": 15301,
+    "cpu_history": [
+      99.0,
+      91.3,
+      75.5,
+      78.2,
+      75.0,
+      78.0,
+      75.5,
+      78.9,
+      75.2,
+      74.2,
+      71.3,
+      75.8,
+      76.2,
+      76.5,
+      75.0,
+      76.3,
+      73.0,
+      75.0,
+      77.2,
+      75.8,
+      73.7,
+      73.2,
+      74.2,
+      75.8,
+      84.8,
+      97.0,
+      99.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      99.0,
+      99.0,
+      88.1,
+      87.0,
+      73.3,
+      71.9,
+      75.2,
+      72.7,
+      74.7,
+      72.3,
+      77.2,
+      72.7,
+      72.2,
+      73.0,
+      69.1,
+      69.8,
+      72.5,
+      70.8,
+      71.7,
+      71.6,
+      70.3,
+      71.3,
+      74.5,
+      73.5,
+      70.6,
+      68.8,
+      69.6
+    ]
+  },
+  "events": [
+    {
+      "id": "ad0a92b1d1",
+      "time": 1792820278.9979599,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 153343, \"host_unix_ms\": 1792820278997, \"seq\": 43240, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 417, \"event_seq\": 97, \"index\": 4, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 0, \"pressed\": false, \"uptime_ms\": 2149024}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e46bf2ff57",
+      "time": 1792820278.9652123,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 153309, \"host_unix_ms\": 1792820278963, \"seq\": 43239, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 382, \"event_seq\": 96, \"index\": 4, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 4, \"pressed\": true, \"uptime_ms\": 2148989}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e61cac0e3c",
+      "time": 1792820278.583276,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 152927, \"host_unix_ms\": 1792820278581, \"seq\": 43230, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 95, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 4, \"pressed\": true, \"uptime_ms\": 2148607}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "394ebaa3a1",
+      "time": 1792820278.486795,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 152831, \"host_unix_ms\": 1792820278485, \"seq\": 43227, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 111, \"event_seq\": 94, \"index\": 4, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 3, \"pressed\": false, \"uptime_ms\": 2148512}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "cc7361764b",
+      "time": 1792820278.375538,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 152721, \"host_unix_ms\": 1792820278374, \"seq\": 43224, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 93, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 3, \"pressed\": true, \"uptime_ms\": 2148401}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "4eec210cd3",
+      "time": 1792820278.2294521,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 152575, \"host_unix_ms\": 1792820278228, \"seq\": 43219, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 131, \"event_seq\": 92, \"index\": 4, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2148256}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "71e8ae197d",
+      "time": 1792820278.1071925,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 152446, \"host_unix_ms\": 1792820278100, \"seq\": 43216, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 91, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 2, \"pressed\": true, \"uptime_ms\": 2148125}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "f455c8512a",
+      "time": 1792820277.0711746,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 151416, \"host_unix_ms\": 1792820277070, \"seq\": 43195, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 111, \"event_seq\": 90, \"index\": 4, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2147096}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "c429fb844d",
+      "time": 1792820276.959427,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 151305, \"host_unix_ms\": 1792820276958, \"seq\": 43192, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 89, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2146985}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "0a5c9a7da8",
+      "time": 1792820276.5377917,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 150883, \"host_unix_ms\": 1792820276537, \"seq\": 43181, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 88, \"index\": 4, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2146564}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "21ee3e7bb0",
+      "time": 1792820275.7907412,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 150135, \"host_unix_ms\": 1792820275789, \"seq\": 43166, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 643, \"event_seq\": 87, \"index\": 4, \"interval_count\": 1, \"kind\": \"Released\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2145816}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "76b7fbd248",
+      "time": 1792820275.6504545,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 149996, \"host_unix_ms\": 1792820275649, \"seq\": 43163, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 502, \"event_seq\": 86, \"index\": 4, \"interval_count\": 1, \"kind\": \"Interval\", \"press_count\": 2, \"pressed\": true, \"uptime_ms\": 2145675}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "2a087883cc",
+      "time": 1792820275.1471303,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 149492, \"host_unix_ms\": 1792820275146, \"seq\": 43150, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 85, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 2, \"pressed\": true, \"uptime_ms\": 2145173}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "1706da383a",
+      "time": 1792820275.0016773,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 149347, \"host_unix_ms\": 1792820275001, \"seq\": 43147, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 467, \"event_seq\": 84, \"index\": 4, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2145027}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "67921779f5",
+      "time": 1792820274.5353954,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 148880, \"host_unix_ms\": 1792820274533, \"seq\": 43136, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 83, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2144560}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "5a23b801cc",
+      "time": 1792820251.1460767,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 125490, \"host_unix_ms\": 1792820251144, \"seq\": 42669, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 82, \"index\": 5, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2121171}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "9c0ca24b13",
+      "time": 1792820250.5426521,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 124888, \"host_unix_ms\": 1792820250542, \"seq\": 42656, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 839, \"event_seq\": 81, \"index\": 5, \"interval_count\": 1, \"kind\": \"Released\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2120569}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "616c3220d6",
+      "time": 1792820250.2118208,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 124557, \"host_unix_ms\": 1792820250211, \"seq\": 42647, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 502, \"event_seq\": 80, \"index\": 5, \"interval_count\": 1, \"kind\": \"Interval\", \"press_count\": 2, \"pressed\": true, \"uptime_ms\": 2120232}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "9ae80e98d1",
+      "time": 1792820249.7062707,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 124051, \"host_unix_ms\": 1792820249704, \"seq\": 42636, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 79, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 2, \"pressed\": true, \"uptime_ms\": 2119730}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "f1ecba19b3",
+      "time": 1792820249.2129066,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 123556, \"host_unix_ms\": 1792820249210, \"seq\": 42625, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 65, \"event_seq\": 78, \"index\": 5, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2119233}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "2e028ca1ec",
+      "time": 1792820249.14522,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 123490, \"host_unix_ms\": 1792820249143, \"seq\": 42624, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 77, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2119168}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "5501fd7518",
+      "time": 1792820248.6503847,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 122995, \"host_unix_ms\": 1792820248649, \"seq\": 42613, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 723, \"event_seq\": 76, \"index\": 5, \"interval_count\": 1, \"kind\": \"Released\", \"press_count\": 0, \"pressed\": false, \"uptime_ms\": 2118676}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "6d5336fe4e",
+      "time": 1792820248.429275,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 122774, \"host_unix_ms\": 1792820248428, \"seq\": 42606, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 502, \"event_seq\": 75, \"index\": 5, \"interval_count\": 1, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2118455}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "32dc27b96a",
+      "time": 1792820248.405743,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 122751, \"host_unix_ms\": 1792820248404, \"seq\": 42605, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 477, \"event_seq\": 74, \"index\": 5, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 5, \"pressed\": true, \"uptime_ms\": 2118430}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "04ddc284ec",
+      "time": 1792820247.9278574,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 122273, \"host_unix_ms\": 1792820247927, \"seq\": 42594, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 73, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 5, \"pressed\": true, \"uptime_ms\": 2117953}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "780f98a7d4",
+      "time": 1792820247.633561,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 121979, \"host_unix_ms\": 1792820247633, \"seq\": 42587, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 146, \"event_seq\": 72, \"index\": 5, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 4, \"pressed\": false, \"uptime_ms\": 2117657}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "192f2b3e74",
+      "time": 1792820247.4890008,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 121834, \"host_unix_ms\": 1792820247488, \"seq\": 42584, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 71, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 4, \"pressed\": true, \"uptime_ms\": 2117511}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "8bcf87b634",
+      "time": 1792820247.219064,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 121564, \"host_unix_ms\": 1792820247218, \"seq\": 42577, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 81, \"event_seq\": 70, \"index\": 5, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 3, \"pressed\": false, \"uptime_ms\": 2117245}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "49c287c036",
+      "time": 1792820247.1408193,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 121485, \"host_unix_ms\": 1792820247139, \"seq\": 42574, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 69, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 3, \"pressed\": true, \"uptime_ms\": 2117164}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "103ef64243",
+      "time": 1792820246.9079483,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 121253, \"host_unix_ms\": 1792820246907, \"seq\": 42569, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 80, \"event_seq\": 68, \"index\": 5, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2116933}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "27e56a9967",
+      "time": 1792820246.8277552,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 121173, \"host_unix_ms\": 1792820246827, \"seq\": 42566, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 67, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 2, \"pressed\": true, \"uptime_ms\": 2116853}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "689ddca875",
+      "time": 1792820246.4814491,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 120827, \"host_unix_ms\": 1792820246480, \"seq\": 42559, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 81, \"event_seq\": 66, \"index\": 5, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2116507}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "2b8a5be83d",
+      "time": 1792820246.4009376,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 120746, \"host_unix_ms\": 1792820246400, \"seq\": 42556, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 65, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2116426}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e04bf04c10",
+      "time": 1792820245.9038644,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 120249, \"host_unix_ms\": 1792820245903, \"seq\": 42545, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 80, \"event_seq\": 64, \"index\": 5, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 0, \"pressed\": false, \"uptime_ms\": 2115929}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "dee7c7f23c",
+      "time": 1792820245.838336,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 120184, \"host_unix_ms\": 1792820245837, \"seq\": 42542, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 15, \"event_seq\": 63, \"index\": 5, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 3, \"pressed\": true, \"uptime_ms\": 2115864}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "db27123a77",
+      "time": 1792820245.8232913,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 120168, \"host_unix_ms\": 1792820245822, \"seq\": 42541, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 62, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 3, \"pressed\": true, \"uptime_ms\": 2115849}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "2ec8c2dd00",
+      "time": 1792820245.1893892,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 119529, \"host_unix_ms\": 1792820245183, \"seq\": 42528, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 146, \"event_seq\": 61, \"index\": 5, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2115207}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e3bcac2f98",
+      "time": 1792820245.0350616,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 119380, \"host_unix_ms\": 1792820245034, \"seq\": 42523, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 60, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 2, \"pressed\": true, \"uptime_ms\": 2115061}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "19a54f9a6a",
+      "time": 1792820244.2118685,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 118557, \"host_unix_ms\": 1792820244211, \"seq\": 42506, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 376, \"event_seq\": 59, \"index\": 5, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2114237}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "97952213b5",
+      "time": 1792820243.835117,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 118180, \"host_unix_ms\": 1792820243834, \"seq\": 42497, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 58, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2113861}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "61067044de",
+      "time": 1792820243.6557207,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 118001, \"host_unix_ms\": 1792820243655, \"seq\": 42494, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 57, \"index\": 5, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2113680}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "133e326a87",
+      "time": 1792820242.4083266,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 116750, \"host_unix_ms\": 1792820242404, \"seq\": 42467, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 753, \"event_seq\": 56, \"index\": 5, \"interval_count\": 1, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2112430}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "bab4b45354",
+      "time": 1792820242.1534414,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 116499, \"host_unix_ms\": 1792820242152, \"seq\": 42462, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 502, \"event_seq\": 55, \"index\": 5, \"interval_count\": 1, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2112179}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "9ca1b6d864",
+      "time": 1792820241.6525302,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 115998, \"host_unix_ms\": 1792820241651, \"seq\": 42451, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 54, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2111677}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "7f732bf8e5",
+      "time": 1792820239.7640386,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 114109, \"host_unix_ms\": 1792820239763, \"seq\": 42412, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 53, \"index\": 5, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2109790}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "50b068b6eb",
+      "time": 1792820238.7246568,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 113070, \"host_unix_ms\": 1792820238724, \"seq\": 42389, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 964, \"event_seq\": 52, \"index\": 5, \"interval_count\": 1, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2108750}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "870e98986d",
+      "time": 1792820238.2634172,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 112609, \"host_unix_ms\": 1792820238262, \"seq\": 42380, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 502, \"event_seq\": 51, \"index\": 5, \"interval_count\": 1, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2108288}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "37867d0fb0",
+      "time": 1792820237.760508,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 112106, \"host_unix_ms\": 1792820237759, \"seq\": 42369, \"session\": \"48B61914C3F14419\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 50, \"index\": 5, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2107786}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "cf0029e691",
+      "time": 1792820234.4156346,
+      "source": "audio",
+      "message": "마이크 녹음 증폭 +12 dB · 피크 보호 -1 dBFS",
+      "level": "info"
+    },
+    {
+      "id": "c5151f0283",
+      "time": 1792820208.2499363,
+      "source": "audio",
+      "message": "마이크 녹음 증폭 +30 dB · 피크 보호 -1 dBFS",
+      "level": "info"
+    },
+    {
+      "id": "51ce845182",
+      "time": 1792820125.90843,
+      "source": "pico",
+      "message": "{\"event\": \"bridge_ready\", \"host_unix_ms\": 1792820125907, \"listen\": \"127.0.0.1:37920\", \"protocol\": \"pico-device-v2\", \"session\": \"48B61914C3F14419\", \"status\": {\"age_ms\": 0, \"device\": {\"config\": {\"hold_interval_ms\": 500, \"left_segments\": [4, 4, 10], \"local_tests_enabled\": false, \"press_window_ms\": 2000, \"right_segments\": [4, 4, 10], \"servo_max_us\": 2000, \"servo_min_us\": 1000, \"test_span_degrees\": 10,",
+      "level": "info"
+    },
+    {
+      "id": "df90abfb59",
+      "time": 1792820125.6739335,
+      "source": "system",
+      "message": "300 Seconds 장치 대시보드 시작",
+      "level": "info"
+    },
+    {
+      "id": "bbb5d3c27a",
+      "time": 1792820125.6738205,
+      "source": "camera",
+      "message": "두 센서 촬영 시작 · 1280×720 · 30 fps",
+      "level": "info"
+    }
+  ],
+  "eye_expression": {
+    "active": false,
+    "stopping": false,
+    "preset_id": null,
+    "name": null,
+    "frame_index": 0,
+    "remaining_ms": 0,
+    "last": null,
+    "error": null
+  }
+}

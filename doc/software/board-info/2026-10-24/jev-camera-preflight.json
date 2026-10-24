@@ -1,0 +1,86 @@
+{
+  "at_utc": "2026-10-24T04:18:40.321687+00:00",
+  "endpoint": "https://opencode.ai/inference/systemone/v1/systemone",
+  "requested_model": "jev-1.13-free",
+  "status": "ok",
+  "camera_generation": "a91fafb5d0644918975bae52499f8d90",
+  "images": [
+    {
+      "ref": "19c3aef0-d62c-4d78-80c8-fd9014801cda",
+      "sensor_id": 0,
+      "sample": 0,
+      "received_at_utc": "2026-10-24T04:18:40.520136+00:00",
+      "width": 640,
+      "height": 360,
+      "bytes": 16317,
+      "sha256": "18b8c1fded3e58828519c26c880802ac300f2ef03086e59c8b2a4ecf22ad5f17",
+      "fetch_ms": 62.3
+    },
+    {
+      "ref": "5e386d62-6695-41af-8c20-7a5ad99bbdf6",
+      "sensor_id": 1,
+      "sample": 0,
+      "received_at_utc": "2026-10-24T04:18:40.528118+00:00",
+      "width": 640,
+      "height": 360,
+      "bytes": 13528,
+      "sha256": "890b912a013dc9e23fb5d46d45522f17da4739e24d2b24f937afcc6a76f08559",
+      "fetch_ms": 67.9
+    },
+    {
+      "ref": "bdf7cff3-4ea0-4c1f-ac2c-646c4fdaa7d8",
+      "sensor_id": 0,
+      "sample": 1,
+      "received_at_utc": "2026-10-24T04:18:41.695001+00:00",
+      "width": 640,
+      "height": 360,
+      "bytes": 16256,
+      "sha256": "ac5cae22438238d978760990b10f3c9e764d9e6d1ff708369741b06009623414",
+      "fetch_ms": 40.5
+    },
+    {
+      "ref": "df25758a-7572-4ecd-8c4c-9c3d0b2f900e",
+      "sensor_id": 1,
+      "sample": 1,
+      "received_at_utc": "2026-10-24T04:18:41.720185+00:00",
+      "width": 640,
+      "height": 360,
+      "bytes": 13542,
+      "sha256": "0582e1e1f7ac6d712614c0ebfe90c6caceaa8491451b1be5864a2bec06aaec23",
+      "fetch_ms": 49.2
+    },
+    {
+      "ref": "bb727bcb-cab7-4fd4-a2b2-9caf3cd3ffd2",
+      "sensor_id": 0,
+      "sample": 2,
+      "received_at_utc": "2026-10-24T04:18:42.887081+00:00",
+      "width": 640,
+      "height": 360,
+      "bytes": 16349,
+      "sha256": "e7eda788f30be4bc36cab21aea17e81d4569c86c65c8158e6ef1839875d2eae7",
+      "fetch_ms": 46.5
+    },
+    {
+      "ref": "770894c9-270c-428b-9bda-23282e10dde2",
+      "sensor_id": 1,
+      "sample": 2,
+      "received_at_utc": "2026-10-24T04:18:42.887317+00:00",
+      "width": 640,
+      "height": 360,
+      "bytes": 13504,
+      "sha256": "e6bc499f3bafc032cf061a46e842a0942b81dd39b42e8d634855dc45b5d801bd",
+      "fetch_ms": 24.8
+    }
+  ],
+  "image_count": 6,
+  "total_jpeg_bytes": 89496,
+  "seat_roi": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "credential_present": true,
+  "test": "camera_capture_only",
+  "uploaded": false
+}

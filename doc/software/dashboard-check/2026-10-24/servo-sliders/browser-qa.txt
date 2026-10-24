@@ -1,0 +1,61 @@
+### Result
+{"initial":{"count":6,"notice":"PCA9685 통신 오류 · 배선과 VCC를 확인하세요.","startDisabled":true,"previewDegrees":"180°","previewPosts":0},"mockedMoves":[{"servo":1,"degrees":0},{"servo":2,"degrees":30},{"servo":3,"degrees":60},{"servo":4,"degrees":90},{"servo":5,"degrees":120},{"servo":6,"degrees":180},{"servo":1,"degrees":135}],"queuedCommandCancelled":true,"mobile":{"width":390,"documentWidth":390,"sliderCount":6,"buttonHeight":48},"realOutputPosts":0}
+### Ran Playwright code
+```js
+await (async page => {
+  await page.setViewportSize({width:1440,height:1100});
+  await page.reload();
+  await page.waitForFunction(() => Boolean(lastState?.servo_control));
+  const posts=[];
+  page.on('request', request => {if(request.method()==='POST' && /\/api\/pico\/servo/.test(request.url()))posts.push(request.url());});
+  const sliders=page.locator('#servo-sliders input[type=range]');
+  const initial={count:await sliders.count(),notice:await page.locator('#servo-control-state').textContent(),
+    startDisabled:await page.locator('#servo-enable').isDisabled()};
+  await page.locator('#servo-angle-1').focus();
+  await page.locator('#servo-angle-1').press('End');
+  await page.waitForTimeout(350);
+  initial.previewDegrees=await page.locator('#servo-value-1').textContent();
+  initial.previewPosts=posts.length;
+  if(initial.count!==6 || initial.previewDegrees!=='180°' || initial.previewPosts!==0)throw new Error(JSON.stringify(initial));
+  await page.locator('#servo-angle-1').blur();
+  await page.locator('#servo-controls').screenshot({path:'D:/repository/ict_makerton_2026/doc/software/dashboard-check/2026-10-24/servo-sliders/desktop.png'});
+  // Mock all control writes: real motors never receive the UI QA requests.
+  let state={active:false,generation:10,ready:true,supported:true,reason:'',error:null,busy:false,
+    commanded_degrees:[null,null,null,null,null,null]};
+  const moves=[];
+  await page.route('**/api/pico/servos/session',async route=>{
+    const body=route.request().postDataJSON();
+    if(body.action==='enable')state={...state,active:true,generation:state.generation+1};
+    if(body.action==='stop')state={...state,active:false,generation:state.generation+1};
+    const value=body.action==='enable'?{control_id:'qa-control-token-000000000000',state}:body.action==='keepalive'?state:{ok:true};
+    await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(value)});
+  });
+  await page.route('**/api/pico/servo',async route=>{
+    const body=route.request().postDataJSON();moves.push({servo:body.servo,degrees:body.degrees});
+    state.commanded_degrees[body.servo-1]=body.degrees;
+    await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({ok:true,servo:body.servo,degrees:body.degrees,state})});
+  });
+  await page.evaluate(s=>{socket.onclose=null;socket.close();lastState.servo_control=s;renderServos(s);},state);
+  await page.locator('#servo-enable').click();
+  for(let i=1;i<=6;i++){
+    const angle=[0,30,60,90,120,180][i-1];
+    await page.locator(`#servo-angle-${i}`).evaluate((node,value)=>{node.value=String(value);node.dispatchEvent(new Event('input',{bubbles:true}));},angle);
+    await page.locator(`#servo-move-${i}`).click();
+    await page.waitForFunction(()=>!servoPending);
+  }
+  await page.locator('#servo-angle-1').evaluate(node=>{node.value='135';node.dispatchEvent(new Event('input',{bubbles:true}));node.dispatchEvent(new Event('change',{bubbles:true}));});
+  await page.waitForFunction(()=>document.querySelector('#servo-command-1').textContent.includes('135'));
+  const beforeStop=moves.length;
+  await page.evaluate(()=>{const node=document.querySelector('#servo-angle-2');node.value='140';node.dispatchEvent(new Event('change',{bubbles:true}));document.querySelector('#servo-stop').click();});
+  await page.waitForTimeout(350);
+  if(moves.length!==beforeStop || moves.length!==7)throw new Error('Unexpected queued servo command after Stop');
+  await page.unroute('**/api/pico/servos/session');await page.unroute('**/api/pico/servo');
+  await page.reload();await page.setViewportSize({width:390,height:844});
+  await page.waitForFunction(()=>Boolean(lastState?.servo_control));
+  await page.locator('#servo-controls').screenshot({path:'D:/repository/ict_makerton_2026/doc/software/dashboard-check/2026-10-24/servo-sliders/mobile.png'});
+  const mobile=await page.evaluate(()=>({width:innerWidth,documentWidth:document.documentElement.scrollWidth,
+    sliderCount:document.querySelectorAll('#servo-sliders input').length,buttonHeight:document.querySelector('#servo-move-1').getBoundingClientRect().height}));
+  return {initial,mockedMoves:moves,queuedCommandCancelled:true,mobile,realOutputPosts:0};
+}
+)(page);
+```

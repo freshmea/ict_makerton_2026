@@ -1,0 +1,457 @@
+{
+  "host": "http://192.168.184.76:8000",
+  "before": {
+    "connected": true,
+    "age_ms": 29,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 2435,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 2075882
+    },
+    "session": "5487A95220C3A75B",
+    "error": null,
+    "last_test": {
+      "done": true,
+      "event": "test_event",
+      "fault": false,
+      "host_monotonic_ms": 109685,
+      "host_unix_ms": 1792809827993,
+      "module": "Matrix",
+      "phase": 0,
+      "seq": 49144,
+      "session": "5487A95220C3A75B",
+      "version": 2
+    },
+    "last_touch": null,
+    "module_tests": {
+      "Matrix": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 109685,
+        "host_unix_ms": 1792809827993,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 49144,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    "bridge_pid": 14762,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v1",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "samples": [
+    {
+      "server_time": 1792809872.7883642,
+      "connected": true,
+      "running": null,
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 109685,
+        "host_unix_ms": 1792809827993,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 49144,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    }
+  ],
+  "already_completed": true,
+  "final": {
+    "connected": true,
+    "age_ms": 14,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 2435,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 2075982
+    },
+    "session": "5487A95220C3A75B",
+    "error": null,
+    "last_test": {
+      "done": true,
+      "event": "test_event",
+      "fault": false,
+      "host_monotonic_ms": 109685,
+      "host_unix_ms": 1792809827993,
+      "module": "Matrix",
+      "phase": 0,
+      "seq": 49144,
+      "session": "5487A95220C3A75B",
+      "version": 2
+    },
+    "last_touch": null,
+    "module_tests": {
+      "Matrix": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 109685,
+        "host_unix_ms": 1792809827993,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 49144,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    "bridge_pid": 14762,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v1",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "events": [
+    {
+      "id": "106e4277a5",
+      "time": 1792809827.9937449,
+      "source": "pico",
+      "message": "{\"done\": true, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 109685, \"host_unix_ms\": 1792809827993, \"module\": \"Matrix\", \"phase\": 0, \"seq\": 49144, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "15f398bbdd",
+      "time": 1792809826.9757485,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 108667, \"host_unix_ms\": 1792809826975, \"module\": \"Matrix\", \"phase\": 19, \"seq\": 49123, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e52e7d8799",
+      "time": 1792809826.156829,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 107848, \"host_unix_ms\": 1792809826156, \"module\": \"Matrix\", \"phase\": 18, \"seq\": 49106, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "fb20402fa1",
+      "time": 1792809825.7338421,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 107425, \"host_unix_ms\": 1792809825733, \"module\": \"Matrix\", \"phase\": 17, \"seq\": 49095, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "b88e9e2868",
+      "time": 1792809825.3127155,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 107004, \"host_unix_ms\": 1792809825312, \"module\": \"Matrix\", \"phase\": 16, \"seq\": 49086, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "80ecb2a751",
+      "time": 1792809824.8936322,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 106585, \"host_unix_ms\": 1792809824892, \"module\": \"Matrix\", \"phase\": 15, \"seq\": 49077, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "4bae229d39",
+      "time": 1792809824.4725344,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 106164, \"host_unix_ms\": 1792809824472, \"module\": \"Matrix\", \"phase\": 14, \"seq\": 49068, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e87566a5d7",
+      "time": 1792809824.0538557,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 105745, \"host_unix_ms\": 1792809824053, \"module\": \"Matrix\", \"phase\": 13, \"seq\": 49059, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e80662593c",
+      "time": 1792809823.63316,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 105325, \"host_unix_ms\": 1792809823632, \"module\": \"Matrix\", \"phase\": 12, \"seq\": 49048, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "fcf7ae1bff",
+      "time": 1792809823.2127304,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 104903, \"host_unix_ms\": 1792809823211, \"module\": \"Matrix\", \"phase\": 11, \"seq\": 49039, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "32e5029fbe",
+      "time": 1792809822.792016,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 104483, \"host_unix_ms\": 1792809822791, \"module\": \"Matrix\", \"phase\": 10, \"seq\": 49030, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "f926c2686f",
+      "time": 1792809822.3724673,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 104064, \"host_unix_ms\": 1792809822371, \"module\": \"Matrix\", \"phase\": 9, \"seq\": 49021, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "263ea0d6c8",
+      "time": 1792809821.9568028,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 103645, \"host_unix_ms\": 1792809821952, \"module\": \"Matrix\", \"phase\": 8, \"seq\": 49012, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "7508915c2c",
+      "time": 1792809821.5344415,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 103226, \"host_unix_ms\": 1792809821533, \"module\": \"Matrix\", \"phase\": 7, \"seq\": 49001, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e685a81918",
+      "time": 1792809821.111459,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 102803, \"host_unix_ms\": 1792809821111, \"module\": \"Matrix\", \"phase\": 6, \"seq\": 48992, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "8929d00cae",
+      "time": 1792809820.6948814,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 102386, \"host_unix_ms\": 1792809820694, \"module\": \"Matrix\", \"phase\": 5, \"seq\": 48983, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "07cb9d4e53",
+      "time": 1792809820.2710648,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 101962, \"host_unix_ms\": 1792809820270, \"module\": \"Matrix\", \"phase\": 4, \"seq\": 48974, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "b4cbf6d36f",
+      "time": 1792809819.851881,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 101543, \"host_unix_ms\": 1792809819851, \"module\": \"Matrix\", \"phase\": 3, \"seq\": 48965, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "de4ebf44cb",
+      "time": 1792809819.4311857,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 101123, \"host_unix_ms\": 1792809819430, \"module\": \"Matrix\", \"phase\": 2, \"seq\": 48954, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "1b1702ea61",
+      "time": 1792809818.6104305,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 100302, \"host_unix_ms\": 1792809818609, \"module\": \"Matrix\", \"phase\": 1, \"seq\": 48937, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "4f914e006b",
+      "time": 1792809817.801323,
+      "source": "pico",
+      "message": "{'cmd': 'test', 'module': 'matrix'} → ACK",
+      "level": "info"
+    },
+    {
+      "id": "2994ee4f22",
+      "time": 1792809817.794938,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 99486, \"host_unix_ms\": 1792809817794, \"module\": \"Matrix\", \"phase\": 0, \"seq\": 48920, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "0c4b568f4c",
+      "time": 1792809718.563657,
+      "source": "pico",
+      "message": "{\"event\": \"bridge_ready\", \"host_unix_ms\": 1792809718562, \"listen\": \"127.0.0.1:37920\", \"protocol\": \"pico-device-v2\", \"session\": \"5487A95220C3A75B\", \"status\": {\"age_ms\": 0, \"device\": {\"config\": {\"hold_interval_ms\": 500, \"left_segments\": [4, 4, 10], \"local_tests_enabled\": false, \"press_window_ms\": 2000, \"right_segments\": [4, 4, 10], \"servo_max_us\": 2000, \"servo_min_us\": 1000, \"test_span_degrees\": 10,",
+      "level": "info"
+    },
+    {
+      "id": "2c5d111c7f",
+      "time": 1792809718.3216972,
+      "source": "system",
+      "message": "300 Seconds 장치 대시보드 시작",
+      "level": "info"
+    },
+    {
+      "id": "b58eb8b5a6",
+      "time": 1792809718.321576,
+      "source": "camera",
+      "message": "두 센서 촬영 시작 · 1280×720 · 30 fps",
+      "level": "info"
+    }
+  ],
+  "elapsed_seconds": 0.035
+}

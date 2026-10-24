@@ -1,0 +1,103 @@
+{
+  "online": true,
+  "job": {
+    "id": "68c16524666b46c491798a266997b94f",
+    "provider": "openai",
+    "camera": 1,
+    "phase": "cancelled",
+    "captured": 2,
+    "total": 10,
+    "started_at_utc": "2026-10-24T14:04:04.490376+09:00",
+    "result": null,
+    "error": null
+  },
+  "providers": {
+    "openai": {
+      "configured": true,
+      "available": true,
+      "budget": {
+        "local_only": true,
+        "attempts": 3,
+        "max_attempts": 5,
+        "session_cap_usd": "0.10",
+        "reserved_usd": "0.06",
+        "known_standard_cost_usd": "0.0003067",
+        "unknown_cost_attempts": 0,
+        "cooldown_until_unix": 0,
+        "account_balance": "not queried; see OpenAI billing",
+        "automatic_retry": false
+      }
+    },
+    "jev": {
+      "configured": true,
+      "available": false,
+      "blocked_until_unix": 1792886400.0,
+      "free_only": true
+    }
+  },
+  "categories": [
+    {
+      "id": "phone",
+      "label": "스마트폰으로 하는 딴짓"
+    },
+    {
+      "id": "computer_tablet",
+      "label": "컴퓨터·태블릿으로 하는 딴짓"
+    },
+    {
+      "id": "off_study_screen",
+      "label": "온라인 공부 화면에서 벗어남"
+    },
+    {
+      "id": "social",
+      "label": "다른 사람과 소통"
+    },
+    {
+      "id": "stationery",
+      "label": "필기구·문구류로 하는 딴짓"
+    },
+    {
+      "id": "paper_notebook",
+      "label": "종이·공책으로 하는 딴짓"
+    },
+    {
+      "id": "objects",
+      "label": "장난감·주변 물건으로 하는 딴짓"
+    },
+    {
+      "id": "gaze_away",
+      "label": "공부 대상에서 벗어난 시선"
+    },
+    {
+      "id": "posture",
+      "label": "자세·움직임 관련 행동"
+    },
+    {
+      "id": "away",
+      "label": "자리에서 벗어나는 행동"
+    },
+    {
+      "id": "food_drink",
+      "label": "음식·음료 관련 행동"
+    },
+    {
+      "id": "preparation",
+      "label": "길어지는 정리·준비"
+    },
+    {
+      "id": "appearance",
+      "label": "외모·옷·액세서리 관련 행동"
+    },
+    {
+      "id": "task_delay",
+      "label": "공부 시작·문제 풀이 지연"
+    },
+    {
+      "id": "environment",
+      "label": "주변 환경을 조작하는 행동"
+    }
+  ],
+  "study_area": "desk",
+  "frame_count": 10,
+  "interval_seconds": 1
+}

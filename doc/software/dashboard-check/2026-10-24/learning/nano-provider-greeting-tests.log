@@ -1,0 +1,10 @@
+test_actual_gpt_live_protocol_and_korean_voice (test_learning_provider.ProviderTests) ... ok
+test_bad_frame_and_missing_key_never_reach_network (test_learning_provider.ProviderTests) ... ok
+test_http_error_never_echoes_provider_body_or_key (test_learning_provider.ProviderTests) ... ok
+test_schema_mismatch_and_incomplete_generation_are_rejected (test_learning_provider.ProviderTests) ... ok
+test_single_pair_one_structured_request_no_provider_storage (test_learning_provider.ProviderTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.035s
+
+OK

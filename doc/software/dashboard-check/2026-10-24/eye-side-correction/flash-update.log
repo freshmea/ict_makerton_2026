@@ -1,0 +1,6 @@
+Dashboard stopped. Backing up and updating the same Pico as jetson.
+Saving existing 4 MiB flash before writing...
+Loading and verifying RP2350 flash...
+Flash readback and integrated CDC STATUS verified. No actuator test started.
+Result: /home/jetson/ict_makerton_2026/tmp/pico-flash/20261024T045047.536310Z-linux/flash-result.json
+{"completed": true, "dashboard_reconnected": true, "faults": 0, "service": "ActiveState=active\nSubState=running\nUnitFileState=enabled\n"}

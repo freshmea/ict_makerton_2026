@@ -1,0 +1,20 @@
+{
+  "url": "http://192.168.184.76:8000/#devices",
+  "method": "Playwright actual DOM and screenshot",
+  "pico_summary": "USB 연결됨",
+  "touch_display": [
+    "RELEASED",
+    "RELEASED",
+    "RELEASED",
+    "RELEASED",
+    "RELEASED",
+    "RELEASED"
+  ],
+  "matrix_status": "SPI 출력 · 실제 발광 피드백 없음",
+  "matrix_test_enabled": true,
+  "disconnected_text_present": false,
+  "console_errors": 0,
+  "console_warnings": 0,
+  "screenshot": "output/playwright/matrix-switch-connected.png",
+  "physical_matrix_light_observed_by_agent": false
+}

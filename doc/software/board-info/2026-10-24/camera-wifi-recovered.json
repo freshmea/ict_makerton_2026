@@ -1,0 +1,29 @@
+{
+  "commands": {
+    "timestamp": {
+      "stdout": "2026-10-24T04:00:49Z\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "wireless": {
+      "stdout": "wlan0     IEEE 802.11bgn  ESSID:\"1_PCU_C\"  Nickname:\"<WIFI@REALTEK>\"\n          Mode:Managed  Frequency:2.437 GHz  Access Point: 00:33:58:77:17:A0   \n          Bit Rate:72.2 Mb/s   Sensitivity:0/0  \n          Retry:off   RTS thr:off   Fragment thr:off\n          Power Management:off\n          Link Quality=100/100  Signal level=93/100  Noise level=0/100\n          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0\n          Tx excessive retries:0  Invalid misc:0   Missed beacon:0\n\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "gateway_ping": {
+      "stdout": "PING 192.168.184.1 (192.168.184.1) 56(84) bytes of data.\n64 bytes from 192.168.184.1: icmp_seq=1 ttl=254 time=2.42 ms\n64 bytes from 192.168.184.1: icmp_seq=2 ttl=254 time=3.22 ms\n64 bytes from 192.168.184.1: icmp_seq=3 ttl=254 time=5.61 ms\n64 bytes from 192.168.184.1: icmp_seq=4 ttl=254 time=2.41 ms\n64 bytes from 192.168.184.1: icmp_seq=5 ttl=254 time=68.6 ms\n64 bytes from 192.168.184.1: icmp_seq=6 ttl=254 time=99.4 ms\n64 bytes from 192.168.184.1: icmp_seq=7 ttl=254 time=1.92 ms\n64 bytes from 192.168.184.1: icmp_seq=8 ttl=254 time=16.2 ms\n64 bytes from 192.168.184.1: icmp_seq=9 ttl=254 time=10.6 ms\n64 bytes from 192.168.184.1: icmp_seq=10 ttl=254 time=8.79 ms\n\n--- 192.168.184.1 ping statistics ---\n10 packets transmitted, 10 received, 0% packet loss, time 9014ms\nrtt min/avg/max/mdev = 1.919/21.923/99.419/32.084 ms\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "sockets": {
+      "stdout": "State   Recv-Q    Send-Q        Local Address:Port         Peer Address:Port    Process                                                                         \nESTAB   0         0            192.168.184.76:8000       192.168.184.82:56670   \n\t cubic wscale:8,7 rto:220 rtt:19.571/6.567 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:27 ssthresh:20 bytes_acked:1793763 bytes_received:1847 segs_out:1318 segs_in:270 data_segs_out:1316 data_segs_in:4 send 16113638bps lastsnd:24 lastrcv:9172 lastack:8 pacing_rate 19335496bps delivery_rate 13450584bps app_limited retrans:0/6 rcv_space:29200 rcv_ssthresh:33488 minrtt:2.737\nESTAB   0         0            192.168.184.76:8000       192.168.184.82:49669   \n\t cubic wscale:8,7 rto:220 rtt:19.387/11.966 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:10 ssthresh:20 bytes_acked:108955 bytes_received:494 segs_out:95 segs_in:26 data_segs_out:94 data_segs_in:1 send 6024656bps lastsnd:316 lastrcv:9216 lastack:304 pacing_rate 7229584bps delivery_rate 7973784bps app_limited retrans:0/3 rcv_space:29200 rcv_ssthresh:30272 minrtt:7.085\nESTAB   0         0            192.168.184.76:8000       192.168.184.82:1922    \n\t cubic wscale:8,7 rto:232 rtt:30.032/25.094 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:20 ssthresh:20 bytes_acked:136641 bytes_received:172 segs_out:102 segs_in:21 data_segs_out:101 data_segs_in:1 send 7778370bps lastsnd:52 lastrcv:676 lastack:44 pacing_rate 9333920bps delivery_rate 15772152bps app_limited retrans:0/1 rcv_space:29200 rcv_ssthresh:30272 minrtt:7.044\nESTAB   0         0            192.168.184.76:8000       192.168.184.82:1923    \n\t cubic wscale:8,7 rto:224 rtt:21.585/18.927 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:20 ssthresh:20 bytes_acked:136072 bytes_received:172 segs_out:102 segs_in:19 data_segs_out:101 data_segs_in:1 send 10822330bps lastsnd:68 lastrcv:684 lastack:60 pacing_rate 12986640bps delivery_rate 14344088bps app_limited retrans:0/1 rcv_space:29200 rcv_ssthresh:30272 minrtt:7.235\nESTAB   0         2050         192.168.184.76:8000       192.168.184.82:39009   \n\t cubic wscale:8,7 rto:228 rtt:24.064/8.062 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:26 ssthresh:20 bytes_acked:1790691 bytes_received:703 segs_out:1294 segs_in:253 data_segs_out:1292 data_segs_in:2 send 12619681bps lastsnd:12 lastrcv:9168 pacing_rate 15143376bps delivery_rate 17701432bps app_limited unacked:2 retrans:0/9 rcv_space:29200 rcv_ssthresh:31344 minrtt:4.951\nESTAB   0         0            192.168.184.76:8000       192.168.184.82:1910    \n\t cubic wscale:8,7 rto:236 rtt:33.732/18.627 ato:40 mss:1460 pmtu:1500 rcvmss:536 advmss:1460 cwnd:10 ssthresh:20 bytes_acked:1950 bytes_received:494 segs_out:4 segs_in:4 data_segs_out:3 data_segs_in:1 send 3462587bps lastsnd:4012 lastrcv:4052 lastack:4000 pacing_rate 4155072bps delivery_rate 2940824bps app_limited rcv_space:29200 rcv_ssthresh:30272 minrtt:10.673\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "wifi_power": {
+      "stdout": "{\n  \"rtw_power_mgnt\": \"0\",\n  \"rtw_ips_mode\": \"0\",\n  \"rtw_enusbss\": \"0\",\n  \"usb_power_control\": \"on\",\n  \"networkmanager_powersave\": \"default\",\n  \"driver_config\": \"# Applies on next driver load; no live module reload over SSH.\\noptions r8188eu rtw_power_mgnt=0 rtw_ips_mode=0 rtw_enusbss=0\\n\",\n  \"journal_config\": \"[Journal]\\nStorage=persistent\\nSystemMaxUse=16M\\nSystemMaxFileSize=4M\\nRuntimeMaxUse=8M\\nMaxRetentionSec=2day\\nSyncIntervalSec=30s\\nRateLimitIntervalSec=30s\\nRateLimitBurst=200\\n\",\n  \"uptime_seconds\": 9448.24,\n  \"timestamp_utc\": \"2026-10-24T04:01:00Z\"\n}\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  }
+}

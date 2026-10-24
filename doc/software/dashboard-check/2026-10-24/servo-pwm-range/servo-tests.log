@@ -1,0 +1,20 @@
+test_api_validation_and_single_selected_servo (test_servo_controls.ServoTests) ... Executing <Task pending name='Task-1' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:96> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8ba215e0>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 5.169 seconds
+ok
+test_changed_usb_session_cannot_receive_old_owner_commands (test_servo_controls.ServoTests) ... Executing <Task pending name='Task-3' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:102> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f7fd96f70>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.114 seconds
+ok
+test_driver_diagnostics_distinguish_nack_timeout_and_ambiguous_addresses (test_servo_controls.ServoTests) ... ok
+test_enable_does_not_move_and_move_targets_only_selected_channel (test_servo_controls.ServoTests) ... ok
+test_expired_browser_lease_stops_and_revokes_owner (test_servo_controls.ServoTests) ... ok
+test_failed_probe_explains_driver_connection_and_stays_disabled (test_servo_controls.ServoTests) ... ok
+test_fault_and_old_firmware_reject_before_any_arm (test_servo_controls.ServoTests) ... ok
+test_idle_diagnostics_do_not_claim_that_a_test_is_running (test_servo_controls.ServoTests) ... ok
+test_probe_only_initializes_driver_with_outputs_stopped (test_servo_controls.ServoTests) ... ok
+test_stale_telemetry_revokes_live_bridge_instead_of_leaving_pwm_held (test_servo_controls.ServoTests) ... Executing <Task pending name='Task-22' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /usr/lib/python3.8/unittest/async_case.py:102> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f7fd82370>()] created at /usr/lib/python3.8/asyncio/base_events.py:422> created at /usr/lib/python3.8/unittest/async_case.py:118> took 0.522 seconds
+ok
+test_stop_during_arm_prevents_late_servo_motion (test_servo_controls.ServoTests) ... ok
+test_unconfirmed_stop_revokes_bridge_keepalive (test_servo_controls.ServoTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 9.518s
+
+OK

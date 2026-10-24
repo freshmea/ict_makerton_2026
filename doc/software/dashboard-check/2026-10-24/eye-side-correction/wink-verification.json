@@ -1,0 +1,577 @@
+{
+  "eye_basis": "robot/device",
+  "near": "right, CW90 compensation",
+  "far": "left, upright",
+  "sequence": [
+    {
+      "preset_id": "wink-left",
+      "ack": "Ok",
+      "frames_seen": [
+        0,
+        1
+      ],
+      "final": {
+        "connected": true,
+        "age_ms": 55,
+        "device": {
+          "config": {
+            "hold_interval_ms": 500,
+            "left_segments": [
+              4,
+              4,
+              10
+            ],
+            "local_tests_enabled": false,
+            "press_window_ms": 2000,
+            "right_segments": [
+              4,
+              4,
+              10
+            ],
+            "servo_max_us": 2000,
+            "servo_min_us": 1000,
+            "test_span_degrees": 10,
+            "test_switch": 0,
+            "touch_active_low_mask": 0
+          },
+          "dropped_events": 49,
+          "faults": 1,
+          "local_enabled": false,
+          "oe_high": true,
+          "pressed_mask": 0,
+          "raw_mask": 0,
+          "running": null,
+          "touches": [
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            }
+          ],
+          "uptime_ms": 56882
+        },
+        "session": "88284EEC0AE0E79E",
+        "error": null,
+        "last_test": null,
+        "last_touch": null,
+        "module_tests": {},
+        "bridge_pid": 27620,
+        "outputs": {
+          "applied_seq": 0,
+          "armed": false,
+          "calibration_id": 0,
+          "commanded_cdeg": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "light_active": false,
+          "pose_active": false
+        },
+        "last_applied": {
+          "event": "applied",
+          "host_monotonic_ms": 53516,
+          "host_unix_ms": 1792817517233,
+          "kind": 3,
+          "request_seq": 335,
+          "session": "88284EEC0AE0E79E",
+          "version": 2
+        },
+        "port": "/dev/pico-device",
+        "protocol": "pico-device-v2",
+        "installation": {
+          "touch_inputs_connected": true,
+          "matrix_connected": true,
+          "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+        }
+      }
+    },
+    {
+      "preset_id": "wink-right",
+      "ack": "Ok",
+      "frames_seen": [
+        0,
+        1
+      ],
+      "final": {
+        "connected": true,
+        "age_ms": 37,
+        "device": {
+          "config": {
+            "hold_interval_ms": 500,
+            "left_segments": [
+              4,
+              4,
+              10
+            ],
+            "local_tests_enabled": false,
+            "press_window_ms": 2000,
+            "right_segments": [
+              4,
+              4,
+              10
+            ],
+            "servo_max_us": 2000,
+            "servo_min_us": 1000,
+            "test_span_degrees": 10,
+            "test_switch": 0,
+            "touch_active_low_mask": 0
+          },
+          "dropped_events": 49,
+          "faults": 1,
+          "local_enabled": false,
+          "oe_high": true,
+          "pressed_mask": 0,
+          "raw_mask": 0,
+          "running": null,
+          "touches": [
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            }
+          ],
+          "uptime_ms": 62083
+        },
+        "session": "88284EEC0AE0E79E",
+        "error": null,
+        "last_test": null,
+        "last_touch": null,
+        "module_tests": {},
+        "bridge_pid": 27620,
+        "outputs": {
+          "applied_seq": 0,
+          "armed": false,
+          "calibration_id": 0,
+          "commanded_cdeg": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "light_active": false,
+          "pose_active": false
+        },
+        "last_applied": {
+          "event": "applied",
+          "host_monotonic_ms": 58717,
+          "host_unix_ms": 1792817522434,
+          "kind": 3,
+          "request_seq": 387,
+          "session": "88284EEC0AE0E79E",
+          "version": 2
+        },
+        "port": "/dev/pico-device",
+        "protocol": "pico-device-v2",
+        "installation": {
+          "touch_inputs_connected": true,
+          "matrix_connected": true,
+          "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+        }
+      }
+    }
+  ],
+  "user_physical_side_confirmed": null,
+  "diagnostic_ack": "Ok",
+  "diagnostic": {
+    "done": true,
+    "event": "test_event",
+    "fault": false,
+    "host_monotonic_ms": 69440,
+    "host_unix_ms": 1792817533157,
+    "module": "Matrix",
+    "phase": 0,
+    "seq": 1514,
+    "session": "88284EEC0AE0E79E",
+    "version": 2
+  },
+  "diagnostic_phases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    0
+  ],
+  "final": {
+    "connected": true,
+    "age_ms": 6,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 49,
+      "faults": 1,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 72486
+    },
+    "session": "88284EEC0AE0E79E",
+    "error": null,
+    "last_test": {
+      "done": true,
+      "event": "test_event",
+      "fault": false,
+      "host_monotonic_ms": 69440,
+      "host_unix_ms": 1792817533157,
+      "module": "Matrix",
+      "phase": 0,
+      "seq": 1514,
+      "session": "88284EEC0AE0E79E",
+      "version": 2
+    },
+    "last_touch": null,
+    "module_tests": {
+      "Matrix": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 69440,
+        "host_unix_ms": 1792817533157,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 1514,
+        "session": "88284EEC0AE0E79E",
+        "version": 2
+      }
+    },
+    "bridge_pid": 27620,
+    "outputs": {
+      "applied_seq": 0,
+      "armed": false,
+      "calibration_id": 0,
+      "commanded_cdeg": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "light_active": false,
+      "pose_active": false
+    },
+    "last_applied": {
+      "event": "applied",
+      "host_monotonic_ms": 58717,
+      "host_unix_ms": 1792817522434,
+      "kind": 3,
+      "request_seq": 387,
+      "session": "88284EEC0AE0E79E",
+      "version": 2
+    },
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v2",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "final_stop": {
+    "ack_code": "Ok",
+    "ack_request_seq": 448,
+    "cmd": "stop",
+    "ok": true,
+    "session": "88284EEC0AE0E79E",
+    "status": {
+      "age_ms": 0,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 49,
+        "faults": 1,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 72603
+      },
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "received_unix_ms": 1792817533413
+    }
+  }
+}

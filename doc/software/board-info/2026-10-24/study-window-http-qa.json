@@ -1,0 +1,14 @@
+[
+  {
+    "name": "without_csrf",
+    "status": 403
+  },
+  {
+    "name": "wrong_origin",
+    "status": 403
+  },
+  {
+    "name": "invalid_camera",
+    "status": 422
+  }
+]

@@ -1,0 +1,1070 @@
+{
+  "host": "http://192.168.184.76:8000",
+  "started_server_time": 1792809754.9225862,
+  "installation": {
+    "touch_inputs_connected": true,
+    "matrix_connected": true,
+    "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+  },
+  "initial": {
+    "config": {
+      "hold_interval_ms": 500,
+      "left_segments": [
+        4,
+        4,
+        10
+      ],
+      "local_tests_enabled": false,
+      "press_window_ms": 2000,
+      "right_segments": [
+        4,
+        4,
+        10
+      ],
+      "servo_max_us": 2000,
+      "servo_min_us": 1000,
+      "test_span_degrees": 10,
+      "test_switch": 0,
+      "touch_active_low_mask": 0
+    },
+    "dropped_events": 2435,
+    "faults": 0,
+    "local_enabled": false,
+    "oe_high": true,
+    "pressed_mask": 0,
+    "raw_mask": 0,
+    "running": null,
+    "touches": [
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 0,
+        "last_interval_count": 0,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 0,
+        "last_interval_count": 0,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 0,
+        "last_interval_count": 0,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 0,
+        "last_interval_count": 0,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 0,
+        "last_interval_count": 0,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 0,
+        "last_interval_count": 0,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      }
+    ],
+    "uptime_ms": 1958045
+  },
+  "samples": 64,
+  "transitions": [
+    {
+      "seconds": 135.031,
+      "raw_mask": 32,
+      "pressed_mask": 32,
+      "pressed": [
+        6
+      ],
+      "released": [],
+      "faults": 0
+    },
+    {
+      "seconds": 137.25,
+      "raw_mask": 0,
+      "pressed_mask": 0,
+      "pressed": [],
+      "released": [
+        6
+      ],
+      "faults": 0
+    },
+    {
+      "seconds": 139.5,
+      "raw_mask": 4,
+      "pressed_mask": 4,
+      "pressed": [
+        3
+      ],
+      "released": [],
+      "faults": 0
+    },
+    {
+      "seconds": 141.75,
+      "raw_mask": 2,
+      "pressed_mask": 2,
+      "pressed": [
+        2
+      ],
+      "released": [
+        3
+      ],
+      "faults": 0
+    },
+    {
+      "seconds": 143.953,
+      "raw_mask": 16,
+      "pressed_mask": 16,
+      "pressed": [
+        5
+      ],
+      "released": [
+        2
+      ],
+      "faults": 0
+    },
+    {
+      "seconds": 148.359,
+      "raw_mask": 0,
+      "pressed_mask": 0,
+      "pressed": [],
+      "released": [
+        5
+      ],
+      "faults": 0
+    },
+    {
+      "seconds": 159.046,
+      "raw_mask": 16,
+      "pressed_mask": 16,
+      "pressed": [
+        5
+      ],
+      "released": [],
+      "faults": 0
+    },
+    {
+      "seconds": 161.843,
+      "raw_mask": 0,
+      "pressed_mask": 0,
+      "pressed": [],
+      "released": [
+        5
+      ],
+      "faults": 0
+    },
+    {
+      "seconds": 164.859,
+      "raw_mask": 16,
+      "pressed_mask": 16,
+      "pressed": [
+        5
+      ],
+      "released": [],
+      "faults": 0
+    },
+    {
+      "seconds": 171.312,
+      "raw_mask": 0,
+      "pressed_mask": 0,
+      "pressed": [],
+      "released": [
+        5
+      ],
+      "faults": 0
+    },
+    {
+      "seconds": 174.734,
+      "raw_mask": 32,
+      "pressed_mask": 32,
+      "pressed": [
+        6
+      ],
+      "released": [],
+      "faults": 0
+    },
+    {
+      "seconds": 183.734,
+      "raw_mask": 4,
+      "pressed_mask": 4,
+      "pressed": [
+        3
+      ],
+      "released": [
+        6
+      ],
+      "faults": 0
+    }
+  ],
+  "seen_press_mask": 63,
+  "seen_release_mask": 63,
+  "errors": [
+    "<urlopen error timed out>",
+    "<urlopen error timed out>",
+    "<urlopen error timed out>"
+  ],
+  "final": {
+    "config": {
+      "hold_interval_ms": 500,
+      "left_segments": [
+        4,
+        4,
+        10
+      ],
+      "local_tests_enabled": false,
+      "press_window_ms": 2000,
+      "right_segments": [
+        4,
+        4,
+        10
+      ],
+      "servo_max_us": 2000,
+      "servo_min_us": 1000,
+      "test_span_degrees": 10,
+      "test_switch": 0,
+      "touch_active_low_mask": 0
+    },
+    "dropped_events": 2435,
+    "faults": 0,
+    "local_enabled": false,
+    "oe_high": true,
+    "pressed_mask": 0,
+    "raw_mask": 0,
+    "running": null,
+    "touches": [
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 21448,
+        "last_interval_count": 42,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 18775,
+        "last_interval_count": 37,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 16275,
+        "last_interval_count": 32,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 3567,
+        "last_interval_count": 7,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 382,
+        "last_interval_count": 0,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      },
+      {
+        "held_ms": 0,
+        "interval_count": 0,
+        "last_duration_ms": 2134,
+        "last_interval_count": 4,
+        "press_count": 0,
+        "pressed": false,
+        "window_remaining_ms": 0
+      }
+    ],
+    "uptime_ms": 2472804
+  },
+  "last_touch": {
+    "event": "touch",
+    "host_monotonic_ms": 218026,
+    "host_unix_ms": 1792809936334,
+    "seq": 51380,
+    "session": "5487A95220C3A75B",
+    "touch": {
+      "duration_ms": 1000,
+      "event_seq": 8492,
+      "index": 3,
+      "interval_count": 2,
+      "kind": "Interval",
+      "press_count": 1,
+      "pressed": true,
+      "uptime_ms": 2139551
+    },
+    "version": 2
+  },
+  "final_server_time": 1792809936.674311,
+  "elapsed_seconds": 183.953,
+  "all_six_press_release_verified": true,
+  "followup": {
+    "seen_press_mask": 55,
+    "seen_release_mask": 55,
+    "transitions": [
+      {
+        "seconds": 0.683,
+        "server_time": 1792809980.5189574,
+        "raw_mask": 0,
+        "pressed_mask": 0,
+        "pressed": [],
+        "released": [
+          3
+        ],
+        "faults": 0
+      },
+      {
+        "seconds": 2.083,
+        "server_time": 1792809981.9203818,
+        "raw_mask": 1,
+        "pressed_mask": 1,
+        "pressed": [
+          1
+        ],
+        "released": [],
+        "faults": 0
+      },
+      {
+        "seconds": 2.393,
+        "server_time": 1792809982.230825,
+        "raw_mask": 0,
+        "pressed_mask": 0,
+        "pressed": [],
+        "released": [
+          1
+        ],
+        "faults": 0
+      },
+      {
+        "seconds": 2.887,
+        "server_time": 1792809982.7114875,
+        "raw_mask": 1,
+        "pressed_mask": 1,
+        "pressed": [
+          1
+        ],
+        "released": [],
+        "faults": 0
+      },
+      {
+        "seconds": 4.86,
+        "server_time": 1792809984.6505198,
+        "raw_mask": 0,
+        "pressed_mask": 0,
+        "pressed": [],
+        "released": [
+          1
+        ],
+        "faults": 0
+      },
+      {
+        "seconds": 5.559,
+        "server_time": 1792809985.2907507,
+        "raw_mask": 1,
+        "pressed_mask": 1,
+        "pressed": [
+          1
+        ],
+        "released": [],
+        "faults": 0
+      },
+      {
+        "seconds": 6.02,
+        "server_time": 1792809985.8531952,
+        "raw_mask": 0,
+        "pressed_mask": 0,
+        "pressed": [],
+        "released": [
+          1
+        ],
+        "faults": 0
+      },
+      {
+        "seconds": 6.999,
+        "server_time": 1792809986.8154433,
+        "raw_mask": 32,
+        "pressed_mask": 32,
+        "pressed": [
+          6
+        ],
+        "released": [],
+        "faults": 0
+      },
+      {
+        "seconds": 9.195,
+        "server_time": 1792809989.0181327,
+        "raw_mask": 0,
+        "pressed_mask": 0,
+        "pressed": [],
+        "released": [
+          6
+        ],
+        "faults": 0
+      },
+      {
+        "seconds": 14.06,
+        "server_time": 1792809993.869668,
+        "raw_mask": 1,
+        "pressed_mask": 1,
+        "pressed": [
+          1
+        ],
+        "released": [],
+        "faults": 0
+      },
+      {
+        "seconds": 14.701,
+        "server_time": 1792809994.5025778,
+        "raw_mask": 0,
+        "pressed_mask": 0,
+        "pressed": [],
+        "released": [
+          1
+        ],
+        "faults": 0
+      },
+      {
+        "seconds": 20.69,
+        "server_time": 1792810000.52157,
+        "raw_mask": 16,
+        "pressed_mask": 16,
+        "pressed": [
+          5
+        ],
+        "released": [],
+        "faults": 0
+      },
+      {
+        "seconds": 23.728,
+        "server_time": 1792810003.5082505,
+        "raw_mask": 0,
+        "pressed_mask": 0,
+        "pressed": [],
+        "released": [
+          5
+        ],
+        "faults": 0
+      },
+      {
+        "seconds": 24.314,
+        "server_time": 1792810004.1416779,
+        "raw_mask": 16,
+        "pressed_mask": 16,
+        "pressed": [
+          5
+        ],
+        "released": [],
+        "faults": 0
+      },
+      {
+        "seconds": 30.575,
+        "server_time": 1792810010.2233365,
+        "raw_mask": 0,
+        "pressed_mask": 0,
+        "pressed": [],
+        "released": [
+          5
+        ],
+        "faults": 0
+      },
+      {
+        "seconds": 162.104,
+        "server_time": 1792810141.9124944,
+        "raw_mask": 3,
+        "pressed_mask": 3,
+        "pressed": [
+          1,
+          2
+        ],
+        "released": [],
+        "faults": 0
+      },
+      {
+        "seconds": 163.933,
+        "server_time": 1792810143.731653,
+        "raw_mask": 7,
+        "pressed_mask": 7,
+        "pressed": [
+          3
+        ],
+        "released": [],
+        "faults": 0
+      }
+    ],
+    "errors": [],
+    "samples": 1074,
+    "final": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 2435,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 7,
+      "raw_mask": 7,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 18001,
+          "interval_count": 36,
+          "last_duration_ms": 588,
+          "last_interval_count": 1,
+          "press_count": 0,
+          "pressed": true,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 18006,
+          "interval_count": 36,
+          "last_duration_ms": 1361,
+          "last_interval_count": 2,
+          "press_count": 0,
+          "pressed": true,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 16298,
+          "interval_count": 32,
+          "last_duration_ms": 2511,
+          "last_interval_count": 5,
+          "press_count": 0,
+          "pressed": true,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 382,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 2134,
+          "last_interval_count": 4,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 2362971
+    },
+    "last_touch": {
+      "event": "touch",
+      "host_monotonic_ms": 441444,
+      "host_unix_ms": 1792810159752,
+      "seq": 56084,
+      "session": "5487A95220C3A75B",
+      "touch": {
+        "duration_ms": 18001,
+        "event_seq": 8730,
+        "index": 1,
+        "interval_count": 36,
+        "kind": "Interval",
+        "press_count": 0,
+        "pressed": true,
+        "uptime_ms": 2362970
+      },
+      "version": 2
+    },
+    "final_server_time": 1792810159.8136528,
+    "elapsed_seconds": 180.095,
+    "all_six_press_release_verified": false
+  },
+  "earlier_capture_summary": {
+    "seen_press_mask": 55,
+    "seen_release_mask": 55,
+    "all_six_press_release_verified": false,
+    "note": "SW4 was not observed during the first monitoring windows; later actual touch events below complete verification."
+  },
+  "sw4_followup": {
+    "source": "matrix-connection-retest.json events",
+    "events": [
+      {
+        "event": "touch",
+        "host_monotonic_ms": 466295,
+        "host_unix_ms": 1792810184603,
+        "seq": 56622,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 497,
+          "event_seq": 8770,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "Released",
+          "press_count": 1,
+          "pressed": false,
+          "uptime_ms": 2387821
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 467801,
+        "host_unix_ms": 1792810186109,
+        "seq": 56654,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 0,
+          "event_seq": 8772,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "WindowClosed",
+          "press_count": 1,
+          "pressed": false,
+          "uptime_ms": 2389328
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 469112,
+        "host_unix_ms": 1792810187419,
+        "seq": 56684,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 0,
+          "event_seq": 8776,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "Pressed",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2390639
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 469614,
+        "host_unix_ms": 1792810187922,
+        "seq": 56697,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 502,
+          "event_seq": 8779,
+          "index": 4,
+          "interval_count": 1,
+          "kind": "Interval",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2391141
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 470117,
+        "host_unix_ms": 1792810188424,
+        "seq": 56709,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 1004,
+          "event_seq": 8781,
+          "index": 4,
+          "interval_count": 2,
+          "kind": "Interval",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2391643
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 470615,
+        "host_unix_ms": 1792810188922,
+        "seq": 56721,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 1502,
+          "event_seq": 8783,
+          "index": 4,
+          "interval_count": 3,
+          "kind": "Interval",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2392141
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 470961,
+        "host_unix_ms": 1792810189268,
+        "seq": 56731,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 1848,
+          "event_seq": 8785,
+          "index": 4,
+          "interval_count": 3,
+          "kind": "Released",
+          "press_count": 1,
+          "pressed": false,
+          "uptime_ms": 2392487
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 471119,
+        "host_unix_ms": 1792810189426,
+        "seq": 56734,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 0,
+          "event_seq": 8786,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "WindowClosed",
+          "press_count": 1,
+          "pressed": false,
+          "uptime_ms": 2392643
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 472744,
+        "host_unix_ms": 1792810191051,
+        "seq": 56770,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 0,
+          "event_seq": 8790,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "Pressed",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2394270
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 472985,
+        "host_unix_ms": 1792810191292,
+        "seq": 56778,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 242,
+          "event_seq": 8792,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "Released",
+          "press_count": 1,
+          "pressed": false,
+          "uptime_ms": 2394512
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 474096,
+        "host_unix_ms": 1792810192404,
+        "seq": 56803,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 0,
+          "event_seq": 8795,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "Pressed",
+          "press_count": 2,
+          "pressed": true,
+          "uptime_ms": 2395622
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 474191,
+        "host_unix_ms": 1792810192498,
+        "seq": 56806,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 95,
+          "event_seq": 8796,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "Released",
+          "press_count": 2,
+          "pressed": false,
+          "uptime_ms": 2395717
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 474743,
+        "host_unix_ms": 1792810193050,
+        "seq": 56818,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 0,
+          "event_seq": 8798,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "WindowClosed",
+          "press_count": 2,
+          "pressed": false,
+          "uptime_ms": 2396270
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 474964,
+        "host_unix_ms": 1792810193271,
+        "seq": 56826,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 0,
+          "event_seq": 8800,
+          "index": 4,
+          "interval_count": 0,
+          "kind": "Pressed",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2396491
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 475466,
+        "host_unix_ms": 1792810193774,
+        "seq": 56838,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 502,
+          "event_seq": 8802,
+          "index": 4,
+          "interval_count": 1,
+          "kind": "Interval",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2396993
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 475971,
+        "host_unix_ms": 1792810194278,
+        "seq": 56850,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 1004,
+          "event_seq": 8804,
+          "index": 4,
+          "interval_count": 2,
+          "kind": "Interval",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2397495
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 476466,
+        "host_unix_ms": 1792810194774,
+        "seq": 56862,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 1502,
+          "event_seq": 8806,
+          "index": 4,
+          "interval_count": 3,
+          "kind": "Interval",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2397993
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 476969,
+        "host_unix_ms": 1792810195276,
+        "seq": 56874,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 2004,
+          "event_seq": 8808,
+          "index": 4,
+          "interval_count": 4,
+          "kind": "WindowClosed",
+          "press_count": 1,
+          "pressed": true,
+          "uptime_ms": 2398495
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 476969,
+        "host_unix_ms": 1792810195276,
+        "seq": 56875,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 2004,
+          "event_seq": 8809,
+          "index": 4,
+          "interval_count": 4,
+          "kind": "Interval",
+          "press_count": 0,
+          "pressed": true,
+          "uptime_ms": 2398495
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 477466,
+        "host_unix_ms": 1792810195773,
+        "seq": 56887,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 2502,
+          "event_seq": 8811,
+          "index": 4,
+          "interval_count": 5,
+          "kind": "Interval",
+          "press_count": 0,
+          "pressed": true,
+          "uptime_ms": 2398993
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 477969,
+        "host_unix_ms": 1792810196276,
+        "seq": 56899,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 3004,
+          "event_seq": 8813,
+          "index": 4,
+          "interval_count": 6,
+          "kind": "Interval",
+          "press_count": 0,
+          "pressed": true,
+          "uptime_ms": 2399495
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 478466,
+        "host_unix_ms": 1792810196773,
+        "seq": 56911,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 3502,
+          "event_seq": 8815,
+          "index": 4,
+          "interval_count": 7,
+          "kind": "Interval",
+          "press_count": 0,
+          "pressed": true,
+          "uptime_ms": 2399993
+        },
+        "version": 2
+      },
+      {
+        "event": "touch",
+        "host_monotonic_ms": 478531,
+        "host_unix_ms": 1792810196839,
+        "seq": 56912,
+        "session": "5487A95220C3A75B",
+        "touch": {
+          "duration_ms": 3567,
+          "event_seq": 8816,
+          "index": 4,
+          "interval_count": 7,
+          "kind": "Released",
+          "press_count": 0,
+          "pressed": false,
+          "uptime_ms": 2400058
+        },
+        "version": 2
+      }
+    ],
+    "user_confirmation": "SW4 IO moved from physical pin 16 to pin 12 (GP9); normal operation confirmed by user.",
+    "latest_release_duration_ms": 3567
+  },
+  "verification_completed_server_time": 1792810269.6447823,
+  "user_all_switches_confirmed": true
+}

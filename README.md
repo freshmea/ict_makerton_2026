@@ -174,6 +174,18 @@ cd ict_makerton_2026
 4. 보드 모델·핀 연결·전원을 확인하고 IDE에서 보드와 포트를 선택합니다.
 5. 컴파일 후 업로드하고, 동작 결과와 재현 절차를 Issue 또는 PR에 남깁니다.
 
+### Nano 대시보드 켜기·끄기
+
+Nano의 저장소 루트에서 실행합니다. 필요한 관리자 권한은 스크립트가 `sudo`로 요청합니다.
+
+```bash
+cd ~/ict_makerton_2026
+bash enable-dashboard.sh   # 현재 IP 반영, 실행, 부팅 자동 시작 켜기
+bash disable-dashboard.sh  # 실행 중지, 부팅 자동 시작 끄기
+```
+
+[활성화 스크립트](enable-dashboard.sh)는 기본 네트워크 경로의 IPv4를 사용합니다. 인터페이스를 직접 선택하려면 `bash enable-dashboard.sh 192.168.184.76`처럼 Nano에 할당된 IP를 지정합니다. 설정 변경 전 백업을 남기고 웹 상태 API의 응답까지 확인합니다. Rust runtime이 장치를 사용 중이면 먼저 종료하도록 안내합니다. [비활성화 스크립트](disable-dashboard.sh)는 대시보드 실행과 자동 시작을 함께 끕니다.
+
 ### 검증 기록
 
 | 확인 항목 | 환경 · 확인 방법 | 결과 | 근거 링크 |
@@ -193,16 +205,18 @@ Nano/Pico 후속 작업에서는 통합 펌웨어의 실제 flash, USB 제어, �
 | 사전행사 안내 | [PDF 열기](<doc/2. (배포용)_2026_배재대_스마트ICT메이커톤_사전행사.pdf>) |
 | 메인 스케치 | [ict_makerton_2026.ino](ict_makerton_2026.ino) |
 | Nano·Pico 작업 종합 기록 | [설정·펌웨어·실물 검증·대시보드·HDMI·남은 항목](doc/software/Jetson_Nano_작업_종합기록_2026-10-24.md) |
+| Windows·Jetson GitHub 공유 | [최신 작업 정리·검증·양쪽 동기화 상태·충돌 방지 절차](doc/software/Windows_Jetson_GitHub_공유와_작업정리_2026-10-24.md) |
 | Rust runtime·AI 기능 | [전체 기능 구현·운영](doc/software/전체기능_구현과_운영.md) / [기초 실행·검증](doc/software/Rust_마이크로아키텍처_실행과_검증.md) / [AI 선정 계획](doc/software/외부AI_로컬추론_구현계획.md) |
 | Jetson Nano 보드 실측 정보 | [2026-10-24 SSH 수집·환경 manifest](doc/software/Jetson_Nano_보드_정보.md) |
 | Nano 개발 환경·운영 모드 | [라이브러리 설치·GUI 복원·서비스/ROS 비활성화](doc/software/Jetson_Nano_개발환경_설치와_모드전환.md) |
 | Nano 디바이스·접근 권한 | [실제 오디오·Pico 점검, 서비스 계정·udev](doc/software/Jetson_Nano_디바이스_권한과_실물점검.md) / [Camera V2 두 개 촬영 이미지·동시 검증](doc/software/Jetson_Nano_Camera_V2_실물검증.md) |
 | Nano 장치 대시보드 | [FastAPI·Pico·두 카메라·오디오·systemd 운영](doc/software/Jetson_Nano_장치_대시보드.md) / [소스와 설치](apps/device-dashboard/README.md) |
+| 책상 학습 행동 분석 | [JEV 얼굴·학습 공간 20장 / GPT 10장·15개 행동·비용과 검증](doc/software/10프레임_학습행동_분석과_대시보드.md) |
 | Nano Linux 펌웨어 업그레이드 | [Rust 크로스 빌드·BOOTSEL 권한·picotool 설치·flash 백업/검증](doc/software/Jetson_Nano_Linux_펌웨어_업데이트.md) |
 | 개인과제 C 언어 예제 | [ino_src/](ino_src/) |
 | 기획서 · 요구사항 | 작성 예정 |
 | 디자인 · 회로도 | 작성 예정 |
-| 발표 자료 | 작성 예정 |
+| 발표 자료 | [Google 프레젠테이션](https://docs.google.com/presentation/d/16-7NiQcdMrxext3BRB5LvivOQ9ZsSl5vnv3RDpJneLw/edit) / [PDF](output/pdf/폴드윙버디_발표자료_기술보강_2026-10-24.pdf) / [제품 구성·발표자 메모·이미지 출처](doc/presentation/발표_가안_2026-10-24.md) / [Rust·Embassy·SBC MA·통신·구현 근거](doc/presentation/기술보강_2026-10-24.md) · 제품 14장 + 기술 11장 + 부록 3장 |
 | 시연 영상 · 결과 사진 | 작성 예정 |
 
 변경함!!

@@ -1,0 +1,68 @@
+{
+  "verified_at_utc": "2026-10-24T13:12:20.270247+00:00",
+  "test": "jev_dual20_change_verification",
+  "nano_tests": {
+    "observer_provider_and_window": 63,
+    "dashboard_observer_routes": 7,
+    "passed": 70
+  },
+  "browser_fixture": {
+    "mobile_width": 390,
+    "desktop_width": 1280,
+    "capture_progress_max": 20,
+    "roles_swappable": true,
+    "cancel_verified": true,
+    "gpt_frame_count": 10,
+    "result_frame_count": 20,
+    "behavior_rows": 15,
+    "page_errors": 0,
+    "external_api_calls": 0
+  },
+  "deployment": {
+    "observer_service": "active",
+    "dashboard_service": "active",
+    "backup": "/var/tmp/300seconds-study-dual-47k4K3",
+    "gpt_budget_sha256_unchanged": true,
+    "jev_quota_sha256_unchanged": true,
+    "only_jev_changes_applied_to_existing_nano_features": true
+  },
+  "live_dashboard": {
+    "button": "JEV · 20장 분석",
+    "default_face_sensor_id": 0,
+    "default_study_area_sensor_id": 1,
+    "job_total": 20,
+    "jev_camera_count": 2,
+    "mobile_overflow": false,
+    "analysis_posts": 0,
+    "jev_blocked_until_unix": 1792886400,
+    "jev_actual_response": "not tested; existing free quota cooldown"
+  },
+  "deployment_source_sha256": {
+    "tools/jetson/study_window.py": "e7d88b72bc8580b47d3cbc55ba3f65602b29664737e60c1c2da78ad6c9e71c97",
+    "tmp/study-dual-deploy/study_observer_service.py": "a2972bfc762c470f5313722a3d5d3d8dbe183600afcb0a21883f7d3ca360b8a3",
+    "apps/device-dashboard/static/study.js": "492bc7d32c7d8531c50f5a4ddc257e13b18a9f2ebecbb6346be170547ff62680",
+    "tmp/study-dual-deploy/index.html": "45b10bc676682a1dbb023f832d202b23f34d17ed4107b06e270658affe93db44"
+  },
+  "live_capture": {
+    "status": "ok",
+    "image_count": 20,
+    "samples_per_camera": 10,
+    "progress": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "request_image_count": 20,
+    "payload_bytes": 513229,
+    "elapsed_seconds": 9.035,
+    "uploaded": false,
+    "api_calls": 0
+  }
+}

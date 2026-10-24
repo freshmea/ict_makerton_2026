@@ -1,0 +1,323 @@
+{
+  "before": {
+    "pico": {
+      "connected": true,
+      "age_ms": 10,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 58,
+        "faults": 1,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 31886
+      },
+      "session": "DC86809384302B8C",
+      "error": null,
+      "last_test": null,
+      "last_touch": null,
+      "module_tests": {},
+      "bridge_pid": 9459,
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "last_applied": null,
+      "capabilities": {
+        "single_servo": true
+      },
+      "servo_driver": {
+        "initialized": false,
+        "last_error": 0,
+        "probes": [
+          2,
+          2
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 0
+      },
+      "port": "/dev/pico-device",
+      "protocol": "pico-device-v2",
+      "installation": {
+        "touch_inputs_connected": true,
+        "matrix_connected": true,
+        "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+      }
+    },
+    "servo_control": {
+      "active": false,
+      "generation": 0,
+      "ready": false,
+      "supported": true,
+      "reason": "PCA9685 연결 진단 · 0x40 ACK 없음 · 0x41 ACK 없음 · SDA HIGH / SCL HIGH",
+      "busy": false,
+      "commanded_degrees": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "error": null,
+      "min_degrees": 0,
+      "max_degrees": 180,
+      "speed_degrees_s": 30,
+      "pulse_min_us": 1000,
+      "pulse_max_us": 2000
+    }
+  },
+  "probe": {
+    "http": 409,
+    "result": {
+      "detail": "PCA9685 연결 진단 · 0x40 ACK 없음 · 0x41 ACK 없음 · SDA HIGH / SCL HIGH"
+    }
+  },
+  "after": {
+    "pico": {
+      "connected": true,
+      "age_ms": 47,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 58,
+        "faults": 1,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 34987
+      },
+      "session": "DC86809384302B8C",
+      "error": null,
+      "last_test": null,
+      "last_touch": null,
+      "module_tests": {},
+      "bridge_pid": 9459,
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "last_applied": null,
+      "capabilities": {
+        "single_servo": true
+      },
+      "servo_driver": {
+        "initialized": false,
+        "last_error": 0,
+        "probes": [
+          2,
+          2
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 0
+      },
+      "port": "/dev/pico-device",
+      "protocol": "pico-device-v2",
+      "installation": {
+        "touch_inputs_connected": true,
+        "matrix_connected": true,
+        "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+      }
+    },
+    "servo_control": {
+      "active": false,
+      "generation": 1,
+      "ready": false,
+      "supported": true,
+      "reason": "PCA9685 연결 진단 · 0x40 ACK 없음 · 0x41 ACK 없음 · SDA HIGH / SCL HIGH",
+      "busy": false,
+      "commanded_degrees": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "error": "PCA9685 연결 진단 · 0x40 ACK 없음 · 0x41 ACK 없음 · SDA HIGH / SCL HIGH",
+      "min_degrees": 0,
+      "max_degrees": 180,
+      "speed_degrees_s": 30,
+      "pulse_min_us": 1000,
+      "pulse_max_us": 2000
+    }
+  },
+  "arm_or_motion_sent": false
+}

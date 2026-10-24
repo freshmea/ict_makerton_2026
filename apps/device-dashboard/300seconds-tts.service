@@ -1,0 +1,29 @@
+[Unit]
+Description=300 Seconds dashboard Typecast synthesis
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=boarddash
+Group=boarddash
+EnvironmentFile=/etc/300seconds/tts.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/usr/bin/python3 -B /opt/300seconds/dashboard/app/tts_worker.py
+Restart=on-failure
+RestartSec=5
+RuntimeDirectory=300seconds-tts
+RuntimeDirectoryMode=0750
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/300seconds-runtime
+PrivateTmp=true
+PrivateDevices=true
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

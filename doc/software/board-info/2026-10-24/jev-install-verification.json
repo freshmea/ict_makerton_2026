@@ -1,0 +1,64 @@
+{
+  "at_utc": "2026-10-24T04:18:33.754796+00:00",
+  "files": [
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/jev-study-observer.py",
+      "sha256": "13ddd2346e90caa0b52cd95f65027c6205b51508ff4ea6cdd32c6c5b596dd81e"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/test_jev_study_observer.py",
+      "sha256": "16b8800eb1e5154ca0b2b643bc6fc6733b06008f543c47d164240db4e588eace"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/software/config/jev-observer.env.example",
+      "sha256": "f5d815bdf7a081b9fd0480af4f0ad232f96ba1942d51c3f606d42b725fa4a0e1"
+    }
+  ],
+  "tests": {
+    "stdout": "",
+    "stderr": "test_bad_view_cannot_be_called_away (test_jev_study_observer.ContractTests) ... ok\ntest_camera_generation_and_freshness_are_required (test_jev_study_observer.ContractTests) ... ok\ntest_empty_seat_is_not_scored_as_unfocused (test_jev_study_observer.ContractTests) ... ok\ntest_environment_is_data_not_shell_code (test_jev_study_observer.ContractTests) ... ok\ntest_free_usage_limit_is_reported_without_echoing_body (test_jev_study_observer.ContractTests) ... ok\ntest_gaze_hidden_does_not_hide_valid_behavior (test_jev_study_observer.ContractTests) ... ok\ntest_invalid_numbers_and_refusals_fail (test_jev_study_observer.ContractTests) ... ok\ntest_jpeg_dimension_contract (test_jev_study_observer.ContractTests) ... ok\ntest_key_cannot_be_sent_to_another_host (test_jev_study_observer.ContractTests) ... ok\ntest_key_missing_prevents_capture (test_jev_study_observer.ContractTests) ... ok\ntest_low_score_confidence_suppresses_score (test_jev_study_observer.ContractTests) ... ok\ntest_missing_answer_fails (test_jev_study_observer.ContractTests) ... ok\ntest_model_and_dashboard_origin_guards (test_jev_study_observer.ContractTests) ... ok\ntest_payload_references_and_no_raw_media_in_metadata (test_jev_study_observer.ContractTests) ... ok\ntest_provider_errors_never_echo_credentials_or_input (test_jev_study_observer.ContractTests) ... ok\ntest_rubric_has_supported_level_count (test_jev_study_observer.ContractTests) ... ok\ntest_scale_endpoints (test_jev_study_observer.ContractTests) ... ok\ntest_score_scale_and_real_boolean (test_jev_study_observer.ContractTests) ... ok\ntest_uncertain_presence_never_forces_boolean (test_jev_study_observer.ContractTests) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.056s\n\nOK\n",
+    "exit_code": 0
+  },
+  "install": {
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "preflight": {
+    "stdout": "{\n  \"at_utc\": \"2026-10-24T04:18:40.321687+00:00\",\n  \"endpoint\": \"https://opencode.ai/inference/systemone/v1/systemone\",\n  \"requested_model\": \"jev-1.13-free\",\n  \"status\": \"ok\",\n  \"camera_generation\": \"a91fafb5d0644918975bae52499f8d90\",\n  \"images\": [\n    {\n      \"ref\": \"19c3aef0-d62c-4d78-80c8-fd9014801cda\",\n      \"sensor_id\": 0,\n      \"sample\": 0,\n      \"received_at_utc\": \"2026-10-24T04:18:40.520136+00:00\",\n      \"width\": 640,\n      \"height\": 360,\n      \"bytes\": 16317,\n      \"sha256\": \"18b8c1fded3e58828519c26c880802ac300f2ef03086e59c8b2a4ecf22ad5f17\",\n      \"fetch_ms\": 62.3\n    },\n    {\n      \"ref\": \"5e386d62-6695-41af-8c20-7a5ad99bbdf6\",\n      \"sensor_id\": 1,\n      \"sample\": 0,\n      \"received_at_utc\": \"2026-10-24T04:18:40.528118+00:00\",\n      \"width\": 640,\n      \"height\": 360,\n      \"bytes\": 13528,\n      \"sha256\": \"890b912a013dc9e23fb5d46d45522f17da4739e24d2b24f937afcc6a76f08559\",\n      \"fetch_ms\": 67.9\n    },\n    {\n      \"ref\": \"bdf7cff3-4ea0-4c1f-ac2c-646c4fdaa7d8\",\n      \"sensor_id\": 0,\n      \"sample\": 1,\n      \"received_at_utc\": \"2026-10-24T04:18:41.695001+00:00\",\n      \"width\": 640,\n      \"height\": 360,\n      \"bytes\": 16256,\n      \"sha256\": \"ac5cae22438238d978760990b10f3c9e764d9e6d1ff708369741b06009623414\",\n      \"fetch_ms\": 40.5\n    },\n    {\n      \"ref\": \"df25758a-7572-4ecd-8c4c-9c3d0b2f900e\",\n      \"sensor_id\": 1,\n      \"sample\": 1,\n      \"received_at_utc\": \"2026-10-24T04:18:41.720185+00:00\",\n      \"width\": 640,\n      \"height\": 360,\n      \"bytes\": 13542,\n      \"sha256\": \"0582e1e1f7ac6d712614c0ebfe90c6caceaa8491451b1be5864a2bec06aaec23\",\n      \"fetch_ms\": 49.2\n    },\n    {\n      \"ref\": \"bb727bcb-cab7-4fd4-a2b2-9caf3cd3ffd2\",\n      \"sensor_id\": 0,\n      \"sample\": 2,\n      \"received_at_utc\": \"2026-10-24T04:18:42.887081+00:00\",\n      \"width\": 640,\n      \"height\": 360,\n      \"bytes\": 16349,\n      \"sha256\": \"e7eda788f30be4bc36cab21aea17e81d4569c86c65c8158e6ef1839875d2eae7\",\n      \"fetch_ms\": 46.5\n    },\n    {\n      \"ref\": \"770894c9-270c-428b-9bda-23282e10dde2\",\n      \"sensor_id\": 1,\n      \"sample\": 2,\n      \"received_at_utc\": \"2026-10-24T04:18:42.887317+00:00\",\n      \"width\": 640,\n      \"height\": 360,\n      \"bytes\": 13504,\n      \"sha256\": \"e6bc499f3bafc032cf061a46e842a0942b81dd39b42e8d634855dc45b5d801bd\",\n      \"fetch_ms\": 24.8\n    }\n  ],\n  \"image_count\": 6,\n  \"total_jpeg_bytes\": 89496,\n  \"seat_roi\": [\n    0.0,\n    0.0,\n    1.0,\n    1.0\n  ],\n  \"credential_present\": true,\n  \"test\": \"camera_capture_only\",\n  \"uploaded\": false\n}\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "final_files": [
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/jev-study-observer.py",
+      "sha256": "5624c1c1178b7bea8fa5496cfac255b7b83b83d3e01eec93671852cf50903c64"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/test_jev_study_observer.py",
+      "sha256": "e91b600839f5b2368d96be978b4b9f2b00ef0c6cc8b3d93ff719313952a4bd8a"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/software/config/jev-observer.env.example",
+      "sha256": "cef5e384f7f7811dd55f322c40f65d9a6378ae692e1016e6548616a7c5ca091c"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/doc/software/OpenCode_Jev_카메라_관찰_설정과_테스트.md",
+      "sha256": "9237874d08622712f516c904a6c15872ca4a7b6e88743b00946be26892f8b512"
+    }
+  ],
+  "final_tests": {
+    "stdout": "",
+    "stderr": "test_analyze_composes_request_and_only_returns_metadata (test_jev_study_observer.ContractTests) ... ok\ntest_bad_view_cannot_be_called_away (test_jev_study_observer.ContractTests) ... ok\ntest_camera_generation_and_freshness_are_required (test_jev_study_observer.ContractTests) ... ok\ntest_empty_seat_is_not_scored_as_unfocused (test_jev_study_observer.ContractTests) ... ok\ntest_environment_is_data_not_shell_code (test_jev_study_observer.ContractTests) ... ok\ntest_free_usage_limit_is_reported_without_echoing_body (test_jev_study_observer.ContractTests) ... ok\ntest_gaze_hidden_does_not_hide_valid_behavior (test_jev_study_observer.ContractTests) ... ok\ntest_invalid_numbers_and_refusals_fail (test_jev_study_observer.ContractTests) ... ok\ntest_jpeg_dimension_contract (test_jev_study_observer.ContractTests) ... ok\ntest_key_cannot_be_sent_to_another_host (test_jev_study_observer.ContractTests) ... ok\ntest_key_missing_prevents_capture (test_jev_study_observer.ContractTests) ... ok\ntest_low_score_confidence_suppresses_score (test_jev_study_observer.ContractTests) ... ok\ntest_missing_answer_fails (test_jev_study_observer.ContractTests) ... ok\ntest_model_and_dashboard_origin_guards (test_jev_study_observer.ContractTests) ... ok\ntest_paid_model_is_blocked_before_any_request (test_jev_study_observer.ContractTests) ... ok\ntest_payload_references_and_no_raw_media_in_metadata (test_jev_study_observer.ContractTests) ... ok\ntest_provider_errors_never_echo_credentials_or_input (test_jev_study_observer.ContractTests) ... ok\ntest_rubric_has_supported_level_count (test_jev_study_observer.ContractTests) ... ok\ntest_scale_endpoints (test_jev_study_observer.ContractTests) ... ok\ntest_score_scale_and_real_boolean (test_jev_study_observer.ContractTests) ... ok\ntest_uncertain_presence_never_forces_boolean (test_jev_study_observer.ContractTests) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.088s\n\nOK\n",
+    "exit_code": 0
+  },
+  "final_install": {
+    "installed": "/opt/300seconds/jetson/jev-study-observer.py",
+    "sha256": "5624c1c1178b7bea8fa5496cfac255b7b83b83d3e01eec93671852cf50903c64",
+    "uid": 0,
+    "mode": "0o755",
+    "env_mode": "0o600",
+    "free_only_guard": true
+  },
+  "finalized_at_utc": "2026-10-24T04:20:49.295903+00:00"
+}

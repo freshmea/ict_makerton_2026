@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-10-24T05:10:20.304633+00:00",
+  "source": "human reply to request_user_input_async call_20cf078f1728406bb06244c683b63fe9",
+  "question": "수정된 펌웨어로 왼쪽 눈 윙크가 지금 실제로 시작됐습니다. 정면에서 보는 사람의 오른편 눈이 감기나요?",
+  "answer": "오른편 눈이 감김 — 이제 맞음",
+  "user_physical_side_confirmed": true,
+  "preset_id": "wink-left",
+  "logical_eye_basis": "device",
+  "viewer_left": "device right eye",
+  "viewer_right": "device left eye",
+  "near_eye": "left",
+  "near_transform": "CW90",
+  "far_eye": "right",
+  "far_transform": "identity",
+  "firmware_uf2_sha256": "1a0908cb4ee0ac80dfd7771e2b4039b889ebcd832b05bbf8c9858aed6664e55b"
+}

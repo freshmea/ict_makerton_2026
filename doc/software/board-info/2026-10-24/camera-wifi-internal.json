@@ -1,0 +1,44 @@
+{
+  "commands": {
+    "wireless": {
+      "stdout": "wlan0     IEEE 802.11bgn  ESSID:\"1_PCU_C\"  Nickname:\"<WIFI@REALTEK>\"\n          Mode:Managed  Frequency:2.462 GHz  Access Point: 00:33:58:77:90:10   \n          Bit Rate:72.2 Mb/s   Sensitivity:0/0  \n          Retry:off   RTS thr:off   Fragment thr:off\n          Power Management:off\n          Link Quality=100/100  Signal level=100/100  Noise level=0/100\n          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0\n          Tx excessive retries:0  Invalid misc:0   Missed beacon:0\n\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "wireless_station": {
+      "stdout": "Not connected.\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "wireless_counters": {
+      "stdout": "Inter-| sta-|   Quality        |   Discarded packets               | Missed | WE\n face | tus | link level noise |  nwid  crypt   frag  retry   misc | beacon | 22\n wlan0: 0000  100.  100.    0.       0      0      0      0      0        0\n7: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000\n    link/ether 00:0a:eb:6d:fc:49 brd ff:ff:ff:ff:ff:ff\n    RX: bytes  packets  errors  dropped overrun mcast   \n    29956917   226560   0       1340    0       0       \n    TX: bytes  packets  errors  dropped carrier collsns \n    465783392  330037   0       2       0       0       \n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "route": {
+      "stdout": "local 192.168.184.76 dev lo src 192.168.184.76 uid 1000 \n    cache <local> \ndefault via 192.168.184.1 dev wlan0 proto dhcp metric 600 \n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "wifi_driver_power": {
+      "stdout": "rtw_power_mgnt=0\nrtw_ips_mode=0\nrtw_enusbss=0\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "wifi_policy": {
+      "stdout": "{\n  \"rtw_power_mgnt\": \"0\",\n  \"rtw_ips_mode\": \"0\",\n  \"rtw_enusbss\": \"0\",\n  \"usb_power_control\": \"on\",\n  \"networkmanager_powersave\": \"default\",\n  \"driver_config\": \"# Applies on next driver load; no live module reload over SSH.\\noptions r8188eu rtw_power_mgnt=0 rtw_ips_mode=0 rtw_enusbss=0\\n\",\n  \"journal_config\": \"[Journal]\\nStorage=persistent\\nSystemMaxUse=16M\\nSystemMaxFileSize=4M\\nRuntimeMaxUse=8M\\nMaxRetentionSec=2day\\nSyncIntervalSec=30s\\nRateLimitIntervalSec=30s\\nRateLimitBurst=200\\n\",\n  \"uptime_seconds\": 5314.95,\n  \"timestamp_utc\": \"2026-10-24T02:52:06Z\"\n}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "wifi_existing_scan": {
+      "stdout": "IN-USE  SSID     CHAN  RATE       SIGNAL  SECURITY \n*       1_PCU_C  11    44 Mbit/s  100     --       \n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "wifi_gateway_ping": {
+      "stdout": "PING 192.168.184.1 (192.168.184.1) 56(84) bytes of data.\n64 bytes from 192.168.184.1: icmp_seq=1 ttl=254 time=584 ms\n64 bytes from 192.168.184.1: icmp_seq=2 ttl=254 time=584 ms\n64 bytes from 192.168.184.1: icmp_seq=3 ttl=254 time=583 ms\n64 bytes from 192.168.184.1: icmp_seq=4 ttl=254 time=586 ms\n64 bytes from 192.168.184.1: icmp_seq=5 ttl=254 time=584 ms\n64 bytes from 192.168.184.1: icmp_seq=6 ttl=254 time=616 ms\n64 bytes from 192.168.184.1: icmp_seq=7 ttl=254 time=612 ms\n64 bytes from 192.168.184.1: icmp_seq=8 ttl=254 time=626 ms\n\n--- 192.168.184.1 ping statistics ---\n8 packets transmitted, 8 received, 0% packet loss, time 7011ms\nrtt min/avg/max/mdev = 583.226/596.909/625.767/16.753 ms\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  }
+}

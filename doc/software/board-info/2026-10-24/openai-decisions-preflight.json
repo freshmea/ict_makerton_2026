@@ -1,0 +1,21 @@
+{
+  "at_utc": "2026-10-24T04:23:25Z",
+  "files": [
+    {
+      "path": "/etc/300seconds/ai.env",
+      "exists": true,
+      "mode": "0o600",
+      "key_present": true
+    },
+    {
+      "path": "/etc/300seconds/openai-observer.env",
+      "exists": false
+    }
+  ],
+  "models_read": {
+    "http_status": 200,
+    "matching_models": [
+      "gpt-6-luna"
+    ]
+  }
+}

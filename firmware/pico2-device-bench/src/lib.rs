@@ -3,6 +3,19 @@ pub mod picotool_reset;
 
 use pico_device_protocol::{AckCode, DeviceConfig, Frame, Message, Module, VERSION};
 pub const CAPACITY: usize = 36;
+/// Refuse ambiguous buses rather than silently picking a different board.
+pub fn servo_driver_address(probes: [u8; 2]) -> Option<u8> {
+    match probes { [1, other] if other != 1 => Some(0x40),
+                   [other, 1] if other != 1 => Some(0x41), _ => None }
+}
+pub fn servo_target(cfg: &pico_device_protocol::ActuatorConfig, current: [u16;6], channel: u8,
+                    angle: u16, move_ms: u16) -> Option<([u16;6],u8)> {
+    if channel >= 6 { return None; }
+    let mut target = current;
+    target[channel as usize] = angle;
+    if !cfg.accepts(&target, move_ms) { return None; }
+    Some((target, 1 << channel))
+}
 pub fn interpolate_pose(start:[u16;6],target:[u16;6],elapsed:u64,duration:u64)->[u16;6]{
     let duration=duration.max(1);let elapsed=elapsed.min(duration);
     core::array::from_fn(|i|(start[i]as i64+(target[i]as i64-start[i]as i64)*elapsed as i64/duration as i64)as u16)
@@ -10,6 +23,21 @@ pub fn interpolate_pose(start:[u16;6],target:[u16;6],elapsed:u64,duration:u64)->
 #[cfg(test)]
 mod motion_tests {
     use super::*;
+    #[test]fn servo_driver_requires_exactly_one_valid_address(){
+        assert_eq!(servo_driver_address([1,2]),Some(0x40));
+        assert_eq!(servo_driver_address([2,1]),Some(0x41));
+        for probes in [[0,0],[1,1],[2,2],[3,3],[4,5]] {
+            assert_eq!(servo_driver_address(probes),None);
+        }
+    }
+    #[test]fn single_servo_preserves_other_targets_and_checks_bounds(){
+        let mut cfg=pico_device_protocol::ActuatorConfig::default();cfg.servo_enabled=true;
+        let (target,mask)=servo_target(&cfg,[9000;6],2,10000,1000).unwrap();
+        assert_eq!(mask,4);assert_eq!(target,[9000,9000,10000,9000,9000,9000]);
+        assert!(servo_target(&cfg,[9000;6],6,9000,1000).is_none());
+        assert!(servo_target(&cfg,[9000;6],0,18000,1000).is_none());
+        cfg.servo_enabled=false;assert!(servo_target(&cfg,[9000;6],0,9000,1000).is_none());
+    }
     #[test]fn interpolation_is_bounded_and_reaches_target_without_overshoot(){
         assert_eq!(interpolate_pose([8000;6],[10000;6],500,1000),[9000;6]);
         assert_eq!(interpolate_pose([10000;6],[8000;6],500,1000),[9000;6]);
@@ -128,7 +156,23 @@ pub fn stage(selected: Module, index: usize) -> Option<Module> {
 #[derive(Clone, Copy)]
 pub struct MatrixFrame { pub left: [u8;8], pub right: [u8;8] }
 impl MatrixFrame { pub const BLANK: Self = Self { left:[0;8],right:[0;8] }; }
-pub fn matrix_packet(address:u8,left:u8,right:u8)->[u8;4] { [address,right,address,left] }
+/// Physical daisy-chain buffers, independent of the robot's left/right eyes.
+pub struct MatrixOutputFrame { pub near: [u8;8], pub far: [u8;8] }
+/// Logical left/right are the robot's eyes, opposite the viewer's screen sides.
+/// Observed wiring: near/first = robot left, mounted 90 degrees counterclockwise.
+/// Far/second = robot right, upright. Map once here for diagnostics and SetEyes.
+pub fn matrix_mount_frame(logical: MatrixFrame) -> MatrixOutputFrame {
+    let mut near = [0u8; 8];
+    for (y, row) in logical.left.iter().enumerate() {
+        for (x, output_row) in near.iter_mut().enumerate() {
+            if row & (0x80 >> x) != 0 {
+                *output_row |= 1 << y;
+            }
+        }
+    }
+    MatrixOutputFrame { near, far: logical.right }
+}
+pub fn matrix_packet(address:u8,near:u8,far:u8)->[u8;4] { [address,far,address,near] }
 pub fn matrix_frame(phase: u16) -> MatrixFrame {
     let mut frame = MatrixFrame::BLANK;
     match phase {
@@ -233,11 +277,39 @@ mod tests {
         assert_eq!(gesture.sample(false,false,true,1,230,500),Some(GestureAction::Test(Module::Matrix)));
     }
     #[test]
-    fn matrix_wire_order_is_far_right_before_near_left() {
+    fn matrix_wire_order_is_far_before_near() {
         assert_eq!(matrix_packet(3,0x12,0x34),[3,0x34,3,0x12]);
         let left=matrix_frame(0); let right=matrix_frame(1);
         assert_ne!(left.left,[0;8]); assert_eq!(left.right,[0;8]);
         assert_eq!(right.left,[0;8]); assert_ne!(right.right,[0;8]);
+    }
+    #[test]
+    fn observed_left_eye_is_rotated_near_and_right_eye_is_upright_far() {
+        let left = matrix_frame(0).left;
+        let output = matrix_mount_frame(MatrixFrame { left, right: matrix_frame(1).right });
+        assert_eq!(output.near, [0,0x7f,0x40,0x40,0x40,0x40,0x40,0]);
+        assert_eq!(output.far, matrix_frame(1).right);
+        let l_only = matrix_mount_frame(matrix_frame(0));
+        let r_only = matrix_mount_frame(matrix_frame(1));
+        assert_ne!(l_only.near, [0;8]); assert_eq!(l_only.far, [0;8]);
+        assert_eq!(r_only.near, [0;8]); assert_eq!(r_only.far, matrix_frame(1).right);
+    }
+    #[test]
+    fn left_eye_mount_preserves_upright_row_and_column_scans() {
+        // A logical top row becomes the module's right column before mounting.
+        let top = matrix_mount_frame(matrix_frame(2));
+        assert_eq!(top.near, [0x01;8]);
+        assert_eq!(top.far, [0xff,0,0,0,0,0,0,0]);
+        // A logical right column becomes the module's bottom row.
+        let right_column = matrix_mount_frame(matrix_frame(10));
+        assert_eq!(right_column.near, [0,0,0,0,0,0,0,0xff]);
+        assert_eq!(right_column.far, [0x01;8]);
+    }
+    #[test]
+    fn eye_mapping_keeps_blank_frames_blank_for_stop_and_startup() {
+        let blank = matrix_mount_frame(MatrixFrame::BLANK);
+        assert_eq!(blank.near, [0;8]);
+        assert_eq!(blank.far, [0;8]);
     }
     #[test]
     fn corrupt_wire_never_reaches_stop_admission() {

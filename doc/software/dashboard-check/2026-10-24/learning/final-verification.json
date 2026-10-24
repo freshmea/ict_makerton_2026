@@ -1,0 +1,1358 @@
+{
+  "checked_unix": 1792848905.25414,
+  "status": {
+    "enabled": true,
+    "interval_seconds": 10.0,
+    "cameras": [
+      0,
+      1
+    ],
+    "queued_batches": 0,
+    "last_capture": 1792848895.3194754,
+    "next_capture": 1792848905.2910671,
+    "error": null,
+    "backoff_until": 0,
+    "live": {
+      "id": "e5cb084697b741028359e5c236f82758",
+      "phase": "completed",
+      "mode": "study",
+      "source": "dashboard",
+      "started": 1792848258.6983771,
+      "max_seconds": 600,
+      "switch": 1,
+      "error": null,
+      "provider_session_id": "live_u7_EcW1Lp3oMZifOXvoMpNAPHN3f3wkBmQQ",
+      "usage": {
+        "seconds": 10.0
+      },
+      "finalized": true,
+      "reason": "user_stop",
+      "input_pcm_bytes": 441600,
+      "output_pcm_bytes": 360000,
+      "remaining_seconds": 0
+    },
+    "schema_version": 1,
+    "raw_images_saved": false,
+    "provider": {
+      "configured": true,
+      "vision_model": "gpt-4.1-mini",
+      "live_model": "gpt-live-1",
+      "live_busy": false
+    }
+  },
+  "records": {
+    "records": [
+      {
+        "id": 214,
+        "batch_id": "7d670a3d7a8944eca2beb5982a905959",
+        "camera": 1,
+        "captured": 1792848895.277989,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "6f770033c5f2d5eb76b3feb64fb58941efb7bbfe2303bdb7dec5a20397d2ec8c",
+        "frame_stamp_ns": 1792848895277988920,
+        "bytes": 19030,
+        "description": "책상이 보이고 일부 인물과 뒷모습이 보임. 투명 플라스틱 박스와 전선이 책상 위에 있음. 배경에 쇼윈도 같은 유리문과 사람이 있음.",
+        "confidence": 0.75,
+        "uncertainty": "화면 일부가 가려짐으로 일부 사물이나 행동 식별 곤란.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_23a0a05e9bca4b62aaf89bd68f238aa2",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:55.277989+00:00",
+        "keywords": [
+          "책상",
+          "플라스틱박스",
+          "전선",
+          "사람뒷모습",
+          "유리문",
+          "실내",
+          "의자",
+          "검은옷"
+        ],
+        "actions": [
+          "person_present",
+          "unknown"
+        ]
+      },
+      {
+        "id": 213,
+        "batch_id": "7d670a3d7a8944eca2beb5982a905959",
+        "camera": 0,
+        "captured": 1792848895.281989,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "0e426029df4b437ee8d779c7a5e01ffcf4e3ee588bc50784f05e7c12c12277a5",
+        "frame_stamp_ns": 1792848895281988998,
+        "bytes": 19244,
+        "description": "안경을 쓴 남성이 머리를 살짝 돌려 어딘가를 바라보고 있음. 배경은 실내, 천장 조명과 통풍구가 보임.",
+        "confidence": 0.9,
+        "uncertainty": "인물은 분명히 보이나 얼굴의 일부가 약간 흐림.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_23a0a05e9bca4b62aaf89bd68f238aa2",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:55.281989+00:00",
+        "keywords": [
+          "남성",
+          "안경",
+          "실내",
+          "천장조명",
+          "통풍구",
+          "검은옷",
+          "책상없음",
+          "벽"
+        ],
+        "actions": [
+          "looking_away",
+          "person_present"
+        ]
+      },
+      {
+        "id": 212,
+        "batch_id": "70bd01518fb44a8b9ef09c7c8dec9acd",
+        "camera": 1,
+        "captured": 1792848885.277792,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "94489b1c73f3e65a74a35a929bdb2ee460d0983e430ee743f81a8303f16e0db2",
+        "frame_stamp_ns": 1792848885277792061,
+        "bytes": 18706,
+        "description": "책상 위에 전화기와 전자기기가 놓여있으며, 검은 옷을 입은 인물이 의자에 앉아 있다. 배경에는 유리벽과 다른 인물 일부가 보인다.",
+        "confidence": 0.85,
+        "uncertainty": "손이나 행동 일부만 보이며, 일부 배경이 가려져 정확한 활동 판단에 제한이 있음.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_8fd38f79109c4ea5964e45c42f9e7ea8",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:45.277792+00:00",
+        "keywords": [
+          "전화기",
+          "전자기기",
+          "책상",
+          "검은 옷",
+          "의자",
+          "유리벽",
+          "사람 부분",
+          "실내"
+        ],
+        "actions": [
+          "person_present",
+          "seat_empty"
+        ]
+      },
+      {
+        "id": 211,
+        "batch_id": "70bd01518fb44a8b9ef09c7c8dec9acd",
+        "camera": 0,
+        "captured": 1792848885.2817922,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "99bfe13d18c1f0cd6231548ba13ec8ce14478c5dae5dd8c1c6d4c64df5ced80a",
+        "frame_stamp_ns": 1792848885281792140,
+        "bytes": 17573,
+        "description": "태블라 우측 하단에서 남성 한명이 검은색 상의를 입고 있으며, 안경을 착용하고 있다. 배경으로 천장 조명과 벽 일부가 보인다.",
+        "confidence": 0.9,
+        "uncertainty": "얼굴 일부가 잘렸고 배경은 일부만 보이므로 정확한 상황 판단은 제한됨.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_8fd38f79109c4ea5964e45c42f9e7ea8",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:45.281792+00:00",
+        "keywords": [
+          "남성",
+          "검은색 상의",
+          "안경",
+          "천장 조명",
+          "벽",
+          "실내",
+          "인물 일부",
+          "근접 촬영"
+        ],
+        "actions": [
+          "person_present",
+          "looking_away"
+        ]
+      },
+      {
+        "id": 210,
+        "batch_id": "f758785e693140c8afe15105c882248c",
+        "camera": 1,
+        "captured": 1792848875.2815955,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "f55aa043364835fc7476cc085da7b2fd3478af6bb78334f1c9279ad63ca94b1d",
+        "frame_stamp_ns": 1792848875281595366,
+        "bytes": 19550,
+        "description": "책상 위에 잡다한 물건과 케이블이 보이고, 책상 뒤에는 검은색 옷을 입은 사람과 흰색 옷걸이가 있다.",
+        "confidence": 0.8,
+        "uncertainty": "물건 일부가 흐릿하며 사람의 전신이 보이지 않아 일부 불확실함.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_82c720126ede4bf8983e7f426890aead",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:35.281595+00:00",
+        "keywords": [
+          "책상",
+          "물건",
+          "케이블",
+          "사람",
+          "검은색 옷",
+          "의자",
+          "옷걸이",
+          "실내"
+        ],
+        "actions": [
+          "person_present"
+        ]
+      },
+      {
+        "id": 209,
+        "batch_id": "f758785e693140c8afe15105c882248c",
+        "camera": 0,
+        "captured": 1792848875.261595,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "1350564243c491c49435ebe129313d07bb9b121886897e628552ec29bb2a5139",
+        "frame_stamp_ns": 1792848875261594973,
+        "bytes": 19842,
+        "description": "안경을 쓴 남성이 검은색 옷을 입고 실내에 있으며, 천장과 조명 기구가 보인다.",
+        "confidence": 0.9,
+        "uncertainty": "얼굴 일부만 보임. 주변 환경은 명확하게 관찰됨.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_82c720126ede4bf8983e7f426890aead",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:35.261595+00:00",
+        "keywords": [
+          "남성",
+          "안경",
+          "검은색 옷",
+          "실내",
+          "천장",
+          "조명",
+          "옆얼굴",
+          "사람 존재"
+        ],
+        "actions": [
+          "looking_away",
+          "person_present"
+        ]
+      },
+      {
+        "id": 208,
+        "batch_id": "76ae4682f6b04d1490dc5d656ba744fa",
+        "camera": 1,
+        "captured": 1792848865.2853987,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "c4de26cba67d17a1bc25cbdb38d5acb84dbfa69bccc7ba07fdf03c1b732302f2",
+        "frame_stamp_ns": 1792848865285398759,
+        "bytes": 20085,
+        "description": "책상 위에 스마트폰과 흰색 케이블이 놓여있고, 앞에는 검은색 옷을 입은 사람의 팔 일부가 보임. 배경에 다른 사람이 검은색 티셔츠를 입고 있음.",
+        "confidence": 0.8,
+        "uncertainty": "스마트폰과 케이블이 보이나 직접적인 사용 여부 불분명.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_829697bed234462ab86d4de7c29c393b",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:25.285399+00:00",
+        "keywords": [
+          "책상",
+          "스마트폰",
+          "케이블",
+          "사람 팔",
+          "검은색 옷",
+          "배경 인물",
+          "실내",
+          "의자"
+        ],
+        "actions": [
+          "handling_objects",
+          "person_present"
+        ]
+      },
+      {
+        "id": 207,
+        "batch_id": "76ae4682f6b04d1490dc5d656ba744fa",
+        "camera": 0,
+        "captured": 1792848865.2613983,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "7a6d0d126b396578085a489cc7b9a9f7c41fdac1a48496c066af0220b6aaaee2",
+        "frame_stamp_ns": 1792848865261398287,
+        "bytes": 19085,
+        "description": "사람 한 명이 안경을 쓰고 검은색 옷을 입고 왼쪽을 바라보고 있음. 배경에 천장 조명과 벽 일부가 보임.",
+        "confidence": 0.9,
+        "uncertainty": "사람의 얼굴 일부만 보여 정확한 행동은 일부 추측됨.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_829697bed234462ab86d4de7c29c393b",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:25.261398+00:00",
+        "keywords": [
+          "사람",
+          "안경",
+          "검은색 옷",
+          "천장 조명",
+          "실내",
+          "벽",
+          "왼쪽 방향",
+          "인물 일부"
+        ],
+        "actions": [
+          "looking_away",
+          "person_present"
+        ]
+      },
+      {
+        "id": 206,
+        "batch_id": "d96568edd18d4addb950c9cfa5a43644",
+        "camera": 1,
+        "captured": 1792848855.2692018,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "de414c8bd64bc3cd09036e4d4af8348184353792a51c7b7caa37c9d5e8312878",
+        "frame_stamp_ns": 1792848855269201846,
+        "bytes": 20209,
+        "description": "테이블 앞에 사람이 앉아 있음. 앞사람은 검은 옷 착용, 뒤쪽 사람은 검은색 티셔츠에 '스마트 ICT' 등의 문자가 보임.",
+        "confidence": 0.85,
+        "uncertainty": "앞사람 행동이나 표정은 부분적으로 가려짐.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_51771cbeb5f3490293527e46082d3e72",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:15.269202+00:00",
+        "keywords": [
+          "테이블",
+          "사람",
+          "검은 옷",
+          "티셔츠 문자",
+          "앉아 있음",
+          "실내",
+          "의자"
+        ],
+        "actions": [
+          "person_present"
+        ]
+      },
+      {
+        "id": 205,
+        "batch_id": "d96568edd18d4addb950c9cfa5a43644",
+        "camera": 0,
+        "captured": 1792848855.2652018,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "7e66d3fcd3545412d86f8f3bb3942093b6c86ab62ce62a8685439db8342aedb1",
+        "frame_stamp_ns": 1792848855265201768,
+        "bytes": 18065,
+        "description": "실내에서 두 사람이 보임. 앞사람은 검은 옷과 안경을 착용하고 왼쪽을 응시 중이며, 뒤쪽 사람은 고개를 숙이고 있음.",
+        "confidence": 0.9,
+        "uncertainty": "배경 인물의 세부 행동은 명확하지 않음.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_51771cbeb5f3490293527e46082d3e72",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:15.265202+00:00",
+        "keywords": [
+          "실내",
+          "사람",
+          "검은 옷",
+          "안경",
+          "두 명",
+          "천장 조명",
+          "왼쪽 응시"
+        ],
+        "actions": [
+          "person_present",
+          "looking_away"
+        ]
+      },
+      {
+        "id": 204,
+        "batch_id": "fca4940537a04cb99f39fab9618635c0",
+        "camera": 1,
+        "captured": 1792848845.2850056,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "87d94eb9c8a8ca83fb3cf76bc7060bcecf5a54db2dfe5d53a54c7de71978e41d",
+        "frame_stamp_ns": 1792848845285005653,
+        "bytes": 20508,
+        "description": "책상 위에 스마트폰이 있고 그 뒤로 의자와 검은색 티셔츠를 입은 사람이 등 뒤로 보임. 티셔츠에는 한글과 숫자가 프린트되어 있음.",
+        "confidence": 0.8,
+        "uncertainty": "사람 얼굴과 행동이 보이지 않아 자세한 상태 판단 어려움.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_f31524af3afe4b499cf4ca23ce828b12",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:05.285006+00:00",
+        "keywords": [
+          "스마트폰",
+          "책상",
+          "의자",
+          "사람",
+          "티셔츠",
+          "프린트문구",
+          "실내",
+          "등"
+        ],
+        "actions": [
+          "person_present",
+          "unknown"
+        ]
+      },
+      {
+        "id": 203,
+        "batch_id": "fca4940537a04cb99f39fab9618635c0",
+        "camera": 0,
+        "captured": 1792848845.2570052,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "5673b2bda3a22603c67c3836052a340b9f61a7b8d6ea66cd83931e4159b19415",
+        "frame_stamp_ns": 1792848845257005103,
+        "bytes": 17983,
+        "description": "안경을 쓴 남성이 손으로 투명한 플라스틱 용기 뚜껑을 열고 있음. 배경에 천장 조명과 구조물이 보임.",
+        "confidence": 0.9,
+        "uncertainty": "인물과 물체가 비교적 선명하게 보임.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_f31524af3afe4b499cf4ca23ce828b12",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:34:05.257005+00:00",
+        "keywords": [
+          "남성",
+          "안경",
+          "플라스틱용기",
+          "뚜껑열기",
+          "실내",
+          "천장조명",
+          "천장구조물",
+          "손"
+        ],
+        "actions": [
+          "handling_objects",
+          "person_present"
+        ]
+      },
+      {
+        "id": 202,
+        "batch_id": "caf715a75c6a48108b22863b70d00aaf",
+        "camera": 1,
+        "captured": 1792848835.2888093,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "ae296567b9140570722c2e343073b2bd6cd713c24cfd6a735c4a268486151c2a",
+        "frame_stamp_ns": 1792848835288809317,
+        "bytes": 18536,
+        "description": "테이블 위에 휴대폰과 충전 케이블이 있음. 검은색 옷 착용 사람 일부 팔과 몸통 보임. 뒤쪽에 앉아있는 사람들과 실내 공간 일부 보임.",
+        "confidence": 0.9,
+        "uncertainty": "",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_5bf373e5fdf24a4c9d0cefa30d5e2647",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:55.288809+00:00",
+        "keywords": [
+          "휴대폰",
+          "충전 케이블",
+          "테이블",
+          "사람",
+          "검은색 옷",
+          "실내",
+          "의자",
+          "앉아있음"
+        ],
+        "actions": [
+          "person_present"
+        ]
+      },
+      {
+        "id": 201,
+        "batch_id": "caf715a75c6a48108b22863b70d00aaf",
+        "camera": 0,
+        "captured": 1792848835.2608087,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "4bec65feaf1f9b4ea237151ed9ae62f77bfb18ace2cf5294de1cecd07b8a94eb",
+        "frame_stamp_ns": 1792848835260808767,
+        "bytes": 19278,
+        "description": "사람이 음료수를 마시고 있음. 검은색 티셔츠 착용, 안경 착용자 일부 얼굴 보임. 천장 조명과 구조가 보이는 실내 환경.",
+        "confidence": 0.95,
+        "uncertainty": "",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_5bf373e5fdf24a4c9d0cefa30d5e2647",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:55.260809+00:00",
+        "keywords": [
+          "사람",
+          "음료수",
+          "검은색 티셔츠",
+          "안경",
+          "실내",
+          "천장 조명",
+          "음료병",
+          "마시는 동작"
+        ],
+        "actions": [
+          "eating_drinking",
+          "person_present"
+        ]
+      },
+      {
+        "id": 200,
+        "batch_id": "e9b0bdb7a8ce4d49bc01e78245a6830b",
+        "camera": 1,
+        "captured": 1792848825.2606125,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "7b784b00866147d0119cbf09e4d1d1631600240419712a0297d2a086384ea6a2",
+        "frame_stamp_ns": 1792848825260612446,
+        "bytes": 18566,
+        "description": "탁자 위에 투명 케이스에 든 스마트폰과 충전 케이블 일부가 보이고, 검은 옷을 입은 인물의 팔 일부가 보임. 배경에 여러 사람이 있음.",
+        "confidence": 0.7,
+        "uncertainty": "스마트폰과 충전기 일부만 명확하며, 인물의 행동과 전반적인 장면 파악이 제한적임.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_9ae2bfd6f2bb4b09a351c172986b7f68",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:45.260612+00:00",
+        "keywords": [
+          "스마트폰",
+          "투명케이스",
+          "충전케이블",
+          "사람",
+          "검은색 옷",
+          "탁자",
+          "실내",
+          "다수 인물"
+        ],
+        "actions": [
+          "person_present",
+          "unknown"
+        ]
+      },
+      {
+        "id": 199,
+        "batch_id": "e9b0bdb7a8ce4d49bc01e78245a6830b",
+        "camera": 0,
+        "captured": 1792848825.2726126,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "2bad8dc46c14c4fa8415edf2a59448542bbee56dd107119ee21ef65ada67d1fa",
+        "frame_stamp_ns": 1792848825272612682,
+        "bytes": 18468,
+        "description": "검은색 상의를 입고 안경을 쓴 인물이 실내에서 촬영되었으며 천장 조명과 배관이 보임.",
+        "confidence": 0.8,
+        "uncertainty": "얼굴의 일부가 흐릿하고 상체 위주로 촬영되어 자세한 얼굴 표정 확인이 어려움.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_9ae2bfd6f2bb4b09a351c172986b7f68",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:45.272613+00:00",
+        "keywords": [
+          "사람",
+          "안경",
+          "검은색 상의",
+          "천장",
+          "조명",
+          "배관",
+          "실내",
+          "흐릿함"
+        ],
+        "actions": [
+          "person_present",
+          "looking_away"
+        ]
+      },
+      {
+        "id": 198,
+        "batch_id": "087304d87b424a88abd611b4ec3b8afa",
+        "camera": 1,
+        "captured": 1792848815.2644162,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "a3f92724fe243075eedfb2a4e4225860e9f7f635d28fd0a69f30f9fe16f54163",
+        "frame_stamp_ns": 1792848815264416300,
+        "bytes": 18537,
+        "description": "책상 위에 휴대폰이 놓여 있고 검은 옷을 입은 사람의 일부가 보임. 배경에 몇 명이 서 있고 의자가 놓여 있음.",
+        "confidence": 0.85,
+        "uncertainty": "사람 일부만 보이고 휴대폰을 다루는 모습은 아님. 배경의 사람들은 멀리 서 있음.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_096fdae3e5f742f38a8b13aaf6877d59",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:35.264416+00:00",
+        "keywords": [
+          "휴대폰",
+          "책상",
+          "검은옷",
+          "사람일부",
+          "의자",
+          "서있는사람",
+          "내부공간",
+          "책상위선풍기"
+        ],
+        "actions": [
+          "person_present",
+          "seat_empty"
+        ]
+      },
+      {
+        "id": 197,
+        "batch_id": "087304d87b424a88abd611b4ec3b8afa",
+        "camera": 0,
+        "captured": 1792848815.2644162,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "933dd7308e8e8fe72d57c0c32e94df9a04b3188055ad708ab8f2a7cf49bd8b1b",
+        "frame_stamp_ns": 1792848815264416300,
+        "bytes": 18806,
+        "description": "검은색 상의를 입고 둥근 안경을 쓴 사람이 실내에 서 있음. 천장 조명과 구조물이 배경에 보임.",
+        "confidence": 0.9,
+        "uncertainty": "사람 얼굴 대부분과 상반신 일부분만 보임. 주변 환경이 일부만 보임.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_096fdae3e5f742f38a8b13aaf6877d59",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:35.264416+00:00",
+        "keywords": [
+          "사람",
+          "둥근안경",
+          "검은상의",
+          "실내",
+          "천장조명",
+          "흰벽",
+          "기둥",
+          "셔츠없음"
+        ],
+        "actions": [
+          "person_present",
+          "looking_away"
+        ]
+      },
+      {
+        "id": 196,
+        "batch_id": "641701aad2494d038af078eb162e3db6",
+        "camera": 1,
+        "captured": 1792848805.26022,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "c2904b8efcde90814bec4b74569b16463596139bffa65f557f66907d4b10ff09",
+        "frame_stamp_ns": 1792848805260220094,
+        "bytes": 18678,
+        "description": "책상 위에 투명 케이스가 씌워진 휴대전화가 놓여 있고, 검은 상의를 입은 팔과 일부 몸통이 보임. 뒤쪽에 다른 사람들이 의자에 앉아 있음.",
+        "confidence": 0.85,
+        "uncertainty": "휴대전화는 보이나 휴대폰 사용 여부는 확인 불가.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_2f451db926134e2d89b7f4fa59be3d90",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:25.260220+00:00",
+        "keywords": [
+          "휴대전화",
+          "투명케이스",
+          "팔",
+          "검은옷",
+          "책상",
+          "의자",
+          "사람들",
+          "실내"
+        ],
+        "actions": [
+          "person_present",
+          "unknown"
+        ]
+      },
+      {
+        "id": 195,
+        "batch_id": "641701aad2494d038af078eb162e3db6",
+        "camera": 0,
+        "captured": 1792848805.2722204,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "80a378d5efdb39d4b28f266109f95e1130d712b081e48eefa47ed6ff10f076e7",
+        "frame_stamp_ns": 1792848805272220329,
+        "bytes": 17801,
+        "description": "한 사람이 검은색 상의를 입고 안경을 쓴 채 실내에서 얼굴이 측면으로 보임. 천장 조명과 벽 일부가 보임.",
+        "confidence": 0.9,
+        "uncertainty": "사람과 실내 환경은 명확하나 행동은 추정 수준임.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_2f451db926134e2d89b7f4fa59be3d90",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:25.272220+00:00",
+        "keywords": [
+          "사람",
+          "안경",
+          "검은옷",
+          "실내",
+          "천장조명",
+          "벽",
+          "측면얼굴",
+          "목"
+        ],
+        "actions": [
+          "person_present",
+          "looking_away"
+        ]
+      },
+      {
+        "id": 194,
+        "batch_id": "d3a5ec57373c40c08cde5f05e2854f9c",
+        "camera": 1,
+        "captured": 1792848795.2640243,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "549abb34ea585b3761b420e5f8168641bae39cef95e3ee6f8ca8ba82bc9e52be",
+        "frame_stamp_ns": 1792848795264024145,
+        "bytes": 18348,
+        "description": "책상 위 투명 휴대전화 케이스가 있고, 검은색 옷을 입은 사람의 한 손이 책상 위에 있음. 책상 뒤 배경에 다른 사람이 있음.",
+        "confidence": 0.85,
+        "uncertainty": "책상 위 물체는 휴대전화로 추정되나 정확하지 않음.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_af58eac8946c4924a7a4d571c406c4c3",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:15.264024+00:00",
+        "keywords": [
+          "손",
+          "휴대전화 케이스",
+          "책상",
+          "사람",
+          "검은 옷",
+          "배경",
+          "의자",
+          "실내"
+        ],
+        "actions": [
+          "handling_objects",
+          "person_present"
+        ]
+      },
+      {
+        "id": 193,
+        "batch_id": "d3a5ec57373c40c08cde5f05e2854f9c",
+        "camera": 0,
+        "captured": 1792848795.2720244,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "766aeca722a967220ac02de64ce30570f278b69452e18bbabd3b0ecd3cc7e084",
+        "frame_stamp_ns": 1792848795272024302,
+        "bytes": 20153,
+        "description": "안경을 쓴 남성이 위를 바라보고 있으며 손이 얼굴 가까이에 있음. 실내 천장과 조명이 보임.",
+        "confidence": 0.95,
+        "uncertainty": "얼굴 일부가 가려져 있으나 손과 표정이 부분적으로 명확하게 보임.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_af58eac8946c4924a7a4d571c406c4c3",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:15.272024+00:00",
+        "keywords": [
+          "남성",
+          "안경",
+          "손",
+          "천장",
+          "조명",
+          "실내",
+          "의복",
+          "얼굴"
+        ],
+        "actions": [
+          "looking_away"
+        ]
+      },
+      {
+        "id": 192,
+        "batch_id": "0d655d94eb4f43c78578d0375212f276",
+        "camera": 1,
+        "captured": 1792848785.259828,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "068f414be878e53dd8844cfeec674da5171e84e7b6ae607a97ff176adb2c2bce",
+        "frame_stamp_ns": 1792848785259828141,
+        "bytes": 19209,
+        "description": "책상 위에 스마트폰과 케이블 등이 놓여 있고, 검은색 옷을 입은 인물이 부분적으로 보임. 배경에 다른 사람이 앉아 있음.",
+        "confidence": 0.85,
+        "uncertainty": "손 동작이 불분명하여 정확한 활동 구분 어려움.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_672e9bcfad7e4ebfa4b1d29b0c4db56e",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:05.259828+00:00",
+        "keywords": [
+          "책상",
+          "스마트폰",
+          "케이블",
+          "검은색 옷",
+          "부분 인물",
+          "배경 인물",
+          "실내",
+          "앉음"
+        ],
+        "actions": [
+          "person_present"
+        ]
+      },
+      {
+        "id": 191,
+        "batch_id": "0d655d94eb4f43c78578d0375212f276",
+        "camera": 0,
+        "captured": 1792848785.2798285,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "5859284ef3f892c4aea0323b965a12d600ed6fefa29d69125de7f6aae8fdcf71",
+        "frame_stamp_ns": 1792848785279828533,
+        "bytes": 19185,
+        "description": "실내에서 검은색 옷을 입은 안경 쓴 남성이 위쪽을 바라보고 있음. 뒤 천장에 조명이 보임.",
+        "confidence": 0.9,
+        "uncertainty": "남성의 활동은 사진에서 명확하나, 구체적 행동은 불명확함.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v3",
+        "request_id": "req_672e9bcfad7e4ebfa4b1d29b0c4db56e",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:33:05.279829+00:00",
+        "keywords": [
+          "실내",
+          "남성",
+          "안경",
+          "검은색 옷",
+          "조명",
+          "천장",
+          "위쪽 바라봄",
+          "사진 촬영"
+        ],
+        "actions": [
+          "person_present",
+          "looking_away"
+        ]
+      },
+      {
+        "id": 190,
+        "batch_id": "9f8fab69596a4cfbacb8a2beab0563ce",
+        "camera": 1,
+        "captured": 1792848767.271476,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "bbf485f3804357cff7a66edcfc9a56ca1065ed1a4ce9733071edaffdf34a55a8",
+        "frame_stamp_ns": 1792848767271475973,
+        "bytes": 19002,
+        "description": "테이블 위에 스마트폰과 흰색 케이블이 놓여있음. 검은 옷을 입은 사람 팔과 뒷편에 검은 옷을 입은 다른 사람이 의자에 앉아있음. 뒷사람 옷에 한국어, 그림 등이 있음.",
+        "confidence": 0.85,
+        "uncertainty": "팔과 스마트폰 일부만 보이고 전체 행동이나 표정은 불분명함.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v2",
+        "request_id": "req_51e1eed84b674b92a6b8d59105ab378f",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:32:47.271476+00:00",
+        "keywords": [
+          "스마트폰",
+          "케이블",
+          "테이블",
+          "사람팔",
+          "검은옷",
+          "의자",
+          "한국어문자",
+          "실내"
+        ],
+        "actions": [
+          "person_present",
+          "unknown"
+        ]
+      },
+      {
+        "id": 189,
+        "batch_id": "9f8fab69596a4cfbacb8a2beab0563ce",
+        "camera": 0,
+        "captured": 1792848767.2954764,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "951fa2fc7b4164a30a2e0aa16776ebfbe30144f0040935faa206bae74a2a1784",
+        "frame_stamp_ns": 1792848767295476442,
+        "bytes": 18854,
+        "description": "안경을 쓴 사람이 검은 옷을 입고 실내에서 머리 위 천장 조명 아래 서 있음. 얼굴 아래쪽과 목 부분이 보임. 배경에 천장 구조와 벽의 일부가 보임.",
+        "confidence": 0.9,
+        "uncertainty": "사람의 머리 아래쪽과 목 부분만 보이고 시선 방향만 유추 가능함.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v2",
+        "request_id": "req_51e1eed84b674b92a6b8d59105ab378f",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:32:47.295476+00:00",
+        "keywords": [
+          "실내",
+          "사람",
+          "안경",
+          "검은옷",
+          "천장조명",
+          "벽",
+          "목",
+          "얼굴아래"
+        ],
+        "actions": [
+          "looking_away",
+          "person_present"
+        ]
+      },
+      {
+        "id": 188,
+        "batch_id": "c79a4dd6264746df895742dfd0683dcf",
+        "camera": 1,
+        "captured": 1792848757.203279,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "b51b74c13afeb3ffe46dbdaa217052d0fa7175cad9eb0bbc523fc9eb9c0f5a61",
+        "frame_stamp_ns": 1792848757203279012,
+        "bytes": 18969,
+        "description": "책상 위에 휴대폰 등 전자기기가 놓여 있고, 검은색 옷을 입은 인물이 화면 좌측에 부분적으로 보임. 배경에 사람들이 있고, 대학교 관련 배너가 보임.",
+        "confidence": 0.85,
+        "uncertainty": "앞에 있는 인물은 절반 정도만 보이고, 휴대폰이 다소 반사되어 일부 가려짐",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v2",
+        "request_id": "req_f64fbaab7a054ccb807125a7e288e460",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:32:37.203279+00:00",
+        "keywords": [
+          "전자기기",
+          "휴대폰",
+          "책상",
+          "사람",
+          "검은색상의",
+          "실내",
+          "배너",
+          "사람들"
+        ],
+        "actions": [
+          "person_present"
+        ]
+      },
+      {
+        "id": 187,
+        "batch_id": "c79a4dd6264746df895742dfd0683dcf",
+        "camera": 0,
+        "captured": 1792848757.2072792,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "4001055292deb9f36e771cc69c32289629ed4167935d3829aaccdbdccc043215",
+        "frame_stamp_ns": 1792848757207279091,
+        "bytes": 18889,
+        "description": "검은색 상의를 입고 안경을 쓴 남성이 위쪽을 바라보고 있음. 실내 조명이 밝고 천장 구조가 보임.",
+        "confidence": 0.9,
+        "uncertainty": "내부 조명과 인물의 머리 윗부분이 일부 잘림",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v2",
+        "request_id": "req_f64fbaab7a054ccb807125a7e288e460",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:32:37.207279+00:00",
+        "keywords": [
+          "남성",
+          "안경",
+          "검은색상의",
+          "실내",
+          "조명",
+          "천장",
+          "위쪽응시"
+        ],
+        "actions": [
+          "looking_away",
+          "person_present"
+        ]
+      },
+      {
+        "id": 186,
+        "batch_id": "83082d3b3cea4416afc34acc8ca784a3",
+        "camera": 1,
+        "captured": 1792848747.2030835,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "6bb53f6ea9193cbefe9d2034b32192b772d52b44e12508b72ff582e97ad0197f",
+        "frame_stamp_ns": 1792848747203083493,
+        "bytes": 19390,
+        "description": "책상 위에 휴대전화와 이어폰이 놓여있고, 그 뒤쪽으로 검은 상의를 입은 사람이 팔만 일부 보임. 배경에는 책상과 의자, 그리고 등을 보이는 사람들 다수 있음.",
+        "confidence": 0.8,
+        "uncertainty": "팔이 부분적으로만 보여 휴대전화 구체적 사용 여부는 다소 불확실함.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v2",
+        "request_id": "req_2faa8049831a40e2a997e2f24ce3b3a9",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:32:27.203084+00:00",
+        "keywords": [
+          "휴대전화",
+          "이어폰",
+          "책상",
+          "팔",
+          "검은 옷",
+          "의자",
+          "사람들",
+          "실내"
+        ],
+        "actions": [
+          "person_present",
+          "handling_objects"
+        ]
+      },
+      {
+        "id": 185,
+        "batch_id": "83082d3b3cea4416afc34acc8ca784a3",
+        "camera": 0,
+        "captured": 1792848747.2070835,
+        "status": "success",
+        "generation": "73739f0f14304398b6a615cc44d41e5c",
+        "sha256": "9e8919c14d049a939806710e063cfe3420b30fe574f75bdb150d38a2ef74f7a5",
+        "frame_stamp_ns": 1792848747207083571,
+        "bytes": 18633,
+        "description": "안경을 쓴 남성이 어두운 상의를 입고 천장을 올려다보고 있음. 밝은 조명과 천장 구조가 잘 보임.",
+        "confidence": 0.85,
+        "uncertainty": "얼굴 일부만 보임으로 인해 세부 행동 추정에 다소 불확실성이 있음.",
+        "error": null,
+        "live_id": null,
+        "model": "gpt-4.1-mini-2025-04-14",
+        "prompt_version": "dual-observation-v2",
+        "request_id": "req_2faa8049831a40e2a997e2f24ce3b3a9",
+        "manual_label": null,
+        "manual_note": null,
+        "captured_at_utc": "2026-10-24T13:32:27.207083+00:00",
+        "keywords": [
+          "남성",
+          "안경",
+          "어두운 옷",
+          "천장",
+          "조명",
+          "실내",
+          "근접촬영",
+          "얼굴부분"
+        ],
+        "actions": [
+          "looking_away",
+          "person_present"
+        ]
+      }
+    ],
+    "next_before": 185
+  },
+  "summary": {
+    "counts": [
+      {
+        "camera": 0,
+        "status": "camera_error",
+        "count": 1
+      },
+      {
+        "camera": 0,
+        "status": "pending",
+        "count": 1
+      },
+      {
+        "camera": 0,
+        "status": "provider_error",
+        "count": 3
+      },
+      {
+        "camera": 0,
+        "status": "skipped",
+        "count": 18
+      },
+      {
+        "camera": 0,
+        "status": "success",
+        "count": 85
+      },
+      {
+        "camera": 1,
+        "status": "camera_error",
+        "count": 1
+      },
+      {
+        "camera": 1,
+        "status": "pending",
+        "count": 1
+      },
+      {
+        "camera": 1,
+        "status": "provider_error",
+        "count": 3
+      },
+      {
+        "camera": 1,
+        "status": "skipped",
+        "count": 18
+      },
+      {
+        "camera": 1,
+        "status": "success",
+        "count": 85
+      }
+    ],
+    "actions": [
+      {
+        "value": "person_present",
+        "count": 122
+      },
+      {
+        "value": "looking_away",
+        "count": 76
+      },
+      {
+        "value": "unknown",
+        "count": 26
+      },
+      {
+        "value": "handling_objects",
+        "count": 21
+      },
+      {
+        "value": "seat_empty",
+        "count": 15
+      },
+      {
+        "value": "phone_use",
+        "count": 10
+      },
+      {
+        "value": "eating_drinking",
+        "count": 8
+      },
+      {
+        "value": "typing",
+        "count": 1
+      }
+    ],
+    "keywords": [
+      {
+        "value": "실내",
+        "count": 156
+      },
+      {
+        "value": "안경",
+        "count": 79
+      },
+      {
+        "value": "사람",
+        "count": 70
+      },
+      {
+        "value": "조명",
+        "count": 64
+      },
+      {
+        "value": "남성",
+        "count": 55
+      },
+      {
+        "value": "천장",
+        "count": 51
+      },
+      {
+        "value": "책상",
+        "count": 51
+      },
+      {
+        "value": "검은옷",
+        "count": 45
+      },
+      {
+        "value": "의자",
+        "count": 43
+      },
+      {
+        "value": "스마트폰",
+        "count": 42
+      },
+      {
+        "value": "테이블",
+        "count": 26
+      },
+      {
+        "value": "벽",
+        "count": 24
+      },
+      {
+        "value": "검은 옷",
+        "count": 22
+      },
+      {
+        "value": "검은색 옷",
+        "count": 21
+      },
+      {
+        "value": "손",
+        "count": 19
+      },
+      {
+        "value": "천장조명",
+        "count": 18
+      },
+      {
+        "value": "검은색 상의",
+        "count": 17
+      },
+      {
+        "value": "케이블",
+        "count": 16
+      },
+      {
+        "value": "사람들",
+        "count": 15
+      },
+      {
+        "value": "팔",
+        "count": 14
+      }
+    ],
+    "hourly": [
+      {
+        "hour_utc": 1792846800,
+        "camera": 0,
+        "status": "camera_error",
+        "count": 1
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 0,
+        "status": "pending",
+        "count": 1
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 0,
+        "status": "provider_error",
+        "count": 3
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 0,
+        "status": "skipped",
+        "count": 18
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 0,
+        "status": "success",
+        "count": 85
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 1,
+        "status": "camera_error",
+        "count": 1
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 1,
+        "status": "pending",
+        "count": 1
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 1,
+        "status": "provider_error",
+        "count": 3
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 1,
+        "status": "skipped",
+        "count": 18
+      },
+      {
+        "hour_utc": 1792846800,
+        "camera": 1,
+        "status": "success",
+        "count": 85
+      }
+    ],
+    "usage": {
+      "input_tokens": 92776,
+      "output_tokens": 21462,
+      "total_tokens": 114238
+    },
+    "schema_version": 1,
+    "measure": "sample_count; one still cannot establish behavior duration"
+  }
+}

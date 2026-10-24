@@ -1,0 +1,20 @@
+{
+  "url": "http://192.168.184.76:8000",
+  "tool": "Playwright CLI / Chrome",
+  "desktop_viewport": {"width": 1440, "height": 1000},
+  "mobile_viewport": {"width": 390, "height": 844},
+  "mobile_document_width": 390,
+  "keyboard_gain_adjustment": true,
+  "gain_apply_saved": true,
+  "maximum_gain_test": {
+    "requested_gain_db": 30,
+    "observed_applied_gain_db": 20.8,
+    "observed_peak_dbfs": -1.0,
+    "limiter_active": true
+  },
+  "restored_gain_db": 12,
+  "restored_accessible_value": "+12 dB",
+  "console_errors": 0,
+  "console_warnings": 0,
+  "screenshots": ["audio-desktop.png", "audio-mobile.png"]
+}

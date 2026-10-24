@@ -1,0 +1,102 @@
+{
+  "created_at_utc": "2026-10-24T04:25:57.016698+00:00",
+  "attempts": [
+    {
+      "id": "17a135f5d0e042c28573dad76cb9ef2f",
+      "at_utc": "2026-10-24T04:25:57.016947+00:00",
+      "state": "completed",
+      "reserved_usd": "0.02",
+      "request": {
+        "name": "text_smoke",
+        "model": "gpt-6-luna",
+        "images": 0,
+        "text_bytes": 97,
+        "questions": 1,
+        "detail": "low",
+        "cache": "disabled",
+        "reservation_input_token_allowance": 200000
+      },
+      "http_status": 200,
+      "request_id": "req_7f1a382da2e64234ada2f7a827d01886",
+      "completed_at_utc": "2026-10-24T04:25:58.144499+00:00",
+      "usage": {
+        "input_tokens": 159,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 159
+      },
+      "estimated_standard_cost_usd": "0.0000159"
+    },
+    {
+      "id": "7f39ff70062d40e79cf3fbdd75f14242",
+      "at_utc": "2026-10-24T04:26:17.109103+00:00",
+      "state": "completed",
+      "reserved_usd": "0.02",
+      "request": {
+        "name": "camera_0",
+        "model": "gpt-6-luna",
+        "images": 1,
+        "text_bytes": 3297,
+        "questions": 6,
+        "detail": "low",
+        "cache": "disabled",
+        "reservation_input_token_allowance": 200000
+      },
+      "http_status": 200,
+      "request_id": "req_b3815f4431b940689c6e62d2b3fe1af9",
+      "completed_at_utc": "2026-10-24T04:26:18.115880+00:00",
+      "usage": {
+        "input_tokens": 1454,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1454
+      },
+      "estimated_standard_cost_usd": "0.0001454"
+    },
+    {
+      "id": "11610639209b44d79a7ba73646b8d2a7",
+      "at_utc": "2026-10-24T04:30:52.665422+00:00",
+      "state": "completed",
+      "reserved_usd": "0.02",
+      "request": {
+        "name": "camera_1",
+        "model": "gpt-6-luna",
+        "images": 1,
+        "text_bytes": 3297,
+        "questions": 6,
+        "detail": "low",
+        "cache": "disabled",
+        "reservation_input_token_allowance": 200000
+      },
+      "http_status": 200,
+      "request_id": "req_4771997327594eaa8209c0062fdbf38b",
+      "completed_at_utc": "2026-10-24T04:30:53.079354+00:00",
+      "usage": {
+        "input_tokens": 1454,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1454
+      },
+      "estimated_standard_cost_usd": "0.0001454"
+    }
+  ],
+  "cooldown_until": 0
+}

@@ -1,6 +1,6 @@
 use pico_device_protocol::{
     encode_frame, AckCode, DeviceConfig, DeviceStatus, Frame, FrameDecoder, Message, Module,
-    MAX_WIRE, VERSION, ActuatorConfig, OutputStatus,
+    MAX_WIRE, VERSION, ActuatorConfig, OutputStatus, ServoDriverStatus,
 };
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
@@ -78,17 +78,20 @@ pub enum IpcRequest {
     Pose { targets_cdeg:[u16;6], move_ms:u16 },
     Light { rgb:[u8;3],brightness:u8,period_ms:u16 },
     Eyes {left:[u8;8],right:[u8;8],brightness:u8},
+    Servo {channel:u8,target_cdeg:u16,move_ms:u16},
+    ServoProbe,
 }
 
 impl IpcRequest {
     pub fn name(&self) -> &'static str {
-        match self { Self::Status => "status", Self::Test { .. } => "test", Self::Stop => "stop", Self::Configure { .. } => "configure",Self::Arm{..}=>"arm",Self::Pose{..}=>"pose",Self::Light{..}=>"light",Self::Eyes{..}=>"eyes" }
+        match self { Self::Status => "status", Self::Test { .. } => "test", Self::Stop => "stop", Self::Configure { .. } => "configure",Self::Arm{..}=>"arm",Self::Pose{..}=>"pose",Self::Light{..}=>"light",Self::Eyes{..}=>"eyes",Self::Servo{..}=>"servo",Self::ServoProbe=>"servo_probe" }
     }
     pub fn validate(&self) -> Result<()> {
         if let Self::Configure { config } = self { validate_config(config)?; }
         match self {
             Self::Arm{config} if !config.validate()=>return Err(failure("invalid actuator calibration")),
             Self::Pose{targets_cdeg,move_ms} if targets_cdeg.iter().any(|x|*x>18000)||!(100..=10000).contains(move_ms)=>return Err(failure("invalid pose bounds")),
+            Self::Servo{channel,target_cdeg,move_ms} if *channel>=6||*target_cdeg>18000||!(100..=10000).contains(move_ms)=>return Err(failure("invalid single servo bounds")),
             Self::Light{brightness,period_ms,..} if *brightness>64||(*period_ms!=0&&!(200..=10000).contains(period_ms))=>return Err(failure("invalid LED bounds")),
             Self::Eyes{brightness,..} if *brightness>15=>return Err(failure("invalid matrix brightness")),
             _=>(),
@@ -102,13 +105,14 @@ pub fn parse_ipc(bytes: &[u8]) -> Result<IpcRequest> {
     let value: Value = serde_json::from_slice(bytes)?;
     let object = value.as_object().ok_or_else(|| failure("UDP request must be a JSON object"))?;
     let allowed: &[&str] = match object.get("cmd").and_then(Value::as_str) {
-        Some("status" | "stop") => &["cmd"],
+        Some("status" | "stop" | "servo_probe") => &["cmd"],
         Some("test") => &["cmd", "module"],
         Some("configure") => &["cmd", "config"],
         Some("arm")=> &["cmd","config"],
         Some("pose")=> &["cmd","targets_cdeg","move_ms"],
         Some("light")=> &["cmd","rgb","brightness","period_ms"],
         Some("eyes")=> &["cmd","left","right","brightness"],
+        Some("servo")=> &["cmd","channel","target_cdeg","move_ms"],
         _ => return Err(failure("UDP cmd must be status, test, stop, or configure")),
     };
     if let Some(key) = object.keys().find(|key| !allowed.contains(&key.as_str())) {
@@ -200,6 +204,8 @@ pub struct DeviceLink<S> {
     publish: bool,
     latest: Option<Snapshot>,
     outputs: Option<OutputStatus>,
+    single_servo: bool,
+    servo_driver: Option<ServoDriverStatus>,
     started: Instant,
     ipc_socket: Option<Arc<UdpSocket>>,
 }
@@ -211,13 +217,14 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
         Self { stream, decoder: FrameDecoder::new(), pending: VecDeque::new(),
             keepalive_sequences: VecDeque::new(), heartbeat, session, next_seq: 1,
             hello_verified: false, interrupted, shutdown_mode: false, publish,
-            latest: None, outputs:None, started: Instant::now(), ipc_socket: None }
+            latest: None, outputs:None, single_servo:false, servo_driver:None, started: Instant::now(), ipc_socket: None }
     }
     pub fn session(&self) -> u64 { self.session }
     pub fn latest(&self) -> Option<Snapshot> { self.latest }
     pub fn interrupted(&self) -> bool { self.interrupted.load(Ordering::SeqCst) }
     pub fn begin_shutdown(&mut self) { self.shutdown_mode = true; }
-    pub fn snapshot_json(&self) -> Value {let mut v=self.latest.map(Snapshot::json).unwrap_or(Value::Null);if v.is_object(){v["outputs"]=json!(self.outputs);}v }
+    pub fn snapshot_json(&self) -> Value {let mut v=self.latest.map(Snapshot::json).unwrap_or(Value::Null);if v.is_object(){v["outputs"]=json!(self.outputs);v["capabilities"]=json!({"single_servo":self.single_servo});v["servo_driver"]=json!(self.servo_driver);}v }
+    pub fn supports_single_servo(&self)->bool{self.single_servo}
     pub fn attach_ipc(&mut self, socket: Arc<UdpSocket>) { self.ipc_socket = Some(socket); }
 
     fn emit(&self, mut value: Value) {
@@ -256,9 +263,11 @@ impl<S: AsyncRead + AsyncWrite + Unpin> DeviceLink<S> {
         match frame.body {
             Message::Status(status) => {
                 self.latest = Some(Snapshot { status, received_unix_ms: unix_ms(), received_at: Instant::now() });
-                self.emit(json!({"event":"status","seq":frame.seq,"status":status,"outputs":self.outputs}));
+                self.emit(json!({"event":"status","seq":frame.seq,"status":status,"outputs":self.outputs,"capabilities":{"single_servo":self.single_servo},"servo_driver":self.servo_driver}));
             }
             Message::Outputs(v)=>{self.outputs=Some(v);self.emit(json!({"event":"outputs","seq":frame.seq,"outputs":v}));},
+            Message::Capabilities{single_servo}=>{self.single_servo=single_servo;self.emit(json!({"event":"capabilities","single_servo":single_servo}));},
+            Message::ServoDriver(status)=>{self.servo_driver=Some(status);self.emit(json!({"event":"servo_driver","status":status}));},
             Message::Applied{request_seq,kind}=>self.emit(json!({"event":"applied","request_seq":request_seq,"kind":kind})),
             Message::Touch(event) => self.emit(json!({"event":"touch","seq":frame.seq,"touch":event})),
             Message::TestEvent { module, phase, done, fault } => self.emit(json!({"event":"test_event","seq":frame.seq,

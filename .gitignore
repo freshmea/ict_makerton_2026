@@ -11,7 +11,18 @@ doc/BOM/mechanical_v8/videos/P5_section_side30_to_front_audit
 /firmware/pico2-device-bench/dist/linux/
 /firmware/pico2-device-bench/dist/
 /software/config/ai.env
+/software/config/jev-observer.env
 /software/config/runtime.env
 **/__pycache__/
+/.venv-learning/
 /software/models/*.onnx
 /software/models/*.engine
+
+# Machine-local credentials and live observation databases are not shared source.
+.env
+.env.*
+*.env
+!*.env.example
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm

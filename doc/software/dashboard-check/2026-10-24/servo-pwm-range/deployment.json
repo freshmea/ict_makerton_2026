@@ -1,0 +1,44 @@
+{
+  "before": {
+    "left_segments": [
+      4,
+      4,
+      10
+    ],
+    "right_segments": [
+      4,
+      4,
+      10
+    ],
+    "touch_active_low_mask": 0,
+    "local_tests_enabled": false,
+    "test_switch": 0,
+    "hold_interval_ms": 500,
+    "press_window_ms": 2000,
+    "servo_min_us": 1000,
+    "servo_max_us": 2000,
+    "test_span_degrees": 10
+  },
+  "after": {
+    "left_segments": [
+      4,
+      4,
+      10
+    ],
+    "right_segments": [
+      4,
+      4,
+      10
+    ],
+    "touch_active_low_mask": 0,
+    "local_tests_enabled": false,
+    "test_switch": 0,
+    "hold_interval_ms": 500,
+    "press_window_ms": 2000,
+    "servo_min_us": 500,
+    "servo_max_us": 2500,
+    "test_span_degrees": 10
+  },
+  "backup": "/var/tmp/servo-pwm-range-before-20261024.json",
+  "restart_exit": 0
+}

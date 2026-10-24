@@ -1,0 +1,99 @@
+2026-10-24T07:35:22+0200 nano systemd[1]: Stopping 300 Seconds FastAPI device dashboard...
+2026-10-24T07:35:22+0200 nano python[30116]: INFO:     Shutting down
+2026-10-24T07:35:23+0200 nano systemd[1]: Stopped 300 Seconds FastAPI device dashboard.
+2026-10-24T07:35:23+0200 nano systemd[1]: Started 300 Seconds FastAPI device dashboard.
+2026-10-24T07:35:25+0200 nano python[34767]: INFO:     Started server process [34767]
+2026-10-24T07:35:25+0200 nano python[34767]: INFO:     Application startup complete.
+2026-10-24T07:35:25+0200 nano python[34767]: INFO:     Uvicorn running on http://192.168.184.76:8000 (Press CTRL+C to quit)
+2026-10-24T06:59:27+0200 nano nvargus-daemon[28877]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T06:59:28+0200 nano nvargus-daemon[28877]: Error: waitCsiFrameStart timeout guid 1
+2026-10-24T06:59:29+0200 nano nvargus-daemon[28877]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T06:59:30+0200 nano systemd[1]: nvargus-daemon.service: Main process exited, code=killed, status=11/SEGV
+2026-10-24T06:59:30+0200 nano systemd[1]: nvargus-daemon.service: Failed with result 'signal'.
+2026-10-24T06:59:31+0200 nano systemd[1]: nvargus-daemon.service: Scheduled restart job, restart counter is at 3.
+2026-10-24T06:59:31+0200 nano systemd[1]: Started Argus daemon.
+2026-10-24T07:01:00+0200 nano nvargus-daemon[29719]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T07:01:00+0200 nano nvargus-daemon[29719]: Error: waitCsiFrameStart timeout guid 1
+2026-10-24T07:01:01+0200 nano systemd[1]: nvargus-daemon.service: Main process exited, code=killed, status=11/SEGV
+2026-10-24T07:01:01+0200 nano systemd[1]: nvargus-daemon.service: Failed with result 'signal'.
+2026-10-24T07:01:01+0200 nano systemd[1]: nvargus-daemon.service: Scheduled restart job, restart counter is at 4.
+2026-10-24T07:01:01+0200 nano systemd[1]: Started Argus daemon.
+2026-10-24T07:06:52+0200 nano nvargus-daemon[30405]: Error: waitCsiFrameStart timeout guid 1
+2026-10-24T07:06:52+0200 nano nvargus-daemon[30405]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T07:06:53+0200 nano nvargus-daemon[30405]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T07:06:53+0200 nano nvargus-daemon[30405]: Error: waitCsiFrameStart timeout guid 1
+2026-10-24T07:06:55+0200 nano nvargus-daemon[30405]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T07:06:56+0200 nano systemd[1]: nvargus-daemon.service: Main process exited, code=killed, status=11/SEGV
+2026-10-24T07:06:56+0200 nano systemd[1]: nvargus-daemon.service: Failed with result 'signal'.
+2026-10-24T07:06:56+0200 nano systemd[1]: nvargus-daemon.service: Scheduled restart job, restart counter is at 5.
+2026-10-24T07:06:56+0200 nano systemd[1]: Started Argus daemon.
+2026-10-24T07:07:45+0200 nano nvargus-daemon[32012]: Error: waitCsiFrameStart timeout guid 1
+2026-10-24T07:07:45+0200 nano nvargus-daemon[32012]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T07:07:46+0200 nano nvargus-daemon[32012]: Error: waitCsiFrameStart timeout guid 1
+2026-10-24T07:07:46+0200 nano nvargus-daemon[32012]: SCF: Error Timeout: ISP Stats timed out! (in src/services/capture/NvIspHw.cpp, function waitIspStatsFinished(), line 566)
+2026-10-24T07:07:47+0200 nano systemd[1]: nvargus-daemon.service: Main process exited, code=killed, status=11/SEGV
+2026-10-24T07:07:47+0200 nano systemd[1]: nvargus-daemon.service: Failed with result 'signal'.
+2026-10-24T07:07:48+0200 nano systemd[1]: nvargus-daemon.service: Scheduled restart job, restart counter is at 6.
+2026-10-24T07:07:48+0200 nano systemd[1]: Started Argus daemon.
+Oct 24 06:58:28 nano kernel: usb 1-2.3: USB disconnect, device number 10
+Oct 24 06:58:30 nano kernel: usb 1-2.3: new full-speed USB device number 11 using tegra-xusb
+Oct 24 06:58:30 nano kernel: usb 1-2.3: New USB device found, idVendor=c0de, idProduct=cafc
+Oct 24 06:58:30 nano kernel: usb 1-2.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 24 06:58:30 nano kernel: cdc_acm 1-2.3:1.0: ttyACM0: USB ACM device
+Oct 24 07:00:24 nano kernel: usb 1-2.3: USB disconnect, device number 11
+Oct 24 07:00:32 nano kernel: usb 1-2.3: new full-speed USB device number 12 using tegra-xusb
+Oct 24 07:00:32 nano kernel: usb 1-2.3: New USB device found, idVendor=2e8a, idProduct=000f
+Oct 24 07:00:32 nano kernel: usb 1-2.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 24 07:00:32 nano kernel: usb 1-2.3: Product: RP2350 Boot
+Oct 24 07:00:32 nano kernel: scsi host0: usb-storage 1-2.3:1.0
+Oct 24 07:00:33 nano kernel: scsi 0:0:0:0: Direct-Access     RPI      RP2350           1    PQ: 0 ANSI: 2
+Oct 24 07:00:33 nano kernel: sd 0:0:0:0: [sda] Attached SCSI removable disk
+Oct 24 07:02:09 nano kernel: usb 1-2.3: USB disconnect, device number 12
+Oct 24 07:02:10 nano kernel: usb 1-2.3: new full-speed USB device number 13 using tegra-xusb
+Oct 24 07:02:10 nano kernel: usb 1-2.3: New USB device found, idVendor=c0de, idProduct=cafc
+Oct 24 07:02:10 nano kernel: usb 1-2.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 24 07:02:10 nano kernel: cdc_acm 1-2.3:1.0: ttyACM0: USB ACM device
+wlan0     IEEE 802.11bgn  ESSID:"1_PCU_C"  Nickname:"<WIFI@REALTEK>"
+          Mode:Managed  Frequency:2.437 GHz  Access Point: 00:33:58:77:17:A0   
+          Bit Rate:72.2 Mb/s   Sensitivity:0/0  
+          Retry:off   RTS thr:off   Fragment thr:off
+          Encryption key:off
+          Power Management:off
+          Link Quality=100/100  Signal level=98/100  Noise level=0/100
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+
+0-1
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
+921600
+/sys/devices/system/cpu/cpu1/cpufreq/scaling_cur_freq
+921600
+/sys/devices/system/cpu/cpu2/cpufreq/scaling_cur_freq
+921600
+/sys/devices/system/cpu/cpu3/cpufreq/scaling_cur_freq
+921600
+NVPM WARN: fan mode is not set!
+NV Power Mode: 5W
+1
+RAM 1943/3956MB (lfb 111x4MB) SWAP 0/4026MB (cached 0MB) IRAM 0/252kB(lfb 252kB) CPU [73%@921,68%@921,off,off] EMC_FREQ 9%@1600 GR3D_FREQ 0%@76 NVENC 192 APE 25 PLL@37.5C CPU@39C PMIC@50C GPU@39.5C AO@47C thermal@39C POM_5V_IN 2835/2835 POM_5V_GPU 0/0 POM_5V_CPU 545/545
+RAM 1943/3956MB (lfb 111x4MB) SWAP 0/4026MB (cached 0MB) IRAM 0/252kB(lfb 252kB) CPU [77%@921,67%@921,off,off] EMC_FREQ 9%@1600 GR3D_FREQ 0%@76 NVENC 192 APE 25 PLL@37.5C CPU@38.5C PMIC@50C GPU@39.5C AO@47C thermal@39C POM_5V_IN 2965/2900 POM_5V_GPU 0/0 POM_5V_CPU 542/543
+RAM 1943/3956MB (lfb 111x4MB) SWAP 0/4026MB (cached 0MB) IRAM 0/252kB(lfb 252kB) CPU [71%@921,69%@921,off,off] EMC_FREQ 9%@1600 GR3D_FREQ 0%@76 NVENC 192 APE 25 PLL@37.5C CPU@38.5C PMIC@50C GPU@39.5C AO@47C thermal@39C POM_5V_IN 2799/2866 POM_5V_GPU 0/0 POM_5V_CPU 508/531
+PING 192.168.184.1 (192.168.184.1) 56(84) bytes of data.
+64 bytes from 192.168.184.1: icmp_seq=1 ttl=254 time=2.63 ms
+64 bytes from 192.168.184.1: icmp_seq=2 ttl=254 time=3.34 ms
+64 bytes from 192.168.184.1: icmp_seq=3 ttl=254 time=2.84 ms
+64 bytes from 192.168.184.1: icmp_seq=4 ttl=254 time=2.66 ms
+64 bytes from 192.168.184.1: icmp_seq=5 ttl=254 time=2.56 ms
+64 bytes from 192.168.184.1: icmp_seq=6 ttl=254 time=2.43 ms
+
+--- 192.168.184.1 ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 1505ms
+rtt min/avg/max/mdev = 2.430/2.744/3.340/0.293 ms
+Inter-| sta-|   Quality        |   Discarded packets               | Missed | WE
+ face | tus | link level noise |  nwid  crypt   frag  retry   misc | beacon | 22
+ wlan0: 0000  100.   98.    0.       0      0      0      0      0        0
+State  Recv-Q  Send-Q     Local Address:Port       Peer Address:Port   Process  
+ESTAB  0       0         192.168.184.76:8000     192.168.184.82:13636           
+ESTAB  0       0         192.168.184.76:8000     192.168.184.82:33110           
+ESTAB  0       0         192.168.184.76:8000     192.168.184.82:8929            
+

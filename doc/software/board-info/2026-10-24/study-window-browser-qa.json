@@ -1,0 +1,35 @@
+{
+  "live_browser": {
+    "test": "live_camera1_policy",
+    "api_calls": 0,
+    "mobile_horizontal_overflow": false,
+    "camera": "0",
+    "presence": "자리비움",
+    "focus": "—",
+    "policy": "관찰 근거 부족 · 사용자 설정에 따라 자리비움으로 처리했습니다. 집중·시선 점수는 보류합니다.",
+    "rows": 15,
+    "progress": 10,
+    "gptDisabled": true,
+    "jevDisabled": true
+  },
+  "target_tests": {
+    "window": 17,
+    "providers": 38,
+    "dashboard": 11,
+    "total_passed": 66
+  },
+  "jev_fixture_initial": {
+    "passed": true,
+    "actual_provider_calls": 0,
+    "camera": 1,
+    "rows": 15,
+    "mobile_horizontal_overflow": false
+  },
+  "jev_fixture_final_rerun": {
+    "completed": false,
+    "reason": "camera readiness kept button disabled; further verification ended at user request"
+  },
+  "additional_paid_calls_for_ui_qa": 0,
+  "verification_finished": true,
+  "automatic_analysis": false
+}

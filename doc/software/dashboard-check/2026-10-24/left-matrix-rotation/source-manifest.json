@@ -1,0 +1,13 @@
+{
+  "backup": "/home/jetson/ict_makerton_2026/tmp/matrix-left-rotation-source-20261024T041951Z",
+  "files": {
+    "firmware/pico2-device-bench/src/lib.rs": {
+      "before_sha256": "6c6f0c4c202b885e336bf196e3f3a29b3c404741390be4ce652fc975de5cf375",
+      "after_sha256": "bccf9d5387679ed0fda0767acb44ce2aa1d41a3b0e70a57c06329c033e3432ba"
+    },
+    "firmware/pico2-device-bench/src/main.rs": {
+      "before_sha256": "a1ea2da49c65a268fe984e7966583a16f40ad2b7f1079a15708f68d736f46efd",
+      "after_sha256": "95a1e2666857ac143fd8e5eca66f22db3024b5c849b58a380a9a6aaf84c8beaa"
+    }
+  }
+}

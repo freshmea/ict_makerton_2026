@@ -1,0 +1,7 @@
+Dashboard stopped; updater will run as jetson with its robot-device groups.
+Saving existing 4 MiB flash before writing...
+Loading and verifying RP2350 flash...
+Flash readback and integrated CDC STATUS verified. No actuator test started.
+Result: /home/jetson/ict_makerton_2026/tmp/pico-flash/20261024T042353.245798Z-linux/flash-result.json
+ORCHESTRATION_RECORD /home/jetson/ict_makerton_2026/tmp/left-matrix-rotation-1a0908cb4ee0.json
+{"flash_completed": true, "dashboard_reconnected": true, "faults": 0, "service": "ActiveState=active\nSubState=running\nUnitFileState=enabled\n"}

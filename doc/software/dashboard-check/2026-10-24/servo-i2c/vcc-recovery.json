@@ -1,0 +1,578 @@
+{
+  "user_pca_vcc": "approximately 3.3 V",
+  "probe": {
+    "http": 200,
+    "result": {
+      "ack_code": "Ok",
+      "ack_request_seq": 188,
+      "cmd": "servo_probe",
+      "ok": true,
+      "session": "13DF8255018A1CAD",
+      "status": {
+        "age_ms": 0,
+        "capabilities": {
+          "single_servo": true
+        },
+        "device": {
+          "config": {
+            "hold_interval_ms": 500,
+            "left_segments": [
+              4,
+              4,
+              10
+            ],
+            "local_tests_enabled": false,
+            "press_window_ms": 2000,
+            "right_segments": [
+              4,
+              4,
+              10
+            ],
+            "servo_max_us": 2000,
+            "servo_min_us": 1000,
+            "test_span_degrees": 10,
+            "test_switch": 0,
+            "touch_active_low_mask": 0
+          },
+          "dropped_events": 442,
+          "faults": 0,
+          "local_enabled": false,
+          "oe_high": true,
+          "pressed_mask": 0,
+          "raw_mask": 0,
+          "running": null,
+          "touches": [
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            }
+          ],
+          "uptime_ms": 58615
+        },
+        "outputs": {
+          "applied_seq": 0,
+          "armed": false,
+          "calibration_id": 0,
+          "commanded_cdeg": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "light_active": false,
+          "pose_active": false
+        },
+        "received_unix_ms": 1792838747527,
+        "servo_driver": {
+          "initialized": true,
+          "last_error": 0,
+          "probes": [
+            2,
+            1
+          ],
+          "scl_high": true,
+          "sda_high": true,
+          "selected_address": 65
+        }
+      }
+    }
+  },
+  "samples": [
+    {
+      "elapsed_s": 0,
+      "connected": true,
+      "session": "13DF8255018A1CAD",
+      "uptime_ms": 58647,
+      "driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      },
+      "faults": 0,
+      "oe_high": true,
+      "armed": false,
+      "ready": true
+    },
+    {
+      "elapsed_s": 5,
+      "connected": true,
+      "session": "13DF8255018A1CAD",
+      "uptime_ms": 63748,
+      "driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      },
+      "faults": 0,
+      "oe_high": true,
+      "armed": false,
+      "ready": true
+    },
+    {
+      "elapsed_s": 10,
+      "connected": true,
+      "session": "13DF8255018A1CAD",
+      "uptime_ms": 69250,
+      "driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      },
+      "faults": 0,
+      "oe_high": true,
+      "armed": false,
+      "ready": true
+    },
+    {
+      "elapsed_s": 15,
+      "connected": true,
+      "session": "13DF8255018A1CAD",
+      "uptime_ms": 74853,
+      "driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      },
+      "faults": 0,
+      "oe_high": true,
+      "armed": false,
+      "ready": true
+    },
+    {
+      "elapsed_s": 20,
+      "connected": true,
+      "session": "13DF8255018A1CAD",
+      "uptime_ms": 80655,
+      "driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      },
+      "faults": 0,
+      "oe_high": true,
+      "armed": false,
+      "ready": true
+    },
+    {
+      "elapsed_s": 25,
+      "connected": true,
+      "session": "13DF8255018A1CAD",
+      "uptime_ms": 86157,
+      "driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      },
+      "faults": 0,
+      "oe_high": true,
+      "armed": false,
+      "ready": true
+    },
+    {
+      "elapsed_s": 30,
+      "connected": true,
+      "session": "13DF8255018A1CAD",
+      "uptime_ms": 91459,
+      "driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      },
+      "faults": 0,
+      "oe_high": true,
+      "armed": false,
+      "ready": true
+    }
+  ],
+  "arm_or_motion_sent": false,
+  "fresh_probe_after_monitor": {
+    "http": 200,
+    "result": {
+      "ack_code": "Ok",
+      "ack_request_seq": 726,
+      "cmd": "servo_probe",
+      "ok": true,
+      "session": "13DF8255018A1CAD",
+      "status": {
+        "age_ms": 0,
+        "capabilities": {
+          "single_servo": true
+        },
+        "device": {
+          "config": {
+            "hold_interval_ms": 500,
+            "left_segments": [
+              4,
+              4,
+              10
+            ],
+            "local_tests_enabled": false,
+            "press_window_ms": 2000,
+            "right_segments": [
+              4,
+              4,
+              10
+            ],
+            "servo_max_us": 2000,
+            "servo_min_us": 1000,
+            "test_span_degrees": 10,
+            "test_switch": 0,
+            "touch_active_low_mask": 0
+          },
+          "dropped_events": 442,
+          "faults": 0,
+          "local_enabled": false,
+          "oe_high": true,
+          "pressed_mask": 0,
+          "raw_mask": 0,
+          "running": null,
+          "touches": [
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            },
+            {
+              "held_ms": 0,
+              "interval_count": 0,
+              "last_duration_ms": 0,
+              "last_interval_count": 0,
+              "press_count": 0,
+              "pressed": false,
+              "window_remaining_ms": 0
+            }
+          ],
+          "uptime_ms": 162529
+        },
+        "outputs": {
+          "applied_seq": 0,
+          "armed": false,
+          "calibration_id": 0,
+          "commanded_cdeg": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "light_active": false,
+          "pose_active": false
+        },
+        "received_unix_ms": 1792838851422,
+        "servo_driver": {
+          "initialized": true,
+          "last_error": 0,
+          "probes": [
+            2,
+            1
+          ],
+          "scl_high": true,
+          "sda_high": true,
+          "selected_address": 65
+        }
+      }
+    }
+  },
+  "user_report": "Measurement only; no deliberate wiring or USB/power change.",
+  "after": {
+    "pico": {
+      "connected": true,
+      "age_ms": 100,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 442,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 162586
+      },
+      "session": "13DF8255018A1CAD",
+      "error": null,
+      "last_test": null,
+      "last_touch": null,
+      "module_tests": {},
+      "bridge_pid": 6322,
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "last_applied": {
+        "event": "applied",
+        "host_monotonic_ms": 130062,
+        "host_unix_ms": 1792838840994,
+        "kind": 4,
+        "request_seq": 667,
+        "session": "13DF8255018A1CAD",
+        "version": 2
+      },
+      "capabilities": {
+        "single_servo": true
+      },
+      "servo_driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      },
+      "port": "/dev/pico-device",
+      "protocol": "pico-device-v2",
+      "installation": {
+        "touch_inputs_connected": true,
+        "matrix_connected": true,
+        "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+      }
+    },
+    "servo_control": {
+      "active": false,
+      "generation": 3,
+      "ready": true,
+      "supported": true,
+      "reason": "",
+      "busy": false,
+      "commanded_degrees": [
+        null,
+        89,
+        null,
+        null,
+        null,
+        null
+      ],
+      "error": null,
+      "min_degrees": 0,
+      "max_degrees": 180,
+      "speed_degrees_s": 30,
+      "pulse_min_us": 1000,
+      "pulse_max_us": 2000
+    },
+    "system_uptime_seconds": 164
+  }
+}

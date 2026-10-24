@@ -6,6 +6,7 @@ P5는 좌우 각 **Yaw → Shoulder Pitch → Wrist Roll**의3회전 DOF를 만�
 
 ## 파일 선택과 출력판
 
+- [출력판별 묶음표 — 16판·29종·32개](PRINT_PLATES.md): 같은 판에 넣을 STL과 수량, 배치 그림, 권장 출력 순서를 확인한다. 경계상자 기준 제안이며 실제 슬라이싱 전이다.
 - 이 폴더의 `cad/`·`stl/`는 P5 원형 파일이다. 조립 좌표를 유지하므로 출력에는 최종 `print/oriented_stl/` 또는 `print/single_part_3mf/`를 사용한다.
 - [P5 출력 목록](PARTS.md)은 `source/geometry_P5_parts.json`과 [출력manifest](print/manifest.json)의 부품·수량·해시를 대조해 생성했다. 서보 케이스·금속 축·혼·베어링 표시 바디를 출력 수량에 넣지 않는다.
 - `print/manifest.json`의 방향·좌표·경계상자와 검증 한계를 확인한다. 3MF는 단일 부품 모델·좌표이며 Bambu 재료/공정 프로파일·실제 브림·서포트·G-code를 포함하지 않는다.

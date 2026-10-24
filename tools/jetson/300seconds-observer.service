@@ -1,0 +1,31 @@
+[Unit]
+Description=300 Seconds ten-frame study observer
+After=network-online.target 300seconds-dashboard.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=studyobserver
+Group=boarddash
+WorkingDirectory=/opt/300seconds/jetson
+EnvironmentFile=/etc/300seconds/study-observer.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/300seconds/dashboard/venv/bin/python -B /opt/300seconds/jetson/study_observer_service.py
+Restart=on-failure
+RestartSec=5
+RuntimeDirectory=300seconds-observer
+RuntimeDirectoryMode=0750
+StateDirectory=300seconds-observer
+StateDirectoryMode=0750
+UMask=0027
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+TimeoutStopSec=40
+
+[Install]
+WantedBy=multi-user.target

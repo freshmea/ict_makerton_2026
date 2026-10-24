@@ -1,0 +1,12 @@
+{
+  "services": [
+    "active",
+    "active"
+  ],
+  "hashes": {
+    "hardware.py": "63f277d5dc89c98e153aed72532d15fee98bc13636ddd421ed74f9ebd301477f",
+    "servo_controls.py": "2c7bc177aab74417ffc4326bccb4c851a162315dc0ce3bc9949bb219242ca098"
+  },
+  "native_sha256": "006d007f6c3624370a5a29481d4feebc6ccd0c0f6ccb4056ca723c49bf3890bc",
+  "installed_source_matches": true
+}

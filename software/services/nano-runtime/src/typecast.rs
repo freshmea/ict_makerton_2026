@@ -52,10 +52,6 @@ fn local(reserve: Option<usize>, http: Option<u16>) -> Result<Value> {
         .iter()
         .map(|x| x[1].as_u64().unwrap_or(100000))
         .sum::<u64>();
-    let minute = a
-        .iter()
-        .filter(|x| x[0].as_u64().unwrap_or(u64::MAX).saturating_add(60) > t)
-        .count();
     let max_day = env("NANO_TTS_MAX_24H_CHARS", "500")
         .parse::<u64>()
         .unwrap_or(500)
@@ -64,25 +60,19 @@ fn local(reserve: Option<usize>, http: Option<u16>) -> Result<Value> {
         .parse::<u64>()
         .unwrap_or(12000)
         .min(15000);
+    // Provider concurrency/HTTP errors govern retries. Legacy local cooldowns
+    // must not block a new explicit request after a transient network failure.
+    v["cooldown_until"] = json!(0);
     if let Some(n) = reserve {
-        if day + n as u64 > max_day
-            || month + n as u64 > max_month
-            || minute >= 2
-            || v["cooldown_until"].as_u64().unwrap_or(u64::MAX) > t
-        {
+        if day + n as u64 > max_day || month + n as u64 > max_month {
             return Err(error(
-                "local_TTS_budget_or_cooldown; no synthesis request made",
+                "local_TTS_character_budget; no synthesis request made",
             ));
         }
         v["attempts"].as_array_mut().unwrap().push(json!([t, n]));
     }
     if let Some(code) = http {
         v["last_http_status"] = json!(code);
-        if [401, 402, 403, 429].contains(&code) {
-            v["cooldown_until"] = json!(t + 3600);
-        } else if code == 0 || code >= 500 {
-            v["cooldown_until"] = json!(t + 60);
-        }
     }
     let data = serde_json::to_vec(&v)?;
     f.seek(SeekFrom::Start(0))?;
@@ -90,7 +80,7 @@ fn local(reserve: Option<usize>, http: Option<u16>) -> Result<Value> {
     f.write_all(&data)?;
     f.sync_data()?;
     Ok(
-        json!({"local_only":true,"rolling_24h_characters":day+reserve.unwrap_or(0) as u64,"rolling_30d_characters":month+reserve.unwrap_or(0) as u64,"max_24h_characters":max_day,"max_30d_characters":max_month,"max_rpm":2,"cooldown_until_unix":v["cooldown_until"],"last_http_status":v["last_http_status"],"automatic_retry":false}),
+        json!({"local_only":true,"rolling_24h_characters":day+reserve.unwrap_or(0) as u64,"rolling_30d_characters":month+reserve.unwrap_or(0) as u64,"max_24h_characters":max_day,"max_30d_characters":max_month,"max_rpm":null,"cooldown_until_unix":0,"last_http_status":v["last_http_status"],"automatic_retry":false}),
     )
 }
 fn quote(s: &str) -> String {
@@ -102,6 +92,18 @@ fn quote(s: &str) -> String {
             .replace('\r', "\\r")
             .replace('\t', "\\t")
     )
+}
+
+fn transport_failure(code: Option<i32>) -> String {
+    let category = match code {
+        Some(5 | 6) => "dns",
+        Some(7) => "connect",
+        Some(28) => "timeout",
+        Some(35 | 51 | 58 | 60 | 77) => "tls",
+        Some(52 | 55 | 56) => "connection_lost",
+        _ => "unknown",
+    };
+    format!("Typecast transport {category}; curl_exit={}; no automatic retry", code.unwrap_or(-1))
 }
 async fn request(path: &str, body: Option<&Value>, limit: usize) -> Result<Vec<u8>> {
     let fixture = env("NANO_AI_TEST", "0") == "1";
@@ -179,6 +181,9 @@ async fn request(path: &str, body: Option<&Value>, limit: usize) -> Result<Vec<u
         .parse::<u16>()
         .unwrap_or(0);
     local(None, Some(code))?;
+    if code == 0 {
+        return Err(error(transport_failure(status.code())));
+    }
     if code != 200 || !status.success() {
         return Err(error(format!("Typecast HTTP {code}; no automatic retry")));
     }
@@ -255,24 +260,35 @@ pub async fn synthesize(text: &str) -> Result<(Vec<u8>, Value)> {
 mod tests {
     use super::*;
     #[test]
-    fn character_budget_persists_and_blocks_excess_and_429() {
+    fn consecutive_requests_and_transient_errors_do_not_add_local_waits() {
         let p = std::env::temp_dir().join(format!("tts-budget-{}.json", std::process::id()));
         std::env::set_var("NANO_TTS_USAGE_FILE", &p);
         std::env::set_var("NANO_TTS_MAX_24H_CHARS", "6");
-        local(Some(4), None).unwrap();
+        // A legacy 1-hour cooldown is cleared without resetting usage history.
+        std::fs::write(&p, json!({"attempts":[],"cooldown_until":seconds()+3600}).to_string()).unwrap();
+        for _ in 0..4 {
+            local(Some(1), None).unwrap();
+        }
         assert!(local(Some(3), None).is_err());
-        local(Some(2), None).unwrap();
+        for code in [0, 500, 429, 401] {
+            local(None, Some(code)).unwrap();
+            assert_eq!(local(None, None).unwrap()["cooldown_until_unix"], 0);
+        }
+        local(Some(1), None).unwrap();
+        local(Some(1), None).unwrap();
         assert_eq!(local(None, None).unwrap()["rolling_24h_characters"], 6);
-        local(None, Some(429)).unwrap();
         assert!(local(Some(1), None).is_err());
-        assert!(
-            local(None, None).unwrap()["cooldown_until_unix"]
-                .as_u64()
-                .unwrap()
-                > seconds()
-        );
+        assert!(local(None, None).unwrap()["max_rpm"].is_null());
         std::fs::remove_file(p).unwrap();
         std::env::remove_var("NANO_TTS_USAGE_FILE");
         std::env::remove_var("NANO_TTS_MAX_24H_CHARS");
+    }
+
+    #[test]
+    fn transport_errors_keep_actionable_codes_without_credentials() {
+        assert!(transport_failure(Some(6)).contains("transport dns"));
+        assert!(transport_failure(Some(28)).contains("transport timeout"));
+        assert!(transport_failure(Some(60)).contains("transport tls"));
+        assert!(transport_failure(Some(56)).contains("connection_lost"));
     }
 }

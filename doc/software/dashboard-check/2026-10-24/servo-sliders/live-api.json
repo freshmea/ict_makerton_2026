@@ -1,0 +1,114 @@
+{
+  "before": {
+    "servo_control": {
+      "active": false,
+      "generation": 0,
+      "ready": false,
+      "supported": true,
+      "reason": "PCA9685 통신 오류 · 배선과 VCC를 확인하세요.",
+      "busy": false,
+      "commanded_degrees": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "error": null,
+      "min_degrees": 0,
+      "max_degrees": 180,
+      "speed_degrees_s": 30,
+      "pulse_min_us": 1000,
+      "pulse_max_us": 2000
+    },
+    "outputs": {
+      "applied_seq": 0,
+      "armed": false,
+      "calibration_id": 0,
+      "commanded_cdeg": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "light_active": false,
+      "pose_active": false
+    },
+    "oe_high": true
+  },
+  "driver_probe": {
+    "status": 409,
+    "body": "{\"detail\":\"PCA9685 연결 확인 실패 · Pico 연결·VCC·GND·SDA·SCL·주소 0x41을 확인하세요.\"}"
+  },
+  "boundary_checks": [
+    {
+      "expected": 422,
+      "actual": 422
+    },
+    {
+      "expected": 422,
+      "actual": 422
+    },
+    {
+      "expected": 422,
+      "actual": 422
+    },
+    {
+      "expected": 409,
+      "actual": 409
+    }
+  ],
+  "csrf_missing": 403,
+  "after": {
+    "servo_control": {
+      "active": false,
+      "generation": 1,
+      "ready": false,
+      "supported": true,
+      "reason": "PCA9685 통신 오류 · 배선과 VCC를 확인하세요.",
+      "busy": false,
+      "commanded_degrees": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "error": "PCA9685 연결 확인 실패 · Pico 연결·VCC·GND·SDA·SCL·주소 0x41을 확인하세요.",
+      "min_degrees": 0,
+      "max_degrees": 180,
+      "speed_degrees_s": 30,
+      "pulse_min_us": 1000,
+      "pulse_max_us": 2000
+    },
+    "outputs": {
+      "applied_seq": 0,
+      "armed": false,
+      "calibration_id": 0,
+      "commanded_cdeg": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "light_active": false,
+      "pose_active": false
+    },
+    "oe_high": true,
+    "pico_capabilities": {
+      "single_servo": true
+    }
+  },
+  "health": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  }
+}

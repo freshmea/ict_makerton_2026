@@ -1,0 +1,20 @@
+{
+  "recorded_at_utc": "2026-10-24T05:11:05.034752+00:00",
+  "physical_side_confirmed": true,
+  "firmware_unit_tests_passed": 14,
+  "dashboard_unit_tests_passed": 16,
+  "all_50_applied": true,
+  "auto_off": true,
+  "stop_no_replay": true,
+  "browser_ui_start_auto_off_stop_passed": true,
+  "browser_console_errors": 0,
+  "device_connected": true,
+  "active_expression": false,
+  "armed": false,
+  "faults": 1,
+  "oe_high": true,
+  "matrix_fault": false,
+  "remaining_issue": "PCA9685 servo I2C fault bit 1; matrix path passed independently",
+  "service": "enabled/active",
+  "runtime_hashes": "final-runtime-hashes.json"
+}

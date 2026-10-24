@@ -1,0 +1,46 @@
+{
+  "source_backup": "/home/jetson/ict_makerton_2026/tmp/eye-expressions-20261024T043704Z",
+  "stamp": "20261024T043704Z",
+  "files": {
+    "app.py": {
+      "before_sha256": "9b93ae34ed9188d0f560ab57444589ae15f9e7ce00e3b41006e08b263c4a284e",
+      "after_sha256": "9ab9b2f924182d8e879b1177b3906d9d3919c26357d2999e1e3add90b617e470"
+    },
+    "hardware.py": {
+      "before_sha256": "54c0ab394e470501d830cd864172bfe21a5cc5cb0da61a1a5e5bcffb0489d607",
+      "after_sha256": "db6d23c0dd7526673ad4929625a3e4664a8b36399f386e06e631b156670c2e86"
+    },
+    "eye_expressions.py": {
+      "before_sha256": null,
+      "after_sha256": "42751a3d85864e9d463ade3119e8f968d6a16e104933e4bfa854be9e905eaf3b"
+    },
+    "test_eye_expressions.py": {
+      "before_sha256": null,
+      "after_sha256": "affe26a9f71dbcc43a9958cc4dfade5c08718a04f219e3987a3a850b7b5d6b86"
+    },
+    "test_hardware.py": {
+      "before_sha256": "52de3d6efee55fb29d78021e53e3b4339cd6b92e04678965292d5cfba7c4625e",
+      "after_sha256": "e9a77d1b100db2e7d2edee387dbbb1f3daa3d739cd93dc9555d79f34dee6aa94"
+    },
+    "static/app.js": {
+      "before_sha256": "4656af8b4b3755a6f255eb7355234dae5e32a8f71ee998c3aed2b88ad69a2ca6",
+      "after_sha256": "c91204825352106be6fe9123aa1575309e65f3fbe3742c821eaf877d3bf65a33"
+    },
+    "static/index.html": {
+      "before_sha256": "688ab45b798e11d09d4a00c3a8efbee39d08e43bf9a2fa09dad70d737df45e19",
+      "after_sha256": "f46ce05e6b5907cb1804281ab3c245fc55de4089d3498c09877377c2a1dd11ba"
+    },
+    "static/styles.css": {
+      "before_sha256": "6ad6633d4f988056f250258a0a09ebf3e0b0b88f1f91a1150497bffdbb68ae77",
+      "after_sha256": "1de4251b161503689e3cacbd152e4d47b732d4c161fb2c9356514f7e953d6d36"
+    }
+  },
+  "replacement_fix": "Acknowledged Stop before each Arm; firmware ACTIVE stays latched after SetEyes.",
+  "eye_basis": "robot/device",
+  "preview_face_order": [
+    "right",
+    "left"
+  ],
+  "near_eye": "left",
+  "far_eye": "right"
+}

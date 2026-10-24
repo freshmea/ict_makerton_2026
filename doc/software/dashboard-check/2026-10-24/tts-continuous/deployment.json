@@ -1,0 +1,9 @@
+{
+  "backup": "/var/tmp/tts-continuous-backup-20261024",
+  "tts_state": "active",
+  "dashboard_state": "active",
+  "dashboard_pid": "10055",
+  "ledger_unchanged_during_deployment": true,
+  "before_characters": 174,
+  "installed_binary_sha256": "3a670c82a08659db8775435764d93a12cf5902820c94f27ee11c50ad14e0cafd"
+}

@@ -1,8 +1,41 @@
 # Jetson Nano FastAPI 장치 대시보드
 
-최신 운영 변경(2026-10-24): 사용자 요청으로 이 모니터는 **disabled/inactive**다. 아래 자동 시작·화면 결과는 이전 구현 검증 이력이며, 이후 [Rust runtime 전환](Rust_마이크로아키텍처_실행과_검증.md)을 따른다.
+최신 운영 변경(2026-10-24): 새 공유기에서 사용자 요청으로 이 모니터를 **enabled/active**로 복원했다. 현재 주소는 <http://192.168.184.76:8000>다. 이어서 사용자가 스위치 6개와 도트매트릭스 2개 연결을 확인해 `installation.json`의 두 연결 항목을 true로 반영했다. 실제 브라우저에서 미연결 표시 해제와 눈 시험 버튼 활성화를 확인했으며, 매트릭스 명령 시험은 `done=true, fault=false`, 종료 후 faults 0/OE HIGH다. [이번 시험 원본](dashboard-check/2026-10-24/matrix-connection-check.json). SW6 로컬 선택은 비활성으로 유지하며 스위치 입력은 수신·표시한다. 아래 이전 주소·미연결 시험·Rust 전환은 당시 검증 이력이다.
 
 2026-10-24 KST, 실제 `192.168.219.127` Nano와 USB Pico 2 W에서 구현·배포·점검했다. 소스는 [apps/device-dashboard](../../apps/device-dashboard/README.md)에 있다.
+
+## 후속 스위치·매트릭스 연결 점검
+
+- 설치 설정은 로컬·Nano 저장소·`/opt` 실행본의 SHA-256 일치를 확인했다. 변경 전 실행 설정은 Nano의 `/opt/300seconds/dashboard/backups/20261024T024145Z/installation.json`에 보존했다. 서비스는 enabled/active다.
+- 브라우저에서 스위치 6개 상태 표시, 미연결 문구 없음, 눈 시험 버튼 활성화, 콘솔 오류 0개를 확인했다. [화면 점검 JSON](dashboard-check/2026-10-24/connection-browser-qa.json).
+- 매트릭스는 API 명령 ACK와 phase 0~19, 최종 `Matrix done=true, fault=false`를 확인했다. 사용자가 재시험에서 **양쪽 패턴 표시와 종료 후 소등**을 확인했다. 단방향 SPI이므로 명령 완료와 사용자 관찰을 구분해 기록한다. [최초 시험 원본](dashboard-check/2026-10-24/matrix-connection-check.json), [새 재시험·사용자 관찰](dashboard-check/2026-10-24/matrix-connection-retest.json).
+- **SW1~SW6 모두 눌림·해제를 확인했다.** 처음 미검출이던 SW4는 IO가 물리 16번(GP12/서보 OE)에 꽂혀 있었고, 사용자가 물리 12번(GP9)으로 옮긴 뒤 정상 작동을 확인했다. 같은 Pico 세션의 실제 SW4 Pressed/Released 이벤트와 최근 눌림 3,567ms도 수집했다. [입력 점검 원본](dashboard-check/2026-10-24/switch-connection-check.json)의 최종 `seen_press_mask=63`, `seen_release_mask=63`, `all_six_press_release_verified=true`이며 이전 미확인 결과는 `earlier_capture_summary`에 보존했다. 숫자 63은 누적 검증 비트 합이며 현재 눌림 상태가 아니다.
+- 기존 회귀 검사 3개가 모두 통과했다. [검사 로그](dashboard-check/2026-10-24/connection-regression.log), [설정 해시·서비스·API 상태](dashboard-check/2026-10-24/connection-final.json).
+
+`local_tests_enabled=false`, `test_switch=0`을 유지했으므로 SW6 조작으로 로컬 구동 시험을 시작하지 않는다. 여섯 입력의 실시간 감지와 원격 눈 시험은 사용 가능하다.
+
+## 표정 50종과 기기 기준 눈 좌우
+
+대시보드에 **눈으로 전하는 마음**을 추가했다. 드롭다운은 10개 묶음·50종이며 선택은 양쪽 8×8 미리보기만 바꾼다. **표정 시험**은 선택한 표정을 3/5/10초 표시한 뒤 자동 소등한다. 이전/다음 선택, 표정 끄기, 깜빡임·윙크·하트·눈물 등의 짧은 애니메이션을 포함하며 기존 배선·행열 진단도 유지한다.
+
+후속 사용자 지시에 따라 눈 이름과 데이터를 **기기 본체 기준**으로 통일했다. 기기를 정면에서 볼 때 화면 왼편은 **오른쪽 눈**, 화면 오른편은 **왼쪽 눈**이다. `SetEyes.left/right`와 표정 카탈로그는 이 기기 기준을 사용한다. 첫 교정에서 가까운 모듈을 오른쪽 눈으로 가정했으나, 실제 왼쪽 눈 윙크가 보는 사람의 왼편에 나타났다는 사용자 관찰로 배선 대응을 정정했다. **가까운 첫 모듈=기기 왼쪽 눈, 먼 두 번째=기기 오른쪽 눈**이며, `matrix_mount_frame`은 `near = CW90(logical.left)`, `far = logical.right`로 전송한다. 가까운 모듈의 기존 90도 보정은 유지한다. 정면 미리보기에서 right/left를 화면 왼편/오른편에 배치하며 L/R 진단도 같은 기기 기준이다.
+
+새 표정은 **Stop ACK → 서보 비활성 Arm → Eyes ACK** 순서로 적용한다. 펌웨어의 ACTIVE가 유지된 상태에서 재-Arm하면 Busy가 되므로 표정 전환 전에 Stop을 확인한다. Stop은 예약 프레임을 취소하고 진행 중 요청을 선점하며, USB 세션이 바뀌면 과거 표정·정리 명령을 새 세션에 재전송하지 않는다. 화면을 여는 것만으로 장치를 구동하지 않는다.
+
+검증 원본: [카탈로그·배포·회귀·50종 Applied 검사](dashboard-check/2026-10-24/eye-expressions/), [기기 좌우 매핑·빌드·플래시 검증](dashboard-check/2026-10-24/eye-side-correction/). 펌웨어 단위 검사 14개와 Nano 대시보드 검사 16개가 통과했다. 최종 펌웨어에서 50/50 표정 Applied, 자동 소등·Stop을 확인했고 실제 브라우저의 실행·끄기, 50개 선택·키보드 조작, 모바일 가로 넘침 없음, 콘솔 오류 0개를 확인했다. 사용자가 최종 왼쪽 눈 윙크 때 **보는 사람의 오른편 눈이 감김 — 이제 맞음**을 확인했다. [사용자 실물 확인](dashboard-check/2026-10-24/eye-side-correction/user-physical-confirmation.json)은 통신 완료와 별도로 기록한다.
+
+최종 상태에서 **PCA9685 서보 I2C fault bit 1은 남아 있다**. 위 연결 점검 당시의 faults 0은 이전 시험 기록이다. 현재 OE HIGH·서보 출력 차단이며 눈 SPI fault bit 2는 없다. 최종 50종은 `verify_expressions.py --run --matrix-only`로 검사해 오류 원값 1을 보존했다. 서보 오류 때문에 소프트웨어 Bootloader 요청이 거부되어, 사용자가 BOOTSEL로 재연결한 동일 serial Pico를 전체 4MiB 백업 → load → 별도 verify → CDC Status 순서로 복구했다. 서보 보드 전원·SDA/SCL·GND 연결의 별도 점검이 필요하며, 이번 눈 시험 통과를 전체 장치 무오류로 해석하지 않는다.
+
+## 왼눈 반시계 방향 90도 장착 보정 펌웨어
+
+아래는 **화면 기준 ‘왼눈’이라는 이전 명칭**으로 수행한 첫 보정 이력이다. 최신 눈 명칭·데이터 매핑은 위의 기기 기준 절을 따른다. 물리적으로 회전한 모듈을 다시 바꾼 것이 아니다.
+
+2026-10-24 사용자 요청으로 LED 정면 기준 왼쪽 매트릭스를 반시계 방향으로 90도 장착하는 구성을 적용했다. `matrix_mount_frame`이 왼쪽 비트맵을 시계 방향으로 90도 회전하며, 공통 `Matrix::frame`에서 한 번 적용한다. 진단·일반 `SetEyes` 모두 정방향 논리 좌표를 유지하고 오른눈·체인 순서는 바꾸지 않는다. [구현 설명](../../firmware/pico2-device-bench/README.md#기기-기준-눈-좌우와-90도-장착-보정).
+
+- 회전 방향·오른눈 유지·행/열 스캔·blank를 포함한 펌웨어 단위 검사 **14개 통과**. Nano의 RP2350 Release와 네이티브 업데이트 도구 빌드 성공. [검증 요약](dashboard-check/2026-10-24/left-matrix-rotation/validation.json), [빌드 로그](dashboard-check/2026-10-24/left-matrix-rotation/nano-release-build.log).
+- 새 UF2: 155,648바이트, SHA-256 `1a0908cb4ee0ac80dfd7771e2b4039b889ebcd832b05bbf8c9858aed6664e55b`. [실제 빌드 manifest](dashboard-check/2026-10-24/left-matrix-rotation/build-info.json).
+- 같은 Pico `E679675A69C4039B`의 기존 **4MiB 전체 flash 백업 → load 검증 → 별도 verify → 동일 serial USB Status**를 확인했다. 백업은 Nano의 `tmp/pico-flash/20261024T042353.245798Z-linux/previous-flash.bin`에만 보존한다. [업로드 결과](dashboard-check/2026-10-24/left-matrix-rotation/flash-result.json).
+- 업로드 후 대시보드 enabled/active, Pico 재연결과 faults 0, OE HIGH를 확인했다. 새 펌웨어의 눈 시험 진행·완료와 실제 방향 관찰 여부는 [업로드 후 눈 시험](dashboard-check/2026-10-24/left-matrix-rotation/matrix-after-flash.json)에 구분해 기록한다. 후속 사용자 확인: 반시계 방향으로 90도 장착한 왼눈과 오른눈 모두 정방향으로 표시됨. 실제 방향 확인까지 완료했으며 이 관찰은 명령 ACK와 구분해 기록했다.
 
 ## 접속과 최종 배포 상태
 

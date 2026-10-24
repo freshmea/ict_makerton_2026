@@ -1,0 +1,40 @@
+POWER_DEVICE /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0
+in_current0_input 696
+in_current0_trigger_input 696
+in_current1_input 0
+in_current1_trigger_input 0
+in_current2_input 280
+in_current2_trigger_input 280
+in_current_sum_input 0 ma
+in_power0_input 3170
+in_power0_trigger_input 3170
+in_power1_input 0
+in_power1_trigger_input 0
+in_power2_input 1222
+in_power2_trigger_input 1222
+in_voltage0_input 4504
+in_voltage1_input 4504
+in_voltage2_input 4504
+rail_name_0 POM_5V_IN
+rail_name_1 POM_5V_GPU
+rail_name_2 POM_5V_CPU
+KERNEL_SELECTED_LAST_18
+Oct 24 12:48:31 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:32 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:33 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:34 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:35 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:36 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:37 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:38 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:39 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:40 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:41 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:42 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:43 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:44 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:45 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:46 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:47 nano kernel: soctherm: OC ALARM 0x00000001
+Oct 24 12:48:48 nano kernel: soctherm: OC ALARM 0x00000001
+PSTORE_FILES []

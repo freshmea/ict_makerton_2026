@@ -138,6 +138,23 @@ pub enum Message {
     SetEyes { left: [u8;8], right: [u8;8], brightness: u8 },
     Outputs(OutputStatus),
     Applied { request_seq: u32, kind: u8 },
+    // Append-only extensions preserve the wire tags of every existing message.
+    SetServo { channel: u8, target_cdeg: u16, move_ms: u16 },
+    Capabilities { single_servo: bool },
+    CheckServoDriver,
+    ServoDriver(ServoDriverStatus),
+}
+
+/// Read-only probes at 0x40/0x41: 0=not checked, 1=valid registers,
+/// 2=no ACK, 3=timeout, 4=other bus error, 5=invalid MODE2 reserved bits.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
+pub struct ServoDriverStatus {
+    pub selected_address: u8,
+    pub probes: [u8; 2],
+    pub sda_high: bool,
+    pub scl_high: bool,
+    pub initialized: bool,
+    pub last_error: u8,
 }
 
 #[derive(Clone,Copy,Debug,PartialEq,Eq,Serialize,Deserialize)]

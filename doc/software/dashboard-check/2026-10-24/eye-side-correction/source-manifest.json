@@ -1,0 +1,28 @@
+{
+  "backup": "/home/jetson/ict_makerton_2026/tmp/eye-side-correction-20261024T044756Z",
+  "stamp": "20261024T044756Z",
+  "convention": "Observed wiring: near=robot left with CW90 compensation, far=robot right upright; front-view screen order right eye then left eye",
+  "files": {
+    "firmware/pico2-device-bench/src/lib.rs": {
+      "before_sha256": "bccf9d5387679ed0fda0767acb44ce2aa1d41a3b0e70a57c06329c033e3432ba",
+      "after_sha256": "c4103450e817a944c232cb3898001872cebe61700a63296e58b1bc43e340ea9b"
+    },
+    "firmware/pico2-device-bench/src/main.rs": {
+      "before_sha256": "95a1e2666857ac143fd8e5eca66f22db3024b5c849b58a380a9a6aaf84c8beaa",
+      "after_sha256": "8c6c35f0a7b64a961a1885ce688497e76322d8ea28976d3932ad3530e06df6d8"
+    },
+    "apps/device-dashboard/eye_expressions.py": {
+      "before_sha256": "86f0ecc6a64685229e84545f83bc1c95c9e6c904362c955cd294e4a6c69bc5d4",
+      "after_sha256": "42751a3d85864e9d463ade3119e8f968d6a16e104933e4bfa854be9e905eaf3b"
+    },
+    "apps/device-dashboard/static/index.html": {
+      "before_sha256": "23e01217cee35b02a04d78bebc74e0412d262961e1054bce58bbf93e728e5509",
+      "after_sha256": "f46ce05e6b5907cb1804281ab3c245fc55de4089d3498c09877377c2a1dd11ba"
+    },
+    "apps/device-dashboard/test_eye_expressions.py": {
+      "before_sha256": "0acaec9a349744d006f822580c36085f20a41be247c5e2621499be1bce78db92",
+      "after_sha256": "affe26a9f71dbcc43a9958cc4dfade5c08718a04f219e3987a3a850b7b5d6b86"
+    }
+  },
+  "user_observation": "Left wink with far routing closed viewer-left eye, which user identifies as robot right eye."
+}

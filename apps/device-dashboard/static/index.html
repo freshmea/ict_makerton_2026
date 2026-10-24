@@ -6,13 +6,16 @@
   <meta name="theme-color" content="#f2f2ed">
   <title>300 Seconds · 디바이스 모니터</title>
   <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/static/styles.css">
-  <script src="/static/app.js" defer></script>
+  <link rel="stylesheet" href="/static/styles.css?v=20261024-servos1">
+  <script src="/static/app.js?v=20261024-servos1" defer></script>
+  <script src="/static/study.js?v=20261024-dual20" defer></script>
+  <link rel="stylesheet" href="/static/learning.css?v=20261024-learning1">
+  <script src="/static/learning.js?v=20261024-learning3" defer></script>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="/" aria-label="300 Seconds 홈"><span class="brand-mark">300<span>″</span></span><span>SECONDS<span class="brand-caption">DEVICE OBSERVATORY</span></span></a>
-    <nav aria-label="주 메뉴"><a class="active" href="#cameras">실시간 모니터</a><a href="#devices">Pico 장치</a><a href="#audio">오디오</a></nav>
+    <nav aria-label="주 메뉴"><a class="active" href="#cameras">실시간 모니터</a><a href="#learning">관찰·Live</a><a href="#devices">Pico 장치</a><a href="#audio">오디오</a></nav>
     <div class="header-actions"><span class="connection" id="connection"><i></i> 연결 중</span><button class="stop-button" id="stop-all" type="button"><span aria-hidden="true">■</span> Pico 전체 정지</button></div>
   </header>
 
@@ -22,7 +25,7 @@
     <section class="summary" aria-label="시스템 요약">
       <article class="summary-item"><span class="summary-label">PICO 2 W <span class="tiny-dot" id="pico-dot"></span></span><strong id="pico-summary">연결 확인 중</strong><span id="pico-detail">USB · pico-device-v1</span></article>
       <article class="summary-item"><span class="summary-label">CSI CAMERAS</span><strong><span id="camera-count">—</span><small> / 2 온라인</small></strong><span id="camera-detail">IMX219 · 두 채널</span></article>
-      <article class="summary-item"><span class="summary-label">MICROPHONE</span><strong><span id="mic-db">—</span><small> dBFS</small></strong><span id="mic-detail">48 kHz · Mono</span></article>
+      <article class="summary-item"><span class="summary-label">MICROPHONE</span><strong><span id="mic-db">—</span><small> dBFS Peak</small></strong><span id="mic-detail">최근 3초 · 녹음 출력</span></article>
       <article class="summary-item"><span class="summary-label">BOARD LOAD</span><strong><span id="cpu">—</span><small>% CPU</small></strong><span id="board-detail">메모리·온도 확인 중</span></article>
     </section>
 
@@ -38,19 +41,116 @@
         <article class="camera-card" data-camera="0"><div class="camera-stage"><img id="camera-image-0" width="640" height="360" alt="CSI 카메라 0 실시간 영상"><span class="camera-label"><span class="live-dot"></span>CAM 01 <span>/ SENSOR 0</span></span><span class="video-state" id="video-state-0">준비 중</span><span class="stage-cross" aria-hidden="true">+</span></div><div class="camera-info"><div><strong>Camera 01</strong><span>IMX219 · /dev/video0</span></div><div class="camera-fps"><strong id="fps-0">—</strong><span>capture fps</span></div></div><div class="camera-specs" id="camera-specs-0">프레임 데이터 대기 중</div><div class="camera-links"><a href="/api/cameras/0/snapshot.jpg" download="camera-0.jpg">프레임 저장 ↓</a><button class="text-button rtsp-copy" data-sensor="0" type="button">RTSP 주소 복사 ↗</button></div><input class="rtsp-address" id="rtsp-0" readonly aria-label="카메라 0 RTSP 주소"></article>
         <article class="camera-card" data-camera="1"><div class="camera-stage"><img id="camera-image-1" width="640" height="360" alt="CSI 카메라 1 실시간 영상"><span class="camera-label"><span class="live-dot"></span>CAM 02 <span>/ SENSOR 1</span></span><span class="video-state" id="video-state-1">준비 중</span><span class="stage-cross" aria-hidden="true">+</span></div><div class="camera-info"><div><strong>Camera 02</strong><span>IMX219 · /dev/video1</span></div><div class="camera-fps"><strong id="fps-1">—</strong><span>capture fps</span></div></div><div class="camera-specs" id="camera-specs-1">프레임 데이터 대기 중</div><div class="camera-links"><a href="/api/cameras/1/snapshot.jpg" download="camera-1.jpg">프레임 저장 ↓</a><button class="text-button rtsp-copy" data-sensor="1" type="button">RTSP 주소 복사 ↗</button></div><input class="rtsp-address" id="rtsp-1" readonly aria-label="카메라 1 RTSP 주소"></article>
       </div>
+      <section class="study-panel" aria-labelledby="study-title">
+        <div class="study-heading"><div><p class="eyebrow">TEN SECOND STUDY CHECK</p><h3 id="study-title">책상 앞의 10초 <span class="tag">얼굴 + 학습 공간</span></h3></div><span class="study-sampling">JEV · 1초 간격 · 10쌍 / 20장 · 요청 1회</span></div>
+        <p class="study-description">읽기와 필기, 잠깐의 시선 이동부터 주변 물건을 만지는 행동까지. 15개 행동 기준으로 관찰 가능한 학습 흐름을 살펴봅니다.</p>
+        <div class="study-controls"><label for="study-camera">GPT 분석 카메라<select id="study-camera"><option value="0" selected>카메라 1 · SENSOR 0</option><option value="1">카메라 2 · SENSOR 1</option></select></label><button class="primary-button" id="study-openai" type="button" disabled>GPT · 10장 분석 <span aria-hidden="true">↗</span></button><label for="study-jev-cameras">JEV 카메라 배치<select id="study-jev-cameras" aria-describedby="study-camera-roles"><option value="0" selected>얼굴: 카메라 1 / 학습 공간: 카메라 2</option><option value="1">얼굴: 카메라 2 / 학습 공간: 카메라 1</option></select></label><button class="secondary-button" id="study-jev" type="button" disabled>JEV · 20장 분석</button><button class="quiet-button" id="study-cancel" type="button" disabled>수집 취소</button></div>
+        <p class="study-upload-note" id="study-camera-roles">JEV: 얼굴 = 카메라 1 · 학습 공간 = 카메라 2. 얼굴과 손·책상·학습 자료를 각각 담도록 맞춰 주세요. 각 10장, 총 20장을 한 번 전송합니다.</p>
+        <p class="study-upload-note">GPT는 선택한 카메라의 사진 10장을 전송합니다. 두 분석 모두 버튼을 누를 때만 실행하며 자동 반복하지 않습니다.</p>
+        <div class="study-progress-row"><label id="study-progress-label" for="study-progress">수집 대기 · 0 / 20장</label><span id="study-state" role="status" aria-live="polite">분석 서비스를 확인하고 있습니다.</span></div>
+        <progress id="study-progress" max="20" value="0" aria-labelledby="study-progress-label"></progress>
+        <div class="study-metrics"><div><span>관찰 기반 집중 점수</span><strong id="study-focus">—</strong><small>0–10 · 학습 행동 추정</small></div><div><span>책상을 향한 시선</span><strong id="study-gaze">—</strong><small>0–10 · 눈·머리 방향 추정</small></div><div><span>현재 자리 상태</span><strong id="study-presence">분석 전</strong><small id="study-result-meta">판단할 수 없으면 보류합니다.</small></div></div>
+        <p class="study-upload-note" id="study-evidence">얼굴용 카메라는 눈·머리 방향을, 학습 공간용 카메라는 손·책상 위 학습 자료를 담도록 맞춰 주세요.</p>
+        <div class="study-behavior-heading"><h4>15개 행동 관찰</h4><span>관찰됨 · 미관찰 · 판단 불가</span></div><ul class="study-behaviors" id="study-behaviors"><li class="muted">분석 기준을 불러오고 있습니다.</li></ul>
+        <div class="study-footer"><span id="study-budget">GPT 테스트 예산 확인 중</span><span id="study-jev-limit">JEV 무료 모델 상태 확인 중</span></div>
+        <p class="study-limits">자리 상태가 판단 불가이면 자리비움으로 처리합니다. 짧은 물 마시기·스트레칭·시선 이동만으로 집중이 낮다고 단정하지 않습니다. 화면 내용·대화 목적이 보이지 않으면 판단 불가로 표시합니다.</p>
+      </section>
+    </section>
+
+    <section id="learning" class="learning-section">
+      <div class="section-heading"><div><p class="eyebrow">OBSERVATION JOURNAL</p><h2>쌓이는 관찰, 이어지는 대화</h2></div><span class="tag">검증실 · DATABASE + GPT LIVE</span></div>
+      <div class="learning-grid">
+        <article class="learning-collection panel">
+          <div class="learning-card-head"><div><p class="eyebrow">EVERY 10 SECONDS</p><h3>두 시선의 기록</h3></div><span id="collection-badge" class="badge neutral">확인 중</span></div>
+          <p class="learning-copy">카메라별 사진 한 장을 10초마다 분석합니다. 장면 설명과 키워드, 보이는 행동을 시간순으로 남깁니다.</p>
+          <div class="learning-buttons"><button class="primary-button" id="collection-start" type="button" disabled>연속 수집 시작 ↗</button><button class="secondary-button" id="collection-stop" type="button" disabled>수집 중지</button></div>
+          <p id="collection-state" role="status">수집 상태 확인 중</p>
+          <div class="learning-kpis"><div><span>분석 완료</span><strong id="collection-success">—</strong><small>카메라별 관찰 수</small></div><div><span>실패 · 누락</span><strong id="collection-errors">—</strong><small>집계에 별도 보존</small></div><div><span>전송 대기</span><strong id="collection-queue">—</strong><small>최대 2개 묶음</small></div></div>
+          <div class="learning-camera-results"><article><h4>CAM 01 <small>SENSOR 0</small></h4><p id="collection-camera-0">첫 관찰을 기다리고 있습니다.</p></article><article><h4>CAM 02 <small>SENSOR 1</small></h4><p id="collection-camera-1">첫 관찰을 기다리고 있습니다.</p></article></div>
+          <p class="learning-note" id="collection-provider">사진은 분석 API로 전송하고 원본은 DB에 보관하지 않습니다. 수집은 페이지를 닫아도 계속됩니다.</p>
+        </article>
+        <article class="learning-live panel">
+          <div class="learning-card-head"><div><p class="eyebrow">A LITTLE TIME TO TALK</p><h3>GPT Live · 10분</h3></div><span class="live-orbit" aria-hidden="true">✳</span></div>
+          <p class="learning-copy">궁금한 공부 이야기, 오늘 하고 싶은 이야기.<br>보드 마이크와 스피커로 AI 친구와 대화해 보세요.</p>
+          <div class="live-clock"><strong id="live-clock">10:00</strong><span id="live-phase">대화 준비</span></div>
+          <label for="live-mode">대화 모드</label><select id="live-mode"><option value="study">학습 QnA · 함께 생각하기</option><option value="chat">자유 대화 · 하고 싶은 이야기</option></select>
+          <div class="learning-buttons"><button class="primary-button" id="live-start" type="button" disabled>대화 시작 ↗</button><button class="secondary-button" id="live-stop" type="button" disabled>대화 종료</button></div>
+          <p id="live-state" role="status">Live 연결 상태 확인 중</p>
+          <p id="live-education" class="learning-note">교육 프롬프트 적용 상태 확인 중</p>
+          <p id="live-reference" class="learning-note">시작할 때 최근 관찰과 이전 학습 대화를 참조합니다.</p>
+          <div class="learning-buttons"><a class="text-button" href="/api/learning/live/policy" target="_blank" rel="noopener">적용 교육 프롬프트 ↗</a><a class="text-button" href="/api/learning/live/context" target="_blank" rel="noopener">다음 대화 DB 참조 ↗</a></div>
+          <p class="learning-note">기기 SW1을 눌러도 시작·종료합니다. 10분 뒤 자동 종료합니다. AI 응답 재생 중에는 마이크 입력을 잠시 억제합니다. 대화 자막은 DB에 저장되며 API 사용료가 발생합니다.</p>
+        </article>
+      </div>
+      <article class="learning-journal panel">
+        <div class="learning-card-head"><div><p class="eyebrow">EVIDENCE TO DATA</p><h3>관찰 자료 탐색</h3></div><div class="learning-export"><a id="learning-export-csv" class="text-button" href="/api/learning/export?format=csv">CSV ↓</a><a id="learning-export-jsonl" class="text-button" href="/api/learning/export?format=jsonl">JSONL ↓</a></div></div>
+        <form id="learning-filter" class="learning-filter">
+          <label for="learning-since">시작 시각<input id="learning-since" type="datetime-local"></label><label for="learning-until">종료 시각<input id="learning-until" type="datetime-local"></label>
+          <label for="learning-camera">카메라<select id="learning-camera"><option value="">두 카메라</option><option value="0">CAM 01</option><option value="1">CAM 02</option></select></label>
+          <label for="learning-keyword">키워드 · 행동 코드<input id="learning-keyword" type="search" maxlength="80" placeholder="예: 필기 또는 writing"></label><button class="secondary-button" type="submit">조회</button>
+        </form>
+        <p id="learning-query-state" role="status">기록을 불러오는 중</p>
+        <div class="learning-insights"><div><h4>많이 관찰된 행동</h4><ul id="learning-actions"><li>분석 대기</li></ul></div><div><h4>자주 등장한 키워드</h4><ul id="learning-keywords"><li>분석 대기</li></ul></div></div>
+        <p class="learning-note">아래 집계는 사진에 관찰된 횟수입니다. 실제 행동의 지속 시간이나 내적 집중력을 뜻하지 않습니다. CAM 01·02는 독립 관찰이며 합계는 사람 수가 아닙니다.</p>
+        <div class="learning-table-wrap"><table class="learning-table"><caption>카메라별 장면 설명과 분석 결과 · 최신 순</caption><thead><tr><th scope="col">촬영 시각</th><th scope="col">카메라 · 상태</th><th scope="col">장면 설명 · 관찰 근거</th><th scope="col">키워드 · 행동</th><th scope="col">검토 라벨</th></tr></thead><tbody id="learning-records"><tr><td colspan="5">저장된 관찰을 기다리고 있습니다.</td></tr></tbody></table></div>
+        <button class="quiet-button" id="learning-more" type="button" disabled>이전 관찰 더 보기 ↓</button>
+      </article>
+      <article class="learning-transcripts panel"><div class="learning-card-head"><div><p class="eyebrow">CONVERSATION NOTES</p><h3>Live 대화 기록</h3></div><a id="live-export" class="text-button" hidden>대화 JSONL ↓</a></div><label for="live-history-session">저장된 세션</label><select id="live-history-session"><option value="">대화 기록 없음</option></select><div id="live-transcripts" class="live-transcripts"><p class="muted">대화를 시작하면 발화 자막이 여기에 나타납니다.</p></div><button id="live-history-more" class="quiet-button" type="button" disabled>이전 자막 더 보기</button><p id="live-history-meta" class="learning-note">원음은 저장하지 않습니다. 자막은 음성 인식 결과이며 오류가 있을 수 있습니다.</p></article>
     </section>
 
     <section id="devices" class="device-section" aria-labelledby="devices-title"><div class="section-heading"><div><p class="eyebrow">02 / INTERACTION</p><h2 id="devices-title">Pico 장치 <span class="badge neutral" id="pico-badge">연결 대기</span></h2></div><button class="quiet-button" id="pico-reconnect" type="button">↻ USB 연결 재시도</button></div>
       <div class="touch-panel"><div class="touch-heading"><div><h3>터치 입력 <span>6 CHANNELS</span></h3><p class="muted">연결된 입력만 눌림·유지 시간·횟수를 해석합니다.</p></div><code id="touch-mask">RAW — / PRESSED —</code></div><div class="touch-grid" id="touch-grid"></div><div class="touch-footer"><span id="local-tests">로컬 검사 상태 대기</span><span id="pico-age">수신 시각 —</span></div></div>
+      <section class="expression-panel" aria-labelledby="expression-title">
+        <div class="expression-heading"><div><p class="eyebrow">EXPRESSION LAB</p><h3 id="expression-title">눈으로 전하는 마음<span id="expression-count">50 PRESETS</span></h3></div><span class="expression-mount">기기 기준 · 90° 장착 보정 적용</span></div>
+        <div class="expression-body">
+          <div class="expression-preview" role="img" aria-label="선택한 표정의 양쪽 눈 미리보기" id="expression-preview">
+            <span class="expression-preview-label">기기를 정면에서 본 미리보기 · 8×8</span>
+            <div class="expression-eyes"><div><canvas id="expression-right" width="192" height="192" aria-hidden="true"></canvas><span>오른쪽 눈</span></div><div><canvas id="expression-left" width="192" height="192" aria-hidden="true"></canvas><span>왼쪽 눈</span></div></div>
+            <div class="expression-caption"><span id="expression-group">표정 미리보기</span><strong id="expression-name">마음을 골라 보세요</strong></div>
+          </div>
+          <form id="expression-form" class="expression-controls">
+            <label for="expression-select">표정 · 감정 선택</label>
+            <div class="expression-picker"><button id="expression-prev" type="button" aria-label="이전 표정" disabled>←</button><select id="expression-select" name="preset_id" aria-describedby="expression-description" disabled><option value="">표정 목록 불러오는 중…</option></select><button id="expression-next" type="button" aria-label="다음 표정" disabled>→</button></div>
+            <p id="expression-description" class="expression-description">기쁨부터 장난스러운 윙크까지, 50가지 마음을 만나 보세요.</p>
+            <div class="expression-actions"><label for="expression-seconds">표시 시간<select id="expression-seconds" name="seconds"><option value="3">3초</option><option value="5" selected>5초</option><option value="10">10초</option></select></label><button class="primary-button" id="expression-play" type="submit" disabled>▶ 표정 시험</button><button class="quiet-button" id="expression-stop" type="button" disabled>표정 끄기</button></div>
+            <p class="expression-state" id="expression-state" role="status" aria-live="polite">선택하면 미리보기 · 시험을 누르면 양쪽 눈에 표시</p>
+          </form>
+        </div>
+      </section>
       <div class="actuator-grid">
-        <article class="actuator"><span class="module-number">A / DISPLAY</span><div class="module-visual matrix-visual" aria-hidden="true"><span>▦</span><span>▦</span></div><h3>눈 매트릭스</h3><p>MAX7219 · 좌/우 2개</p><span class="module-status" id="matrix-status">장치 데이터 대기</span><button class="module-test" data-module="matrix" type="button">눈 시험 실행 <span>↗</span></button></article>
+        <article class="actuator"><span class="module-number">A / DISPLAY</span><div class="module-visual matrix-visual" aria-hidden="true"><span>▦</span><span>▦</span></div><h3>눈 매트릭스</h3><p>MAX7219 · 좌/우 2개</p><span class="module-status" id="matrix-status">장치 데이터 대기</span><button class="module-test" data-module="matrix" type="button">배선·행열 검사 <span>↗</span></button></article>
         <article class="actuator"><span class="module-number">B / LIGHT</span><div class="module-visual led-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>왼손 NeoPixel</h3><p id="left-segments">구간 데이터 대기</p><span class="module-status" id="left-status">장치 데이터 대기</span><button class="module-test" data-module="left" type="button">왼손 시험 실행 <span>↗</span></button></article>
         <article class="actuator"><span class="module-number">C / LIGHT</span><div class="module-visual led-visual right" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>오른손 NeoPixel</h3><p id="right-segments">구간 데이터 대기</p><span class="module-status" id="right-status">장치 데이터 대기</span><button class="module-test" data-module="right" type="button">오른손 시험 실행 <span>↗</span></button></article>
-        <article class="actuator"><span class="module-number">D / MOTION</span><div class="module-visual servo-visual" aria-hidden="true"><span>◴</span><i></i></div><h3>서보 모터</h3><p>PCA9685 · 6개 채널</p><span class="module-status" id="servo-status">OE 데이터 대기</span><button class="module-test" data-module="servos" type="button">서보 순차 시험 <span>↗</span></button></article>
+        <article class="actuator"><span class="module-number">D / MOTION</span><div class="module-visual servo-visual" aria-hidden="true"><span>◴</span><i></i></div><h3>서보 모터</h3><p>PCA9685 · 6개 채널</p><span class="module-status" id="servo-status">OE 데이터 대기</span><a class="servo-open" href="#servo-controls">개별 각도 조절 <span>↘</span></a></article>
       </div><div class="device-footnote"><span id="device-running">실행 상태 대기</span><span>명령·전송 상태입니다. 실제 각도와 발광 센서 피드백은 없습니다.</span></div>
+      <section class="servo-panel" id="servo-controls" aria-labelledby="servo-title">
+        <div class="servo-heading"><div><p class="eyebrow">SIX CHANNEL MOTION</p><h3 id="servo-title">각도를 직접 골라 보세요</h3></div><span class="badge neutral" id="servo-control-badge">연결 확인 중</span></div>
+        <p class="servo-intro">서보 1번은 CH0, 6번은 CH5입니다. 슬라이더로 값을 고른 뒤 제어를 시작하세요. 제어 중 손을 놓거나 이동을 누르면 선택한 서보만 움직입니다.</p>
+        <div class="servo-toolbar"><button class="primary-button" id="servo-enable" type="button" disabled>서보 제어 시작</button><button class="secondary-button" id="servo-probe" type="button" disabled>서보 보드 연결 재확인</button><button class="servo-stop" id="servo-stop" type="button">■ 서보 출력 정지</button></div>
+        <p id="servo-control-state" class="servo-control-state" role="status" aria-live="polite">Pico와 서보 보드 상태를 확인하고 있습니다.</p>
+        <div id="servo-sliders" class="servo-sliders"></div>
+        <p class="servo-note">0~180°는 명령 각도이며 실제 축 각도 측정값은 아닙니다. 기구물에 걸리지 않는 범위에서 사용하세요. 이동 속도 최대 30°/초 · 제어 연결 만료 시 자동 정지를 요청합니다. 출력 정지 시 서보가 힘을 유지하지 않을 수 있습니다.</p>
+      </section>
     </section>
 
-    <section id="audio" class="lower-grid" aria-label="오디오와 시스템"><article class="audio-panel panel"><div class="section-heading"><div><p class="eyebrow">03 / SOUND</p><h2>오디오 <span class="badge neutral" id="audio-badge">연결 대기</span></h2></div><span class="subtle-code">USB / C-MEDIA</span></div><div class="waveform-wrap"><canvas id="waveform" width="800" height="140" aria-label="실제 마이크 입력 파형"></canvas><div class="wave-scale"><span>MIC INPUT</span><strong id="audio-level">— dBFS</strong></div></div><div class="audio-metrics"><span>48,000 Hz <small>샘플링</small></span><span>S16_LE <small>Mono PCM</small></span><span id="audio-peak">— <small>Peak dBFS</small></span></div><div class="audio-buttons"><button class="secondary-button" id="listen-mic" type="button">▷ 최근 3초 듣기</button><button class="secondary-button" data-audio="tone" type="button">♪ 스피커 시험음</button><button class="quiet-button" data-audio="replay" type="button">녹음 → 스피커</button></div><audio id="recording" controls preload="none" aria-label="최근 마이크 녹음 재생"></audio><div class="audio-footer"><span id="speaker-state">스피커 대기</span><span>최근 최대 6초를 메모리에 보관</span></div></article>
+    <section id="audio" class="lower-grid" aria-label="오디오와 시스템"><article class="audio-panel panel"><div class="section-heading"><div><p class="eyebrow">03 / SOUND</p><h2>오디오 <span class="badge neutral" id="audio-badge">연결 대기</span></h2></div><span class="subtle-code">USB / C-MEDIA</span></div><div class="waveform-wrap"><canvas id="waveform" width="800" height="140" aria-label="증폭 후 실제 녹음 출력 파형"></canvas><div class="wave-scale"><span>REC OUTPUT</span><strong id="audio-level">평균 — dBFS</strong></div></div><div class="audio-metrics"><span>48,000 Hz <small>샘플링</small></span><span>S16_LE <small>Mono PCM</small></span><span id="audio-peak">— <small>최근 3초 Peak dBFS</small></span></div>
+      <form id="audio-gain-form" class="audio-gain-form">
+        <label for="audio-gain">녹음 증폭 <output id="audio-gain-value" for="audio-gain">+12 dB</output></label>
+        <input id="audio-gain" name="gain_db" type="range" min="0" max="30" step="1" value="12" aria-valuetext="+12 dB" aria-describedby="audio-gain-help" disabled>
+        <button id="audio-gain-apply" class="secondary-button" type="submit" disabled>증폭 적용</button>
+        <p id="audio-gain-help">저장·듣기에 함께 적용 · 피크 상한 -1 dBFS · 배경 소음도 함께 커집니다.</p>
+      </form>
+      <div class="audio-input-levels"><span id="audio-raw">원본 평균 — dBFS</span><span id="audio-gain-state" role="status">증폭 상태 대기</span></div>
+      <div class="audio-buttons"><button class="secondary-button" id="listen-mic" type="button">▷ 최근 3초 듣기</button><button class="secondary-button" data-audio="tone" type="button">♪ 스피커 시험음</button><button class="quiet-button" data-audio="replay" type="button">녹음 → 스피커</button></div><audio id="recording" controls preload="none" aria-label="증폭 후 최근 마이크 녹음 재생"></audio>
+      <form id="tts-form" class="tts-form">
+        <div class="tts-heading"><label for="tts-text">문장을 목소리로</label><span>BA-R9 · Typecast 서연</span></div>
+        <textarea id="tts-text" name="text" rows="3" maxlength="240" required placeholder="스피커로 들려줄 문장을 입력하세요." aria-describedby="tts-help tts-status"></textarea>
+        <div class="tts-actions"><span id="tts-count">0 / 240자</span><button class="primary-button" id="tts-play" type="submit" disabled>▶ TTS 재생</button></div>
+        <p id="tts-help">재생을 누르면 입력한 문장을 Typecast로 보내 합성하고, 보드 스피커에서 들려줍니다. 한 번에 최대 240자 · 24시간 합계 500자. 재생 완료 후 바로 다음 문장을 요청할 수 있습니다.</p>
+        <p id="tts-status" class="tts-status" role="status" aria-live="polite">문장을 입력한 뒤 TTS 재생을 눌러 주세요.</p>
+        <a class="tts-credit" href="https://typecast.ai" target="_blank" rel="noopener">Typecast AI 합성 음성 · 서연 ↗</a>
+      </form>
+      <div class="audio-footer"><span id="speaker-state">스피커 대기</span><span>마이크 최근 최대 6초 · 메모리 보관</span></div></article>
       <article class="system-panel panel"><p class="eyebrow">04 / HEALTH</p><div class="system-title"><h2>보드 상태</h2><span class="badge neutral" id="system-badge">수신 대기</span></div><div class="load-head"><span>CPU 사용률</span><strong id="cpu-large">—<small>%</small></strong></div><canvas id="cpu-chart" width="500" height="95" aria-label="최근 CPU 사용률"></canvas><div class="system-rows"><div><span>메모리</span><strong id="memory">—</strong></div><div class="memory-track"><span id="memory-bar"></span></div><div><span>GPU</span><strong id="gpu">—</strong></div><div><span>최고 센서 온도</span><strong id="temperature">—</strong></div><div><span>보드 가동 시간</span><strong id="uptime">—</strong></div></div></article>
     </section>
 

@@ -1,0 +1,33 @@
+{
+  "rate": 48000,
+  "channels": 1,
+  "sample_width": 2,
+  "frames": 144000,
+  "seconds": 3.0,
+  "rms_dbfs": -20.485646044064133,
+  "peak_dbfs": -3.1579243043327274,
+  "full_scale_samples": 0,
+  "audio_state": {
+    "rms_dbfs": -28.0,
+    "peak_dbfs": -10.0,
+    "raw_rms_dbfs": -40.0,
+    "raw_peak_dbfs": -22.0,
+    "gain_db": 12.0,
+    "applied_gain_db": 12.0,
+    "limiter_active": false,
+    "peak_ceiling_dbfs": -1.0,
+    "meter_seconds": 3.0,
+    "connected": true,
+    "age_ms": 114,
+    "error": null,
+    "rate": 48000,
+    "channels": 1,
+    "buffered_seconds": 6.0
+  },
+  "health": {
+    "pico": true,
+    "microphone": true,
+    "cameras": true
+  },
+  "camera_error": null
+}

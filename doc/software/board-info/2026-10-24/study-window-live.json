@@ -1,0 +1,360 @@
+{
+  "online": true,
+  "job": {
+    "id": "f335596256a846d2a581edf613284ac1",
+    "provider": "openai",
+    "camera": 1,
+    "phase": "completed",
+    "captured": 10,
+    "total": 10,
+    "started_at_utc": "2026-10-24T14:04:23.561274+09:00",
+    "result": {
+      "wall_ms": 2786.4,
+      "request_id": "req_bc5d8fd2da9f454ab343a64466710ad1",
+      "usage": {
+        "input_tokens": 5334,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5334
+      },
+      "standard_input_cost_estimate_usd": "0.0005334",
+      "pricing": "standard uncached input $0.10/1M; output free; cache disabled; invoice authoritative",
+      "local_budget": {
+        "local_only": true,
+        "attempts": 4,
+        "max_attempts": 5,
+        "session_cap_usd": "0.10",
+        "reserved_usd": "0.08",
+        "known_standard_cost_usd": "0.0008401",
+        "unknown_cost_attempts": 0,
+        "cooldown_until_unix": 0,
+        "account_balance": "not queried; see OpenAI billing",
+        "automatic_retry": false
+      },
+      "status": "unknown",
+      "focus_score": null,
+      "study_gaze_score": null,
+      "is_away": null,
+      "valid": {
+        "focus_score": false,
+        "study_gaze_score": false,
+        "is_away": false
+      },
+      "probabilities": {
+        "seat_observable": 0.02,
+        "person_present": 0.0,
+        "behavior_observable": 0.02,
+        "gaze_observable": 0.0
+      },
+      "score_confidence": {
+        "focus_score": 0.63,
+        "study_gaze_score": 0.54
+      },
+      "reasons": [
+        "seat_not_observable"
+      ],
+      "score_basis": "10_frame_visible_desk_study_behavior_proxy",
+      "gaze_basis": "coarse_visual_direction_not_calibrated_eye_tracking",
+      "behaviors": [
+        {
+          "id": "phone",
+          "label": "스마트폰으로 하는 딴짓",
+          "state": "unknown",
+          "confidence": 0.43
+        },
+        {
+          "id": "computer_tablet",
+          "label": "컴퓨터·태블릿으로 하는 딴짓",
+          "state": "unknown",
+          "confidence": 0.89
+        },
+        {
+          "id": "off_study_screen",
+          "label": "온라인 공부 화면에서 벗어남",
+          "state": "unknown",
+          "confidence": 0.88
+        },
+        {
+          "id": "social",
+          "label": "다른 사람과 소통",
+          "state": "unknown",
+          "confidence": 0.6
+        },
+        {
+          "id": "stationery",
+          "label": "필기구·문구류로 하는 딴짓",
+          "state": "unknown",
+          "confidence": 0.64
+        },
+        {
+          "id": "paper_notebook",
+          "label": "종이·공책으로 하는 딴짓",
+          "state": "unknown",
+          "confidence": 0.83
+        },
+        {
+          "id": "objects",
+          "label": "장난감·주변 물건으로 하는 딴짓",
+          "state": "unknown",
+          "confidence": 0.58
+        },
+        {
+          "id": "gaze_away",
+          "label": "공부 대상에서 벗어난 시선",
+          "state": "unknown",
+          "confidence": 0.99
+        },
+        {
+          "id": "posture",
+          "label": "자세·움직임 관련 행동",
+          "state": "unknown",
+          "confidence": 0.85
+        },
+        {
+          "id": "away",
+          "label": "자리에서 벗어나는 행동",
+          "state": "unknown",
+          "confidence": 0.31
+        },
+        {
+          "id": "food_drink",
+          "label": "음식·음료 관련 행동",
+          "state": "unknown",
+          "confidence": 0.14
+        },
+        {
+          "id": "preparation",
+          "label": "길어지는 정리·준비",
+          "state": "unknown",
+          "confidence": 0.77
+        },
+        {
+          "id": "appearance",
+          "label": "외모·옷·액세서리 관련 행동",
+          "state": "unknown",
+          "confidence": 0.27
+        },
+        {
+          "id": "task_delay",
+          "label": "공부 시작·문제 풀이 지연",
+          "state": "unknown",
+          "confidence": 0.99
+        },
+        {
+          "id": "environment",
+          "label": "주변 환경을 조작하는 행동",
+          "state": "unknown",
+          "confidence": 0.82
+        }
+      ],
+      "study_area": "desk",
+      "frame_count": 10,
+      "interval_seconds": 1.0,
+      "refused_questions": [],
+      "model": "gpt-6-luna",
+      "provider": "openai",
+      "camera": 1,
+      "generation": "414c9223abdd4f30b2dfa11b9a41b258",
+      "images": [
+        {
+          "ref": "eadc93f5-c949-4c9f-b3a5-cca112f19ac0",
+          "sensor_id": 1,
+          "sample": 0,
+          "received_at_utc": "2026-10-24T14:04:23.565819+09:00",
+          "offset_seconds": 0.0,
+          "width": 640,
+          "height": 360,
+          "bytes": 15086
+        },
+        {
+          "ref": "e276200a-5544-4093-8232-682f0347e779",
+          "sensor_id": 1,
+          "sample": 1,
+          "received_at_utc": "2026-10-24T14:04:24.570573+09:00",
+          "offset_seconds": 1.001,
+          "width": 640,
+          "height": 360,
+          "bytes": 15083
+        },
+        {
+          "ref": "f58bb5b0-9879-4e0e-b4bf-2949f5bd24ce",
+          "sensor_id": 1,
+          "sample": 2,
+          "received_at_utc": "2026-10-24T14:04:25.566301+09:00",
+          "offset_seconds": 2.0,
+          "width": 640,
+          "height": 360,
+          "bytes": 15113
+        },
+        {
+          "ref": "430878db-52ae-4e0d-b130-51e0c5f8e42c",
+          "sensor_id": 1,
+          "sample": 3,
+          "received_at_utc": "2026-10-24T14:04:26.567141+09:00",
+          "offset_seconds": 3.001,
+          "width": 640,
+          "height": 360,
+          "bytes": 15095
+        },
+        {
+          "ref": "0cec0256-7029-4e8d-87d7-6019ab63dcca",
+          "sensor_id": 1,
+          "sample": 4,
+          "received_at_utc": "2026-10-24T14:04:27.566917+09:00",
+          "offset_seconds": 4.001,
+          "width": 640,
+          "height": 360,
+          "bytes": 15125
+        },
+        {
+          "ref": "4371001c-aff8-4640-b741-8433ecfa6490",
+          "sensor_id": 1,
+          "sample": 5,
+          "received_at_utc": "2026-10-24T14:04:28.566391+09:00",
+          "offset_seconds": 5.0,
+          "width": 640,
+          "height": 360,
+          "bytes": 15058
+        },
+        {
+          "ref": "9d2c7d08-1e93-44af-a290-99d6d776fc39",
+          "sensor_id": 1,
+          "sample": 6,
+          "received_at_utc": "2026-10-24T14:04:29.569298+09:00",
+          "offset_seconds": 6.003,
+          "width": 640,
+          "height": 360,
+          "bytes": 15132
+        },
+        {
+          "ref": "8bc9c810-af3a-4b01-a088-7f0eb998f4af",
+          "sensor_id": 1,
+          "sample": 7,
+          "received_at_utc": "2026-10-24T14:04:30.566389+09:00",
+          "offset_seconds": 7.0,
+          "width": 640,
+          "height": 360,
+          "bytes": 15112
+        },
+        {
+          "ref": "a3a9498b-fd82-4890-b473-410e029b4dd7",
+          "sensor_id": 1,
+          "sample": 8,
+          "received_at_utc": "2026-10-24T14:04:31.566414+09:00",
+          "offset_seconds": 8.0,
+          "width": 640,
+          "height": 360,
+          "bytes": 15056
+        },
+        {
+          "ref": "00ea86db-987a-4b7f-bb5b-389a580c265e",
+          "sensor_id": 1,
+          "sample": 9,
+          "received_at_utc": "2026-10-24T14:04:32.568339+09:00",
+          "offset_seconds": 9.0,
+          "width": 640,
+          "height": 360,
+          "bytes": 15073
+        }
+      ],
+      "completed_at_utc": "2026-10-24T14:04:35.587664+09:00"
+    },
+    "error": null,
+    "completed_at_utc": "2026-10-24T14:04:35.587719+09:00"
+  },
+  "providers": {
+    "openai": {
+      "configured": true,
+      "available": true,
+      "budget": {
+        "local_only": true,
+        "attempts": 4,
+        "max_attempts": 5,
+        "session_cap_usd": "0.10",
+        "reserved_usd": "0.08",
+        "known_standard_cost_usd": "0.0008401",
+        "unknown_cost_attempts": 0,
+        "cooldown_until_unix": 0,
+        "account_balance": "not queried; see OpenAI billing",
+        "automatic_retry": false
+      }
+    },
+    "jev": {
+      "configured": true,
+      "available": false,
+      "blocked_until_unix": 1792886400.0,
+      "free_only": true
+    }
+  },
+  "categories": [
+    {
+      "id": "phone",
+      "label": "스마트폰으로 하는 딴짓"
+    },
+    {
+      "id": "computer_tablet",
+      "label": "컴퓨터·태블릿으로 하는 딴짓"
+    },
+    {
+      "id": "off_study_screen",
+      "label": "온라인 공부 화면에서 벗어남"
+    },
+    {
+      "id": "social",
+      "label": "다른 사람과 소통"
+    },
+    {
+      "id": "stationery",
+      "label": "필기구·문구류로 하는 딴짓"
+    },
+    {
+      "id": "paper_notebook",
+      "label": "종이·공책으로 하는 딴짓"
+    },
+    {
+      "id": "objects",
+      "label": "장난감·주변 물건으로 하는 딴짓"
+    },
+    {
+      "id": "gaze_away",
+      "label": "공부 대상에서 벗어난 시선"
+    },
+    {
+      "id": "posture",
+      "label": "자세·움직임 관련 행동"
+    },
+    {
+      "id": "away",
+      "label": "자리에서 벗어나는 행동"
+    },
+    {
+      "id": "food_drink",
+      "label": "음식·음료 관련 행동"
+    },
+    {
+      "id": "preparation",
+      "label": "길어지는 정리·준비"
+    },
+    {
+      "id": "appearance",
+      "label": "외모·옷·액세서리 관련 행동"
+    },
+    {
+      "id": "task_delay",
+      "label": "공부 시작·문제 풀이 지연"
+    },
+    {
+      "id": "environment",
+      "label": "주변 환경을 조작하는 행동"
+    }
+  ],
+  "study_area": "desk",
+  "frame_count": 10,
+  "interval_seconds": 1
+}

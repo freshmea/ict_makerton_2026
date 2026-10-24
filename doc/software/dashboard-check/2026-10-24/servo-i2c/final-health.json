@@ -1,0 +1,33 @@
+{
+  "pico": true,
+  "cameras": true,
+  "microphone": true,
+  "servo_driver": {
+    "initialized": false,
+    "last_error": 0,
+    "probes": [
+      2,
+      2
+    ],
+    "scl_high": true,
+    "sda_high": true,
+    "selected_address": 0
+  },
+  "servo_outputs": {
+    "applied_seq": 0,
+    "armed": false,
+    "calibration_id": 0,
+    "commanded_cdeg": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "light_active": false,
+    "pose_active": false
+  },
+  "oe_high": true,
+  "running": null
+}

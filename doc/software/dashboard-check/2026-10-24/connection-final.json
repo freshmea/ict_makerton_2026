@@ -1,0 +1,179 @@
+{
+  "server_time": 1792810269.6447823,
+  "health": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  },
+  "service": "ActiveState=active\nSubState=running\nUnitFileState=enabled\n",
+  "installation_files": {
+    "/home/jetson/ict_makerton_2026/apps/device-dashboard/installation.json": {
+      "sha256": "4e7865d93ba59c6ba9735ef9211402487f5eee1f6ac38905409f0e7375cc3089",
+      "value": {
+        "touch_inputs_connected": true,
+        "matrix_connected": true,
+        "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+      }
+    },
+    "/opt/300seconds/dashboard/app/installation.json": {
+      "sha256": "4e7865d93ba59c6ba9735ef9211402487f5eee1f6ac38905409f0e7375cc3089",
+      "value": {
+        "touch_inputs_connected": true,
+        "matrix_connected": true,
+        "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+      }
+    }
+  },
+  "pico": {
+    "connected": true,
+    "age_ms": 58,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 2435,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 21448,
+          "last_interval_count": 42,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 18775,
+          "last_interval_count": 37,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 16275,
+          "last_interval_count": 32,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 3567,
+          "last_interval_count": 7,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 382,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 2134,
+          "last_interval_count": 4,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 2472804
+    },
+    "session": "5487A95220C3A75B",
+    "error": null,
+    "last_test": {
+      "done": true,
+      "event": "test_event",
+      "fault": false,
+      "host_monotonic_ms": 551198,
+      "host_unix_ms": 1792810269505,
+      "module": "Matrix",
+      "phase": 0,
+      "seq": 58398,
+      "session": "5487A95220C3A75B",
+      "version": 2
+    },
+    "last_touch": {
+      "event": "touch",
+      "host_monotonic_ms": 483634,
+      "host_unix_ms": 1792810201942,
+      "seq": 57025,
+      "session": "5487A95220C3A75B",
+      "touch": {
+        "duration_ms": 16275,
+        "event_seq": 8827,
+        "index": 3,
+        "interval_count": 32,
+        "kind": "Released",
+        "press_count": 0,
+        "pressed": false,
+        "uptime_ms": 2405161
+      },
+      "version": 2
+    },
+    "module_tests": {
+      "Matrix": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 551198,
+        "host_unix_ms": 1792810269505,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 58398,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    "bridge_pid": 14762,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v1",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "earlier_sample_server_time": 1792810144.0173328,
+  "verification": {
+    "all_six_switches_press_release_verified": true,
+    "switch4_wiring_corrected_to_physical_pin": 12,
+    "matrix_new_test_completed": true,
+    "matrix_physical_both_display_and_off_user_confirmed": true
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "stop_result": {
+    "ack_code": "Ok",
+    "ack_request_seq": 2266,
+    "cmd": "stop",
+    "ok": true,
+    "session": "13DF8255018A1CAD",
+    "status": {
+      "age_ms": 0,
+      "capabilities": {
+        "single_servo": true
+      },
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 442,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 465283
+      },
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "received_unix_ms": 1792839154170,
+      "servo_driver": {
+        "initialized": true,
+        "last_error": 0,
+        "probes": [
+          2,
+          1
+        ],
+        "scl_high": true,
+        "sda_high": true,
+        "selected_address": 65
+      }
+    }
+  },
+  "active": false,
+  "outputs": {
+    "applied_seq": 0,
+    "armed": false,
+    "calibration_id": 0,
+    "commanded_cdeg": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "light_active": false,
+    "pose_active": false
+  },
+  "oe_high": true,
+  "device_config": {
+    "hold_interval_ms": 500,
+    "left_segments": [
+      4,
+      4,
+      10
+    ],
+    "local_tests_enabled": false,
+    "press_window_ms": 2000,
+    "right_segments": [
+      4,
+      4,
+      10
+    ],
+    "servo_max_us": 2000,
+    "servo_min_us": 1000,
+    "test_span_degrees": 10,
+    "test_switch": 0,
+    "touch_active_low_mask": 0
+  }
+}

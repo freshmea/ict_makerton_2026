@@ -1,0 +1,258 @@
+{
+  "at_utc": "2026-10-24T07:32:45.697791+00:00",
+  "speaker": "Britz BA-R9",
+  "user_action": "User turned on physical power button and is ready for retest",
+  "human_audibility": {
+    "tone": "both tone and Korean TTS clearly audible; user confirmed",
+    "tts": "both tone and Korean TTS clearly audible; user confirmed",
+    "user_reply_ko": "둘 다 잘 들림"
+  },
+  "text": "문제에 주어진 조건을 먼저 하나 찾아볼까?",
+  "attribution": "Typecast AI synthetic voice; Seoyeon; https://typecast.ai",
+  "dashboard_tone": {
+    "state": "idle",
+    "last_result": {
+      "ok": true,
+      "time": 1792827167.0715415,
+      "output": ""
+    },
+    "kind": "tone"
+  },
+  "microphone_tone_bands": [
+    [
+      0.0,
+      -38.3,
+      -44.8,
+      -46.4
+    ],
+    [
+      0.1,
+      -41.0,
+      -42.3,
+      -43.1
+    ],
+    [
+      0.2,
+      -49.7,
+      -56.4,
+      -56.8
+    ],
+    [
+      0.3,
+      -46.0,
+      -44.4,
+      -48.4
+    ],
+    [
+      0.4,
+      -49.6,
+      -57.6,
+      -53.9
+    ],
+    [
+      0.5,
+      -49.5,
+      -42.1,
+      -59.7
+    ],
+    [
+      0.6,
+      -46.0,
+      -52.2,
+      -52.0
+    ],
+    [
+      0.7,
+      -51.0,
+      -55.1,
+      -60.5
+    ],
+    [
+      0.8,
+      -58.6,
+      -55.1,
+      -62.1
+    ],
+    [
+      0.9,
+      -55.3,
+      -43.6,
+      -52.0
+    ],
+    [
+      1.0,
+      -56.9,
+      -44.5,
+      -61.1
+    ],
+    [
+      1.1,
+      -57.7,
+      -58.8,
+      -57.7
+    ],
+    [
+      1.2,
+      -57.4,
+      -52.5,
+      -63.0
+    ],
+    [
+      1.3,
+      -55.8,
+      -58.2,
+      -60.3
+    ],
+    [
+      1.4,
+      -57.5,
+      -62.3,
+      -60.3
+    ],
+    [
+      1.5,
+      -49.3,
+      -49.8,
+      -62.6
+    ],
+    [
+      1.6,
+      -46.3,
+      -45.8,
+      -54.8
+    ],
+    [
+      1.7,
+      -45.4,
+      -50.9,
+      -52.3
+    ],
+    [
+      1.8,
+      -16.6,
+      -58.9,
+      -58.3
+    ],
+    [
+      1.9,
+      -16.0,
+      -63.7,
+      -54.2
+    ],
+    [
+      2.0,
+      -16.4,
+      -69.5,
+      -56.9
+    ],
+    [
+      2.1,
+      -43.9,
+      -60.1,
+      -69.2
+    ],
+    [
+      2.2,
+      -49.5,
+      -20.5,
+      -65.5
+    ],
+    [
+      2.3,
+      -50.2,
+      -21.9,
+      -57.8
+    ],
+    [
+      2.4,
+      -49.5,
+      -22.6,
+      -62.7
+    ],
+    [
+      2.5,
+      -30.9,
+      -26.2,
+      -51.6
+    ],
+    [
+      2.6,
+      -36.9,
+      -60.1,
+      -21.5
+    ],
+    [
+      2.7,
+      -46.4,
+      -50.4,
+      -21.9
+    ],
+    [
+      2.8,
+      -47.8,
+      -57.6,
+      -22.4
+    ],
+    [
+      2.9,
+      -50.5,
+      -61.3,
+      -55.2
+    ]
+  ],
+  "band_columns": [
+    "offset_seconds",
+    "660_hz_dbfs",
+    "880_hz_dbfs",
+    "1100_hz_dbfs"
+  ],
+  "synthesis": {
+    "exit_code": 0,
+    "elapsed_seconds": 9.491,
+    "output": "{\"account_before\":{\"checked_unix\":1792827171,\"plan\":\"free\",\"plan_credits\":15000,\"provider\":\"typecast\",\"remaining_plan_credits\":14943,\"source\":\"GET /v1/users/me/subscription\",\"used_credits\":57},\"disclosure\":\"Typecast AI 합성 음성\",\"microphone_uploaded\":false,\"model\":\"ssfm-v30\",\"provider\":\"typecast\",\"requested_characters\":23,\"voice_id\":\"tc_637cbfeef7f00f21e8a1c6c8\",\"wall_ms\":5598}\n"
+  },
+  "wave": {
+    "rate": 44100,
+    "channels": 1,
+    "sample_width": 2,
+    "seconds": 2.95
+  },
+  "playback": {
+    "exit_code": 0,
+    "elapsed_seconds": 3.071,
+    "output": ""
+  },
+  "software_path_passed": true,
+  "acoustic_sequence_check": {
+    "detected": true,
+    "threshold_db": 6,
+    "method": "Known ordered test-tone windows; each target must exceed the other two test-frequency bands by at least 6 dB",
+    "checks": [
+      {
+        "frequency_hz": 660,
+        "window_seconds": [
+          1.8,
+          2.0
+        ],
+        "minimum_dominance_over_other_tones_db": 38.2
+      },
+      {
+        "frequency_hz": 880,
+        "window_seconds": [
+          2.2,
+          2.4
+        ],
+        "minimum_dominance_over_other_tones_db": 26.9
+      },
+      {
+        "frequency_hz": 1100,
+        "window_seconds": [
+          2.6,
+          2.8
+        ],
+        "minimum_dominance_over_other_tones_db": 15.4
+      }
+    ]
+  },
+  "overall_hardware_test_passed": true
+}

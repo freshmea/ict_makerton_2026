@@ -1,0 +1,106 @@
+{
+  "regression": {
+    "target": "Jetson Python 3.8 dashboard venv",
+    "initial_suite_tests": 40,
+    "initial_suite_passed": true,
+    "audio_suite_after_tone_increase_tests": 18,
+    "audio_suite_after_tone_increase_passed": true
+  },
+  "volume": {
+    "before_usb_db": -6,
+    "after_usb_db": -3,
+    "after_usb_raw": 34,
+    "after_usb_percent": 92,
+    "persisted": true,
+    "tts_requested_gain_db": 6,
+    "tts_peak_ceiling_dbfs": -1,
+    "tone_peak_amplitude_before": 0.1,
+    "tone_peak_amplitude_after": 0.16
+  },
+  "limits": {
+    "max_utf16_units": 240,
+    "requests_per_minute": 2,
+    "rolling_24h_characters": 500,
+    "rolling_30d_characters": 12000,
+    "shared_runtime_ledger": true,
+    "automatic_retry": false
+  },
+  "privacy": {
+    "dashboard_has_provider_key": false,
+    "input_or_wav_persisted": false
+  },
+  "live_test": {
+    "method": "Playwright: fill textarea and click TTS playback on deployed dashboard",
+    "http_status": 200,
+    "text": "안녕하세요. 볼륨을 높였습니다. 대시보드의 음성 재생 테스트입니다.",
+    "provider": "typecast",
+    "model": "ssfm-v30",
+    "voice": "Seoyeon",
+    "requested_characters": 37,
+    "synthesis_wall_ms": 5464,
+    "aplay_ok": true,
+    "gain_db": 6,
+    "applied_gain_db": 6,
+    "limiter_active": false,
+    "input_preserved": true,
+    "ready_for_next_request": true,
+    "actual_synthesis_calls": 1
+  },
+  "http_boundary_checks": [
+    {
+      "check": "missing_csrf",
+      "expected": 403,
+      "actual": 403
+    },
+    {
+      "check": "empty",
+      "expected": 422,
+      "actual": 422
+    },
+    {
+      "check": "too_long",
+      "expected": 422,
+      "actual": 422
+    },
+    {
+      "check": "unsupported_field",
+      "expected": 422,
+      "actual": 422
+    },
+    {
+      "check": "foreign_origin",
+      "expected": 403,
+      "actual": 403
+    }
+  ],
+  "health_after_deployment": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  },
+  "deployment": {
+    "dashboard": "active",
+    "tts": "active",
+    "credential_mode": "0600",
+    "backup": "/var/tmp/ba-r9-dashboard-tts-backup-20261024"
+  },
+  "ui_checks": {
+    "busy_state_method": "Mocked 409 response; no extra synthesis call",
+    "tts_button_disabled_while_pending": true,
+    "tone_button_disabled_while_pending": true,
+    "aria_busy_while_pending": true,
+    "inline_error_and_recovery": true,
+    "mobile_viewport": 390,
+    "mobile_document_width": 390,
+    "mobile_input_font_px": 16,
+    "mobile_button_height_px": 48,
+    "mobile_ready_after_telemetry": true,
+    "cache_fix": "Versioned script/style URLs and no-cache revalidation for HTML/app.js/styles.css"
+  },
+  "human_confirmation": {
+    "reply_ko": "이제 적당함",
+    "audible": true,
+    "volume_appropriate": true
+  }
+}

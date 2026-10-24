@@ -1,0 +1,17 @@
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/rail_name_0
+POM_5V_IN
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/rail_name_1
+POM_5V_GPU
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/rail_name_2
+POM_5V_CPU
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage0_input
+4512
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage1_input
+4512
+/sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage2_input
+4512
+59
+    PID    PPID     ELAPSED COMMAND
+  34767       1       05:39 /opt/300seconds/dashboard/venv/bin/python -B -m uvicorn app:app --host 192.168.184.76 --port 8000 --workers 1 --no-access-log
+  34822   34767       05:37 /opt/300seconds/dashboard/venv/bin/python -B /opt/300seconds/dashboard/app/media_worker.py --runtime /run/300seconds-dashboard --profile 720p30 --run-id 3d8b9e091f5d42c8bee3c25f3f5bcf33 --bind 192.168.184.76 --encoder omxh264enc
+

@@ -1,0 +1,32 @@
+{
+  "target": "thumbv8m.main-none-eabihf",
+  "family": "0xe48bff59",
+  "blocks": 309,
+  "bytes": 158208,
+  "sha256": "3388d8cb2c326faf4886fdd914a2ff89609e5d83dc9ba8183ef798db42a6ea85",
+  "at_utc": "2026-10-24T09:58:33.725362+00:00",
+  "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+  "converter": "picotool 2.3.1",
+  "picotool_sha256": "7bbfa5a2c2ad447353e82bc66af70aa09379bb5709129ccb9bdfc985cea39422",
+  "host_sha256": "c949ca1ea3732d232423e823934c2190b741a9d580e5312a3adfc89230d01e13",
+  "git_head": "3d4b198ec58a801a8a80a01f535b49ba2eb426e5",
+  "git_dirty": true,
+  "source_sha256": {
+    "firmware/pico2-device-bench/.cargo/config.toml": "f3591d029f55429aa462e9a61c5b1b637bd3cc6c86ac55695c4d2df7d41c00be",
+    "firmware/pico2-device-bench/Cargo.lock": "54b6d26c470c2657b8426b930af58e70cc6c5729a43a4c66bca581e51765ea3d",
+    "firmware/pico2-device-bench/Cargo.toml": "a13cb3c042d5b0c8a66d1393d1cb2329503ac6071812a3437bc6225bdd2d9977",
+    "firmware/pico2-device-bench/build.rs": "74fbfc498c904689039120d722ceb8360ec0e0c4eda8d799d8caf95f313e406d",
+    "firmware/pico2-device-bench/memory.x": "9c493a7dcaa96535a529b5afecf048d12468b7e7ce6edf26fb022f81b3fe865c",
+    "firmware/pico2-device-bench/src/application.rs": "2869a32a34a3fdd168ab3e3eef6e71664c7b53de3e1106c9545e957513e38da3",
+    "firmware/pico2-device-bench/src/lib.rs": "2b4f1e937412487bd9d3080fe4f089e2132ff60d7a89d3e1be5beb9284dac789",
+    "firmware/pico2-device-bench/src/main.rs": "4d2be8825fe9725ce25ff1f481565a9f71852d4eff6736c0728761dab72df279",
+    "firmware/pico2-device-bench/src/picotool_reset.rs": "cea22c71542735530df078f9756d475c57eca219ada1084c2df1763337b62b12",
+    "tools/pico-device-bench/Cargo.lock": "05ee34f0655ed3da851be8bbce1283ba22b98c5b1c071a9fa4c2b5cf9dc0bd4d",
+    "tools/pico-device-bench/Cargo.toml": "67b2405e0436bb046e7d68e8d0aff2fec8bf90a44053a7bc9ea00ad2228fd844",
+    "tools/pico-device-bench/src/lib.rs": "2c0eb9c49a9ebe127d62b6cde8ee4a9c3e965954383eb5166ecaeb30b6850dfb",
+    "tools/pico-device-bench/src/main.rs": "6aaa71eb9245a9e2363aa7ec8ef2170470d0d425df55373543ec863bf8f4c2a4",
+    "crates/pico-device-protocol/Cargo.lock": "b42ef9404d2bfcb40e8cd3a220392cfadb92bb2d4ac6b32fb497bb57ca6bc3d7",
+    "crates/pico-device-protocol/Cargo.toml": "0955b50577747b844d45ee518c1009cf3c99aeca0d256a145415cde3ffc461d6",
+    "crates/pico-device-protocol/src/lib.rs": "9ffd0ff498b0d839c5e032c4a5794ed47e1608c985d1ed49a9d5252dc3f3c824"
+  }
+}

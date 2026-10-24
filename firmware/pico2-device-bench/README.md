@@ -1,6 +1,6 @@
 # Pico 2 통합 장치 진단 펌웨어
 
-현재 확장은 **wire v2**의 보정 Arm·6축 목표 보간·고정/주기 조명·표정·Applied와 독립 safety/hardware watchdog을 포함한다. 기존 순차 진단도 유지한다. 기본 서보는 잠그고 현재 미연결 matrix는 거부한다. [전체 기능·운영](../../doc/software/전체기능_구현과_운영.md)과 [실제 계약](../../crates/pico-device-protocol/README.md)을 따른다.
+현재 확장은 **wire v2**의 보정 Arm·6축 목표 보간·고정/주기 조명·표정·Applied와 독립 safety/hardware watchdog을 포함한다. 기존 순차 진단도 유지한다. 기본 서보는 잠그며, 일반 표정 명령은 Arm의 `matrix_installed=true`일 때 수락한다. [전체 기능·운영](../../doc/software/전체기능_구현과_운영.md)과 [실제 계약](../../crates/pico-device-protocol/README.md)을 따른다.
 
 Rust 1.90 / Embassy RP 0.10 / RP2350 Arm secure 대상의 통합 벤치 이미지다. 부팅 시 서보 OE를 HIGH로 두고 양손 NeoPixel을 검게 지우며 MAX7219를 blank/shutdown 한다. 부팅이나 USB 재연결만으로 검사를 시작하지 않는다. 기존 개별 벤치 이미지와 달리 USB CDC 데이터는 **바이너리 전용**이며, `tools/pico-device-bench` 호스트를 사용한다.
 
@@ -8,16 +8,32 @@ Rust 1.90 / Embassy RP 0.10 / RP2350 Arm secure 대상의 통합 벤치 이미�
 
 | 용도 | Pico GPIO | 물리 핀 / 설정 |
 | --- | --- | --- |
-| PCA9685 SDA / SCL | GP4 / GP5 | 6 / 7, I2C0 100kHz, 주소 0x41 |
+| PCA9685 SDA / SCL | GP4 / GP5 | 6 / 7, I2C0 100kHz, 0x40/0x41 단일 응답 선택 |
 | PCA9685 OE | GP12 | 16, HIGH=출력 차단 |
 | 터치 SW1~SW6 | GP6~GP11 | 9,10,11,12,14,15, PullNone |
 | 왼손 NeoPixel DIN | GP16 | 21, PIO0 SM0 / DMA0, GRB 800kHz |
 | 오른손 NeoPixel DIN | GP17 | 22, PIO0 SM1 / DMA1, GRB 800kHz |
 | MAX7219 CLK / DIN / CS | GP18 / GP19 / GP20 | 24 / 25 / 26, SPI0 mode0 1MHz |
 
-PCA 서보 1~6은 CH0~CH5를 쓴다. MAX7219는 Pico에 가까운 왼눈 다음 오른눈 순서로 2개 직렬 연결하며 오른눈 데이터를 먼저 전송한다. intensity는 1, decode는 0, scan-limit는 7, display-test는 0이다.
+PCA 서보 1~6은 CH0~CH5를 쓴다. 실물 관찰로 확인한 MAX7219 연결은 **기기 본체 기준 왼쪽 눈(가까운/첫 번째) → 오른쪽 눈(먼/두 번째)** 순서다. SPI는 먼 오른쪽 눈 데이터를 먼저 전송한다. intensity는 1, decode는 0, scan-limit는 7, display-test는 0이다.
+
+### 기기 기준 눈 좌우와 90도 장착 보정
+
+현재는 **기기 본체 기준 왼쪽 눈·오른쪽 눈**으로 통일한다. 정면에서 보는 사람의 오른편이 기기의 왼쪽 눈이다. 실물 윙크 관찰로 가까운 모듈이 기기 왼쪽 눈임을 확인했으며, 이 모듈의 LED 정면 기준 반시계 방향 90도 장착과 시계 방향 90도 출력 보정은 유지한다. 먼 모듈은 기기 오른쪽 눈이며 회전하지 않는다.
+
+논리 좌표는 위에서 아래로 8행, 각 행의 bit 7이 그림의 왼쪽이다. 논리 `left/right`는 기기 본체의 눈을 뜻한다. `matrix_mount_frame`은 **`near = CW90(logical.left)`, `far = logical.right`**로 물리 출력 버퍼를 만든다. `Matrix::frame`에서 SPI 전송 직전에 한 번만 적용하므로 L/R 식별 진단과 v2 `SetEyes`가 같은 매핑을 사용한다. 정면 미리보기의 화면 왼편에는 논리 right를, 화면 오른편에는 논리 left를 그린다. 호스트에서 실제 전송 데이터를 중복 교환하거나 회전하지 않는다. 부팅/Stop의 blank 프레임은 그대로 blank다.
+
+비대칭 L 도형의 회전 방향·오른눈 유지, 행/열 스캔, blank 종료를 단위 검사로 확인한다. 실제 업로드·표시 결과는 [대시보드 후속 검증 기록](../../doc/software/Jetson_Nano_장치_대시보드.md)을 따른다.
 
 NeoPixel은 손마다 최대 36픽셀 버퍼를 가지며 기본 세그먼트는 각각 `[4,4,10]`, 한 손 18개/양손 총 36개다. `Configure`로 각 손 3개 세그먼트를 변경한다. 실제 사용 길이 뒤의 36픽셀까지는 매번 검정으로 전송한다. RGB 각 채널은 최대 32/255로 제한하고 RGBW는 지원하지 않는다. GPIO 3.3V 직결의 동작 여유는 LED 전원/배선/개체에 영향을 받으며 실제 발광은 실물에서 확인한다.
+
+## 개별 서보 제어 확장
+
+2026-10-24 wire v2 메시지 enum 끝에 `SetServo { channel, target_cdeg, move_ms }`, `Capabilities { single_servo }`, `CheckServoDriver`를 추가했다. 기존 메시지의 Postcard 태그는 유지한다. Hello/GetStatus 때 capability를 보내며 호스트는 이를 확인한 뒤 확장 명령을 전송한다.
+
+`SetServo`는 보정 Arm·lease·PCA 정상 상태를 요구하고 CH0~CH5 중 선택한 채널만 보간한다. 활성 이동 중 새 요청은 Busy이며 완료는 `Applied.kind=4`로 보고한다. 처음에는 PCA 전체 출력을 끈 뒤 선택 채널만 켠다. 이후 다른 채널은 이전 PWM을 유지한다. Stop은 모든 채널을 끄고 OE를 HIGH로 둔다. `CheckServoDriver`는 idle·미Arm·OE HIGH 상태에서만 초기화하며 성공할 때만 PCA fault를 지운다. [대시보드 사용법·실기 제한](../../apps/device-dashboard/README.md#서보별-각도-슬라이더)을 참고한다.
+
+재부팅 후 PCA 오류 진단 확장은 `ServoDriver` 상태 메시지를 enum 끝에 추가한다. 출력 차단 상태에서 0x40/0x41의 MODE1·MODE2를 각각 읽고 MODE2 예약 비트를 검사한다. 정확히 한 주소만 유효하면 그 주소를 선택하며 두 주소가 모두 응답하면 선택하지 않는다. ALLCALL 0x70을 구동 주소로 사용하지 않는다. 주소별 응답·ACK 없음·40ms 시간 초과·기타 버스 오류·레지스터 불일치, SDA/SCL의 디지털 입력, 초기화 여부와 마지막 쓰기 오류를 보고한다. HIGH/LOW는 전압계 측정이 아니다. 부팅 시에도 주소 확인 후 FULL_OFF만 쓰며 PWM을 시작하지 않는다. 자세한 상태는 Hello/GetStatus 및 명시적 driver probe에서 제공한다. 이 소스 확장의 실기 업로드·관측 여부는 해당 실행의 검증 기록과 구분한다.
 
 ## SW6 로컬 검사
 
@@ -73,4 +89,4 @@ cargo test --manifest-path firmware/pico2-device-bench/Cargo.toml --lib --target
 cargo build --manifest-path firmware/pico2-device-bench/Cargo.toml --target thumbv8m.main-none-eabihf --release --locked --offline
 ```
 
-초기 `logs/unit-test.txt`는 heapless 참조 오류가 난 과거 실패 기록이다. 이전 문서의 `unit-test-reset.txt`·`release-build-reset.txt`는 현재 저장소에 없으므로 성공 증거로 링크하지 않는다. 현재 소스 단위 검사 결과는 [2026-10-24 재검증](../../doc/software/board-info/2026-10-24/git-sync-firmware-tests.log), 실제 Linux release 빌드는 [최종 빌드 로그](../../doc/software/board-info/2026-10-24/linux-firmware-setup-and-build-final.log)를 따른다. 2026-10-24에는 [실제 flash](../../doc/software/board-info/2026-10-24/dashboard-pico-flash-result.json)와 [Nano USB·LED/서보 사용자 실물 확인](../../doc/software/Jetson_Nano_장치_대시보드.md)을 확보했다. 현재 스위치·매트릭스는 미연결이며 해당 통합 실물 시험과 부하·장애 검사는 남아 있다.
+초기 `logs/unit-test.txt`는 heapless 참조 오류가 난 과거 실패 기록이다. 이전 문서의 `unit-test-reset.txt`·`release-build-reset.txt`는 현재 저장소에 없으므로 성공 증거로 링크하지 않는다. 현재 소스 단위 검사 결과는 [2026-10-24 재검증](../../doc/software/board-info/2026-10-24/git-sync-firmware-tests.log), 실제 Linux release 빌드는 [최종 빌드 로그](../../doc/software/board-info/2026-10-24/linux-firmware-setup-and-build-final.log)를 따른다. 2026-10-24에는 [실제 flash](../../doc/software/board-info/2026-10-24/dashboard-pico-flash-result.json)와 [Nano USB·LED/서보 사용자 실물 확인](../../doc/software/Jetson_Nano_장치_대시보드.md)을 확보했다. 후속 연결 점검에서 스위치 6개 눌림·해제와 매트릭스 양쪽 표시·소등을 확인했다. 이번 왼눈 90도 장착 보정의 새 UF2 재업로드·readback·USB 재연결은 [후속 기록](../../doc/software/Jetson_Nano_장치_대시보드.md#왼눈-반시계-방향-90도-장착-보정-펌웨어)을 따른다. 부하·장애 검사는 별도다.

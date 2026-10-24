@@ -1,4 +1,5 @@
 # Linux setup files must remain sourceable after a Windows checkout/transfer.
+/*.sh text eol=lf
 firmware/*.sh text eol=lf
 firmware/pico_linux.py text eol=lf
 firmware/test_pico_linux.py text eol=lf
@@ -10,6 +11,17 @@ apps/device-dashboard/*.service text eol=lf
 
 # Preserve diagnostic command output and upstream license whitespace verbatim.
 doc/software/board-info/**/*.log -text -whitespace
+doc/software/board-info/**/*.txt -text -whitespace
+doc/software/dashboard-check/**/*.log -text -whitespace
 apps/device-dashboard/static/fonts/LICENSE.txt -whitespace
 
 software/** text=auto eol=lf
+
+# Shared sources use the same line endings on Windows and Jetson.
+*.rs text eol=lf
+*.md text eol=lf
+apps/device-dashboard/*.json text eol=lf
+apps/device-dashboard/*.example text eol=lf
+apps/device-dashboard/static/*.js text eol=lf
+apps/device-dashboard/static/*.css text eol=lf
+apps/device-dashboard/static/*.html text eol=lf

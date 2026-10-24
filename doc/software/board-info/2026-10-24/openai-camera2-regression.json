@@ -1,0 +1,33 @@
+{
+  "at_utc": "2026-10-24T04:33:08.973675+00:00",
+  "additional_api_calls": 0,
+  "files": [
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/jev-study-observer.py",
+      "sha256": "d2b4925764c56d720ded71fff5ad525125dca38887534d305dea6ab76ed5861f"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/test_jev_study_observer.py",
+      "sha256": "19538c7f1209922ac5b1138cb4b4672217eab5168d662dae54172b660ca4146b"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/test_openai_study_observer.py",
+      "sha256": "f44718b5aa1058210cc6cd9dcd29848cbe0cc744ed69fc437ccdf92f190f4f90"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/doc/software/OpenAI_Decisions_카메라_테스트와_예산.md",
+      "sha256": "7531baed4449911d39565a24ca0ddb2ec7efec06285861e2e5b4491f85ce87eb"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/doc/software/OpenCode_Jev_카메라_관찰_설정과_테스트.md",
+      "sha256": "f74c89c3bf21493e9684790394cc9874ab2fc2b78138e264450ef3effff4d4ba"
+    }
+  ],
+  "tests": {
+    "stdout": "",
+    "stderr": "test_analyze_composes_request_and_only_returns_metadata (test_jev_study_observer.ContractTests) ... ok\ntest_bad_view_cannot_be_called_away (test_jev_study_observer.ContractTests) ... ok\ntest_camera_generation_and_freshness_are_required (test_jev_study_observer.ContractTests) ... ok\ntest_clear_person_closeup_confirms_presence_without_seat_overview (test_jev_study_observer.ContractTests) ... ok\ntest_empty_seat_is_not_scored_as_unfocused (test_jev_study_observer.ContractTests) ... ok\ntest_environment_is_data_not_shell_code (test_jev_study_observer.ContractTests) ... ok\ntest_free_usage_limit_is_reported_without_echoing_body (test_jev_study_observer.ContractTests) ... ok\ntest_gaze_hidden_does_not_hide_valid_behavior (test_jev_study_observer.ContractTests) ... ok\ntest_invalid_numbers_and_refusals_fail (test_jev_study_observer.ContractTests) ... ok\ntest_jpeg_dimension_contract (test_jev_study_observer.ContractTests) ... ok\ntest_key_cannot_be_sent_to_another_host (test_jev_study_observer.ContractTests) ... ok\ntest_key_missing_prevents_capture (test_jev_study_observer.ContractTests) ... ok\ntest_low_score_confidence_suppresses_score (test_jev_study_observer.ContractTests) ... ok\ntest_missing_answer_fails (test_jev_study_observer.ContractTests) ... ok\ntest_model_and_dashboard_origin_guards (test_jev_study_observer.ContractTests) ... ok\ntest_paid_model_is_blocked_before_any_request (test_jev_study_observer.ContractTests) ... ok\ntest_payload_references_and_no_raw_media_in_metadata (test_jev_study_observer.ContractTests) ... ok\ntest_provider_errors_never_echo_credentials_or_input (test_jev_study_observer.ContractTests) ... ok\ntest_rubric_has_supported_level_count (test_jev_study_observer.ContractTests) ... ok\ntest_scale_endpoints (test_jev_study_observer.ContractTests) ... ok\ntest_score_scale_and_real_boolean (test_jev_study_observer.ContractTests) ... ok\ntest_uncertain_presence_never_forces_boolean (test_jev_study_observer.ContractTests) ... ok\ntest_unclear_person_and_hidden_seat_remain_unknown (test_jev_study_observer.ContractTests) ... ok\ntest_camera_pipeline_makes_one_request_and_only_returns_metadata (test_openai_study_observer.DecisionsTests) ... ok\ntest_camera_two_closeup_keeps_occupancy_and_withholds_study_scores (test_openai_study_observer.DecisionsTests) ... ok\ntest_corrupt_budget_fails_closed (test_openai_study_observer.DecisionsTests) ... ok\ntest_decisions_mapping_keeps_0_to_10_and_boolean (test_openai_study_observer.DecisionsTests) ... ok\ntest_external_images_and_excessive_input_are_blocked (test_openai_study_observer.DecisionsTests) ... ok\ntest_input_usage_cost_and_unknown_attempt_are_separate (test_openai_study_observer.DecisionsTests) ... ok\ntest_missing_key_makes_no_reservation (test_openai_study_observer.DecisionsTests) ... ok\ntest_missing_or_duplicated_answers_fail (test_openai_study_observer.DecisionsTests) ... ok\ntest_only_fixed_model_and_disabled_cache_allowed (test_openai_study_observer.DecisionsTests) ... ok\ntest_parallel_lock_does_not_allow_another_reservation (test_openai_study_observer.DecisionsTests) ... ok\ntest_rate_limit_stops_later_calls (test_openai_study_observer.DecisionsTests) ... ok\ntest_refusal_preserves_other_observations (test_openai_study_observer.DecisionsTests) ... ok\ntest_three_attempt_cap_persists_across_instances (test_openai_study_observer.DecisionsTests) ... ok\ntest_timeout_never_retries_and_keeps_reservation (test_openai_study_observer.DecisionsTests) ... ok\ntest_unauthorized_does_not_log_body_or_retry (test_openai_study_observer.DecisionsTests) ... ok\n\n----------------------------------------------------------------------\nRan 38 tests in 0.187s\n\nOK\n",
+    "exit_code": 0
+  },
+  "installed_helper_sha256": "d2b4925764c56d720ded71fff5ad525125dca38887534d305dea6ab76ed5861f",
+  "installed": true
+}

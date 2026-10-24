@@ -1,0 +1,25 @@
+{
+  "change": "Left LED face mounted 90 degrees counterclockwise; firmware rotates left bitmap 90 degrees clockwise at Matrix::frame SPI boundary.",
+  "host_test_command": "cargo test --manifest-path firmware/pico2-device-bench/Cargo.toml --lib --target x86_64-pc-windows-msvc --locked --offline",
+  "host_tests_passed": 14,
+  "host_tests_failed": 0,
+  "rotation_specific_tests": [
+    "counterclockwise_left_mount_gets_clockwise_l_without_changing_right",
+    "left_mount_preserves_row_and_column_scan_in_viewer_coordinates",
+    "left_mount_keeps_blank_frames_blank_for_stop_and_startup"
+  ],
+  "diagnostic_and_seteyes_share_output_boundary": true,
+  "right_matrix_unchanged": true,
+  "protocol_version_changed": false,
+  "release_build_succeeded": true,
+  "firmware_sha256": "1a0908cb4ee0ac80dfd7771e2b4039b889ebcd832b05bbf8c9858aed6664e55b",
+  "flash_verified": true,
+  "application_status_verified": true,
+  "dashboard_reconnected": true,
+  "matrix_test_completed": true,
+  "matrix_all_20_phases_seen": true,
+  "final_faults": 0,
+  "final_running": null,
+  "final_oe_high": true,
+  "physical_orientation_user_confirmed": true
+}

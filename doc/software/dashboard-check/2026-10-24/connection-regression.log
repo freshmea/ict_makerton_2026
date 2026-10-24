@@ -1,0 +1,10 @@
+test_camera_previous_generation_is_never_live (test_hardware.TelemetryTests) ... ok
+test_missing_matrix_is_rejected_before_usb_command (test_hardware.TelemetryTests) ... ok
+test_pico_old_sample_is_never_connected (test_hardware.TelemetryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.030s
+
+OK
+
+exit=0

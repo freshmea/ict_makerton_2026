@@ -75,6 +75,12 @@ Linux에서도 `--port`는 필수다. `/dev/ttyACM0`를 고정값으로 사용�
 
 장치 Ack·Status를 기다리는 중에도 UDP Stop을 수신해 현재 요청보다 먼저 전송한다. Stop Ack와 새 Status를 확인하면 정지 클라이언트에 응답하고 취소한 원래 요청에는 오류를 반환한다. 대기 중의 다른 명령은 Busy로 거부하며 나중에 자동 실행하도록 쌓지 않는다. Hello와 Stop 앞에는 빈0구분자를 보내 이전 부분 프레임의 경계를 회복한다. Stop 우선 처리도 USB 포트를 여는 태스크는 하나다.
 
+## 개별 서보 IPC
+
+새 펌웨어의 `ServoDriver` 메시지를 NDJSON `event=servo_driver`와 상태 스냅샷의 `servo_driver`로 전달한다. 구형 펌웨어에서는 null이며 새 명령을 자동으로 시도하지 않는다. 진단의 `probes[0/1]`은 0x40/0x41에 대응하고 0=미검사, 1=유효 레지스터 응답, 2=ACK 없음, 3=40ms 시간 초과, 4=기타 버스 오류, 5=MODE2 예약 비트 불일치다. `selected_address=0`이면 주소가 선택되지 않았다. 상태 수신은 Arm이나 서보 이동을 수행하지 않는다.
+
+2026-10-24 대시보드의 개별 제어를 위해 `{"cmd":"servo","channel":0,"target_cdeg":9000,"move_ms":500}`와 `{"cmd":"servo_probe"}`를 추가했다. channel은 0~5이고 명령 범위 밖 값과 알 수 없는 필드는 거부한다. 새 펌웨어가 `Capabilities.single_servo=true`를 알린 경우에만 전송하므로 구형 펌웨어에 확장 명령을 보내지 않는다. Servo는 유효한 Arm과 lease가 필요하며 ACK 수락과 `Applied.kind=4` 완료는 구분한다. probe는 출력 정지 상태의 PCA 초기화만 요청한다. 브리지가 browser lease를 관리하지는 않으며 대시보드가 이를 만료·정지 처리한다. [사용법·현재 하드웨어 제한](../../apps/device-dashboard/README.md#서보별-각도-슬라이더)을 따른다.
+
 ## 설정과 터치 수치
 
 현재 배포 설정은 [pico-config.json](../../apps/device-dashboard/pico-config.json)이다. 스위치 미연결에 맞춰 SW6 기능을 끄며 공통 기본값과 구분한다. CLI 파일에서는 필요한 키만 덮어쓸 수도 있고 누락값은 기본값을 사용한다. 알 수 없는 키·잘못된 길이·범위는 거부한다. 손당 총1~36개, 극성 마스크 하위6비트, local test switch0~6, hold/window100~60000ms, 서보500~2500µs 내부 범위와 min<max, 시험 폭1~30도 등은 공유 validate를 따른다.

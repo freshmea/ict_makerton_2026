@@ -1,0 +1,9 @@
+{
+  "at_utc": "2026-10-24T07:33:55.287775+00:00",
+  "alsa_store_exit_code": 0,
+  "alsa_store_output": "",
+  "mixer": "Simple mixer control 'Speaker',0\n  Capabilities: pvolume pswitch pswitch-joined\n  Playback channels: Front Left - Front Right\n  Limits: Playback 0 - 37\n  Mono:\n  Front Left: Playback 31 [84%] [-6.00dB] [on]\n  Front Right: Playback 31 [84%] [-6.00dB] [on]\n",
+  "backup_before_change": "/var/tmp/300seconds-ba-r9-20261024/alsa-before.state",
+  "persisted_state": "/var/lib/alsa/asound.state",
+  "dashboard_active": "active"
+}

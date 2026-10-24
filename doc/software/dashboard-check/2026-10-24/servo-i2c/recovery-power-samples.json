@@ -1,0 +1,27 @@
+[
+  {
+    "elapsed_s": 0,
+    "input_mV": 4496,
+    "input_mA": 688
+  },
+  {
+    "elapsed_s": 1,
+    "input_mV": 4560,
+    "input_mA": 592
+  },
+  {
+    "elapsed_s": 2,
+    "input_mV": 4552,
+    "input_mA": 600
+  },
+  {
+    "elapsed_s": 3,
+    "input_mV": 4544,
+    "input_mA": 632
+  },
+  {
+    "elapsed_s": 4,
+    "input_mV": 4544,
+    "input_mA": 624
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "at_utc": "2026-10-24T07:31:18.609856+00:00",
+  "speaker": "Britz BA-R9",
+  "text": "문제에 주어진 조건을 먼저 하나 찾아볼까?",
+  "attribution": "Typecast AI synthetic voice; Seoyeon; https://typecast.ai",
+  "synthesis": {
+    "exit_code": 0,
+    "elapsed_seconds": 6.268,
+    "output": "{\"account_before\":{\"checked_unix\":1792827082,\"plan\":\"free\",\"plan_credits\":15000,\"provider\":\"typecast\",\"remaining_plan_credits\":14966,\"source\":\"GET /v1/users/me/subscription\",\"used_credits\":34},\"disclosure\":\"Typecast AI 합성 음성\",\"microphone_uploaded\":false,\"model\":\"ssfm-v30\",\"provider\":\"typecast\",\"requested_characters\":23,\"voice_id\":\"tc_637cbfeef7f00f21e8a1c6c8\",\"wall_ms\":2573}\n"
+  },
+  "wave": {
+    "rate": 44100,
+    "channels": 1,
+    "sample_width": 2,
+    "seconds": 2.85
+  },
+  "playback": {
+    "exit_code": 0,
+    "elapsed_seconds": 2.936,
+    "output": "Failed to create secure directory (/nonexistent/.config/pulse): No such file or directory\n"
+  },
+  "software_path_passed": true,
+  "human_audibility": "User confirmed neither tone nor TTS was audible before physical power-button check",
+  "overall_hardware_test_passed": false
+}

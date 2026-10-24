@@ -173,6 +173,14 @@ async fn apply_ipc<S: AsyncRead + AsyncWrite + Unpin>(link: &mut DeviceLink<S>, 
         IpcRequest::Pose{targets_cdeg,move_ms}=>Some(link.request_ack(Message::SetPose{targets_cdeg:*targets_cdeg,move_ms:*move_ms}).await?),
         IpcRequest::Light{rgb,brightness,period_ms}=>Some(link.request_ack(Message::SetLight{rgb:*rgb,brightness:*brightness,period_ms:*period_ms}).await?),
         IpcRequest::Eyes{left,right,brightness}=>Some(link.request_ack(Message::SetEyes{left:*left,right:*right,brightness:*brightness}).await?),
+        IpcRequest::Servo{channel,target_cdeg,move_ms}=>{
+            if !link.supports_single_servo(){return Err(failure("Firmware update required for individual servo control"));}
+            Some(link.request_ack(Message::SetServo{channel:*channel,target_cdeg:*target_cdeg,move_ms:*move_ms}).await?)
+        },
+        IpcRequest::ServoProbe=>{
+            if !link.supports_single_servo(){return Err(failure("Firmware update required for servo driver probe"));}
+            Some(link.request_ack(Message::CheckServoDriver).await?)
+        },
     };
     // A freshly correlated query follows the command ACK. This is a reported
     // device snapshot, not position feedback or electrical verification.

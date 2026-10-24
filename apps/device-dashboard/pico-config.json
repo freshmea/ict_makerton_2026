@@ -6,7 +6,7 @@
   "test_switch": 0,
   "hold_interval_ms": 500,
   "press_window_ms": 2000,
-  "servo_min_us": 1000,
-  "servo_max_us": 2000,
+  "servo_min_us": 500,
+  "servo_max_us": 2500,
   "test_span_degrees": 10
 }

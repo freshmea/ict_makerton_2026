@@ -1,0 +1,45 @@
+{
+  "recorded_at_utc": "2026-10-24T05:10:20.304633+00:00",
+  "host": "http://192.168.184.76:8000/#devices",
+  "preview": {
+    "optionCount": 50,
+    "groupCount": 10,
+    "all50PreviewLabelsMatched": true,
+    "keyboardValue": "look-left",
+    "eyeOrder": [
+      {
+        "canvas": "expression-right",
+        "label": "오른쪽 눈"
+      },
+      {
+        "canvas": "expression-left",
+        "label": "왼쪽 눈"
+      }
+    ],
+    "overflow": false,
+    "previewOnly": true
+  },
+  "actions": {
+    "uiStart": true,
+    "autoOff": true,
+    "uiStop": true,
+    "finalArmed": false,
+    "faults": 1,
+    "oeHigh": true
+  },
+  "console": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "viewports": [
+    [
+      1440,
+      1100
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "screenshots_visual_inspection_passed": true
+}

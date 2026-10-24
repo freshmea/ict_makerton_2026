@@ -240,9 +240,12 @@ async fn run() -> Result<()> {
         println!("{}", typecast::usage().await?);
         return Ok(());
     }
-    if args.first().map(String::as_str) == Some("typecast-sample") && args.len() == 2 {
-        let (wav, metadata) =
-            typecast::synthesize("문제에 주어진 조건을 먼저 하나 찾아볼까?").await?;
+    if args.first().map(String::as_str) == Some("typecast-sample")
+        && (args.len() == 2 || args.len() == 3)
+    {
+        let text = args.get(2).map(String::as_str)
+            .unwrap_or("문제에 주어진 조건을 먼저 하나 찾아볼까?");
+        let (wav, metadata) = typecast::synthesize(text).await?;
         use std::os::unix::fs::OpenOptionsExt;
         let mut file = OpenOptions::new()
             .write(true)

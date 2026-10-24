@@ -1,0 +1,21 @@
+test_all_animation_frames_fit_two_upright_eight_by_eight_matrices (test_eye_expressions.ArtworkTests) ... ok
+test_exactly_fifty_distinct_presets_with_ten_groups (test_eye_expressions.ArtworkTests) ... ok
+test_winks_use_robot_eye_names_and_cross_eyes_converge_in_front_view (test_eye_expressions.ArtworkTests) ... ok
+test_diagnostic_stops_expression_before_starting (test_eye_expressions.PlaybackTests) ... ok
+test_invalid_preset_or_busy_diagnostic_never_arms (test_eye_expressions.PlaybackTests) ... ok
+test_loading_catalog_and_constructing_player_never_arms_outputs (test_eye_expressions.PlaybackTests) ... ok
+test_new_usb_session_never_receives_old_animation_or_cleanup (test_eye_expressions.PlaybackTests) ... ok
+test_playback_arms_only_eyes_and_turns_off_at_deadline (test_eye_expressions.PlaybackTests) ... ok
+test_replacing_a_preset_clears_firmware_active_before_new_arm (test_eye_expressions.PlaybackTests) ... ok
+test_stop_preempts_late_arm_and_fences_it_without_sending_eyes (test_eye_expressions.PlaybackTests) ... ok
+test_stop_prevents_any_later_animation_frame (test_eye_expressions.PlaybackTests) ... ok
+test_camera_previous_generation_is_never_live (test_hardware.TelemetryTests) ... ok
+test_expression_api_uses_catalog_id_and_bounded_duration (test_hardware.TelemetryTests) ... ok
+test_expression_rejects_absent_matrix_and_unknown_preset_before_usb (test_hardware.TelemetryTests) ... ok
+test_missing_matrix_is_rejected_before_usb_command (test_hardware.TelemetryTests) ... ok
+test_pico_old_sample_is_never_connected (test_hardware.TelemetryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 8.046s
+
+OK

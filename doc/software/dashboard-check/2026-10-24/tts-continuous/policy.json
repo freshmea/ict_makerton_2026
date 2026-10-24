@@ -1,0 +1,40 @@
+{
+  "provider_source": "https://typecast.ai/pricing/api/",
+  "provider_free_concurrency": 2,
+  "previous_local_requests_per_minute": 2,
+  "new_local_requests_per_minute": null,
+  "previous_transport_error_wait_seconds": 60,
+  "new_local_error_wait_seconds": 0,
+  "period_character_budgets_unchanged": {
+    "rolling_24h": 500,
+    "rolling_30d": 12000
+  },
+  "account_credit_check_preserved": true,
+  "paid_plan_opt_in_unchanged": true,
+  "automatic_synthesis_retry": false,
+  "usage_history_reset": false,
+  "rust_tests": [
+    "four consecutive reservations in the same minute",
+    "legacy future cooldown ignored",
+    "HTTP 0/500/429/401 do not add local waits",
+    "character cap still blocks excess",
+    "transport error classification"
+  ],
+  "python_test_count": 19,
+  "python_tests_passed": true,
+  "live_check": {
+    "passed": true,
+    "requests": 3,
+    "total_seconds": 11.048,
+    "extra_wait_between_requests": false,
+    "http_statuses": [
+      200,
+      200,
+      200
+    ],
+    "ledger_history_preserved": true,
+    "cooldown_until": 0
+  },
+  "rust_tests_passed": 2,
+  "live_html_help_verified": true
+}

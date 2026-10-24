@@ -1,0 +1,1376 @@
+{
+  "host": "http://192.168.184.76:8000",
+  "before": {
+    "connected": true,
+    "age_ms": 7,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 2435,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 21448,
+          "last_interval_count": 42,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 18775,
+          "last_interval_count": 37,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 16275,
+          "last_interval_count": 32,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 3567,
+          "last_interval_count": 7,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 382,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 2134,
+          "last_interval_count": 4,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 2462401
+    },
+    "session": "5487A95220C3A75B",
+    "error": null,
+    "last_test": {
+      "done": true,
+      "event": "test_event",
+      "fault": false,
+      "host_monotonic_ms": 109685,
+      "host_unix_ms": 1792809827993,
+      "module": "Matrix",
+      "phase": 0,
+      "seq": 49144,
+      "session": "5487A95220C3A75B",
+      "version": 2
+    },
+    "last_touch": {
+      "event": "touch",
+      "host_monotonic_ms": 483634,
+      "host_unix_ms": 1792810201942,
+      "seq": 57025,
+      "session": "5487A95220C3A75B",
+      "touch": {
+        "duration_ms": 16275,
+        "event_seq": 8827,
+        "index": 3,
+        "interval_count": 32,
+        "kind": "Released",
+        "press_count": 0,
+        "pressed": false,
+        "uptime_ms": 2405161
+      },
+      "version": 2
+    },
+    "module_tests": {
+      "Matrix": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 109685,
+        "host_unix_ms": 1792809827993,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 49144,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    "bridge_pid": 14762,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v1",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "baseline_matrix_seq": 49144,
+  "samples": [
+    {
+      "server_time": 1792810259.3257613,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 540997,
+        "host_unix_ms": 1792810259305,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 58174,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810260.1840272,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 541815,
+        "host_unix_ms": 1792810260122,
+        "module": "Matrix",
+        "phase": 1,
+        "seq": 58191,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810261.0219717,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 542635,
+        "host_unix_ms": 1792810260942,
+        "module": "Matrix",
+        "phase": 2,
+        "seq": 58208,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810261.4542165,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 543056,
+        "host_unix_ms": 1792810261363,
+        "module": "Matrix",
+        "phase": 3,
+        "seq": 58217,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810261.872159,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 543476,
+        "host_unix_ms": 1792810261783,
+        "module": "Matrix",
+        "phase": 4,
+        "seq": 58228,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810262.3469152,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 543896,
+        "host_unix_ms": 1792810262204,
+        "module": "Matrix",
+        "phase": 5,
+        "seq": 58237,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810262.7636404,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 544315,
+        "host_unix_ms": 1792810262623,
+        "module": "Matrix",
+        "phase": 6,
+        "seq": 58246,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810263.168139,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 544736,
+        "host_unix_ms": 1792810263043,
+        "module": "Matrix",
+        "phase": 7,
+        "seq": 58255,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810263.5635738,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 545157,
+        "host_unix_ms": 1792810263464,
+        "module": "Matrix",
+        "phase": 8,
+        "seq": 58264,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810263.9920433,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 545576,
+        "host_unix_ms": 1792810263884,
+        "module": "Matrix",
+        "phase": 9,
+        "seq": 58275,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810264.4088366,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 545996,
+        "host_unix_ms": 1792810264303,
+        "module": "Matrix",
+        "phase": 10,
+        "seq": 58284,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810264.8266878,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 546416,
+        "host_unix_ms": 1792810264724,
+        "module": "Matrix",
+        "phase": 11,
+        "seq": 58293,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810265.2388961,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 546838,
+        "host_unix_ms": 1792810265146,
+        "module": "Matrix",
+        "phase": 12,
+        "seq": 58302,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810265.6347475,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 547256,
+        "host_unix_ms": 1792810265564,
+        "module": "Matrix",
+        "phase": 13,
+        "seq": 58311,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810266.0573444,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 547680,
+        "host_unix_ms": 1792810265988,
+        "module": "Matrix",
+        "phase": 14,
+        "seq": 58322,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810266.48249,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 548097,
+        "host_unix_ms": 1792810266405,
+        "module": "Matrix",
+        "phase": 15,
+        "seq": 58331,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810266.9267972,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 548517,
+        "host_unix_ms": 1792810266825,
+        "module": "Matrix",
+        "phase": 16,
+        "seq": 58340,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810267.3517106,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 548940,
+        "host_unix_ms": 1792810267247,
+        "module": "Matrix",
+        "phase": 17,
+        "seq": 58349,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810267.9123127,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 549357,
+        "host_unix_ms": 1792810267664,
+        "module": "Matrix",
+        "phase": 18,
+        "seq": 58358,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810268.6298366,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 550178,
+        "host_unix_ms": 1792810268486,
+        "module": "Matrix",
+        "phase": 19,
+        "seq": 58377,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792810269.6447823,
+      "connected": true,
+      "running": null,
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 551198,
+        "host_unix_ms": 1792810269505,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 58398,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    }
+  ],
+  "requested_by_user": "2026-10-24 matrix test again",
+  "command": {
+    "ack_code": "Ok",
+    "ack_request_seq": 2710,
+    "cmd": "test",
+    "ok": true,
+    "session": "5487A95220C3A75B",
+    "status": {
+      "age_ms": 0,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 2435,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": "Matrix",
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 21448,
+            "last_interval_count": 42,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 18775,
+            "last_interval_count": 37,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 16275,
+            "last_interval_count": 32,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 3567,
+            "last_interval_count": 7,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 382,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 2134,
+            "last_interval_count": 4,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 2462525
+      },
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "received_unix_ms": 1792810259306
+    }
+  },
+  "final": {
+    "connected": true,
+    "age_ms": 58,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 2435,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 21448,
+          "last_interval_count": 42,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 18775,
+          "last_interval_count": 37,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 16275,
+          "last_interval_count": 32,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 3567,
+          "last_interval_count": 7,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 382,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 2134,
+          "last_interval_count": 4,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 2472804
+    },
+    "session": "5487A95220C3A75B",
+    "error": null,
+    "last_test": {
+      "done": true,
+      "event": "test_event",
+      "fault": false,
+      "host_monotonic_ms": 551198,
+      "host_unix_ms": 1792810269505,
+      "module": "Matrix",
+      "phase": 0,
+      "seq": 58398,
+      "session": "5487A95220C3A75B",
+      "version": 2
+    },
+    "last_touch": {
+      "event": "touch",
+      "host_monotonic_ms": 483634,
+      "host_unix_ms": 1792810201942,
+      "seq": 57025,
+      "session": "5487A95220C3A75B",
+      "touch": {
+        "duration_ms": 16275,
+        "event_seq": 8827,
+        "index": 3,
+        "interval_count": 32,
+        "kind": "Released",
+        "press_count": 0,
+        "pressed": false,
+        "uptime_ms": 2405161
+      },
+      "version": 2
+    },
+    "module_tests": {
+      "Matrix": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 551198,
+        "host_unix_ms": 1792810269505,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 58398,
+        "session": "5487A95220C3A75B",
+        "version": 2
+      }
+    },
+    "bridge_pid": 14762,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v1",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "events": [
+    {
+      "id": "61bb83f399",
+      "time": 1792810269.5062685,
+      "source": "pico",
+      "message": "{\"done\": true, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 551198, \"host_unix_ms\": 1792810269505, \"module\": \"Matrix\", \"phase\": 0, \"seq\": 58398, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "91ceb319c4",
+      "time": 1792810268.4868186,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 550178, \"host_unix_ms\": 1792810268486, \"module\": \"Matrix\", \"phase\": 19, \"seq\": 58377, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "75ad415ac5",
+      "time": 1792810267.6869125,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 549357, \"host_unix_ms\": 1792810267664, \"module\": \"Matrix\", \"phase\": 18, \"seq\": 58358, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "af1b053a23",
+      "time": 1792810267.248257,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 548940, \"host_unix_ms\": 1792810267247, \"module\": \"Matrix\", \"phase\": 17, \"seq\": 58349, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "f3c5b8c322",
+      "time": 1792810266.8255024,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 548517, \"host_unix_ms\": 1792810266825, \"module\": \"Matrix\", \"phase\": 16, \"seq\": 58340, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "5f7afc950b",
+      "time": 1792810266.4055314,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 548097, \"host_unix_ms\": 1792810266405, \"module\": \"Matrix\", \"phase\": 15, \"seq\": 58331, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "360d0fcea5",
+      "time": 1792810265.9889672,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 547680, \"host_unix_ms\": 1792810265988, \"module\": \"Matrix\", \"phase\": 14, \"seq\": 58322, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "ac61f37e53",
+      "time": 1792810265.5650582,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 547256, \"host_unix_ms\": 1792810265564, \"module\": \"Matrix\", \"phase\": 13, \"seq\": 58311, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "750d6768da",
+      "time": 1792810265.1467216,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 546838, \"host_unix_ms\": 1792810265146, \"module\": \"Matrix\", \"phase\": 12, \"seq\": 58302, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "a40a1627b7",
+      "time": 1792810264.7244995,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 546416, \"host_unix_ms\": 1792810264724, \"module\": \"Matrix\", \"phase\": 11, \"seq\": 58293, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "4b0205e763",
+      "time": 1792810264.3043451,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 545996, \"host_unix_ms\": 1792810264303, \"module\": \"Matrix\", \"phase\": 10, \"seq\": 58284, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "f4cee214db",
+      "time": 1792810263.8850365,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 545576, \"host_unix_ms\": 1792810263884, \"module\": \"Matrix\", \"phase\": 9, \"seq\": 58275, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "a85da8f21f",
+      "time": 1792810263.4666493,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 545157, \"host_unix_ms\": 1792810263464, \"module\": \"Matrix\", \"phase\": 8, \"seq\": 58264, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "c8af51986d",
+      "time": 1792810263.0441256,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 544736, \"host_unix_ms\": 1792810263043, \"module\": \"Matrix\", \"phase\": 7, \"seq\": 58255, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "2e930a48aa",
+      "time": 1792810262.6239219,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 544315, \"host_unix_ms\": 1792810262623, \"module\": \"Matrix\", \"phase\": 6, \"seq\": 58246, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "33d2541f12",
+      "time": 1792810262.2045257,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 543896, \"host_unix_ms\": 1792810262204, \"module\": \"Matrix\", \"phase\": 5, \"seq\": 58237, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "a8399dbc98",
+      "time": 1792810261.7844343,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 543476, \"host_unix_ms\": 1792810261783, \"module\": \"Matrix\", \"phase\": 4, \"seq\": 58228, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "29d3161473",
+      "time": 1792810261.364323,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 543056, \"host_unix_ms\": 1792810261363, \"module\": \"Matrix\", \"phase\": 3, \"seq\": 58217, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "5a4e34f623",
+      "time": 1792810260.9444032,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 542635, \"host_unix_ms\": 1792810260942, \"module\": \"Matrix\", \"phase\": 2, \"seq\": 58208, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "d8dea494d0",
+      "time": 1792810260.123137,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 541815, \"host_unix_ms\": 1792810260122, \"module\": \"Matrix\", \"phase\": 1, \"seq\": 58191, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "4cf44b17bd",
+      "time": 1792810259.307655,
+      "source": "pico",
+      "message": "{'cmd': 'test', 'module': 'matrix'} → ACK",
+      "level": "info"
+    },
+    {
+      "id": "8a3153e442",
+      "time": 1792810259.306148,
+      "source": "pico",
+      "message": "{\"done\": false, \"event\": \"test_event\", \"fault\": false, \"host_monotonic_ms\": 540997, \"host_unix_ms\": 1792810259305, \"module\": \"Matrix\", \"phase\": 0, \"seq\": 58174, \"session\": \"5487A95220C3A75B\", \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "ee59653b23",
+      "time": 1792810201.9426632,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 483634, \"host_unix_ms\": 1792810201942, \"seq\": 57025, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 16275, \"event_seq\": 8827, \"index\": 3, \"interval_count\": 32, \"kind\": \"Released\", \"press_count\": 0, \"pressed\": false, \"uptime_ms\": 2405161}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "def263e155",
+      "time": 1792810201.6714447,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 483363, \"host_unix_ms\": 1792810201670, \"seq\": 57020, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 16004, \"event_seq\": 8826, \"index\": 3, \"interval_count\": 32, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2404890}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "9cb0e1c04b",
+      "time": 1792810201.16966,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 482861, \"host_unix_ms\": 1792810201169, \"seq\": 57009, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 15501, \"event_seq\": 8825, \"index\": 3, \"interval_count\": 31, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2404387}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "0220c6910c",
+      "time": 1792810200.671873,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 482363, \"host_unix_ms\": 1792810200671, \"seq\": 56998, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 15004, \"event_seq\": 8824, \"index\": 3, \"interval_count\": 30, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2403890}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "5b20726219",
+      "time": 1792810200.1702394,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 481862, \"host_unix_ms\": 1792810200169, \"seq\": 56987, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 14502, \"event_seq\": 8823, \"index\": 3, \"interval_count\": 29, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2403388}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "a75148174f",
+      "time": 1792810199.671653,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 481362, \"host_unix_ms\": 1792810199670, \"seq\": 56976, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 14000, \"event_seq\": 8822, \"index\": 3, \"interval_count\": 28, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2402886}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "ffe7819d26",
+      "time": 1792810199.1700113,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 480861, \"host_unix_ms\": 1792810199169, \"seq\": 56965, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 13502, \"event_seq\": 8821, \"index\": 3, \"interval_count\": 27, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2402388}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "dce06868a8",
+      "time": 1792810198.6683683,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 480359, \"host_unix_ms\": 1792810198667, \"seq\": 56954, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 13000, \"event_seq\": 8820, \"index\": 3, \"interval_count\": 26, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2401886}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e468bf804c",
+      "time": 1792810198.1736715,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 479862, \"host_unix_ms\": 1792810198170, \"seq\": 56943, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 12503, \"event_seq\": 8819, \"index\": 3, \"interval_count\": 25, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2401389}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "aa55d7f0e0",
+      "time": 1792810197.6769662,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 479368, \"host_unix_ms\": 1792810197675, \"seq\": 56932, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 12001, \"event_seq\": 8818, \"index\": 3, \"interval_count\": 24, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2400887}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "7e7ece7505",
+      "time": 1792810197.1749735,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 478865, \"host_unix_ms\": 1792810197173, \"seq\": 56921, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 11504, \"event_seq\": 8817, \"index\": 3, \"interval_count\": 23, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2400390}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "377d875a8a",
+      "time": 1792810196.8397105,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 478531, \"host_unix_ms\": 1792810196839, \"seq\": 56912, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 3567, \"event_seq\": 8816, \"index\": 4, \"interval_count\": 7, \"kind\": \"Released\", \"press_count\": 0, \"pressed\": false, \"uptime_ms\": 2400058}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "78f6e3d7b8",
+      "time": 1792810196.7743928,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 478466, \"host_unix_ms\": 1792810196773, \"seq\": 56911, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 3502, \"event_seq\": 8815, \"index\": 4, \"interval_count\": 7, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2399993}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "374925d276",
+      "time": 1792810196.6694727,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 478361, \"host_unix_ms\": 1792810196668, \"seq\": 56908, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 11001, \"event_seq\": 8814, \"index\": 3, \"interval_count\": 22, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2399887}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "fdd6a77e72",
+      "time": 1792810196.2773592,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 477969, \"host_unix_ms\": 1792810196276, \"seq\": 56899, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 3004, \"event_seq\": 8813, \"index\": 4, \"interval_count\": 6, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2399495}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "6ad9c3caf7",
+      "time": 1792810196.1750853,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 477863, \"host_unix_ms\": 1792810196170, \"seq\": 56896, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 10504, \"event_seq\": 8812, \"index\": 3, \"interval_count\": 21, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2399390}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "a1e1eb6a7b",
+      "time": 1792810195.7742634,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 477466, \"host_unix_ms\": 1792810195773, \"seq\": 56887, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 2502, \"event_seq\": 8811, \"index\": 4, \"interval_count\": 5, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2398993}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "1f59377bd7",
+      "time": 1792810195.6688688,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 477360, \"host_unix_ms\": 1792810195668, \"seq\": 56884, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 10001, \"event_seq\": 8810, \"index\": 3, \"interval_count\": 20, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2398887}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "55ef1e0fa1",
+      "time": 1792810195.2776349,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 476969, \"host_unix_ms\": 1792810195276, \"seq\": 56875, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 2004, \"event_seq\": 8809, \"index\": 4, \"interval_count\": 4, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2398495}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "1f46d27a10",
+      "time": 1792810195.2774146,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 476969, \"host_unix_ms\": 1792810195276, \"seq\": 56874, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 2004, \"event_seq\": 8808, \"index\": 4, \"interval_count\": 4, \"kind\": \"WindowClosed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2398495}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "46cd55ff7c",
+      "time": 1792810195.1714356,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 476863, \"host_unix_ms\": 1792810195171, \"seq\": 56871, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 9504, \"event_seq\": 8807, \"index\": 3, \"interval_count\": 19, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2398390}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "6928d3cb8c",
+      "time": 1792810194.7746756,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 476466, \"host_unix_ms\": 1792810194774, \"seq\": 56862, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 1502, \"event_seq\": 8806, \"index\": 4, \"interval_count\": 3, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2397993}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "02f7ce9a4f",
+      "time": 1792810194.6695323,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 476361, \"host_unix_ms\": 1792810194668, \"seq\": 56859, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 9001, \"event_seq\": 8805, \"index\": 3, \"interval_count\": 18, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2397887}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "de12b96d40",
+      "time": 1792810194.2792978,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 475971, \"host_unix_ms\": 1792810194278, \"seq\": 56850, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 1004, \"event_seq\": 8804, \"index\": 4, \"interval_count\": 2, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2397495}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "c82a848502",
+      "time": 1792810194.1718547,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 475863, \"host_unix_ms\": 1792810194171, \"seq\": 56847, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 8504, \"event_seq\": 8803, \"index\": 3, \"interval_count\": 17, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2397390}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "a30e2b9abc",
+      "time": 1792810193.7748158,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 475466, \"host_unix_ms\": 1792810193774, \"seq\": 56838, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 502, \"event_seq\": 8802, \"index\": 4, \"interval_count\": 1, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2396993}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "d38c9c3adb",
+      "time": 1792810193.6695414,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 475361, \"host_unix_ms\": 1792810193668, \"seq\": 56835, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 8002, \"event_seq\": 8801, \"index\": 3, \"interval_count\": 16, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2396888}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "9ef6adfc74",
+      "time": 1792810193.272287,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 474964, \"host_unix_ms\": 1792810193271, \"seq\": 56826, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 8800, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2396491}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "00198925a3",
+      "time": 1792810193.1723545,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 474863, \"host_unix_ms\": 1792810193171, \"seq\": 56823, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 7504, \"event_seq\": 8799, \"index\": 3, \"interval_count\": 15, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2396390}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "fb7282aa61",
+      "time": 1792810193.051383,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 474743, \"host_unix_ms\": 1792810193050, \"seq\": 56818, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 8798, \"index\": 4, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2396270}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "e602d18c8b",
+      "time": 1792810192.669972,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 474361, \"host_unix_ms\": 1792810192669, \"seq\": 56811, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 7002, \"event_seq\": 8797, \"index\": 3, \"interval_count\": 14, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2395888}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "22cc74a78b",
+      "time": 1792810192.499185,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 474191, \"host_unix_ms\": 1792810192498, \"seq\": 56806, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 95, \"event_seq\": 8796, \"index\": 4, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 2, \"pressed\": false, \"uptime_ms\": 2395717}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "a9200659f3",
+      "time": 1792810192.4048352,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 474096, \"host_unix_ms\": 1792810192404, \"seq\": 56803, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 8795, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 2, \"pressed\": true, \"uptime_ms\": 2395622}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "d621077207",
+      "time": 1792810192.1721475,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 473864, \"host_unix_ms\": 1792810192171, \"seq\": 56798, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 6504, \"event_seq\": 8794, \"index\": 3, \"interval_count\": 13, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2395390}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "dea70de857",
+      "time": 1792810191.672833,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 473364, \"host_unix_ms\": 1792810191672, \"seq\": 56787, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 6002, \"event_seq\": 8793, \"index\": 3, \"interval_count\": 12, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2394888}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "8fd6be8519",
+      "time": 1792810191.2934613,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 472985, \"host_unix_ms\": 1792810191292, \"seq\": 56778, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 242, \"event_seq\": 8792, \"index\": 4, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2394512}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "00af6364f9",
+      "time": 1792810191.1680248,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 472859, \"host_unix_ms\": 1792810191167, \"seq\": 56775, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 5500, \"event_seq\": 8791, \"index\": 3, \"interval_count\": 11, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2394386}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "54c6b531cb",
+      "time": 1792810191.0523858,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 472744, \"host_unix_ms\": 1792810191051, \"seq\": 56770, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 8790, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2394270}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "d07e85f2ca",
+      "time": 1792810190.6703339,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 472362, \"host_unix_ms\": 1792810190669, \"seq\": 56763, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 5003, \"event_seq\": 8789, \"index\": 3, \"interval_count\": 10, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2393889}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "b31403fee8",
+      "time": 1792810190.169935,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 471861, \"host_unix_ms\": 1792810190168, \"seq\": 56752, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 4500, \"event_seq\": 8788, \"index\": 3, \"interval_count\": 9, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2393386}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "ae046c7dab",
+      "time": 1792810189.6708534,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 471362, \"host_unix_ms\": 1792810189670, \"seq\": 56741, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 4003, \"event_seq\": 8787, \"index\": 3, \"interval_count\": 8, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2392889}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "956c4bf027",
+      "time": 1792810189.4273033,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 471119, \"host_unix_ms\": 1792810189426, \"seq\": 56734, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 8786, \"index\": 4, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2392643}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "166413de64",
+      "time": 1792810189.2692552,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 470961, \"host_unix_ms\": 1792810189268, \"seq\": 56731, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 1848, \"event_seq\": 8785, \"index\": 4, \"interval_count\": 3, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2392487}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "64c02ba11b",
+      "time": 1792810189.1693773,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 470861, \"host_unix_ms\": 1792810189168, \"seq\": 56728, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 3501, \"event_seq\": 8784, \"index\": 3, \"interval_count\": 7, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2392387}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "18c19f6946",
+      "time": 1792810188.9233358,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 470615, \"host_unix_ms\": 1792810188922, \"seq\": 56721, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 1502, \"event_seq\": 8783, \"index\": 4, \"interval_count\": 3, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2392141}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "4eded53dc4",
+      "time": 1792810188.6713023,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 470363, \"host_unix_ms\": 1792810188670, \"seq\": 56716, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 3004, \"event_seq\": 8782, \"index\": 3, \"interval_count\": 6, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2391890}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "481fa87427",
+      "time": 1792810188.4257019,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 470117, \"host_unix_ms\": 1792810188424, \"seq\": 56709, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 1004, \"event_seq\": 8781, \"index\": 4, \"interval_count\": 2, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2391643}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "ad6394b0ec",
+      "time": 1792810188.1699736,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 469861, \"host_unix_ms\": 1792810188169, \"seq\": 56704, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 2501, \"event_seq\": 8780, \"index\": 3, \"interval_count\": 5, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2391387}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "504fe661ac",
+      "time": 1792810187.9227996,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 469614, \"host_unix_ms\": 1792810187922, \"seq\": 56697, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 502, \"event_seq\": 8779, \"index\": 4, \"interval_count\": 1, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2391141}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "af18c66692",
+      "time": 1792810187.6719031,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 469363, \"host_unix_ms\": 1792810187671, \"seq\": 56692, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 2004, \"event_seq\": 8778, \"index\": 3, \"interval_count\": 4, \"kind\": \"Interval\", \"press_count\": 0, \"pressed\": true, \"uptime_ms\": 2390890}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "8c0fa21743",
+      "time": 1792810187.6716273,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 469363, \"host_unix_ms\": 1792810187671, \"seq\": 56691, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 2004, \"event_seq\": 8777, \"index\": 3, \"interval_count\": 4, \"kind\": \"WindowClosed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2390890}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "53622280ff",
+      "time": 1792810187.4203405,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 469112, \"host_unix_ms\": 1792810187419, \"seq\": 56684, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 8776, \"index\": 4, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2390639}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "3fa5c938be",
+      "time": 1792810187.171086,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 468862, \"host_unix_ms\": 1792810187170, \"seq\": 56679, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 1501, \"event_seq\": 8775, \"index\": 3, \"interval_count\": 3, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2390387}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "f064fd2dc4",
+      "time": 1792810186.672229,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 468364, \"host_unix_ms\": 1792810186671, \"seq\": 56668, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 1004, \"event_seq\": 8774, \"index\": 3, \"interval_count\": 2, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2389890}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "046471d02d",
+      "time": 1792810186.1714268,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 467863, \"host_unix_ms\": 1792810186170, \"seq\": 56657, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 502, \"event_seq\": 8773, \"index\": 3, \"interval_count\": 1, \"kind\": \"Interval\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2389388}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "d935bdc409",
+      "time": 1792810186.1098557,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 467801, \"host_unix_ms\": 1792810186109, \"seq\": 56654, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 8772, \"index\": 4, \"interval_count\": 0, \"kind\": \"WindowClosed\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2389328}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "3088911be1",
+      "time": 1792810185.672368,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 467362, \"host_unix_ms\": 1792810185670, \"seq\": 56645, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 0, \"event_seq\": 8771, \"index\": 3, \"interval_count\": 0, \"kind\": \"Pressed\", \"press_count\": 1, \"pressed\": true, \"uptime_ms\": 2388886}, \"version\": 2}",
+      "level": "info"
+    },
+    {
+      "id": "d99dbc9d13",
+      "time": 1792810184.6035113,
+      "source": "pico",
+      "message": "{\"event\": \"touch\", \"host_monotonic_ms\": 466295, \"host_unix_ms\": 1792810184603, \"seq\": 56622, \"session\": \"5487A95220C3A75B\", \"touch\": {\"duration_ms\": 497, \"event_seq\": 8770, \"index\": 4, \"interval_count\": 0, \"kind\": \"Released\", \"press_count\": 1, \"pressed\": false, \"uptime_ms\": 2387821}, \"version\": 2}",
+      "level": "info"
+    }
+  ],
+  "elapsed_seconds": 10.364,
+  "new_test_completed": true,
+  "physical_observation": {
+    "source": "user confirmation in this chat",
+    "both_matrices_displayed_patterns": true,
+    "both_matrices_off_at_end": true,
+    "observation": "Both displayed and turned off."
+  }
+}

@@ -1,0 +1,6 @@
+Same Pico BOOTSEL serial verified: E679675A69C4039B
+Saving existing 4 MiB flash before writing...
+Loading and verifying RP2350 flash...
+Flash readback and integrated CDC STATUS verified. No actuator test started.
+Result: /home/jetson/ict_makerton_2026/tmp/pico-flash/20261024T050158.751949Z-linux/flash-result.json
+{"completed": true, "dashboard_reconnected": false, "faults": null}

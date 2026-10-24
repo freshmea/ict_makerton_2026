@@ -1,0 +1,47 @@
+{
+  "initial": {
+    "count": 6,
+    "notice": "PCA9685 통신 오류 · 배선과 VCC를 확인하세요.",
+    "startDisabled": true,
+    "previewDegrees": "180°",
+    "previewPosts": 0
+  },
+  "mockedMoves": [
+    {
+      "servo": 1,
+      "degrees": 0
+    },
+    {
+      "servo": 2,
+      "degrees": 30
+    },
+    {
+      "servo": 3,
+      "degrees": 60
+    },
+    {
+      "servo": 4,
+      "degrees": 90
+    },
+    {
+      "servo": 5,
+      "degrees": 120
+    },
+    {
+      "servo": 6,
+      "degrees": 180
+    },
+    {
+      "servo": 1,
+      "degrees": 135
+    }
+  ],
+  "queuedCommandCancelled": true,
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390,
+    "sliderCount": 6,
+    "buttonHeight": 48
+  },
+  "realOutputPosts": 0
+}

@@ -1,0 +1,783 @@
+{
+  "host": "http://192.168.184.76:8000",
+  "before": {
+    "connected": true,
+    "age_ms": 9,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 59,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 27777
+    },
+    "session": "110897CEE975DB67",
+    "error": null,
+    "last_test": {
+      "done": true,
+      "event": "test_event",
+      "fault": false,
+      "host_monotonic_ms": 23122,
+      "host_unix_ms": 1792815873024,
+      "module": "Matrix",
+      "phase": 0,
+      "seq": 554,
+      "session": "110897CEE975DB67",
+      "version": 2
+    },
+    "last_touch": null,
+    "module_tests": {
+      "Matrix": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 23122,
+        "host_unix_ms": 1792815873024,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 554,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    "bridge_pid": 23733,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v1",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "baseline_matrix_seq": 554,
+  "samples": [
+    {
+      "server_time": 1792815874.4110003,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 24484,
+        "host_unix_ms": 1792815874386,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 581,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815875.3647346,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 25302,
+        "host_unix_ms": 1792815875204,
+        "module": "Matrix",
+        "phase": 1,
+        "seq": 600,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815876.161892,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 26120,
+        "host_unix_ms": 1792815876022,
+        "module": "Matrix",
+        "phase": 2,
+        "seq": 617,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815876.5444171,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 26541,
+        "host_unix_ms": 1792815876442,
+        "module": "Matrix",
+        "phase": 3,
+        "seq": 626,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815876.9430747,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 26962,
+        "host_unix_ms": 1792815876864,
+        "module": "Matrix",
+        "phase": 4,
+        "seq": 635,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815877.4226232,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 27381,
+        "host_unix_ms": 1792815877283,
+        "module": "Matrix",
+        "phase": 5,
+        "seq": 644,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815877.8237822,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 27801,
+        "host_unix_ms": 1792815877703,
+        "module": "Matrix",
+        "phase": 6,
+        "seq": 655,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815878.2599695,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 28221,
+        "host_unix_ms": 1792815878123,
+        "module": "Matrix",
+        "phase": 7,
+        "seq": 664,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815878.6496027,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 28641,
+        "host_unix_ms": 1792815878543,
+        "module": "Matrix",
+        "phase": 8,
+        "seq": 673,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815879.0748613,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 29061,
+        "host_unix_ms": 1792815878963,
+        "module": "Matrix",
+        "phase": 9,
+        "seq": 682,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815879.5153499,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 29481,
+        "host_unix_ms": 1792815879383,
+        "module": "Matrix",
+        "phase": 10,
+        "seq": 691,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815879.9587336,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 29902,
+        "host_unix_ms": 1792815879804,
+        "module": "Matrix",
+        "phase": 11,
+        "seq": 702,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815880.563225,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 30322,
+        "host_unix_ms": 1792815880224,
+        "module": "Matrix",
+        "phase": 12,
+        "seq": 711,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815880.782633,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 30742,
+        "host_unix_ms": 1792815880644,
+        "module": "Matrix",
+        "phase": 13,
+        "seq": 720,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815881.1843712,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 31162,
+        "host_unix_ms": 1792815881064,
+        "module": "Matrix",
+        "phase": 14,
+        "seq": 729,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815881.6344104,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 31582,
+        "host_unix_ms": 1792815881484,
+        "module": "Matrix",
+        "phase": 15,
+        "seq": 738,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815882.0391748,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 32003,
+        "host_unix_ms": 1792815881905,
+        "module": "Matrix",
+        "phase": 16,
+        "seq": 749,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815882.4585056,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 32422,
+        "host_unix_ms": 1792815882324,
+        "module": "Matrix",
+        "phase": 17,
+        "seq": 758,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815882.8638237,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 32843,
+        "host_unix_ms": 1792815882745,
+        "module": "Matrix",
+        "phase": 18,
+        "seq": 767,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815883.689374,
+      "connected": true,
+      "running": "Matrix",
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": false,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 33663,
+        "host_unix_ms": 1792815883565,
+        "module": "Matrix",
+        "phase": 19,
+        "seq": 784,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    {
+      "server_time": 1792815884.633398,
+      "connected": true,
+      "running": null,
+      "faults": 0,
+      "oe_high": true,
+      "matrix_event": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 34684,
+        "host_unix_ms": 1792815884586,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 805,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    }
+  ],
+  "firmware_sha256": "1a0908cb4ee0ac80dfd7771e2b4039b889ebcd832b05bbf8c9858aed6664e55b",
+  "mount": "left LED face counterclockwise 90 degrees; firmware compensation clockwise 90 degrees",
+  "command": {
+    "ack_code": "Ok",
+    "ack_request_seq": 128,
+    "cmd": "test",
+    "ok": true,
+    "session": "110897CEE975DB67",
+    "status": {
+      "age_ms": 0,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 59,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": "Matrix",
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 27862
+      },
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "received_unix_ms": 1792815874387
+    }
+  },
+  "final": {
+    "connected": true,
+    "age_ms": 23,
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 59,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 38080
+    },
+    "session": "110897CEE975DB67",
+    "error": null,
+    "last_test": {
+      "done": true,
+      "event": "test_event",
+      "fault": false,
+      "host_monotonic_ms": 34684,
+      "host_unix_ms": 1792815884586,
+      "module": "Matrix",
+      "phase": 0,
+      "seq": 805,
+      "session": "110897CEE975DB67",
+      "version": 2
+    },
+    "last_touch": null,
+    "module_tests": {
+      "Matrix": {
+        "done": true,
+        "event": "test_event",
+        "fault": false,
+        "host_monotonic_ms": 34684,
+        "host_unix_ms": 1792815884586,
+        "module": "Matrix",
+        "phase": 0,
+        "seq": 805,
+        "session": "110897CEE975DB67",
+        "version": 2
+      }
+    },
+    "bridge_pid": 23733,
+    "port": "/dev/pico-device",
+    "protocol": "pico-device-v1",
+    "installation": {
+      "touch_inputs_connected": true,
+      "matrix_connected": true,
+      "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+    }
+  },
+  "elapsed_seconds": 10.266,
+  "new_test_completed": true,
+  "health": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  },
+  "physical_orientation_user_confirmed": true,
+  "physical_orientation_observation": "사용자 확인: 왼눈 반시계 방향 90도 장착 상태에서 양쪽 모두 정방향으로 표시됨."
+}

@@ -1,0 +1,24 @@
+ 12:47:34 up 2 min,  0 users,  load average: 10.48, 4.14, 1.54
+reboot   system boot  4.9.253-tegra    Sat Jan  1 02:00   still running
+reboot   system boot  4.9.253-tegra    Sat Jan  1 02:02   still running
+reboot   system boot  4.9.253-tegra    Sat Jan  1 02:00   still running
+reboot   system boot  4.9.253-tegra    Sat Jan  1 02:00   still running
+reboot   system boot  4.9.253-tegra    Sat Jan  1 02:00   still running
+
+wtmp begins Sat Jan  1 02:00:12 2000
+NRestarts=1
+ActiveEnterTimestamp=Sat 2026-10-24 12:42:42 CEST
+-- Logs begin at Sat 2026-10-24 09:29:26 CEST, end at Sat 2026-10-24 12:47:35 CEST. --
+Oct 24 12:42:36 nano python[5755]: INFO:     Started server process [5755]
+Oct 24 12:42:37 nano python[5755]: INFO:     Waiting for application startup.
+Oct 24 12:42:37 nano python[5755]: INFO:     Application startup complete.
+Oct 24 12:42:37 nano python[5755]: ERROR:    [Errno 99] error while attempting to bind on address ('192.168.184.76', 8000): cannot assign requested address
+Oct 24 12:42:37 nano python[5755]: INFO:     Waiting for application shutdown.
+Oct 24 12:42:37 nano python[5755]: INFO:     Application shutdown complete.
+Oct 24 12:42:37 nano systemd[1]: 300seconds-dashboard.service: Failed with result 'exit-code'.
+Oct 24 12:42:44 nano python[6291]: INFO:     Started server process [6291]
+Oct 24 12:42:44 nano python[6291]: INFO:     Waiting for application startup.
+Oct 24 12:42:44 nano python[6291]: INFO:     Application startup complete.
+Oct 24 12:42:44 nano python[6291]: INFO:     Uvicorn running on http://192.168.184.76:8000 (Press CTRL+C to quit)
+Oct 24 12:42:47 nano python[6291]: INFO:     ('192.168.184.82', 32034) - "WebSocket /ws/status" [accepted]
+Oct 24 12:42:47 nano python[6291]: INFO:     connection open

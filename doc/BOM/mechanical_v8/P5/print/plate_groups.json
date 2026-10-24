@@ -1,0 +1,954 @@
+{
+  "revision": "v8 P5",
+  "prepared_date": "2026-10-24",
+  "status": "proposed_static_bbox_plan_not_sliced",
+  "printer": "Bambu Lab X1 Carbon 0.4 nozzle",
+  "units": "mm",
+  "scale_percent": 100,
+  "bed_xy_mm": [
+    256,
+    256
+  ],
+  "stock_height_limit_mm": 250,
+  "excluded_box_xy_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      18,
+      28
+    ]
+  ],
+  "reserved_brim_mm": 5,
+  "edge_clearance_mm": 1,
+  "minimum_reserved_rectangle_gap_mm": 3.007918,
+  "orientation": "existing oriented_stl orientation; XY translation only; no model rotation",
+  "print_sequence": "by layer",
+  "filament_assumption": "one material and color per plate; no prime tower reserved",
+  "design_count": 29,
+  "quantity": 32,
+  "plate_count": 16,
+  "count_check": "pass",
+  "source_stl_hash_check": "pass",
+  "static_bbox_check": "pass",
+  "slicer_import_verified": false,
+  "supports_verified": false,
+  "slicing_performed": false,
+  "physical_print_verified": false,
+  "source_manifest_sha256": "e8ee1d8a1f825c133a3587776f7294e65625307841f7c8137e21fb0133eef6a3",
+  "plates": [
+    {
+      "plate": 1,
+      "title": "연결판 4개 + 손 정렬핀 4개",
+      "quantity": 8,
+      "items": [
+        {
+          "part": "SEAM_SPLICE_1_FRONT",
+          "copy": 1,
+          "file": "oriented_stl/SEAM_SPLICE_1_FRONT.stl",
+          "model_lower_left_xy_mm": [
+            30,
+            40
+          ],
+          "size_xyz_mm": [
+            48.00000762939453,
+            44.0,
+            10.000000000000004
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              25,
+              35
+            ],
+            [
+              83.00000762939453,
+              89.0
+            ]
+          ]
+        },
+        {
+          "part": "SEAM_SPLICE_1_REAR",
+          "copy": 1,
+          "file": "oriented_stl/SEAM_SPLICE_1_REAR.stl",
+          "model_lower_left_xy_mm": [
+            100,
+            40
+          ],
+          "size_xyz_mm": [
+            48.00000762939453,
+            44.0,
+            10.000000000000002
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              95,
+              35
+            ],
+            [
+              153.00000762939453,
+              89.0
+            ]
+          ]
+        },
+        {
+          "part": "SEAM_SPLICE_2_FRONT",
+          "copy": 1,
+          "file": "oriented_stl/SEAM_SPLICE_2_FRONT.stl",
+          "model_lower_left_xy_mm": [
+            30,
+            110
+          ],
+          "size_xyz_mm": [
+            48.00000762939453,
+            44.0,
+            10.000000000000004
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              25,
+              105
+            ],
+            [
+              83.00000762939453,
+              159.0
+            ]
+          ]
+        },
+        {
+          "part": "SEAM_SPLICE_2_REAR",
+          "copy": 1,
+          "file": "oriented_stl/SEAM_SPLICE_2_REAR.stl",
+          "model_lower_left_xy_mm": [
+            100,
+            110
+          ],
+          "size_xyz_mm": [
+            48.00000762939453,
+            44.0,
+            10.000000000000002
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              95,
+              105
+            ],
+            [
+              153.00000762939453,
+              159.0
+            ]
+          ]
+        },
+        {
+          "part": "HAND_DOWEL_4x6",
+          "copy": 1,
+          "file": "oriented_stl/HAND_DOWEL_4x6.stl",
+          "model_lower_left_xy_mm": [
+            190,
+            40
+          ],
+          "size_xyz_mm": [
+            3.9992802143096924,
+            3.999892473220825,
+            6.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              185,
+              35
+            ],
+            [
+              198.9992802143097,
+              48.999892473220825
+            ]
+          ]
+        },
+        {
+          "part": "HAND_DOWEL_4x6",
+          "copy": 2,
+          "file": "oriented_stl/HAND_DOWEL_4x6.stl",
+          "model_lower_left_xy_mm": [
+            210,
+            40
+          ],
+          "size_xyz_mm": [
+            3.9992802143096924,
+            3.999892473220825,
+            6.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              205,
+              35
+            ],
+            [
+              218.9992802143097,
+              48.999892473220825
+            ]
+          ]
+        },
+        {
+          "part": "HAND_DOWEL_4x6",
+          "copy": 3,
+          "file": "oriented_stl/HAND_DOWEL_4x6.stl",
+          "model_lower_left_xy_mm": [
+            190,
+            65
+          ],
+          "size_xyz_mm": [
+            3.9992802143096924,
+            3.999892473220825,
+            6.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              185,
+              60
+            ],
+            [
+              198.9992802143097,
+              73.99989247322083
+            ]
+          ]
+        },
+        {
+          "part": "HAND_DOWEL_4x6",
+          "copy": 4,
+          "file": "oriented_stl/HAND_DOWEL_4x6.stl",
+          "model_lower_left_xy_mm": [
+            210,
+            65
+          ],
+          "size_xyz_mm": [
+            3.9992802143096924,
+            3.999892473220825,
+            6.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              205,
+              60
+            ],
+            [
+              218.9992802143097,
+              73.99989247322083
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 10.000000000000004
+    },
+    {
+      "plate": 2,
+      "title": "좌우 Yaw 칼라 + 어깨 터릿",
+      "quantity": 4,
+      "items": [
+        {
+          "part": "L_ROUND_YAW_COLLAR_TRIAL",
+          "copy": 1,
+          "file": "oriented_stl/L_ROUND_YAW_COLLAR_TRIAL.stl",
+          "model_lower_left_xy_mm": [
+            30,
+            40
+          ],
+          "size_xyz_mm": [
+            82.0,
+            82.0,
+            35.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              25,
+              35
+            ],
+            [
+              117.0,
+              127.0
+            ]
+          ]
+        },
+        {
+          "part": "R_ROUND_YAW_COLLAR_TRIAL",
+          "copy": 1,
+          "file": "oriented_stl/R_ROUND_YAW_COLLAR_TRIAL.stl",
+          "model_lower_left_xy_mm": [
+            140,
+            40
+          ],
+          "size_xyz_mm": [
+            82.0,
+            82.0,
+            35.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              135,
+              35
+            ],
+            [
+              227.0,
+              127.0
+            ]
+          ]
+        },
+        {
+          "part": "L_SHOULDER_YAW_TURRET",
+          "copy": 1,
+          "file": "oriented_stl/L_SHOULDER_YAW_TURRET.stl",
+          "model_lower_left_xy_mm": [
+            30,
+            150
+          ],
+          "size_xyz_mm": [
+            79.985595703125,
+            71.9980640411377,
+            90.99893188476562
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              25,
+              145
+            ],
+            [
+              114.985595703125,
+              226.9980640411377
+            ]
+          ]
+        },
+        {
+          "part": "R_SHOULDER_YAW_TURRET",
+          "copy": 1,
+          "file": "oriented_stl/R_SHOULDER_YAW_TURRET.stl",
+          "model_lower_left_xy_mm": [
+            140,
+            150
+          ],
+          "size_xyz_mm": [
+            79.985595703125,
+            71.9980640411377,
+            90.99893188476562
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              135,
+              145
+            ],
+            [
+              224.985595703125,
+              226.9980640411377
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 90.99893188476562
+    },
+    {
+      "plate": 3,
+      "title": "왼손 3부품",
+      "quantity": 3,
+      "items": [
+        {
+          "part": "L_ROLL_PALM_REAR",
+          "copy": 1,
+          "file": "oriented_stl/L_ROLL_PALM_REAR.stl",
+          "model_lower_left_xy_mm": [
+            20,
+            40
+          ],
+          "size_xyz_mm": [
+            92.98614501953125,
+            42.0,
+            28.999999999999993
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              15,
+              35
+            ],
+            [
+              117.98614501953125,
+              87.0
+            ]
+          ]
+        },
+        {
+          "part": "L_ROLL_BEARING_CAP",
+          "copy": 1,
+          "file": "oriented_stl/L_ROLL_BEARING_CAP.stl",
+          "model_lower_left_xy_mm": [
+            135,
+            40
+          ],
+          "size_xyz_mm": [
+            87.99667358398438,
+            106.99208188056946,
+            6.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              130,
+              35
+            ],
+            [
+              227.99667358398438,
+              151.99208188056946
+            ]
+          ]
+        },
+        {
+          "part": "L_ROLL_YOKE_PALM_FRONT",
+          "copy": 1,
+          "file": "oriented_stl/L_ROLL_YOKE_PALM_FRONT.stl",
+          "model_lower_left_xy_mm": [
+            20,
+            160
+          ],
+          "size_xyz_mm": [
+            154.98614501953125,
+            87.97857666015625,
+            106.99208188056946
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              15,
+              155
+            ],
+            [
+              179.98614501953125,
+              252.97857666015625
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 106.99208188056946
+    },
+    {
+      "plate": 4,
+      "title": "왼팔 앞",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "L_CURVED_ARM_CORE_FRONT",
+          "copy": 1,
+          "file": "oriented_stl/L_CURVED_ARM_CORE_FRONT.stl",
+          "model_lower_left_xy_mm": [
+            65.00166320800781,
+            18.50006866455078
+          ],
+          "size_xyz_mm": [
+            125.99667358398438,
+            218.99986267089844,
+            39.99944020126714
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              60.00166320800781,
+              13.500068664550781
+            ],
+            [
+              195.9983367919922,
+              242.49993133544922
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 39.99944020126714
+    },
+    {
+      "plate": 5,
+      "title": "왼팔 뒤",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "L_CURVED_ARM_CORE_REAR",
+          "copy": 1,
+          "file": "oriented_stl/L_CURVED_ARM_CORE_REAR.stl",
+          "model_lower_left_xy_mm": [
+            65.00166320800781,
+            18.50006866455078
+          ],
+          "size_xyz_mm": [
+            125.99667358398438,
+            218.99986267089844,
+            39.99999237060547
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              60.00166320800781,
+              13.500068664550781
+            ],
+            [
+              195.9983367919922,
+              242.49993133544922
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 39.99999237060547
+    },
+    {
+      "plate": 6,
+      "title": "오른손 3부품",
+      "quantity": 3,
+      "items": [
+        {
+          "part": "R_ROLL_PALM_REAR",
+          "copy": 1,
+          "file": "oriented_stl/R_ROLL_PALM_REAR.stl",
+          "model_lower_left_xy_mm": [
+            20,
+            40
+          ],
+          "size_xyz_mm": [
+            92.98614501953125,
+            42.0,
+            28.999999999999993
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              15,
+              35
+            ],
+            [
+              117.98614501953125,
+              87.0
+            ]
+          ]
+        },
+        {
+          "part": "R_ROLL_BEARING_CAP",
+          "copy": 1,
+          "file": "oriented_stl/R_ROLL_BEARING_CAP.stl",
+          "model_lower_left_xy_mm": [
+            135,
+            40
+          ],
+          "size_xyz_mm": [
+            87.99667358398438,
+            106.99208188056946,
+            6.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              130,
+              35
+            ],
+            [
+              227.99667358398438,
+              151.99208188056946
+            ]
+          ]
+        },
+        {
+          "part": "R_ROLL_YOKE_PALM_FRONT",
+          "copy": 1,
+          "file": "oriented_stl/R_ROLL_YOKE_PALM_FRONT.stl",
+          "model_lower_left_xy_mm": [
+            20,
+            160
+          ],
+          "size_xyz_mm": [
+            154.98614501953125,
+            87.97857666015625,
+            106.99208188056946
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              15,
+              155
+            ],
+            [
+              179.98614501953125,
+              252.97857666015625
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 106.99208188056946
+    },
+    {
+      "plate": 7,
+      "title": "오른팔 앞",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "R_CURVED_ARM_CORE_FRONT",
+          "copy": 1,
+          "file": "oriented_stl/R_CURVED_ARM_CORE_FRONT.stl",
+          "model_lower_left_xy_mm": [
+            65.00022888183594,
+            18.50006866455078
+          ],
+          "size_xyz_mm": [
+            125.99954223632812,
+            218.99986267089844,
+            39.99945221224335
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              60.00022888183594,
+              13.500068664550781
+            ],
+            [
+              195.99977111816406,
+              242.49993133544922
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 39.99945221224335
+    },
+    {
+      "plate": 8,
+      "title": "오른팔 뒤",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "R_CURVED_ARM_CORE_REAR",
+          "copy": 1,
+          "file": "oriented_stl/R_CURVED_ARM_CORE_REAR.stl",
+          "model_lower_left_xy_mm": [
+            65.00022888183594,
+            18.50006866455078
+          ],
+          "size_xyz_mm": [
+            125.99954223632812,
+            218.99986267089844,
+            39.99999237060547
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              60.00022888183594,
+              13.500068664550781
+            ],
+            [
+              195.99977111816406,
+              242.49993133544922
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 39.99999237060547
+    },
+    {
+      "plate": 9,
+      "title": "베이스 트레이 1",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "PILL_BASE_TRAY_1",
+          "copy": 1,
+          "file": "oriented_stl/PILL_BASE_TRAY_1.stl",
+          "model_lower_left_xy_mm": [
+            24.0,
+            28.0
+          ],
+          "size_xyz_mm": [
+            213.33333587646484,
+            200.0,
+            96.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              19.0,
+              23.0
+            ],
+            [
+              242.33333587646484,
+              233.0
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 96.0
+    },
+    {
+      "plate": 10,
+      "title": "베이스 트레이 2",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "PILL_BASE_TRAY_2",
+          "copy": 1,
+          "file": "oriented_stl/PILL_BASE_TRAY_2.stl",
+          "model_lower_left_xy_mm": [
+            24.0,
+            28.0
+          ],
+          "size_xyz_mm": [
+            213.3333282470703,
+            200.0,
+            96.00000000001323
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              19.0,
+              23.0
+            ],
+            [
+              242.3333282470703,
+              233.0
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 96.00000000001323
+    },
+    {
+      "plate": 11,
+      "title": "베이스 트레이 3",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "PILL_BASE_TRAY_3",
+          "copy": 1,
+          "file": "oriented_stl/PILL_BASE_TRAY_3.stl",
+          "model_lower_left_xy_mm": [
+            24.0,
+            28.0
+          ],
+          "size_xyz_mm": [
+            213.33333587646484,
+            200.0,
+            96.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              19.0,
+              23.0
+            ],
+            [
+              242.33333587646484,
+              233.0
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 96.0
+    },
+    {
+      "plate": 12,
+      "title": "베이스 뚜껑 1",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "PILL_BASE_LID_1",
+          "copy": 1,
+          "file": "oriented_stl/PILL_BASE_LID_1.stl",
+          "model_lower_left_xy_mm": [
+            24.0,
+            28.0
+          ],
+          "size_xyz_mm": [
+            213.33333587646484,
+            200.0,
+            4.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              19.0,
+              23.0
+            ],
+            [
+              242.33333587646484,
+              233.0
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 4.0
+    },
+    {
+      "plate": 13,
+      "title": "베이스 뚜껑 2",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "PILL_BASE_LID_2",
+          "copy": 1,
+          "file": "oriented_stl/PILL_BASE_LID_2.stl",
+          "model_lower_left_xy_mm": [
+            24.0,
+            28.0
+          ],
+          "size_xyz_mm": [
+            213.3333282470703,
+            200.0,
+            4.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              19.0,
+              23.0
+            ],
+            [
+              242.3333282470703,
+              233.0
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 4.0
+    },
+    {
+      "plate": 14,
+      "title": "베이스 뚜껑 3",
+      "quantity": 1,
+      "items": [
+        {
+          "part": "PILL_BASE_LID_3",
+          "copy": 1,
+          "file": "oriented_stl/PILL_BASE_LID_3.stl",
+          "model_lower_left_xy_mm": [
+            24.0,
+            28.0
+          ],
+          "size_xyz_mm": [
+            213.33333587646484,
+            200.0,
+            4.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              19.0,
+              23.0
+            ],
+            [
+              242.33333587646484,
+              233.0
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 4.0
+    },
+    {
+      "plate": 15,
+      "title": "머리 앞 + 얼굴 바이저",
+      "quantity": 2,
+      "items": [
+        {
+          "part": "PEBBLE_HEAD_FRONT_TRIAL",
+          "copy": 1,
+          "file": "oriented_stl/PEBBLE_HEAD_FRONT_TRIAL.stl",
+          "model_lower_left_xy_mm": [
+            40,
+            50
+          ],
+          "size_xyz_mm": [
+            160.52832412719727,
+            140.48287200927734,
+            25.524303436279297
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              35,
+              45
+            ],
+            [
+              205.52832412719727,
+              195.48287200927734
+            ]
+          ]
+        },
+        {
+          "part": "CAPSULE_VISOR_TRIAL",
+          "copy": 1,
+          "file": "oriented_stl/CAPSULE_VISOR_TRIAL.stl",
+          "model_lower_left_xy_mm": [
+            45,
+            210
+          ],
+          "size_xyz_mm": [
+            144.0,
+            27.768100738525394,
+            67.0
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              40,
+              205
+            ],
+            [
+              194.0,
+              242.7681007385254
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 67.0
+    },
+    {
+      "plate": 16,
+      "title": "머리 뒤 + 휴대폰 받침",
+      "quantity": 2,
+      "items": [
+        {
+          "part": "PEBBLE_HEAD_REAR_TRIAL",
+          "copy": 1,
+          "file": "oriented_stl/PEBBLE_HEAD_REAR_TRIAL.stl",
+          "model_lower_left_xy_mm": [
+            32,
+            90
+          ],
+          "size_xyz_mm": [
+            191.99676513671875,
+            155.0,
+            96.00178909301758
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              27,
+              85
+            ],
+            [
+              228.99676513671875,
+              250.0
+            ]
+          ]
+        },
+        {
+          "part": "ROUNDED_PHONE_CRADLE_TRIAL",
+          "copy": 1,
+          "file": "oriented_stl/ROUNDED_PHONE_CRADLE_TRIAL.stl",
+          "model_lower_left_xy_mm": [
+            85,
+            10
+          ],
+          "size_xyz_mm": [
+            82.0,
+            60.53793907165527,
+            53.50926208496094
+          ],
+          "reserved_brim_bbox_xy_mm": [
+            [
+              80,
+              5
+            ],
+            [
+              172.0,
+              75.53793907165527
+            ]
+          ]
+        }
+      ],
+      "static_bbox_check": "pass",
+      "max_height_mm": 96.00178909301758
+    }
+  ]
+}

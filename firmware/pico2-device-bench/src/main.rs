@@ -12,9 +12,9 @@ use embassy_sync::{blocking_mutex::{raw::CriticalSectionRawMutex,Mutex},channel:
 use embassy_time::{with_timeout,Duration,Instant,Timer};
 use embassy_usb::{class::cdc_acm::{CdcAcmClass,Receiver,Sender,State},UsbDevice};
 use pico_device_protocol::{AckCode,DeviceConfig,DeviceStatus,Frame as WireFrame,FrameDecoder,
-    Message,Module,TouchEngine,TouchState,VERSION,MAX_WIRE};
+    Message,Module,ServoDriverStatus,TouchEngine,TouchState,VERSION,MAX_WIRE};
 use pico2_device_bench::{picotool_reset,Admission,Gesture,GestureAction,MatrixFrame,
-    ReleaseGuard,SessionGate,CAPACITY,is_priority_stop,matrix_frame,matrix_packet,neo_frame,servo_angle,servo_ticks,stage};
+    ReleaseGuard,SessionGate,CAPACITY,is_priority_stop,matrix_frame,matrix_mount_frame,matrix_packet,neo_frame,servo_angle,servo_ticks,servo_driver_address,stage};
 use smart_leds::RGB8;
 use static_cell::StaticCell;
 mod application;
@@ -97,7 +97,7 @@ async fn main(spawner:Spawner){
     let p=embassy_rp::init(Default::default());
     let oe=Output::new(p.PIN_12,Level::High);
     let mut bus_config=i2c::Config::default();bus_config.frequency=100_000;
-    let pca=Pca{bus:I2c::new_async(p.I2C0,p.PIN_5,p.PIN_4,Irqs,bus_config)};
+    let pca=Pca{bus:I2c::new_async(p.I2C0,p.PIN_5,p.PIN_4,Irqs,bus_config),diagnostics:ServoDriverStatus::default()};
     // Common and the shared loaded program stay alive for both state machines.
     let Pio{mut common,sm0,sm1,..}=Pio::new(p.PIO0,Irqs);
     let program=PioWs2812Program::new(&mut common);
@@ -216,24 +216,60 @@ async fn touch_task(mut pins:[Flex<'static>;6],mut config:DeviceConfig){
     }
 }
 
-struct Pca{bus:Bus}
+struct Pca{bus:Bus,diagnostics:ServoDriverStatus}
 impl Pca{
-    async fn write(&mut self,bytes:&[u8])->Result<(),()>{match with_timeout(Duration::from_millis(40),self.bus.write_async(0x41u8,bytes.iter().copied())).await{Ok(Ok(()))=>Ok(()),_=>Err(())}}
+    fn bus_error(error:i2c::Error)->u8{match error{
+        i2c::Error::Abort(i2c::AbortReason::NoAcknowledge)=>2,_=>4}}
+    fn sample_lines(&mut self){
+        let pins=embassy_rp::pac::SIO.gpio_in(0).read();
+        self.diagnostics.sda_high=pins&(1<<4)!=0;
+        self.diagnostics.scl_high=pins&(1<<5)!=0;
+    }
+    async fn read_register(&mut self,address:u8,register:u8)->Result<u8,u8>{
+        DEVICE_TICK.store(now(),Ordering::SeqCst);
+        let mut value=[0];
+        match with_timeout(Duration::from_millis(40),self.bus.write_read_async(address,[register],&mut value)).await{
+            Ok(Ok(()))=>Ok(value[0]),Ok(Err(error))=>Err(Self::bus_error(error)),Err(_)=>Err(3)}
+    }
+    async fn discover(&mut self)->Result<(),()>{
+        self.diagnostics=ServoDriverStatus::default();
+        for (i,address) in [0x40,0x41].into_iter().enumerate(){
+            self.diagnostics.probes[i]=match self.read_register(address,0).await{
+                Ok(_)=>match self.read_register(address,1).await{Ok(mode2) if mode2&0xe0==0=>1,Ok(_)=>5,Err(code)=>code},
+                Err(code)=>code};
+        }
+        self.sample_lines();
+        if let Some(address)=servo_driver_address(self.diagnostics.probes){
+            self.diagnostics.selected_address=address;Ok(())
+        }else{Err(())}
+    }
+    async fn write(&mut self,bytes:&[u8])->Result<(),()>{
+        DEVICE_TICK.store(now(),Ordering::SeqCst);
+        let code=match with_timeout(Duration::from_millis(40),self.bus.write_async(self.diagnostics.selected_address,bytes.iter().copied())).await{
+            Ok(Ok(()))=>0,Ok(Err(error))=>Self::bus_error(error),Err(_)=>3};
+        self.diagnostics.last_error=code;self.sample_lines();
+        if code==0{Ok(())}else{self.diagnostics.initialized=false;Err(())}
+    }
     // One register write also works before MODE1 auto-increment is enabled.
     // ALL_LED_OFF_H broadcasts the explicit FULL_OFF bit to every channel.
-    async fn all_off(&mut self)->Result<(),()>{self.write(&[0xfd,0x10]).await}
+    async fn all_off(&mut self)->Result<(),()>{
+        if self.diagnostics.selected_address==0{self.discover().await?;}
+        self.write(&[0xfd,0x10]).await
+    }
     async fn off(&mut self,ch:u8)->Result<(),()>{self.write(&[0x06+ch*4,0,0,0,0x10]).await}
     async fn init(&mut self)->Result<(),()>{
+        self.discover().await?;
         self.all_off().await?;self.write(&[0x00,0x30]).await?;self.write(&[0xfe,121]).await?;
         self.write(&[0x01,0x04]).await?;self.write(&[0x00,0x20]).await?;Timer::after_micros(600).await;
-        self.write(&[0x00,0xa0]).await?;self.all_off().await
+        self.write(&[0x00,0xa0]).await?;self.all_off().await?;
+        self.diagnostics.initialized=true;Ok(())
     }
     async fn pulse(&mut self,ch:u8,ticks:u16)->Result<(),()>{self.write(&[0x06+ch*4,0,0,ticks as u8,((ticks>>8)&0x0f)as u8]).await}
 }
 struct Matrix{spi:Spi<'static,SPI0,spi::Blocking>,cs:Output<'static>}
 impl Matrix{
-    fn reg(&mut self,address:u8,left:u8,right:u8)->Result<(),()>{self.cs.set_low();let result=self.spi.blocking_write(&matrix_packet(address,left,right)).map_err(|_|());self.cs.set_high();cortex_m::asm::delay(150);result}
-    fn frame(&mut self,f:MatrixFrame)->Result<(),()>{for row in 0..8{self.reg(row as u8+1,f.left[row],f.right[row])?;}Ok(())}
+    fn reg(&mut self,address:u8,near:u8,far:u8)->Result<(),()>{self.cs.set_low();let result=self.spi.blocking_write(&matrix_packet(address,near,far)).map_err(|_|());self.cs.set_high();cortex_m::asm::delay(150);result}
+    fn frame(&mut self,f:MatrixFrame)->Result<(),()>{let f=matrix_mount_frame(f);for row in 0..8{self.reg(row as u8+1,f.near[row],f.far[row])?;}Ok(())}
     fn off(&mut self)->Result<(),()>{let mut ok=self.reg(0xf,0,0).is_ok();ok&=self.reg(0xc,0,0).is_ok();ok&=self.frame(MatrixFrame::BLANK).is_ok();if ok{Ok(())}else{Err(())}}
     fn init(&mut self)->Result<(),()>{self.off()?;self.reg(9,0,0)?;self.reg(0xb,7,7)?;self.reg(0xa,1,1)}
     fn enable(&mut self)->Result<(),()>{self.reg(0xc,1,1)}
@@ -322,6 +358,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                         Timer::after_millis(150).await;embassy_rp::rom_data::reset_to_usb_boot(0,0);loop{cortex_m::asm::wfi();}
                     }
                 }
+                event(Message::ServoDriver(devices.pca.diagnostics));
                 event(Message::Status(status(config,&run,faults,devices.oe.is_set_high())));
             }
             Either3::Second(())=>{
@@ -368,14 +405,14 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                         Admission::Duplicate(_)=>(),
                     }
                     gate.finish(frame.seq,AckCode::Ok);
-                    reply(frame,Message::HelloReply{device_id:chipid,uptime_ms:Instant::now().as_millis()});ack(frame,AckCode::Ok);continue;
+                    reply(frame,Message::HelloReply{device_id:chipid,uptime_ms:Instant::now().as_millis()});reply(frame,Message::Capabilities{single_servo:true});reply(frame,Message::ServoDriver(devices.pca.diagnostics));ack(frame,AckCode::Ok);continue;
                 }
                 if gate.session==0{ack(frame,AckCode::NoSession);continue;}
                 if frame.session!=gate.session{ack(frame,AckCode::BadSession);continue;}
                 match gate.check(frame.seq){Admission::Duplicate(code)=>{ack(frame,code);continue;},Admission::Stale=>{ack(frame,AckCode::StaleSequence);continue;},Admission::New=>()}
                 let code=match frame.body{
                     Message::KeepAlive=>{LAST_PING.store(now(),Ordering::SeqCst);AckCode::Ok}
-                    Message::GetStatus=>{reply(frame,Message::Outputs(app.as_ref().map(|a|a.status()).unwrap_or_default()));reply(frame,Message::Status(status(config,&run,faults,devices.oe.is_set_high())));AckCode::Ok}
+                    Message::GetStatus=>{reply(frame,Message::Capabilities{single_servo:true});reply(frame,Message::ServoDriver(devices.pca.diagnostics));reply(frame,Message::Outputs(app.as_ref().map(|a|a.status()).unwrap_or_default()));reply(frame,Message::Status(status(config,&run,faults,devices.oe.is_set_high())));AckCode::Ok}
                     Message::Arm(value)=>{
                         if run.is_some()||envelope.busy{AckCode::Busy}else if !value.validate(){AckCode::InvalidConfig}else if !lease_valid(){AckCode::NoSession}else if faults&PCA_FAULT!=0&&value.servo_enabled{AckCode::Fault}else{
                             app=Some(application::Application::new(value));STOPPED.store(false,Ordering::SeqCst);AckCode::Ok
@@ -383,6 +420,23 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                     }
                     Message::SetPose{targets_cdeg,move_ms}=>{
                         if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}else if let Some(a)=app.as_mut(){if a.pose(targets_cdeg,move_ms,frame.seq){ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}else{AckCode::InvalidConfig}}else{AckCode::NoSession}
+                    }
+                    Message::SetServo{channel,target_cdeg,move_ms}=>{
+                        if faults&PCA_FAULT!=0{AckCode::Fault}
+                        else if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}
+                        else if let Some(a)=app.as_mut(){
+                            if a.status().pose_active{AckCode::Busy}
+                            else if a.servo(channel,target_cdeg,move_ms,frame.seq){ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}
+                            else{AckCode::InvalidConfig}
+                        }else{AckCode::NoSession}
+                    }
+                    Message::CheckServoDriver=>{
+                        if run.is_some()||app.is_some()||!devices.oe.is_set_high(){AckCode::Busy}
+                        else{
+                            let initialized=devices.pca.init().await.is_ok();
+                            reply(frame,Message::ServoDriver(devices.pca.diagnostics));
+                            if initialized{faults&=!PCA_FAULT;AckCode::Ok}else{faults|=PCA_FAULT;AckCode::Fault}
+                        }
                     }
                     Message::SetLight{rgb,brightness,period_ms}=>{
                         if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}else if let Some(a)=app.as_mut(){if a.light(rgb,brightness,period_ms,frame.seq){ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}else{AckCode::InvalidConfig}}else{AckCode::NoSession}

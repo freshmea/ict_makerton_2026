@@ -1,0 +1,22 @@
+{
+  "states": {
+    "300seconds-dashboard": "active",
+    "300seconds-tts": "active"
+  },
+  "typecast_key_in_process": {
+    "300seconds-dashboard": false,
+    "300seconds-tts": true
+  },
+  "source_sha256": {
+    "app.py": "ab22c5a12180194df922f5262dce281f582263649e3ad5bd2939c1a5c116a9f0",
+    "hardware.py": "6f702cb83e02069f955285f1c035dc680bc473c39a37666548d38adfba3de1f1",
+    "tts_client.py": "bf94a81b701d61a1a07a312fac768facbd0df4f0f76863ac20ecd23a9d4a047e",
+    "tts_worker.py": "5799abefc0fae8c8b95f22e178be8caa45da22410deed1073c23af7c6ba6fe69",
+    "static/app.js": "4c76ea7c5d7c2d79ae6c02f7406c5cced8f635fa147b2ada268e5168b740b51d",
+    "static/index.html": "89cbddf2112c6744dfa3aa1c59e75098bbaf6550de6c5ded341e6331ccdd6cf2",
+    "static/styles.css": "e0daa7afa0dc2362e3fd57db903e49cc1325afe3ac8c71331ced1172840691fb"
+  },
+  "temporary_utterances_remaining": [],
+  "speaker_mixer": "Simple mixer control 'Speaker',0\n  Capabilities: pvolume pswitch pswitch-joined\n  Playback channels: Front Left - Front Right\n  Limits: Playback 0 - 37\n  Mono:\n  Front Left: Playback 34 [92%] [-3.00dB] [on]\n  Front Right: Playback 34 [92%] [-3.00dB] [on]\n",
+  "installed_binary_sha256": "471c8a9676c2f270ec9254e6e4568432efabd176fb341be1577311c64432b0a5"
+}

@@ -18,6 +18,9 @@
 | `check-usb-audio.py` | 짧은 실물 녹음·시험음 재생·full duplex와 주파수 확인 |
 | `check-csi-camera.py` | sensor-id0/1의 실제 프레임 취득. 수신 프레임이 없으면 실패 |
 | `verify-csi-cameras.py` | 비root에서 각 카메라와 두 카메라 동시 90프레임 수신·PTS 측정·실제 RGB PNG 저장 |
+| `jev-study-observer.py` | OpenCode 무료 Jev 단발 카메라 관찰: 영상 수집 점검·인증 점검·행동/시선 0~10 및 자리비움 JSON. [설정·검증 범위](../../doc/software/OpenCode_Jev_카메라_관찰_설정과_테스트.md) |
+| `openai-study-observer.py` | OpenAI Decisions/gpt-6-luna 단발 관찰. 최대5회·로컬 예산 장부·토큰 비용 기록. [실제 사진 테스트·예산](../../doc/software/OpenAI_Decisions_카메라_테스트와_예산.md) |
+| `study_window.py` / `study_observer_service.py` / `install-study-observer.sh` | JEV는 얼굴·학습 공간 두 대에서 1초 간격 각 10장(총 20장), GPT는 한 대 10장을 한 번 분석하는 별도 작업 서비스. 15개 행동 관찰. [대시보드·최종 검증](../../doc/software/10프레임_학습행동_분석과_대시보드.md) |
 
 보드에는 `/opt/300seconds/jetson`에 root 소유로 설치했다. `.sh`는 `0755`, Python 엔진은 root 소유이며 상태 폴더는 `/var/lib/300seconds/` 아래 root 전용이다. 일반 사용자가 수정 가능한 스크립트 경로를 서비스나 root 자동 시작 경로로 등록하지 않는다.
 

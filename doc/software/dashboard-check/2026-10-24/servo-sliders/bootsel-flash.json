@@ -1,0 +1,17 @@
+{
+  "before_rom": {
+    "sysfs": "/sys/devices/70090000.xusb/usb1/1-2/1-2.3",
+    "vid": "2e8a",
+    "pid": "000f",
+    "serial": "E679675A69C4039B",
+    "bus": 1,
+    "address": 9,
+    "usb_node": "/dev/bus/usb/001/009",
+    "read_write": true
+  },
+  "started": 1792836287.879561,
+  "actuator_test_started": false,
+  "exit_code": 0,
+  "output": "Saving existing 4 MiB flash before writing...\nLoading and verifying RP2350 flash...\nFlash readback and integrated CDC STATUS verified. No actuator test started.\nResult: /home/jetson/ict_makerton_2026/tmp/pico-flash/20261024T100450.360694Z-linux/flash-result.json\n",
+  "finished": 1792836302.330064
+}

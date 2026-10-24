@@ -29,7 +29,16 @@ chown -R root:root "$prefix/app"
 chmod -R u=rwX,go=rX "$prefix/app"
 install -m 0755 "$binary" "$prefix/pico-device-bench"
 [[ -e /etc/300seconds/dashboard.env ]] || install -m 0644 "$source_dir/dashboard.env.example" /etc/300seconds/dashboard.env
+if ! grep -q '^LEARNING_AUTOSTART=' /etc/300seconds/dashboard.env; then
+    printf '\nLEARNING_AUTOSTART=1\n' >> /etc/300seconds/dashboard.env
+fi
 install -m 0644 "$source_dir/300seconds-dashboard.service" /etc/systemd/system/300seconds-dashboard.service
 systemctl daemon-reload
 systemctl enable --now 300seconds-dashboard.service
+if [[ -x /opt/300seconds/runtime/nano-runtime ]]; then
+    bash "$source_dir/install-tts.sh"
+fi
+if [[ -f "$repo_dir/tools/jetson/install-study-observer.sh" ]]; then
+    bash "$repo_dir/tools/jetson/install-study-observer.sh"
+fi
 systemctl --no-pager status 300seconds-dashboard.service

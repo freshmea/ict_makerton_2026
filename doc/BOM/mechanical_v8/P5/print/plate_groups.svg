@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1650" viewBox="0 0 1360 1650">
+<rect width="100%" height="100%" fill="#f7f7f2"/>
+<g font-family="Malgun Gothic,Arial,sans-serif" fill="#202c2c">
+<text x="24" y="34" font-size="24" font-weight="bold">P5 출력 묶음안 — 16판 / 29종 / 32개</text>
+<text x="24" y="61" font-size="14">위에서 본 경계상자 배치 · 점선: 5mm 브림 예약 · 빨강: 앞 왼쪽 제외 영역 · 실제 슬라이싱 전</text>
+<text x="22" y="88" font-size="14" font-weight="bold">01 · 연결판 4개 + 손 정렬핀 4개 · 8개</text>
+<g transform="translate(22,102)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="25.000" y="167.000" width="58.000" height="54.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="30.000" y="172.000" width="48.000" height="44.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="54.000" y="198.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<rect x="95.000" y="167.000" width="58.000" height="54.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="100.000" y="172.000" width="48.000" height="44.000" fill="#c6d7ee" stroke="#50605a" stroke-width="0.7"/>
+<text x="124.000" y="198.000" text-anchor="middle" font-size="13" font-weight="bold">2</text>
+<rect x="25.000" y="97.000" width="58.000" height="54.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="30.000" y="102.000" width="48.000" height="44.000" fill="#f5d3b8" stroke="#50605a" stroke-width="0.7"/>
+<text x="54.000" y="128.000" text-anchor="middle" font-size="13" font-weight="bold">3</text>
+<rect x="95.000" y="97.000" width="58.000" height="54.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="100.000" y="102.000" width="48.000" height="44.000" fill="#dfc8e6" stroke="#50605a" stroke-width="0.7"/>
+<text x="124.000" y="128.000" text-anchor="middle" font-size="13" font-weight="bold">4</text>
+<rect x="185.000" y="207.000" width="13.999" height="14.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="190.000" y="212.000" width="3.999" height="4.000" fill="#d4dfae" stroke="#50605a" stroke-width="0.7"/>
+<text x="192.000" y="205.000" text-anchor="middle" font-size="10">5</text>
+<rect x="205.000" y="207.000" width="13.999" height="14.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="210.000" y="212.000" width="3.999" height="4.000" fill="#f1c7c0" stroke="#50605a" stroke-width="0.7"/>
+<text x="212.000" y="205.000" text-anchor="middle" font-size="10">6</text>
+<rect x="185.000" y="182.000" width="13.999" height="14.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="190.000" y="187.000" width="3.999" height="4.000" fill="#d1d7df" stroke="#50605a" stroke-width="0.7"/>
+<text x="192.000" y="180.000" text-anchor="middle" font-size="10">7</text>
+<rect x="205.000" y="182.000" width="13.999" height="14.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="210.000" y="187.000" width="3.999" height="4.000" fill="#eadcae" stroke="#50605a" stroke-width="0.7"/>
+<text x="212.000" y="180.000" text-anchor="middle" font-size="10">8</text>
+<text x="0" y="274" font-size="10">1  SEAM_SPLICE_1_FRONT</text>
+<text x="0" y="290" font-size="10">2  SEAM_SPLICE_1_REAR</text>
+<text x="0" y="306" font-size="10">3  SEAM_SPLICE_2_FRONT</text>
+<text x="0" y="322" font-size="10">4  SEAM_SPLICE_2_REAR</text>
+<text x="0" y="338" font-size="10">5,6,7,8  HAND_DOWEL_4x6</text>
+</g>
+<text x="360" y="88" font-size="14" font-weight="bold">02 · 좌우 Yaw 칼라 + 어깨 터릿 · 4개</text>
+<g transform="translate(360,102)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="25.000" y="129.000" width="92.000" height="92.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="30.000" y="134.000" width="82.000" height="82.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="71.000" y="179.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<rect x="135.000" y="129.000" width="92.000" height="92.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="140.000" y="134.000" width="82.000" height="82.000" fill="#c6d7ee" stroke="#50605a" stroke-width="0.7"/>
+<text x="181.000" y="179.000" text-anchor="middle" font-size="13" font-weight="bold">2</text>
+<rect x="25.000" y="29.002" width="89.986" height="81.998" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="30.000" y="34.002" width="79.986" height="71.998" fill="#f5d3b8" stroke="#50605a" stroke-width="0.7"/>
+<text x="69.993" y="74.001" text-anchor="middle" font-size="13" font-weight="bold">3</text>
+<rect x="135.000" y="29.002" width="89.986" height="81.998" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="140.000" y="34.002" width="79.986" height="71.998" fill="#dfc8e6" stroke="#50605a" stroke-width="0.7"/>
+<text x="179.993" y="74.001" text-anchor="middle" font-size="13" font-weight="bold">4</text>
+<text x="0" y="274" font-size="10">1  L_YAW_COLLAR</text>
+<text x="0" y="290" font-size="10">2  R_YAW_COLLAR</text>
+<text x="0" y="306" font-size="10">3  L_SHOULDER</text>
+<text x="0" y="322" font-size="10">4  R_SHOULDER</text>
+</g>
+<text x="698" y="88" font-size="14" font-weight="bold">03 · 왼손 3부품 · 3개</text>
+<g transform="translate(698,102)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="15.000" y="169.000" width="102.986" height="52.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="20.000" y="174.000" width="92.986" height="42.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="66.493" y="199.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<rect x="130.000" y="104.008" width="97.997" height="116.992" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="135.000" y="109.008" width="87.997" height="106.992" fill="#c6d7ee" stroke="#50605a" stroke-width="0.7"/>
+<text x="178.998" y="166.504" text-anchor="middle" font-size="13" font-weight="bold">2</text>
+<rect x="15.000" y="3.021" width="164.986" height="97.979" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="20.000" y="8.021" width="154.986" height="87.979" fill="#f5d3b8" stroke="#50605a" stroke-width="0.7"/>
+<text x="97.493" y="56.011" text-anchor="middle" font-size="13" font-weight="bold">3</text>
+<text x="0" y="274" font-size="10">1  L_ROLL_PALM_REAR</text>
+<text x="0" y="290" font-size="10">2  L_ROLL_BEARING_CAP</text>
+<text x="0" y="306" font-size="10">3  L_ROLL_FRONT</text>
+</g>
+<text x="1036" y="88" font-size="14" font-weight="bold">04 · 왼팔 앞 · 1개</text>
+<g transform="translate(1036,102)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="60.002" y="13.500" width="135.997" height="229.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="65.002" y="18.500" width="125.997" height="219.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="128.000" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  L_ARM_FRONT</text>
+</g>
+<text x="22" y="476" font-size="14" font-weight="bold">05 · 왼팔 뒤 · 1개</text>
+<g transform="translate(22,490)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="60.002" y="13.500" width="135.997" height="229.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="65.002" y="18.500" width="125.997" height="219.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="128.000" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  L_ARM_REAR</text>
+</g>
+<text x="360" y="476" font-size="14" font-weight="bold">06 · 오른손 3부품 · 3개</text>
+<g transform="translate(360,490)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="15.000" y="169.000" width="102.986" height="52.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="20.000" y="174.000" width="92.986" height="42.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="66.493" y="199.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<rect x="130.000" y="104.008" width="97.997" height="116.992" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="135.000" y="109.008" width="87.997" height="106.992" fill="#c6d7ee" stroke="#50605a" stroke-width="0.7"/>
+<text x="178.998" y="166.504" text-anchor="middle" font-size="13" font-weight="bold">2</text>
+<rect x="15.000" y="3.021" width="164.986" height="97.979" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="20.000" y="8.021" width="154.986" height="87.979" fill="#f5d3b8" stroke="#50605a" stroke-width="0.7"/>
+<text x="97.493" y="56.011" text-anchor="middle" font-size="13" font-weight="bold">3</text>
+<text x="0" y="274" font-size="10">1  R_ROLL_PALM_REAR</text>
+<text x="0" y="290" font-size="10">2  R_ROLL_BEARING_CAP</text>
+<text x="0" y="306" font-size="10">3  R_ROLL_FRONT</text>
+</g>
+<text x="698" y="476" font-size="14" font-weight="bold">07 · 오른팔 앞 · 1개</text>
+<g transform="translate(698,490)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="60.000" y="13.500" width="136.000" height="229.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="65.000" y="18.500" width="126.000" height="219.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="128.000" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  R_ARM_FRONT</text>
+</g>
+<text x="1036" y="476" font-size="14" font-weight="bold">08 · 오른팔 뒤 · 1개</text>
+<g transform="translate(1036,490)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="60.000" y="13.500" width="136.000" height="229.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="65.000" y="18.500" width="126.000" height="219.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="128.000" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  R_ARM_REAR</text>
+</g>
+<text x="22" y="864" font-size="14" font-weight="bold">09 · 베이스 트레이 1 · 1개</text>
+<g transform="translate(22,878)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="130.667" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  PILL_BASE_TRAY_1</text>
+</g>
+<text x="360" y="864" font-size="14" font-weight="bold">10 · 베이스 트레이 2 · 1개</text>
+<g transform="translate(360,878)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="130.667" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  PILL_BASE_TRAY_2</text>
+</g>
+<text x="698" y="864" font-size="14" font-weight="bold">11 · 베이스 트레이 3 · 1개</text>
+<g transform="translate(698,878)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="130.667" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  PILL_BASE_TRAY_3</text>
+</g>
+<text x="1036" y="864" font-size="14" font-weight="bold">12 · 베이스 뚜껑 1 · 1개</text>
+<g transform="translate(1036,878)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="130.667" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  PILL_BASE_LID_1</text>
+</g>
+<text x="22" y="1252" font-size="14" font-weight="bold">13 · 베이스 뚜껑 2 · 1개</text>
+<g transform="translate(22,1266)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="130.667" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  PILL_BASE_LID_2</text>
+</g>
+<text x="360" y="1252" font-size="14" font-weight="bold">14 · 베이스 뚜껑 3 · 1개</text>
+<g transform="translate(360,1266)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="19.000" y="23.000" width="223.333" height="210.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="24.000" y="28.000" width="213.333" height="200.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="130.667" y="132.000" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="0" y="274" font-size="10">1  PILL_BASE_LID_3</text>
+</g>
+<text x="698" y="1252" font-size="14" font-weight="bold">15 · 머리 앞 + 얼굴 바이저 · 2개</text>
+<g transform="translate(698,1266)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="35.000" y="60.517" width="170.528" height="150.483" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="40.000" y="65.517" width="160.528" height="140.483" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="120.264" y="139.759" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<rect x="40.000" y="13.232" width="154.000" height="37.768" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="45.000" y="18.232" width="144.000" height="27.768" fill="#c6d7ee" stroke="#50605a" stroke-width="0.7"/>
+<text x="117.000" y="36.116" text-anchor="middle" font-size="13" font-weight="bold">2</text>
+<text x="0" y="274" font-size="10">1  HEAD_FRONT</text>
+<text x="0" y="290" font-size="10">2  CAPSULE_VISOR</text>
+</g>
+<text x="1036" y="1252" font-size="14" font-weight="bold">16 · 머리 뒤 + 휴대폰 받침 · 2개</text>
+<g transform="translate(1036,1266)">
+<rect width="256" height="256" fill="white" stroke="#7d8c88"/>
+<rect x="0" y="228" width="18" height="28" fill="#de7770"/>
+<rect x="27.000" y="6.000" width="201.997" height="165.000" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="32.000" y="11.000" width="191.997" height="155.000" fill="#bad7cd" stroke="#50605a" stroke-width="0.7"/>
+<text x="127.998" y="92.500" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<rect x="80.000" y="180.462" width="92.000" height="70.538" fill="none" stroke="#b68e52" stroke-dasharray="3 2"/>
+<rect x="85.000" y="185.462" width="82.000" height="60.538" fill="#c6d7ee" stroke="#50605a" stroke-width="0.7"/>
+<text x="126.000" y="219.731" text-anchor="middle" font-size="13" font-weight="bold">2</text>
+<text x="0" y="274" font-size="10">1  HEAD_REAR</text>
+<text x="0" y="290" font-size="10">2  ROUNDED_PHONE_CRADLE</text>
+</g>
+</g>
+</svg>

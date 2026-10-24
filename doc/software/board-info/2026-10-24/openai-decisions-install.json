@@ -1,0 +1,28 @@
+{
+  "at_utc": "2026-10-24T04:25:47.416032+00:00",
+  "files": [
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/openai-study-observer.py",
+      "sha256": "c4e636b60b590659f425590a957ee557d5241ff3a59984301236044f68fa53ad"
+    },
+    {
+      "path": "/home/jetson/ict_makerton_2026/tools/jetson/test_openai_study_observer.py",
+      "sha256": "6e8f6af1c9ce7bb0bfeffcdba011b62c010f9f01ae6dd2c31591282b1b27b44a"
+    }
+  ],
+  "tests": {
+    "stdout": "",
+    "stderr": "test_camera_pipeline_makes_one_request_and_only_returns_metadata (test_openai_study_observer.DecisionsTests) ... ok\ntest_corrupt_budget_fails_closed (test_openai_study_observer.DecisionsTests) ... ok\ntest_decisions_mapping_keeps_0_to_10_and_boolean (test_openai_study_observer.DecisionsTests) ... ok\ntest_external_images_and_excessive_input_are_blocked (test_openai_study_observer.DecisionsTests) ... ok\ntest_input_usage_cost_and_unknown_attempt_are_separate (test_openai_study_observer.DecisionsTests) ... ok\ntest_missing_key_makes_no_reservation (test_openai_study_observer.DecisionsTests) ... ok\ntest_missing_or_duplicated_answers_fail (test_openai_study_observer.DecisionsTests) ... ok\ntest_only_fixed_model_and_disabled_cache_allowed (test_openai_study_observer.DecisionsTests) ... ok\ntest_parallel_lock_does_not_allow_another_reservation (test_openai_study_observer.DecisionsTests) ... ok\ntest_rate_limit_stops_later_calls (test_openai_study_observer.DecisionsTests) ... ok\ntest_refusal_preserves_other_observations (test_openai_study_observer.DecisionsTests) ... ok\ntest_three_attempt_cap_persists_across_instances (test_openai_study_observer.DecisionsTests) ... ok\ntest_timeout_never_retries_and_keeps_reservation (test_openai_study_observer.DecisionsTests) ... ok\ntest_unauthorized_does_not_log_body_or_retry (test_openai_study_observer.DecisionsTests) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.339s\n\nOK\n",
+    "exit_code": 0
+  },
+  "install": {
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "text_test": {
+    "stdout": "{\n  \"wall_ms\": 1148.4,\n  \"request_id\": \"req_7f1a382da2e64234ada2f7a827d01886\",\n  \"usage\": {\n    \"input_tokens\": 159,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"cache_write_tokens\": 0\n    },\n    \"output_tokens\": 0,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 159\n  },\n  \"standard_input_cost_estimate_usd\": \"0.0000159\",\n  \"pricing\": \"standard uncached input $0.10/1M; output free; cache disabled; invoice authoritative\",\n  \"local_budget\": {\n    \"local_only\": true,\n    \"attempts\": 1,\n    \"max_attempts\": 3,\n    \"session_cap_usd\": \"0.10\",\n    \"reserved_usd\": \"0.02\",\n    \"known_standard_cost_usd\": \"0.0000159\",\n    \"unknown_cost_attempts\": 0,\n    \"cooldown_until_unix\": 0,\n    \"account_balance\": \"not queried; see OpenAI billing\",\n    \"automatic_retry\": false\n  },\n  \"status\": \"ok\",\n  \"test\": \"live_decisions_text\",\n  \"model\": \"gpt-6-luna\",\n  \"lamp_on_probability\": 1.0,\n  \"at_utc\": \"2026-10-24T04:25:58.178603+00:00\"\n}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

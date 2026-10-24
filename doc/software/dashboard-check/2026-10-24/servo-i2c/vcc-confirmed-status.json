@@ -1,0 +1,59 @@
+{
+  "pca_vcc_user_measured": "approximately 3.3 V at PCA VCC-GND",
+  "pico_connected": true,
+  "session": "13DF8255018A1CAD",
+  "driver": {
+    "initialized": false,
+    "last_error": 0,
+    "probes": [
+      2,
+      1
+    ],
+    "scl_high": true,
+    "sda_high": true,
+    "selected_address": 65
+  },
+  "device": {
+    "uptime_ms": 34137,
+    "faults": 0,
+    "oe_high": true,
+    "running": null
+  },
+  "outputs": {
+    "applied_seq": 0,
+    "armed": false,
+    "calibration_id": 0,
+    "commanded_cdeg": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "light_active": false,
+    "pose_active": false
+  },
+  "servo_control": {
+    "active": false,
+    "generation": 0,
+    "ready": true,
+    "supported": true,
+    "reason": "",
+    "busy": false,
+    "commanded_degrees": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "error": null,
+    "min_degrees": 0,
+    "max_degrees": 180,
+    "speed_degrees_s": 30,
+    "pulse_min_us": 1000,
+    "pulse_max_us": 2000
+  }
+}

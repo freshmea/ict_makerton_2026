@@ -1,0 +1,17 @@
+{
+  "dashboard_files": {
+    "stdout": "{\"backup\": \"/opt/300seconds/dashboard/study-backups/20261024T050008569831Z\", \"installed\": [\"app.py\", \"observer_client.py\", \"static/index.html\", \"static/styles.css\", \"static/study.js\"]}\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "observer_install": {
+    "stdout": "{\"credentials_configured\": {\"OPENAI_API_KEY\": true, \"OPENCODE_API_KEY\": true}, \"old_budget_preserved\": true, \"budget_migrated\": true}\n● 300seconds-observer.service - 300 Seconds ten-frame study observer\n     Loaded: loaded (/etc/systemd/system/300seconds-observer.service; enabled; vendor preset: enabled)\n     Active: active (running) since Sat 2026-10-24 07:00:13 CEST; 57ms ago\n   Main PID: 30046 ((python3))\n      Tasks: 1 (limit: 4172)\n     Memory: 264.0K\n     CGroup: /system.slice/300seconds-observer.service\n             └─30046 (python3)\n\nOct 24 07:00:13 nano systemd[1]: Started 300 Seconds ten-frame study observer.\n",
+    "stderr": "Created symlink /etc/systemd/system/multi-user.target.wants/300seconds-observer.service → /etc/systemd/system/300seconds-observer.service.\n",
+    "exit_code": 0
+  },
+  "dashboard_start": {
+    "stdout": "Dashboard address: 192.168.184.76\nDashboard enabled (boot autostart on): http://192.168.184.76:8000\nDevice health: {\"api\": \"ok\", \"pico\": true, \"cameras\": false, \"microphone\": false}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

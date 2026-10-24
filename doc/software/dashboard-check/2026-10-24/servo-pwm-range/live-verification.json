@@ -1,0 +1,83 @@
+{
+  "pico_connected": true,
+  "device_config": {
+    "hold_interval_ms": 500,
+    "left_segments": [
+      4,
+      4,
+      10
+    ],
+    "local_tests_enabled": false,
+    "press_window_ms": 2000,
+    "right_segments": [
+      4,
+      4,
+      10
+    ],
+    "servo_max_us": 2500,
+    "servo_min_us": 500,
+    "test_span_degrees": 10,
+    "test_switch": 0,
+    "touch_active_low_mask": 0
+  },
+  "servo_control": {
+    "active": false,
+    "generation": 0,
+    "ready": true,
+    "supported": true,
+    "reason": "",
+    "busy": false,
+    "commanded_degrees": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "error": null,
+    "min_degrees": 0,
+    "max_degrees": 180,
+    "speed_degrees_s": 30,
+    "pulse_min_us": 500,
+    "pulse_max_us": 2500
+  },
+  "outputs": {
+    "applied_seq": 0,
+    "armed": false,
+    "calibration_id": 0,
+    "commanded_cdeg": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "light_active": false,
+    "pose_active": false
+  },
+  "oe_high": true,
+  "faults": 0,
+  "servo_driver": {
+    "initialized": true,
+    "last_error": 0,
+    "probes": [
+      2,
+      1
+    ],
+    "scl_high": true,
+    "sda_high": true,
+    "selected_address": 65
+  },
+  "cameras": true,
+  "microphone": true,
+  "pulse_mapping_us": {
+    "0": 500,
+    "90": 1500,
+    "180": 2500
+  },
+  "nominal_frequency_hz": 50.0288,
+  "frequency_source": "unchanged prescale 121, assumed 25MHz oscillator; not measured",
+  "motion_test_started": false
+}

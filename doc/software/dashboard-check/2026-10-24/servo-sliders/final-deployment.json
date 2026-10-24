@@ -1,0 +1,141 @@
+{
+  "servo_control": {
+    "active": false,
+    "generation": 2,
+    "ready": false,
+    "supported": true,
+    "reason": "PCA9685 통신 오류 · 배선과 VCC를 확인하세요.",
+    "busy": false,
+    "commanded_degrees": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "error": "PCA9685 연결 확인 실패 · Pico 연결·VCC·GND·SDA·SCL·주소 0x41을 확인하세요.",
+    "min_degrees": 0,
+    "max_degrees": 180,
+    "speed_degrees_s": 30,
+    "pulse_min_us": 1000,
+    "pulse_max_us": 2000
+  },
+  "pico": {
+    "connected": true,
+    "capabilities": {
+      "single_servo": true
+    },
+    "device": {
+      "config": {
+        "hold_interval_ms": 500,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2000,
+        "servo_min_us": 1000,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 181,
+      "faults": 1,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 668305
+    },
+    "outputs": {
+      "applied_seq": 0,
+      "armed": false,
+      "calibration_id": 0,
+      "commanded_cdeg": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "light_active": false,
+      "pose_active": false
+    }
+  },
+  "real_motion_test_started": false,
+  "deployment": {
+    "python_regression_tests": 51,
+    "test_exit": 0,
+    "install_and_restart_exit": 0,
+    "dashboard_http_responding": true,
+    "browser_qa_passed": true,
+    "installed_source_hashes_verified": false,
+    "final_ssh_read_error": "SSH session unavailable during optional final readback; no further changes attempted"
+  }
+}

@@ -1,0 +1,1781 @@
+{
+  "catalog_count": 50,
+  "presets": [
+    {
+      "id": "neutral",
+      "name": "기본 눈",
+      "ack": "Ok",
+      "applied_seq": 311,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "look-left",
+      "name": "왼쪽 보기",
+      "ack": "Ok",
+      "applied_seq": 317,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "look-right",
+      "name": "오른쪽 보기",
+      "ack": "Ok",
+      "applied_seq": 325,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "look-up",
+      "name": "위 보기",
+      "ack": "Ok",
+      "applied_seq": 332,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "look-down",
+      "name": "아래 보기",
+      "ack": "Ok",
+      "applied_seq": 339,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "happy",
+      "name": "활짝 웃음",
+      "ack": "Ok",
+      "applied_seq": 346,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "gentle-smile",
+      "name": "방긋 미소",
+      "ack": "Ok",
+      "applied_seq": 353,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "laugh",
+      "name": "깔깔 웃음",
+      "ack": "Ok",
+      "applied_seq": 360,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "delighted",
+      "name": "즐거움",
+      "ack": "Ok",
+      "applied_seq": 367,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "excited",
+      "name": "신남",
+      "ack": "Ok",
+      "applied_seq": 374,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "love",
+      "name": "사랑 가득",
+      "ack": "Ok",
+      "applied_seq": 382,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "fondness",
+      "name": "작은 설렘",
+      "ack": "Ok",
+      "applied_seq": 389,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "wink-left",
+      "name": "왼눈 윙크",
+      "ack": "Ok",
+      "applied_seq": 396,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "wink-right",
+      "name": "오른눈 윙크",
+      "ack": "Ok",
+      "applied_seq": 403,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "shy",
+      "name": "수줍음",
+      "ack": "Ok",
+      "applied_seq": 411,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "confident",
+      "name": "자신감",
+      "ack": "Ok",
+      "applied_seq": 418,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "proud",
+      "name": "뿌듯함",
+      "ack": "Ok",
+      "applied_seq": 425,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "well-done",
+      "name": "잘했어",
+      "ack": "Ok",
+      "applied_seq": 433,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "determined",
+      "name": "굳은 결심",
+      "ack": "Ok",
+      "applied_seq": 440,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "relaxed",
+      "name": "여유로움",
+      "ack": "Ok",
+      "applied_seq": 447,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "sad",
+      "name": "슬픔",
+      "ack": "Ok",
+      "applied_seq": 454,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "tearful",
+      "name": "눈물 맺힘",
+      "ack": "Ok",
+      "applied_seq": 461,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "crying",
+      "name": "울먹울먹",
+      "ack": "Ok",
+      "applied_seq": 468,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "sobbing",
+      "name": "엉엉 울음",
+      "ack": "Ok",
+      "applied_seq": 475,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "disappointed",
+      "name": "실망",
+      "ack": "Ok",
+      "applied_seq": 482,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "surprised",
+      "name": "깜짝 놀람",
+      "ack": "Ok",
+      "applied_seq": 489,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "shocked",
+      "name": "화들짝",
+      "ack": "Ok",
+      "applied_seq": 496,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "nervous",
+      "name": "긴장",
+      "ack": "Ok",
+      "applied_seq": 504,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "scared",
+      "name": "두려움",
+      "ack": "Ok",
+      "applied_seq": 510,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "confused",
+      "name": "어리둥절",
+      "ack": "Ok",
+      "applied_seq": 518,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "angry",
+      "name": "화남",
+      "ack": "Ok",
+      "applied_seq": 525,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "furious",
+      "name": "불같은 분노",
+      "ack": "Ok",
+      "applied_seq": 532,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "annoyed",
+      "name": "짜증",
+      "ack": "Ok",
+      "applied_seq": 539,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "skeptical",
+      "name": "의심",
+      "ack": "Ok",
+      "applied_seq": 546,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "grumpy",
+      "name": "심통",
+      "ack": "Ok",
+      "applied_seq": 553,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "sleepy",
+      "name": "졸림",
+      "ack": "Ok",
+      "applied_seq": 560,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "sleeping",
+      "name": "새근새근",
+      "ack": "Ok",
+      "applied_seq": 567,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "exhausted",
+      "name": "기진맥진",
+      "ack": "Ok",
+      "applied_seq": 575,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "dizzy",
+      "name": "어질어질",
+      "ack": "Ok",
+      "applied_seq": 582,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "bored",
+      "name": "심심함",
+      "ack": "Ok",
+      "applied_seq": 589,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "mischievous",
+      "name": "장난꾸러기",
+      "ack": "Ok",
+      "applied_seq": 596,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "curious",
+      "name": "궁금해",
+      "ack": "Ok",
+      "applied_seq": 603,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "cheeky",
+      "name": "장난 윙크",
+      "ack": "Ok",
+      "applied_seq": 610,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "cross-eyed",
+      "name": "눈 모으기",
+      "ack": "Ok",
+      "applied_seq": 616,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "googly",
+      "name": "눈 벌리기",
+      "ack": "Ok",
+      "applied_seq": 623,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "sparkling",
+      "name": "반짝반짝",
+      "ack": "Ok",
+      "applied_seq": 630,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "music",
+      "name": "흥얼흥얼",
+      "ack": "Ok",
+      "applied_seq": 638,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "energy",
+      "name": "에너지 충전",
+      "ack": "Ok",
+      "applied_seq": 644,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "bloom",
+      "name": "꽃 피는 마음",
+      "ack": "Ok",
+      "applied_seq": 652,
+      "faults": 0,
+      "oe_high": true
+    },
+    {
+      "id": "celebrate",
+      "name": "축하해",
+      "ack": "Ok",
+      "applied_seq": 659,
+      "faults": 0,
+      "oe_high": true
+    }
+  ],
+  "errors": [],
+  "run_requested": true,
+  "auto_off": {
+    "state": {
+      "active": false,
+      "stopping": false,
+      "preset_id": null,
+      "name": null,
+      "frame_index": 0,
+      "remaining_ms": 0,
+      "last": {
+        "id": "love",
+        "name": "사랑 가득",
+        "result": "completed"
+      },
+      "error": null
+    },
+    "frames_seen": [
+      0,
+      1
+    ],
+    "pico": {
+      "connected": true,
+      "age_ms": 21,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 189,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 1140529
+      },
+      "session": "D63A818790EB3E1F",
+      "error": null,
+      "last_test": null,
+      "last_touch": null,
+      "module_tests": {},
+      "bridge_pid": 26154,
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "last_applied": {
+        "event": "applied",
+        "host_monotonic_ms": 68820,
+        "host_unix_ms": 1792816986706,
+        "kind": 3,
+        "request_seq": 691,
+        "session": "D63A818790EB3E1F",
+        "version": 2
+      },
+      "port": "/dev/pico-device",
+      "protocol": "pico-device-v2",
+      "installation": {
+        "touch_inputs_connected": true,
+        "matrix_connected": true,
+        "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+      }
+    }
+  },
+  "stop": {
+    "ack_code": "Ok",
+    "ack_request_seq": 710,
+    "cmd": "stop",
+    "ok": true,
+    "session": "D63A818790EB3E1F",
+    "status": {
+      "age_ms": 0,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 189,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 1141422
+      },
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "received_unix_ms": 1792816987939
+    }
+  },
+  "stop_no_replay": true,
+  "final": {
+    "server_time": 1792816989.0252724,
+    "pico": {
+      "connected": true,
+      "age_ms": 9,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 189,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 1142490
+      },
+      "session": "D63A818790EB3E1F",
+      "error": null,
+      "last_test": null,
+      "last_touch": null,
+      "module_tests": {},
+      "bridge_pid": 26154,
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "last_applied": {
+        "event": "applied",
+        "host_monotonic_ms": 69883,
+        "host_unix_ms": 1792816987768,
+        "kind": 3,
+        "request_seq": 707,
+        "session": "D63A818790EB3E1F",
+        "version": 2
+      },
+      "port": "/dev/pico-device",
+      "protocol": "pico-device-v2",
+      "installation": {
+        "touch_inputs_connected": true,
+        "matrix_connected": true,
+        "note": "2026-10-24 사용자 확인: 스위치 6개와 MAX7219 도트매트릭스 2개 배선 완료. 입력 변화와 명령 시험 결과는 별도 확인."
+      }
+    },
+    "cameras": {
+      "run_id": "d9b39db5e16647afb1ddafda9edae1e4",
+      "profile": "720p30",
+      "settings": {
+        "label": "1280×720 · 30 fps",
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "sensor_mode": 4,
+        "capture_width": 1280,
+        "capture_height": 720,
+        "bitrate": 2500000
+      },
+      "preview": {
+        "width": 640,
+        "height": 360,
+        "fps": 15,
+        "quality": 72
+      },
+      "encoder": "omxh264enc",
+      "preview_encoder": "jpegenc",
+      "uptime_seconds": 70.6,
+      "updated_monotonic": 11976.796642565,
+      "error": null,
+      "cameras": [
+        {
+          "sensor_id": 0,
+          "node": "/dev/video0",
+          "ready": true,
+          "frames": 1975,
+          "encoded_frames": 1944,
+          "preview_frames": 998,
+          "fps": 30.0,
+          "encoded_fps": 30.06,
+          "preview_fps": 15.03,
+          "capture_delivery_fps": 29.97,
+          "encoded_delivery_fps": 30.1,
+          "preview_delivery_fps": 14.97,
+          "encoder_pts_lag_ms": 35.0,
+          "encoded_mbps": 2.533,
+          "age_ms": 3,
+          "jpeg_bytes": 17108,
+          "preview_age_ms": 26,
+          "encoded_age_ms": 31,
+          "rtsp_feeds": 0
+        },
+        {
+          "sensor_id": 1,
+          "node": "/dev/video1",
+          "ready": true,
+          "frames": 1977,
+          "encoded_frames": 1945,
+          "preview_frames": 998,
+          "fps": 30.02,
+          "encoded_fps": 30.02,
+          "preview_fps": 15.01,
+          "capture_delivery_fps": 30.01,
+          "encoded_delivery_fps": 30.01,
+          "preview_delivery_fps": 14.99,
+          "encoder_pts_lag_ms": 0.0,
+          "encoded_mbps": 2.467,
+          "age_ms": 19,
+          "jpeg_bytes": 17010,
+          "preview_age_ms": 6,
+          "encoded_age_ms": 12,
+          "rtsp_feeds": 0
+        }
+      ],
+      "pipeline": "nvarguscamerasrc name=source0 sensor-id=0 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t0 t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder0 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2640 emit-signals=true max-buffers=2 drop=true sync=false t0. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg0 emit-signals=true max-buffers=1 drop=true sync=false nvarguscamerasrc name=source1 sensor-id=1 sensor-mode=4 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=30/1 ! tee name=t1 t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720 ! omxh264enc name=encoder1 bitrate=2500000 control-rate=2 preset-level=0 iframeinterval=30 insert-sps-pps=true ! h264parse ! video/x-h264,stream-format=byte-stream,alignment=au ! appsink name=h2641 emit-signals=true max-buffers=2 drop=true sync=false t1. ! queue leaky=downstream max-size-buffers=1 max-size-bytes=0 max-size-time=0 ! nvvidconv ! video/x-raw,format=I420,width=640,height=360 ! videorate drop-only=true ! video/x-raw,framerate=15/1 ! jpegenc quality=72 ! appsink name=jpeg1 emit-signals=true max-buffers=1 drop=true sync=false",
+      "uid": 996,
+      "rtsp_port": 8554,
+      "worker_alive": true,
+      "ready": true
+    },
+    "audio": {
+      "rms_dbfs": -42.8,
+      "peak_dbfs": -33.7,
+      "waveform": [
+        -0.00419999985024333,
+        -0.004100000020116568,
+        0.007199999876320362,
+        0.00430000014603138,
+        0.005200000014156103,
+        9.999999747378752e-05,
+        0.0026000000070780516,
+        0.004100000020116568,
+        0.0005000000237487257,
+        0.00559999980032444,
+        -0.0017999999690800905,
+        0.009999999776482582,
+        0.0010000000474974513,
+        -0.003100000089034438,
+        0.0010999999940395355,
+        0.0038999998942017555,
+        0.004900000058114529,
+        0.0015999999595806003,
+        0.004600000102072954,
+        -0.008500000461935997,
+        -0.01209999993443489,
+        -0.011099999770522118,
+        -0.006399999838322401,
+        -0.0052999998442828655,
+        0.007899999618530273,
+        0.012199999764561653,
+        0.0066999997943639755,
+        0.0026000000070780516,
+        0.000699999975040555,
+        -0.004699999932199717,
+        -0.008200000040233135,
+        0.0015999999595806003,
+        0.005200000014156103,
+        -0.006099999882280827,
+        0.002099999925121665,
+        -0.0035000001080334187,
+        0.008500000461935997,
+        0.00989999994635582,
+        0.0027000000700354576,
+        -0.007799999788403511,
+        -0.02070000022649765,
+        -0.0,
+        0.009600000455975533,
+        0.010599999688565731,
+        0.009600000455975533,
+        0.0032999999821186066,
+        -0.006300000008195639,
+        -0.0008999999845400453,
+        0.0020000000949949026,
+        -0.004100000020116568,
+        -0.0034000000450760126,
+        -0.0010000000474974513,
+        0.007199999876320362,
+        -0.004000000189989805,
+        0.0007999999797903001,
+        0.003800000064074993,
+        0.003700000001117587,
+        0.010099999606609344,
+        0.00839999970048666,
+        0.00039999998989515007,
+        -0.011099999770522118,
+        -0.01510000042617321,
+        -0.00559999980032444,
+        -0.008899999782443047,
+        -0.0071000000461936,
+        0.00419999985024333,
+        0.013500000350177288,
+        0.015300000086426735,
+        0.007499999832361937,
+        -0.005200000014156103,
+        -0.014800000004470348,
+        -0.01810000091791153,
+        -0.008500000461935997,
+        0.003599999938160181,
+        0.0035000001080334187,
+        0.010300000198185444,
+        0.00430000014603138,
+        0.006300000008195639,
+        -0.0012000000569969416,
+        0.0019000000320374966,
+        -0.0038999998942017555,
+        -0.008299999870359898,
+        -0.009600000455975533,
+        -0.0005000000237487257,
+        -0.008299999870359898,
+        -0.0020000000949949026,
+        0.011699999682605267,
+        0.01679999940097332,
+        0.009499999694526196,
+        0.003100000089034438,
+        -0.0034000000450760126,
+        -0.015399999916553497,
+        -0.007199999876320362,
+        0.004800000227987766,
+        0.006000000052154064,
+        0.003100000089034438,
+        0.008200000040233135,
+        0.00419999985024333,
+        0.013399999588727951,
+        0.0017000000225380063,
+        -0.005200000014156103,
+        -0.005200000014156103,
+        -0.015200000256299973,
+        -0.004100000020116568,
+        0.0017000000225380063,
+        -0.002400000113993883,
+        -0.005400000140070915,
+        0.005400000140070915,
+        0.0008999999845400453,
+        0.00019999999494757503,
+        -0.0019000000320374966,
+        -0.004000000189989805,
+        -0.010300000198185444,
+        -0.0010999999940395355,
+        0.004000000189989805,
+        -0.001500000013038516,
+        0.006099999882280827,
+        0.006200000178068876,
+        0.002400000113993883,
+        0.001500000013038516,
+        0.0052999998442828655,
+        0.0019000000320374966,
+        -0.00419999985024333,
+        0.0012000000569969416,
+        0.004699999932199717,
+        -0.006099999882280827,
+        -0.0142000000923872,
+        -0.011800000444054604
+      ],
+      "connected": true,
+      "age_ms": 96,
+      "error": null,
+      "rate": 48000,
+      "channels": 1,
+      "buffered_seconds": 6.0,
+      "speaker": {
+        "state": "idle",
+        "last_result": null
+      }
+    },
+    "system": {
+      "cpu_percent": 78.2,
+      "gpu_percent": 0.0,
+      "memory_used_mib": 1670,
+      "memory_total_mib": 3956,
+      "memory_percent": 46.6,
+      "temperature_c": 50.0,
+      "uptime_seconds": 11977,
+      "cpu_history": [
+        68.6,
+        67.0,
+        66.3,
+        66.0,
+        68.4,
+        70.2,
+        69.0,
+        67.6,
+        68.0,
+        68.3,
+        69.6,
+        67.3,
+        67.7,
+        68.9,
+        66.7,
+        65.2,
+        66.7,
+        65.6,
+        65.3,
+        65.7,
+        72.0,
+        68.0,
+        68.0,
+        84.2,
+        96.9,
+        99.0,
+        97.1,
+        93.1,
+        100.0,
+        94.1,
+        85.1,
+        81.8,
+        83.0,
+        85.9,
+        83.0,
+        83.2,
+        90.3,
+        87.0,
+        83.8,
+        82.7,
+        82.2,
+        83.8,
+        79.0,
+        90.1,
+        84.0,
+        83.2,
+        85.1,
+        82.2,
+        82.2,
+        82.7,
+        85.9,
+        99.0,
+        100.0,
+        84.8,
+        81.6,
+        77.0,
+        86.4,
+        69.6,
+        92.9,
+        78.2
+      ]
+    },
+    "events": [
+      {
+        "id": "4b1eb0e664",
+        "time": 1792816987.9416893,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "696d602497",
+        "time": 1792816987.759337,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [60, 66, 189, 165, 165, 153, 66, 60], 'right': [60, 66, 189, 165, 165, 153, 66, 60], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "e17c2b7b7c",
+        "time": 1792816987.1505651,
+        "source": "eyes",
+        "message": "어질어질 · 10초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "bba23cbaa4",
+        "time": 1792816987.1497426,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [60, 66, 157, 165, 185, 129, 66, 60], 'right': [60, 66, 157, 165, 185, 129, 66, 60], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "32ae036fa1",
+        "time": 1792816987.1441338,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "c17047fd3e",
+        "time": 1792816987.1356423,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "64f23b3020",
+        "time": 1792816987.0566702,
+        "source": "eyes",
+        "message": "사랑 가득 · 표시 완료, 소등",
+        "level": "info"
+      },
+      {
+        "id": "cfea088496",
+        "time": 1792816987.0526588,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "f03a080235",
+        "time": 1792816986.6884406,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [0, 36, 126, 126, 60, 24, 0, 0], 'right': [0, 36, 126, 126, 60, 24, 0, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "973904a3fc",
+        "time": 1792816986.0893722,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [102, 255, 255, 255, 126, 60, 24, 0], 'right': [102, 255, 255, 255, 126, 60, 24, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "86c6eac1f9",
+        "time": 1792816985.6779177,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [0, 36, 126, 126, 60, 24, 0, 0], 'right': [0, 36, 126, 126, 60, 24, 0, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "0dcb755b37",
+        "time": 1792816985.1510582,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [102, 255, 255, 255, 126, 60, 24, 0], 'right': [102, 255, 255, 255, 126, 60, 24, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "f908f08328",
+        "time": 1792816984.6592755,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [0, 36, 126, 126, 60, 24, 0, 0], 'right': [0, 36, 126, 126, 60, 24, 0, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "ce949316e7",
+        "time": 1792816984.0078292,
+        "source": "eyes",
+        "message": "사랑 가득 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "f74bde050b",
+        "time": 1792816984.0071514,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [102, 255, 255, 255, 126, 60, 24, 0], 'right': [102, 255, 255, 255, 126, 60, 24, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "326b1d72f5",
+        "time": 1792816983.997833,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "c3e3bcdae0",
+        "time": 1792816983.9906986,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "149954f08f",
+        "time": 1792816983.9478858,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "88e408fb5e",
+        "time": 1792816983.762371,
+        "source": "eyes",
+        "message": "축하해 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "8e77250fb2",
+        "time": 1792816983.761594,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [153, 90, 60, 255, 255, 60, 90, 153], 'right': [24, 36, 66, 129, 129, 66, 36, 24], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "370c01dd3d",
+        "time": 1792816983.7520506,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "c3a5cd8011",
+        "time": 1792816983.740071,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "f2bb67a7ef",
+        "time": 1792816983.5718865,
+        "source": "eyes",
+        "message": "꽃 피는 마음 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "02bfc97916",
+        "time": 1792816983.5710976,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [24, 90, 126, 189, 189, 126, 90, 24], 'right': [24, 90, 126, 189, 189, 126, 90, 24], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "1ab36f5792",
+        "time": 1792816983.5561597,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "c0e8fe3214",
+        "time": 1792816983.5507548,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "6e5153f610",
+        "time": 1792816983.2880478,
+        "source": "eyes",
+        "message": "에너지 충전 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "32afffd942",
+        "time": 1792816983.2873342,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [12, 24, 48, 126, 12, 24, 48, 32], 'right': [12, 24, 48, 126, 12, 24, 48, 32], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "634ed96069",
+        "time": 1792816983.2794073,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "7134655be9",
+        "time": 1792816983.2746406,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "c0e8946958",
+        "time": 1792816983.115152,
+        "source": "eyes",
+        "message": "흥얼흥얼 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "7f3a9c82d4",
+        "time": 1792816983.1134071,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [6, 10, 18, 34, 34, 230, 230, 68], 'right': [96, 80, 72, 68, 68, 103, 103, 34], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "0d3abe5e5f",
+        "time": 1792816983.108206,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "f13186d2cc",
+        "time": 1792816983.1008272,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "a4a89d1fa7",
+        "time": 1792816982.8485012,
+        "source": "eyes",
+        "message": "반짝반짝 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "5bd0b76501",
+        "time": 1792816982.8475385,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [16, 16, 56, 254, 56, 16, 16, 0], 'right': [16, 16, 56, 254, 56, 16, 16, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "1ab47468a1",
+        "time": 1792816982.8408809,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "44e87f012e",
+        "time": 1792816982.8356504,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "c3d2c1a9b7",
+        "time": 1792816982.6880496,
+        "source": "eyes",
+        "message": "눈 벌리기 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "758be52fde",
+        "time": 1792816982.6863713,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [60, 66, 129, 225, 225, 129, 66, 60], 'right': [60, 66, 129, 135, 135, 129, 66, 60], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "72c7fe58ce",
+        "time": 1792816982.6822572,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "e76b0fd8b1",
+        "time": 1792816982.6755471,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "86e24d6fab",
+        "time": 1792816982.486112,
+        "source": "eyes",
+        "message": "눈 모으기 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "8a8705eac3",
+        "time": 1792816982.4852974,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [60, 66, 129, 135, 135, 129, 66, 60], 'right': [60, 66, 129, 225, 225, 129, 66, 60], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "b7263cce71",
+        "time": 1792816982.478011,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "a7d1999026",
+        "time": 1792816982.473238,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "2245a1a09c",
+        "time": 1792816982.3221033,
+        "source": "eyes",
+        "message": "장난 윙크 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "7e4423edb6",
+        "time": 1792816982.3211112,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [0, 0, 0, 126, 0, 0, 0, 0], 'right': [24, 24, 255, 126, 60, 102, 195, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "075ff22c68",
+        "time": 1792816982.3103375,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "da72547d7e",
+        "time": 1792816982.3062878,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "a085da88b3",
+        "time": 1792816982.1406956,
+        "source": "eyes",
+        "message": "궁금해 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "2737841b4a",
+        "time": 1792816982.1399226,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [60, 66, 2, 12, 16, 0, 16, 0], 'right': [60, 66, 129, 153, 153, 129, 66, 60], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "5c3b440611",
+        "time": 1792816982.1320348,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "99ab5f6a2c",
+        "time": 1792816982.1226819,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "faad90d47a",
+        "time": 1792816981.9484208,
+        "source": "eyes",
+        "message": "장난꾸러기 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "a89db8b24b",
+        "time": 1792816981.9476333,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [128, 192, 96, 62, 66, 90, 66, 60], 'right': [0, 0, 24, 36, 66, 129, 0, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "e399ec0cf1",
+        "time": 1792816981.9419906,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "33a55d6280",
+        "time": 1792816981.9368663,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "dd128fd1df",
+        "time": 1792816981.6969776,
+        "source": "eyes",
+        "message": "심심함 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "6cad99b5a5",
+        "time": 1792816981.6941822,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [0, 0, 126, 90, 66, 60, 0, 0], 'right': [0, 0, 126, 90, 66, 60, 0, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "d4c756aa07",
+        "time": 1792816981.687252,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "e2bad5db4e",
+        "time": 1792816981.6775768,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "1d701b75d1",
+        "time": 1792816981.5091865,
+        "source": "eyes",
+        "message": "어질어질 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "9a1f4b712c",
+        "time": 1792816981.505599,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [60, 66, 157, 165, 185, 129, 66, 60], 'right': [60, 66, 157, 165, 185, 129, 66, 60], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "119efecd13",
+        "time": 1792816981.4965124,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "6332f9abdd",
+        "time": 1792816981.4853091,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "e62549933a",
+        "time": 1792816981.3083215,
+        "source": "eyes",
+        "message": "기진맥진 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "4f3d19d38c",
+        "time": 1792816981.307259,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [129, 66, 36, 24, 24, 36, 66, 129], 'right': [129, 66, 36, 24, 24, 36, 66, 129], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "369e97345a",
+        "time": 1792816981.2983692,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "c1de315af1",
+        "time": 1792816981.2930076,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "8050ba6ae8",
+        "time": 1792816981.0453534,
+        "source": "eyes",
+        "message": "새근새근 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "71ff19b436",
+        "time": 1792816981.0444999,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [0, 0, 0, 126, 66, 60, 0, 0], 'right': [0, 0, 0, 126, 66, 60, 0, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "f3439c19f7",
+        "time": 1792816981.0386746,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "5015f1e10c",
+        "time": 1792816981.0301254,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "8d57954ea8",
+        "time": 1792816980.8554523,
+        "source": "eyes",
+        "message": "졸림 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "782e82eff1",
+        "time": 1792816980.854705,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [0, 0, 126, 66, 90, 66, 60, 0], 'right': [0, 0, 126, 66, 90, 66, 60, 0], 'brightness': 1} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "7a16540fd8",
+        "time": 1792816980.848555,
+        "source": "pico",
+        "message": "{'cmd': 'arm', 'config': {'calibration_id': 1, 'min_cdeg': [8000, 8000, 8000, 8000, 8000, 8000], 'max_cdeg': [10000, 10000, 10000, 10000, 10000, 10000], 'neutral_cdeg': [9000, 9000, 9000, 9000, 9000, 9000], 'min_us': [1000, 1000, 1000, 1000, 1000, 1000], 'max_us': [2000, 2000, 2000, 2000, 2000, 2000], 'invert_mask': 0, 'max_speed_cdeg_s': 1000, 'servo_enabled': False, 'matrix_installed': True}} → ",
+        "level": "info"
+      },
+      {
+        "id": "75e19f882d",
+        "time": 1792816980.8411307,
+        "source": "pico",
+        "message": "{'cmd': 'stop'} → ACK",
+        "level": "info"
+      },
+      {
+        "id": "1f6268e9a1",
+        "time": 1792816980.6688874,
+        "source": "eyes",
+        "message": "심통 · 3초 표시 시작",
+        "level": "info"
+      },
+      {
+        "id": "09fbbe97b0",
+        "time": 1792816980.6650565,
+        "source": "pico",
+        "message": "{'cmd': 'eyes', 'left': [0, 126, 0, 126, 66, 90, 66, 60], 'right': [0, 126, 0, 126, 66, 90, 66, 60], 'brightness': 1} → ACK",
+        "level": "info"
+      }
+    ],
+    "eye_expression": {
+      "active": false,
+      "stopping": false,
+      "preset_id": null,
+      "name": null,
+      "frame_index": 0,
+      "remaining_ms": 0,
+      "last": {
+        "id": "dizzy",
+        "name": "어질어질",
+        "result": "stopped"
+      },
+      "error": null
+    }
+  },
+  "health": {
+    "api": "ok",
+    "pico": true,
+    "cameras": true,
+    "microphone": true
+  },
+  "all_50_applied": true,
+  "final_stop": {
+    "ack_code": "Ok",
+    "ack_request_seq": 718,
+    "cmd": "stop",
+    "ok": true,
+    "session": "D63A818790EB3E1F",
+    "status": {
+      "age_ms": 0,
+      "device": {
+        "config": {
+          "hold_interval_ms": 500,
+          "left_segments": [
+            4,
+            4,
+            10
+          ],
+          "local_tests_enabled": false,
+          "press_window_ms": 2000,
+          "right_segments": [
+            4,
+            4,
+            10
+          ],
+          "servo_max_us": 2000,
+          "servo_min_us": 1000,
+          "test_span_degrees": 10,
+          "test_switch": 0,
+          "touch_active_low_mask": 0
+        },
+        "dropped_events": 189,
+        "faults": 0,
+        "local_enabled": false,
+        "oe_high": true,
+        "pressed_mask": 0,
+        "raw_mask": 0,
+        "running": null,
+        "touches": [
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          },
+          {
+            "held_ms": 0,
+            "interval_count": 0,
+            "last_duration_ms": 0,
+            "last_interval_count": 0,
+            "press_count": 0,
+            "pressed": false,
+            "window_remaining_ms": 0
+          }
+        ],
+        "uptime_ms": 1142632
+      },
+      "outputs": {
+        "applied_seq": 0,
+        "armed": false,
+        "calibration_id": 0,
+        "commanded_cdeg": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "light_active": false,
+        "pose_active": false
+      },
+      "received_unix_ms": 1792816989149
+    }
+  }
+}

@@ -1,5 +1,6 @@
 """Bounded device owners and telemetry; USB is owned only by the Rust bridge."""
 from collections import deque
+import audioop
 import io
 import json
 import math
@@ -16,6 +17,7 @@ import wave
 
 import numpy as np
 import psutil
+from tts_client import synthesize
 
 ROOT = Path(__file__).resolve().parent
 PROFILES = json.loads((ROOT / 'profiles.json').read_text())
@@ -55,6 +57,10 @@ class Pico:
         self.last_test = None
         self.module_tests = {}
         self.last_touch = None
+        self.outputs = None
+        self.last_applied = None
+        self.capabilities = {}
+        self.servo_driver = None
         self.lock = threading.Lock()
         self.binary = Path(os.environ.get('PICO_BIN', '/opt/300seconds/dashboard/pico-device-bench'))
 
@@ -63,6 +69,9 @@ class Pico:
             return
         self.device = self.received = self.session = self.error = None
         self.last_test = self.last_touch = None
+        self.outputs = self.last_applied = None
+        self.capabilities = {}
+        self.servo_driver = None
         self.module_tests = {}
         port = Path('/dev/pico-device')
         if not port.exists():
@@ -96,6 +105,17 @@ class Pico:
                     self.received = time.monotonic()
                     self.session = value.get('session')
                     self.error = None
+                    self.outputs = value.get('outputs', self.outputs)
+                    self.capabilities = value.get('capabilities', self.capabilities)
+                    self.servo_driver = value.get('servo_driver', self.servo_driver)
+                elif event == 'capabilities':
+                    self.capabilities = {'single_servo': value.get('single_servo', False)}
+                elif event == 'outputs':
+                    self.outputs = value['outputs']
+                elif event == 'servo_driver':
+                    self.servo_driver = value['status']
+                elif event == 'applied':
+                    self.last_applied = value
                 elif event == 'test_event':
                     self.last_test = value
                     self.module_tests[value['module']] = value
@@ -118,7 +138,10 @@ class Pico:
                     'error': self.error, 'last_test': self.last_test, 'last_touch': self.last_touch,
                     'module_tests': dict(self.module_tests),
                     'bridge_pid': self.process.pid if alive else None,
-                    'port': '/dev/pico-device', 'protocol': 'pico-device-v1',
+                    'outputs': self.outputs, 'last_applied': self.last_applied,
+                    'capabilities': dict(self.capabilities),
+                    'servo_driver': self.servo_driver,
+                    'port': '/dev/pico-device', 'protocol': 'pico-device-v2',
                     'installation': INSTALLATION}
 
     def command(self, command):
@@ -239,6 +262,10 @@ class Cameras:
 
 class Audio:
     RATE = 48000
+    DEFAULT_GAIN_DB = 12.0
+    MAX_GAIN_DB = 30.0
+    PEAK_CEILING_DBFS = -1.0
+    METER_SECONDS = 3
 
     def __init__(self, events):
         self.events = events
@@ -248,12 +275,90 @@ class Audio:
         self.process = None
         self.last_pcm = None
         self.error = None
-        self.level = {'rms_dbfs': -96.0, 'peak_dbfs': -96.0, 'waveform': []}
+        self.settings_path = Path(os.environ.get(
+            'DASHBOARD_AUDIO_SETTINGS', '/var/lib/300seconds-dashboard/audio-settings.json'))
+        self.gain_db = self.DEFAULT_GAIN_DB
+        try:
+            self.gain_db = self.validate_gain(json.loads(self.settings_path.read_text())['gain_db'])
+        except (OSError, ValueError, KeyError, TypeError):
+            pass
         self.speaker = {'state': 'idle', 'last_result': None}
         self.running = True
+        self.pcm_subscribers = set()
+
+    @classmethod
+    def validate_gain(cls, gain_db):
+        gain = float(gain_db)
+        if not math.isfinite(gain) or not 0 <= gain <= cls.MAX_GAIN_DB:
+            raise ValueError('마이크 증폭은 0~30 dB 범위로 지정하세요.')
+        return gain
+
+    @classmethod
+    def process_pcm(cls, data, gain_db):
+        """Use one linear gain for the whole clip, capped before S16 conversion.
+
+        The in-memory capture stays raw. Metering, WAV export and board replay
+        share this path so samples are never amplified twice. Peak protection
+        reduces the whole clip's gain rather than clipping individual samples.
+        """
+        gain_db = cls.validate_gain(gain_db)
+        raw = np.frombuffer(data[:len(data) // 2 * 2], dtype='<i2').astype(np.float32)
+        requested = 10 ** (gain_db / 20)
+        ceiling = math.floor(32767 * 10 ** (cls.PEAK_CEILING_DBFS / 20))
+        raw_peak = float(np.max(np.abs(raw))) if len(raw) else 0.0
+        applied = min(requested, ceiling / raw_peak) if raw_peak else requested
+        # Rounding is bounded before casting to prevent int16 wraparound.
+        pcm = np.clip(np.rint(raw * applied), -ceiling, ceiling).astype('<i2')
+        values = pcm.astype(np.float32) / 32768
+        original = raw / 32768
+
+        def levels(samples):
+            if not len(samples):
+                return -96.0, -96.0
+            rms = float(np.sqrt(np.mean(samples * samples)))
+            peak = float(np.max(np.abs(samples)))
+            return tuple(round(20 * math.log10(max(value, 10 ** (-96 / 20))), 1)
+                         for value in (rms, peak))
+
+        rms, peak = levels(values)
+        raw_rms, raw_peak_dbfs = levels(original)
+        recent = values[-cls.RATE // 10:]
+        return pcm.tobytes(), {
+            'rms_dbfs': rms, 'peak_dbfs': peak,
+            'raw_rms_dbfs': raw_rms, 'raw_peak_dbfs': raw_peak_dbfs,
+            'gain_db': gain_db, 'applied_gain_db': round(20 * math.log10(applied), 1),
+            'limiter_active': applied < requested - 1e-6,
+            'peak_ceiling_dbfs': cls.PEAK_CEILING_DBFS,
+            'meter_seconds': round(len(pcm) / cls.RATE, 1),
+            'waveform': np.round(recent[::max(1, len(recent) // 128)][:128], 4).tolist(),
+        }
+
+    def set_gain(self, gain_db):
+        gain = self.validate_gain(gain_db)
+        with self.lock:
+            # A separate file keeps the camera profile settings intact.
+            write_json(self.settings_path, {'gain_db': gain})
+            self.gain_db = gain
+        self.events.add('audio', '마이크 녹음 증폭 +%g dB · 피크 보호 -1 dBFS' % gain)
+        return self.snapshot()
 
     def start(self):
         threading.Thread(target=self.capture, daemon=True).start()
+
+    def subscribe_pcm(self, loop, queue):
+        subscriber = (loop, queue)
+        with self.lock:
+            self.pcm_subscribers.add(subscriber)
+        def remove():
+            with self.lock:
+                self.pcm_subscribers.discard(subscriber)
+        return remove
+
+    @staticmethod
+    def deliver_pcm(queue, data):
+        if queue.full():
+            queue.get_nowait()
+        queue.put_nowait(data)
 
     def capture(self):
         while self.running:
@@ -265,18 +370,17 @@ class Audio:
                     data = self.process.stdout.read(9600)
                     if not data:
                         break
-                    values = np.frombuffer(data[:len(data) // 2 * 2], dtype='<i2').astype(np.float32) / 32768
-                    if not len(values):
+                    data = data[:len(data) // 2 * 2]
+                    if not data:
                         continue
-                    rms = float(np.sqrt(np.mean(values * values)))
-                    peak = float(np.max(np.abs(values)))
                     with self.lock:
                         self.ring.append(data)
                         self.last_pcm = time.monotonic()
                         self.error = None
-                        self.level = {'rms_dbfs': round(20 * math.log10(max(rms, 1e-5)), 1),
-                                      'peak_dbfs': round(20 * math.log10(max(peak, 1e-5)), 1),
-                                      'waveform': np.round(values[::max(1, len(values) // 128)][:128], 4).tolist()}
+                        subscribers = list(self.pcm_subscribers)
+                    for loop, queue in subscribers:
+                        if not loop.is_closed():
+                            loop.call_soon_threadsafe(self.deliver_pcm, queue, data)
                 if self.running:
                     self.error = self.process.stderr.read().decode(errors='replace')[:500] or '마이크 스트림 종료'
                     self.events.add('audio', self.error, 'error')
@@ -289,10 +393,13 @@ class Audio:
     def snapshot(self):
         with self.lock:
             age = round((time.monotonic() - self.last_pcm) * 1000) if self.last_pcm else None
-            return dict(self.level, connected=age is not None and age < 1500,
-                        age_ms=age, error=self.error, rate=self.RATE, channels=1,
-                        buffered_seconds=round(sum(len(x) for x in self.ring) / self.RATE / 2, 1),
-                        speaker=dict(self.speaker))
+            buffered = b''.join(self.ring)
+            data = buffered[-self.METER_SECONDS * self.RATE * 2:]
+            gain, error, speaker = self.gain_db, self.error, dict(self.speaker)
+        _, level = self.process_pcm(data, gain)
+        return dict(level, connected=age is not None and age < 1500,
+                    age_ms=age, error=error, rate=self.RATE, channels=1,
+                    buffered_seconds=round(len(buffered) / self.RATE / 2, 1), speaker=speaker)
 
     @staticmethod
     def wav(data, channels=1):
@@ -305,13 +412,15 @@ class Audio:
         return output.getvalue()
 
     def recording(self, seconds=3):
-        if not self.snapshot()['connected']:
-            raise RuntimeError('마이크가 연결되어 있지 않습니다.')
         with self.lock:
+            if self.last_pcm is None or time.monotonic() - self.last_pcm >= 1.5:
+                raise RuntimeError('마이크가 연결되어 있지 않습니다.')
             data = b''.join(self.ring)[-int(seconds * self.RATE * 2):]
+            gain = self.gain_db
         if not data:
             raise RuntimeError('오디오 버퍼가 준비되지 않았습니다.')
-        return self.wav(data)
+        processed, _ = self.process_pcm(data, gain)
+        return self.wav(processed)
 
     def playback(self, kind):
         if not self.play_lock.acquire(blocking=False):
@@ -322,7 +431,7 @@ class Audio:
                 for hz in (660, 880, 1100):
                     t = np.arange(int(.3 * self.RATE)) / self.RATE
                     fade = np.minimum(1, np.minimum(t / .015, (.3 - t) / .015))
-                    signal_data = np.sin(2 * np.pi * hz * t) * fade * .10
+                    signal_data = np.sin(2 * np.pi * hz * t) * fade * .16
                     samples.append((signal_data * 32767).astype('<i2').tobytes())
                     samples.append(b'\0' * int(.1 * self.RATE) * 2)
                 data = self.wav(b''.join(samples))
@@ -330,20 +439,54 @@ class Audio:
                 data = self.recording(2)
             else:
                 raise ValueError('Unknown playback action.')
-            self.speaker = {'state': 'playing', 'last_result': None, 'kind': kind}
-            result = subprocess.run(['aplay', '-q', '-D', 'robot_playback', '-t', 'wav', '-'],
-                                    input=data, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=8)
-            self.speaker = {'state': 'idle' if result.returncode == 0 else 'error',
-                            'last_result': {'ok': result.returncode == 0, 'time': time.time(),
-                                            'output': result.stdout.decode(errors='replace')[:500]}, 'kind': kind}
-            self.events.add('audio', '스피커 PCM 재생 ' + ('성공' if result.returncode == 0 else '실패'))
-            if result.returncode:
-                raise RuntimeError(result.stdout.decode(errors='replace'))
-            return self.speaker
+            return self.play_wav(data, kind, 8)
         except (subprocess.TimeoutExpired, OSError) as error:
             self.speaker = {'state': 'error', 'last_result': {'ok': False, 'time': time.time(), 'output': str(error)}}
             self.events.add('audio', str(error), 'error')
             raise RuntimeError('스피커 재생 실패: ' + str(error))
+        finally:
+            self.play_lock.release()
+
+    def play_wav(self, data, kind, timeout):
+        self.speaker = {'state': 'playing', 'last_result': None, 'kind': kind}
+        result = subprocess.run(['aplay', '-q', '-D', 'robot_playback', '-t', 'wav', '-'],
+                                input=data, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=timeout)
+        self.speaker = {'state': 'idle' if result.returncode == 0 else 'error',
+                        'last_result': {'ok': result.returncode == 0, 'time': time.time(),
+                                        'output': result.stdout.decode(errors='replace')[:500]}, 'kind': kind}
+        self.events.add('audio', '스피커 PCM 재생 ' + ('성공' if result.returncode == 0 else '실패'))
+        if result.returncode:
+            raise RuntimeError(result.stdout.decode(errors='replace')[:500])
+        return self.speaker
+
+    def tts(self, text):
+        if not self.play_lock.acquire(blocking=False):
+            raise RuntimeError('스피커가 이미 재생 또는 TTS 합성 중입니다.')
+        try:
+            self.speaker = {'state': 'synthesizing', 'kind': 'tts', 'last_result': None}
+            data, metadata = synthesize(text)
+            with wave.open(io.BytesIO(data), 'rb') as reader:
+                rate, frames = reader.getframerate(), reader.getnframes()
+                if (reader.getnchannels() != 1 or reader.getsampwidth() != 2
+                        or not 8000 <= rate <= 48000 or not 0 < frames <= rate * 30):
+                    raise ValueError('TTS 오디오 형식이 올바르지 않습니다.')
+                raw = reader.readframes(frames)
+                if len(raw) != frames * 2:
+                    raise ValueError('TTS 오디오가 완전하지 않습니다.')
+            if rate != self.RATE:
+                raw = audioop.ratecv(raw, 2, 1, rate, self.RATE, None)[0]
+            # Independent of microphone gain: speech +6 dB, linear peak cap -1 dBFS.
+            amplified, level = self.process_pcm(raw, 6)
+            speaker = self.play_wav(self.wav(amplified), 'tts', 35)
+            return {'speaker': speaker, 'tts': metadata,
+                    'gain_db': 6, 'applied_gain_db': level['applied_gain_db'],
+                    'limiter_active': level['limiter_active']}
+        except Exception as error:
+            message = str(error) if isinstance(error, (RuntimeError, ValueError)) else 'TTS 서비스 연결 또는 재생에 실패했습니다.'
+            self.speaker = {'state': 'error', 'kind': 'tts',
+                            'last_result': {'ok': False, 'time': time.time(), 'output': message}}
+            self.events.add('audio', message, 'error')
+            raise RuntimeError(message) from error
         finally:
             self.play_lock.release()
 

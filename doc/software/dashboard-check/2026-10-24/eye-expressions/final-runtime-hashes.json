@@ -1,0 +1,50 @@
+{
+  "app.py": {
+    "local_sha256": "aa3dc540539ca1637c1aaa03f1bdc2c6b86405e8c599abda5651a011ee024406",
+    "runtime_sha256": "aa3dc540539ca1637c1aaa03f1bdc2c6b86405e8c599abda5651a011ee024406",
+    "runtime_matches_local": true,
+    "matches_expression_deploy_manifest": false
+  },
+  "hardware.py": {
+    "local_sha256": "db6d23c0dd7526673ad4929625a3e4664a8b36399f386e06e631b156670c2e86",
+    "runtime_sha256": "db6d23c0dd7526673ad4929625a3e4664a8b36399f386e06e631b156670c2e86",
+    "runtime_matches_local": true,
+    "matches_expression_deploy_manifest": true
+  },
+  "eye_expressions.py": {
+    "local_sha256": "42751a3d85864e9d463ade3119e8f968d6a16e104933e4bfa854be9e905eaf3b",
+    "runtime_sha256": "42751a3d85864e9d463ade3119e8f968d6a16e104933e4bfa854be9e905eaf3b",
+    "runtime_matches_local": true,
+    "matches_expression_deploy_manifest": true
+  },
+  "test_eye_expressions.py": {
+    "local_sha256": "affe26a9f71dbcc43a9958cc4dfade5c08718a04f219e3987a3a850b7b5d6b86",
+    "runtime_sha256": "affe26a9f71dbcc43a9958cc4dfade5c08718a04f219e3987a3a850b7b5d6b86",
+    "runtime_matches_local": true,
+    "matches_expression_deploy_manifest": true
+  },
+  "test_hardware.py": {
+    "local_sha256": "e9a77d1b100db2e7d2edee387dbbb1f3daa3d739cd93dc9555d79f34dee6aa94",
+    "runtime_sha256": "e9a77d1b100db2e7d2edee387dbbb1f3daa3d739cd93dc9555d79f34dee6aa94",
+    "runtime_matches_local": true,
+    "matches_expression_deploy_manifest": true
+  },
+  "static/app.js": {
+    "local_sha256": "c91204825352106be6fe9123aa1575309e65f3fbe3742c821eaf877d3bf65a33",
+    "runtime_sha256": "c91204825352106be6fe9123aa1575309e65f3fbe3742c821eaf877d3bf65a33",
+    "runtime_matches_local": true,
+    "matches_expression_deploy_manifest": true
+  },
+  "static/index.html": {
+    "local_sha256": "48d468bf050cbcb5e604a3e20acbd38f5234735b6a7785f6dd26c9fb493f6318",
+    "runtime_sha256": "48d468bf050cbcb5e604a3e20acbd38f5234735b6a7785f6dd26c9fb493f6318",
+    "runtime_matches_local": true,
+    "matches_expression_deploy_manifest": false
+  },
+  "static/styles.css": {
+    "local_sha256": "09f2ae94f084091758465302d838cb6605e99c2d46a9552899aef879674eaf12",
+    "runtime_sha256": "09f2ae94f084091758465302d838cb6605e99c2d46a9552899aef879674eaf12",
+    "runtime_matches_local": true,
+    "matches_expression_deploy_manifest": false
+  }
+}
