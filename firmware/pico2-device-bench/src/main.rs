@@ -17,6 +17,7 @@ use pico2_device_bench::{picotool_reset,Admission,Gesture,GestureAction,MatrixFr
     ReleaseGuard,SessionGate,CAPACITY,is_priority_stop,matrix_frame,matrix_mount_frame,matrix_packet,neo_frame,servo_angle,servo_ticks,servo_driver_address,stage};
 use smart_leds::RGB8;
 use static_cell::StaticCell;
+use pico2_device_bench::light_patterns::{ButtonPatterns,PatternButton};
 mod application;
 
 type UsbDriver=Driver<'static,USB>;
@@ -34,6 +35,8 @@ static STOP_WAKE:Signal<CriticalSectionRawMutex,()>=Signal::new();
 static STOP_ACK:Signal<CriticalSectionRawMutex,WireFrame>=Signal::new();
 static BOOT_ACK:Signal<CriticalSectionRawMutex,WireFrame>=Signal::new();
 static TOUCH_CONFIG:Signal<CriticalSectionRawMutex,DeviceConfig>=Signal::new();
+// Latest debounced SW3 edge: no audio/USB round trip and no animation queue.
+static PATTERN_PRESS:Signal<CriticalSectionRawMutex,(u32,u32)>=Signal::new();
 static SNAPSHOT:Mutex<CriticalSectionRawMutex,RefCell<Option<TouchSnapshot>>>=Mutex::new(RefCell::new(None));
 static SESSION:Mutex<CriticalSectionRawMutex,Cell<u64>>=Mutex::new(Cell::new(0));
 static CONNECTED:AtomicBool=AtomicBool::new(false);
@@ -188,16 +191,23 @@ async fn touch_task(mut pins:[Flex<'static>;6],mut config:DeviceConfig){
     let mut engine=TouchEngine::new(config).unwrap();let mut gesture=Gesture::new();
     // Require an initial release: a held input at boot/configuration is not a new gesture.
     let mut release_guard=ReleaseGuard::new();let mut was_armed=false;
+    let mut pattern_button=PatternButton::new();
     let mut observed_generation=GENERATION.load(Ordering::SeqCst);
     loop{
         let time=Instant::now().as_millis();
-        if let Some(value)=TOUCH_CONFIG.try_take(){config=value;let _=engine.configure(value,time);gesture.clear(true);release_guard.cancel();was_armed=false;}
+        if let Some(value)=TOUCH_CONFIG.try_take(){config=value;let _=engine.configure(value,time);gesture.clear(true);release_guard.cancel();pattern_button.cancel();was_armed=false;}
         let generation=GENERATION.load(Ordering::SeqCst);
         if generation!=observed_generation{
             observed_generation=generation;release_guard.cancel();gesture.clear(true);was_armed=false;
         }
         let mut raw=0;for(index,pin)in pins.iter().enumerate(){if pin.is_high(){raw|=1<<index;}}
-        for value in engine.sample(raw,time){event(Message::Touch(value));}
+        pattern_button.sample_raw((raw^config.touch_active_low_mask)&4!=0,generation,time);
+        for value in engine.sample(raw,time){
+            if pattern_button.accepts(&value){
+                PATTERN_PRESS.signal((generation,Instant::now().as_micros() as u32));
+            }
+            event(Message::Touch(value));
+        }
         let pressed=engine.pressed_mask();
         SNAPSHOT.lock(|v|*v.borrow_mut()=Some(TouchSnapshot{raw,pressed,states:engine.states(time)}));
         let bit=if config.test_switch==0{0}else{1<<(config.test_switch-1)};
@@ -336,9 +346,21 @@ async fn start_run(module:Module,devices:&mut Devices,config:&DeviceConfig)->Res
     event(Message::TestEvent{module:run.module,phase:0,done:false,fault:false});Ok(run)
 }
 
+fn output_status(app:&Option<application::Application>,patterns:&ButtonPatterns)->pico_device_protocol::OutputStatus{
+    let mut value=app.as_ref().map(|a|a.status()).unwrap_or_default();
+    value.light_active|=patterns.active.is_some();value
+}
+async fn clear_patterns(patterns:&mut ButtonPatterns,devices:&mut Devices){
+    if patterns.active.is_some(){
+        patterns.clear();
+        devices.neo(Module::NeoLeft,[[0;3];CAPACITY]).await;
+        devices.neo(Module::NeoRight,[[0;3];CAPACITY]).await;
+    }
+}
 async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut faults:u32)->!{
     let mut gate=SessionGate::new();let mut run:Option<Run>=None;
     let mut app:Option<application::Application>=None;
+    let mut patterns=ButtonPatterns::new(chipid);
     let mut tick=Instant::now()+Duration::from_millis(20);let mut next_status=Instant::now();
     loop{
         DEVICE_TICK.store(now(),Ordering::SeqCst);
@@ -346,6 +368,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
         match select3(STOP_WAKE.wait(),Timer::at(tick),select(COMMANDS.receive(),LOCALS.receive())).await{
             Either3::First(())=>{
                 app=None;
+                patterns.clear();PATTERN_PRESS.reset();
                 let old=run.take();ACTIVE.store(false,Ordering::SeqCst);
                 let cleanup_faults=devices.stop_all().await;faults|=cleanup_faults;
                 if let Some(value)=old{event(Message::TestEvent{module:value.selected,phase:value.phase,done:true,fault:true});}
@@ -363,8 +386,25 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
             }
             Either3::Second(())=>{
                 tick=Instant::now()+Duration::from_millis(20);
-                if Instant::now()>=next_status{next_status=Instant::now()+Duration::from_millis(100);event(Message::Status(status(config,&run,faults,devices.oe.is_set_high())));event(Message::Outputs(app.as_ref().map(|a|a.status()).unwrap_or_default()));}
+                if let Some((generation,entropy))=PATTERN_PRESS.try_take(){
+                    // A fresh physical edge can start lights after Stop, never servo PWM.
+                    if generation==GENERATION.load(Ordering::SeqCst)&&run.is_none()
+                        &&gate.session!=0&&lease_valid(){
+                        if let Some(a)=app.as_mut(){a.clear_light();}
+                        STOPPED.store(false,Ordering::SeqCst);
+                        patterns.select(entropy,Instant::now().as_millis(),generation);
+                    }
+                }
+                if Instant::now()>=next_status{next_status=Instant::now()+Duration::from_millis(100);event(Message::Status(status(config,&run,faults,devices.oe.is_set_high())));event(Message::Outputs(output_status(&app,&patterns)));}
                 if let Some(a)=app.as_mut(){if let Err(bits)=a.tick(&mut devices,&config).await{faults|=bits;request_stop(5);continue;}}
+                if patterns.active.is_some(){
+                    if !run_valid(patterns.generation){request_stop(5);continue;}
+                    let time=Instant::now().as_millis();
+                    devices.neo(Module::NeoLeft,patterns.frame(time,config.left_segments,0)).await;
+                    if !run_valid(patterns.generation){request_stop(5);continue;}
+                    devices.neo(Module::NeoRight,patterns.frame(time,config.right_segments,1)).await;
+                    if !run_valid(patterns.generation){request_stop(5);continue;}
+                }
                 if let Some(value)=run.as_mut(){
                     if !run_valid(value.generation){request_stop(5);continue;}
                     if Instant::now()<value.next{continue;}
@@ -388,6 +428,8 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
             Either3::Third(Either::Second(local))=>{
                 if local.generation!=GENERATION.load(Ordering::SeqCst)||run.is_some()||!config.local_tests_enabled{continue;}
                 if gate.session!=0&&!lease_valid(){continue;}
+                clear_patterns(&mut patterns,&mut devices).await;
+                if local.generation!=GENERATION.load(Ordering::SeqCst){continue;}
                 match start_run(local.module,&mut devices,&config).await{Ok(value)=>run=Some(value),Err(bits)=>{faults|=bits;request_stop(5);}}
             }
             Either3::Third(Either::First(envelope))=>{
@@ -396,7 +438,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                 if frame.body==Message::Hello{
                     if frame.session==0{ack(frame,AckCode::BadSession);continue;}
                     if frame.session!=gate.session{
-                        devices.oe.set_high();faults|=devices.stop_all().await;run=None;app=None;ACTIVE.store(false,Ordering::SeqCst);
+                        devices.oe.set_high();faults|=devices.stop_all().await;run=None;app=None;patterns.clear();PATTERN_PRESS.reset();ACTIVE.store(false,Ordering::SeqCst);
                         gate.open(frame.session);set_session(frame.session);
                     }
                     match gate.check(frame.seq){
@@ -412,7 +454,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                 match gate.check(frame.seq){Admission::Duplicate(code)=>{ack(frame,code);continue;},Admission::Stale=>{ack(frame,AckCode::StaleSequence);continue;},Admission::New=>()}
                 let code=match frame.body{
                     Message::KeepAlive=>{LAST_PING.store(now(),Ordering::SeqCst);AckCode::Ok}
-                    Message::GetStatus=>{reply(frame,Message::Capabilities{single_servo:true});reply(frame,Message::ServoDriver(devices.pca.diagnostics));reply(frame,Message::Outputs(app.as_ref().map(|a|a.status()).unwrap_or_default()));reply(frame,Message::Status(status(config,&run,faults,devices.oe.is_set_high())));AckCode::Ok}
+                    Message::GetStatus=>{reply(frame,Message::Capabilities{single_servo:true});reply(frame,Message::ServoDriver(devices.pca.diagnostics));reply(frame,Message::Outputs(output_status(&app,&patterns)));reply(frame,Message::Status(status(config,&run,faults,devices.oe.is_set_high())));AckCode::Ok}
                     Message::Arm(value)=>{
                         if run.is_some()||envelope.busy{AckCode::Busy}else if !value.validate(){AckCode::InvalidConfig}else if !lease_valid(){AckCode::NoSession}else if faults&PCA_FAULT!=0&&value.servo_enabled{AckCode::Fault}else{
                             app=Some(application::Application::new(value));STOPPED.store(false,Ordering::SeqCst);AckCode::Ok
@@ -439,7 +481,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                         }
                     }
                     Message::SetLight{rgb,brightness,period_ms}=>{
-                        if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}else if let Some(a)=app.as_mut(){if a.light(rgb,brightness,period_ms,frame.seq){ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}else{AckCode::InvalidConfig}}else{AckCode::NoSession}
+                        if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}else if let Some(a)=app.as_mut(){if a.light(rgb,brightness,period_ms,frame.seq){patterns.clear();ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}else{AckCode::InvalidConfig}}else{AckCode::NoSession}
                     }
                     Message::SetEyes{left,right,brightness}=>{
                         if !lease_valid()||STOPPED.load(Ordering::SeqCst){AckCode::NoSession}else if let Some(a)=app.as_mut(){if a.eyes(left,right,brightness,frame.seq){ACTIVE.store(true,Ordering::SeqCst);AckCode::Ok}else{AckCode::Unsupported}}else{AckCode::NoSession}
@@ -450,7 +492,11 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                     }
                     Message::RunTest(module)=>{
                         if run.is_some()||envelope.busy{AckCode::Busy}else if !lease_valid(){AckCode::NoSession}
-                        else{app=None;match start_run(module,&mut devices,&config).await{Ok(value)=>{run=Some(value);AckCode::Ok},Err(bits)=>{faults|=bits;request_stop(5);AckCode::Fault}}}
+                        else{
+                            app=None;clear_patterns(&mut patterns,&mut devices).await;
+                            if envelope.generation!=GENERATION.load(Ordering::SeqCst){AckCode::StaleSequence}
+                            else{match start_run(module,&mut devices,&config).await{Ok(value)=>{run=Some(value);AckCode::Ok},Err(bits)=>{faults|=bits;request_stop(5);AckCode::Fault}}}
+                        }
                     }
                     Message::Bootloader=>{BOOT_ACK.signal(frame);request_bootloader();continue;}
                     _=>AckCode::Unsupported,

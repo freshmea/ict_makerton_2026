@@ -1,5 +1,6 @@
 #![no_std]
 pub mod picotool_reset;
+pub mod light_patterns;
 
 use pico_device_protocol::{AckCode, DeviceConfig, Frame, Message, Module, VERSION};
 pub const CAPACITY: usize = 36;

@@ -33,6 +33,7 @@ impl Application {
         if brightness>64||(period!=0&&!(200..=10000).contains(&period)){return false;}
         self.light=Some((rgb,brightness,period));self.light_seq=Some(seq);true
     }
+    pub fn clear_light(&mut self){self.light=None;self.light_seq=None;}
     pub fn eyes(&mut self,left:[u8;8],right:[u8;8],brightness:u8,seq:u32)->bool{if !self.cfg.matrix_installed||brightness>15{return false;}self.eyes=Some((left,right,brightness,seq));true}
     fn valid(&self)->bool{run_valid(self.generation)}
     pub async fn tick(&mut self,d:&mut Devices,config:&DeviceConfig)->Result<(),u32>{

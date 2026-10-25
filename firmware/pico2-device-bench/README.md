@@ -1,5 +1,7 @@
 # Pico 2 통합 장치 진단 펌웨어
 
+2026-10-25 적용 완료: **SW3 짧은 누름으로 NeoPixel 랜덤 패턴 10종**을 즉시 전환한다. 각 출력의 바닥4개·팔4개·메인10개(3-4-3)를 구분하며, 유지 중 재선택과 직전 패턴 연속 중복을 막는다. Nano 검사 20개, Pico flash 백업·쓰기·읽기 검증, 대시보드 복구를 완료했고 사용자가 SW3 바닥 점등·패턴 변경을 확인했다. [배치·패턴·검증](../../doc/software/SW3_네오픽셀_랜덤패턴.md).
+
 현재 확장은 **wire v2**의 보정 Arm·6축 목표 보간·고정/주기 조명·표정·Applied와 독립 safety/hardware watchdog을 포함한다. 기존 순차 진단도 유지한다. 기본 서보는 잠그며, 일반 표정 명령은 Arm의 `matrix_installed=true`일 때 수락한다. [전체 기능·운영](../../doc/software/전체기능_구현과_운영.md)과 [실제 계약](../../crates/pico-device-protocol/README.md)을 따른다.
 
 Rust 1.90 / Embassy RP 0.10 / RP2350 Arm secure 대상의 통합 벤치 이미지다. 부팅 시 서보 OE를 HIGH로 두고 양손 NeoPixel을 검게 지우며 MAX7219를 blank/shutdown 한다. 부팅이나 USB 재연결만으로 검사를 시작하지 않는다. 기존 개별 벤치 이미지와 달리 USB CDC 데이터는 **바이너리 전용**이며, `tools/pico-device-bench` 호스트를 사용한다.

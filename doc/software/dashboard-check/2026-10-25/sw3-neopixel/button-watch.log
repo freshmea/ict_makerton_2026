@@ -1,0 +1,2 @@
+Watching real SW3 events and light_active for 55 seconds
+{"unix_ms": 1792887331763, "connected": true, "session": "88059DBFD1235CDE", "faults": 0, "oe_high": true, "light_active": true, "touch": {"duration_ms": 0, "event_seq": 3, "index": 3, "interval_count": 0, "kind": "WindowClosed", "press_count": 1, "pressed": false, "uptime_ms": 26441}}

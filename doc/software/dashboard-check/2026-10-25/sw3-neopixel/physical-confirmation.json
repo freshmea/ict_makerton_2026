@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-25",
+  "source": "User confirmation in this chat after firmware deployment",
+  "user_reply": "불빛이 켜지고 패턴도 바뀜",
+  "floor_lighting_confirmed": true,
+  "pattern_switching_confirmed": true,
+  "all_ten_patterns_physically_checked": false,
+  "long_hold_deduplication": "automated tests passed; not separately physically confirmed"
+}
