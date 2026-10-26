@@ -1,5 +1,6 @@
 #![no_std]
 #![no_main]
+#![doc = include_str!("../docs/runtime.md")]
 
 use core::{cell::{Cell, RefCell}, sync::atomic::{AtomicBool, AtomicU32, Ordering}};
 use embassy_executor::Spawner;
@@ -37,6 +38,7 @@ static BOOT_ACK:Signal<CriticalSectionRawMutex,WireFrame>=Signal::new();
 static TOUCH_CONFIG:Signal<CriticalSectionRawMutex,DeviceConfig>=Signal::new();
 // Latest debounced SW3 edge: no audio/USB round trip and no animation queue.
 static PATTERN_PRESS:Signal<CriticalSectionRawMutex,(u32,u32)>=Signal::new();
+static ARM_PATTERN_PRESS:Signal<CriticalSectionRawMutex,(u32,u32)>=Signal::new();
 static SNAPSHOT:Mutex<CriticalSectionRawMutex,RefCell<Option<TouchSnapshot>>>=Mutex::new(RefCell::new(None));
 static SESSION:Mutex<CriticalSectionRawMutex,Cell<u64>>=Mutex::new(Cell::new(0));
 static CONNECTED:AtomicBool=AtomicBool::new(false);
@@ -52,10 +54,13 @@ static DEVICE_TICK:AtomicU32=AtomicU32::new(0);
 static BOOTING:AtomicBool=AtomicBool::new(false);
 
 #[derive(Clone,Copy)]
+/// 수신 당시 generation과 busy를 붙인 명령. Stop 전의 대기 명령을 걸러낸다.
 struct Envelope{frame:WireFrame,generation:u32,busy:bool}
 #[derive(Clone,Copy)]
+/// SW6 진단 선택과 선택 당시의 generation.
 struct LocalCommand{module:Module,generation:u32}
 #[derive(Clone,Copy)]
+/// 상태 전송에 사용하는 최신 raw·디바운스 터치 스냅샷.
 struct TouchSnapshot{raw:u8,pressed:u8,states:[TouchState;6]}
 
 bind_interrupts!(struct Irqs{
@@ -75,7 +80,10 @@ pub static PICOTOOL_ENTRIES:[embassy_rp::binary_info::EntryAddr;4]=[
 fn now()->u32{Instant::now().as_millis() as u32}
 fn session()->u64{SESSION.lock(|v|v.get())}
 fn set_session(value:u64){SESSION.lock(|v|v.set(value));}
+/// USB가 연결되어 있고 새 Hello·KeepAlive 뒤 1000ms 이내인지 확인한다.
 fn lease_valid()->bool{CONNECTED.load(Ordering::SeqCst)&&now().wrapping_sub(LAST_PING.load(Ordering::SeqCst))<LEASE_MS}
+/// OE를 즉시 HIGH로 만들고 이전 세대를 취소한 뒤 장치 루프를 깨운다.
+/// LED·매트릭스·PCA의 전체 정리는 `device_task`가 이어서 수행한다.
 fn request_stop(reason:u32){
     STOP_REASON.store(reason,Ordering::SeqCst);STOPPED.store(true,Ordering::SeqCst);
     GENERATION.fetch_add(1,Ordering::SeqCst);
@@ -109,7 +117,7 @@ async fn main(spawner:Spawner){
     let cs=Output::new(p.PIN_20,Level::High);
     let mut spi_config=spi::Config::default();spi_config.frequency=1_000_000;
     let matrix=Matrix{spi:Spi::new_blocking_txonly(p.SPI0,p.PIN_18,p.PIN_19,spi_config),cs};
-    let mut devices=Devices{pca,left,right,matrix,oe};
+    let mut devices=Devices{pca,left,right,matrix,oe,last_commanded:[9000;6],known_positions:0};
     let faults=devices.stop_all().await;
     let config=DeviceConfig::default();
     let pins=[Flex::new(p.PIN_6),Flex::new(p.PIN_7),Flex::new(p.PIN_8),
@@ -133,6 +141,7 @@ async fn main(spawner:Spawner){
     device_task(devices,config,chipid,faults).await;
 }
 #[embassy_executor::task]
+/// 장치 루프 진행과 호스트 lease를 감시하고 하드웨어 watchdog을 급식한다.
 async fn safety_task(mut watchdog:embassy_rp::watchdog::Watchdog){
     watchdog.start(Duration::from_millis(1000));
     loop{
@@ -143,8 +152,10 @@ async fn safety_task(mut watchdog:embassy_rp::watchdog::Watchdog){
     }
 }
 #[embassy_executor::task]
+/// Embassy USB 장치 스택을 지속 실행한다.
 async fn usb_task(mut usb:UsbDevice<'static,UsbDriver>)->!{usb.run().await}
 #[embassy_executor::task]
+/// CDC packet을 복원한다. Stop은 즉시 차단하고 일반 명령은 COMMANDS로 전달한다.
 async fn rx_task(mut rx:Receiver<'static,UsbDriver>){
     let mut packet=[0;64];let mut decoder=FrameDecoder::new();
     loop{
@@ -169,6 +180,7 @@ async fn rx_task(mut rx:Receiver<'static,UsbDriver>){
     }
 }
 #[embassy_executor::task]
+/// 직접 응답과 이벤트를 바이너리 CDC로 전송한다. 전송 실패는 정지를 요청한다.
 async fn tx_task(mut tx:Sender<'static,UsbDriver>){
     let mut wire=[0;MAX_WIRE];
     loop{
@@ -186,25 +198,31 @@ async fn tx_task(mut tx:Sender<'static,UsbDriver>){
     }
 }
 #[embassy_executor::task]
+/// 6개 GPIO를 디바운스하고 SW3·SW4·SW6의 요청과 최신 터치 상태를 만든다.
 async fn touch_task(mut pins:[Flex<'static>;6],mut config:DeviceConfig){
     for pin in &mut pins{pin.set_as_input();pin.set_pull(Pull::None);}
     let mut engine=TouchEngine::new(config).unwrap();let mut gesture=Gesture::new();
     // Require an initial release: a held input at boot/configuration is not a new gesture.
     let mut release_guard=ReleaseGuard::new();let mut was_armed=false;
     let mut pattern_button=PatternButton::new();
+    let mut arm_button=PatternButton::for_switch(4);
     let mut observed_generation=GENERATION.load(Ordering::SeqCst);
     loop{
         let time=Instant::now().as_millis();
-        if let Some(value)=TOUCH_CONFIG.try_take(){config=value;let _=engine.configure(value,time);gesture.clear(true);release_guard.cancel();pattern_button.cancel();was_armed=false;}
+        if let Some(value)=TOUCH_CONFIG.try_take(){config=value;let _=engine.configure(value,time);gesture.clear(true);release_guard.cancel();pattern_button.cancel();arm_button.cancel();was_armed=false;}
         let generation=GENERATION.load(Ordering::SeqCst);
         if generation!=observed_generation{
             observed_generation=generation;release_guard.cancel();gesture.clear(true);was_armed=false;
         }
         let mut raw=0;for(index,pin)in pins.iter().enumerate(){if pin.is_high(){raw|=1<<index;}}
         pattern_button.sample_raw((raw^config.touch_active_low_mask)&4!=0,generation,time);
+        arm_button.sample_raw((raw^config.touch_active_low_mask)&8!=0,generation,time);
         for value in engine.sample(raw,time){
             if pattern_button.accepts(&value){
                 PATTERN_PRESS.signal((generation,Instant::now().as_micros() as u32));
+            }
+            if arm_button.accepts(&value){
+                ARM_PATTERN_PRESS.signal((generation,Instant::now().as_micros() as u32));
             }
             event(Message::Touch(value));
         }
@@ -226,6 +244,7 @@ async fn touch_task(mut pins:[Flex<'static>;6],mut config:DeviceConfig){
     }
 }
 
+/// PCA9685 I2C 소유자. 주소 probe·40ms timeout·FULL_OFF·pulse 쓰기를 담당한다.
 struct Pca{bus:Bus,diagnostics:ServoDriverStatus}
 impl Pca{
     fn bus_error(error:i2c::Error)->u8{match error{
@@ -276,6 +295,7 @@ impl Pca{
     }
     async fn pulse(&mut self,ch:u8,ticks:u16)->Result<(),()>{self.write(&[0x06+ch*4,0,0,ticks as u8,((ticks>>8)&0x0f)as u8]).await}
 }
+/// 두 MAX7219의 SPI·CS 소유자. 논리 좌우를 장착 좌표로 변환한다.
 struct Matrix{spi:Spi<'static,SPI0,spi::Blocking>,cs:Output<'static>}
 impl Matrix{
     fn reg(&mut self,address:u8,near:u8,far:u8)->Result<(),()>{self.cs.set_low();let result=self.spi.blocking_write(&matrix_packet(address,near,far)).map_err(|_|());self.cs.set_high();cortex_m::asm::delay(150);result}
@@ -284,7 +304,9 @@ impl Matrix{
     fn init(&mut self)->Result<(),()>{self.off()?;self.reg(9,0,0)?;self.reg(0xb,7,7)?;self.reg(0xa,1,1)}
     fn enable(&mut self)->Result<(),()>{self.reg(0xc,1,1)}
 }
-struct Devices{pca:Pca,left:Left,right:Right,matrix:Matrix,oe:Output<'static>}
+/// 장치 태스크만 소유하는 실제 출력 장치 묶음과 소프트웨어 기준각.
+/// `last_commanded`는 엔코더 피드백이 아니다. `known_positions`는 알려진 축 mask다.
+struct Devices{pca:Pca,left:Left,right:Right,matrix:Matrix,oe:Output<'static>,last_commanded:[u16;6],known_positions:u8}
 impl Devices{
     async fn neo(&mut self,module:Module,frame:[[u8;3];CAPACITY]){
         let rgb=frame.map(|v|RGB8{r:v[0],g:v[1],b:v[2]});
@@ -302,7 +324,9 @@ impl Devices{
         Module::Matrix=>self.matrix.off(),Module::NeoLeft|Module::NeoRight=>{self.neo(module,[[0;3];CAPACITY]).await;Ok(())},
         Module::Servos=>{self.oe.set_high();self.pca.all_off().await},Module::All=>Ok(())}}
 }
+/// 유한 진단의 현재 모듈·단계·다음 실행 시각. 일반 Arm 출력과는 별도 상태다.
 struct Run{selected:Module,index:usize,module:Module,phase:u16,generation:u32,next:Instant}
+/// Stop·generation·호스트 lease가 현재 작업을 계속 허용하는지 검사한다.
 fn run_valid(generation:u32)->bool{!STOPPED.load(Ordering::SeqCst)&&GENERATION.load(Ordering::SeqCst)==generation&&(session()==0||lease_valid())}
 fn phase_count(module:Module,cfg:&DeviceConfig)->u16{match module{Module::Matrix=>20,Module::NeoLeft=>9+cfg.left_total()as u16,Module::NeoRight=>9+cfg.right_total()as u16,Module::Servos=>24,Module::All=>0}}
 fn phase_delay(module:Module,phase:u16)->u64{match module{Module::Matrix=>match phase{0|1|18=>800,19=>1000,_=>400},Module::NeoLeft|Module::NeoRight=>if phase<9{400}else{60},_=>500}}
@@ -317,6 +341,8 @@ async fn apply_phase(devices:&mut Devices,run:&Run,cfg:&DeviceConfig)->Result<()
             if run.phase%4==0&&channel>0{devices.oe.set_high();devices.pca.off(channel-1).await?;if !run_valid(run.generation){return Err(());}}
             let angle=servo_angle(run.phase,cfg.test_span_degrees);
             devices.pca.pulse(channel,servo_ticks(cfg,angle)).await?;
+            devices.last_commanded[channel as usize]=angle*100;
+            devices.known_positions|=1<<channel;
             if !run_valid(run.generation){devices.oe.set_high();return Err(());}
             devices.oe.set_low();
         }
@@ -357,6 +383,10 @@ async fn clear_patterns(patterns:&mut ButtonPatterns,devices:&mut Devices){
         devices.neo(Module::NeoRight,[[0;3];CAPACITY]).await;
     }
 }
+/// 출력의 단일 소유자. Stop, tick, USB 명령과 로컬 진단을 처리한다.
+///
+/// `Run`, `Application`, SW3 패턴을 구분해 관리한다. ACK는 명령 수락 결과이며
+/// 일반 출력의 Applied는 이후 `Application::tick`에서 발생한다.
 async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut faults:u32)->!{
     let mut gate=SessionGate::new();let mut run:Option<Run>=None;
     let mut app:Option<application::Application>=None;
@@ -368,7 +398,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
         match select3(STOP_WAKE.wait(),Timer::at(tick),select(COMMANDS.receive(),LOCALS.receive())).await{
             Either3::First(())=>{
                 app=None;
-                patterns.clear();PATTERN_PRESS.reset();
+                patterns.clear();PATTERN_PRESS.reset();ARM_PATTERN_PRESS.reset();
                 let old=run.take();ACTIVE.store(false,Ordering::SeqCst);
                 let cleanup_faults=devices.stop_all().await;faults|=cleanup_faults;
                 if let Some(value)=old{event(Message::TestEvent{module:value.selected,phase:value.phase,done:true,fault:true});}
@@ -393,6 +423,16 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                         if let Some(a)=app.as_mut(){a.clear_light();}
                         STOPPED.store(false,Ordering::SeqCst);
                         patterns.select(entropy,Instant::now().as_millis(),generation);
+                    }
+                }
+                if let Some((generation,entropy))=ARM_PATTERN_PRESS.try_take(){
+                    if generation==GENERATION.load(Ordering::SeqCst)&&run.is_none()
+                        &&gate.session!=0&&lease_valid()&&faults&PCA_FAULT==0&&devices.known_positions&15==15{
+                        let a=app.get_or_insert_with(||application::Application::new(
+                            pico_device_protocol::ActuatorConfig::default(),devices.last_commanded));
+                        if a.arm_pattern(&config,entropy){
+                            STOPPED.store(false,Ordering::SeqCst);ACTIVE.store(true,Ordering::SeqCst);
+                        }
                     }
                 }
                 if Instant::now()>=next_status{next_status=Instant::now()+Duration::from_millis(100);event(Message::Status(status(config,&run,faults,devices.oe.is_set_high())));event(Message::Outputs(output_status(&app,&patterns)));}
@@ -438,7 +478,7 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                 if frame.body==Message::Hello{
                     if frame.session==0{ack(frame,AckCode::BadSession);continue;}
                     if frame.session!=gate.session{
-                        devices.oe.set_high();faults|=devices.stop_all().await;run=None;app=None;patterns.clear();PATTERN_PRESS.reset();ACTIVE.store(false,Ordering::SeqCst);
+                        devices.oe.set_high();faults|=devices.stop_all().await;run=None;app=None;patterns.clear();PATTERN_PRESS.reset();ARM_PATTERN_PRESS.reset();ACTIVE.store(false,Ordering::SeqCst);
                         gate.open(frame.session);set_session(frame.session);
                     }
                     match gate.check(frame.seq){
@@ -453,11 +493,20 @@ async fn device_task(mut devices:Devices,mut config:DeviceConfig,chipid:u64,mut 
                 if frame.session!=gate.session{ack(frame,AckCode::BadSession);continue;}
                 match gate.check(frame.seq){Admission::Duplicate(code)=>{ack(frame,code);continue;},Admission::Stale=>{ack(frame,AckCode::StaleSequence);continue;},Admission::New=>()}
                 let code=match frame.body{
+                    Message::SeedServoPositions{positions_cdeg}=>{
+                        if positions_cdeg.iter().flatten().any(|v|*v>18000){AckCode::InvalidConfig}
+                        else if !devices.oe.is_set_high()||run.is_some()||app.as_ref().is_some_and(|a|a.cfg.servo_enabled||a.status().pose_active){AckCode::Busy}
+                        else{
+                            for i in 0..6{if let Some(value)=positions_cdeg[i]{devices.last_commanded[i]=value;devices.known_positions|=1<<i;}}
+                            if let Some(a)=app.as_mut(){a.seed(positions_cdeg);}
+                            AckCode::Ok
+                        }
+                    }
                     Message::KeepAlive=>{LAST_PING.store(now(),Ordering::SeqCst);AckCode::Ok}
                     Message::GetStatus=>{reply(frame,Message::Capabilities{single_servo:true});reply(frame,Message::ServoDriver(devices.pca.diagnostics));reply(frame,Message::Outputs(output_status(&app,&patterns)));reply(frame,Message::Status(status(config,&run,faults,devices.oe.is_set_high())));AckCode::Ok}
                     Message::Arm(value)=>{
                         if run.is_some()||envelope.busy{AckCode::Busy}else if !value.validate(){AckCode::InvalidConfig}else if !lease_valid(){AckCode::NoSession}else if faults&PCA_FAULT!=0&&value.servo_enabled{AckCode::Fault}else{
-                            app=Some(application::Application::new(value));STOPPED.store(false,Ordering::SeqCst);AckCode::Ok
+                            app=Some(application::Application::new(value,devices.last_commanded));STOPPED.store(false,Ordering::SeqCst);AckCode::Ok
                         }
                     }
                     Message::SetPose{targets_cdeg,move_ms}=>{

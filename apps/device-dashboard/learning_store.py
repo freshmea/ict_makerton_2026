@@ -155,8 +155,8 @@ class Store:
                     unchanged = False
                 if unchanged:
                     db.execute('''UPDATE observations SET status='duplicate',duplicate_of=?,
-                        description=NULL,keywords_json=NULL,actions_json=NULL,confidence=NULL,uncertainty=NULL
-                        WHERE batch_id=? AND camera=? AND status='pending' ''', (previous['id'], batch, item['camera']))
+                        description=NULL,keywords_json=NULL,actions_json=NULL,confidence=?,uncertainty=NULL
+                        WHERE batch_id=? AND camera=? AND status='pending' ''', (previous['id'], item['confidence'], batch, item['camera']))
                     stored['cameras'][index] = {'camera': item['camera'], 'duplicate_of': previous['id']}
                     duplicates += 1
                     continue

@@ -2,7 +2,7 @@ use pico_device_protocol::*;
 
 #[test]
 fn appended_servo_messages_round_trip_without_changing_hello_wire_tag() {
-    for body in [Message::SetServo{channel:5,target_cdeg:18000,move_ms:6000},
+    for body in [Message::SeedServoPositions{positions_cdeg:[Some(2800),Some(6500),Some(10600),Some(7700),None,None]},Message::SetServo{channel:5,target_cdeg:18000,move_ms:6000},
                  Message::Capabilities{single_servo:true},Message::CheckServoDriver,
                  Message::ServoDriver(ServoDriverStatus{selected_address:0x40,probes:[1,2],
                      sda_high:true,scl_high:true,initialized:true,last_error:0})] {

@@ -358,6 +358,7 @@ async def reconnect_pico():
             servos = getattr(app.state, 'servos', None)
             if servos: await servos.close()
             await app.state.eyes.close()
+            await threaded(app.state.pico.stop)
             await threaded(app.state.pico.start)
             return app.state.pico.snapshot()
         finally:

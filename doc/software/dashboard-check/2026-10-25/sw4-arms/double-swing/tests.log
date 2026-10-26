@@ -1,0 +1,32 @@
+   Compiling pico2-device-bench v0.1.0 (D:\repository\ict_makerton_2026\firmware\pico2-device-bench)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.10s
+     Running unittests src\lib.rs (firmware\pico2-device-bench\target\x86_64-pc-windows-msvc\debug\deps\pico2_device_bench-dc10373cfc586df2.exe)
+
+running 24 tests
+test arm_patterns::tests::all_ten_gestures_have_distinct_keyframes ... ok
+test arm_patterns::tests::doubled_swing_reaches_twelve_degrees_each_side_of_the_saved_center ... ok
+test light_patterns::tests::main_row_wave_uses_three_four_three_and_groups_relay_independently ... ok
+test motion_tests::single_servo_preserves_other_targets_and_checks_bounds ... ok
+test picotool_reset::tests::only_exact_picotool_bootsel_control_shape_is_accepted ... ok
+test motion_tests::interpolation_is_bounded_and_reaches_target_without_overshoot ... ok
+test motion_tests::servo_driver_requires_exactly_one_valid_address ... ok
+test tests::duplicate_and_out_of_order_never_restart ... ok
+test tests::boot_or_config_held_requires_real_raw_release_before_new_press ... ok
+test tests::corrupt_wire_never_reaches_stop_admission ... ok
+test tests::eye_mapping_keeps_blank_frames_blank_for_stop_and_startup ... ok
+test picotool_reset::tests::serial_is_rom_compatible_uppercase_and_fixed_width ... ok
+test light_patterns::tests::real_debouncer_short_press_hold_bounce_and_generation_release_guard ... ok
+test tests::left_eye_mount_preserves_upright_row_and_column_scans ... ok
+test tests::stop_during_pending_debounce_consumes_later_release ... ok
+test arm_patterns::tests::reselect_is_immediate_continuous_and_does_not_accumulate_offsets ... ok
+test tests::observed_left_eye_is_rotated_near_and_right_eye_is_upright_far ... ok
+test tests::matrix_wire_order_is_far_before_near ... ok
+test tests::stop_requires_protocol_version_but_not_session_or_sequence ... ok
+test tests::segments_tail_black_and_small_servo_excursion ... ok
+test tests::switch_hold_mapping_and_stop_consumes_release ... ok
+test arm_patterns::tests::ten_patterns_preserve_other_axes_and_obey_travel_speed_and_completion ... ok
+test light_patterns::tests::all_patterns_animate_with_bounded_channels_and_black_tails ... ok
+test light_patterns::tests::random_selection_covers_ten_without_immediate_repeats_and_restarts ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

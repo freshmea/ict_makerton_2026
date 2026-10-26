@@ -1,0 +1,4 @@
+   Compiling pico2-device-bench v0.1.0 (D:\repository\ict_makerton_2026\firmware\pico2-device-bench)
+    Finished `release` profile [optimized + debuginfo] target(s) in 5.11s
+Verified RP2350 UF2: D:\repository\ict_makerton_2026\firmware\pico2-device-bench\dist\pico2-device-bench.uf2
+SHA256: 1DBE9DC137CA0B238308BBCD9AFE3D2F7DB26DC554DE3551A4E66F1B20EDBAA9

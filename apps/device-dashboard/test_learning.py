@@ -355,6 +355,43 @@ class LiveTests(unittest.IsolatedAsyncioTestCase):
         self.assertNotIn('secret', json.dumps(self.store.live_history()))
         self.assertFalse(self.audio.play_lock.locked())
 
+    async def test_stop_during_handshake_closes_without_opening_audio(self):
+        self.reader=asyncio.StreamReader()
+        connected=asyncio.Event()
+        async def connect(*args):
+            connected.set()
+            return self.reader,self.writer
+        with patch('learning.open_stream',side_effect=connect), \
+                patch('asyncio.create_subprocess_exec',AsyncMock(return_value=self.player)) as launch:
+            await self.live.start()
+            await connected.wait()
+            self.live.stop()
+            await asyncio.wait_for(asyncio.shield(self.live.task),.5)
+            launch.assert_not_called()
+        self.audio.subscribe_pcm.assert_not_called()
+        self.writer.close.assert_called_once()
+        self.assertEqual(self.live.state['reason'],'user_stop')
+        self.assertFalse(self.audio.play_lock.locked())
+
+    async def test_stop_while_cleaning_handshake_tasks_never_launches_audio(self):
+        gather=asyncio.gather
+        stopped=False
+        async def stop_during_cleanup(*tasks,**kwargs):
+            nonlocal stopped
+            if not stopped:
+                stopped=True
+                self.live.stop()
+            return await gather(*tasks,**kwargs)
+        with patch('learning.open_stream',AsyncMock(return_value=(self.reader,self.writer))), \
+                patch('asyncio.gather',side_effect=stop_during_cleanup), \
+                patch('asyncio.create_subprocess_exec',AsyncMock(return_value=self.player)) as launch:
+            await self.live.start()
+            await self.live.task
+            launch.assert_not_called()
+        self.audio.subscribe_pcm.assert_not_called()
+        self.assertEqual(self.live.state['reason'],'user_stop')
+        self.assertFalse(self.audio.play_lock.locked())
+
     async def test_button_feedback_mutes_microphone_and_ducks_live_output(self):
         self.audio.feedback_active.return_value = True
         self.audio.gain_db = 0

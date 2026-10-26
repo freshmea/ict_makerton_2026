@@ -1,14 +1,24 @@
 //! Pico SDK-compatible BOOTSEL reset interface with deferred output cleanup.
 //! References (SDK 2.2.0, picotool 2.3.1):
-//! https://github.com/raspberrypi/pico-sdk/blob/2.2.0/src/common/pico_usb_reset_interface_headers/include/pico/usb_reset_interface.h
-//! https://github.com/raspberrypi/pico-sdk/blob/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c
-//! https://github.com/raspberrypi/picotool/blob/2.3.1/main.cpp#L9465-L9488
+//! <https://github.com/raspberrypi/pico-sdk/blob/2.2.0/src/common/pico_usb_reset_interface_headers/include/pico/usb_reset_interface.h>
+//! <https://github.com/raspberrypi/pico-sdk/blob/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c>
+//! <https://github.com/raspberrypi/picotool/blob/2.3.1/main.cpp#L9465-L9488>
+//!
+//! Windows 문서에서는 칩 ID 변환만 보인다. `State`와 `register`는
+//! `target_os="none"`에서만 존재하며 RP2350 대상 문서에서 확인한다.
 
+/// Pico SDK reset interface subclass.
 pub const RESET_INTERFACE_SUBCLASS:u8=0;
+/// Pico SDK reset interface protocol.
 pub const RESET_INTERFACE_PROTOCOL:u8=1;
+/// BOOTSEL 진입을 요청하는 control request 번호.
 pub const RESET_REQUEST_BOOTSEL:u8=1;
 
 /// Same uppercase, leading-zero-padded public-chip-ID serial as the RP2350 ROM.
+///
+/// ```
+/// assert_eq!(&pico2_device_bench::picotool_reset::chipid_serial(1), b"0000000000000001");
+/// ```
 pub fn chipid_serial(chipid:u64)->[u8;16]{
     let mut out=[b'0';16];
     for(index,byte)in out.iter_mut().enumerate(){
@@ -29,8 +39,12 @@ mod usb{
     use embassy_usb::{Builder,Handler,control::{OutResponse,Request},driver::Driver,
         msos::{CompatibleIdFeatureDescriptor,PropertyData,RegistryPropertyFeatureDescriptor}};
 
+    /// USB interface 번호와 출력 정리 요청 callback을 보관한다.
     pub struct State{interface:u8,request_boot:Option<fn()>}
-    impl State{pub const fn new()->Self{Self{interface:u8::MAX,request_boot:None}}}
+    impl State{
+        /// register 전의 미연결 상태를 만든다.
+        pub const fn new()->Self{Self{interface:u8::MAX,request_boot:None}}
+    }
     impl Handler for State{
         fn control_out(&mut self,req:Request,data:&[u8])->Option<OutResponse>{
             let request_type=((req.direction as u8)<<7)|((req.request_type as u8)<<5)|(req.recipient as u8);
@@ -43,6 +57,8 @@ mod usb{
             None
         }
     }
+    /// USB builder에 picotool 호환 interface와 handler를 등록한다.
+    /// callback은 즉시 reset하는 대신 OE 차단과 장치 루프 정리를 요청해야 한다.
     pub fn register<'d,D:Driver<'d>>(builder:&mut Builder<'d,D>,state:&'d mut State,request_boot:fn()){
         builder.msos_descriptor(0x0603_0000,1);
         {

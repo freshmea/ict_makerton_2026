@@ -1,6 +1,8 @@
 import asyncio
 import copy
 import unittest
+import os
+import tempfile
 from unittest.mock import AsyncMock, Mock, patch
 
 from servo_controls import ServoControls
@@ -20,6 +22,10 @@ class Pico:
 
 class ServoTests(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
+        self.reference_dir=tempfile.TemporaryDirectory()
+        self.addCleanup(self.reference_dir.cleanup)
+        reference_env=patch.dict(os.environ,{'SERVO_REFERENCE_PATH':self.reference_dir.name+'/targets.json'})
+        reference_env.start();self.addCleanup(reference_env.stop)
         self.pico = Pico()
         self.commands = []
 

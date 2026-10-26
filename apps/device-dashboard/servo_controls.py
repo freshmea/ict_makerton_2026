@@ -2,6 +2,7 @@
 import asyncio
 import secrets
 import time
+from servo_reference import load_reference,save_reference
 
 
 class ServoControls:
@@ -30,7 +31,7 @@ class ServoControls:
         self.deadline = 0
         self.epoch = 0
         self.armed = False
-        self.commanded = [None] * 6
+        self.commanded = load_reference()
         self.error = None
         self.gate = asyncio.Lock()
         self.watch_task = None
@@ -128,6 +129,8 @@ class ServoControls:
                     applied = p.get('last_applied') or {}
                     if applied.get('request_seq') == seq and applied.get('kind') == 4:
                         self.commanded[servo-1] = degrees
+                        try:save_reference(self.commanded)
+                        except OSError:self.events.add('servo','완료 목표각 저장 실패','warning')
                         self.error = None
                         return {'ok': True, 'servo': servo, 'degrees': degrees,
                                 'request_seq': seq, 'state': self.snapshot()}

@@ -80,15 +80,17 @@ pub enum IpcRequest {
     Eyes {left:[u8;8],right:[u8;8],brightness:u8},
     Servo {channel:u8,target_cdeg:u16,move_ms:u16},
     ServoProbe,
+    SeedServoPositions { positions_cdeg:[Option<u16>;6] },
 }
 
 impl IpcRequest {
     pub fn name(&self) -> &'static str {
-        match self { Self::Status => "status", Self::Test { .. } => "test", Self::Stop => "stop", Self::Configure { .. } => "configure",Self::Arm{..}=>"arm",Self::Pose{..}=>"pose",Self::Light{..}=>"light",Self::Eyes{..}=>"eyes",Self::Servo{..}=>"servo",Self::ServoProbe=>"servo_probe" }
+        match self { Self::Status => "status", Self::Test { .. } => "test", Self::Stop => "stop", Self::Configure { .. } => "configure",Self::Arm{..}=>"arm",Self::Pose{..}=>"pose",Self::Light{..}=>"light",Self::Eyes{..}=>"eyes",Self::Servo{..}=>"servo",Self::ServoProbe=>"servo_probe",Self::SeedServoPositions{..}=>"seed_servo_positions" }
     }
     pub fn validate(&self) -> Result<()> {
         if let Self::Configure { config } = self { validate_config(config)?; }
         match self {
+            Self::SeedServoPositions{positions_cdeg} if positions_cdeg.iter().flatten().any(|x|*x>18000)=>return Err(failure("invalid servo reference bounds")),
             Self::Arm{config} if !config.validate()=>return Err(failure("invalid actuator calibration")),
             Self::Pose{targets_cdeg,move_ms} if targets_cdeg.iter().any(|x|*x>18000)||!(100..=10000).contains(move_ms)=>return Err(failure("invalid pose bounds")),
             Self::Servo{channel,target_cdeg,move_ms} if *channel>=6||*target_cdeg>18000||!(100..=10000).contains(move_ms)=>return Err(failure("invalid single servo bounds")),
@@ -113,6 +115,7 @@ pub fn parse_ipc(bytes: &[u8]) -> Result<IpcRequest> {
         Some("light")=> &["cmd","rgb","brightness","period_ms"],
         Some("eyes")=> &["cmd","left","right","brightness"],
         Some("servo")=> &["cmd","channel","target_cdeg","move_ms"],
+        Some("seed_servo_positions")=> &["cmd","positions_cdeg"],
         _ => return Err(failure("UDP cmd must be status, test, stop, or configure")),
     };
     if let Some(key) = object.keys().find(|key| !allowed.contains(&key.as_str())) {
@@ -516,6 +519,16 @@ pub async fn udp_roundtrip(address: SocketAddr, request: &IpcRequest) -> Result<
 
 #[cfg(test)]
 mod tests {
+    #[test]
+    fn servo_reference_is_bounded_and_accepts_unknown_axes(){
+        let good=br#"{"cmd":"seed_servo_positions","positions_cdeg":[2800,6500,10600,7700,null,null]}"#;
+        assert!(super::parse_ipc(good).is_ok());
+        for bad in [br#"{"cmd":"seed_servo_positions","positions_cdeg":[18001,0,0,0,0,0]}"#.as_slice(),
+            br#"{"cmd":"seed_servo_positions","positions_cdeg":[0,0,0,0]}"#.as_slice(),
+            br#"{"cmd":"seed_servo_positions","positions_cdeg":[0,0,0,0,0,0],"move":true}"#.as_slice()] {
+            assert!(super::parse_ipc(bad).is_err());
+        }
+    }
     use super::*;
     use pico_device_protocol::TouchState;
     use tokio::io::DuplexStream;

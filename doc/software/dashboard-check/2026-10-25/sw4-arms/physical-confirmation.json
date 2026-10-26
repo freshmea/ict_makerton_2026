@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-25",
+  "source": "User confirmation in this chat after SW4 firmware deployment",
+  "user_reply": "서보 1~4번 모두 정상 동작",
+  "all_first_four_servos_moving_confirmed": true,
+  "all_ten_patterns_physically_tested": false,
+  "angle_sensor_measurement": false
+}

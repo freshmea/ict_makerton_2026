@@ -1,0 +1,126 @@
+BACKUP_DIR=/home/jetson/ict_makerton_2026/tmp/sw4-double-backup-20261025T025032Z
+   Compiling pico2-device-bench v0.1.0 (/home/jetson/ict_makerton_2026/firmware/pico2-device-bench)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.85s
+     Running unittests src/lib.rs (firmware/pico2-device-bench/target/aarch64-unknown-linux-gnu/debug/deps/pico2_device_bench-cda357d146dcdd53)
+
+running 24 tests
+test arm_patterns::tests::all_ten_gestures_have_distinct_keyframes ... ok
+test arm_patterns::tests::doubled_swing_reaches_twelve_degrees_each_side_of_the_saved_center ... ok
+test light_patterns::tests::main_row_wave_uses_three_four_three_and_groups_relay_independently ... ok
+test arm_patterns::tests::reselect_is_immediate_continuous_and_does_not_accumulate_offsets ... ok
+test light_patterns::tests::real_debouncer_short_press_hold_bounce_and_generation_release_guard ... ok
+test motion_tests::interpolation_is_bounded_and_reaches_target_without_overshoot ... ok
+test motion_tests::servo_driver_requires_exactly_one_valid_address ... ok
+test motion_tests::single_servo_preserves_other_targets_and_checks_bounds ... ok
+test picotool_reset::tests::only_exact_picotool_bootsel_control_shape_is_accepted ... ok
+test picotool_reset::tests::serial_is_rom_compatible_uppercase_and_fixed_width ... ok
+test tests::boot_or_config_held_requires_real_raw_release_before_new_press ... ok
+test tests::corrupt_wire_never_reaches_stop_admission ... ok
+test tests::duplicate_and_out_of_order_never_restart ... ok
+test tests::eye_mapping_keeps_blank_frames_blank_for_stop_and_startup ... ok
+test tests::left_eye_mount_preserves_upright_row_and_column_scans ... ok
+test tests::matrix_wire_order_is_far_before_near ... ok
+test tests::observed_left_eye_is_rotated_near_and_right_eye_is_upright_far ... ok
+test tests::segments_tail_black_and_small_servo_excursion ... ok
+test tests::stop_during_pending_debounce_consumes_later_release ... ok
+test tests::stop_requires_protocol_version_but_not_session_or_sequence ... ok
+test tests::switch_hold_mapping_and_stop_consumes_release ... ok
+test arm_patterns::tests::ten_patterns_preserve_other_axes_and_obey_travel_speed_and_completion ... ok
+test light_patterns::tests::all_patterns_animate_with_bounded_channels_and_black_tails ... ok
+test light_patterns::tests::random_selection_covers_ten_without_immediate_repeats_and_restarts ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
+
+   Compiling pico2-device-bench v0.1.0 (/home/jetson/ict_makerton_2026/firmware/pico2-device-bench)
+    Finished `release` profile [optimized + debuginfo] target(s) in 42.20s
+File dist/linux/pico2-device-bench.uf2 family ID 'rp2350-arm-s':
+
+Program Information
+ name:                Pico2 Device Bench
+ version:             0.1.0
+ description:         Binary USB device tests; six touch inputs, dual NeoPixel,
+                      eyes, six PCA9685 servos
+ binary start:        0x10000000
+ target chip:         RP2350
+ image type:          ARM Secure
+
+Fixed Pin Information
+ none
+
+Build Information
+ build attributes:    release
+
+Metadata Block 1
+ address:             0x10000114
+ next block address:  0x10000114
+ block type:          image def
+ target chip:         RP2350
+ image type:          ARM Secure
+ extra security:      not enabled
+    Finished `release` profile [optimized] target(s) in 0.36s
+{
+  "target": "thumbv8m.main-none-eabihf",
+  "family": "0xe48bff59",
+  "blocks": 349,
+  "bytes": 178688,
+  "sha256": "42d741a5a563f6b83bbd7cc77624b6ffa3a5771191d8341c11e754dcacd756c5",
+  "at_utc": "2026-10-25T02:51:21.833335+00:00",
+  "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+  "converter": "picotool 2.3.1",
+  "picotool_sha256": "7bbfa5a2c2ad447353e82bc66af70aa09379bb5709129ccb9bdfc985cea39422",
+  "host_sha256": "7272d33c1aa9c3304dea58faa4d5735e2a27c9db18a7f3df80c31b4d620f6130",
+  "git_head": "b175780690e3c535c52f276f7db6de7304c19520",
+  "git_dirty": true,
+  "source_sha256": {
+    "firmware/pico2-device-bench/.cargo/config.toml": "f3591d029f55429aa462e9a61c5b1b637bd3cc6c86ac55695c4d2df7d41c00be",
+    "firmware/pico2-device-bench/Cargo.lock": "54b6d26c470c2657b8426b930af58e70cc6c5729a43a4c66bca581e51765ea3d",
+    "firmware/pico2-device-bench/Cargo.toml": "a13cb3c042d5b0c8a66d1393d1cb2329503ac6071812a3437bc6225bdd2d9977",
+    "firmware/pico2-device-bench/build.rs": "74fbfc498c904689039120d722ceb8360ec0e0c4eda8d799d8caf95f313e406d",
+    "firmware/pico2-device-bench/memory.x": "9c493a7dcaa96535a529b5afecf048d12468b7e7ce6edf26fb022f81b3fe865c",
+    "firmware/pico2-device-bench/src/application.rs": "815b52cb28f52532dbc1fd57de07b679ffd3d2f71dbecde25bf12b99430981ef",
+    "firmware/pico2-device-bench/src/arm_patterns.rs": "13ef9cd240e4d77cd6cf56a8c5076f815c400907f48376f8aca5cfe7131d95de",
+    "firmware/pico2-device-bench/src/lib.rs": "11dced90c3bdb5e08d601bbd3fbac6ab3772992f0e321b8e92b374a10ef27245",
+    "firmware/pico2-device-bench/src/light_patterns.rs": "b5d668d02352b82ba0edd4e46f156d5f394ddf636ff12cac737fbc84a42755bc",
+    "firmware/pico2-device-bench/src/main.rs": "eca69e94e1b4f1510ef550075cd0ade0c783ffa074f5b70cd0f8919055b04bac",
+    "firmware/pico2-device-bench/src/picotool_reset.rs": "cea22c71542735530df078f9756d475c57eca219ada1084c2df1763337b62b12",
+    "tools/pico-device-bench/Cargo.lock": "05ee34f0655ed3da851be8bbce1283ba22b98c5b1c071a9fa4c2b5cf9dc0bd4d",
+    "tools/pico-device-bench/Cargo.toml": "67b2405e0436bb046e7d68e8d0aff2fec8bf90a44053a7bc9ea00ad2228fd844",
+    "tools/pico-device-bench/src/lib.rs": "dec2fc951f04497b9f6ff6b2a449c76efceb7928e252c23cb71e262222772156",
+    "tools/pico-device-bench/src/main.rs": "6c84dba6f57aa612324a9c39d0b2652c7139ff378a16ddb98221c60f499bd154",
+    "crates/pico-device-protocol/Cargo.lock": "b42ef9404d2bfcb40e8cd3a220392cfadb92bb2d4ac6b32fb497bb57ca6bc3d7",
+    "crates/pico-device-protocol/Cargo.toml": "0955b50577747b844d45ee518c1009cf3c99aeca0d256a145415cde3ffc461d6",
+    "crates/pico-device-protocol/src/lib.rs": "096495605ff5ca12f932601666238b9ac45cc205455700f23459b8bd186fb0f2"
+  }
+}
+Built RP2350 UF2 and native Linux USB host. No flash write performed.
+{
+  "at_utc": "2026-10-25T02:51:24.595032+00:00",
+  "environment_ready": true,
+  "image": {
+    "target": "thumbv8m.main-none-eabihf",
+    "family": "0xe48bff59",
+    "blocks": 349,
+    "bytes": 178688,
+    "sha256": "42d741a5a563f6b83bbd7cc77624b6ffa3a5771191d8341c11e754dcacd756c5"
+  },
+  "devices": [
+    {
+      "sysfs": "/sys/devices/70090000.xusb/usb1/1-2/1-2.3",
+      "vid": "c0de",
+      "pid": "cafc",
+      "serial": "E679675A69C4039B",
+      "bus": 1,
+      "address": 7,
+      "usb_node": "/dev/bus/usb/001/007",
+      "read_write": true
+    }
+  ],
+  "flash_written": false,
+  "note": "--port accepts integrated c0de:cafc CDC only. Other variants may support picotool USB reset; VID/PID does not identify firmware age."
+}
+Saving existing 4 MiB flash before writing...
+Loading and verifying RP2350 flash...
+Flash readback and integrated CDC STATUS verified. No actuator test started.
+Result: /home/jetson/ict_makerton_2026/tmp/pico-flash/20261025T025127.279959Z-linux/flash-result.json
+active
+SW4_DOUBLE_SWING_DEPLOYED

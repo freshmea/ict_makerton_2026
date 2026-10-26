@@ -109,8 +109,24 @@ class Live:
                     self.events.add('learning', 'Live 종료 안내 음성 재생 실패', 'warning')
         try:
             reader, writer = await open_stream({'op': 'live', 'mode': mode, 'reference': reference})
-            # A stop during handshake must not open a microphone or leave a session running.
-            first = json.loads(await asyncio.wait_for(reader.readline(), 30))
+            handshake = asyncio.create_task(reader.readline())
+            stopper = asyncio.create_task(self.stop_event.wait())
+            tasks = [handshake, stopper]
+            done, _ = await asyncio.wait(tasks, timeout=30, return_when=asyncio.FIRST_COMPLETED)
+            if self.stop_event.is_set():
+                writer.write(b'{"type":"session.close"}\n')
+                await asyncio.wait_for(writer.drain(), 2)
+                return
+            if handshake not in done:
+                raise asyncio.TimeoutError()
+            first = json.loads(handshake.result())
+            stopper.cancel()
+            await asyncio.gather(stopper, return_exceptions=True)
+            tasks = []
+            if self.stop_event.is_set():
+                writer.write(b'{"type":"session.close"}\n')
+                await asyncio.wait_for(writer.drain(), 2)
+                return
             if first.get('type') != 'session.started':
                 raise RuntimeError('live_start_failed')
             audit = first.get('_application')
@@ -126,6 +142,10 @@ class Live:
                 '-t', 'raw', '-f', 'S16_LE', '-r', '24000', '-c', '1',
                 stdin=asyncio.subprocess.PIPE, stdout=asyncio.subprocess.DEVNULL,
                 stderr=asyncio.subprocess.DEVNULL)
+            if self.stop_event.is_set():
+                writer.write(b'{"type":"session.close"}\n')
+                await asyncio.wait_for(writer.drain(), 2)
+                return
             pcm = asyncio.Queue(maxsize=3)
             remove = self.audio.subscribe_pcm(asyncio.get_running_loop(), pcm)
 

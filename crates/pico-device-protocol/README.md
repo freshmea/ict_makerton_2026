@@ -1,5 +1,7 @@
 # Pico device control protocol v2
 
+SW4 팔 패턴용 append-only 확장: `SeedServoPositions { positions_cdeg: [Option<u16>;6] }`는 마지막 완료 목표각을 참조 데이터로만 복원한다. 0~18000 centidegree/null을 수락하며 PWM·OE를 켜지 않는다. 펌웨어는 OE HIGH·진단/서보 이동 없음 상태에서만 수락하고, SW4는 CH0~CH3의 알려진 참조가 모두 있을 때만 시작한다. 새 메시지는 대응하는 최신 USB 브리지와 사용한다.
+
 Pico 2와 Nano/PC가 공유하는 `no_std` 제어·진단 프로토콜과 순수 터치 추적기다. GPIO·USB·모터를 직접 제어하지 않는다. USB VID/PID는 `c0de:cafc`, wire version은 `2`다. v1의 variant 순서는 유지하고 일반 보정·목표 구동을 추가했다. 버전이 다른 호스트/펌웨어를 함께 사용하지 않는다.
 
 ## API

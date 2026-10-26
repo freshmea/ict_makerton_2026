@@ -49,6 +49,14 @@ class WindowTests(unittest.TestCase):
         self.assertEqual(info['images'], 10)
         self.assertEqual(info['questions'], 21)
 
+    def test_decisions_frame_labels_keep_both_camera_roles(self):
+        for face_id in (0,1):
+            labels=[item['text'] for item in window.content(dual_images(face_id))[1:] if item['type']=='input_text']
+            self.assertEqual(len(labels),20)
+            for sample in range(10):
+                self.assertIn('camera %d, role face' % face_id,labels[sample*2])
+                self.assertIn('camera %d, role study_area' % (1-face_id),labels[sample*2+1])
+
     def test_jev_references_every_photo_once_and_uses_free_model(self):
         for face_id in (0, 1):
             body = window.jev_body(dual_images(face_id))

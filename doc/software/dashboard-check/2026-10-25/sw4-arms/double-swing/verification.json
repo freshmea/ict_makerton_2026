@@ -1,0 +1,260 @@
+{
+  "flash_path": "/home/jetson/ict_makerton_2026/tmp/pico-flash/20261025T025127.279959Z-linux/flash-result.json",
+  "flash": {
+    "started_utc": "2026-10-25T02:51:27.280252+00:00",
+    "image": {
+      "target": "thumbv8m.main-none-eabihf",
+      "family": "0xe48bff59",
+      "blocks": 349,
+      "bytes": 178688,
+      "sha256": "42d741a5a563f6b83bbd7cc77624b6ffa3a5771191d8341c11e754dcacd756c5"
+    },
+    "flash_verified": true,
+    "application_status_verified": true,
+    "completed": true,
+    "before_status": {
+      "protocol": "pico-device-v2",
+      "bootloader": "picotool-v1",
+      "oe_high": "1",
+      "version": "2",
+      "session": "A6B08B4801E4B726",
+      "left_pixels": "18",
+      "right_pixels": "18",
+      "running": "None",
+      "faults": "0",
+      "dropped_events": "90"
+    },
+    "rom": {
+      "sysfs": "/sys/devices/70090000.xusb/usb1/1-2/1-2.3",
+      "vid": "2e8a",
+      "pid": "000f",
+      "serial": "E679675A69C4039B",
+      "bus": 1,
+      "address": 8,
+      "usb_node": "/dev/bus/usb/001/008",
+      "read_write": true
+    },
+    "backup": {
+      "path": "/home/jetson/ict_makerton_2026/tmp/pico-flash/20261025T025127.279959Z-linux/previous-flash.bin",
+      "sha256": "ea592ed1d5222f3ebe7a84a459df6b9d71e8e0d317f9f26e9322067eb3522c6b"
+    },
+    "status": {
+      "protocol": "pico-device-v2",
+      "bootloader": "picotool-v1",
+      "oe_high": "1",
+      "version": "2",
+      "session": "4C514B27D4A7587F",
+      "left_pixels": "18",
+      "right_pixels": "18",
+      "running": "None",
+      "faults": "0",
+      "dropped_events": "20"
+    },
+    "application_port": "/dev/ttyACM0",
+    "finished_utc": "2026-10-25T02:51:41.353866+00:00"
+  },
+  "build": {
+    "target": "thumbv8m.main-none-eabihf",
+    "family": "0xe48bff59",
+    "blocks": 349,
+    "bytes": 178688,
+    "sha256": "42d741a5a563f6b83bbd7cc77624b6ffa3a5771191d8341c11e754dcacd756c5",
+    "at_utc": "2026-10-25T02:51:21.833335+00:00",
+    "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+    "converter": "picotool 2.3.1",
+    "picotool_sha256": "7bbfa5a2c2ad447353e82bc66af70aa09379bb5709129ccb9bdfc985cea39422",
+    "host_sha256": "7272d33c1aa9c3304dea58faa4d5735e2a27c9db18a7f3df80c31b4d620f6130",
+    "git_head": "b175780690e3c535c52f276f7db6de7304c19520",
+    "git_dirty": true,
+    "source_sha256": {
+      "firmware/pico2-device-bench/.cargo/config.toml": "f3591d029f55429aa462e9a61c5b1b637bd3cc6c86ac55695c4d2df7d41c00be",
+      "firmware/pico2-device-bench/Cargo.lock": "54b6d26c470c2657b8426b930af58e70cc6c5729a43a4c66bca581e51765ea3d",
+      "firmware/pico2-device-bench/Cargo.toml": "a13cb3c042d5b0c8a66d1393d1cb2329503ac6071812a3437bc6225bdd2d9977",
+      "firmware/pico2-device-bench/build.rs": "74fbfc498c904689039120d722ceb8360ec0e0c4eda8d799d8caf95f313e406d",
+      "firmware/pico2-device-bench/memory.x": "9c493a7dcaa96535a529b5afecf048d12468b7e7ce6edf26fb022f81b3fe865c",
+      "firmware/pico2-device-bench/src/application.rs": "815b52cb28f52532dbc1fd57de07b679ffd3d2f71dbecde25bf12b99430981ef",
+      "firmware/pico2-device-bench/src/arm_patterns.rs": "13ef9cd240e4d77cd6cf56a8c5076f815c400907f48376f8aca5cfe7131d95de",
+      "firmware/pico2-device-bench/src/lib.rs": "11dced90c3bdb5e08d601bbd3fbac6ab3772992f0e321b8e92b374a10ef27245",
+      "firmware/pico2-device-bench/src/light_patterns.rs": "b5d668d02352b82ba0edd4e46f156d5f394ddf636ff12cac737fbc84a42755bc",
+      "firmware/pico2-device-bench/src/main.rs": "eca69e94e1b4f1510ef550075cd0ade0c783ffa074f5b70cd0f8919055b04bac",
+      "firmware/pico2-device-bench/src/picotool_reset.rs": "cea22c71542735530df078f9756d475c57eca219ada1084c2df1763337b62b12",
+      "tools/pico-device-bench/Cargo.lock": "05ee34f0655ed3da851be8bbce1283ba22b98c5b1c071a9fa4c2b5cf9dc0bd4d",
+      "tools/pico-device-bench/Cargo.toml": "67b2405e0436bb046e7d68e8d0aff2fec8bf90a44053a7bc9ea00ad2228fd844",
+      "tools/pico-device-bench/src/lib.rs": "dec2fc951f04497b9f6ff6b2a449c76efceb7928e252c23cb71e262222772156",
+      "tools/pico-device-bench/src/main.rs": "6c84dba6f57aa612324a9c39d0b2652c7139ff378a16ddb98221c60f499bd154",
+      "crates/pico-device-protocol/Cargo.lock": "b42ef9404d2bfcb40e8cd3a220392cfadb92bb2d4ac6b32fb497bb57ca6bc3d7",
+      "crates/pico-device-protocol/Cargo.toml": "0955b50577747b844d45ee518c1009cf3c99aeca0d256a145415cde3ffc461d6",
+      "crates/pico-device-protocol/src/lib.rs": "096495605ff5ca12f932601666238b9ac45cc205455700f23459b8bd186fb0f2"
+    }
+  },
+  "reference_degrees": [
+    28,
+    65,
+    106,
+    77,
+    177,
+    134
+  ],
+  "installed_sha256": {
+    "hardware.py": "becde1ef60f826394d2060a129826a8b0ff955cfb44345df591800847ef8dbfc",
+    "servo_controls.py": "1c72fbe7399d3c59a507b151985451151df4f0d901b382813f5873c15ffc60f7",
+    "servo_reference.py": "1e4c452e11815d1231338f869c1afa6244ebdc189d544d872b4946f4981a77a9"
+  },
+  "pico": {
+    "connected": true,
+    "session": "2C29D0FC3D34CA4F",
+    "device": {
+      "config": {
+        "hold_interval_ms": 800,
+        "left_segments": [
+          4,
+          4,
+          10
+        ],
+        "local_tests_enabled": false,
+        "press_window_ms": 2000,
+        "right_segments": [
+          4,
+          4,
+          10
+        ],
+        "servo_max_us": 2500,
+        "servo_min_us": 500,
+        "test_span_degrees": 10,
+        "test_switch": 0,
+        "touch_active_low_mask": 0
+      },
+      "dropped_events": 56,
+      "faults": 0,
+      "local_enabled": false,
+      "oe_high": true,
+      "pressed_mask": 0,
+      "raw_mask": 0,
+      "running": null,
+      "touches": [
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 126,
+          "last_interval_count": 0,
+          "press_count": 1,
+          "pressed": false,
+          "window_remaining_ms": 1175
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        },
+        {
+          "held_ms": 0,
+          "interval_count": 0,
+          "last_duration_ms": 0,
+          "last_interval_count": 0,
+          "press_count": 0,
+          "pressed": false,
+          "window_remaining_ms": 0
+        }
+      ],
+      "uptime_ms": 21900
+    },
+    "outputs": {
+      "applied_seq": 140,
+      "armed": true,
+      "calibration_id": 1,
+      "commanded_cdeg": [
+        2800,
+        6500,
+        10600,
+        7700,
+        17700,
+        13400
+      ],
+      "light_active": true,
+      "pose_active": false
+    },
+    "last_touch": {
+      "event": "touch",
+      "host_monotonic_ms": 18166,
+      "host_unix_ms": 1792896721585,
+      "seq": 450,
+      "session": "2C29D0FC3D34CA4F",
+      "touch": {
+        "duration_ms": 126,
+        "event_seq": 2,
+        "index": 3,
+        "interval_count": 0,
+        "kind": "Released",
+        "press_count": 1,
+        "pressed": false,
+        "uptime_ms": 21199
+      },
+      "version": 2
+    },
+    "servo_driver": {
+      "initialized": false,
+      "last_error": 0,
+      "probes": [
+        2,
+        1
+      ],
+      "scl_high": true,
+      "sda_high": true,
+      "selected_address": 65
+    }
+  },
+  "servo_control": {
+    "active": false,
+    "generation": 0,
+    "ready": true,
+    "supported": true,
+    "reason": "",
+    "busy": false,
+    "commanded_degrees": [
+      28,
+      65,
+      106,
+      77,
+      177,
+      134
+    ],
+    "error": null,
+    "min_degrees": 0,
+    "max_degrees": 180,
+    "speed_degrees_s": 30,
+    "pulse_min_us": 500,
+    "pulse_max_us": 2500
+  },
+  "saved_reference_restored_without_pwm": true
+}

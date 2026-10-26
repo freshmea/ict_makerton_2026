@@ -168,7 +168,7 @@ def content(images):
     result = [{'type': 'input_text', 'text': JEV_CONTEXT if dual else CONTEXT}]
     for image in images:
         result.extend([{'type': 'input_text', 'text': 'Frame %d, elapsed %.3fs, camera %d, role %s' %
-                        (image['sample'] + 1, image['offset_seconds'], image['sensor_id'], image.get('role', 'combined'))},
+                        (image['sample'] + 1, image['offset_seconds'], image['sensor_id'], image.get('camera_role', 'combined'))},
                        {'type': 'input_image', 'detail': 'low',
                         'image_url': 'data:image/jpeg;base64,' + base64.b64encode(image['data']).decode()}])
     return result

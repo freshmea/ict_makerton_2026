@@ -1,0 +1,13 @@
+   Compiling pico2-device-bench v0.1.0 (D:\repository\ict_makerton_2026\firmware\pico2-device-bench)
+    Finished `release` profile [optimized + debuginfo] target(s) in 5.04s
+Verified RP2350 UF2: D:\repository\ict_makerton_2026\firmware\pico2-device-bench\dist\pico2-device-bench.uf2
+SHA256: 0987CC87FCD1AE126596C9371CFA503F797353D7ECACE20C50E4AC0A9022B848
+{
+  "target": "thumbv8m.main-none-eabihf",
+  "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+  "converter_revision": "f14bf2d981772cd9fbe5bac33b685719caac1add",
+  "family": "0xe48bff59",
+  "blocks": 349,
+  "bytes": 178688,
+  "sha256": "2347087F954AD7DC45EA3202400DCAD35A20A12DB4FBBAB33FF3EFD538AB3F88"
+}

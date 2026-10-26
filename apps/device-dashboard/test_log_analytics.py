@@ -5,6 +5,8 @@ from pathlib import Path
 import tempfile
 import time
 import unittest
+from collections import Counter
+from unittest.mock import patch
 
 from learning_store import Store
 from log_analytics import Analytics, KST, aggregate_rows, bounds, day_text, emotion_cue, metrics, month_add
@@ -81,6 +83,16 @@ class AnalyticsTests(unittest.TestCase):
         self.assertEqual({r['id']:r['count'] for r in m['presence']},{'present':0,'away':0,'unknown':1,'missing':359})
         self.assertIsNone(m['study_ratio']);self.assertIsNone(m['positive_calm_ratio'])
 
+    def test_duplicate_keeps_current_confidence_in_statistics_and_live_context(self):
+        self.capture(self.start+1)
+        batch=self.store.capture([{'camera':c,'captured':self.start+11} for c in (0,1)])
+        self.store.finish(batch,result=result(confidence=.1),history=self.store.observation_history(batch))
+        stats=aggregate_rows(self.analytics._rows(self.start,self.start+3600),self.start,self.start+3600)
+        self.assertEqual(stats['duplicates'],2)
+        self.assertEqual((stats['observed'],stats['present'],stats['study'],stats['unknown']),(2,1,1,1))
+        self.assertEqual([r['confidence'] for r in self.store.eye_observations(now=self.start+12)],[.1,.1])
+        self.assertEqual([r['confidence'] for r in self.store.live_reference(now=self.start+12)['observations']],[.1,.1])
+
     def test_batch_spanning_ten_second_boundary_still_counts_once(self):
         batch=self.store.capture([{'camera':0,'captured':self.start+9.99},{'camera':1,'captured':self.start+10.01}])
         self.store.finish(batch,result=result())
@@ -121,6 +133,29 @@ class AnalyticsTests(unittest.TestCase):
         self.analytics.refresh(now=self.start+3690)
         cached=self.analytics._cached_hours(self.start,self.start+3600)
         self.assertEqual(cached[int(self.start)]['observed'],1)
+
+    def test_old_hour_with_pending_results_is_not_finalized(self):
+        batch=self.store.capture([{'camera':c,'captured':self.start+3599} for c in (0,1)])
+        self.analytics.refresh(now=self.start+3721)
+        with self.store.connect() as db:
+            self.assertEqual(db.execute('SELECT finalized FROM analytics_hours WHERE start=?',(self.start,)).fetchone()[0],0)
+        self.store.finish(batch,result=result())
+        self.analytics.refresh(now=self.start+3730)
+        cached=self.analytics._cached_hours(self.start,self.start+3600)
+        self.assertEqual(cached[int(self.start)]['observed'],1)
+
+    def test_real_view_reuses_ranges_only_within_one_request(self):
+        batch=self.store.capture([{'camera':c,'captured':self.start+1} for c in (0,1)])
+        self.analytics.refresh(now=self.start+900)
+        with patch.object(self.analytics,'_rows',wraps=self.analytics._rows) as read:
+            empty=self.analytics.view('real','day','2026-10-25',now=self.start+900)
+        counts=Counter(call.args for call in read.call_args_list)
+        self.assertTrue(counts)
+        self.assertEqual(max(counts.values()),1)
+        self.assertEqual(empty['report']['metrics']['observed_samples'],0)
+        self.store.finish(batch,result=result())
+        updated=self.analytics.view('real','day','2026-10-25',now=self.start+900)
+        self.assertEqual(updated['report']['metrics']['observed_samples'],1)
 
     def test_demo_is_repeatable_twelve_months_and_never_writes_fake_rows_or_reports(self):
         self.capture(self.start+1)

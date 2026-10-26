@@ -10,7 +10,7 @@ import threading
 import time
 
 KST = timezone(timedelta(hours=9))
-VERSION = 'learning-log-v1-keyword'
+VERSION = 'learning-log-v2-confidence-pending'
 PRESENCE = [('present','재석'),('away','자리비움'),('unknown','판단 불가'),('missing','미수집·누락')]
 EMOTIONS = [('positive','긍정·활력 단서'),('calm','차분·안정 단서'),('strained','긴장·어려움 단서'),
             ('tired','피로·휴식 단서'),('mixed','복합 단서'),('unknown','감정 단서 없음')]
@@ -221,8 +221,9 @@ class Analytics:
                 FROM observations o LEFT JOIN observations d ON d.id=o.duplicate_of
                 WHERE o.captured>=? AND o.captured<? ORDER BY o.captured,o.id''',(start-2,end+2))]
 
-    def refresh(self,now=None):
+    def refresh(self,now=None,read_rows=None):
         now=time.time() if now is None else now
+        read_rows=self._rows if read_rows is None else read_rows
         with self.lock:
             with self.store.connect() as db:
                 first=db.execute('SELECT captured FROM observations ORDER BY captured LIMIT 1').fetchone()
@@ -233,10 +234,12 @@ class Analytics:
                 old=cached.get(start)
                 if not old or old['version']!=VERSION or not old['finalized']:
                     end=min(start+3600,now)
-                    stats=aggregate_rows(self._rows(start,end),start,end)
+                    rows=read_rows(start,end)
+                    stats=aggregate_rows(rows,start,end)
+                    finalized=start+3720<=now and not any(r['status']=='pending' and start<=r['captured']<end for r in rows)
                     with self.store.connect() as db:
                         db.execute('INSERT OR REPLACE INTO analytics_hours VALUES (?,?,?,?,?)',
-                            (start,VERSION,json.dumps(stats,ensure_ascii=False),int(start+3720<=now),now))
+                            (start,VERSION,json.dumps(stats,ensure_ascii=False),int(finalized),now))
                     changed.append(start)
                 start+=3600
             if changed:
@@ -244,7 +247,7 @@ class Analytics:
                 periods={(kind,bounds(kind,day_text(at),datetime.fromtimestamp(at,KST).hour)[0])
                          for at in changed for kind in ('hour','day','month')}
                 for kind,at in periods:
-                    report=self._report(hours,kind,day_text(at),datetime.fromtimestamp(at,KST).hour,now,real=True)
+                    report=self._report(hours,kind,day_text(at),datetime.fromtimestamp(at,KST).hour,now,real=True,read_rows=read_rows)
                     self._save_report(kind,at,report,now)
 
     def _cached_hours(self,start,end):
@@ -278,17 +281,18 @@ class Analytics:
             at+=3600
         return combine(parts)
 
-    def _range(self,hours,start,end,real=False):
+    def _range(self,hours,start,end,real=False,read_rows=None):
         if real and end>start and end%3600:
             boundary=max(start,int(end//3600)*3600)
-            return combine([self._sum(hours,start,boundary),aggregate_rows(self._rows(boundary,end),boundary,end)])
+            read_rows=self._rows if read_rows is None else read_rows
+            return combine([self._sum(hours,start,boundary),aggregate_rows(read_rows(boundary,end),boundary,end)])
         return self._sum(hours,start,end)
 
-    def _report(self,hours,period,day,hour,now,real=False):
+    def _report(self,hours,period,day,hour,now,real=False,read_rows=None):
         start,end,previous=bounds(period,day,hour)
         until=max(start,min(end,now));partial=until<end
         previous_end=min(start,previous+(until-start)) if partial else start
-        current=metrics(self._range(hours,start,until,real));old=metrics(self._range(hours,previous,previous_end,real))
+        current=metrics(self._range(hours,start,until,real,read_rows));old=metrics(self._range(hours,previous,previous_end,real,read_rows))
         minimum=12 if period=='hour' else 60
         study_ready=min(current['present_samples'],old['present_samples'])>=minimum
         away_ready=min(current['observed_samples'],old['observed_samples'])>=minimum
@@ -312,22 +316,23 @@ class Analytics:
     def view(self,source='demo',period='day',day=None,hour=9,now=None):
         now=time.time() if now is None else now;today=day_text(now)
         day=day or today
+        read_rows=lru_cache(maxsize=8)(self._rows)
         chosen=datetime.strptime(day,'%Y-%m-%d').replace(tzinfo=KST)
         if chosen.date()>datetime.fromtimestamp(now,KST).date() or chosen.year<2000:raise ValueError('date_out_of_range')
         if source=='demo':
             hours=demo_hours(today);clock=(datetime.strptime(today,'%Y-%m-%d').replace(tzinfo=KST)+timedelta(days=1)).timestamp()
         elif source=='real':
-            self.refresh(now);clock=now
+            self.refresh(now,read_rows=read_rows);clock=now
             hours=self._cached_hours(month_add(chosen,-12).timestamp(),min(now,month_add(chosen,1).timestamp()))
         else:raise ValueError('invalid_source')
-        report=self._report(hours,period,day,hour,clock,real=source=='real')
+        report=self._report(hours,period,day,hour,clock,real=source=='real',read_rows=read_rows)
         start,end,_=bounds(period,day,hour)
         series=[]
         step=3600 if period in ('hour','day') else 86400
         at=start-5*3600 if period=='hour' else start
         while at<end:
             stop=min(at+step,end,clock)
-            stat=self._range(hours,at,max(at,stop),real=source=='real')
+            stat=self._range(hours,at,max(at,stop),real=source=='real',read_rows=read_rows)
             value=metrics(stat)
             label=datetime.fromtimestamp(at,KST).strftime('%H:%M' if period!='month' else '%m/%d')
             series.append({'label':label,'at':stamp(at),'study_ratio':value['study_ratio'],
@@ -337,7 +342,7 @@ class Analytics:
             rows=[]
             for back in reversed(range(count)):
                 date=chosen-timedelta(days=back) if kind=='day' else month_add(chosen,-back)
-                r=self._report(hours,kind,date.strftime('%Y-%m-%d'),0,clock,real=source=='real')
+                r=self._report(hours,kind,date.strftime('%Y-%m-%d'),0,clock,real=source=='real',read_rows=read_rows)
                 rows.append({'date':date.strftime('%Y-%m-%d'),'label':date.strftime('%m/%d' if kind=='day' else '%Y.%m'),
                     'study_ratio':r['metrics']['study_ratio'],'away_ratio':r['metrics']['away_ratio'],
                     'positive_calm_ratio':r['metrics']['positive_calm_ratio'],'coverage':r['metrics']['coverage'],
@@ -346,7 +351,7 @@ class Analytics:
             return rows
         hourly=[]
         for h in range(24):
-            r=self._report(hours,'hour',day,h,clock,real=source=='real')
+            r=self._report(hours,'hour',day,h,clock,real=source=='real',read_rows=read_rows)
             hourly.append({'hour':h,'label':'%02d:00'%h,'study_ratio':r['metrics']['study_ratio'],
                 'away_ratio':r['metrics']['away_ratio'],'coverage':r['metrics']['coverage'],
                 'summary':' '.join(r['summary']['paragraphs'])})

@@ -18,10 +18,11 @@ import wave
 import numpy as np
 import psutil
 from tts_client import synthesize
+from servo_reference import load_reference
 
 ROOT = Path(__file__).resolve().parent
-PROFILES = json.loads((ROOT / 'profiles.json').read_text())
-INSTALLATION = json.loads((ROOT / 'installation.json').read_text())
+PROFILES = json.loads((ROOT / 'profiles.json').read_text(encoding='utf-8'))
+INSTALLATION = json.loads((ROOT / 'installation.json').read_text(encoding='utf-8'))
 
 
 def write_json(path, value):
@@ -62,6 +63,7 @@ class Pico:
         self.last_applied = None
         self.capabilities = {}
         self.servo_driver = None
+        self.seed_session = None
         self.lock = threading.Lock()
         self.binary = Path(os.environ.get('PICO_BIN', '/opt/300seconds/dashboard/pico-device-bench'))
 
@@ -101,6 +103,7 @@ class Pico:
             if event == 'touch' and not INSTALLATION['touch_inputs_connected']:
                 continue
             with self.lock:
+                seed_needed = False
                 if event == 'status':
                     self.device = value['status']
                     self.received = time.monotonic()
@@ -109,6 +112,9 @@ class Pico:
                     self.outputs = value.get('outputs', self.outputs)
                     self.capabilities = value.get('capabilities', self.capabilities)
                     self.servo_driver = value.get('servo_driver', self.servo_driver)
+                    if self.session and self.seed_session != self.session:
+                        self.seed_session = self.session
+                        seed_needed = True
                 elif event == 'capabilities':
                     self.capabilities = {'single_servo': value.get('single_servo', False)}
                 elif event == 'outputs':
@@ -125,6 +131,8 @@ class Pico:
                 elif event in ('error', 'cleanup_unconfirmed'):
                     self.error = value.get('error', event)
                 listeners = list(self.touch_listeners) if event == 'touch' else []
+            if seed_needed:
+                threading.Thread(target=self.seed_reference,args=(self.session,),daemon=True).start()
             for callback in listeners:
                 try:
                     callback(value)
@@ -143,6 +151,24 @@ class Pico:
             with self.lock:
                 self.touch_listeners.discard(callback)
         return remove
+
+    def seed_reference(self, session):
+        values=load_reference()
+        if not any(v is not None for v in values):return
+        error=None
+        for attempt in range(4):
+            state=self.snapshot()
+            if state.get('session')!=session:return
+            try:
+                result=self.command({'cmd':'seed_servo_positions',
+                                     'positions_cdeg':[v*100 if v is not None else None for v in values]})
+                if not result.get('ok'):raise RuntimeError(result.get('error','reference rejected'))
+                self.events.add('servo','마지막 완료 목표각 복원 · PWM 출력 없음')
+                return
+            except Exception as failure:
+                error=failure
+                time.sleep(.1*2**attempt)
+        self.events.add('servo','목표각 참조 복원 실패: '+str(error)[:180],'warning')
 
     def snapshot(self):
         with self.lock:

@@ -143,6 +143,8 @@ pub enum Message {
     Capabilities { single_servo: bool },
     CheckServoDriver,
     ServoDriver(ServoDriverStatus),
+    // Metadata only: reference targets from the last completed host commands, no PWM.
+    SeedServoPositions { positions_cdeg: [Option<u16>;6] },
 }
 
 /// Read-only probes at 0x40/0x41: 0=not checked, 1=valid registers,

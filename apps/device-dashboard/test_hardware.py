@@ -11,6 +11,47 @@ from hardware import Cameras, EventLog, Pico
 
 
 class TelemetryTests(unittest.TestCase):
+    def test_reconnect_replaces_the_old_bridge_after_fencing_outputs(self):
+        import app
+        calls=[]
+        connected=False
+        def stop():
+            calls.append('bridge_stop')
+        def start():
+            nonlocal connected
+            calls.append('bridge_start')
+            connected=True
+        pico=Mock(stop=stop,start=start,snapshot=lambda:{'connected':connected})
+        async def close_servos():calls.append('servos_close')
+        async def close_eyes():calls.append('eyes_close')
+        automatic=Mock()
+        async def reconnect():
+            with patch.object(app.app.state,'reconnect_lock',asyncio.Lock(),create=True), \
+                    patch.object(app.app.state,'pico',pico,create=True), \
+                    patch.object(app.app.state,'servos',Mock(close=close_servos),create=True), \
+                    patch.object(app.app.state,'eyes',Mock(close=close_eyes),create=True), \
+                    patch.object(app.app.state,'automatic_eyes',automatic,create=True):
+                return await app.reconnect_pico()
+        self.assertTrue(asyncio.run(reconnect())['connected'])
+        self.assertEqual(calls,['servos_close','eyes_close','bridge_stop','bridge_start'])
+        self.assertFalse(automatic.reconnecting)
+
+    def test_concurrent_reconnect_is_rejected_before_touching_the_bridge(self):
+        import app
+        from fastapi import HTTPException
+        pico=Mock()
+        async def reconnect():
+            lock=asyncio.Lock()
+            async with lock:
+                with patch.object(app.app.state,'reconnect_lock',lock,create=True), \
+                        patch.object(app.app.state,'pico',pico,create=True):
+                    with self.assertRaises(HTTPException) as caught:
+                        await app.reconnect_pico()
+                    self.assertEqual(caught.exception.status_code,409)
+        asyncio.run(reconnect())
+        pico.start.assert_not_called()
+        pico.stop.assert_not_called()
+
     def test_servo_diagnostics_are_forwarded_without_starting_outputs(self):
         pico = Pico(EventLog())
         diagnostic = {'selected_address': 0, 'probes': [2, 3], 'sda_high': False, 'scl_high': True}
