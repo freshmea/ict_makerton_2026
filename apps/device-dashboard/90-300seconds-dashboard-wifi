@@ -1,0 +1,8 @@
+#!/bin/sh
+# NetworkManager invokes this after DHCP and link changes; do not change Wi-Fi itself.
+case "$2" in
+    up|down|dhcp4-change|reapply|connectivity-change)
+        exec /usr/bin/flock /run/lock/300seconds-dashboard-wifi.lock \
+            /usr/bin/python3 -B /opt/300seconds/dashboard/app/wifi_network.py --refresh
+        ;;
+esac

@@ -232,6 +232,23 @@ class ButtonTests(unittest.TestCase):
         self.assertIsNotNone(self.feedback.snapshot()['error'])
         self.assertIsNone(self.feedback.take_live_request())
 
+    def test_sw5_long_hold_requests_once_and_release_allows_another(self):
+        self.start_feedback()
+        for press in range(2):
+            self.event(5)
+            self.wait_counter('labels_played', press + 1)
+            for count in range(1, 5):
+                self.event(5, kind='Interval', count=count)
+                self.wait_counter('beeps_played', press * 4 + count)
+                if count < 4:
+                    self.assertIsNone(self.feedback.take_camera_request())
+            self.assertIsNotNone(self.feedback.take_camera_request())
+            self.event(5, kind='Interval', count=8)
+            self.assertIsNone(self.feedback.take_camera_request())
+            self.assertIsNone(self.feedback.take_live_request())
+            self.assertIsNone(self.feedback.take_study_request())
+            self.event(5, kind='Released', count=8)
+
     def test_sw2_number_then_four_beeps_requests_study_independently_of_live(self):
         self.start_feedback()
         self.event(2)

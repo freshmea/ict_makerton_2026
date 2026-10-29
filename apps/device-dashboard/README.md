@@ -1,5 +1,11 @@
 # 300 Seconds 장치 대시보드
 
+운영 종료 후 수동 분석(2026-10-29): 부팅 시 자동 GPT 카메라 수집은 꺼진다. SW5를 약 3.2초 길게 누르면 '카메라 영상을 분석하겠습니다'를 재생한 뒤 한 번 분석한다. [동작·검증·동기화 기록](../../doc/software/2026-10-29_운영종료와_수동분석.md).
+
+Wi-Fi 자동 연결(2026-10-29): 시작 시 연결된 Wi-Fi의 IPv4를 탐색하고, NetworkManager의 DHCP 갱신·연결 변경 이벤트에서 주소가 달라졌을 때만 서비스를 다시 시작한다. Wi-Fi가 없으면 기다린다. `dashboard.env`에 IP를 저장하지 않으며, 기존 `DASHBOARD_BIND` 값도 실행 시 자동 탐색 결과로 대체한다. HTTP와 카메라 RTSP가 같은 Wi-Fi 주소를 사용한다. 주소 전환 시 진행 중인 세션은 종료되므로 새 주소에서 다시 접속한다. 수동으로 꺼둔 서비스는 네트워크 이벤트가 켜지 않는다.
+
+현재 주소 확인: `python3 /opt/300seconds/dashboard/app/wifi_network.py --print-address`. 활성화: `bash enable-dashboard.sh` (IP 인수 없음).
+
 SW4 팔 패턴(2026-10-25): **4번 짧은 누름 → 서보 1~4번 랜덤 패턴 10종**을 Pico에서 실행한다. 마지막 완료 목표각 주변 ±12°/최대 24°/초, 약 9초 후 복귀·출력 해제다. 목표각은 `/var/lib/300seconds-dashboard/servo-targets.json`에 저장하고 USB 연결마다 PWM 출력 없이 복원한다. [패턴·범위·검증](../../doc/software/SW4_서보팔_랜덤패턴.md).
 
 완성품 장착 방향 보정(2026-10-25): **카메라1 / SENSOR0은 180° 회전**, 카메라2 / SENSOR1은0°다. `media_worker.py`의 `CAMERA_ROTATIONS`가 네 프로필의 JPEG·H.264 변환에 함께 적용되어 미리보기·사진·분석·RTSP가 같은 방향이며 재부팅 후에도 유지된다. [보정·실기 검증](../../doc/software/dashboard-check/2026-10-25/camera1-rotation/).
@@ -22,9 +28,9 @@ GPT Decisions 기기 반응(2026-10-25): **책상 앞의 10초 → GPT Decisions
 
 Nano의 실제 장치를 FastAPI로 읽고, 하나의 Rust 브리지를 통해 Pico를 제어한다. ROS는 사용하지 않는다.
 
-- 대시보드: <http://192.168.184.76:8000> (공유기·DHCP 변경 시 활성화 스크립트가 현재 IP를 반영)
+- 대시보드: `http://<현재 Wi-Fi IPv4>:8000` (부팅·Wi-Fi 재연결·DHCP 주소 변경 시 자동 반영)
 - 상태 JSON: `/api/status`, 2 Hz WebSocket: `/ws/status`
-- 카메라 RTSP: `rtsp://192.168.184.76:8554/cam0`, `/cam1`
+- 카메라 RTSP: `rtsp://<현재 Wi-Fi IPv4>:8554/cam0`, `/cam1`
 - 브라우저 영상: `/api/cameras/0/stream.mjpg`, `/api/cameras/1/stream.mjpg`
 - 사진: `/api/cameras/{0,1}/snapshot.jpg`
 - 마이크: `/api/audio/recent.wav` (최근 3초, 48 kHz S16_LE mono)

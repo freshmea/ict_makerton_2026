@@ -235,7 +235,7 @@ class Cameras:
         self.process = subprocess.Popen([sys.executable, '-B', str(ROOT / 'media_worker.py'),
                                          '--runtime', str(self.runtime), '--profile', self.profile,
                                          '--run-id', self.run_id,
-                                         '--bind', os.environ.get('DASHBOARD_BIND', '192.168.219.127'),
+                                         '--bind', os.environ.get('DASHBOARD_BIND', '127.0.0.1'),
                                          '--encoder', os.environ.get('CAMERA_ENCODER', 'omxh264enc')],
                                         stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                         env=dict(os.environ, DISPLAY=''))

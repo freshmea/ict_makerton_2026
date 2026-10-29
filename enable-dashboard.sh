@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# Run on the Nano: bash enable-dashboard.sh [local IPv4 address]
+# Run on the Nano: bash enable-dashboard.sh (Wi-Fi address is automatic)
 set -Eeuo pipefail
 
 if [[ ${1:-} == -h || ${1:-} == --help ]]; then
-    echo 'Usage: bash enable-dashboard.sh [local IPv4 address]'
-    echo 'Update the LAN address, enable boot autostart, and restart the dashboard.'
+    echo 'Usage: bash enable-dashboard.sh'
+    echo 'Detect connected Wi-Fi, enable boot autostart, and restart the dashboard.'
     exit 0
 fi
-if (( $# > 1 )); then
-    echo 'Usage: bash enable-dashboard.sh [local IPv4 address]' >&2
+if (( $# > 0 )); then
+    echo 'Usage: bash enable-dashboard.sh' >&2
     exit 2
 fi
 if (( EUID != 0 )); then
@@ -32,62 +32,23 @@ if systemctl is-active --quiet 300seconds-runtime.target || [[ -n $runtime_units
     exit 1
 fi
 
-# Route lookup reads the local routing table; it does not send internet traffic.
-bind=${1:-$(ip -4 route get 1.1.1.1 | awk '{for (i=1; i<=NF; i++) if ($i == "src") {print $(i+1); exit}}')}
-if [[ -z $bind ]]; then
-    echo 'No LAN IPv4 address found. Run: bash enable-dashboard.sh <Nano IPv4 address>' >&2
+network=/opt/300seconds/dashboard/app/wifi_network.py
+if [[ ! -f $network ]]; then
+    echo 'Install the current dashboard Wi-Fi launcher first.' >&2
     exit 1
 fi
 
-python3 - "$env_file" "$bind" <<'PY'
-from datetime import datetime, timezone
-import ipaddress
-import os
-from pathlib import Path
-import re
-import shutil
-import stat
-import subprocess
-import sys
-import tempfile
-
-path = Path(sys.argv[1])
-address = ipaddress.IPv4Address(sys.argv[2])
-assigned = re.findall(r'\binet ([0-9.]+)/', subprocess.check_output(['ip', '-4', '-o', 'address', 'show'], text=True))
-if address.is_loopback or address.is_unspecified or address.is_multicast or str(address) not in assigned:
-    raise SystemExit('Choose a non-loopback IPv4 address assigned to this Nano.')
-
-original = path.read_text(encoding='utf-8')
-pattern = r'^DASHBOARD_BIND=[^\r\n]*'
-matches = re.findall(pattern, original, flags=re.M)
-if len(matches) > 1:
-    raise SystemExit('Multiple DASHBOARD_BIND settings found; fix the environment file first.')
-setting = 'DASHBOARD_BIND=' + str(address)
-updated = re.sub(pattern, setting, original, flags=re.M) if matches else original.rstrip('\n') + '\n' + setting + '\n'
-if updated != original:
-    backup = path.with_name(path.name + '.bak-network-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
-    shutil.copy2(path, backup)
-    metadata = path.stat()
-    fd, temporary = tempfile.mkstemp(prefix='.dashboard.env.', dir=path.parent)
-    try:
-        with os.fdopen(fd, 'w', encoding='utf-8') as output:
-            os.fchown(output.fileno(), metadata.st_uid, metadata.st_gid)
-            os.fchmod(output.fileno(), stat.S_IMODE(metadata.st_mode))
-            output.write(updated)
-            output.flush()
-            os.fsync(output.fileno())
-        os.replace(temporary, path)
-    finally:
-        if os.path.exists(temporary):
-            os.unlink(temporary)
-    print('Previous configuration saved:', backup)
-print('Dashboard address:', address)
-PY
-
 systemctl enable "$service"
+systemctl reset-failed "$service"
 if ! systemctl restart "$service"; then
     journalctl -u "$service" -n 30 --no-pager >&2
     exit 1
+fi
+
+bind=$(python3 "$network" --print-address)
+if [[ -z $bind ]]; then
+    echo 'Dashboard enabled; waiting for Wi-Fi. It will start when Wi-Fi receives an IPv4 address.'
+    exit 0
 fi
 
 if ! python3 - "$bind" <<'PY'

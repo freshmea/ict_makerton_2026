@@ -253,6 +253,6 @@ if __name__ == '__main__':
     parser.add_argument('--profile', choices=PROFILES, default='720p30')
     parser.add_argument('--run-id', default='manual')
     parser.add_argument('--encoder', choices=['omxh264enc', 'nvv4l2h264enc'], default='omxh264enc')
-    parser.add_argument('--bind', default='192.168.219.127')
+    parser.add_argument('--bind', default='127.0.0.1')
     parser.add_argument('--rtsp-port', type=int, default=8554)
     raise SystemExit(CameraWorker(parser.parse_args()).run())

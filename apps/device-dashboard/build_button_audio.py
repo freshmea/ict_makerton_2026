@@ -12,11 +12,11 @@ import wave
 
 import numpy as np
 
-from button_audio import RATE, wav
+from button_audio import RATE, wav, CAMERA_ANNOUNCEMENT
 from tts_client import synthesize
 
 BUTTON_LABELS = ('일번', '이번', '삼번', '사번', '오번', '육번')
-EXTRA_LABELS = {'live-start': '라이브 대화 시작', 'live-end': '라이브 대화 끝'}
+EXTRA_LABELS = {'camera-analyze': CAMERA_ANNOUNCEMENT, 'live-start': '라이브 대화 시작', 'live-end': '라이브 대화 끝'}
 
 
 def prepare(data):

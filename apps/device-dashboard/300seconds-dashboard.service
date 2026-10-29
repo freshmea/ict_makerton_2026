@@ -17,7 +17,7 @@ Environment=PYTHONUNBUFFERED=1
 Environment=DISPLAY=
 Environment=HOME=/var/lib/300seconds-dashboard
 Environment=XDG_CACHE_HOME=/run/300seconds-dashboard/cache
-ExecStart=/opt/300seconds/dashboard/venv/bin/python -B -m uvicorn app:app --host ${DASHBOARD_BIND} --port 8000 --workers 1 --no-access-log
+ExecStart=/opt/300seconds/dashboard/venv/bin/python -B /opt/300seconds/dashboard/app/wifi_network.py
 Restart=on-failure
 RestartSec=5
 KillSignal=SIGINT

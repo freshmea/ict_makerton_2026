@@ -261,7 +261,9 @@ class Learning:
         self.cameras, self.pico, self.events = cameras, pico, events
         self.button_audio = button_audio
         self.store = Store(path or os.environ.get('DASHBOARD_LEARNING_DB', '/var/lib/300seconds-dashboard/learning.sqlite3'))
-        self.enabled = self.store.setting('collection_enabled', os.environ.get('LEARNING_AUTOSTART', '0') == '1')
+        self.enabled = False
+        self.store.set_setting('collection_enabled', False)
+        self.manual_busy = False
         self.live = Live(audio, self.store, events,
                          end_cue=(lambda: button_audio.announce_live('end')) if button_audio else None)
         self.queue = asyncio.Queue(maxsize=2)
@@ -279,7 +281,7 @@ class Learning:
 
     def snapshot(self):
         return {'enabled': self.enabled, 'interval_seconds': INTERVAL, 'cameras': [0, 1],
-                'queued_batches': self.queue.qsize(), 'last_capture': self.last_capture,
+                'manual_busy': self.manual_busy, 'manual_switch': 5, 'queued_batches': self.queue.qsize(), 'last_capture': self.last_capture,
                 'next_capture': self.next_capture, 'error': self.last_error,
                 'backoff_until': self.backoff_until, 'live': self.live.snapshot(),
                 'schema_version': SCHEMA_VERSION, 'raw_images_saved': False,
@@ -292,12 +294,13 @@ class Learning:
             self.last_error, self.backoff_until = None, 0
         else:
             while not self.queue.empty():
-                batch, _ = self.queue.get_nowait()
+                batch, _, manual = self.queue.get_nowait()
+                if manual: self.manual_busy = False
                 self.store.finish(batch, error='collection_stopped', status='cancelled')
         self.wake.set()
         return self.snapshot()
 
-    def capture(self):
+    def capture(self, manual=False):
         if shutil.disk_usage(self.store.path.parent).free < 100 * 1024 * 1024:
             self.set_enabled(False)
             self.last_error = '디스크 여유 100 MiB 미만 · 수집 중지'
@@ -339,7 +342,9 @@ class Learning:
             elif time.time() < self.backoff_until:
                 self.store.finish(batch, error='provider_backoff', status='skipped')
             else:
-                self.queue.put_nowait((batch, payload))
+                self.queue.put_nowait((batch, payload, manual))
+                if manual: self.manual_busy = True
+                return True
 
     async def sample_loop(self):
         deadline = time.monotonic()
@@ -366,9 +371,9 @@ class Learning:
 
     async def analysis_loop(self):
         while self.running:
-            batch, frames = await self.queue.get()
+            batch, frames, manual = await self.queue.get()
             try:
-                if not self.enabled:
+                if not self.enabled and not manual:
                     self.store.finish(batch, error='collection_stopped', status='cancelled')
                 elif time.time() < self.backoff_until:
                     self.store.finish(batch, error='provider_backoff', status='skipped')
@@ -392,6 +397,20 @@ class Learning:
                     self.set_enabled(False)
             finally:
                 frames.clear()
+                if manual: self.manual_busy = False
+
+    async def camera_request(self, request):
+        if self.manual_busy or self.enabled or self.live.active:
+            return
+        self.manual_busy = True
+        queued = False
+        try:
+            await asyncio.get_running_loop().run_in_executor(None, self.button_audio.announce_camera)
+            if self.button_audio.live_request_valid(request):
+                queued = bool(self.capture(manual=True))
+        finally:
+            if not queued:
+                self.manual_busy = False
 
     async def switch_loop(self):
         while self.running:
@@ -408,6 +427,12 @@ class Learning:
                         await self.live.start('study', 'SW1-hold4', before_start=cue)
             except Exception:
                 self.events.add('learning', 'SW1 Live 시작 실패 · 마이크·스피커·API 연결을 확인하세요.', 'warning')
+            try:
+                request = self.button_audio.take_camera_request() if self.button_audio else None
+                if request is not None:
+                    await self.camera_request(request)
+            except Exception:
+                self.events.add('learning', 'SW5 camera analysis failed before request', 'warning')
             await asyncio.sleep(.1)
 
     async def close(self):
@@ -416,6 +441,6 @@ class Learning:
             task.cancel()
         await asyncio.gather(*self.tasks, return_exceptions=True)
         while not self.queue.empty():
-            batch, _ = self.queue.get_nowait()
+            batch, _, _ = self.queue.get_nowait()
             self.store.finish(batch, error='service_shutdown', status='interrupted')
         await self.live.close()

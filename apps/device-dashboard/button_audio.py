@@ -14,6 +14,7 @@ import numpy as np
 
 RATE = 48000
 LIVE_HOLD_COUNT = 4
+CAMERA_ANNOUNCEMENT = '카메라 영상을 분석하겠습니다'
 
 
 def pitch(count):
@@ -66,6 +67,9 @@ class ButtonAudio:
         self.live_assets = {}
         self.live_requests = deque(maxlen=1)
         self.study_requests = deque(maxlen=1)
+        self.camera_requests = deque(maxlen=1)
+        self.camera_hold = None
+        self.camera_asset = None
         self.cue_lock = threading.Lock()
         self.announcing = None
         self.running = False
@@ -76,7 +80,7 @@ class ButtonAudio:
         self.sw1_hold = None
         self.study_hold = None
         self.counters = dict(press_events=0, count_events=0, labels_played=0,
-                             beeps_played=0, dropped=0, rejected=0, live_hold_requests=0, study_hold_requests=0)
+                             beeps_played=0, dropped=0, rejected=0, live_hold_requests=0, study_hold_requests=0, camera_hold_requests=0)
         self.last = None
         self.error = None
 
@@ -85,6 +89,8 @@ class ButtonAudio:
         entries = [(i, 'button-%d' % i, manifest['buttons'][str(i)]) for i in range(1, 7)]
         entries += [(action, 'live-' + action, manifest['extras']['live-' + action])
                     for action in ('start', 'end')]
+        if 'camera-analyze' in manifest.get('extras', {}):
+            entries.append(('camera', 'camera-analyze', manifest['extras']['camera-analyze']))
         if (manifest['buttons']['1']['text'] != '일번'
                 or manifest['extras']['live-start']['text'] != '라이브 대화 시작'
                 or manifest['extras']['live-end']['text'] != '라이브 대화 끝'):
@@ -102,7 +108,11 @@ class ButtonAudio:
                             raise ValueError('button asset duration')
                         if len(reader.readframes(reader.getnframes())) != reader.getnframes() * 2:
                             raise ValueError('button asset truncated')
-                    if index in ('start', 'end'):
+                    if index == 'camera':
+                        if item['text'] != CAMERA_ANNOUNCEMENT:
+                            raise ValueError('Camera announcement text mismatch')
+                        self.camera_asset = data
+                    elif index in ('start', 'end'):
                         self.live_assets[index] = data
                     else:
                         self.assets[index] = data
@@ -135,6 +145,8 @@ class ButtonAudio:
                 self.active_counts.clear()
                 self.sw1_hold = None
                 self.study_hold = None
+                self.camera_hold = None
+                self.camera_requests.clear()
                 self.live_requests.clear()
                 self.study_requests.clear()
                 for queue in self.queues.values():
@@ -155,10 +167,11 @@ class ButtonAudio:
                 self.active_counts[index] = 0
                 self.counters['press_events'] += 1
                 item = (now, session, index, 0)
-                if index in (1, 2):
+                if index in (1, 2, 5):
                     hold = dict(token=seq, session=session, label_played=False, beeps=set(), requested=False)
                     if index == 1:self.sw1_hold = hold
-                    else:self.study_hold = hold
+                    elif index == 2:self.study_hold = hold
+                    else:self.camera_hold = hold
                     item += (seq,)
                 self.enqueue('label', item)
             elif kind == 'Interval':
@@ -168,26 +181,29 @@ class ButtonAudio:
                         and count > self.active_counts[index]):
                     self.active_counts[index] = count
                     self.counters['count_events'] += 1
-                    if index not in (1, 2) or count <= LIVE_HOLD_COUNT:
+                    if index not in (1, 2, 5) or count <= LIVE_HOLD_COUNT:
                         item = (now, session, index, count)
-                        if index in (1, 2):
-                            item += ((self.sw1_hold if index == 1 else self.study_hold)['token'],)
+                        if index in (1, 2, 5):
+                            item += (self.hold_for(index)['token'],)
                         self.enqueue('beep', item)
             elif kind == 'Released':
                 self.active_counts.pop(index, None)
 
+    def hold_for(self, index):
+        return {1: self.sw1_hold, 2: self.study_hold, 5: self.camera_hold}.get(index)
+
     def live_request_valid(self, request):
         state = self.pico.snapshot()
-        hold = self.sw1_hold if request[2] == 1 else self.study_hold
+        hold = self.hold_for(request[2])
         return (state.get('connected') and state.get('session') == request[1]
-                and (len(request) < 5 or request[2] not in (1, 2)
+                and (len(request) < 5 or request[2] not in (1, 2, 5)
                      or hold is not None and hold['token'] == request[4]))
 
     def completed_feedback(self, kind, batch):
         """Called under condition only after ALSA playback succeeds."""
         for item in batch.values():
-            hold = self.sw1_hold if item[2] == 1 else self.study_hold
-            if (item[2] not in (1, 2) or len(item) < 5 or hold is None
+            hold = self.hold_for(item[2])
+            if (item[2] not in (1, 2, 5) or len(item) < 5 or hold is None
                     or item[4] != hold['token'] or item[1] != hold['session']):
                 continue
             if kind == 'label':
@@ -195,12 +211,22 @@ class ButtonAudio:
             else:
                 hold['beeps'].add(item[3])
         for index, hold, requests, counter in [(1, self.sw1_hold, self.live_requests, 'live_hold_requests'),
-                (2, self.study_hold, self.study_requests, 'study_hold_requests')]:
+                (2, self.study_hold, self.study_requests, 'study_hold_requests'),
+                (5, self.camera_hold, self.camera_requests, 'camera_hold_requests')]:
             if (hold is not None and hold['label_played'] and not hold['requested']
                     and all(count in hold['beeps'] for count in range(1, LIVE_HOLD_COUNT + 1))):
                 requests.append((time.monotonic(), hold['session'], index, LIVE_HOLD_COUNT, hold['token']))
                 self.counters[counter] += 1
                 hold['requested'] = True
+
+    def take_camera_request(self):
+        return self.take_request(self.camera_requests)
+
+    def announce_camera(self):
+        with self.cue_lock:
+            if self.camera_asset is None:
+                raise RuntimeError('Camera announcement is not prepared')
+            self.audio.play_feedback(self.camera_asset)
 
     def take_live_request(self):
         return self.take_request(self.live_requests)
@@ -304,7 +330,7 @@ class ButtonAudio:
                         base_hz=440, max_hz=round(pitch(100), 2), beep_ms=80,
                         live_hold_count=LIVE_HOLD_COUNT, live_hold_ms=3200, announcing=self.announcing,
                         sw1_beeps_played=len(self.sw1_hold['beeps']) if self.sw1_hold else 0,
-                        study_switch=2, study_beeps_played=len(self.study_hold['beeps']) if self.study_hold else 0,
+                        camera_switch=5, camera_ready=self.camera_asset is not None, study_switch=2, study_beeps_played=len(self.study_hold['beeps']) if self.study_hold else 0,
                         source='firmware Touch events / Jetson systemd / cached MP3')
 
     def close(self):
@@ -315,6 +341,7 @@ class ButtonAudio:
                 queue.clear()
             self.live_requests.clear()
             self.study_requests.clear()
+            self.camera_requests.clear()
             self.condition.notify_all()
         for thread in self.threads:
             thread.join(timeout=5)

@@ -53,6 +53,12 @@
       "mp3_sha256": "1b38fc01182e8d5a818d5ce14c725635e35dedae6fa4f739a9839089b836c70e",
       "wav_sha256": "621f2f9d39a7ec1e2eee389ff9f700716d0d9717df10c09f0c144bcc05ac7815",
       "seconds": 1.061
+    },
+    "camera-analyze": {
+      "text": "카메라 영상을 분석하겠습니다",
+      "mp3_sha256": "9f24f441d8db1e6f17e326aa18883566dc254163cd8fad04179a5efe6280547c",
+      "wav_sha256": "b639a3fda7545fc9497fe493bae3216193f501ca4b880fe3034240d20fe8865d",
+      "seconds": 1.922
     }
   }
 }

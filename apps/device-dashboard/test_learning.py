@@ -243,7 +243,7 @@ class AnalysisTests(unittest.IsolatedAsyncioTestCase):
             def capture(at):return manager.store.capture([{'camera':c,'captured':at} for c in (0,1)])
             manager.store.finish(capture(100), result=result())
             for at in (110,120):
-                manager.queue.put_nowait((capture(at), [{'camera':0,'jpeg':'fixture'},{'camera':1,'jpeg':'fixture'}]))
+                manager.queue.put_nowait((capture(at), [{'camera':0,'jpeg':'fixture'},{'camera':1,'jpeg':'fixture'}], False))
             calls = []
             async def describe(command):
                 calls.append(json.loads(json.dumps(command)))
@@ -282,7 +282,7 @@ class CaptureTests(unittest.TestCase):
 
     def test_both_cameras_share_batch_and_stale_frames_are_not_sent_twice(self):
         self.manager.capture()
-        batch, frames = self.manager.queue.get_nowait()
+        batch, frames, manual = self.manager.queue.get_nowait()
         self.assertEqual([f['camera'] for f in frames], [0, 1])
         self.manager.capture()
         self.assertTrue(self.manager.queue.empty())
@@ -290,7 +290,7 @@ class CaptureTests(unittest.TestCase):
         self.assertEqual([r['status'] for r in rows[:2]], ['camera_error', 'camera_error'])
 
     def test_queue_is_bounded_and_drops_are_persisted(self):
-        self.manager.queue.put_nowait(('old1', [])); self.manager.queue.put_nowait(('old2', []))
+        self.manager.queue.put_nowait(('old1', [], False)); self.manager.queue.put_nowait(('old2', [], False))
         self.manager.capture()
         self.assertEqual(self.manager.queue.qsize(), 2)
         self.assertEqual({r['status'] for r in self.manager.store.records()['records']}, {'dropped'})
@@ -298,7 +298,7 @@ class CaptureTests(unittest.TestCase):
     def test_one_failed_camera_does_not_hide_the_other(self):
         (self.root / 'cam1.jpg').unlink()
         self.manager.capture()
-        _, frames = self.manager.queue.get_nowait()
+        _, frames, manual = self.manager.queue.get_nowait()
         self.assertEqual([f['camera'] for f in frames], [0])
 
     def test_stop_drains_unsent_frames(self):
